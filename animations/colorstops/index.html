@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#animations" class="md-skip">
+        <a href="#using-colorstops-do-change-the-color-of-a-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -303,6 +303,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Colorstops
@@ -319,6 +321,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -327,29 +331,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#animations" class="md-nav__link">
-    Animations
-  </a>
-  
-    <nav class="md-nav" aria-label="Animations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#animate-a-circle-using-a-colorstop-and-the-state-of-the-entity" class="md-nav__link">
-    Animate a circle using a colorstop and the state of the entity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#animate-a-circle-using-an-animation-operators" class="md-nav__link">
     Animate a circle using an animation operators
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -545,6 +529,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -553,29 +539,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#animations" class="md-nav__link">
-    Animations
-  </a>
-  
-    <nav class="md-nav" aria-label="Animations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#animate-a-circle-using-a-colorstop-and-the-state-of-the-entity" class="md-nav__link">
-    Animate a circle using a colorstop and the state of the entity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#animate-a-circle-using-an-animation-operators" class="md-nav__link">
     Animate a circle using an animation operators
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -592,11 +558,8 @@
               
                 
 
-  <h1>Colorstops</h1>
-
-<h2 id="animations">Animations<a class="headerlink" href="#animations" title="Permanent link">&para;</a></h2>
-<h3 id="animate-a-circle-using-a-colorstop-and-the-state-of-the-entity">Animate a circle using a colorstop and the state of the entity<a class="headerlink" href="#animate-a-circle-using-a-colorstop-and-the-state-of-the-entity" title="Permanent link">&para;</a></h3>
-<p><em>yaml</em>
+<h1 id="using-colorstops-do-change-the-color-of-a-tool">Using colorstops do change the color of a tool<a class="headerlink" href="#using-colorstops-do-change-the-color-of-a-tool" title="Permanent link">&para;</a></h1>
+<p>One way to style the color of a tool is using colorstops where the state of the entity is used to choose a color to fill the tool.
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:swiss-army-knife-card&#39;</span>
   <span class="nt">entities</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.u_s_air_quality_index</span>
@@ -609,15 +572,6 @@
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
     <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">17.5</span>
   <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>             <span class="c1"># First entity is index 0</span>
-</code></pre></div>
-<p>Connecting a Circle to an entity alone doesn't do anything as long as there are no actions defined to use the state of the entity to style the circle.</p>
-<p>One way to style the circle is using colorstops where the state of the entity is used to choose a color to fill the circle:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;circle&#39;</span>
-  <span class="nt">position</span><span class="p">:</span>
-    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">17.5</span>
-  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
   <span class="nt">show</span><span class="p">:</span>                       
     <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorstops&#39;</span>       <span class="c1"># Format using colorstops</span>
   <span class="nt">colorstops</span><span class="p">:</span>
