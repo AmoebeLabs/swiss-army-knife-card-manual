@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#view" class="md-skip">
+        <a href="#visualization" class="md-skip">
           Skip to content
         </a>
       
@@ -389,6 +389,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#view" class="md-nav__link">
     View:
   </a>
@@ -410,15 +417,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#templates" class="md-nav__link">
-    Templates
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualization" class="md-nav__link">
-    Visualization
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -575,6 +575,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#view" class="md-nav__link">
     View:
   </a>
@@ -596,15 +603,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#templates" class="md-nav__link">
-    Templates
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualization" class="md-nav__link">
-    Visualization
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -640,6 +640,30 @@
 
 <p>A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.</p>
 <p><a href="../../assets/screenshots/sak-example-1b.png"><img alt="SAK Example 1" src="../../assets/screenshots/sak-example-1b.png" /></a></p>
+<h3 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h3>
+<p>This visualization is divided into three major blocks:</p>
+<ul>
+<li>
+<p>The top part shows the weathertype, temperature, humidity and AQI value.</p>
+<ul>
+<li>The weathertype is displayed using an external animated icon</li>
+<li>Next are three <code>segmented arc</code> tools with dedicated colorstops and the state value and icon inside. The AQI icon is state dependant.</li>
+</ul>
+</li>
+<li>
+<p>The second / middle block shows pressure, wind and wind direction and sunset and sunrise</p>
+</li>
+<li>
+<p>The last block shows the 5 day weather forecast.</p>
+<ul>
+<li>The localized short day name using a bit of javascript in the YAML definition</li>
+<li>The expected weather type using (again) external animated SVG icons</li>
+<li>The maximum expected temperature</li>
+<li>The minimum expected temperature</li>
+<li>The expected precipitation</li>
+</ul>
+</li>
+</ul>
 <h3 id="view">View:<a class="headerlink" href="#view" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Local file: <code>\lovelace\views\view-sake1.yaml</code></li>
@@ -652,21 +676,65 @@
 <p>In total approx 50 entities are used to build this visualization.</p>
 <h3 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The weather type icons are external <em>animated</em> SVG's located in the <code>&lt;xyz&gt;</code> folder</li>
+<li>The weather type icons are external <em>animated</em> SVG's located in the <code>/local/images/weather</code> folder</li>
 </ul>
-<h3 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h3>
-<ul>
-<li>None</li>
-</ul>
-<h3 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h3>
+<details class="info">
+<summary>Definitions used in the animations section to display the weather type icon</summary>
+<div class="highlight"><pre><span></span><code>  <span class="nt">images</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">clear-night-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/clear-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">cloudy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/cloudy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">cloudy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/cloudy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">fog-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/fog-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">fog-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/fog-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">hail-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/hail-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">hail-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/hail-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">lightning-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/lightning.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">lightning-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/lightning.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">partlycloudy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/partlycloudy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">partlycloudy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/partlycloudy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">pouring-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/pouring.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">pouring-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/pouring-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">rainy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/rainy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">rainy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/rainy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-rainy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-rainy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-rainy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-rainy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">sunny-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/sunny-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">sunny-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/clear-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-rainy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-rainy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">snowy-rainy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/snowy-rainy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">windy-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/windy-day.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">windy-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/windy-night.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">windy-variant-day</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/windy-variant.svg</span>
+    <span class="p p-Indicator">-</span> <span class="nt">windy-variant-night</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/local/images/weather/windy-variant.svg</span>
+  <span class="nt">animations</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">state</span><span class="p">:</span> <span class="s">&#39;[[[</span><span class="nv"> </span><span class="s">return</span><span class="nv"> </span><span class="s">(state);</span><span class="nv"> </span><span class="s">]]]&#39;</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+        <span class="no">[[[</span>
+          <span class="no">if (states[&quot;sun.sun&quot;].state == &#39;below_horizon&#39;) return (state + &#39;-night&#39;);</span>
+          <span class="no">return (state + &#39;-day&#39;);</span>
+        <span class="no">]]]</span>
+</code></pre></div>
+</details>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">If you LOVE YAML</label><label for="__tabbed_1_2">If you DON'T love YAML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="admonition success">
-<p class="admonition-title">If you LOVE YAML</p>
-<p>Then this is your go-to card: absolutely NO re-use, so no templates are used to define this card.</p>
+<p class="admonition-title">It's your lucky day</p>
+<p>This is your go-to card: absolutely NO re-use, so no templates are used to define this card.</p>
 <p>It's a whopping 1.500 lines of YAML.</p>
 </div>
+</div>
+<div class="tabbed-block">
 <div class="admonition warning">
-<p class="admonition-title">If you DON'T love YAML</p>
-<p>Then skip this example and look at the other examples first!</p>
+<p class="admonition-title">Skip this one for now</p>
+<p>Skip this example and look at the other examples first!</p>
+<p>Or start with this one, and learn how to read YAML the hard way...</p>
+</div>
+</div>
+</div>
 </div>
 <h3 id="interactions">Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h3>
 <ul>
