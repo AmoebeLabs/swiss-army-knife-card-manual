@@ -28,6 +28,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
         
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
     
     
@@ -55,7 +59,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="teal" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
   
     
     
@@ -185,6 +189,22 @@
     <li class="md-tabs__item">
       <a href="../../tools/circle-tool/" class="md-tabs__link">
         Tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../styling/overview/" class="md-tabs__link">
+        Styling
       </a>
     </li>
   
@@ -353,12 +373,88 @@
       
       
         <label class="md-nav__link" for="__nav_3">
+          Styling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Styling" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Styling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/overview/" class="md-nav__link">
+        An Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/styles/" class="md-nav__link">
+        Styles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
           Animations
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Animations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Animations
         </label>
@@ -397,18 +493,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5">
           Examples
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Examples" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Examples
         </label>
@@ -422,6 +518,20 @@
     <li class="md-nav__item">
       <a href="../introduction/" class="md-nav__link">
         Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/" class="md-nav__link">
+        How to
       </a>
     </li>
   
@@ -617,7 +727,7 @@
   
     <li class="md-nav__item">
       <a href="../example-4/" class="md-nav__link">
-        4. Sensors
+        4. More sensors
       </a>
     </li>
   
@@ -954,13 +1064,14 @@ The other rows show a standard light card.</p>
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake2.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<div class="admonition example">
+<div class="admonition info">
 <p class="admonition-title">This example uses decluttering templates for all cards except for the first row of lights!</p>
 <p>Both SAK templates and Decluttering templates are used to display the cards.
 This view is therefore as compact and easy to read as possible and is a good example of re-use.</p>
 </div>
-<p>Headers and dividers in this view:</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<details class="example">
+<summary>Excerpt of the headers and dividers in this view...</summary>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1005,7 +1116,9 @@ This view is therefore as compact and easy to read as possible and is a good exa
     <span class="p p-Indicator">-</span> <span class="nt">font_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3em</span>
 </code></pre></div>
 </td></tr></table>
-And the lights on second and third row:
+</details>
+<details class="example">
+<summary>And the excerpt of the lights on second and third row...</summary>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1040,51 +1153,68 @@ And the lights on second and third row:
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Boekenkast</span>
         <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:book-open-outline&#39;</span>
 </code></pre></div>
-</td></tr></table></p>
+</td></tr></table>
+</details>
 <h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
-<p>The following templates are defined in the <code>/lovelace/sak_templates/sak-templates.yaml</code> file:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">toolset_light_button_nm</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-nm-template.yaml</span>
-<span class="nt">toolset_light_button_slider_nm</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider-nm-template.yaml</span>
-<span class="nt">toolset_light_button_slider2_nm</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider2-nm-template.yaml</span>
-<span class="nt">toolset_light_button_slider3_nm</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider3-nm-template.yaml</span>
-</code></pre></div>
-</td></tr></table></p>
+<p>The following templates are defined in the <code>/lovelace/sak_templates/sak-templates.yaml</code> file:</p>
 <ul>
 <li>The <code>toolset_light_button_nm</code> is the template used for the standard lights (second and third row of cards).</li>
 <li>The <code>toolset_light_button_slider_nm</code> for the first card on the first row.</li>
 <li>The <code>toolset_light_button_slider3_nm</code> for the second card on the first row.</li>
 <li>The <code>toolset_light_button_slider2_nm</code> for the third card on the first row.</li>
 </ul>
+<details class="example">
+<summary>Excerpt of the <code>sak-templates.yaml</code> file...</summary>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">toolset_light_button_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-nm-template.yaml</span>
+
+<span class="nt">toolset_light_button_slider_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider-nm-template.yaml</span>
+
+<span class="nt">toolset_light_button_slider2_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider2-nm-template.yaml</span>
+
+<span class="nt">toolset_light_button_slider3_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider3-nm-template.yaml</span>
+</code></pre></div>
+</td></tr></table>
+</details>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
 <p>Decluttering templates are used extensively in this view except for the cards on the first row.</p>
-<p><em>Headers and dividers</em></p>
 <p>The following templates are defined in <code>/lovelace/decluttering_templates/decluttering_templates.yaml</code> file:</p>
+<ul>
+<li>The <code>header_template</code> is used for displaying the header sak card</li>
+<li>The <code>divider_template</code> is used for displaying the divider line sak card</li>
+<li>The <code>sak_button_template_nm_tpl</code> is used for displaying the light card</li>
+</ul>
+<details class="example">
+<summary>Excerpt of the <code>decluttering_templates.yaml</code> file...</summary>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-header-template-mw.yaml</span>
 <span class="nt">divider_template</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-divider-template-mw.yaml</span>
-</code></pre></div>
-</td></tr></table>
-<p><em>Lights on second and third row</em></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">sak_light_button_template_nm_tpl</span><span class="p">:</span>
+
+<span class="nt">sak_light_button_template_nm_tpl</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-light-button-nm-tpl.yaml</span> 
 </code></pre></div>
 </td></tr></table>
+</details>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1121,7 +1251,7 @@ The first row has an explicit "more-info" menu button and sliders for brightness
 <li>The menu in the upper left corner calls the "more-info" popup for the light.</li>
 <li>Clicking the light icon toggles the state of the light</li>
 <li>Clicking on the slider will set the brightness to the percentage.</li>
-<li>Dragging the slider will set the brightness and update the lights brightness semi-realtime 3-4 times a second.</li>
+<li>Dragging the slider will set the brightness and update the lights brightness semi-realtime 4 times a second.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Menu in upper left corner can be difficult to touch/click</p>
