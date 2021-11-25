@@ -55,7 +55,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="teal" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -77,7 +77,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Swiss Army Knife custom card" class="md-header__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
       
@@ -154,13 +156,84 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/circle-tool/" class="md-tabs__link">
+        Tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../animations/colorstops/" class="md-tabs__link">
+        Animations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        Examples
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -173,8 +246,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Swiss Army Knife custom card" class="md-nav__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
       
@@ -224,7 +299,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -272,7 +347,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -345,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction.md" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -390,49 +465,103 @@
       
         <li class="md-nav__item">
   <a href="#visualization" class="md-nav__link">
-    Visualization
-  </a>
+    
+
+
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view" class="md-nav__link">
-    View:
+  
+  
+  
+
+ Visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#data-sources" class="md-nav__link">
-    Data sources:
-  </a>
+    
+
+
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
+  
+  
+  
+
+ Data sources
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
-    Configuration
+    
+
+
+  
+  
+  
+  
+
+ Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lovelace-view" class="md-nav__link">
+    Lovelace view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-assets" class="md-nav__link">
+    File assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#interactions" class="md-nav__link">
-    Interactions
+    
+
+
+  
+  
+  
+  
+
+ Interactions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
-    Remarks
+    
+
+
+  
+  
+  
+  
+
+ Remarks
   </a>
   
 </li>
@@ -576,49 +705,103 @@
       
         <li class="md-nav__item">
   <a href="#visualization" class="md-nav__link">
-    Visualization
-  </a>
+    
+
+
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view" class="md-nav__link">
-    View:
+  
+  
+  
+
+ Visualization
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#data-sources" class="md-nav__link">
-    Data sources:
-  </a>
+    
+
+
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
+  
+  
+  
+
+ Data sources
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
-    Configuration
+    
+
+
+  
+  
+  
+  
+
+ Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lovelace-view" class="md-nav__link">
+    Lovelace view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-assets" class="md-nav__link">
+    File assets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#interactions" class="md-nav__link">
-    Interactions
+    
+
+
+  
+  
+  
+  
+
+ Interactions
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#remarks" class="md-nav__link">
-    Remarks
+    
+
+
+  
+  
+  
+  
+
+ Remarks
   </a>
   
 </li>
@@ -640,13 +823,41 @@
 
 <p>A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.</p>
 <p><a href="../../assets/screenshots/sak-example-1b.png"><img alt="SAK Example 1" src="../../assets/screenshots/sak-example-1b.png" /></a></p>
-<h2 id="visualization"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<h2 id="visualization"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
 <p>This visualization is divided into three major blocks:</p>
-<ul>
+<ol>
 <li>
 <p>The top part shows the weathertype, temperature, humidity and AQI value.</p>
 <ul>
-<li>The weathertype is displayed using an external animated icon</li>
+<li>The weathertype is displayed using an external <em>animated</em> SVG</li>
 <li>Next are three <code>segmented arc</code> tools with dedicated colorstops and the state value and icon inside. The AQI icon is state dependant.</li>
 </ul>
 </li>
@@ -657,27 +868,99 @@
 <p>The last block shows the 5 day weather forecast.</p>
 <ul>
 <li>The localized short day name using a bit of javascript in the YAML definition</li>
-<li>The expected weather type using (again) external animated SVG icons</li>
+<li>The expected weather type using (again) external <em>animated</em> SVG's</li>
 <li>The maximum expected temperature</li>
 <li>The minimum expected temperature</li>
 <li>The expected precipitation</li>
 </ul>
 </li>
-</ul>
-<h2 id="view"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> View:<a class="headerlink" href="#view" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Local file: <code>\lovelace\views\view-sake1.yaml</code></li>
-</ul>
-<h2 id="data-sources"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Data sources:<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+</ol>
+<h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/met/">Met.no Weather integration</a></li>
 <li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
 </ul>
 <p>In total approx 50 entities are used to build this visualization.</p>
-<h2 id="assets"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h2>
-<ul>
-<li>The weather type icons are external <em>animated</em> SVG's located in the <code>/local/images/weather</code> folder</li>
-</ul>
+<h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">If you LOVE YAML</label><label for="__tabbed_1_2">If you DON'T love YAML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition success">
+<p class="admonition-title">It's your lucky day</p>
+<p>This is your go-to card: absolutely NO re-use, so no templates are used to define this card.</p>
+<p>It's a whopping 1.500 lines of YAML!</p>
+<p>It was my first card, made in a time where templates didn't exist yet!</p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Skip this one for now</p>
+<p>Skip this example and look at the other examples first!</p>
+<p>Or start with this one, and learn how to read YAML the hard way...</p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
+<p>This example is in the <code>view-sake1.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
+<h4 id="file-assets">File assets<a class="headerlink" href="#file-assets" title="Permanent link">&para;</a></h4>
+<p>To display the weather type, you need the external <em>animated</em> SVG's which are located in the <code>/local/images/weather</code> folder</p>
 <details class="info">
 <summary>Definitions used in the animations section to display the weather type icon</summary>
 <div class="highlight"><pre><span></span><code>  <span class="nt">images</span><span class="p">:</span>
@@ -717,30 +1000,67 @@
         <span class="no">]]]</span>
 </code></pre></div>
 </details>
-<h2 id="configuration"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">If you LOVE YAML</label><label for="__tabbed_1_2">If you DON'T love YAML</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="admonition success">
-<p class="admonition-title">It's your lucky day</p>
-<p>This is your go-to card: absolutely NO re-use, so no templates are used to define this card.</p>
-<p>It's a whopping 1.500 lines of YAML.</p>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="admonition warning">
-<p class="admonition-title">Skip this one for now</p>
-<p>Skip this example and look at the other examples first!</p>
-<p>Or start with this one, and learn how to read YAML the hard way...</p>
-</div>
-</div>
-</div>
-</div>
-<h2 id="interactions"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>All tools support by default the "more-info" dialog once clicked.</li>
 </ul>
-<h2 id="remarks"><a href="../../assets/logo/swiss-army-knife24.png"><img alt="logo24" src="../../assets/logo/swiss-army-knife24.png" /></a> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
 <ul>
 <li>This view shows the dutch translation for "Partly Cloudy &rarr; Gedeeltelijk bewolkt" and the wind direction "WSW &rarr; WZW".<blockquote>
 <p>Support for translations is possible using a YAML definition.</p>
@@ -753,6 +1073,11 @@
           </div>
         </div>
         
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
       </main>
       
         <footer class="md-footer">
@@ -760,7 +1085,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../animations/colorstops/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Colorstops" rel="prev">
+        <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -769,7 +1094,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Colorstops
+              Introduction
             </div>
           </div>
         </a>
@@ -812,7 +1137,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.0885dc41.min.js"></script>

@@ -55,7 +55,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="teal" data-md-color-primary="" data-md-color-accent="">
   
     
     
@@ -63,6 +63,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#visualization" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -72,7 +77,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Swiss Army Knife custom card" class="md-header__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
       
@@ -149,13 +156,84 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/circle-tool/" class="md-tabs__link">
+        Tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../animations/colorstops/" class="md-tabs__link">
+        Animations
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        Examples
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -168,8 +246,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Swiss Army Knife custom card" class="md-nav__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
       
@@ -219,7 +299,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -267,7 +347,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -340,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction.md" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -375,9 +455,141 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2. Lights
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         2. Lights
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Data sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lovelace-view" class="md-nav__link">
+    Lovelace view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactions" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Interactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remarks" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Remarks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -481,6 +693,140 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Data sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lovelace-view" class="md-nav__link">
+    Lovelace view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactions" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Interactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remarks" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Remarks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -489,12 +835,354 @@
 
   <h1>2. Lights</h1>
 
+<p>Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.</p>
 <p><a href="../../assets/screenshots/sak-example-2.png"><img alt="SAK Example 2" src="../../assets/screenshots/sak-example-2.png" /></a></p>
+<h2 id="visualization"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This visualization shows some non-card alike aspects of the Swiss Army Knife: the horizontal divider lines, and the texts "SCENES", "VERLICHTING (Lights)" and "WOONKAMER (Livingroom)" are all made with SAK.</p>
+</div>
+<p>The first lights row shows some cards with different experimental sliders and a <code>segmented arc</code> to display the brightness.
+The other rows show a standard light card.</p>
+<p><strong>The light switch</strong> (all cards)</p>
+<p>The light switch is made out of 3 circles and an icon:</p>
+<ul>
+<li>the 1<sup>st</sup> (bottom) circle is used to get the Neumorphic effect: a button that 'rises' out of the background. It also servers as the edge of the light button.</li>
+<li>the second circle is used to display the activation ring; orange if 'on' and light grey if 'off'.</li>
+<li>the third (top) circle is used to display the inset shadow effect as if the button is "pressed".</li>
+<li>last but not least: the light icon is displayed on top of all those circles.</li>
+</ul>
+<p><strong>First card</strong></p>
+<p>The first card shows a "more-info" button in the top left, the ligh button, the name of the light, and a slider with the actual percentage on the right side of the slider. The position of that value can be defined in the card.</p>
+<p><strong>Second and third card</strong></p>
+<p>The configurable position of the percentage is visible in the second and third card: apart from using a different styled slider, the percentage is shown in the circle where the <code>segmented arc</code> is also defined.</p>
+<p><strong>The rest of the cards</strong></p>
+<p>The other 4 - identical - cards show the light button, the area (Woonkamer = Livingroom), the name of the light, and if present: the brightness in the lower right corner.</p>
+<div class="admonition info">
+<p class="admonition-title">Brightness is only displayed if the light is on</p>
+<p>This is a change in Home Assistant some months ago.</p>
+</div>
+<h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ikea Tradfri Zigbee lights using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
+<li>Dumb on/off lights using MQTT.</li>
+</ul>
+<h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
+<p>This example is in the <code>view-sake2.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
+<div class="admonition example">
+<p class="admonition-title">This example uses decluttering templates for all cards except for the first row of lights!</p>
+<p>Both SAK templates and Decluttering templates are used to display the cards.
+This view is therefore as compact and easy to read as possible and is a good example of re-use.</p>
+</div>
+<p>Headers and dividers in this view:</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+  <span class="nt">variables</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Scenes&#39;</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+  <span class="nt">variables</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Verlichting&#39;</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+  <span class="nt">variables</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Woonkamer&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">font_color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--secondary-text-color)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">font_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3em</span>
+</code></pre></div>
+</td></tr></table>
+And the lights on second and third row:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">horizontal-stack</span>
+  <span class="nt">cards</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.livingroom_light_gasheater_light</span>
+        <span class="p p-Indicator">-</span> <span class="nt">area</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rode Lamp</span>
+        <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:floor-lamp&#39;</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.livingroom_light_cupboard_light</span>
+        <span class="p p-Indicator">-</span> <span class="nt">area</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Boekenkast</span>
+        <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:book-open-outline&#39;</span>
+</code></pre></div>
+</td></tr></table></p>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p>The following templates are defined in the <code>/lovelace/sak_templates/sak-templates.yaml</code> file:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">toolset_light_button_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-nm-template.yaml</span>
+<span class="nt">toolset_light_button_slider_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider-nm-template.yaml</span>
+<span class="nt">toolset_light_button_slider2_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider2-nm-template.yaml</span>
+<span class="nt">toolset_light_button_slider3_nm</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider3-nm-template.yaml</span>
+</code></pre></div>
+</td></tr></table></p>
+<ul>
+<li>The <code>toolset_light_button_nm</code> is the template used for the standard lights (second and third row of cards).</li>
+<li>The <code>toolset_light_button_slider_nm</code> for the first card on the first row.</li>
+<li>The <code>toolset_light_button_slider3_nm</code> for the second card on the first row.</li>
+<li>The <code>toolset_light_button_slider2_nm</code> for the third card on the first row.</li>
+</ul>
+<h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<p>Decluttering templates are used extensively in this view except for the cards on the first row.</p>
+<p><em>Headers and dividers</em></p>
+<p>The following templates are defined in <code>/lovelace/decluttering_templates/decluttering_templates.yaml</code> file:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-header-template-mw.yaml</span>
+<span class="nt">divider_template</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-divider-template-mw.yaml</span>
+</code></pre></div>
+</td></tr></table>
+<p><em>Lights on second and third row</em></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">sak_light_button_template_nm_tpl</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-light-button-nm-tpl.yaml</span> 
+</code></pre></div>
+</td></tr></table>
+<h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<p>Sliders &rarr; <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892L8 8.807zM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9V3.5zM4.189 18.832 6.3 15h11.4l2.111 3.832a1.125 1.125 0 0 1-.985 1.668H5.174a1.125 1.125 0 0 1-.985-1.668z"/></svg></span> Experimental</p>
+<p><strong>First row</strong>
+The first row has an explicit "more-info" menu button and sliders for brightness</p>
+<ul>
+<li>The menu in the upper left corner calls the "more-info" popup for the light.</li>
+<li>Clicking the light icon toggles the state of the light</li>
+<li>Clicking on the slider will set the brightness to the percentage.</li>
+<li>Dragging the slider will set the brightness and update the lights brightness semi-realtime 3-4 times a second.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Menu in upper left corner can be difficult to touch/click</p>
+<p>The SVG Icon has no real "touch/click" area attached (yet). Therefore it is difficult to activate the menu as SVG Icons can only be touched/clicked on the foreground part of the icon.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">The slider has a touch/click attached, so is perfectly to use</p>
+<p>Except for a little bug where the thumb is pulled to the edge of the touch/click area or the brightness is set to 100%, and cannot be controlled anymore. In this case clicking/touching the slider makes the thumb accessible again.</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">The thumb of the slider of the first card is not positioned correctly</p>
+<p>The slider expects to be in the center of the card, which this slider is not. As a result the thumb is positioned more to the left than it should be. </p>
+<p>Will be fixed of course <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" />.</p>
+</div>
+<p><strong>Other rows</strong></p>
+<ul>
+<li>All cards displayed toggle the light by clicking on the light icon</li>
+<li>All cards displayed show the "more-info" dialog if name or brightness percentage is clicked.</li>
+</ul>
+<h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Home Assistant sends a brightness value between 0..255. A little piece of javascript in the card converts this to 0..100% as a derived state, including a unit of measurement definition of "%". This means that the value and the uom can be styled as if it is an existing state.</li>
+</ul>
 
               
             </article>
           </div>
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -555,7 +1243,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.0885dc41.min.js"></script>
