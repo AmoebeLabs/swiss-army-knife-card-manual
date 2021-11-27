@@ -449,15 +449,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sketching-with-trial-and-error" class="md-nav__link">
-    Sketching with trial-and-error
+  <a href="#the-simple-approach-using-a-sketch" class="md-nav__link">
+    The simple approach using a sketch
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#making-a-real-design" class="md-nav__link">
-    Making a real design
+  <a href="#the-professional-approach-using-an-app" class="md-nav__link">
+    The professional approach using an app
   </a>
   
 </li>
@@ -471,20 +471,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../creating-your-card/" class="md-nav__link">
-        Creating your card
-      </a>
     </li>
   
 
@@ -1360,15 +1346,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sketching-with-trial-and-error" class="md-nav__link">
-    Sketching with trial-and-error
+  <a href="#the-simple-approach-using-a-sketch" class="md-nav__link">
+    The simple approach using a sketch
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#making-a-real-design" class="md-nav__link">
-    Making a real design
+  <a href="#the-professional-approach-using-an-app" class="md-nav__link">
+    The professional approach using an app
   </a>
   
 </li>
@@ -1470,7 +1456,7 @@
 </ul>
 <div class="admonition success">
 <p class="admonition-title">All three are completely different designs, and all three can be build using the Swiss Army Knife card!</p>
-<p>Of course, you can't build them <em>EXACTLY</em> that way, but you can come along way mimicing these examples.</p>
+<p>Of course, you can't build them <em>EXACTLY</em> that way, but you can come a long way mimicing these examples.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">You will find several designs in the examples</p>
@@ -1505,20 +1491,36 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Ok, I got inspired. Now what?<a class="headerlink" href="#ok-i-got-inspired-now-what" title="Permanent link">&para;</a></h2>
-<p>Well, you can try different approaches. I use two
-- The well known "I sketch something" and then try to create this using trial-and-error
-- I make a design on a 100x100 artboard, and then make the card using the design's measurements and coordinates</p>
-<h3 id="sketching-with-trial-and-error">Sketching with trial-and-error<a class="headerlink" href="#sketching-with-trial-and-error" title="Permanent link">&para;</a></h3>
+<p>Well, you can try different approaches.</p>
+<ul>
+<li>Re-use an existing card and modify this to your own needs to design your own card</li>
+<li>Re-use some existing design you found on the internet to design your own card</li>
+<li>Create something completely new and have a unique card design</li>
+</ul>
+<p>Most of the possible card visualizations have been created I think, so being inspired by something that you found on the internet and use that as the basis for your own cards is well proven approach.</p>
+<p>Once you have decided what kind of style you want, you can start designing your cards. You can choose the simple approach or a more professional approach:</p>
+<ul>
+<li>The simple approach by "Sketching something" and then try to create this using trial-and-error in YAML</li>
+<li>Make a real design in an app on a 100x100 artboard, and then make the card using the design's measurements and coordinates</li>
+</ul>
+<h3 id="the-simple-approach-using-a-sketch">The simple approach using a sketch<a class="headerlink" href="#the-simple-approach-using-a-sketch" title="Permanent link">&para;</a></h3>
+<p>I used this a lot and created about 50 of these sketches in Procreate on my iPad. Only some of them made it in production. Many of them where not usefull, too complex to make or just ugly.</p>
+<p>Below you see one of those sketches. It shows a pre-version of the server example #7 and a real production example of the lights in example #2. Not yet Leonardo da Vinci quality, but I'm learning. At least my handwriting is on par with a docter <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <p><a href="../../assets/screenshots/sak-design-sketch-procreate.png"><img alt="sak-design-sketch-procreate" src="../../assets/screenshots/sak-design-sketch-procreate.png" /></a></p>
-<h3 id="making-a-real-design">Making a real design<a class="headerlink" href="#making-a-real-design" title="Permanent link">&para;</a></h3>
+<p>I then uses this sketch to create the card. This took some guessing about coordinates and sizes. I use Notepad++ as editor to produce the YAML and after every "save" action, I hit F5 to refresh HA's view to check if I'm satisfied with the result. If not, rinse and repeat...</p>
+<p>The server card took a lot of trial-and-error to get the 4 CPU/Load circles aligned the way I wanted to:</p>
+<p><img alt="sak-example-7" src="../../assets/screenshots/sak-example-7.png" /></p>
+<p>The lights where much easier, as it involved much less parts:</p>
+<p><img alt="sak-example-2" src="../../assets/screenshots/sak-example-2.png" /></p>
+<h3 id="the-professional-approach-using-an-app">The professional approach using an app<a class="headerlink" href="#the-professional-approach-using-an-app" title="Permanent link">&para;</a></h3>
 <p>Below you see Affinity Designer in action.</p>
 <p>For example #6, I wanted to create something different with circles as the background, and on top of that some SAK tools (circles) with weather and airvisual data.</p>
-<p>For this I created an artboard with size 100mmx100mm. This is the default 'coordinate' system for a square card. This means that the coordinates shown by Affinity Designer can be copied 1:1 in the cards YAML definition. No trial-and-error this time placing the tools on the right location.</p>
+<p>For this I created an artboard with size 100mmx100mm. This is the default 'coordinate' system for a square card. This means that the coordinates shown by Affinity Designer can be copied 1:1 in the cards YAML definition. No trial-and-error this time placing the tools at the right location.</p>
 <div class="admonition info">
 <p class="admonition-title">The units used are NOT relevant, it's all about a 100x100 canvas. Use centons if you like...</p>
 </div>
 <p><a href="../../assets/screenshots/sak-circles-background-ad.png"><img alt="sak-circles-background-ad" src="../../assets/screenshots/sak-circles-background-ad.png" /></a></p>
-<p>As an example I selected one of the circles where the weather type will be put. In the lower rigth corner, you can see that I selected the center coordinates and (if you look closely) that the X coordinate is 77 (mm) and the Y coordinate 59 (mm). You also notice the width/height for the circle is 22 (mm).</p>
+<p>As an example I selected one of the circles where the weather type will be put. In the lower right corner of the Affinity Designer screen, you can see that I selected the center coordinates and (if you look closely) that the X coordinate is 77 (mm) and the Y coordinate 59 (mm). You also notice the width/height for the circle is 22 (mm).</p>
 <p>The resulting partial YAML definition is as follows:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1555,7 +1557,7 @@
           <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">white</span>
 </code></pre></div>
 </td></tr></table>
-<p>And the final result after placing all the SAK tools on top of the background:</p>
+<p>And the final result after placing all the SAK tools on top of the background: a nice visualization, a bit artistic, clean and showing a fair bit of information. The gradient also gives a nice touch to the overall presentation.</p>
 <p><img alt="sak-example-6" src="../../assets/screenshots/sak-example-6.png" /></p>
 
               
@@ -1591,13 +1593,13 @@
       
       
         
-        <a href="../creating-your-card/" class="md-footer__link md-footer__link--next" aria-label="Next: Creating your card" rel="next">
+        <a href="../../changelog/changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Creating your card
+              Changelog
             </div>
           </div>
           <div class="md-footer__button md-icon">
