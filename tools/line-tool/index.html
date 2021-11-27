@@ -1382,22 +1382,27 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;line&#39;</span>              <span class="c1"># tooltype is &#39;line&#39;</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;line&#39;</span>              <span class="c1"># tooltype is &#39;line&#39;</span>
 </span>  <span class="nt">position</span><span class="p">:</span>                 <span class="c1"># Position on (100x100) canvas</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cx=50 is center position</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cy=50 is center position</span>
     <span class="nt">length</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>              <span class="c1"># length of line.</span>
     <span class="nt">orientation</span><span class="p">:</span> <span class="s">&#39;vertical&#39;</span> <span class="c1"># Vertical or horizontal</span>
+  <span class="nt">style</span><span class="p">:</span>
+    <span class="nt">line</span><span class="p">:</span>
+      <span class="nt">stroke-width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>       <span class="c1"># Set stroke width using CSS attribute</span>
 </code></pre></div>
 </td></tr></table>
-<div class="admonition info">
-<p class="admonition-title">Use the <code>stroke-width</code> styling to set the width of the line</p>
-<p>Use the <code>stroke-width</code> to set the width of the line in the styles section or using a class definition and enabling that class in the classes section.</p>
-</div>
 <div class="admonition tip">
-<p class="admonition-title">Use the transform style to rotate the tool</p>
-<p>Use <code>transform: rotate(45deg)</code> for example to rotate the line by 45 degrees.</p>
-<p>There will be support in the future to define the line with (x1,y1) and (x2,y2) coordinates to make any angle possible.</p>
+<p class="admonition-title">There will be future support for (x1,y1) and (x2,y2) coordinates to draw non vertical/horizontal lines</p>
+<p>Until then you can try the transform attribute to rotate the tool:</p>
+<ul>
+<li>Use <code>transform: rotate(45deg)</code> for example to rotate the line by 45 degrees.</li>
+</ul>
+<p>Note however that this does not always give the expected results as the transform origin is not always the center of the tool, but the center of the toolset.</p>
 </div>
 <h2 id="styling"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1562,8 +1567,6 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">The use of animations require the tool to be connected to an entity</p>
-<p>Connect the tool to an entity using the <code>entity_index: &lt;0..x&gt;</code> section.</p>
-<p>The entity is defined in the <code>entities:</code> section of the card.</p>
 </div>
 
               
