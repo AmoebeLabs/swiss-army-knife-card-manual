@@ -116,17 +116,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://amoebelabs.github.io/swiss-army-knife/start/creating-your-card/</loc>
-         <lastmod>2021-11-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://amoebelabs.github.io/swiss-army-knife/start/designing-your-card/</loc>
          <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://amoebelabs.github.io/swiss-army-knife/start/installation/</loc>
+         <lastmod>2021-11-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amoebelabs.github.io/swiss-army-knife/start/introduction/</loc>
          <lastmod>2021-11-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

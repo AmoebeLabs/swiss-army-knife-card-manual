@@ -182,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../start/installation/" class="md-tabs__link">
+      <a href="../../start/introduction/" class="md-tabs__link">
         Getting started
       </a>
     </li>
@@ -337,6 +337,20 @@
           Getting started
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1182,7 +1196,70 @@
 
   <h1>Card structure</h1>
 
+<p>The Swiss Army Knife uses the following structure:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># Define the type of the card to use</span>
+<span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:dev-swiss-army-knife-card&#39;</span>
+</span><span class="hll">  <span class="nt">entities</span><span class="p">:</span>
+</span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;list of entities&gt;</span>
 
+  <span class="c1"># Define aspect ratio of card. In this case square</span>
+<span class="hll">  <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>
+</span>
+  <span class="c1"># Display the card or not.</span>
+<span class="hll">  <span class="nt">disable_card</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</span>
+  <span class="c1"># The layout of the card starts here</span>
+<span class="hll">  <span class="nt">layout</span><span class="p">:</span>
+</span>
+    <span class="c1"># Overall styles for the card and toolsets. Mainly used for defining filters!</span>
+<span class="hll">    <span class="nt">styles</span><span class="p">:</span>
+</span>      <span class="nt">card</span><span class="p">:</span>
+      <span class="nt">toolsets</span><span class="p">:</span>
+        <span class="c1"># Define Neumorphic filter over the full toolset.</span>
+        <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#sak-nm-default)</span>
+
+        <span class="c1"># Define material shadow filter over the full toolset</span>
+        <span class="c1"># filter: url(#ds-1)</span>
+
+    <span class="c1"># Define the list of toolsets from here</span>
+<span class="hll">    <span class="nt">toolsets</span><span class="p">:</span>
+</span>      <span class="c1"># define list of toolsets with its tools</span>
+<span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">background</span>
+</span>        <span class="c1"># define list of tools within toolset</span>
+<span class="hll">        <span class="nt">tools</span><span class="p">:</span>
+</span>          <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;usersvg&#39;</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>
