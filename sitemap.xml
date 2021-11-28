@@ -146,6 +146,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://amoebelabs.github.io/swiss-army-knife/tools/rectangle-ex-tool/</loc>
+         <lastmod>2021-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amoebelabs.github.io/swiss-army-knife/tools/rectangle-tool/</loc>
+         <lastmod>2021-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amoebelabs.github.io/swiss-army-knife/tools/regular-poly-tool/</loc>
+         <lastmod>2021-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://amoebelabs.github.io/swiss-army-knife/tools/switch-tool/</loc>
          <lastmod>2021-11-28</lastmod>
          <changefreq>daily</changefreq>
