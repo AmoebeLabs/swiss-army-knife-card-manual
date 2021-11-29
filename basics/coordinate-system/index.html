@@ -607,7 +607,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-and-tool-placement-and-size" class="md-nav__link">
+  <a href="#toolset-and-tool-placement-example-right-and-wrong" class="md-nav__link">
     
 
 
@@ -616,8 +616,36 @@
   
   
 
- Toolset and tool placement and size
+ Toolset and tool placement example: right and wrong
   </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Toolset and tool placement example: right and wrong">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doing-it-the-wrong-way" class="md-nav__link">
+    Doing it the wrong way...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doing-it-the-right-way" class="md-nav__link">
+    Doing it the right way...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1457,7 +1485,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-and-tool-placement-and-size" class="md-nav__link">
+  <a href="#toolset-and-tool-placement-example-right-and-wrong" class="md-nav__link">
     
 
 
@@ -1466,8 +1494,36 @@
   
   
 
- Toolset and tool placement and size
+ Toolset and tool placement example: right and wrong
   </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Toolset and tool placement example: right and wrong">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doing-it-the-wrong-way" class="md-nav__link">
+    Doing it the wrong way...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doing-it-the-right-way" class="md-nav__link">
+    Doing it the right way...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1531,6 +1587,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">To Self &rarr; below write up is wrong and confusing I'm afraid. Change that!</p>
+</div>
 <h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
 <p class="admonition-title">The dimensions of a tool <em>always</em> reference a <em>default</em> canvas size of (0..100, 0..100)</p>
@@ -1551,6 +1610,10 @@
 <li>a tool can be wider and higher</li>
 <li>can be placed outside these default coordinates: so coordinates can be &lt; 0 or &gt; 100.</li>
 </ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">But a tool, or series of tools should be unaware of the size of the card it is placed on</p>
+<p>Card placement is the task of the Toolset!</p>
 </div>
 <h3 id="toolsets">Toolsets<a class="headerlink" href="#toolsets" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
@@ -1658,7 +1721,7 @@
   <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
   <text x="260" y="55" font-size="12" text-anchor="middle" fill="black">4/4</text>
 </svg></p>
-<h2 id="toolset-and-tool-placement-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<h2 id="toolset-and-tool-placement-example-right-and-wrong"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1686,8 +1749,9 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> Toolset and tool placement and size<a class="headerlink" href="#toolset-and-tool-placement-and-size" title="Permanent link">&para;</a></h2>
+</span> Toolset and tool placement example: right and wrong<a class="headerlink" href="#toolset-and-tool-placement-example-right-and-wrong" title="Permanent link">&para;</a></h2>
 <p><img alt="sak-example-22t" src="../../assets/screenshots/sak-example-22t.png" /></p>
+<h3 id="doing-it-the-wrong-way">Doing it the wrong way...<a class="headerlink" href="#doing-it-the-wrong-way" title="Permanent link">&para;</a></h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1754,13 +1818,42 @@
 <span class="normal">64</span>
 <span class="normal">65</span>
 <span class="normal">66</span>
-<span class="normal">67</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4/1</span>              <span class="c1"># Gives a 400x100 canvas size</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4/1</span>              <span class="c1"># Gives a 400x100 canvas size</span>
 
 <span class="nt">layout</span><span class="p">:</span>
-  <span class="nt">styles</span><span class="p">:</span>
-    <span class="nt">toolsets</span><span class="p">:</span>
-      <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#nm-1)</span>
 
+  <span class="c1"># Flowers are placed at cx position 50, 150, 250 and 350.</span>
+  <span class="c1"># So evenly spaced over a 400 wide card.</span>
   <span class="nt">toolsets</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fourflowers</span>    <span class="c1"># Just a name</span>
       <span class="nt">position</span><span class="p">:</span>
@@ -1785,16 +1878,17 @@
               <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">none</span>
               <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.8</span>
 
-        <span class="c1"># The left &#39;flower&#39;</span>
-        <span class="c1"># Designed on a 100x100 canvas sizewise, so must</span>
-        <span class="c1"># use negative cx to place the flower to the left</span>
-        <span class="c1"># on the 400x100 canvas.</span>
-        <span class="c1"># The toolset places toolset at (200,50) position.</span>
+        <span class="c1"># The first &#39;flower&#39; on card.cx=50</span>
         <span class="c1">#</span>
-        <span class="c1"># The default center is (50,50). So this circle </span>
-        <span class="c1"># with cx: -100 is moved -150 to the left.</span>
-        <span class="c1"># As a result, the flower&#39;s position on the card is:</span>
-        <span class="c1"># cx = 200 (from toolset) + -150 = 50.</span>
+        <span class="c1"># Designed on a 100x100 canvas sizewise, so must</span>
+        <span class="c1"># use negative cx to place the flower on cx=50</span>
+        <span class="c1"># on the 400x100 canvas.</span>
+        <span class="c1">#</span>
+        <span class="c1"># - card.cx = 50</span>
+        <span class="c1"># - toolset.cx=200</span>
+        <span class="c1"># - The default center is tool.cx=50</span>
+        <span class="c1">#</span>
+        <span class="c1"># So cx would become: 50 - 200 + 50 = -100</span>
         <span class="c1">#</span>
         <span class="c1"># The vertical position is as follows:</span>
         <span class="c1"># - toolset is set at center y (using 50) on a</span>
@@ -1808,19 +1902,227 @@
             <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
             <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
           <span class="nt">styles</span><span class="p">:</span>
-            <span class="c1"># Trial and error styling of the stroke</span>
-            <span class="c1"># dash-array length to get the flower-like display</span>
             <span class="nt">circle</span><span class="p">:</span>
-              <span class="nt">stroke</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-background-color)</span>
-              <span class="nt">stroke</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkSeaGreen</span>
               <span class="nt">stroke</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
-              <span class="nt">stroke-width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">70</span>
-              <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lightgray</span>
-              <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-background-color)</span>
-              <span class="nt">stroke-dasharray</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">52</span>
-              <span class="nt">stroke-dashoffset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-              <span class="nt">stroke-linecap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">round</span>
-              <span class="nt">paint-order</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stroke</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-100</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">48</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+          <span class="nt">show</span><span class="p">:</span>
+            <span class="nt">uom</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bottom</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-100</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+            <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
+            <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+          <span class="nt">styles</span><span class="p">:</span>
+            <span class="nt">icon</span><span class="p">:</span>
+              <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
+              <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
+
+        <span class="c1"># The 2nd &#39;flower&#39; on card.cx=150</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+            <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+
+        <span class="c1"># The 3rd &#39;flower&#39; on card.cx=250</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+            <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+
+        <span class="c1"># The 4th &#39;flower&#39; on card.cx=350</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+            <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="doing-it-the-right-way">Doing it the right way...<a class="headerlink" href="#doing-it-the-right-way" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4/1</span>              <span class="c1"># Gives a 400x100 canvas size</span>
+
+<span class="nt">layout</span><span class="p">:</span>
+  <span class="c1"># Flowers are placed at cx position 50, 150, 250 and 350.</span>
+  <span class="c1"># So evenly spaced over a 400 wide card.</span>
+  <span class="nt">toolsets</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fence</span>
+      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>               <span class="c1"># 200 is center of 400 width</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>                <span class="c1"># Just above the center of 50</span>
+      <span class="nt">tools</span><span class="p">:</span>
+        <span class="c1"># The rectangle in the background to which the</span>
+        <span class="c1"># &#39;flowers&#39; are attached</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rectangle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">350</span>
+            <span class="nt">height</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">20</span>
+            <span class="nt">rx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+          <span class="nt">styles</span><span class="p">:</span>
+            <span class="c1"># Styles removed for brevity</span>
+
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flower1</span>
+</span>      <span class="nt">position</span><span class="p">:</span>
+<span class="hll">        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                <span class="c1"># 50 is for the first flower</span>
+</span>        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>                <span class="c1"># Just above the center of 50</span>
+      <span class="nt">tools</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># Circle is centered on 100x100</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+          <span class="nt">styles</span><span class="p">:</span>
+            <span class="nt">circle</span><span class="p">:</span>
+              <span class="nt">stroke</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># State centered</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">52</span>            <span class="c1"># State a bit lower</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+          <span class="nt">show</span><span class="p">:</span>
+            <span class="nt">uom</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bottom</span>
+<span class="hll">
+</span>        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+<span class="hll">          <span class="nt">position</span><span class="p">:</span>
+</span>            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># Icon centered</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>            <span class="c1"># icon above state</span>
+            <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
+            <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+          <span class="nt">styles</span><span class="p">:</span>
+            <span class="nt">icon</span><span class="p">:</span>
+              <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
+              <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DarkOliveGreen</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flower2</span>
+      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">150</span>               <span class="c1"># 150 is for the second flower</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>                <span class="c1"># Just above the center of 50</span>
+      <span class="nt">tools</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+          <span class="nt">styles</span><span class="p">:</span>
+            <span class="nt">circle</span><span class="p">:</span>
+              <span class="nt">stroke</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Blue</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+          <span class="nt">show</span><span class="p">:</span>
+            <span class="nt">uom</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bottom</span>
+
+        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># Icon centered</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35</span>            <span class="c1"># icon above state</span>
+            <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
+            <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+          <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+    <span class="c1"># etc for flower3 (orange) and flower4 (grey)...</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="use-relative-sizes-for-everything"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
