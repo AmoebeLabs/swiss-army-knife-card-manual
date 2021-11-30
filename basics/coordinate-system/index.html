@@ -1673,7 +1673,7 @@
 <p>Now that we know all that, how does this actually work in practice?</p>
 <p>Let's look at the example with a card size of 200x100 and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>. In a kind of 3D world, it looks like this:</p>
 <p><img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement.png" /></p>
-<p>The tools are neatly configured around the center position (50,50) of the toolsetgrid: they have no knowledige of the size of the card, nor the placement on the card. That is the task of the toolset!</p>
+<p>The tools are neatly configured around the center position (50,50) of the toolset grid: they have no knowledige of the size of the card, nor the placement on the card. That is the task of the toolset!</p>
 <p>The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: <code>circle</code>, <code>state</code> and <code>icon</code>. For brevity only the coordinates/sizes part is shown.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1745,35 +1745,35 @@
             <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
             <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>            <span class="c1"># y a bit lower</span>
 
-        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
-          <span class="nt">position</span><span class="p">:</span>
-<span class="hll">            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
-</span>            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>            <span class="c1"># y a bit higher</span>
+<span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+</span>          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>            <span class="c1"># y a bit higher</span>
             <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
             <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">set2</span>
-      <span class="nt">position</span><span class="p">:</span>
-<span class="hll">        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">160</span>
-</span>        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">set2</span>
+</span>      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">160</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
       <span class="nt">tools</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
-          <span class="nt">position</span><span class="p">:</span>
-<span class="hll">            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># Circle is centered on 100x100</span>
-</span>            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">circle</span>
+</span>          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># Circle is centered on 100x100</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
             <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
 
-        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
-          <span class="nt">position</span><span class="p">:</span>
-<span class="hll">            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
-</span>            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>            <span class="c1"># y a bit lower</span>
+<span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">state</span>
+</span>          <span class="nt">position</span><span class="p">:</span>
+            <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
+            <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>            <span class="c1"># y a bit lower</span>
 
-        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
-          <span class="nt">position</span><span class="p">:</span>
+<span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+</span>          <span class="nt">position</span><span class="p">:</span>
             <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>            <span class="c1"># x centered</span>
             <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>            <span class="c1"># y a bit higher</span>
-<span class="hll">            <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
-</span>            <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+            <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
+            <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="use-relative-sizes-for-styles-too-where-possible"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
