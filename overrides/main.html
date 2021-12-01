@@ -4,10 +4,10 @@
 {% block extrahead %}
 
   <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
-  <link
-    rel="stylesheet"
-    href="{{ 'overrides/assets/stylesheets/main.css' | url }}"
-  />
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="{{ 'overrides/assets/stylesheets/main.scss' | url }}" -->
+  <!-- /> -->
 {% endblock %}
 
 {% block announce %}
@@ -15,12 +15,13 @@
   <a style="color:white;opacity:.9;" onmouseover="this.style.color='orange';this.style.fontSize='20px'";" onmouseout="this.style.color='white';;this.style.fontSize=''">
     <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
   </a>
+
 {% endblock %}
 
 <!-- Theme-related JavaScript -->
 {% block scripts %}
-  {{ super() }}
+  <!-- {{ super() }} -->
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="{{ 'overrides/assets/javascripts/bundle.js' | url }}"></script>
+  <!-- <script src="{{ 'overrides/assets/javascripts/bundle.js' | url }}"></script> -->
 {% endblock %}

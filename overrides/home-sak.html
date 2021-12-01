@@ -57,6 +57,91 @@
         display: none;
       }
     }
+    
+
+    /* Extra stuff copied over from up42-py... */
+    .mdx-container {
+        padding-top: .0rem;
+    
+        background:
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(0, 0%, 100%, 1)' /></svg>") no-repeat bottom,
+          linear-gradient(
+            to bottom,
+            var(--md-primary-fg-color) 30%,
+            var(--md-default-bg-color) 99%
+          );
+
+        background[data-md-color-scheme="slate"]: {
+          /*background:*/
+            url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(232, 15%, 21%, 1)' /></svg>") no-repeat bottom,
+            linear-gradient(
+              to bottom,
+              var(--md-primary-fg-color) 30%,
+              var(--md-default-bg-color) 99%
+            );
+        }
+    }
+
+    .mdx-hero {
+        margin: 0px 1rem;
+        color: var(--md-primary-bg-color);
+        /*justify-content: center;*/
+            margin: 0rem 1rem 7rem 1rem;
+    }
+
+    .mdx-hero h1 {
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .mdx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        margin: 0 1rem;
+    }
+
+    .mdx-hero__image{
+        /*width:40rem;*/
+        /*height:30rem;*/
+        order:1;
+        padding-right: 0.0rem;
+    }
+    @media screen and (max-width:30em) {
+        .mdx_hero {
+          margin: 0rem 0rem 4rem 0rem;
+        }
+          
+        .mdx-hero h1 {
+            font-size: 1.4rem
+        }
+
+        .mdx-hero__image{
+            width:auto;
+        }
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .mdx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdx-hero__content {
+            max-width: 15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 2.0rem;
+            align-items: center;
+        }
+    }
+    
   </style>
 
   <!-- Hero for landing page -->
@@ -64,13 +149,12 @@
     <div class="md-grid md-typeset">
       <div class="mdx-hero">
 
-        Hero image
         <div class="mdx-hero__image">
           <img
-            src="assets/screenshots/sak-double-example.png"
+            src="assets/screenshots/sak-double-example-transparent.png"
             alt=""
-            width="1659"
-            height="1200"
+            width="2000"
+            height="1500"
             draggable="false"
           >
         </div>
@@ -78,15 +162,16 @@
         <!-- Hero content -->
         <div class="mdx-hero__content">
           <h1>Swiss Army Knife documentation</h1>
-          <p>{{ config.site_description }}. ...</p>
+          <p>{{ config.site_description }}</p>
           <a
             href="{{ page.next_page.url | url }}"
             title="{{ page.next_page.title | e }}"
             class="md-button md-button--primary"
           >
-            Quick start
+            Getting started
           </a>
         </div>
+
       </div>
     </div>
   </section>

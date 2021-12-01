@@ -64,10 +64,10 @@
     <div class="md-grid md-typeset">
       <div class="mdx-hero">
 
-        Hero image
+        <!-- Hero image -->
         <div class="mdx-hero__image">
           <img
-            src="assets/screenshots/sak-double-example.png"
+            src="assets/images/illustration.png"
             alt=""
             width="1659"
             height="1200"
@@ -77,14 +77,21 @@
 
         <!-- Hero content -->
         <div class="mdx-hero__content">
-          <h1>Swiss Army Knife documentation</h1>
-          <p>{{ config.site_description }}. ...</p>
+          <h1>Technical documentation that just works</h1>
+          <p>{{ config.site_description }}. Set up in 5 minutes.</p>
           <a
             href="{{ page.next_page.url | url }}"
             title="{{ page.next_page.title | e }}"
             class="md-button md-button--primary"
           >
             Quick start
+          </a>
+          <a
+            href="{{ 'insiders/' | url }}"
+            title="Material for MkDocs Insiders"
+            class="md-button"
+          >
+            Get Insiders
           </a>
         </div>
       </div>
