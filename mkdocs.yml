@@ -1,0 +1,139 @@
+
+# Project information
+site_name: Swiss Army Knife custom card
+#site_url: https://amoebelabs.github.io/swiss-army-knife/
+site_url: https://swiss-army-knife.docs.amoebelabs.com/
+site_author: Marco
+site_description: >-
+  The Swiss Army Knife custom card for Home Assistant lets you create
+  your own visualisation using plain YAML to define and style the
+  tools provided by this card
+
+# Repository
+repo_name: amoebelabs/swiss-army-knife
+repo_url: https://github.com/amoebelabs/swiss-army-knife
+edit_uri: ""
+
+copyright: Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+
+theme:
+  name: material
+  palette:
+    primary: blue grey
+  logo: assets/logo/sak-logo.svg
+  custom_dir: docs
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.top    
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/amoebelabs  
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/amoebelabs  
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/amoebelabs  
+
+  analytics:
+    provider: google
+    property: G-YH4P44GYYJ
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/overrides/.icons
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  
+  
+# Page tree
+nav:
+  - Home: index.md
+  - Getting started:
+    - Introduction: start/introduction.md
+    - Installation: start/installation.md
+    - Designing your card: start/designing-your-card.md
+    - Changelog: changelog/changelog.md
+  - Basics:
+    - SVG as basis: basics/svg-as-basis.md
+    - Card structure: basics/card-structure.md
+    - Tools and Toolsets: basics/tools-and-toolsets.md
+    - Coordinate system: basics/coordinate-system.md
+    - Templates: basics/templates.md
+    - Styling:
+      - Overview: basics/styling/overview.md
+      - Classes: basics/styling/classes.md
+      - Styles: basics/styling/styles.md
+    - Animations:
+      - Overview: basics/animations/overview.md
+      - Colorstops: basics/animations/colorstops.md
+      - State operators: basics/animations/state-operators.md
+  - Tools:
+    - Basic tools:
+      - Circle: tools/circle-tool.md
+      - Ellipse: tools/ellipse-tool.md
+      - Line: tools/line-tool.md
+      - Rectangle: tools/rectangle-tool.md
+      - RectangleEx: tools/rectangle-ex-tool.md
+      - Regular Poly: tools/regular-poly-tool.md
+      - Text: tools/text-tool.md
+    - Advanced tools:
+      - Horse Shoe: tools/horseshoe-tool.md
+      - Segmented Arc: tools/segarc-tool.md
+      - Slider: tools/slider2-tool.md
+      - Switch: tools/switch-tool.md
+      - User SVG: tools/usersvg-tool.md
+    - HA Entity tools:
+      - Entity Area: tools/entity-area-tool.md
+      - Entity Icon: tools/entity-icon-tool.md
+      - Entity Name: tools/entity-name-tool.md
+      - Entity State: tools/entity-state-tool.md
+      - Entity History: tools/spraklinebarchart-tool.md
+  - Examples:
+    - Introduction: examples/introduction.md
+    - 1. Airvisual & Weather forecast: examples/example-1.md
+    - 2. Lights: examples/example-2.md
+    - 3. Sensors: examples/example-3.md
+    - 4. More sensors: examples/example-4.md
+    - 5. Car dashboard alike: examples/example-5.md
+    - 6. Weather on SVG background: examples/example-6.md
+    - 7. Servers: examples/example-7.md
+    - 8. Homekit alike: examples/example-8.md
