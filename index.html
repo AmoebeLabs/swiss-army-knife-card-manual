@@ -362,15 +362,13 @@
             var(--md-default-bg-color) 99%
           );
 
-        background[data-md-color-scheme="slate"]: {
-          /*background:*/
+        background[data-md-color-scheme="slate"]:
             url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(232, 15%, 21%, 1)' /></svg>") no-repeat bottom,
             linear-gradient(
               to bottom,
               var(--md-primary-fg-color) 30%,
               var(--md-default-bg-color) 99%
             );
-        }
     }
 
     .mdx-hero {
@@ -395,6 +393,7 @@
     .mdx-hero__image{
         /*width:40rem;*/
         /*height:30rem;*/
+        max-width: 120%;
         order:1;
         padding-right: 0.0rem;
     }
@@ -452,7 +451,7 @@
 
         <!-- Hero content -->
         <div class="mdx-hero__content">
-          <h1>Swiss Army Knife documentation</h1>
+          <h1>Swiss Army Knife custom card documentation</h1>
           <p>The Swiss Army Knife custom card for Home Assistant lets you create your own visualisation using plain YAML to define and style the tools provided by this card</p>
           <a
             href="start/introduction/"
