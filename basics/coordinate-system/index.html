@@ -594,27 +594,6 @@
  Toolset and tool placement
   </a>
   
-    <nav class="md-nav" aria-label="
-
-
-  
-  
-  
-  
-
- Toolset and tool placement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#an-example" class="md-nav__link">
-    An example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1437,27 +1416,6 @@
  Toolset and tool placement
   </a>
   
-    <nav class="md-nav" aria-label="
-
-
-  
-  
-  
-  
-
- Toolset and tool placement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#an-example" class="md-nav__link">
-    An example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1555,14 +1513,14 @@
 </code></pre></div></p>
 <h3 id="example-cards-with-different-aspect-ratios">Example cards with different aspect ratio's<a class="headerlink" href="#example-cards-with-different-aspect-ratios" title="Permanent link">&para;</a></h3>
 <p>Some examples for aspect ratio's of: <code>0.5/1</code>, <code>1/1</code>, <code>2/1</code> and <code>3/1</code>:</p>
-<p><svg viewBox="0 0 680 100" style="fill:grey;margin:10px;padding:10px;">
+<p><svg viewBox="0 0 680 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
   <rect x="0" y="0" width="50" height="100"/>
   <rect x="60" y="0" width="100" height="100"/>
   <rect x="170" y="0" width="200" height="100"/>
   <rect x="380" y="0" width="300" height="100"/>
 </svg></p>
 <p>Some more examples for aspect ratio's of: <code>0.5/2</code>, <code>1/2</code>, <code>2/2</code> and <code>3/2</code>:</p>
-<p><svg viewBox="0 0 680 200" style="fill:grey;margin:10px;padding:10px;">
+<p><svg viewBox="0 0 680 200" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
   <rect x="0" y="0" width="50" height="200"/>
   <rect x="60" y="0" width="100" height="200"/>
   <rect x="170" y="0" width="200" height="200"/>
@@ -1573,25 +1531,25 @@
 </div>
 <h3 id="but-what-about-the-size-then">But what about the size then?<a class="headerlink" href="#but-what-about-the-size-then" title="Permanent link">&para;</a></h3>
 <p>If I would place three square cards in a <code>horizontal-stack</code> with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal canvas sizes of 100x100, 200x200 and 400x400.</p>
-<p><svg viewBox="0 0 310 100" style="fill:grey;margin:10px;padding:10px;">
+<p><svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
   <rect x="0" y="0" width="100" height="100"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="black">1/1</text>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
   <rect x="105" y="0" width="100" height="100"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="black">2/2</text>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
   <rect x="210" y="0" width="100" height="100"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="black">4/4</text>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
 </svg></p>
 <p>The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual canvas dimensions of the card. <strong>Scalable</strong> Vector Graphics at work!
-<svg viewBox="0 0 310 100" style="fill:grey;margin:10px;padding:10px;">
+<svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
   <rect x="0" y="0" width="100" height="100"/>
   <circle cx="50" cy="50" r="50" fill="lightgrey"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="black">1/1</text>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
   <rect x="105" y="0" width="100" height="100"/>
   <circle cx="130" cy="25" r="25" fill="lightgrey"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="black">2/2</text>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
   <rect x="210" y="0" width="100" height="100"/>
   <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="black">4/4</text>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
 </svg></p>
 <h2 id="toolset-and-tool-placement"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1622,42 +1580,13 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Toolset and tool placement<a class="headerlink" href="#toolset-and-tool-placement" title="Permanent link">&para;</a></h2>
-<p>Let's start with the most important specifications</p>
-<div class="admonition important">
-<p class="admonition-title">The position and dimensions of a tool <em>always</em> reference a <em>default</em> toolset grid size of 100x100</p>
-<p>Where:</p>
-<ul>
-<li>(0,0) is the upper left corner of the grid</li>
-<li>(100,100) is the lower right corner of the grid</li>
-</ul>
-<p>Furthermore, all dimensions are <em>relative</em> to the grid:</p>
-<ul>
-<li>a line with a length of 10 takes 10% of the grid.</li>
-<li>a circle with radius of 50 fits exactly the grid.</li>
-</ul>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Therefore, the center position of a toolset is <em>always</em> (50,50)</p>
-<p>This center position is the 'anchor' used by the Toolset to position the tools on a card.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">However, the size and position are not limited by this grid size!</p>
-<p>So:</p>
-<ul>
-<li>a tool can be wider and higher</li>
-<li>can be placed outside these default coordinates: so coordinates can be &lt; 0 or &gt; 100.</li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Don't forget that toolsets can scale tools and are re-usable if defined as a template</p>
-</div>
-<h3 id="an-example">An example<a class="headerlink" href="#an-example" title="Permanent link">&para;</a></h3>
-<p>Now that we know all that, how does this actually work in practice?</p>
-<p>Let's look at the example with a card size of 200x100 and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>. In a kind of 3D world, it looks like this:</p>
-<p><img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement.png" /></p>
-<p>The tools are neatly configured around the center position (50,50) of the toolset grid: they have no knowledige of the size of the card, nor the placement on the card. That is the task of the toolset!</p>
+<p>Let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.<br />
+The tools are neatly configured around the center position (50,50) of the toolset grid: The <code>circle</code> with its radius of 25, the <code>icon</code> placed at (50,40) and the <code>state</code> at (50,60).</p>
+<p>Then, the first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. As you can see, both toolsets are identical and could be a template: one of the advantages of using toolsets!</p>
+<p>In a kind of 3D world, it looks like this:</p>
+<p><img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png" /></p>
 <p>The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: <code>circle</code>, <code>state</code> and <code>icon</code>. For brevity only the coordinates/sizes part is shown.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1758,6 +1687,35 @@
             <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
 </code></pre></div>
 </td></tr></table>
+So:</p>
+<div class="admonition important">
+<p class="admonition-title">The position and dimensions of a tool <em>always</em> reference a <em>default</em> toolset grid size of 100x100</p>
+<p>Where:</p>
+<ul>
+<li>(0,0) is the upper left corner of the grid</li>
+<li>(100,100) is the lower right corner of the grid</li>
+</ul>
+<p>Furthermore, all dimensions are <em>relative</em> to the grid:</p>
+<ul>
+<li>a line with a length of 10 takes 10% of the grid.</li>
+<li>a circle with radius of 50 fits exactly the grid.</li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Therefore, the center position of a toolset is <em>always</em> (50,50)</p>
+<p>This center position is the 'anchor' used by the Toolset to position the tools on a card.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">However, the size and position are not limited by this grid size!</p>
+<p>So:</p>
+<ul>
+<li>a tool can be wider and higher</li>
+<li>can be placed outside these default coordinates: so coordinates can be &lt; 0 or &gt; 100.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Don't forget that toolsets can scale tools and are re-usable if defined as a template</p>
+</div>
 <h2 id="use-relative-sizes-for-styles-too-where-possible"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
