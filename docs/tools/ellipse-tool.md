@@ -2,7 +2,7 @@
 The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100px">
-  <ellipse cx="50" cy="50" rx="30" ry="45" fill="grey" stroke="black" stroke-width="2"/>
+  <ellipse cx="50" cy="50" rx="30" ry="45" fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
 </svg>
 
 ##:sak-sak-logo: Basic usage

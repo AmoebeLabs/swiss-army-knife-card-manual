@@ -2,8 +2,8 @@
 The Rectangle tool is based on the SVG basic `<rect>`element shape.
 
 <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" width="400px">
-  <rect x="10" y="10" height="80" width="100" rx="0" fill="grey" stroke="black" stroke-width="2"/>
-  <rect x="150" y="10"height="80" width="100" rx="10" fill="grey" stroke="black" stroke-width="2"/>
+  <rect x="10" y="10" height="80" width="100" rx="0" fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
+  <rect x="150" y="10"height="80" width="100" rx="10" fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
 </svg>
 
 ##:sak-sak-logo: Basic usage

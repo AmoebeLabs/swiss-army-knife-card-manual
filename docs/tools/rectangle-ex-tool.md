@@ -6,10 +6,10 @@ The RectEx tool lets you define the radius for each corner, where the Rectangle 
 !!! Info "The rectex might replace the rectangle tool in the future..."
 
 <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg" width="500px">
-  <rect x="10" y="10" height="80" width="100" rx="0" fill="grey" stroke="black" stroke-width="2"/>
-  <rect x="150" y="10" height="80" width="100" rx="10" fill="grey" stroke="black" stroke-width="2"/>
-  <path d="M 280 10 l 80 0 q 20 0 20 20 v 60 q 0 0 0 0 l -100 0 z " fill="grey" stroke="black" stroke-width="2"/>
-  <path d="M 410 10 l 80 0 q 20 0 20 20 v 50 q 0 10 -10 10 l -90 0 z " fill="grey" stroke="black" stroke-width="2"/>
+  <rect x="10" y="10" height="80" width="100" rx="0" fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
+  <rect x="150" y="10" height="80" width="100" rx="10" fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
+  <path d="M 280 10 l 80 0 q 20 0 20 20 v 60 q 0 0 0 0 l -100 0 z " fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
+  <path d="M 410 10 l 80 0 q 20 0 20 20 v 50 q 0 10 -10 10 l -90 0 z " fill="var(--md-primary-fg-color--light)" stroke="var(--md-primary-fg-color--dark)" stroke-width="2"/>
 </svg>
 
 ##:sak-sak-logo: Basic usage

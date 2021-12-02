@@ -12,22 +12,22 @@ Regular polygons (all angles and all vertices equal) gallery. Both regular conve
   <div style="display:grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 10px; grid-row-gap: 10px;">
     <div>
       <svg viewBox="-1000 -1000 2000 2000">
-      <path style="transform:rotate(8deg);fill:grey;stroke:black;stroke-width:20"
+      <path style="transform:rotate(8deg);fill:var(--md-primary-fg-color--light);stroke:var(--md-primary-fg-color--dark);stroke-width:20"
         d="M748 281 L-618 507 L-130 -789 z" fill-rule="evenodd"></path></svg>
     </div>
     <div>
       <svg viewBox="-1000 -1000 2000 2000">
-      <path style="transform:rotate(8deg);fill:grey;stroke:black;stroke-width:20"
+      <path style="transform:rotate(8deg);fill:var(--md-primary-fg-color--light);stroke:var(--md-primary-fg-color--dark);stroke-width:20"
         d="M501 623 L-437 669 L-772 -209 L-39 -799 L747 -284 z" fill-rule="evenodd"></path></svg>
     </div>
     <div>
       <svg viewBox="-1000 -1000 2000 2000">
-      <path style="transform:rotate(8deg);fill:grey;stroke:black;stroke-width:20"
+      <path style="transform:rotate(8deg);fill:var(--md-primary-fg-color--light);stroke:var(--md-primary-fg-color--dark);stroke-width:20"
         d="M324 731 L-692 -400 L795 -83 L-594 534 L166 -782 z" fill-rule="evenodd"></path></svg>
     </div>
     <div>
       <svg viewBox="-1000 -1000 2000 2000">
-      <path style="transform:rotate(8deg);fill:grey;stroke:black;stroke-width:20"
+      <path style="transform:rotate(8deg);fill:var(--md-primary-fg-color--light);stroke:var(--md-primary-fg-color--dark);stroke-width:20"
         d="M690 404 L-797 -64 L746 -287 L-547 582 L240 -762 L114 791 L-446 -663 z" fill-rule="evenodd"></path>
     </div>
   </div>

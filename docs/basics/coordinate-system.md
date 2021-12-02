@@ -1,94 +1,36 @@
 [sak-example-22t]: ../assets/screenshots/sak-example-22t.png
-[sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement.png
+[sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 
 The Swiss Army Knife card uses its own, simplified, coordinate system to simplify the design and placement of toolsets and tools on a card.
 
 ##:sak-sak-logo: Basics
+The coordinate system of a SAK Card is based on the following characteristics:
 
-##:sak-sak-logo: Card aspect ratio and size
-The `aspectratio` configuration determines both the aspect ratio and the size of the SAK Card.
+- A SAK Card has a configurable `aspectratio`
+- The aspect ratio determines the internal grid size: `aspect ratio * 100`.
+- A Toolset is **always** based on a 1/1 aspect ratio and corresponding 100x100 internal grid size. It does NOT depend on the size of a card.
+- All tool sizes are relative to the default toolset grid of 100x100 with a center of (50,50)!
+- And finally, a toolset is placed on a card within the card's dimensions.
 
-The aspect ratio is defined in the card. Below you see the definition of a square card with default size of 100x100.
-```yaml
-  aspectratio: 1/1        # Square card with a 100x100 grid size
-```
-###Example cards with different aspect ratio's
-Some examples for aspect ratio's of: `0.5/1`, `1/1`, `2/1` and `3/1`:
+The card's actual external size depends on how it is placed: on a `panel` or `horizontal-stack` for instance.
 
-<svg viewBox="0 0 680 100" style="fill:grey;margin:10px;padding:10px;">
-  <rect x="0" y="0" width="50" height="100"/>
-  <rect x="60" y="0" width="100" height="100"/>
-  <rect x="170" y="0" width="200" height="100"/>
-  <rect x="380" y="0" width="300" height="100"/>
-</svg>
+As SAK cards are based on SVG they scale the contents perfectly to the size allowed by the parent: this means that a card with a 1/1 aspect ratio and 100x100 grid size is as sharp as a 10/10 card with a 1.000x1.000 grid size!
 
-Some more examples for aspect ratio's of: `0.5/2`, `1/2`, `2/2` and `3/2`:
+The next paragraph shows an example, and the paragraphs thereafter more details.
 
-<svg viewBox="0 0 680 200" style="fill:grey;margin:10px;padding:10px;">
-  <rect x="0" y="0" width="50" height="200"/>
-  <rect x="60" y="0" width="100" height="200"/>
-  <rect x="170" y="0" width="200" height="200"/>
-  <rect x="380" y="0" width="300" height="200"/>
-</svg>
-!!! Info "You are not limited to these aspect ratio's. Any aspect ratio will work"
+##:sak-sak-logo: An example: Toolset and tool placement @ work
+Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a `circle`, `icon` and `state`.  
 
-###But what about the size then?
-If I would place three square cards in a `horizontal-stack` with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal canvas sizes of 100x100, 200x200 and 400x400.
+The tools are neatly configured around the center position (50,50) of the toolset grid:
 
-<svg viewBox="0 0 310 100" style="fill:grey;margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="black">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="black">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="black">4/4</text>
-</svg>
+- the `circle` is placed at (50,50) with its radius of 25,
+- the `icon` is placed at (50,40) and
+- the `state` is placed at (50,60).
 
-The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual canvas dimensions of the card. **Scalable** Vector Graphics at work!
-<svg viewBox="0 0 310 100" style="fill:grey;margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
-  <circle cx="50" cy="50" r="50" fill="lightgrey"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="black">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
-  <circle cx="130" cy="25" r="25" fill="lightgrey"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="black">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
-  <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="black">4/4</text>
-</svg>
+Then, the first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. As you can see, both toolsets are identical and could be a template: one of the advantages of using toolsets!
 
-##:sak-sak-logo: Toolset and tool placement
-Let's start with the most important specifications
-
-!!! Important "The position and dimensions of a tool *always* reference a *default* toolset grid size of 100x100"
-    Where:
-    
-    - (0,0) is the upper left corner of the grid
-    - (100,100) is the lower right corner of the grid
-    
-    Furthermore, all dimensions are *relative* to the grid:
-    
-    - a line with a length of 10 takes 10% of the grid.
-    - a circle with radius of 50 fits exactly the grid.
-
-!!! Important "Therefore, the center position of a toolset is *always* (50,50)"
-    This center position is the 'anchor' used by the Toolset to position the tools on a card.
-
-!!! Note "However, the size and position are not limited by this grid size!"
-    So:
-    
-    - a tool can be wider and higher
-    - can be placed outside these default coordinates: so coordinates can be < 0 or > 100.
-!!! Note "Don't forget that toolsets can scale tools and are re-usable if defined as a template" 
-
-###An example
-Now that we know all that, how does this actually work in practice?
-
-Let's look at the example with a card size of 200x100 and two toolsets consisting of a `circle`, `icon` and `state`. In a kind of 3D world, it looks like this:
-
+In a kind of 3D world, it looks like this:
 ![sak-card-toolset-tool-placement]
-
-The tools are neatly configured around the center position (50,50) of the toolset grid: they have no knowledige of the size of the card, nor the placement on the card. That is the task of the toolset!
 
 The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: `circle`, `state` and `icon`. For brevity only the coordinates/sizes part is shown.
 
@@ -145,7 +87,80 @@ layout:
             icon_size: 15
 
 ```
+
+##:sak-sak-logo: Card aspect ratio and size
+Below you see the definition of a 1/1 square card which equals a grid size of 100x100.
+```yaml
+- type: 'custom:swiss-army-knife-card'
+  aspectratio: 1/1        # Square 1/1 card with resulting 100x100 grid size
+```
+###Example cards with different aspect ratio's
+Some examples for aspect ratio's and (grid size) of: `0.5/1` (50x100), `1/1` (100x100), `2/1` (200x100) and `3/1` (300x100):
+
+<svg viewBox="0 0 680 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="50" height="100" rx="5"/>
+  <rect x="60" y="0" width="100" height="100" rx="5"/>
+  <rect x="170" y="0" width="200" height="100" rx="5"/>
+  <rect x="380" y="0" width="300" height="100" rx="5"/>
+</svg>
+
+!!! Info "You are not limited to these aspect ratio's. Any aspect ratio will work"
+
+###But what about the internal grid size then?
+If I would place three square cards in a `horizontal-stack` with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal grid sizes of 100x100, 200x200 and 400x400.
+
+<svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="100" height="100" rx="5"/>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
+  <rect x="105" y="0" width="100" height="100" rx="5"/>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
+  <rect x="210" y="0" width="100" height="100" rx="5"/>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
+</svg>
+
+The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual grid size of the card. **Scalable** Vector Graphics at work!
+<svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="100" height="100" rx="5"/>
+  <circle cx="50" cy="50" r="50" fill="lightgrey"/>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
+  <rect x="105" y="0" width="100" height="100" rx="5"/>
+  <circle cx="130" cy="25" r="25" fill="lightgrey"/>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
+  <rect x="210" y="0" width="100" height="100" rx="5"/>
+  <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
+</svg>
+
+!!! Info "The `1/1`, `2/1` and `3/1` are mostly used for mobile phones, and the much larger ones, say 4/4 for panels"
+    The tools on a 4/4 would be too small to read on a mobile phone, but are excellent on large displays.
+
+##:sak-sak-logo: Toolset aspect ratio and size
+As already mentioned, the position and dimensions of a tool *always* reference a *default* toolset grid size of 100x100:
+
+- (0,0) is the upper left corner of the grid
+- (100,100) is the lower right corner of the grid
+- (50,50) is the center of the grid and servers as the 'anchor' used by the Toolset to position the tools on a card.
+    
+Furthermore, all dimensions are *relative* to the grid:
+   
+- a line with a length of 10 takes 10% of the grid.
+- a circle with radius of 50 fits exactly the grid.
+
+!!! Warning "The size and position of tools are not limited by this grid size!"
+    So:
+    
+    - a tool can be wider and higher
+    - a tool can be placed outside these default coordinates: so coordinates can be < 0 or > 100.
+    
+    This means that - without scaling - such a toolset does NOT fit a `1/1` card!  
+    Such toolsets are therefore designed for larger cards.
+
+!!! Note "Don't forget that toolsets can scale tools and are re-usable if defined as a template" 
+
 ##:sak-sak-logo: Use relative sizes for styles too, where possible
+So tool dimension are relative. It is advised to use relative dimensions too for styling.  
 One easy example is the CSS `font-size` attribute: use `em` and not `px` to configure the size of a font, ie use `font-size: 12em`. 
 
-SAK has configured the default `font-size` for SAK cards to be about the same as the 1% of the grid: so `font-size: 10em` should be about 10% of the grid in size.
+SAK has configured the default `font-size` for SAK cards to be about the same size as 1% of the grid: so `font-size: 10em` should be about 10% of the grid in size.
+
+

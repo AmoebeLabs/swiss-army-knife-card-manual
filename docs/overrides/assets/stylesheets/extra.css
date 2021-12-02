@@ -1,0 +1,33 @@
+  [data-md-color-primary=blue-grey] {
+    --md-primary-fg-color--50: #ECEFF1;
+    --md-primary-fg-color--100: #CFD8DC;
+    --md-primary-fg-color--200: #B0BEC5;
+    --md-primary-fg-color--300: #90A4AE;
+    --md-primary-fg-color--400: #78909C;
+    --md-primary-fg-color--500: #607D8B;
+    --md-primary-fg-color--600: #546E7A;
+    --md-primary-fg-color--700: #455A64;
+    --md-primary-fg-color--800: #37474F;
+    --md-primary-fg-color--900: #263238;
+  }
+
+  .md-typeset h2 {
+    color: var(--md-primary-fg-color--800);
+  }
+  
+  .md-typeset h2 .sak-logo {
+    fill: var(--md-primary-fg-color--800);
+  }
+  
+  .md-typeset h2:before {
+    content: "";
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 0; */
+    width: 20%;
+    max-width: 20em;
+    height: 2px;
+    background: linear-gradient(90deg,var(--md-primary-fg-color--500),rgba(25,118,210,0));
+    border-radius: 3px;
+    transform: translate(1.4em, 1.4em); /* line-height is 1.4 */
+  }
