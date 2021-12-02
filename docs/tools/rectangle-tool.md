@@ -1,4 +1,7 @@
+[rectangle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Rectangle tool
+[:octicons-tag-24: 1.0.0][rectangle-tool support]
+
 The Rectangle tool is based on the SVG basic `<rect>`element shape.
 
 <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" width="400px">

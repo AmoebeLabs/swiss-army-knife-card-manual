@@ -1,4 +1,7 @@
+[ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Ellipse tool
+[:octicons-tag-24: 1.0.0][ellipse-tool support] 
+
 The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100px">

@@ -1,4 +1,7 @@
+[line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Line tool
+[:octicons-tag-24: 1.0.0][line-tool support] ·
+:octicons-tools-24: WIP
 
 The Line tool is based on the SVG basic `<line>` element shape
 

@@ -1,4 +1,8 @@
+[text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Text tool
+[:octicons-tag-24: 1.0.0][text-tool support] ·
+:octicons-tools-24: WIP
+
 The Text tool is based on the SVG basic `<text>`element shape.
 
 <svg viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" width="400px">

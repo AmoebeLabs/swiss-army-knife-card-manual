@@ -1,4 +1,7 @@
+[circle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Circle tool
+[:octicons-tag-24: 1.0.0][circle-tool support] 
+
 The Circle tool is based on the SVG basic `<circle>`element shape.
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100px">

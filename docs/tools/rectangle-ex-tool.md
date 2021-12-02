@@ -1,4 +1,7 @@
+[rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Rectangle Ex(tended) tool
+[:octicons-tag-24: 1.0.0][rectex-tool support]
+
 The RectEx tool is based on the SVG basic `<path>`element shape.
 
 The RectEx tool lets you define the radius for each corner, where the Rectangle tool lets you specify a single radius for all corners.

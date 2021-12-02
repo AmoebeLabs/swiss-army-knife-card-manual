@@ -1,4 +1,7 @@
+[regpoly-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Regular Polygon tool
+[:octicons-tag-24: 1.0.0][regpoly-tool support]
+
 The Regular Polygon tool is a tool build on the [Shläfli symbol.](http://en.wikipedia.org/wiki/Schl%C3%A4fli_symbol)
 
 Regular polygons (all angles and all vertices equal) gallery. Both regular convex polygons and regular star polygons.
