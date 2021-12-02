@@ -1709,22 +1709,22 @@
 <h3 id="but-what-about-the-internal-grid-size-then">But what about the internal grid size then?<a class="headerlink" href="#but-what-about-the-internal-grid-size-then" title="Permanent link">&para;</a></h3>
 <p>If I would place three square cards in a <code>horizontal-stack</code> with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal grid sizes of 100x100, 200x200 and 400x400.</p>
 <p><svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
+  <rect x="0" y="0" width="100" height="100" rx="5"/>
   <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
+  <rect x="105" y="0" width="100" height="100" rx="5"/>
   <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
+  <rect x="210" y="0" width="100" height="100" rx="5"/>
   <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
 </svg></p>
 <p>The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual grid size of the card. <strong>Scalable</strong> Vector Graphics at work!
 <svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
+  <rect x="0" y="0" width="100" height="100" rx="5"/>
   <circle cx="50" cy="50" r="50" fill="lightgrey"/>
   <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
+  <rect x="105" y="0" width="100" height="100" rx="5"/>
   <circle cx="130" cy="25" r="25" fill="lightgrey"/>
   <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
+  <rect x="210" y="0" width="100" height="100" rx="5"/>
   <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
   <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
 </svg></p>
@@ -1816,7 +1816,7 @@ Such toolsets are therefore designed for larger cards.</p>
 </span> Use relative sizes for styles too, where possible<a class="headerlink" href="#use-relative-sizes-for-styles-too-where-possible" title="Permanent link">&para;</a></h2>
 <p>So tool dimension are relative. It is advised to use relative dimensions too for styling.<br />
 One easy example is the CSS <code>font-size</code> attribute: use <code>em</code> and not <code>px</code> to configure the size of a font, ie use <code>font-size: 12em</code>. </p>
-<p>SAK has configured the default <code>font-size</code> for SAK cards to be about the same as the 1% of the grid: so <code>font-size: 10em</code> should be about 10% of the grid in size.</p>
+<p>SAK has configured the default <code>font-size</code> for SAK cards to be about the same size as 1% of the grid: so <code>font-size: 10em</code> should be about 10% of the grid in size.</p>
 
               
             </article>
