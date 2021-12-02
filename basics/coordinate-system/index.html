@@ -541,6 +541,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#an-example-toolset-and-tool-placement-work" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ An example: Toolset and tool placement @ work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#card-aspect-ratio-and-size" class="md-nav__link">
     
 
@@ -572,8 +587,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#but-what-about-the-size-then" class="md-nav__link">
-    But what about the size then?
+  <a href="#but-what-about-the-internal-grid-size-then" class="md-nav__link">
+    But what about the internal grid size then?
   </a>
   
 </li>
@@ -584,7 +599,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-and-tool-placement" class="md-nav__link">
+  <a href="#toolset-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -593,7 +608,7 @@
   
   
 
- Toolset and tool placement
+ Toolset aspect ratio and size
   </a>
   
 </li>
@@ -1363,6 +1378,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#an-example-toolset-and-tool-placement-work" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ An example: Toolset and tool placement @ work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#card-aspect-ratio-and-size" class="md-nav__link">
     
 
@@ -1394,8 +1424,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#but-what-about-the-size-then" class="md-nav__link">
-    But what about the size then?
+  <a href="#but-what-about-the-internal-grid-size-then" class="md-nav__link">
+    But what about the internal grid size then?
   </a>
   
 </li>
@@ -1406,7 +1436,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-and-tool-placement" class="md-nav__link">
+  <a href="#toolset-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -1415,7 +1445,7 @@
   
   
 
- Toolset and tool placement
+ Toolset aspect ratio and size
   </a>
   
 </li>
@@ -1480,7 +1510,18 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
-<h2 id="card-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<p>The coordinate system of a SAK Card is based on the following characteristics:</p>
+<ul>
+<li>A SAK Card has a configurable <code>aspectratio</code></li>
+<li>The aspect ratio determines the internal grid size: <code>aspect ratio * 100</code>.</li>
+<li>A Toolset is <strong>always</strong> based on a 1/1 aspect ratio and corresponding 100x100 internal grid size. It does NOT depend on the size of a card.</li>
+<li>All tool sizes are relative to the default toolset grid of 100x100 with a center of (50,50)!</li>
+<li>And finally, a toolset is placed on a card within the card's dimensions.</li>
+</ul>
+<p>The card's actual external size depends on how it is placed: on a <code>panel</code> or <code>horizontal-stack</code> for instance.</p>
+<p>As SAK cards are based on SVG they scale the contents perfectly to the size allowed by the parent: this means that a card with a 1/1 aspect ratio and 100x100 grid size is as sharp as a 10/10 card with a 1.000x1.000 grid size!</p>
+<p>The next paragraph shows an example, and the paragraphs thereafter more details.</p>
+<h2 id="an-example-toolset-and-tool-placement-work"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1508,87 +1549,19 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> Card aspect ratio and size<a class="headerlink" href="#card-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
-<p>The <code>aspectratio</code> configuration determines both the aspect ratio and the size of the SAK Card.</p>
-<p>The aspect ratio is defined in the card. Below you see the definition of a square card with default size of 100x100.
-<div class="highlight"><pre><span></span><code>  <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>        <span class="c1"># Square card with a 100x100 grid size</span>
-</code></pre></div></p>
-<h3 id="example-cards-with-different-aspect-ratios">Example cards with different aspect ratio's<a class="headerlink" href="#example-cards-with-different-aspect-ratios" title="Permanent link">&para;</a></h3>
-<p>Some examples for aspect ratio's of: <code>0.5/1</code>, <code>1/1</code>, <code>2/1</code> and <code>3/1</code>:</p>
-<p><svg viewBox="0 0 680 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="50" height="100"/>
-  <rect x="60" y="0" width="100" height="100"/>
-  <rect x="170" y="0" width="200" height="100"/>
-  <rect x="380" y="0" width="300" height="100"/>
-</svg></p>
-<p>Some more examples for aspect ratio's of: <code>0.5/2</code>, <code>1/2</code>, <code>2/2</code> and <code>3/2</code>:</p>
-<p><svg viewBox="0 0 680 200" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="50" height="200"/>
-  <rect x="60" y="0" width="100" height="200"/>
-  <rect x="170" y="0" width="200" height="200"/>
-  <rect x="380" y="0" width="300" height="200"/>
-</svg></p>
-<div class="admonition info">
-<p class="admonition-title">You are not limited to these aspect ratio's. Any aspect ratio will work</p>
-</div>
-<h3 id="but-what-about-the-size-then">But what about the size then?<a class="headerlink" href="#but-what-about-the-size-then" title="Permanent link">&para;</a></h3>
-<p>If I would place three square cards in a <code>horizontal-stack</code> with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal canvas sizes of 100x100, 200x200 and 400x400.</p>
-<p><svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
-</svg></p>
-<p>The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual canvas dimensions of the card. <strong>Scalable</strong> Vector Graphics at work!
-<svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
-  <rect x="0" y="0" width="100" height="100"/>
-  <circle cx="50" cy="50" r="50" fill="lightgrey"/>
-  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
-  <rect x="105" y="0" width="100" height="100"/>
-  <circle cx="130" cy="25" r="25" fill="lightgrey"/>
-  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
-  <rect x="210" y="0" width="100" height="100"/>
-  <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
-  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
-</svg></p>
-<h2 id="toolset-and-tool-placement"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
-	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
-  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
-    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
-    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
-    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
-    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
-    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
-    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
-    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
-    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
-    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
-    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
-    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
-    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
-    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
-    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
-    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
-  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
-    S245.034,119.469,263.858,119.469z"/>
-  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
-    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
-  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
-    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
-    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
-</svg>
-</span> Toolset and tool placement<a class="headerlink" href="#toolset-and-tool-placement" title="Permanent link">&para;</a></h2>
-<p>Let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.<br />
-The tools are neatly configured around the center position (50,50) of the toolset grid: The <code>circle</code> with its radius of 25, the <code>icon</code> placed at (50,40) and the <code>state</code> at (50,60).</p>
+</span> An example: Toolset and tool placement @ work<a class="headerlink" href="#an-example-toolset-and-tool-placement-work" title="Permanent link">&para;</a></h2>
+<p>Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.  </p>
+<p>The tools are neatly configured around the center position (50,50) of the toolset grid:</p>
+<ul>
+<li>the <code>circle</code> is placed at (50,50) with its radius of 25,</li>
+<li>the <code>icon</code> is placed at (50,40) and</li>
+<li>the <code>state</code> is placed at (50,60).</li>
+</ul>
 <p>Then, the first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. As you can see, both toolsets are identical and could be a template: one of the advantages of using toolsets!</p>
-<p>In a kind of 3D world, it looks like this:</p>
-<p><img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png" /></p>
+<p>In a kind of 3D world, it looks like this:
+<img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png" /></p>
 <p>The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: <code>circle</code>, <code>state</code> and <code>icon</code>. For brevity only the coordinates/sizes part is shown.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1689,31 +1662,125 @@ The tools are neatly configured around the center position (50,50) of the toolse
             <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
 </code></pre></div>
 </td></tr></table>
-So:</p>
-<div class="admonition important">
-<p class="admonition-title">The position and dimensions of a tool <em>always</em> reference a <em>default</em> toolset grid size of 100x100</p>
-<p>Where:</p>
+<h2 id="card-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Card aspect ratio and size<a class="headerlink" href="#card-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
+<p>Below you see the definition of a 1/1 square card which equals a grid size of 100x100.
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:swiss-army-knife-card&#39;</span>
+  <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>        <span class="c1"># Square 1/1 card with resulting 100x100 grid size</span>
+</code></pre></div></p>
+<h3 id="example-cards-with-different-aspect-ratios">Example cards with different aspect ratio's<a class="headerlink" href="#example-cards-with-different-aspect-ratios" title="Permanent link">&para;</a></h3>
+<p>Some examples for aspect ratio's and (grid size) of: <code>0.5/1</code> (50x100), <code>1/1</code> (100x100), <code>2/1</code> (200x100) and <code>3/1</code> (300x100):</p>
+<p><svg viewBox="0 0 680 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="50" height="100" rx="5"/>
+  <rect x="60" y="0" width="100" height="100" rx="5"/>
+  <rect x="170" y="0" width="200" height="100" rx="5"/>
+  <rect x="380" y="0" width="300" height="100" rx="5"/>
+</svg></p>
+<div class="admonition info">
+<p class="admonition-title">You are not limited to these aspect ratio's. Any aspect ratio will work</p>
+</div>
+<h3 id="but-what-about-the-internal-grid-size-then">But what about the internal grid size then?<a class="headerlink" href="#but-what-about-the-internal-grid-size-then" title="Permanent link">&para;</a></h3>
+<p>If I would place three square cards in a <code>horizontal-stack</code> with different aspect ratio's, I get three equally sized cards. All cards scale to the same actual size in pixels, independently of their internal grid sizes of 100x100, 200x200 and 400x400.</p>
+<p><svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="100" height="100"/>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
+  <rect x="105" y="0" width="100" height="100"/>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
+  <rect x="210" y="0" width="100" height="100"/>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
+</svg></p>
+<p>The result of these different internal sizes can be seen in the following example: I "designed" a toolset with a single circle on a standard 100x100 canvas and placed the toolset for each card on the same position (50,50); The circle scales to the actual grid size of the card. <strong>Scalable</strong> Vector Graphics at work!
+<svg viewBox="0 0 310 100" style="fill:var(--md-primary-fg-color--light);margin:10px;padding:10px;">
+  <rect x="0" y="0" width="100" height="100"/>
+  <circle cx="50" cy="50" r="50" fill="lightgrey"/>
+  <text x="50" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">1/1</text>
+  <rect x="105" y="0" width="100" height="100"/>
+  <circle cx="130" cy="25" r="25" fill="lightgrey"/>
+  <text x="155" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">2/2</text>
+  <rect x="210" y="0" width="100" height="100"/>
+  <circle cx="222.5" cy="12.5" r="12.5" fill="lightgrey"/>
+  <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
+</svg></p>
+<div class="admonition info">
+<p class="admonition-title">The <code>1/1</code>, <code>2/1</code> and <code>3/1</code> are mostly used for mobile phones, and the much larger ones, say 4/4 for panels</p>
+<p>The tools on a 4/4 would be too small to read on a mobile phone, but are excellent on large displays.</p>
+</div>
+<h2 id="toolset-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Toolset aspect ratio and size<a class="headerlink" href="#toolset-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
+<p>As already mentioned, the position and dimensions of a tool <em>always</em> reference a <em>default</em> toolset grid size of 100x100:</p>
 <ul>
 <li>(0,0) is the upper left corner of the grid</li>
 <li>(100,100) is the lower right corner of the grid</li>
+<li>(50,50) is the center of the grid and servers as the 'anchor' used by the Toolset to position the tools on a card.</li>
 </ul>
 <p>Furthermore, all dimensions are <em>relative</em> to the grid:</p>
 <ul>
 <li>a line with a length of 10 takes 10% of the grid.</li>
 <li>a circle with radius of 50 fits exactly the grid.</li>
 </ul>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Therefore, the center position of a toolset is <em>always</em> (50,50)</p>
-<p>This center position is the 'anchor' used by the Toolset to position the tools on a card.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">However, the size and position are not limited by this grid size!</p>
+<div class="admonition warning">
+<p class="admonition-title">The size and position of tools are not limited by this grid size!</p>
 <p>So:</p>
 <ul>
 <li>a tool can be wider and higher</li>
-<li>can be placed outside these default coordinates: so coordinates can be &lt; 0 or &gt; 100.</li>
+<li>a tool can be placed outside these default coordinates: so coordinates can be &lt; 0 or &gt; 100.</li>
 </ul>
+<p>This means that - without scaling - such a toolset does NOT fit a <code>1/1</code> card!<br />
+Such toolsets are therefore designed for larger cards.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Don't forget that toolsets can scale tools and are re-usable if defined as a template</p>
@@ -1747,7 +1814,8 @@ So:</p>
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Use relative sizes for styles too, where possible<a class="headerlink" href="#use-relative-sizes-for-styles-too-where-possible" title="Permanent link">&para;</a></h2>
-<p>One easy example is the CSS <code>font-size</code> attribute: use <code>em</code> and not <code>px</code> to configure the size of a font, ie use <code>font-size: 12em</code>. </p>
+<p>So tool dimension are relative. It is advised to use relative dimensions too for styling.<br />
+One easy example is the CSS <code>font-size</code> attribute: use <code>em</code> and not <code>px</code> to configure the size of a font, ie use <code>font-size: 12em</code>. </p>
 <p>SAK has configured the default <code>font-size</code> for SAK cards to be about the same as the 1% of the grid: so <code>font-size: 10em</code> should be about 10% of the grid in size.</p>
 
               
