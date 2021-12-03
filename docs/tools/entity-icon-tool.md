@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [entity-icon-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Entity Icon tool
-[:octicons-tag-24: 1.0.0][entity-icon-tool support]
+[:octicons-tag-24: 1.0.0][entity-icon-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Entity Icon tool displays the Home Assistant Entity Icon.
 

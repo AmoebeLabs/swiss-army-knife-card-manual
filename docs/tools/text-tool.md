@@ -5,6 +5,7 @@ template: overrides/main.html
 [text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Text tool
 [:octicons-tag-24: 1.0.0][text-tool support] ·
+:octicons-package-dependents-24: Output ·
 :octicons-tools-24: WIP
 
 The Text tool is based on the SVG basic `<text>`element shape.

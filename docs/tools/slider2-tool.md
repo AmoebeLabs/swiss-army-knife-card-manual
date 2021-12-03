@@ -6,11 +6,12 @@ template: overrides/main.html
 
 # The Slider2 tool
 [:octicons-tag-24: 1.0.0][slider2-tool support] ·
+:octicons-package-dependencies-24: Input ·
 :octicons-beaker-24: Experimental ·
-:octicons-tools-24: WIP
+:octicons-tools-24: WIP ·
+:octicons-bug-24: Known Bugs
 
-The Slider2 tool is an input tool.
-<br> It is a composite tool with a configurable track, thumb and label position and styling.
+The Slider2 tool is an input tool with configurable track, thumb and label position and styling.
 
 <svg viewBox="-200 75 450 75" xmlns="http://www.w3.org/2000/svg" width="400px">
   <g class="toolset__group-outer" style="transform-origin:center; transform-box:fill-box;" id="toolset-8qgsve32l" transform="rotate(0) scale(1, 1)">

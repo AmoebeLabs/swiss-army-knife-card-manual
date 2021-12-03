@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Entity State tool
-[:octicons-tag-24: 1.0.0][entity-state-tool support]
+[:octicons-tag-24: 1.0.0][entity-state-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Entity State tool displays the Home Assistant Entity State value and unit of measurement.
 

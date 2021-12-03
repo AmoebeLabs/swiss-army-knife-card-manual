@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Ellipse tool
-[:octicons-tag-24: 1.0.0][ellipse-tool support] 
+[:octicons-tag-24: 1.0.0][ellipse-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 

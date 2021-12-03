@@ -5,8 +5,8 @@ template: overrides/main.html
 [switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 
 # The Switch tool
-[:octicons-tag-24: 1.0.0][switch-tool support]
-
+[:octicons-tag-24: 1.0.0][switch-tool support] ·
+:octicons-package-dependencies-24: Input
 
 The Switch tool is based on two SVG basic `<rectangle>` element shapes.
 <br> It is a composite tool with a built-in animation to move the thumb to 'off' or 'on' position and to change the color to 'off' or 'on' color.

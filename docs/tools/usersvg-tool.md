@@ -11,6 +11,7 @@ template: overrides/main.html
 
 # The User SVG tool
 [:octicons-tag-24: 1.0.0][usersvg-tool support] ·
+:octicons-package-dependents-24: Output ·
 :octicons-tools-24: WIP
 
 The User SVG tool makes it possible to add (external) SVGs to your card.

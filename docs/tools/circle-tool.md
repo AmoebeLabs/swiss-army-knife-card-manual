@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [circle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Circle tool
-[:octicons-tag-24: 1.0.0][circle-tool support] 
+[:octicons-tag-24: 1.0.0][circle-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Circle tool is based on the SVG basic `<circle>`element shape.
 

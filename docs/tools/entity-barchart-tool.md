@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [entity-history-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Entity History tool
-[:octicons-tag-24: 1.0.0][entity-history-tool support]
+[:octicons-tag-24: 1.0.0][entity-history-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Entity History tool is a horizontal or vertical bar chart (sparkline) and displayes some history of an Home Assistant Entity.
 It is a basic chart, more of a sparkline with only display functionality.

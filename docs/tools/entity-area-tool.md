@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [entity-area-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Entity Area tool
-[:octicons-tag-24: 1.0.0][entity-area-tool support]
+[:octicons-tag-24: 1.0.0][entity-area-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Entity Area tool displays the Home Assistant Entity Area value.
 

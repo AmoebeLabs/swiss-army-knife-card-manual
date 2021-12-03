@@ -4,7 +4,8 @@ template: overrides/main.html
 
 [entity-name-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Entity Name tool
-[:octicons-tag-24: 1.0.0][entity-name-tool support]
+[:octicons-tag-24: 1.0.0][entity-name-tool support] ·
+:octicons-package-dependents-24: Output
 
 The Entity Name tool displays the Home Assistant Entity Name text.
 
