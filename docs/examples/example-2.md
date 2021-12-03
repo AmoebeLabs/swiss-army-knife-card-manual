@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.
 
 [![SAK Example 2]][SAK Example 2]

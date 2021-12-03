@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [![SAK Example]][SAK Example]
 
   [SAK Example]: ../assets/screenshots/sak-example-5.png

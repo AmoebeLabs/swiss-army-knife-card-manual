@@ -1,4 +1,8 @@
-The Swiss Army Knife uses the following structure:
+---
+template: overrides/main.html
+---
+
+##:sak-sak-logo: The Swiss Army Knife YAML structure
 
 ```yaml linenums="1" hl_lines="5 7 19 26 31 37 51 53"
   # Define the type of the card to use.

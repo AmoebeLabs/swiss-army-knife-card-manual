@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 Visualization of some environment sensors.
 
 [![SAK Example 3]][SAK Example 3]

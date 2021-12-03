@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 #Getting started
 
 ##:sak-sak-logo: Introduction

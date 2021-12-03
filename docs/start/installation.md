@@ -1,3 +1,6 @@
+---
+template: overrides/main.html
+---
 
 ##:sak-sak-logo: Install using HACS
 

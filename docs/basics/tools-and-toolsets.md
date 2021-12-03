@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 ##:sak-sak-logo: Tools
 SAK offers a series of tools (17 at this moment) to create visualizations.
 

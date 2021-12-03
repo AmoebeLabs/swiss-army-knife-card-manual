@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.
 
 [![SAK Example 1]][SAK Example 1]
