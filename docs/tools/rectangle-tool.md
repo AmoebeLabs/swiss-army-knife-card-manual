@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [rectangle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Rectangle tool
 [:octicons-tag-24: 1.0.0][rectangle-tool support]

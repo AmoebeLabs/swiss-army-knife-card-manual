@@ -129,7 +129,7 @@ nav:
       - Entity Icon: tools/entity-icon-tool.md
       - Entity Name: tools/entity-name-tool.md
       - Entity State: tools/entity-state-tool.md
-      - Entity History: tools/spraklinebarchart-tool.md
+      - Entity History: tools/entity-barchart-tool.md
   - Examples:
     - Introduction: examples/introduction.md
     - 1. Airvisual & Weather forecast: examples/example-1.md

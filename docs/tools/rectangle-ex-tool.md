@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Rectangle Ex(tended) tool
 [:octicons-tag-24: 1.0.0][rectex-tool support]

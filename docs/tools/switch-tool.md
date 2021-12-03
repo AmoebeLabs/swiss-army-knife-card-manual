@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 
 # The Switch tool

@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Text tool
 [:octicons-tag-24: 1.0.0][text-tool support] ·
@@ -78,7 +82,7 @@ The Text tool has support for the following forms of animations:
 
 | Method       | Support          | Description            |
 | :----------- | :--------------: | :-------------------- |
-| `colorstops` | :material-check: | List of state values to set the color |
+| `colorstops` | :material-close: | List of state values to set the color |
 | `colorlists` | :material-close: | Using a colorlist definition |
 | `animations` | :material-check: | Operator state based animations with class/style styling |
 
