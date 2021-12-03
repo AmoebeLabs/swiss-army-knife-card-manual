@@ -64,6 +64,13 @@
 
     
     
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="../../overrides/assets/stylesheets/main.scss" -->
+  <!-- /> -->
+
   </head>
   
   
@@ -88,6 +95,18 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <a style="color:white;opacity:.9;" onmouseover="this.style.color='white';this.style.fontSize=''";" onmouseout="this.style.color='white';;this.style.fontSize=''">
+    <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
+  </a>
+
+
+          </div>
+        </aside>
       
     </div>
     
@@ -1094,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entity-area-tool.md" class="md-nav__link">
+      <a href="../entity-area-tool/" class="md-nav__link">
         Entity Area
       </a>
     </li>
@@ -1108,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entity-icon-tool.md" class="md-nav__link">
+      <a href="../entity-icon-tool/" class="md-nav__link">
         Entity Icon
       </a>
     </li>
@@ -1122,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entity-name-tool.md" class="md-nav__link">
+      <a href="../entity-name-tool/" class="md-nav__link">
         Entity Name
       </a>
     </li>
@@ -1136,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entity-state-tool.md" class="md-nav__link">
+      <a href="../entity-state-tool/" class="md-nav__link">
         Entity State
       </a>
     </li>
@@ -1150,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spraklinebarchart-tool.md" class="md-nav__link">
+      <a href="../entity-barchart-tool/" class="md-nav__link">
         Entity History
       </a>
     </li>
@@ -2019,13 +2038,13 @@
       
       
         
-        <a href="../../examples/introduction/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
+        <a href="../entity-area-tool/" class="md-footer__link md-footer__link--next" aria-label="Next: Entity Area" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction
+              Entity Area
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2093,8 +2112,13 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
+  <!-- 
       <script src="../../assets/javascripts/bundle.0885dc41.min.js"></script>
       
-    
+     -->
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <script src="../../overrides/assets/javascripts/bundle.js"></script> -->
+
   </body>
 </html>
