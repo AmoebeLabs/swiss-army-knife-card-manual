@@ -6,7 +6,7 @@ template: overrides/main.html
 # The Entity History tool
 [:octicons-tag-24: 1.0.0][entity-history-tool support]
 
-The Entity Barchart (sparkline) tool displays some history of an Home Assistant Entity History.
+The Entity History tool is a horizontal or vertical bar chart (sparkline) and displayes some history of an Home Assistant Entity.
 It is a basic chart, more of a sparkline with only display functionality.
 
 <svg viewBox="-250 50 500 150" xmlns="http://www.w3.org/2000/svg" width="300px">
@@ -79,7 +79,7 @@ It is a basic chart, more of a sparkline with only display functionality.
 ```
 
 ##:sak-sak-logo: Styling
-The Entity Icon tool has support for the following forms of styling:
+The Entity History tool has support for the following forms of styling:
 
 | Method       | Support          | Description            |
 | :----------- | :--------------: | :-------------------- |

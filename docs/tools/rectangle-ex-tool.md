@@ -22,44 +22,44 @@ The RectEx tool lets you define the radius for each corner, where the Rectangle 
 ##:sak-sak-logo: Basic usage
 
 === "Standalone"
-  ```yaml linenums="1" hl_lines="1"
-  - type: 'rectex'            # tooltype is 'rectex'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      height: 75              # height of 75
-      width: 100              # width of 100
-      radius:
-        all: 0                # corner radius: square
-      # per side options:
-        top: 2
-        left: 2
-        right: 2
-        bottom: 2
-      # per corner options:
-        top_left: 2
-        top_right: 2
-        bottom_left: 2
-        bottom_right: 2
-    styles:
-      rectex:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'rectex'            # tooltype is 'rectex'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        height: 75              # height of 75
+        width: 100              # width of 100
+        radius:
+          all: 0                # corner radius: square
+        # per side options:
+          top: 2
+          left: 2
+          right: 2
+          bottom: 2
+        # per corner options:
+          top_left: 2
+          top_right: 2
+          bottom_left: 2
+          bottom_right: 2
+      styles:
+        rectex:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 === "Connected"
-  ```yaml linenums="1" hl_lines="1 9"
-  - type: 'rectex'            # tooltype is 'rectex'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      height: 75              # height of 75
-      width: 100              # width of 100
-      radius:
-        all: 0                # corner radius: square
-    entity_index: 0           # connect to state of entity 0
-    styles:
-      rectex:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1 9"
+    - type: 'rectex'            # tooltype is 'rectex'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        height: 75              # height of 75
+        width: 100              # width of 100
+        radius:
+          all: 0                # corner radius: square
+      entity_index: 0           # connect to state of entity 0
+      styles:
+        rectex:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 
 ##:sak-sak-logo: Styling
 The RectEx tool has support for the following forms of styling:

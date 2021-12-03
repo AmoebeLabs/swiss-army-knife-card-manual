@@ -14,14 +14,26 @@ The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 
 ##:sak-sak-logo: Basic usage
 
-```yaml linenums="1" hl_lines="1"
-- type: 'ellipse'            # tooltype is 'ellipse'
-  position:                 # Position on (100x100) canvas
-    cx: 50                  # cx=50 is center position
-    cy: 50                  # cy=50 is center position
-    radiusx: 50             # Width is 100
-    radiusy: 25             # Height is 50
-```
+=== "Standalone"
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'ellipse'            # tooltype is 'ellipse'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radiusx: 50             # Width is 100
+        radiusy: 25             # Height is 50
+    ```
+=== "Connected"
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'ellipse'            # tooltype is 'ellipse'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radiusx: 50             # Width is 100
+        radiusy: 25             # Height is 50
+      entity_index: 0           # connect to state of entity 0
+    ```
+
 !!! Tip "Set the x and y radius the same to create a circle"
 
 ##:sak-sak-logo: Styling

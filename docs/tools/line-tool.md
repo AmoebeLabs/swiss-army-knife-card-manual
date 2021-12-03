@@ -15,17 +15,32 @@ The Line tool is based on the SVG basic `<line>` element shape
 
 ##:sak-sak-logo: Basic usage
 
-```yaml linenums="1" hl_lines="1"
-- type: 'line'              # tooltype is 'line'
-  position:                 # Position on (100x100) canvas
-    cx: 50                  # cx=50 is center position
-    cy: 50                  # cy=50 is center position
-    length: 25              # length of line.
-    orientation: 'vertical' # Vertical or horizontal
-  style:
-    line:
-      stroke-width: 2       # Set stroke width using CSS attribute
-```
+=== "Standalone"
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'line'              # tooltype is 'line'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        length: 25              # length of line.
+        orientation: 'vertical' # Vertical or horizontal
+      style:
+        line:
+          stroke-width: 2       # Set stroke width using CSS attribute
+    ```
+=== "Connected"
+    ```yaml linenums="1" hl_lines="1 7"
+    - type: 'line'              # tooltype is 'line'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        length: 25              # length of line.
+        orientation: 'vertical' # Vertical or horizontal
+      entity_index: 0           # connect to state of entity 0
+      style:
+        line:
+          stroke-width: 2       # Set stroke width using CSS attribute
+    ```
+
 !!! Tip "There will be future support for (x1,y1) and (x2,y2) coordinates to draw non vertical/horizontal lines"
     Until then you can try the transform attribute to rotate the tool:
     

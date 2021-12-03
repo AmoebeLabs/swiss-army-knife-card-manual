@@ -16,32 +16,32 @@ The Rectangle tool is based on the SVG basic `<rect>`element shape.
 ##:sak-sak-logo: Basic usage
 
 === "Standalone"
-  ```yaml linenums="1" hl_lines="1"
-  - type: 'rectangle'         # tooltype is 'rectangle'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      height: 75              # height of 75
-      width: 100              # width of 100
-      rx: 0                   # corner radius: square
-    styles:
-      rectangle:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'rectangle'         # tooltype is 'rectangle'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        height: 75              # height of 75
+        width: 100              # width of 100
+        rx: 0                   # corner radius: square
+      styles:
+        rectangle:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 === "Connected"
-  ```yaml linenums="1" hl_lines="1 8"
-  - type: 'rectangle'         # tooltype is 'rectangle'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      height: 75              # height of 75
-      width: 100              # width of 100
-      rx: 0                   # corner radius: square
-    entity_index: 0           # connect to state of entity 0
-    styles:
-      rectangle:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1 8"
+    - type: 'rectangle'         # tooltype is 'rectangle'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        height: 75              # height of 75
+        width: 100              # width of 100
+        rx: 0                   # corner radius: square
+      entity_index: 0           # connect to state of entity 0
+      styles:
+        rectangle:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 
 ##:sak-sak-logo: Styling
 The Rectangle tool has support for the following forms of styling:

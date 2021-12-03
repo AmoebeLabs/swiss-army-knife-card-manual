@@ -46,34 +46,34 @@ Regular polygons (all angles and all vertices equal) gallery. Both regular conve
 ##:sak-sak-logo: Basic usage
 
 === "Standalone"
-  ```yaml linenums="1" hl_lines="1"
-  - type: 'regpoly'           # tooltype is 'regpoly'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      radius: 50              # Radius of the "circle"
-      side_count: 6           # The "p" value in the Schläfli symbol
-      side_skip: 1            # The "q" value in the Schläfli symbol
-      angle_offset: 0         # Value to rotate the regpoly
-    styles:
-      regpoly:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'regpoly'           # tooltype is 'regpoly'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radius: 50              # Radius of the "circle"
+        side_count: 6           # The "p" value in the Schläfli symbol
+        side_skip: 1            # The "q" value in the Schläfli symbol
+        angle_offset: 0         # Value to rotate the regpoly
+      styles:
+        regpoly:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 === "Connected"
-  ```yaml linenums="1" hl_lines="1 9"
-  - type: 'regpoly'           # tooltype is 'regpoly'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      radius: 50              # Radius of the "circle"
-      side_count: 6           # The "p" value in the Schläfli symbol
-      side_skip: 1            # The "q" value in the Schläfli symbol
-      angle_offset: 0         # Value to rotate the regpoly
-    entity_index: 0           # connect to state of entity 0
-    styles:
-      regpoly:
-        stroke-width: 2       # width of stroke. 0 = no stroke.
-  ```
+    ```yaml linenums="1" hl_lines="1 9"
+    - type: 'regpoly'           # tooltype is 'regpoly'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radius: 50              # Radius of the "circle"
+        side_count: 6           # The "p" value in the Schläfli symbol
+        side_skip: 1            # The "q" value in the Schläfli symbol
+        angle_offset: 0         # Value to rotate the regpoly
+      entity_index: 0           # connect to state of entity 0
+      styles:
+        regpoly:
+          stroke-width: 2       # width of stroke. 0 = no stroke.
+    ```
 
 ##:sak-sak-logo: Styling
 The Regular Polygon tool has support for the following forms of styling:

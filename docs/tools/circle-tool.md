@@ -15,22 +15,22 @@ The Circle tool is based on the SVG basic `<circle>`element shape.
 ##:sak-sak-logo: Basic usage
 
 === "Standalone"
-  ```yaml linenums="1" hl_lines="1"
-  - type: 'circle'            # tooltype is 'circle'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      radius: 25              # radius of circle. Width/height is 50
-  ```
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'circle'            # tooltype is 'circle'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radius: 25              # radius of circle. Width/height is 50
+    ```
 === "Connected"
-  ```yaml linenums="1" hl_lines="1"
-  - type: 'circle'            # tooltype is 'circle'
-    position:                 # Position on (100x100) canvas
-      cx: 50                  # cx=50 is center position
-      cy: 50                  # cy=50 is center position
-      radius: 25              # radius of circle. Width/height is 50
-    entity_index: 0           # connect to state of entity 0
-  ```
+    ```yaml linenums="1" hl_lines="1 6"
+    - type: 'circle'            # tooltype is 'circle'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        radius: 25              # radius of circle. Width/height is 50
+      entity_index: 0           # connect to state of entity 0
+    ```
 
 ##:sak-sak-logo: Styling
 The Circle tool has support for the following forms of styling:
