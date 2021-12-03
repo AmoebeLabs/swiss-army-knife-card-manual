@@ -16,6 +16,7 @@ The Entity Name tool displays the Home Assistant Entity Name text.
 
 ##:sak-sak-logo: Basic usage
 
+=== "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'name'              # tooltype is 'name'
   position:                 # Position on (100x100) canvas

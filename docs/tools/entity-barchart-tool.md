@@ -64,6 +64,7 @@ It is a basic chart, more of a sparkline with only display functionality.
 </svg>      
 ##:sak-sak-logo: Basic usage
 
+=== "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'bar'               # tooltype is 'bar'
   position:                 # Position on (100x100) canvas

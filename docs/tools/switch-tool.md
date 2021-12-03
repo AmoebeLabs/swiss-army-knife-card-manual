@@ -22,7 +22,8 @@ The Switch tool is based on two SVG basic `<rectangle>` element shapes.
 
 ##:sak-sak-logo: Basic usage
 
-```yaml linenums="1" hl_lines="1"
+=== "Connected"
+```yaml linenums="1" hl_lines="1 6"
 - type: 'switch'              # tooltype is 'switch'
   position:                   # Position on (100x100) canvas
     cx: 50                    # cx=50 is center position

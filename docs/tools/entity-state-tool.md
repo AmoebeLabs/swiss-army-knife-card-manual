@@ -54,6 +54,7 @@ The Entity State tool displays the Home Assistant Entity State value and unit of
 
 ##:sak-sak-logo: Basic usage
 
+=== "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'state'             # tooltype is 'state'
   position:                 # Position on (100x100) canvas
@@ -70,6 +71,7 @@ The Entity State tool displays the Home Assistant Entity State value and unit of
 ##:sak-sak-logo: Advanced usage
 The unit of measurement can be placed at the end (default), above (top), under (bottom) or not (none) alongside the state value.
 
+=== "Connected"
 ```yaml linenums="1" hl_lines="6 7"
 - type: 'state'             # tooltype is 'state'
   position:

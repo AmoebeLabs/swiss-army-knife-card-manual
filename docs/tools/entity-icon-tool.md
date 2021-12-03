@@ -12,6 +12,7 @@ The Entity Icon tool displays the Home Assistant Entity Icon.
 
 ##:sak-sak-logo: Basic usage
 
+=== "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'icon'              # tooltype is 'icon'
   position:                 # Position on (100x100) canvas
