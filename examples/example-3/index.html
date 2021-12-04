@@ -1231,15 +1231,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,15 +1450,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1544,6 +1544,13 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>The card is build using the following tools:</p>
+<ul>
+<li>A rectangle with a large top-right corner radius with a circle on top of that. The Neumorphic shadow filter 'morphs' them as looking as a single object</li>
+<li>State and unit of measurement</li>
+<li>The name of the entity</li>
+<li>A barchart showing the trend over de last 24 hours using a light to dark orange gradient setting as colorstop</li>
+</ul>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1574,7 +1581,7 @@
 </svg>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Aqara Zigbee sensors with temperature, humidity and pressure data.</li>
+<li>Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
 </ul>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1607,8 +1614,97 @@
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake3.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">This example uses decluttering and SAK templates for the card</p>
+<p>Both SAK templates and Decluttering templates are used to display the cards. This view is therefore as compact and easy to read as possible and is a good example of re-use.</p>
+</div>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Excerpt of the header configuration...</p>
+<ul>
+<li>The <code>header_template</code> is used for displaying the header sak card
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake3.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+</span>  <span class="nt">variables</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Luchtdruk&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">font_color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--secondary-text-color)</span>
+    <span class="p p-Indicator">-</span> <span class="nt">font_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3em</span>
+</code></pre></div>
+</td></tr></table></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Excerpt of the cards configuration...</p>
+<ul>
+<li>The <code>sak_sensor_history_template_nm_tpl</code> is used for displaying the sensor cards
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake3.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">horizontal-stack</span>
+  <span class="nt">cards</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_sensor_history_template_nm_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.livingroom_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
+        <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:water-percent</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_sensor_history_template_nm_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.kitchen_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Keuken</span>
+        <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:water-percent</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_sensor_history_template_nm_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.hall_gf_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Hal</span>
+        <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:water-percent</span>
+</code></pre></div>
+</td></tr></table></li>
+</ul>
+</div>
+<details class="example">
+<summary>Excerpt of the <code>decluttering_templates.yaml</code> file...</summary>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-header-template-mw.yaml</span>
+
+<span class="nt">sak_sensor_history_template_nm_tpl</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-sensor-history-nm-tpl.yaml</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p>The following templates are defined in the <code>/lovelace/sak_templates/sak-templates.yaml</code> file:</p>
+<ul>
+<li>The <code>header</code> is the template used for the header texts</li>
+<li>The <code>toolset_sensor_history</code> is used for the sensor cards.</li>
+</ul>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1638,6 +1734,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All tools support by default the "more-info" dialog once clicked.</li>
+</ul>
 <h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1667,6 +1766,73 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">This view is an excellent example of how to pass variables from a decluttering to a SAK template</p>
+</div>
+<p>The <code>sak_sensor_history_template_nm_tpl</code> decluttering template and <code>toolset_sensor_history</code> SAK template show how these templates can work together in passing variables from one template to the other.</p>
+<div class="admonition example">
+<p class="admonition-title">Excerpt of decluttering template for passing variables from a decluttering to a SAK template</p>
+<p>The <code>variables</code> passed to the decluttering template are passed directly to the SAK template. In this case it is the color range for the barchart.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">default</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+  <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+  <span class="p p-Indicator">-</span> <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="hll">  <span class="p p-Indicator">-</span> <span class="nt">variables</span><span class="p">:</span>
+</span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">bar_color_min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-orange-lighten-40)</span>
+</span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">bar_color_max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-orange-darken-20)</span>
+</span>
+<span class="nt">card</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:dev-swiss-army-knife-card&#39;</span>
+  <span class="nt">entities</span><span class="p">:</span> 
+    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="s">&#39;[[entity]]&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;[[name]]&#39;</span>
+      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;[[icon]]&#39;</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="s">&#39;[[decimals]]&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">weather.zoefdehaas</span>
+  <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>
+  <span class="nt">layout</span><span class="p">:</span>
+    <span class="nt">styles</span><span class="p">:</span>
+      <span class="nt">toolsets</span><span class="p">:</span>
+        <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#nm-1)</span>
+    <span class="nt">toolsets</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor-history</span>
+        <span class="nt">template</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset_sensor_history</span>
+<span class="hll">          <span class="nt">variables</span><span class="p">:</span> <span class="s">&#39;[[variables]]&#39;</span>
+</span>        <span class="nt">position</span><span class="p">:</span>
+          <span class="nt">cx</span><span class="p">:</span> <span class="s">&#39;[[cx]]&#39;</span>
+          <span class="nt">cy</span><span class="p">:</span> <span class="s">&#39;[[cy]]&#39;</span>
+</code></pre></div>
+</td></tr></table></p>
+</div>
 
               
             </article>

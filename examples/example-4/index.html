@@ -1245,15 +1245,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,15 +1450,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1543,6 +1543,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>Once again a visualization of sensors values using two completely different card designs. The first row is a Neumorphic design, and the second implements a very simple and clean Flat design with a few colored blocks as the background of the card.</p>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1572,6 +1573,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
+</ul>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1603,8 +1607,90 @@
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake4.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p><strong>First row of cards</strong></p>
+<p>The first row shows cards with a Neumorphic design with:</p>
+<ul>
+<li>Icon in the top-left corner</li>
+<li>Segmented Arc with humidity template colorstop and scale</li>
+<li>State with unit of measurement</li>
+<li>Name of the entity</li>
+<li>State historry over the last 24 hours</li>
+</ul>
+<p><strong>Second row of cards</strong></p>
+<p>The first row shows cards with a simple Flat design with:</p>
+<ul>
+<li>4 rectangles forming the background of card</li>
+<li>State with unit of measurement</li>
+<li>A vertical line as a divider</li>
+<li>Icon of the entity</li>
+<li>Name of the entity</li>
+<li>State historry over the last 24 hours</li>
+</ul>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">The first row of cards uses a decluttering template...</p>
+<ul>
+<li>The <code>sak_arc180_sparklinebar24_template_tpl</code> is used for displaying these cards</li>
+</ul>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake4.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">horizontal-stack</span>
+  <span class="nt">cards</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_arc180_sparklinebar24_template_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">studym_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">11Ta Study Back</span>
+        <span class="p p-Indicator">-</span> <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_arc180_sparklinebar24_template_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hall_gf_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">11Tb Hall</span>
+        <span class="p p-Indicator">-</span> <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_arc180_sparklinebar24_template_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bedroom_iaq_humidity</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">11Tc Bedroom</span>
+        <span class="p p-Indicator">-</span> <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">scale_max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p>The following templates are defined in the <code>/lovelace/sak_templates/sak-templates.yaml</code> file:</p>
+<ul>
+<li>The <code>toolset_arc180_sparklinebar24</code> is the template used for the first row of cards</li>
+</ul>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1634,6 +1720,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All tools support by default the "more-info" dialog once clicked.</li>
+</ul>
 <h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1663,6 +1752,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<p>None.</p>
 
               
             </article>

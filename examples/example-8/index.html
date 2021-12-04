@@ -1301,15 +1301,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,15 +1450,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1513,7 +1513,7 @@
 
   <h1>8. Homekit alike</h1>
 
-<p><a href="../assets/screenshots/sak-example-8.png"><img alt="SAK Example" src="../assets/screenshots/sak-example-8.png" /></a></p>
+<p><a href="../../assets/screenshots/sak-example-8.png"><img alt="SAK Example" src="../../assets/screenshots/sak-example-8.png" /></a></p>
 <h2 id="visualization"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1543,6 +1543,10 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards with icon and card animations.</p>
+<div class="admonition info">
+<p class="admonition-title">Cards 2, 3 and 5 share the same design, the others are different</p>
+</div>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1572,6 +1576,11 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/met/">Met.no Weather integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
+<li>Aqara Occupancy sensor using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
+</ul>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1603,8 +1612,126 @@
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake8.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">The 1<sup>st</sup> card on the 2<sup>nd</sup> row shows the use of some of the built-in CSS animations...</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Background used for animations &amp; state</span>
+<span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rectex</span>
+</span>  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="nt">height</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+    <span class="nt">radius</span><span class="p">:</span>
+      <span class="nt">top</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+      <span class="nt">bottom</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+  <span class="c1"># Let background go to white with 70% opacity when movement detected</span>
+  <span class="c1"># Use animation to &#39;flash&#39; the background for a few seconds to get</span>
+  <span class="c1"># the attention of the user, if anyone is watching ;-)</span>
+<span class="hll">  <span class="nt">animations</span><span class="p">:</span>
+</span>    <span class="p p-Indicator">-</span> <span class="nt">state</span><span class="p">:</span> <span class="s">&#39;on&#39;</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">rectex</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="s">&#39;white&#39;</span>
+          <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.7</span>
+          <span class="nt">animation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">flash 2s ease-in-out both</span>
+    <span class="p p-Indicator">-</span> <span class="nt">state</span><span class="p">:</span> <span class="s">&#39;off&#39;</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">rectex</span><span class="p">:</span>
+          <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">none</span>
+  <span class="nt">styles</span><span class="p">:</span>
+    <span class="nt">rectex</span><span class="p">:</span>
+      <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">none</span>
+
+<span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">icon</span>
+</span>  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22.5</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22.5</span>
+    <span class="nt">align</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">center</span>
+    <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="c1"># Define colors for the icon depending on the state</span>
+<span class="hll">  <span class="nt">animations</span><span class="p">:</span>
+</span>    <span class="p p-Indicator">-</span> <span class="nt">state</span><span class="p">:</span> <span class="s">&#39;on&#39;</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">icon</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="s">&#39;darkorange&#39;</span>
+          <span class="nt">color</span><span class="p">:</span> <span class="s">&#39;darkorange&#39;</span>
+          <span class="nt">animation</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jello 2s ease-in-out both</span>
+    <span class="p p-Indicator">-</span> <span class="nt">state</span><span class="p">:</span> <span class="s">&#39;off&#39;</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">icon</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+          <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+  <span class="nt">styles</span><span class="p">:</span>
+    <span class="nt">icon</span><span class="p">:</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+      <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p>None.</p>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1634,6 +1761,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All tools support by default the "more-info" dialog once clicked.</li>
+</ul>
 <h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1663,6 +1793,10 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Due to rendering differences for icons, Safari based systems show the icon animation, and other/Chrome based browsers not.</p>
+<p>This should be fixed in the future...</p>
+</div>
 
               
             </article>

@@ -1287,15 +1287,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,15 +1450,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1543,6 +1543,11 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running Home Assistant and another bunch of containers and a second server as a frontend for the ugly internet. This one is also running a bunch of docker containers.</p>
+<div class="admonition info">
+<p class="admonition-title">Both systems where 'loaded' before the screenshot was taken to show the different colorstops</p>
+<p>The default load of the NUC is around 3% and the frontend around 11%.</p>
+</div>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1572,6 +1577,14 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The top card uses the system monitor integration, the bottom card the Glances and RESTful sensor integration</p>
+</div>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1601,10 +1614,47 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The upper-left shows the DISC usage values as text in a rectangle and in a <code>segmented arc</code> for the percentage. The scale is green upto 70% and then changes to yellow, orange (80%) and red (90%).</li>
+<li>In the lower-left, the same for RAM usage.</li>
+<li>The central part shows the CPU usage</li>
+<li>And finally the three system load toolsets (1m, 5m and 15m) nicely wrapped alongside the CPU display.</li>
+</ul>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake7.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Re-use of toolsets and toolset scaling</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake7</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>
+  <span class="c1"># Use pre-defined template for this part.</span>
+  <span class="c1"># Template has variables.</span>
+  <span class="nt">template</span><span class="p">:</span>
+<span class="hll">    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
+</span>    <span class="nt">variables</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="p p-Indicator">-</span> <span class="nt">show_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>
+    <span class="c1"># Scale to 80% of toolset template.</span>
+<span class="hll">    <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.8</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1634,6 +1684,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All tools support by default the "more-info" dialog once clicked.</li>
+</ul>
 <h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1663,6 +1716,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">This view is a nice example of the use of toolset scaling!</p>
+</div>
 
               
             </article>

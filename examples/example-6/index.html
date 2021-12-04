@@ -1273,8 +1273,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#file-assets" class="md-nav__link">
+    File assets
   </a>
   
 </li>
@@ -1282,6 +1282,13 @@
           <li class="md-nav__item">
   <a href="#decluttering-templates" class="md-nav__link">
     Decluttering templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,8 +1457,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#file-assets" class="md-nav__link">
+    File assets
   </a>
   
 </li>
@@ -1459,6 +1466,13 @@
           <li class="md-nav__item">
   <a href="#decluttering-templates" class="md-nav__link">
     Decluttering templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1543,6 +1557,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
+<p>Let's do something different and use the weather for a nice view <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<p>This view is made with the aid of Affinity Designer. The 'balls' background is created with this tool and exported as an SVG file.
+<br>On top of those circels the weather and Airvisual data is displayed.</p>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1572,6 +1589,10 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/met/">Met.no Weather integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
+</ul>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1601,10 +1622,25 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Background as external SVG, loaded with the <code>usersvg</code> tool</li>
+<li>Upper left the title</li>
+<li>The weather (temperature, humidity, pressure) in three circles.</li>
+<li>The weather type as a state dependent external, <strong>animated</strong> SVG</li>
+<li>Airvisual data showing the state dependent icon and the AQI value.</li>
+</ul>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
 <p>This example is in the <code>view-sake6.yaml</code> file in the <code>/lovelace/views</code> folder.</p>
-<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<h4 id="file-assets">File assets<a class="headerlink" href="#file-assets" title="Permanent link">&para;</a></h4>
+<p>This view uses the following external file assets:</p>
+<ul>
+<li>The background is a separate SVG file located in <code>/local/images/backgrounds/balls-background-1.svg</code></li>
+<li>To display the weather type, you need the external <em>animated</em> SVG's which are located in the <code>/local/images/weather</code> folder</li>
+</ul>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<p>None used.</p>
+<h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
+<p>None used.</p>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1634,6 +1670,9 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All tools support by default the "more-info" dialog once clicked.</li>
+</ul>
 <h2 id="remarks"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1663,6 +1702,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
+<p>None.</p>
 
               
             </article>

@@ -1217,15 +1217,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1450,15 +1450,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sak-templates" class="md-nav__link">
-    SAK templates
+  <a href="#decluttering-templates" class="md-nav__link">
+    Decluttering templates
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decluttering-templates" class="md-nav__link">
-    Decluttering templates
+  <a href="#sak-templates" class="md-nav__link">
+    SAK templates
   </a>
   
 </li>
@@ -1637,8 +1637,16 @@ The other rows show a standard light card.</p>
 <p>Both SAK templates and Decluttering templates are used to display the cards.
 This view is therefore as compact and easy to read as possible and is a good example of re-use.</p>
 </div>
-<details class="example">
-<summary>Excerpt of the headers and dividers in this view...</summary>
+<h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
+<p>Decluttering templates are used extensively in this view except for the cards on the first row.</p>
+<p>The following templates are defined in <code>/lovelace/decluttering_templates/decluttering_templates.yaml</code> file:</p>
+<ul>
+<li>The <code>header_template</code> is used for displaying the header sak card</li>
+<li>The <code>divider_template</code> is used for displaying the divider line sak card</li>
+<li>The <code>sak_button_template_nm_tpl</code> is used for displaying the light card</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Excerpt of the headers and dividers in this view...</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1661,32 +1669,32 @@ This view is therefore as compact and easy to read as possible and is a good exa
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
-
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
+</span>
 <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
-  <span class="nt">variables</span><span class="p">:</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+</span>  <span class="nt">variables</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Scenes&#39;</span>
 
 <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
-
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">divider_template</span>
+</span>
 <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
-  <span class="nt">variables</span><span class="p">:</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+</span>  <span class="nt">variables</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Verlichting&#39;</span>
 
 <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
-  <span class="nt">variables</span><span class="p">:</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">header_template</span>
+</span>  <span class="nt">variables</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="s">&#39;Woonkamer&#39;</span>
     <span class="p p-Indicator">-</span> <span class="nt">font_color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--secondary-text-color)</span>
     <span class="p p-Indicator">-</span> <span class="nt">font_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3em</span>
 </code></pre></div>
 </td></tr></table>
-</details>
-<details class="example">
-<summary>And the excerpt of the lights on second and third row...</summary>
+</div>
+<div class="admonition example">
+<p class="admonition-title">And the excerpt of the lights on second and third row...</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1706,20 +1714,38 @@ This view is therefore as compact and easy to read as possible and is a good exa
 <span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">horizontal-stack</span>
   <span class="nt">cards</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
-      <span class="nt">variables</span><span class="p">:</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.livingroom_light_gasheater_light</span>
         <span class="p p-Indicator">-</span> <span class="nt">area</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rode Lamp</span>
         <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:floor-lamp&#39;</span>
 
     <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom:decluttering-card</span>
-      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
-      <span class="nt">variables</span><span class="p">:</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sak_light_button_template_nm_tpl</span>
+</span>      <span class="nt">variables</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.livingroom_light_cupboard_light</span>
         <span class="p p-Indicator">-</span> <span class="nt">area</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Boekenkast</span>
         <span class="p p-Indicator">-</span> <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:book-open-outline&#39;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<details class="example">
+<summary>Excerpt of the <code>decluttering_templates.yaml</code> file...</summary>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-header-template-mw.yaml</span>
+<span class="nt">divider_template</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-divider-template-mw.yaml</span>
+
+<span class="nt">sak_light_button_template_nm_tpl</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-light-button-nm-tpl.yaml</span> 
 </code></pre></div>
 </td></tr></table>
 </details>
@@ -1754,32 +1780,6 @@ This view is therefore as compact and easy to read as possible and is a good exa
 
 <span class="nt">toolset_light_button_slider3_nm</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">toolset-light-button-slider3-nm-template.yaml</span>
-</code></pre></div>
-</td></tr></table>
-</details>
-<h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
-<p>Decluttering templates are used extensively in this view except for the cards on the first row.</p>
-<p>The following templates are defined in <code>/lovelace/decluttering_templates/decluttering_templates.yaml</code> file:</p>
-<ul>
-<li>The <code>header_template</code> is used for displaying the header sak card</li>
-<li>The <code>divider_template</code> is used for displaying the divider line sak card</li>
-<li>The <code>sak_button_template_nm_tpl</code> is used for displaying the light card</li>
-</ul>
-<details class="example">
-<summary>Excerpt of the <code>decluttering_templates.yaml</code> file...</summary>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">header_template</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-header-template-mw.yaml</span>
-<span class="nt">divider_template</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-divider-template-mw.yaml</span>
-
-<span class="nt">sak_light_button_template_nm_tpl</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">sak-light-button-nm-tpl.yaml</span> 
 </code></pre></div>
 </td></tr></table>
 </details>
