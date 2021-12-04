@@ -20,6 +20,11 @@ The eight examples show in most cases more than one card, or more than one visua
 
 Some of them use SAK templates, some of them Decluttering templates, some both, and some none: they contain the full configuration in the view itself.
 
+!!! Info "All examples use the `NM - Gonsboro` theme. This one is included on Github.
+    Apart from the box-shadow for the cards, this theme also defines some color schemes used by the cards.
+    
+    Other themes might show black colors where theme colors are used.
+    
 ##:sak-sak-logo: Real world examples from my own installation
 
 | An overview of all the examples | |

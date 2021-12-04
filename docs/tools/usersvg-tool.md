@@ -82,31 +82,26 @@ The User SVG tool has support for the following forms of styling:
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
 
 The Text User SVG is composed of a single object: "usersvg" and this is the selector for styling:
-```yaml linenums="1"hl_lines="7 10"
+```yaml linenums="1"hl_lines="6 9"
 - type: 'usersvg'
   position:
     cx: 50
     cy: 50
   classes:
-    text:                   # Text selector
+    usersvg:                # Usersvg selector
       <...>
   styles:
-    text:                   # Text selector
+    usersvg:                # Usersvg selector
       <...>
 ```
 Populair attributes:
 
 | Attribute       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
-| `fill`          | Fill color            | `fill: red` sets fill to color red |
-| `stroke-width`  | Stroke width          | `stroke-width: 2em` sets width to relative width of 2em |
-| `stroke`        | Stroke color          | `stroke: blue` sets stroke to blue |
-| `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of text to 70% |
-| `fill-opacity`  | Opacity for fill      | `fill-opacity: 0.5` sets the fill opacity to 50% |
-| `stroke-opacity`| Opacity for stroke    | `stroke-opacity: 0.5` sets the stroke opacity to 50% |
+| TBD             | TBD                   | TBD |
 
 ##:sak-sak-logo: Animations
-The Text tool has support for the following forms of animations:
+The User SVG tool has support for the following forms of animations:
 
 | Method       | Support          | Description            |
 | :----------- | :--------------: | :-------------------- |
