@@ -7,10 +7,13 @@ template: overrides/main.html
 [:octicons-tag-24: 1.0.0][segarc-tool support] ·
 :octicons-package-dependents-24: Output
 
-The Segmented Arc tool is a complex, mult-part tool with a custom animation.
+The Segmented Arc tool is a complex, multi-part tool with a custom animation.
 <br>The tool consists of multiple separate segments that 'behave' like a single, segmented object.
 
-It is by far the most complex tool of SAK.
+The Arc can be between 0 and 360 degrees with configurable start and end angle. It can have an additional scale. The Arc supports colorstops and colorlists to display the state value.
+
+It is by far the most complex tool. Was fun to make, and fairly unique.
+<br>The 360 degrees arc takes a prominent place in many examples.
 
 <svg viewBox="-175 -100 400 200" xmlns="http://www.w3.org/2000/svg" width="300px" style="overflow:visible;">
   <g class="toolset__group">
@@ -176,6 +179,6 @@ The Segmented Arc tool 'foreground' part has support for the following forms of 
 | :----------- | :--------------: | :-------------------- |
 | `colorstops` | :material-check: | List of state values to set the color |
 | `colorlist`  | :material-check: | Using a colorlist definition, creating equally sized segments |
-| `animations` | :material-check: | Operator state based animations with class/style styling |
+| `animations` | :material-close: | Operator state based animations with class/style styling |
 
 
