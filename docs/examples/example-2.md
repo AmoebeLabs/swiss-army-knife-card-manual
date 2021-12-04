@@ -53,9 +53,18 @@ This example is in the `view-sake2.yaml` file in the `/lovelace/views` folder.
     Both SAK templates and Decluttering templates are used to display the cards.
     This view is therefore as compact and easy to read as possible and is a good example of re-use.
 
-??? Example "Excerpt of the headers and dividers in this view..."
+#### Decluttering templates
+Decluttering templates are used extensively in this view except for the cards on the first row.
 
-    ```yaml linenums="1"
+The following templates are defined in `/lovelace/decluttering_templates/decluttering_templates.yaml` file:
+
+- The `header_template` is used for displaying the header sak card
+- The `divider_template` is used for displaying the divider line sak card
+- The `sak_button_template_nm_tpl` is used for displaying the light card
+
+
+!!! Example "Excerpt of the headers and dividers in this view..."
+    ```yaml linenums="1" hl_lines="2 5 10 13 18"
     - type: custom:decluttering-card
       template: divider_template
 
@@ -79,8 +88,8 @@ This example is in the `view-sake2.yaml` file in the `/lovelace/views` folder.
         - font_color: var(--secondary-text-color)
         - font_size: 3em
     ```
-??? Example "And the excerpt of the lights on second and third row..."
-    ```yaml linenums="1"
+!!! Example "And the excerpt of the lights on second and third row..."
+    ```yaml linenums="1" hl_lines="4 12"
     - type: horizontal-stack
       cards:
         - type: custom:decluttering-card
@@ -100,7 +109,16 @@ This example is in the `view-sake2.yaml` file in the `/lovelace/views` folder.
             - icon: 'mdi:book-open-outline'
     ```
 
+??? Example "Excerpt of the `decluttering_templates.yaml` file..."
+    ```yaml linenums="1"
+    header_template:
+      !include sak-header-template-mw.yaml
+    divider_template:
+      !include sak-divider-template-mw.yaml
 
+    sak_light_button_template_nm_tpl:
+      !include sak-light-button-nm-tpl.yaml 
+    ```
 #### SAK templates
 The following templates are defined in the `/lovelace/sak_templates/sak-templates.yaml` file:
 
@@ -124,26 +142,6 @@ The following templates are defined in the `/lovelace/sak_templates/sak-template
       !include toolset-light-button-slider3-nm-template.yaml
     ```
 
-#### Decluttering templates
-Decluttering templates are used extensively in this view except for the cards on the first row.
-
-The following templates are defined in `/lovelace/decluttering_templates/decluttering_templates.yaml` file:
-
-- The `header_template` is used for displaying the header sak card
-- The `divider_template` is used for displaying the divider line sak card
-- The `sak_button_template_nm_tpl` is used for displaying the light card
-
-
-??? Example "Excerpt of the `decluttering_templates.yaml` file..."
-    ```yaml linenums="1"
-    header_template:
-      !include sak-header-template-mw.yaml
-    divider_template:
-      !include sak-divider-template-mw.yaml
-
-    sak_light_button_template_nm_tpl:
-      !include sak-light-button-nm-tpl.yaml 
-    ```
 
 ##:sak-sak-logo: Interactions
 Sliders --> :octicons-beaker-24: Experimental

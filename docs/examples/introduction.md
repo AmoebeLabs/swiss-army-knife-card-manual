@@ -9,10 +9,11 @@ template: overrides/main.html
 [sak-example-5]: ../assets/screenshots/sak-example-5.png
 [sak-example-6]: ../assets/screenshots/sak-example-6.png
 [sak-example-7]: ../assets/screenshots/sak-example-7.png
-[sak-example-8]: ../assets/screenshots/sak-example-8.gif
+[sak-example-8]: ../assets/screenshots/sak-example-8.png
 
 [sak-example-2gif]: ../assets/screenshots/sak-example-2.gif
 [sak-example-6gif]: ../assets/screenshots/sak-example-6.gif
+[sak-example-8gif]: ../assets/screenshots/sak-example-8.gif
 
 I have put several examples into there own SAK Example view for easy reference.
 The eight examples show in most cases more than one card, or more than one visualization.
@@ -26,7 +27,7 @@ Some of them use SAK templates, some of them Decluttering templates, some both, 
 | **[Example 1]:** ![sak-example-1b] | **[Example 2]:** ![sak-example-2] |
 | **[Example 3]:** ![sak-example-3]  | **[Example 4]:** ![sak-example-4] |
 | **[Example 5]:** ![sak-example-5]  | **[Example 6]:** ![sak-example-6] |
-| **[Example 7]:** ![sak-example-7]  | **[Example 8]:** \#TODO: Change ![sak-example-8] |
+| **[Example 7]:** ![sak-example-7]  | **[Example 8]:** ![sak-example-8] |
 
   [Example 1]: ../examples/example-1.md
   [Example 2]: ../examples/example-2.md
@@ -38,5 +39,6 @@ Some of them use SAK templates, some of them Decluttering templates, some both, 
   [Example 8]: ../examples/example-8.md
 
 | And some gifs to show the animations| |
-| ------------ | ---------------- |
+| ---------------- | ---------------- |
 | **[Example 2]:** ![sak-example-2gif] | **[Example 6]:** ![sak-example-6gif] |
+| **[Example 8]:** ![sak-example-8gif] | **[Example 8]:** ![sak-example-8gif] |
