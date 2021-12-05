@@ -1894,6 +1894,70 @@
 </span><span class="hll">            <span class="nt">90</span><span class="p">:</span> <span class="s">&#39;red&#39;</span>
 </span></code></pre></div>
 </td></tr></table>
+<p>The full config for the segarc tool is below. The yellow lines show the parts (records/maps) that are overwritten:</p>
+<ul>
+<li>the <code>show</code> config</li>
+<li>the <code>segments</code> config</li>
+</ul>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">entity_index</span><span class="p">:</span> <span class="s">&#39;[[entity]]&#39;</span>
+      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+        <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+        <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+      <span class="nt">scale</span><span class="p">:</span>
+        <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="hll">      <span class="nt">show</span><span class="p">:</span>
+</span>        <span class="nt">scale</span><span class="p">:</span> <span class="s">&#39;[[show_scale]]&#39;</span>
+        <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
+<span class="hll">      <span class="nt">segments</span><span class="p">:</span>
+</span>        <span class="nt">colorlist</span><span class="p">:</span>
+          <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+          <span class="nt">colors</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
+      <span class="nt">animation</span><span class="p">:</span>
+        <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">foreground</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--theme-gradient-color-01)</span>
+        <span class="nt">background</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-theme-default-darken-15)</span>
+          <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#is-1)</span>
+</code></pre></div>
+</td></tr></table>
 <div class="admonition warning">
 <p class="admonition-title">Overwriting parts of a template can be error-prone. So take care!</p>
 </div>
