@@ -178,4 +178,41 @@ The yellow lines show the parts that are overwritten.
 
 ```
 
+The full config for the segarc tool is below. The yellow lines show the parts (records/maps) that are overwritten:
+
+- the `show` config
+- the `segments` config
+
+```yaml title="From: template" linenums="1" hl_lines="14 17" 
+    - type: segarc
+      id: 0
+      entity_index: '[[entity]]'
+      position:
+        cx: 50
+        cy: 50
+        start_angle: 0
+        end_angle: 360
+        width: 5
+        radius: 25
+      scale:
+        min: 0
+        max: 100
+      show:
+        scale: '[[show_scale]]'
+        style: 'colorlist'
+      segments:
+        colorlist:
+          gap: 1
+          colors:
+            - 'var(--theme-gradient-color-01)'
+      animation:
+        duration: 5
+      styles:
+        foreground:
+          fill: var(--theme-gradient-color-01)
+        background:
+          fill: var(--cs-theme-default-darken-15)
+          filter: url(#is-1)
+```
+
 !!! Warning "Overwriting parts of a template can be error-prone. So take care!"
