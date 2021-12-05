@@ -18,79 +18,81 @@ If your structure differs, put the files into YOUR location, and don't forget to
     Read and adapt to your own config and structure.
     
 ####My Main Home Assistant folder
-```
-homeassistant-data/
-.
-├─ lovelace/
-├─ themes/
-├─ www/
+Below, as reference the folder structure I use
 
-```
+=== "Home Assistant"
+    ```
+    homeassistant-data/
+    .
+    ├─ lovelace/
+    ├─ themes/
+    ├─ www/
 
-####My Lovelace folder
-My Lovelace folder contains the following folders:
-```
-lovelace/
-.
-├─ decluttering_templates
-│  └─ decluttering_templates.yaml
-│  └─ (etc)
-│
-├─ sak_templates/
-│  └─ sak_templates.yaml
-│  └─ sak-css-definitions.yaml
-│  └─ user-css-definitions.yaml
-│  └─ (etc)
-│
-├─ resources
-│  └─ resources.yaml
-│
-├─ views/
-│  └─ view-sake1.yaml
-│  └─ (...)
-│  └─ view-sake8.yaml
-```
-!!! Warning "The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!"
-    This location is hard-coded into the SAK card. SAK needs the templates to function!
+    ```
+
+=== "Lovelace folder"
+      My Lovelace folder contains the following folders:
+      ```
+      lovelace/
+      .
+      ├─ decluttering_templates
+      │  └─ decluttering_templates.yaml
+      │  └─ (etc)
+      │
+      ├─ sak_templates/
+      │  └─ sak_templates.yaml
+      │  └─ sak-css-definitions.yaml
+      │  └─ user-css-definitions.yaml
+      │  └─ (etc)
+      │
+      ├─ resources
+      │  └─ resources.yaml
+      │
+      ├─ views/
+      │  └─ view-sake1.yaml
+      │  └─ (...)
+      │  └─ view-sake8.yaml
+      ```
+      !!! Warning "The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!"
+          This location is hard-coded into the SAK card. SAK needs the templates to function!
     
-####My www folder
-```
-www/
-.
-├─ community/
-│  └─ wip-swiss-army-knife-card/
-│     └─ dev-swiss-army-knife-card.js
-│
-├─ images/
-   ├─ backgrounds/
-   │  └─ balls-background-1.svg   # Used by view-sake6.yaml
-   │
-   ├─ weather/                    # Used by all weather-type usersvg tools
-   │  └─ *-day.svg
-   │  └─ *-night.svg
-   │
-   └─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
-   └─ (...)
-   └─ ic-face-6.svg
-```
+=== "www folder"
+    ```
+    www/
+    .
+    ├─ community/
+    │  └─ wip-swiss-army-knife-card/
+    │     └─ dev-swiss-army-knife-card.js
+    │
+    ├─ images/
+       ├─ backgrounds/
+       │  └─ balls-background-1.svg   # Used by view-sake6.yaml
+       │
+       ├─ weather/                    # Used by all weather-type usersvg tools
+       │  └─ *-day.svg
+       │  └─ *-night.svg
+       │
+       └─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
+       └─ (...)
+       └─ ic-face-6.svg
+    ```
 
-####My themes folder
+=== "Themes folder"
+    ```
+    themes/
+    .
+    └─ themes.yaml
+    └─ nm-01-gonsboro.yaml
+    ```
 
-```
-themes/
-.
-└─ themes.yaml
-└─ nm-01-gonsboro.yaml
-```
+##:sak-sak-logo: Minimal Install
 
-###Installation of all the SAK required parts
-
-####:octicons-checklist-24: Step 1: Add SAK Card to your installation
+###:octicons-checklist-24: Step 1: Add Swiss Army Knife Card to your installation
 The folder has a wip prefix and the card itself a dev prefix. These will be removed in the official release.
 This way they can't overwrite each other...
 
 **:octicons-check-circle-16: Step 1a:**
-Put the card into the community (`HACS`) folder. This folder should have all the installed custom cards.
+Put the card into the community (`HACS`) folder.
 
 ```
 www/
@@ -115,33 +117,25 @@ lovelace:
 ```
 !!! Warning "I have a YAML only config. Pleas adjust to your own configuration"
 
-####:octicons-checklist-24: Step 2: Add decluttering templates
+###:octicons-checklist-24: Step 2: Add Swiss Army Knife templates
+The second step is to add the `sak_templates`. These are mandatory for the SAK Card to function.
 
 **:octicons-check-circle-16: Step 2a:**
-
-!!! Warning "Install the decluttering card first, if you haven't installed it yet"
-    Use HACS to install the decluttering card.
-    
-Then you *should* have the following in your `lovelace.yaml` file:
-```yaml title="lovelace.yaml"
-# Decluttering Templates
-decluttering_templates:
-  !include lovelace/decluttering_templates/decluttering_templates.yaml
-```
-**:octicons-check-circle-16: Step 2b:**
-Add the decluttering templates for SAK to your installation.
-
-!!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
-    If you already use the decluttering card, merge the files.
-    
-####:octicons-checklist-24: Step 3: Add SAK templates
-
-**:octicons-check-circle-16: Step 3a:**
 Add the SAK templates to the `sak_templates` folder.
 
 Create the `sak_templates` folder in the `lovelace` folder and add all the files.
 
-**:octicons-check-circle-16: Step 3b:**
+```yaml 
+lovelace/
+.
+├─ sak_templates/
+│  └─ sak_templates.yaml
+│  └─ sak-css-definitions.yaml
+│  └─ user-css-definitions.yaml
+│  └─ (etc)
+```
+
+**:octicons-check-circle-16: Step 2b:**
 Include sak_templates to lovelace.yaml
 
 ```yaml title="lovelace.yaml"
@@ -152,7 +146,29 @@ sak_templates:
 !!! Info "The supplied `sak_templates.yaml` file contains the templates for SAK."
     You don't have to change this file!
 
-####:octicons-checklist-24: Step 4: Add views & used files
+##:sak-sak-logo: Full Install
+If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro theme in the examples.
+
+###:octicons-checklist-24: Step 3: Add decluttering templates
+
+**:octicons-check-circle-16: Step 3a:**
+
+!!! Warning "Install the decluttering card first, if you haven't installed it yet"
+    Use HACS to install the decluttering card.
+    
+Then you *should* have the following in your `lovelace.yaml` file:
+```yaml title="lovelace.yaml"
+# Decluttering Templates
+decluttering_templates:
+  !include lovelace/decluttering_templates/decluttering_templates.yaml
+```
+**:octicons-check-circle-16: Step 3b:**
+Add the decluttering templates for SAK to your installation.
+
+!!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
+    If you already use the decluttering card, merge the files.
+    
+###:octicons-checklist-24: Step 4: Add views & used files
 
 **:octicons-check-circle-16: Step 4a:**
 Add the views you want to see/use into your own `lovelace.yaml` config
@@ -187,8 +203,7 @@ www/
    └─ ic-face-6.svg
 ```
 
-
-####:octicons-checklist-24: Step 5: Add gonsboro theme if needed
+###:octicons-checklist-24: Step 5: Add gonsboro theme if needed
 
 If you want to use the gonsboro theme, it should be included into your `themes.yaml` file in the themes folder:
 ```yaml title="themes.yaml"
@@ -206,5 +221,5 @@ frontend:
   themes: !include themes/themes.yaml
 ```
 
-####:octicons-thumbsup-24: Step 6: You made it!
+###:octicons-thumbsup-24: Step 6: You made it!
 Now test and use the SAK card...
