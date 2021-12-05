@@ -556,7 +556,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#card-aspect-ratio-and-size" class="md-nav__link">
+  <a href="#more-indepth-card-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -565,7 +565,7 @@
   
   
 
- Card aspect ratio and size
+ More indepth: Card aspect ratio and size
   </a>
   
     <nav class="md-nav" aria-label="
@@ -576,7 +576,7 @@
   
   
 
- Card aspect ratio and size">
+ More indepth: Card aspect ratio and size">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -599,7 +599,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-aspect-ratio-and-size" class="md-nav__link">
+  <a href="#more-indepth-toolset-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -608,7 +608,7 @@
   
   
 
- Toolset aspect ratio and size
+ More indepth: Toolset aspect ratio and size
   </a>
   
 </li>
@@ -760,6 +760,20 @@
     <li class="md-nav__item">
       <a href="../animations/overview/" class="md-nav__link">
         Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animations/css-animations/" class="md-nav__link">
+        CSS Animations
       </a>
     </li>
   
@@ -1393,7 +1407,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#card-aspect-ratio-and-size" class="md-nav__link">
+  <a href="#more-indepth-card-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -1402,7 +1416,7 @@
   
   
 
- Card aspect ratio and size
+ More indepth: Card aspect ratio and size
   </a>
   
     <nav class="md-nav" aria-label="
@@ -1413,7 +1427,7 @@
   
   
 
- Card aspect ratio and size">
+ More indepth: Card aspect ratio and size">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1436,7 +1450,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#toolset-aspect-ratio-and-size" class="md-nav__link">
+  <a href="#more-indepth-toolset-aspect-ratio-and-size" class="md-nav__link">
     
 
 
@@ -1445,7 +1459,7 @@
   
   
 
- Toolset aspect ratio and size
+ More indepth: Toolset aspect ratio and size
   </a>
   
 </li>
@@ -1511,15 +1525,18 @@
 </svg>
 </span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>The coordinate system of a SAK Card is based on the following characteristics:</p>
+<p><strong>Card:</strong></p>
 <ul>
 <li>A SAK Card has a configurable <code>aspectratio</code></li>
-<li>The aspect ratio determines the internal grid size: <code>aspect ratio * 100</code>.</li>
-<li>A Toolset is <strong>always</strong> based on a 1/1 aspect ratio and corresponding 100x100 internal grid size. It does NOT depend on the size of a card.</li>
-<li>All tool sizes are relative to the default toolset grid of 100x100 with a center of (50,50)!</li>
-<li>And finally, a toolset is placed on a card within the card's dimensions.</li>
+<li>That aspect ratio determines the internal grid size: <code>aspect ratio * 100</code>.</li>
 </ul>
-<p>The card's actual external size depends on how it is placed: on a <code>panel</code> or <code>horizontal-stack</code> for instance.</p>
-<p>As SAK cards are based on SVG they scale the contents perfectly to the size allowed by the parent: this means that a card with a 1/1 aspect ratio and 100x100 grid size is as sharp as a 10/10 card with a 1.000x1.000 grid size!</p>
+<p><strong>Toolset &amp; Tools:</strong></p>
+<ul>
+<li>A Toolset has a default 100x100 grid size. It does NOT depend on the size of a card.</li>
+<li>The top-left is the origin (0,0)</li>
+<li>The center coordinates of a toolset are (50,50)</li>
+<li>All tool dimensions are relative to the default toolset grid size: a line with a length of 10 means 10% of the grid.</li>
+</ul>
 <p>The next paragraph shows an example, and the paragraphs thereafter more details.</p>
 <h2 id="an-example-toolset-and-tool-placement-work"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1550,14 +1567,14 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> An example: Toolset and tool placement @ work<a class="headerlink" href="#an-example-toolset-and-tool-placement-work" title="Permanent link">&para;</a></h2>
-<p>Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.  </p>
+<p>Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.  </p>
 <p>The tools are neatly configured around the center position (50,50) of the toolset grid:</p>
 <ul>
 <li>the <code>circle</code> is placed at (50,50) with its radius of 25,</li>
 <li>the <code>icon</code> is placed at (50,40) and</li>
 <li>the <code>state</code> is placed at (50,60).</li>
 </ul>
-<p>Then, the first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. As you can see, both toolsets are identical and could be a template: one of the advantages of using toolsets!</p>
+<p>The first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. </p>
 <p>In a kind of 3D world, it looks like this:
 <img alt="sak-card-toolset-tool-placement" src="../../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png" /></p>
 <p>The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: <code>circle</code>, <code>state</code> and <code>icon</code>. For brevity only the coordinates/sizes part is shown.</p>
@@ -1662,7 +1679,7 @@
             <span class="nt">icon_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="card-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<h2 id="more-indepth-card-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1690,7 +1707,7 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> Card aspect ratio and size<a class="headerlink" href="#card-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
+</span> More indepth: Card aspect ratio and size<a class="headerlink" href="#more-indepth-card-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
 <p>Below you see the definition of a 1/1 square card which equals a grid size of 100x100.
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:swiss-army-knife-card&#39;</span>
   <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>        <span class="c1"># Square 1/1 card with resulting 100x100 grid size</span>
@@ -1732,7 +1749,7 @@
 <p class="admonition-title">The <code>1/1</code>, <code>2/1</code> and <code>3/1</code> are mostly used for mobile phones, and the much larger ones, say 4/4 for panels</p>
 <p>The tools on a 4/4 would be too small to read on a mobile phone, but are excellent on large displays.</p>
 </div>
-<h2 id="toolset-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<h2 id="more-indepth-toolset-aspect-ratio-and-size"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1760,7 +1777,7 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> Toolset aspect ratio and size<a class="headerlink" href="#toolset-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
+</span> More indepth: Toolset aspect ratio and size<a class="headerlink" href="#more-indepth-toolset-aspect-ratio-and-size" title="Permanent link">&para;</a></h2>
 <p>As already mentioned, the position and dimensions of a tool <em>always</em> reference a <em>default</em> toolset grid size of 100x100:</p>
 <ul>
 <li>(0,0) is the upper left corner of the grid</li>

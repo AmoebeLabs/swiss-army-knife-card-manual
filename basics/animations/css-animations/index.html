@@ -12,14 +12,14 @@
         <meta name="author" content="Marco">
       
       
-        <link rel="canonical" href="https://swiss-army-knife.docs.amoebelabs.com/basics/styling/overview/">
+        <link rel="canonical" href="https://swiss-army-knife.docs.amoebelabs.com/basics/animations/css-animations/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.0b2">
     
     
       
-        <title>Overview - Swiss Army Knife custom card</title>
+        <title>CSS Animations - Swiss Army Knife custom card</title>
       
     
     
@@ -64,6 +64,13 @@
 
     
     
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="../../../overrides/assets/stylesheets/main.scss" -->
+  <!-- /> -->
+
   </head>
   
   
@@ -82,12 +89,24 @@
     <div data-md-component="skip">
       
         
-        <a href="#structure-sort-of" class="md-skip">
+        <a href="#css-animations" class="md-skip">
           Skip to content
         </a>
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <a style="color:white;opacity:.9;" onmouseover="this.style.color='white';this.style.fontSize=''";" onmouseout="this.style.color='white';;this.style.fontSize=''">
+    <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
+  </a>
+
+
+          </div>
+        </aside>
       
     </div>
     
@@ -116,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              CSS Animations
             
           </span>
         </div>
@@ -522,14 +541,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
       
       
       
@@ -550,56 +567,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../styling/overview/" class="md-nav__link">
         Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#structure-sort-of" class="md-nav__link">
-    
-
-
-  
-  
-  
-  
-
- Structure (sort of)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -611,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/" class="md-nav__link">
+      <a href="../../styling/classes/" class="md-nav__link">
         Classes
       </a>
     </li>
@@ -625,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../styles/" class="md-nav__link">
+      <a href="../../styling/styles/" class="md-nav__link">
         Styles
       </a>
     </li>
@@ -644,12 +616,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
       
       
       
@@ -672,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../animations/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -684,11 +658,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../animations/css-animations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CSS Animations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CSS Animations
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Basic usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-animations" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Built-in animations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -700,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../animations/colorstops/" class="md-nav__link">
+      <a href="../colorstops/" class="md-nav__link">
         Colorstops
       </a>
     </li>
@@ -714,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../animations/state-operators/" class="md-nav__link">
+      <a href="../state-operators/" class="md-nav__link">
         State operators
       </a>
     </li>
@@ -1283,6 +1321,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1291,7 +1331,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-sort-of" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     
 
 
@@ -1300,7 +1340,22 @@
   
   
 
- Structure (sort of)
+ Basic usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-animations" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Built-in animations
   </a>
   
 </li>
@@ -1318,12 +1373,11 @@
               
                 
 
-  <h1>Overview</h1>
-
-<p>The Swiss Army Knife has built-in support for SVG and CSS styling.</p>
-<p>This support is aimed to re-use styles: SAK lets you define your own CSS classes, CSS Animations and SVG Filters as a template and re-use them in any SAK card you make.</p>
-<p>You are not limited to the SAK defined classes, animations and filters!</p>
-<h2 id="structure-sort-of"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<h1 id="css-animations">CSS Animations<a class="headerlink" href="#css-animations" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 1.0.0</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M9.126.64a1.75 1.75 0 0 1 1.75 0l8.25 4.762c.103.06.199.128.286.206a.748.748 0 0 1 .554.96c.023.113.035.23.035.35v3.332a.75.75 0 0 1-1.5 0V7.64l-7.75 4.474V22.36a.75.75 0 0 1-1.125.65l-8.75-5.052a1.75 1.75 0 0 1-.875-1.515V6.917c0-.119.012-.236.035-.35a.748.748 0 0 1 .554-.96 1.75 1.75 0 0 1 .286-.205L9.126.639zM1.501 7.638v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947l-7.75-4.474zm8.5 3.175L2.251 6.34l7.625-4.402a.25.25 0 0 1 .25 0l7.625 4.402-7.75 4.474z"/><path d="m21.347 17.5-2.894-2.702a.75.75 0 1 1 1.023-1.096l4.286 4a.75.75 0 0 1 0 1.096l-4.286 4a.75.75 0 1 1-1.023-1.096L21.347 19h-6.633a.75.75 0 0 1 0-1.5h6.633z"/></svg></span> Output ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892L8 8.807zM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9V3.5zM4.189 18.832 6.3 15h11.4l2.111 3.832a1.125 1.125 0 0 1-.985 1.668H5.174a1.125 1.125 0 0 1-.985-1.668z"/></svg></span> Experimental</p>
+<h2 id="basic-usage"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1351,28 +1405,87 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> Structure (sort of)<a class="headerlink" href="#structure-sort-of" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>.
-├─ CSS keyframe animations
-│  └─ template definition:
-│     └─ sak_templates/sak-css-definitions.yaml
-│     └─ sak_templates/user-css-definitions.yaml
-│  └─ usage:
-│     └─ through styles
-│
-├─ classes
-│  └─ template definition:
-│     └─ sak_templates/sak-css-definitions.yaml
-│     └─ sak_templates/user-css-definitions.yaml
-│  └─ usage:
-│     └─ through class enabling
-│
-└─ styles/
-│  └─ usage:
-│     └─ default CSS styles
-│     └─ default CSS animations
-│     └─ SAK and user defined CSS keyframe animations
+</span> Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>  <span class="nt">styles</span><span class="p">:</span>
+    <span class="nt">rect</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">animation:bounce 5s infinite</span>
 </code></pre></div>
+<h2 id="built-in-animations"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Built-in animations<a class="headerlink" href="#built-in-animations" title="Permanent link">&para;</a></h2>
+<p>SAK has a number of built-in animations. They are defined in the <code>sak-css-definitions.yaml</code> file as part of the <code>sak_templates.yaml</code> file.</p>
+<p>Their name and what they do, you can see in the following table</p>
+<table>
+<thead>
+<tr>
+<th align="center">SAK Built-in..</th>
+<th align="center">..CSS..</th>
+<th align="center">..Animations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">bounce<br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:bounce 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect> </svg></td>
+<td align="center">flash <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:flash 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect> </svg></td>
+<td align="center">headShake <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:headShake 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect> </svg></td>
+</tr>
+<tr>
+<td align="center">heartBeat <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:heartBeat 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">jello <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:jello 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect> </svg></td>
+<td align="center">pulse <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:pulse 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+</tr>
+<tr>
+<td align="center">rubberBand <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:rubberBand 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">shake <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:shake 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">swing <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:swing 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+</tr>
+<tr>
+<td align="center">tada <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:tada 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">wobble <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:wobble 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">zoomOut <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:zoomOut 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" overflow="visible" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+</tr>
+<tr>
+<td align="center">spin <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:spin 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">blinkingText <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:blinkingText 1s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg></td>
+<td align="center">The END</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">They seem to work, but still experimental?</p>
+<p>Yes. The animations itself work, but depending on the location of the tool, you might get unexpected results. Some animations expect/require the animation center to be in the center of the tool, which is not always the case. This means that a <code>spin</code> might NOT rotate around the point you expect.</p>
+<p>I hope to fix this in the future by calculating the real center and correct this using the css <code>transform-origin</code> property.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Use animations sparingly</p>
+<p>You don't want your Home Assistant dashboard look like a website from the 90ies <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </p>
+</div>
 
               
             </article>
@@ -1391,7 +1504,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../templates/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Templates" rel="prev">
+        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1400,20 +1513,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Templates
+              Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../classes/" class="md-footer__link md-footer__link--next" aria-label="Next: Classes" rel="next">
+        <a href="../colorstops/" class="md-footer__link md-footer__link--next" aria-label="Next: Colorstops" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Classes
+              Colorstops
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1481,8 +1594,13 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
+  <!-- 
       <script src="../../../assets/javascripts/bundle.0885dc41.min.js"></script>
       
-    
+     -->
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <script src="../../../overrides/assets/javascripts/bundle.js"></script> -->
+
   </body>
 </html>
