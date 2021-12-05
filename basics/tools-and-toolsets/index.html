@@ -558,6 +558,55 @@
  Toolsets
   </a>
   
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Toolsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grouping-of-tools" class="md-nav__link">
+    Grouping of tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement-on-card" class="md-nav__link">
+    Placement on card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotating" class="md-nav__link">
+    Rotating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    Styling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1350,6 +1399,55 @@
  Toolsets
   </a>
   
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Toolsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grouping-of-tools" class="md-nav__link">
+    Grouping of tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement-on-card" class="md-nav__link">
+    Placement on card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    Scaling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotating" class="md-nav__link">
+    Rotating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    Styling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1425,7 +1523,7 @@
 <tr>
 <td><code>rectangle</code></td>
 <td>basic</td>
-<td>A rectangle with and w/o rounded cornders</td>
+<td>A rectangle with and w/o rounded corners</td>
 </tr>
 <tr>
 <td><code>rectex</code></td>
@@ -1470,22 +1568,22 @@
 <tr>
 <td><code>area</code></td>
 <td>HA specific</td>
-<td>Represents an Entity Area (text)</td>
+<td>Represents an Entity Area</td>
 </tr>
 <tr>
 <td><code>icon</code></td>
 <td>HA specific</td>
-<td>Represents an Entity Icon (icon)</td>
+<td>Represents an Entity Icon</td>
 </tr>
 <tr>
 <td><code>name</code></td>
 <td>HA specific</td>
-<td>Represents an Entity Name (text)</td>
+<td>Represents an Entity Name</td>
 </tr>
 <tr>
 <td><code>state</code></td>
 <td>HA specific</td>
-<td>Represents an Entity State &amp; Unit of Measurement (text)</td>
+<td>Represents an Entity State &amp; Unit of Measurement</td>
 </tr>
 <tr>
 <td><code>bar</code></td>
@@ -1523,15 +1621,12 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Toolsets<a class="headerlink" href="#toolsets" title="Permanent link">&para;</a></h2>
-<p><strong>Grouping of tools</strong></p>
-<div class="admonition important">
-<p class="admonition-title">Toolsets are aware of the <code>aspectratio</code> value of the card</p>
-<p>As a toolset places the (set of) tools it contains on the card, hence must know its dimensions.</p>
-</div>
-<p><strong>Scaling</strong></p>
-<div class="admonition important">
-<p class="admonition-title">Toolsets can scale the tools as a whole to 'fit' the card or required size</p>
-</div>
+<h4 id="grouping-of-tools">Grouping of tools<a class="headerlink" href="#grouping-of-tools" title="Permanent link">&para;</a></h4>
+<p>Well, a 'set' already tells this: a Toolset is a container for a set of tools.</p>
+<h4 id="placement-on-card">Placement on card<a class="headerlink" href="#placement-on-card" title="Permanent link">&para;</a></h4>
+<p>A Toolset provides a grid to place tools on, and can itself be placed on a card.</p>
+<h4 id="scaling">Scaling<a class="headerlink" href="#scaling" title="Permanent link">&para;</a></h4>
+<p>Toolsets can scale the tools as a whole to 'fit' the card or required size.</p>
 <p>Server example (<a href="../../examples/example-7/">example 7</a>) showing this scaling</p>
 <p>The discs with the arc, icon and state use the same toolset (using a template) and use a toolset scale factor to get the required size of the toolset.</p>
 <p><img alt="sak-example-7" src="../../assets/screenshots/sak-example-7.png" /></p>
@@ -1544,10 +1639,10 @@
 </div>
 <p>Example showing independent x/y scaling on the 3<sup>rd</sup> disc</p>
 <p><img alt="sak-example-8t" src="../../assets/screenshots/sak-example-8t.png" /></p>
-<p><strong>Rotating</strong></p>
+<h4 id="rotating">Rotating<a class="headerlink" href="#rotating" title="Permanent link">&para;</a></h4>
 <div class="admonition important">
 <p class="admonition-title">Toolsets can rotate the tools as a whole</p>
-<p>Rotating is in degrees and uses (again) the center of the toolset as the rotation anchor.</p>
+<p>Rotation is in degrees and uses (again) the center of the toolset as the rotation anchor.</p>
 </div>
 <details class="example">
 <summary>Example showing some rotating disc toolsets</summary>
@@ -1556,7 +1651,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Rotating <em>can</em> have different results depending on the browser</p>
 </div>
-<p><strong>Styling</strong></p>
+<h4 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">&para;</a></h4>
 
               
             </article>
