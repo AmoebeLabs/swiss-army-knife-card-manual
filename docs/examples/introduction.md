@@ -25,6 +25,20 @@ Some of them use SAK templates, some of them Decluttering templates, some both, 
     
     Other themes might show black colors where theme colors are used.
     
+##:sak-sak-logo: Platforms tested
+I have tested SAK - and thus the examples - on the following platforms:
+
+- Safari (mobile view) on iOS 14 & 15, iPhone XS Max, iPhone 11, iPhone 12
+- Safari (desktop view) iPadOS 14 & 15 on iPad
+- Chrome > 90.x on Windows 10, 10 year old Desktop :smile: 
+
+So Android is not tested. According to Google, the Chrome engine on Android is the same as the one on the desktop, so that should work.
+A quick view on a friends Samsung showed no problems, but that is no 100% guarantee of course.
+
+Due to the browser differences and long standing bugs in Safari, some parts of SAK needed different rendering paths for Safari and Chrome.
+
+One notable difference between the two is the louzy (shadow) filter implementation of Safari. It works, but takes a small performance hit compared to Chrome, which has a much better and faster filter implementation. Safari users will therefore see a difference between a switch to a view with Neumorphic design and Flat design: the latter is faster.
+
 ##:sak-sak-logo: Real world examples from my own installation
 
 | An overview of all the examples | |

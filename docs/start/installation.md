@@ -17,7 +17,6 @@ If your structure differs, put the files into YOUR location, and don't forget to
 !!! Info "I use separate folders for many things in Home Assistant"
     Read and adapt to your own config and structure.
     
-####My Main Home Assistant folder
 Below, as reference the folder structure I use
 
 === "Home Assistant"
