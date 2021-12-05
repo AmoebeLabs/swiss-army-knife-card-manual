@@ -107,6 +107,7 @@ nav:
       - Styles: basics/styling/styles.md
     - Animations:
       - Overview: basics/animations/overview.md
+      - CSS Animations: basics/animations/css-animations.md
       - Colorstops: basics/animations/colorstops.md
       - State operators: basics/animations/state-operators.md
   - Tools:

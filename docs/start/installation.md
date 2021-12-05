@@ -115,19 +115,35 @@ lovelace:
 ```
 !!! Warning "I have a YAML only config. Pleas adjust to your own configuration"
 
-####:octicons-checklist-24: Step 2: Include decluttering_templates to lovelace.yaml
+####:octicons-checklist-24: Step 2: Add decluttering templates
+
+**:octicons-check-circle-16: Step 2a:**
+
+!!! Warning "Install the decluttering card first, if you haven't installed it yet"
+    Use HACS to install the decluttering card.
+    
+Then you *should* have the following in your `lovelace.yaml` file:
 ```yaml title="lovelace.yaml"
 # Decluttering Templates
 decluttering_templates:
   !include lovelace/decluttering_templates/decluttering_templates.yaml
 ```
-!!! Warning "Install the decluttering card first, if you haven't installed it yet"
-    Use HACS to install the decluttering card.
-    
+**:octicons-check-circle-16: Step 2b:**
+Add the decluttering templates for SAK to your installation.
+
 !!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
     If you already use the decluttering card, merge the files.
     
-####:octicons-checklist-24: Step 3: Include sak_templates to lovelace.yaml
+####:octicons-checklist-24: Step 3: Add SAK templates
+
+**:octicons-check-circle-16: Step 3a:**
+Add the SAK templates to the `sak_templates` folder.
+
+Create the `sak_templates` folder in the `lovelace` folder and add all the files.
+
+**:octicons-check-circle-16: Step 3b:**
+Include sak_templates to lovelace.yaml
+
 ```yaml title="lovelace.yaml"
 # Swiss Army Knife Templates
 sak_templates:

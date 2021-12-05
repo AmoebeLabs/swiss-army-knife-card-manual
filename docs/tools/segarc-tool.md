@@ -40,6 +40,16 @@ It is by far the most complex tool. Was fun to make, and fairly unique.
       </text>
     </g>
   </g>
+  <g class="arc" id="arc-1e2mq54wq" transform="translate(350 90)">
+    <g>
+          <!----><!----><path class="sak-segarc__background" id="arc-segment-bg-1e2mq54wq-0" d="M -7.141433158711026 -179.97258512815043 A 180 180 0 0 0 -183.97258512815043 -3.141433158711019 L -143.97867732189476 -2.4433369012196815 A 140 140 0 0 1 -6.443336901219687 -139.97867732189476 Z" style="fill: var(--md-primary-fg-color--50);"></path><!----><path class="sak-segarc__foreground" id="arc-segment-1e2mq54wq-0" d="M -135.2143529358541 -123.21847906716393 A 180 180 0 0 0 -183.97258512815043 -3.141433158711019 L -143.97867732189476 -2.4433369012196815 A 140 140 0 0 1 -106.05560783899763 -95.8365948300164 Z" style="fill: var(--md-primary-fg-color--900);"></path><!----><!---->
+    </g>
+    <g class="arc" id="arc-eyr06l3l0">
+      <g>
+          <!----><!----><path class="sak-segarc__foreground" id="arc-segment-eyr06l3l0-0" d="M -6.303717649721419 -131.97989576064364 A 132 132 0 0 0 -135.97989576064364 -2.303717649721414 L -127.98111419939252 -2.1640983982231465 A 124 124 0 0 1 -6.164098398223151 -123.98111419939252 Z" style="fill: var(--md-primary-fg-color--900);"></path><!----><!---->
+      </g>
+    </g>
+  </g>  
 </svg>
 
 ##:sak-sak-logo: Basic usage
@@ -139,7 +149,7 @@ The Segmented Arc tool has support for the following forms of styling:
 | `classes`    | :material-check: | Using SAK or User defined class definitions  |
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
 
-The Segmented Arc tool is composed of a several objects: "foreground" and "background" are the selector for styling:
+The Segmented Arc tool is composed of two objects: "foreground" and "background" are the selector for styling:
 
 ```yaml linenums="1" hl_lines="9 11 14 16"
 - type: 'segarc'

@@ -6,20 +6,22 @@ The Swiss Army Knife card uses its own, simplified, coordinate system to simplif
 ##:sak-sak-logo: Basics
 The coordinate system of a SAK Card is based on the following characteristics:
 
+**Card:**
+
 - A SAK Card has a configurable `aspectratio`
-- The aspect ratio determines the internal grid size: `aspect ratio * 100`.
-- A Toolset is **always** based on a 1/1 aspect ratio and corresponding 100x100 internal grid size. It does NOT depend on the size of a card.
-- All tool sizes are relative to the default toolset grid of 100x100 with a center of (50,50)!
-- And finally, a toolset is placed on a card within the card's dimensions.
+- That aspect ratio determines the internal grid size: `aspect ratio * 100`.
 
-The card's actual external size depends on how it is placed: on a `panel` or `horizontal-stack` for instance.
+**Toolset & Tools:**
 
-As SAK cards are based on SVG they scale the contents perfectly to the size allowed by the parent: this means that a card with a 1/1 aspect ratio and 100x100 grid size is as sharp as a 10/10 card with a 1.000x1.000 grid size!
+- A Toolset has a default 100x100 grid size. It does NOT depend on the size of a card.
+- The top-left is the origin (0,0)
+- The center coordinates of a toolset are (50,50)
+- All tool dimensions are relative to the default toolset grid size: a line with a length of 10 means 10% of the grid.
 
 The next paragraph shows an example, and the paragraphs thereafter more details.
 
 ##:sak-sak-logo: An example: Toolset and tool placement @ work
-Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two toolsets consisting of a `circle`, `icon` and `state`.  
+Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a `circle`, `icon` and `state`.  
 
 The tools are neatly configured around the center position (50,50) of the toolset grid:
 
@@ -27,7 +29,7 @@ The tools are neatly configured around the center position (50,50) of the toolse
 - the `icon` is placed at (50,40) and
 - the `state` is placed at (50,60).
 
-Then, the first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. As you can see, both toolsets are identical and could be a template: one of the advantages of using toolsets!
+The first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. 
 
 In a kind of 3D world, it looks like this:
 ![sak-card-toolset-tool-placement]
@@ -88,7 +90,7 @@ layout:
 
 ```
 
-##:sak-sak-logo: Card aspect ratio and size
+##:sak-sak-logo: More indepth: Card aspect ratio and size
 Below you see the definition of a 1/1 square card which equals a grid size of 100x100.
 ```yaml
 - type: 'custom:swiss-army-knife-card'
@@ -134,7 +136,7 @@ The result of these different internal sizes can be seen in the following exampl
 !!! Info "The `1/1`, `2/1` and `3/1` are mostly used for mobile phones, and the much larger ones, say 4/4 for panels"
     The tools on a 4/4 would be too small to read on a mobile phone, but are excellent on large displays.
 
-##:sak-sak-logo: Toolset aspect ratio and size
+##:sak-sak-logo: More indepth: Toolset aspect ratio and size
 As already mentioned, the position and dimensions of a tool *always* reference a *default* toolset grid size of 100x100:
 
 - (0,0) is the upper left corner of the grid
