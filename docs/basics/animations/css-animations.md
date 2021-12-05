@@ -37,3 +37,6 @@ Their name and what they do, you can see in the following table
     
 !!! Tip "Use animations sparingly"
     You don't want your Home Assistant dashboard look like a website from the 90ies :smile: 
+    
+!!! Info "And yes, yes, yes, you can add you own CSS animations..."
+    Put them in the `user-css-definitions.yaml` file. That's the one you may change!

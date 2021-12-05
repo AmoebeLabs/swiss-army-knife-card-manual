@@ -12,7 +12,7 @@ The tools are:
 | `circle`    | basic       | A circle |
 | `ellipse`   | basic       | An ellipse |
 | `line`      | basic       | A vertical or horizontal line |
-| `rectangle` | basic       | A rectangle with and w/o rounded cornders |
+| `rectangle` | basic       | A rectangle with and w/o rounded corners |
 | `rectex`    | basic       | A more advanced rectangle with independent rounded corners |
 | `regpoly`   | basic       | A regular poly using the Schläfli symbol math |
 | `text`      | basic       | A text display |
@@ -21,22 +21,25 @@ The tools are:
 | `slider`    | advanced    | Slider input tool. Used for brightness for example |
 | `switch`    | advanced    | A basic on/off switch |
 | `usersvg`   | advanced    | For fetching user defined, external SVG files |
-| `area`      | HA specific | Represents an Entity Area (text) |
-| `icon`      | HA specific | Represents an Entity Icon (icon) |
-| `name`      | HA specific | Represents an Entity Name (text) |
-| `state`     | HA specific | Represents an Entity State & Unit of Measurement (text) |
+| `area`      | HA specific | Represents an Entity Area |
+| `icon`      | HA specific | Represents an Entity Icon |
+| `name`      | HA specific | Represents an Entity Name |
+| `state`     | HA specific | Represents an Entity State & Unit of Measurement |
 | `bar`       | HA specific | Represents an simple state history (horizontal or vertical bars)|
 
 ##:sak-sak-logo: Toolsets
 
-**Grouping of tools**
+####Grouping of tools
 
-!!! Important "Toolsets are aware of the `aspectratio` value of the card"
-    As a toolset places the (set of) tools it contains on the card, hence must know its dimensions.
+Well, a 'set' already tells this: a Toolset is a container for a set of tools.
 
-**Scaling**
+####Placement on card
 
-!!! Important "Toolsets can scale the tools as a whole to 'fit' the card or required size"
+A Toolset provides a grid to place tools on, and can itself be placed on a card.
+
+####Scaling
+
+Toolsets can scale the tools as a whole to 'fit' the card or required size.
 
 Server example ([example 7]) showing this scaling
   [sak-example-7]: ../assets/screenshots/sak-example-7.png
@@ -55,14 +58,14 @@ Example showing independent x/y scaling on the 3rd disc
   [sak-example-8t]: ../assets/screenshots/sak-example-8t.png
   ![sak-example-8t]
 
-**Rotating**
+####Rotating
 !!! Important "Toolsets can rotate the tools as a whole"
-    Rotating is in degrees and uses (again) the center of the toolset as the rotation anchor.
+    Rotation is in degrees and uses (again) the center of the toolset as the rotation anchor.
 
 ??? Example "Example showing some rotating disc toolsets"
     ![sak-example-8t]
     
 !!! Warning "Rotating *can* have different results depending on the browser"    
     
-**Styling**
+####Styling
 
