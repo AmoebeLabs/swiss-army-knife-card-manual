@@ -26,7 +26,10 @@ Below, as reference the folder structure I use
     ├─ lovelace/
     ├─ themes/
     ├─ www/
-
+    │
+    └─ configuration.yaml
+    └─ ui-lovelace.yaml
+    └─ sak-examples-dashboard.yaml
     ```
 
 === "Lovelace folder"
@@ -82,6 +85,7 @@ Below, as reference the folder structure I use
     .
     └─ themes.yaml
     └─ nm-01-gonsboro.yaml
+    └─ nm-02-steelblue.yaml
     ```
 
 ##:sak-sak-logo: Minimal Install
@@ -167,24 +171,30 @@ Add the decluttering templates for SAK to your installation.
 !!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
     If you already use the decluttering card, merge the files.
     
-###:octicons-checklist-24: Step 4: Add views & used files
+###:octicons-checklist-24: Step 4: Add `gonsboro` and `steelblue` theme
 
-**:octicons-check-circle-16: Step 4a:**
-Add the views you want to see/use into your own `lovelace.yaml` config
-```yaml title="lovelace.yaml"
-views:
-  # Swiss Army Knife example views...
-  - !include lovelace/views/view-sake1.yaml
-  - !include lovelace/views/view-sake2.yaml
-  - !include lovelace/views/view-sake3.yaml
-  - !include lovelace/views/view-sake4.yaml
-  - !include lovelace/views/view-sake5.yaml
-  - !include lovelace/views/view-sake6.yaml
-  - !include lovelace/views/view-sake7.yaml
-  - !include lovelace/views/view-sake8.yaml
+Both themes are used by the examples, so include the themes into your `themes.yaml` file in the themes folder:
+```yaml title="themes.yaml"
+NM - Gonsboro:
+  !include nm-01-gonsboro.yaml
+NM - Steelblue:
+  !include nm-02-steelblue.yaml
 ```
 
-**:octicons-check-circle-16: Step 4b:**
+And the `themes.yaml` file should (already) be included into your Home Assistant config:
+```yaml title="configuration.yaml"
+# frontend
+# ========
+# Enables the frontend to define themes
+# - https://www.home-assistant.io/integrations/frontend/#defining-themes
+frontend:
+  themes: !include themes/themes.yaml
+```
+
+###:octicons-checklist-24: Step 5: Add SAK examples dashboard
+The Swiss Army Knife examples have their own dashboard. This way using them doesn't interfere with you running installation. You can access the examples from the side panel.
+
+**:octicons-check-circle-16: Step 5a:**
 Add the external images used by the views to your configuration
 ```
 www/
@@ -202,23 +212,52 @@ www/
    └─ ic-face-6.svg
 ```
 
-###:octicons-checklist-24: Step 5: Add gonsboro theme if needed
+**:octicons-check-circle-16: Step 5b:**
+Add `sak-examples-dashboard.yaml` in the root folder and include it into your `configuration.yaml`:
 
-If you want to use the gonsboro theme, it should be included into your `themes.yaml` file in the themes folder:
-```yaml title="themes.yaml"
-NM - Gonsboro:
-  !include nm-01-gonsboro.yaml
-```
-
-And the `themes.yaml` file should be included into your Home Assistant config:
 ```yaml title="configuration.yaml"
-# frontend
-# ========
-# Enables the frontend to define themes
-# - https://www.home-assistant.io/integrations/frontend/#defining-themes
-frontend:
-  themes: !include themes/themes.yaml
+lovelace:
+  mode: yaml
+  resources: !include lovelace/resources/resources.yaml
+
+  dashboards:
+    sak-examples:
+      mode: yaml
+      filename: sak-examples-dashboard.yaml
+      title: Swiss Army Knife Examples
+      show_in_sidebar: true
 ```
 
+The dashboard contains the 8 example views:
+```yaml title="sak-examples-dashboard.yaml"
+# Decluttering Templates
+decluttering_templates:
+  !include lovelace/decluttering_templates/decluttering_templates.yaml
+
+# Swiss Army Knife Templates
+sak_templates:
+  !include lovelace/sak_templates/sak_templates.yaml
+
+title: Swiss Army Knife Examples
+views:
+
+  # Swiss Army Knife example views...
+  - !include lovelace/views/view-sake1.yaml
+  - !include lovelace/views/view-sake2.yaml
+  - !include lovelace/views/view-sake3.yaml
+  - !include lovelace/views/view-sake4.yaml
+  - !include lovelace/views/view-sake5.yaml
+  - !include lovelace/views/view-sake6.yaml
+  - !include lovelace/views/view-sake7.yaml
+  - !include lovelace/views/view-sake8.yaml
+```
+
+!!! Warning "The views themselves reference the `gonsboro` and `steelblue` themes, you can keep your existing theme"
+    You don't have to switch to the `gonsboro` or `steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
+
+**:octicons-check-circle-16: Step 5c:**
+Restart Home Assistant to have the dashboard installed
+
+!!! Info "Make sure to validate your config before you restart Home Assistant :smile:"
 ###:octicons-thumbsup-24: Step 6: You made it!
 Now test and use the SAK card...
