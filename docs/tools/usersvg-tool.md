@@ -81,7 +81,7 @@ The User SVG tool has support for the following forms of styling:
 | `classes`    | :material-check: | Using SAK or User defined class definitions  |
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
 
-The Text User SVG is composed of a single object: "usersvg" and this is the selector for styling:
+The User SVG tool is composed of a single object: "usersvg" and this is the selector for styling:
 ```yaml linenums="1"hl_lines="6 9"
 - type: 'usersvg'
   position:
@@ -111,6 +111,5 @@ The User SVG tool has support for the following forms of animations:
 
 !!! Info "The use of animations require the tool to be connected to an entity"
 
-
-
-
+##:sak-sak-logo: Detailed specification
+The basic usage shows all the functionalities of the User SVG tool.

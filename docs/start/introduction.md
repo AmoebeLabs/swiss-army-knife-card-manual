@@ -18,7 +18,7 @@ During the adaption of another custom card, the question "What if I would have t
 
 ##:sak-sak-logo: And then shit happened...
 
-The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans where good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.
+The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans were good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.
 
 At the time of that fatal message I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The Swiss Army Knife with all its tools was born!
 

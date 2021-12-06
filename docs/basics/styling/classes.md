@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 CSS Classes can be used to get uniform styling over multiple cards with minimal work.
 <br>More than one class can be enabled to be used for a tool.
 
@@ -20,7 +24,7 @@ SAK defines classes with default styling for all the existing tools.
 <br>These classes are defined in the `sak-css-definitions.yaml` file in the `sak_templates` folder.
 
 !!! Success "Default classes are automatically assigned to the tools"
-    There is no need for the user to specify these classes in the tools definition.
+    There is no need for the user to specify these classes in the tools configuration.
     
 !!! Warning "Don't change this file!"
     If you want to change the default definition, see the next chapter...
@@ -99,8 +103,6 @@ Example \#8, the Homekit alike cards use user defined classes to style the cards
         fill: var(--primary-text-color);
         font-weight: 700;
       }
-      
-
 ```
 And this looks like this in the example view, `view-sake8.yaml` file:
 
@@ -113,5 +115,4 @@ And this looks like this in the example view, `view-sake8.yaml` file:
   classes:
     name:
       homekit-name__name: true  # Use homekit class
-
 ```

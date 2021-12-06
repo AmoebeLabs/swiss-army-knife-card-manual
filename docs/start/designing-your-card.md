@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [sak-circles-background]: ../assets/screenshots/sak-circles-background.png
 [sak-circles-background-ad]: ../assets/screenshots/sak-circles-background-ad.png
 [sak-design-sketch-procreate]: ../assets/screenshots/sak-design-sketch-procreate.png
@@ -71,7 +75,7 @@ The server card took a lot of trial-and-error to get the 4 CPU/Load circles alig
 
 ![sak-example-7]
 
-The lights where much easier, as it involved much less parts:
+The lights were much easier, as it involved much less parts:
 
 ![sak-example-2]
 

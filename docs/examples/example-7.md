@@ -9,7 +9,7 @@ template: overrides/main.html
 ##:sak-sak-logo: Visualization
 Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running Home Assistant and another bunch of containers and a second server as a frontend for the ugly internet. This one is also running a bunch of docker containers.
 
-!!! Info "Both systems where 'loaded' before the screenshot was taken to show the different colorstops"
+!!! Info "Both systems were 'loaded' before the screenshot was taken to show the different colorstops"
     The default load of the NUC is around 3% and the frontend around 11%.
     
 ##:sak-sak-logo: Data sources

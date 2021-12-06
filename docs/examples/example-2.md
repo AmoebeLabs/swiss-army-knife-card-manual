@@ -176,4 +176,4 @@ The first row has an explicit "more-info" menu button and sliders for brightness
 ##:sak-sak-logo: Remarks
 
 - Home Assistant sends a brightness value between 0..255.
-<br>A little piece of javascript in the card converts this to 0..100% as a derived state, including a unit of measurement definition of "%". This means that the value and the uom can be styled as if it is an existing state.
+<br>A little piece of javascript in the card converts this to 0..100% as a derived state, including a unit of measurement setting of "%". This means that the value and the uom can be styled as if it is an existing state.

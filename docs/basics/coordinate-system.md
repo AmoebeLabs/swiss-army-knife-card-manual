@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 [sak-example-22t]: ../assets/screenshots/sak-example-22t.png
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 
@@ -34,7 +38,7 @@ The first toolset is placed at (40,50) on the card, and de second toolset at (16
 In a kind of 3D world, it looks like this:
 ![sak-card-toolset-tool-placement]
 
-The YAML definition is shown below. Here you see the toolsets (named set1 and set2) and the different tools: `circle`, `state` and `icon`. For brevity only the coordinates/sizes part is shown.
+The YAML configuration is shown below. Here you see the toolsets (named set1 and set2) and the different tools: `circle`, `state` and `icon`. For brevity only the coordinates/sizes part is shown.
 
 ```yaml linenums="1" hl_lines="6 11 17 22 29 34 40 45"
 aspectratio: 2/1              # Gives a 200x100 canvas size
@@ -91,7 +95,7 @@ layout:
 ```
 
 ##:sak-sak-logo: More indepth: Card aspect ratio and size
-Below you see the definition of a 1/1 square card which equals a grid size of 100x100.
+Below you see the configuration of a 1/1 square card which equals a grid size of 100x100.
 ```yaml
 - type: 'custom:swiss-army-knife-card'
   aspectratio: 1/1        # Square 1/1 card with resulting 100x100 grid size

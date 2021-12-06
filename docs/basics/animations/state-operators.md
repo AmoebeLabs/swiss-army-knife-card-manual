@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 State operators enable you to style a tool in a much more advanced way than is possible with colorstops.
 State operators can do more equations, and also use non numerical states.
 

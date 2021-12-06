@@ -68,7 +68,7 @@ It is by far the most complex tool. Was fun to make, and fairly unique.
       scale:
         min: -20                # Temperatures from -20 to +40
         max: 40
-        offset: -4.5
+        offset: -4.5            # Scale on inside of arc bar
       show:
         style: colorlist        # use single color colorlist
         scale: true             # show scale too
@@ -115,7 +115,7 @@ It is by far the most complex tool. Was fun to make, and fairly unique.
       scale:
         min: 15                 # Inside temperature
         max: 25
-        offset: -4.5
+        offset: -4.5            # Scale on inside of arc bar
       show:
         style: colorstops       # Use a colorstop
         lastcolor: true         # use last color to fill segments
@@ -192,3 +192,70 @@ The Segmented Arc tool 'foreground' part has support for the following forms of 
 | `animations` | :material-close: | Operator state based animations with class/style styling |
 
 
+
+##:sak-sak-logo: Detailed usage
+The `segarc` tool has some functionalities which haven't been explained yet in the above examples.
+
+###Scale placement
+The scale, if enabled through `show.scale: true` can be placed inside, on or on the outside of the arc.
+
+The `scale.offset` value is responsible for that functionality and works together with the `position.width` property.
+```yaml linenums="1" hl_lines="7 13"
+- type: 'segarc'            # tooltype is 'segarc'
+  position:                 # Position on (100x100) canvas
+    cx: 50                  # cx=50 is center position
+    cy: 50                  # cy=50 is center position
+    start_angle: -130       # start angle...
+    end_angle: 130          # .. --> Arc from left to right!
+    width: 7                # Width of arc 'bar'
+    radius: 45              # Size or arc radius
+  entity_index: 0           # connect to state of entity 0
+  scale:
+    min: -20                # Temperatures from -20 to +40
+    max: 40
+    offset: -4.5            # Scale on inside of arc bar
+  show:
+    style: colorlist        # use single color colorlist
+    scale: true             # show scale too
+  segments:
+    colorlist:
+      gap: 1                # gap between segments
+      colors:
+        - 'black'
+  styles:
+    background:
+      fill: grey
+```
+
+The math is as follows:
+
+- the arc bar `width` of the arc is `7`. As the math is from the center, we take `7/2 = 3.5` as the value to do the math with
+- the scale `offset` is `-4.5`. That is the offset from the center of the arc bar. A value of `-4.5` means on the inside.
+- As the `width` of the arc is `3.5` from the center, there is a 'gap' between the arc and the scale of `1`.
+
+If you want the scale to be on the outside of the arc bar, use a positive `offset` value.
+
+###Animation duration
+The arc uses a custom animation to draw the arc. The animation duration is default 5 seconds and can be configured as follows:
+
+```yaml linenums="1" hl_lines="3"
+- type: 'segarc'            # tooltype is 'segarc'
+  animation:
+    duration: 5             # Animation in seconds
+```
+
+###Gap between segments
+The `colorlist` or `colorstop` `show.style` determines the number of segments the arc has.
+
+The `gap` between the drawn segments can be configured using the `gap` property. The default is `1`.
+<br>Setting this to `0` removes the gap between the segments.
+
+```yaml linenums="1" hl_lines="3"
+  segments:
+    colorlist:
+      gap: 1                # gap between segments
+      colors:
+        - 'black'
+```
+!!! Warning "Don't make the gap larger than the size of a segment"
+    It may lead to unexpected results.

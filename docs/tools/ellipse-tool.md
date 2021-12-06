@@ -17,7 +17,7 @@ The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
-    - type: 'ellipse'            # tooltype is 'ellipse'
+    - type: 'ellipse'           # tooltype is 'ellipse'
       position:                 # Position on (100x100) canvas
         cx: 50                  # cx=50 is center position
         cy: 50                  # cy=50 is center position
@@ -26,7 +26,7 @@ The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
     ```
 === "Connected"
     ```yaml linenums="1" hl_lines="1"
-    - type: 'ellipse'            # tooltype is 'ellipse'
+    - type: 'ellipse'           # tooltype is 'ellipse'
       position:                 # Position on (100x100) canvas
         cx: 50                  # cx=50 is center position
         cy: 50                  # cy=50 is center position

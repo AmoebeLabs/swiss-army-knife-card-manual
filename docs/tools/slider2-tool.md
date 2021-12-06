@@ -46,8 +46,7 @@ The Slider2 tool is an input tool with configurable track, thumb and label posit
 ```
 
 ##:sak-sak-logo: Advanced usage
-The Slider2 tools parts can be defined/styled individually.  
-Below example is 'about' the definition of the example above.
+Below example is the configuration of the example above.
 
 === "Connected"
 ```yaml title="From: view-sake2 (1st row, 1st card)" linenums="1" hl_lines="1"

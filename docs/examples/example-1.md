@@ -20,7 +20,7 @@ This visualization is divided into three major blocks:
 
 3. The last block shows the 5 day weather forecast.
 
-    - The localized short day name using a bit of javascript in the YAML definition
+    - The localized short day name using a bit of javascript in the YAML configuration
     - The expected weather type using (again) external *animated* SVG's
     - The maximum expected temperature
     - The minimum expected temperature
@@ -102,4 +102,4 @@ To display the weather type, you need the external *animated* SVG's which are lo
 ##:sak-sak-logo: Remarks
 - 
 This view shows the dutch translation for "Partly Cloudy --> Gedeeltelijk bewolkt" and the wind direction "WSW --> WZW".
-> Support for translations is possible using a YAML definition.
+> Support for translations is possible using a YAML configuration.

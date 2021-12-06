@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 The Swiss Army Knife has built-in support for SVG and CSS styling.
 
 This support is aimed to re-use styles: SAK lets you define your own CSS classes, CSS Animations and SVG Filters as a template and re-use them in any SAK card you make.

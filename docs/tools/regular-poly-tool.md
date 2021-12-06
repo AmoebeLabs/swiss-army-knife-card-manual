@@ -9,7 +9,7 @@ template: overrides/main.html
 
 The Regular Polygon tool is a tool build on the [Shläfli symbol.](http://en.wikipedia.org/wiki/Schl%C3%A4fli_symbol)
 
-Regular polygons (all angles and all vertices equal) gallery. Both regular convex polygons and regular star polygons.
+It can build both regular convex polygons and regular star polygons. They have a mathematical background:
 
 - p is the number of vertices. They are all distributed evenly on a circle.
 - For q = 1, you connect each point to the next one on the circle (clockwise or counterclockwise, it doesn't matter).

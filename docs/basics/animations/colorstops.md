@@ -1,3 +1,7 @@
+---
+template: overrides/main.html
+---
+
 One way to style the color of a tool is using colorstops where the state of the entity is used to choose a color for the tool. Both the `fill` and `stroke` attributes can be painted.
 
 ##:sak-sak-logo: Basic usage
@@ -34,7 +38,7 @@ One way to style the color of a tool is using colorstops where the state of the 
 ```
 
 ##:sak-sak-logo: Ramblings
-There is a possibility that this definition will change to be able to have different colors for fill and stroke for instance.
+There is a possibility that this configuration will change to be able to have different colors for fill and stroke for instance.
 
 Currently, just a thought though :smile:
 
