@@ -231,6 +231,7 @@ lovelace:
       mode: yaml
       filename: sak-examples-dashboard.yaml
       title: Swiss Army Knife Examples
+      icon: mdi:hospital-box
       show_in_sidebar: true
 ```
 
