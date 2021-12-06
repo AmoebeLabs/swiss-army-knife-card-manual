@@ -6,8 +6,7 @@ site_url: https://swiss-army-knife.docs.amoebelabs.com/
 site_author: Marco
 site_description: >-
   The Swiss Army Knife custom card for Home Assistant lets you create
-  your own visualisation using plain YAML to define and style the
-  tools provided by this card
+  your own visualization given the tools and SVG/CSS styling options provided by this card
 
 # Repository
 repo_name: amoebelabs/swiss-army-knife
