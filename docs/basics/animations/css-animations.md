@@ -18,9 +18,9 @@ template: overrides/main.html
 
 ##:sak-sak-logo: Built-in animations
 
-SAK has a number of built-in animations. They are defined in the `sak-css-definitions.yaml` file as part of the `sak_templates.yaml` file.
+SAK has a number of built-in animations. They are defined in `sak-css-definitions.yaml` as part of `sak_templates.yaml`.
 
-Their name and what they do, you can see in the following table
+Their name and what they do are shown in the following table
 
 | SAK Built-in.. | ..CSS.. | ..Animations |
 | :-----: | :-----: | :-----: |
@@ -36,7 +36,7 @@ Their name and what they do, you can see in the following table
     I hope to fix this in the future by calculating the real center and correct this using the css `transform-origin` property.
     
 !!! Tip "Use animations sparingly"
-    You don't want your Home Assistant dashboard look like a website from the 90ies :smile: 
+    You don't want your Home Assistant dashboard look like a website from the 90ties :smile: 
     
 !!! Info "And yes, yes, yes, you can add you own CSS animations..."
-    Put them in the `user-css-definitions.yaml` file. That's the one you may change!
+    Put them in `user-css-definitions.yaml`. That's the one you may change!

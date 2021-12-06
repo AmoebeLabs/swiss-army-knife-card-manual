@@ -258,4 +258,4 @@ The `gap` between the drawn segments can be configured using the `gap` property.
         - 'black'
 ```
 !!! Warning "Don't make the gap larger than the size of a segment"
-    It may lead to unexpected results.
+    It may yield unexpected results.

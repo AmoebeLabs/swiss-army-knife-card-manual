@@ -98,8 +98,6 @@ Populair attributes:
 | `fill-opacity`  | Opacity for fill      | `fill-opacity: 0.5` sets the fill opacity to 50% |
 | `stroke-opacity`| Opacity for stroke    | `stroke-opacity: 0.5` sets the stroke opacity to 50% |
 
-Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
-
 ##:sak-sak-logo: Animations
 The RectEx tool has support for the following forms of animations:
 

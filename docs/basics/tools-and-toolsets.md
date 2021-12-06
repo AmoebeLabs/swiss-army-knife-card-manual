@@ -1,6 +1,8 @@
 ---
 template: overrides/main.html
 ---
+Tools and Toolsets are the main ingredient of the Swiss Army Knife custom card.
+<br>They provide the means to visualize Home Assistant data in a free and creative manner.
 
 ##:sak-sak-logo: Tools
 SAK offers a series of tools (17 at this moment) to create visualizations.
@@ -28,6 +30,7 @@ The tools are:
 | `bar`       | HA specific | Represents an simple state history (horizontal or vertical bars)|
 
 ##:sak-sak-logo: Toolsets
+Toolsets provide extra functionality to tools.
 
 ####Grouping of tools
 
@@ -36,12 +39,13 @@ Well, a 'set' already tells this: a Toolset is a container for a set of tools.
 ####Placement on card
 
 A Toolset provides a grid to place tools on, and can itself be placed on a card.
+<br>By this a Toolset separates the coordinates of a tool and a card it is placed on.
 
 ####Scaling
 
 Toolsets can scale the tools as a whole to 'fit' the card or required size.
 
-Server example ([example 7]) showing this scaling
+Server example ([example 7]) shows this scaling
   [sak-example-7]: ../assets/screenshots/sak-example-7.png
   [example 7]: ../examples/example-7.md
     
@@ -65,7 +69,7 @@ Example showing independent x/y scaling on the 3rd disc
 ??? Example "Example showing some rotating disc toolsets"
     ![sak-example-8t]
     
-!!! Warning "Rotating *can* have different results depending on the browser"    
+!!! Warning "Rotating *may* yield different results depending on the browser"    
     
 ####Styling
 

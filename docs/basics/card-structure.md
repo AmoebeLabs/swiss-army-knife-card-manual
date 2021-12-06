@@ -3,8 +3,9 @@ template: overrides/main.html
 ---
 
 ##:sak-sak-logo: The Swiss Army Knife YAML structure
+The main aspects of a SAK Card are shown below using yellow lines.
 
-```yaml linenums="1" hl_lines="5 7 19 26 31 37 51 53"
+```yaml linenums="1" hl_lines="5 7 19 26 31 37 51 53 57 61"
   # Define the type of the card to use.
   #
   # This is normally part of a "cards" section from a horizontal or vertical Lovelace stack
@@ -62,6 +63,10 @@ template: overrides/main.html
         # define list of tools within toolset
         #
         tools:
+          #
+          # define the tools
+          #
           - type: 'usersvg'
+          <...etc...>
             
 ```
