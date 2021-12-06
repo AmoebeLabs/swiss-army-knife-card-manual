@@ -1366,6 +1366,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> The Swiss Army Knife YAML structure<a class="headerlink" href="#the-swiss-army-knife-yaml-structure" title="Permanent link">&para;</a></h2>
+<p>The main aspects of a SAK Card are shown below using yellow lines.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1423,7 +1424,11 @@
 <span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
-<span class="normal">58</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># Define the type of the card to use.</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># Define the type of the card to use.</span>
   <span class="c1">#</span>
   <span class="c1"># This is normally part of a &quot;cards&quot; section from a horizontal or vertical Lovelace stack</span>
   <span class="c1"># -----</span>
@@ -1479,8 +1484,12 @@
 </span>        <span class="c1">#</span>
         <span class="c1"># define list of tools within toolset</span>
         <span class="c1">#</span>
-        <span class="nt">tools</span><span class="p">:</span>
-          <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;usersvg&#39;</span>
+<span class="hll">        <span class="nt">tools</span><span class="p">:</span>
+</span>          <span class="c1">#</span>
+          <span class="c1"># define the tools</span>
+          <span class="c1">#</span>
+<span class="hll">          <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;usersvg&#39;</span>
+</span>          <span class="l l-Scalar l-Scalar-Plain">&lt;...etc...&gt;</span>
 </code></pre></div>
 </td></tr></table>
 
