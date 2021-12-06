@@ -13,6 +13,4 @@ For this, SAK gives you 17 tools to visualize sensor data from Home Assistant an
 
 [![SAK Example Main]][SAK Example Main]
 
-  [SAK Example Main]: assets/screenshots/sak-double-example-v2.png
-  
-
+  [SAK Example Main]: assets/screenshots/sak-double-example-transparent-v2.png

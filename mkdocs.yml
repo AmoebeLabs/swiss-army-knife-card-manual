@@ -26,8 +26,13 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.expand
-    - navigation.top    
+    - navigation.top   
+    - search.suggest
+    - search.highlight
 
+plugins:
+  - search
+  
 extra_css:
   - overrides/assets/stylesheets/extra.css
   
