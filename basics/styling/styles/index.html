@@ -64,6 +64,13 @@
 
     
     
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="../../../overrides/assets/stylesheets/main.scss" -->
+  <!-- /> -->
+
   </head>
   
   
@@ -88,6 +95,18 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <a style="color:white;opacity:.9;" onmouseover="this.style.color='white';this.style.fontSize=''";" onmouseout="this.style.color='white';;this.style.fontSize=''">
+    <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
+  </a>
+
+
+          </div>
+        </aside>
       
     </div>
     
@@ -941,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/horseshoe-tool.md" class="md-nav__link">
+      <a href="../../../tools/horseshoe-tool/" class="md-nav__link">
         Horse Shoe
       </a>
     </li>
@@ -1451,7 +1470,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Overriding CSS Class styles<a class="headerlink" href="#overriding-css-class-styles" title="Permanent link">&para;</a></h2>
-<p>The next definition results in a circle with red stroke and blue fill. The stroke comes from the Class definition, and the fill from the class definition is overwritten by the style definition.</p>
+<p>The next configuration results in a circle with red stroke and blue fill. The stroke comes from the Class definition, and the fill from the class definition is overwritten by the style configuration.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1583,8 +1602,13 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
+  <!-- 
       <script src="../../../assets/javascripts/bundle.0885dc41.min.js"></script>
       
-    
+     -->
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <script src="../../../overrides/assets/javascripts/bundle.js"></script> -->
+
   </body>
 </html>

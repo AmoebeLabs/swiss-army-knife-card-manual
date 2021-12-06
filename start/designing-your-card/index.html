@@ -64,6 +64,13 @@
 
     
     
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="../../overrides/assets/stylesheets/main.scss" -->
+  <!-- /> -->
+
   </head>
   
   
@@ -88,6 +95,18 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <a style="color:white;opacity:.9;" onmouseover="this.style.color='white';this.style.fontSize=''";" onmouseout="this.style.color='white';;this.style.fontSize=''">
+    <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
+  </a>
+
+
+          </div>
+        </aside>
       
     </div>
     
@@ -998,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/horseshoe-tool.md" class="md-nav__link">
+      <a href="../../tools/horseshoe-tool/" class="md-nav__link">
         Horse Shoe
       </a>
     </li>
@@ -1625,7 +1644,7 @@
 <p>I then use this sketch as the basis to create the card. This took some guessing about coordinates and sizes. I use Notepad++ as editor to produce the YAML and after every "save" action, I hit F5 to refresh HA's view to check if I'm satisfied with the result. If not, rinse and repeat...</p>
 <p>The server card took a lot of trial-and-error to get the 4 CPU/Load circles aligned the way I wanted to:</p>
 <p><img alt="sak-example-7" src="../../assets/screenshots/sak-example-7.png" /></p>
-<p>The lights where much easier, as it involved much less parts:</p>
+<p>The lights were much easier, as it involved much less parts:</p>
 <p><img alt="sak-example-2" src="../../assets/screenshots/sak-example-2.png" /></p>
 <h3 id="the-professional-approach-using-an-app"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1810,8 +1829,13 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
     
     
+  <!-- 
       <script src="../../assets/javascripts/bundle.0885dc41.min.js"></script>
       
-    
+     -->
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <script src="../../overrides/assets/javascripts/bundle.js"></script> -->
+
   </body>
 </html>
