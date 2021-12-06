@@ -149,8 +149,14 @@ sak_templates:
 !!! Info "The supplied `sak_templates.yaml` file contains the templates for SAK."
     You don't have to change this file!
 
+###:octicons-thumbsup-24: You made it!
+If this is all you want, you're ready. If not, continue with the next paragraph for the **FULL** install.
+
 ##:sak-sak-logo: Full Install
 If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro theme in the examples.
+
+!!! Question "Did you complete the Minimal Install?"
+    If yes, continue...
 
 ###:octicons-checklist-24: Step 3: Add decluttering templates
 
@@ -170,7 +176,7 @@ Add the decluttering templates for SAK to your installation.
 
 !!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
     If you already use the decluttering card, merge the files.
-    
+
 ###:octicons-checklist-24: Step 4: Add `gonsboro` and `steelblue` theme
 
 Both themes are used by the examples, so include the themes into your `themes.yaml` file in the themes folder:
@@ -261,3 +267,5 @@ Restart Home Assistant to have the dashboard installed
 !!! Info "Make sure to validate your config before you restart Home Assistant :smile:"
 ###:octicons-thumbsup-24: Step 6: You made it!
 Now test and use the SAK card...
+
+!!! Note "If you have installed the examples, remember to replace my entities with yours!"
