@@ -532,8 +532,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-add-gonsboro-and-steelblue-theme" class="md-nav__link">
-     Step 2: Add gonsboro and steelblue theme
+  <a href="#step-2-add-themes" class="md-nav__link">
+     Step 2: Add themes
   </a>
   
 </li>
@@ -1527,8 +1527,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-add-gonsboro-and-steelblue-theme" class="md-nav__link">
-     Step 2: Add gonsboro and steelblue theme
+  <a href="#step-2-add-themes" class="md-nav__link">
+     Step 2: Add themes
   </a>
   
 </li>
@@ -1704,7 +1704,7 @@ If your structure differs, put the files into YOUR location, and don't forget to
 .
 └─ themes.yaml
 └─ nm-01-gonsboro.yaml
-└─ nm-02-steelblue.yaml
+└─ nm-03-dark-steelblue.yaml
 </code></pre></div>
 </div>
 </div>
@@ -1787,7 +1787,7 @@ Include sak_templates to <code>ui-lovelace.yaml</code></p>
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Examples dashboard install<a class="headerlink" href="#examples-dashboard-install" title="Permanent link">&para;</a></h2>
-<p>If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro and steelblue theme in the examples.</p>
+<p>If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used <code>gonsboro</code> and <code>dark steelblue</code> themes in the examples.</p>
 <div class="admonition hint">
 <p class="admonition-title">Check my folder structure to understand my setup</p>
 <p>So you can adapt it to yours if different.</p>
@@ -1809,12 +1809,12 @@ Add the decluttering templates for SAK to your installation.</p>
 <p class="admonition-title">The supplied <code>decluttering_templates.yaml</code> file contains the templates for SAK.</p>
 <p>If you already use the decluttering card, merge the files.</p>
 </div>
-<h3 id="step-2-add-gonsboro-and-steelblue-theme"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 3.75a.25.25 0 0 1 .25-.25h13.5a.25.25 0 0 1 .25.25v10a.75.75 0 0 0 1.5 0v-10A1.75 1.75 0 0 0 17.25 2H3.75A1.75 1.75 0 0 0 2 3.75v16.5c0 .966.784 1.75 1.75 1.75h7a.75.75 0 0 0 0-1.5h-7a.25.25 0 0 1-.25-.25V3.75z"/><path d="M6.25 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zm-.75 4.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75zm16.28 4.53a.75.75 0 1 0-1.06-1.06l-4.97 4.97-1.97-1.97a.75.75 0 1 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5.5-5.5z"/></svg></span> Step 2: Add <code>gonsboro</code> and <code>steelblue</code> theme<a class="headerlink" href="#step-2-add-gonsboro-and-steelblue-theme" title="Permanent link">&para;</a></h3>
+<h3 id="step-2-add-themes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 3.75a.25.25 0 0 1 .25-.25h13.5a.25.25 0 0 1 .25.25v10a.75.75 0 0 0 1.5 0v-10A1.75 1.75 0 0 0 17.25 2H3.75A1.75 1.75 0 0 0 2 3.75v16.5c0 .966.784 1.75 1.75 1.75h7a.75.75 0 0 0 0-1.5h-7a.25.25 0 0 1-.25-.25V3.75z"/><path d="M6.25 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zm-.75 4.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75zm16.28 4.53a.75.75 0 1 0-1.06-1.06l-4.97 4.97-1.97-1.97a.75.75 0 1 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5.5-5.5z"/></svg></span> Step 2: Add themes<a class="headerlink" href="#step-2-add-themes" title="Permanent link">&para;</a></h3>
 <p>Both themes are used by the examples, so include the themes into your <code>themes.yaml</code> file in the themes folder:
 <div class="highlight"><span class="filename">themes.yaml</span><pre><span></span><code><span class="nt">NM - Gonsboro</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">nm-01-gonsboro.yaml</span>
-<span class="nt">NM - Steelblue</span><span class="p">:</span>
-  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">nm-02-steelblue.yaml</span>
+<span class="nt">NM - Dark Steelblue</span><span class="p">:</span>
+  <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">nm-03-dark-steelblue.yaml</span>
 </code></pre></div></p>
 <p>And the <code>themes.yaml</code> file should (already) be included into your Home Assistant config:
 <div class="highlight"><span class="filename">configuration.yaml</span><pre><span></span><code><span class="c1"># frontend</span>
@@ -1879,8 +1879,8 @@ Add <code>sak-examples-dashboard.yaml</code> in the root folder and include it i
   <span class="p p-Indicator">-</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/views/view-sake8.yaml</span>
 </code></pre></div></p>
 <div class="admonition warning">
-<p class="admonition-title">The views themselves reference the <code>gonsboro</code> and <code>steelblue</code> themes, you can keep your existing theme</p>
-<p>You don't have to switch to the <code>gonsboro</code> or <code>steelblue</code> theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.</p>
+<p class="admonition-title">The views themselves reference the <code>gonsboro</code> and <code>dark steelblue</code> themes, you can keep your existing theme</p>
+<p>You don't have to switch to the <code>gonsboro</code> or <code>dark steelblue</code> theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.</p>
 </div>
 <p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z"/></svg></span> Step 3c:</strong>
 Restart Home Assistant to have the dashboard installed</p>
