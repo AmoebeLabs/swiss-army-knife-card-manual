@@ -108,9 +108,9 @@ The Entity Icon tool is composed of a single object: "bar" and this is the selec
     bar:                   # bar selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of text to 70% |

@@ -1,12 +1,18 @@
 ---
 template: overrides/main.html
 ---
+The installation can be done in two ways:
 
-##:sak-sak-logo: Install using HACS
+- automatic install using HACS
+- manual install
+
+On top of that you can install the examples using an extra dashboard.
+
+##:sak-sak-logo: Automatic install using HACS
 
 By the time this card is released, it will become available in HACS.
 
-##:sak-sak-logo: Manual installation (for Beta version)
+##:sak-sak-logo: Manual install (for Beta version)
 
 The beta version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
@@ -88,8 +94,6 @@ Below, as reference the folder structure I use
     └─ nm-02-steelblue.yaml
     ```
 
-##:sak-sak-logo: Minimal Install
-
 ###:octicons-checklist-24: Step 1: Add Swiss Army Knife Card to your installation
 The folder has a wip prefix and the card itself a dev prefix. These will be removed in the official release.
 This way they can't overwrite each other...
@@ -121,7 +125,7 @@ lovelace:
 !!! Warning "I have a YAML only config. Pleas adjust to your own configuration"
 
 ###:octicons-checklist-24: Step 2: Add Swiss Army Knife templates
-The second step is to add the `sak_templates`. These are mandatory for the SAK Card to function.
+The second step is to add the `sak_templates`. These are mandatory.
 
 **:octicons-check-circle-16: Step 2a:**
 Add the SAK templates to the `sak_templates` folder.
@@ -139,9 +143,9 @@ lovelace/
 ```
 
 **:octicons-check-circle-16: Step 2b:**
-Include sak_templates to lovelace.yaml
+Include sak_templates to `ui-lovelace.yaml`
 
-```yaml title="lovelace.yaml"
+```yaml title="ui-lovelace.yaml"
 # Swiss Army Knife Templates
 sak_templates:
   !include lovelace/sak_templates/sak_templates.yaml
@@ -150,34 +154,34 @@ sak_templates:
     You don't have to change this file!
 
 ###:octicons-thumbsup-24: You made it!
-If this is all you want, you're ready. If not, continue with the next paragraph for the **FULL** install.
+If this is all you want, you're ready to use the Swiss Army Knife card. If not, continue with the next paragraph for the example dashboard install.
 
-##:sak-sak-logo: Full Install
-If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro theme in the examples.
+##:sak-sak-logo: Examples dashboard install
+If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro and steelblue theme in the examples.
 
-!!! Question "Did you complete the Minimal Install?"
-    If yes, continue...
+!!! Hint "Check my folder structure to understand my setup"
+    So you can adapt it to yours if different.
+    
+###:octicons-checklist-24: Step 1: Add decluttering templates
 
-###:octicons-checklist-24: Step 3: Add decluttering templates
-
-**:octicons-check-circle-16: Step 3a:**
+**:octicons-check-circle-16: Step 1a:**
 
 !!! Warning "Install the decluttering card first, if you haven't installed it yet"
     Use HACS to install the decluttering card.
     
-Then you *should* have the following in your `lovelace.yaml` file:
-```yaml title="lovelace.yaml"
+Then you *should* have the following in your `ui-lovelace.yaml` file:
+```yaml title="ui-lovelace.yaml"
 # Decluttering Templates
 decluttering_templates:
   !include lovelace/decluttering_templates/decluttering_templates.yaml
 ```
-**:octicons-check-circle-16: Step 3b:**
+**:octicons-check-circle-16: Step 1b:**
 Add the decluttering templates for SAK to your installation.
 
 !!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
     If you already use the decluttering card, merge the files.
 
-###:octicons-checklist-24: Step 4: Add `gonsboro` and `steelblue` theme
+###:octicons-checklist-24: Step 2: Add `gonsboro` and `steelblue` theme
 
 Both themes are used by the examples, so include the themes into your `themes.yaml` file in the themes folder:
 ```yaml title="themes.yaml"
@@ -197,10 +201,10 @@ frontend:
   themes: !include themes/themes.yaml
 ```
 
-###:octicons-checklist-24: Step 5: Add SAK examples dashboard
+###:octicons-checklist-24: Step 3: Add SAK examples dashboard
 The Swiss Army Knife examples have their own dashboard. This way using them doesn't interfere with you running installation. You can access the examples from the side panel.
 
-**:octicons-check-circle-16: Step 5a:**
+**:octicons-check-circle-16: Step 3a:**
 Add the external images used by the views to your configuration
 ```
 www/
@@ -218,7 +222,7 @@ www/
    └─ ic-face-6.svg
 ```
 
-**:octicons-check-circle-16: Step 5b:**
+**:octicons-check-circle-16: Step 3b:**
 Add `sak-examples-dashboard.yaml` in the root folder and include it into your `configuration.yaml`:
 
 ```yaml title="configuration.yaml"
@@ -262,11 +266,16 @@ views:
 !!! Warning "The views themselves reference the `gonsboro` and `steelblue` themes, you can keep your existing theme"
     You don't have to switch to the `gonsboro` or `steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
 
-**:octicons-check-circle-16: Step 5c:**
+**:octicons-check-circle-16: Step 3c:**
 Restart Home Assistant to have the dashboard installed
 
 !!! Info "Make sure to validate your config before you restart Home Assistant :smile:"
-###:octicons-thumbsup-24: Step 6: You made it!
-Now test and use the SAK card...
 
-!!! Note "If you have installed the examples, remember to replace my entities with yours!"
+###:octicons-thumbsup-24: You made it again!
+Now enjoy the examples and don't forget that you have to replace my entities with yours to see the cards as intended!
+
+
+[sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
+![sak-example-dashboard][sak-example-dashboard]
+
+You see example 8 with its `gonsboro` theme, while the rest of the installation uses the `default` Home Assistant theme.

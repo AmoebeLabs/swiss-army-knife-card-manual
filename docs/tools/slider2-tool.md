@@ -143,9 +143,9 @@ The Slider2 tool is composed of three parts: "track", "thumb" and "label" can be
       <...>
 ```
 
-Populair attributes:
+Populair properties:
 
-| Attribute      | Does what?         | Example                                                 |
+| Property      | Does what?         | Example                                                 |
 | :------------- | :----------------- | :------------------------------------------------------ |
 
 ##:sak-sak-logo: Animations

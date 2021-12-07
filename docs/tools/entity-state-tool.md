@@ -157,9 +157,9 @@ The Entity State tool is composed of a two objects: "state" and "uom" as the sel
     uom:                     # state uom selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `font-size`     | Font size             | `font-size: 12em` sets RELATIVE font size |
 | `text-anchor`   | Anchor of text        | `text-anchor: start` or `middle`, or `end` |

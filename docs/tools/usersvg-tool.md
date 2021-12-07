@@ -94,9 +94,9 @@ The User SVG tool is composed of a single object: "usersvg" and this is the sele
     usersvg:                # Usersvg selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | TBD             | TBD                   | TBD |
 

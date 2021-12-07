@@ -55,9 +55,9 @@ The Entity Icon tool is composed of a single object: "icon" and this is the sele
     icon:                   # icon selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `color`         | Fill color            | `color: red` sets fill to color red |

@@ -33,9 +33,9 @@ The Horse Shoe is ...
 ```yaml linenums="1"hl_lines="10 13"
 - type: 'horseshoe'
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `stroke-width`  | Stroke width          | `stroke-width: 2em` sets width to relative width of 2em |

@@ -171,9 +171,9 @@ The Segmented Arc tool is composed of two objects: "foreground" and "background"
       <...>
 ```
 
-Populair attributes for both 'foreground' and 'background' selectors:
+Populair properties for both 'foreground' and 'background' selectors:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `stroke-width`  | Stroke width          | `stroke-width: 2em` sets width to relative width of 2em |

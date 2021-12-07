@@ -95,9 +95,9 @@ The Switch tool is composed of two parts: "track" and "thumb" can be used as the
       <...>
 ```
 
-Populair attributes:
+Populair properties:
 
-| Attribute      | Does what?         | Example                                                 |
+| Property      | Does what?         | Example                                                 |
 | :------------- | :----------------- | :------------------------------------------------------ |
 
 ##:sak-sak-logo: Animations

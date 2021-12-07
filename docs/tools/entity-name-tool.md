@@ -54,9 +54,9 @@ The Entity Name tool is composed of a single object: "text" and this is the sele
     name:                   # name selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `font-size`     | Font size             | `font-size: 12em` sets RELATIVE font size |
 | `text-anchor`   | Anchor of text        | `text-anchor: start` or `middle`, or `end` |

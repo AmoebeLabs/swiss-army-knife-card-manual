@@ -74,9 +74,9 @@ The Line tool is composed of a single object: "line" and this is the selector fo
       <...>
 ```
 
-Populair attributes:
+Populair properties:
 
-| Attribute      | Does what?         | Example                                                 |
+| Property      | Does what?         | Example                                                 |
 | :------------- | :----------------- | :------------------------------------------------------ |
 | `stroke-width` | Line width         | `stroke-width: 2em` sets width to relative width of 2em |
 | `stroke`       | Line color         | `stroke: red`                                           |

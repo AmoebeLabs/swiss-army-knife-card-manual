@@ -68,9 +68,9 @@ The Rectangle tool is composed of a single object: "rectangle" and this is the s
     rectangle:              # Rectangle selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `stroke-width`  | Stroke width          | `stroke-width: 2em` sets width to relative width of 2em |

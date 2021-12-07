@@ -101,9 +101,9 @@ The Regular Polygon tool is composed of a single object: "regpoly" and this is t
     regpoly:                # RegPoly selector
       <...>
 ```
-Populair attributes:
+Populair properties:
 
-| Attribute       | Does what?            | Example                                                 |
+| Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `stroke-width`  | Stroke width          | `stroke-width: 2em` sets width to relative width of 2em |
