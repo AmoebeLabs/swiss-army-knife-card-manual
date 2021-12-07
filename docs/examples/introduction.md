@@ -29,14 +29,14 @@ Some of them use SAK templates, some of them Decluttering templates, some both, 
 I have tested SAK - and thus the examples - on the following platforms:
 
 - Safari (mobile and desktop view) on iOS/iPadOS 14 & 15, iPhone & iPad
-- Chrome > 90.x on Windows 10, on my 10 year old Desktop :smile: 
+- Google Chrome > 90.x on Windows 10, on my 10 year old Desktop :smile: 
 
-So Android is not tested. According to Google, the Chrome engine on Android is the same as the one on the desktop, so that should work.
+By testing Chrome, I assume I validated all the Chromium based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium based browsers which I could not test as I don't have any Android devices.
 A quick view on a friends Samsung showed no problems, but that is no 100% guarantee of course.
 
-Due to the browser differences and long standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chrome.
+Due to the browser differences and long standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.
 
-One notable difference between the two is the (shadow) filter implementation of Safari. It works, but takes a small performance hit compared to Chrome, which has a much better and faster filter implementation. Safari users will therefore see a difference between a switch to a view with Neumorphic design and Flat design: the latter is faster.
+One notable difference between the two is the SVG filter implementation of Safari. It works, but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.
 
 ##:sak-sak-logo: Real world examples from my own installation
 
