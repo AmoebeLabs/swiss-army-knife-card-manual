@@ -91,7 +91,7 @@ Below, as reference the folder structure I use
     .
     └─ themes.yaml
     └─ nm-01-gonsboro.yaml
-    └─ nm-02-steelblue.yaml
+    └─ nm-03-dark-steelblue.yaml
     ```
 
 ###:octicons-checklist-24: Step 1: Add Swiss Army Knife Card to your installation
@@ -157,7 +157,7 @@ sak_templates:
 If this is all you want, you're ready to use the Swiss Army Knife card. If not, continue with the next paragraph for the example dashboard install.
 
 ##:sak-sak-logo: Examples dashboard install
-If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used gonsboro and steelblue theme in the examples.
+If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used `gonsboro` and `dark steelblue` themes in the examples.
 
 !!! Hint "Check my folder structure to understand my setup"
     So you can adapt it to yours if different.
@@ -181,14 +181,14 @@ Add the decluttering templates for SAK to your installation.
 !!! Info "The supplied `decluttering_templates.yaml` file contains the templates for SAK."
     If you already use the decluttering card, merge the files.
 
-###:octicons-checklist-24: Step 2: Add `gonsboro` and `steelblue` theme
+###:octicons-checklist-24: Step 2: Add themes
 
 Both themes are used by the examples, so include the themes into your `themes.yaml` file in the themes folder:
 ```yaml title="themes.yaml"
 NM - Gonsboro:
   !include nm-01-gonsboro.yaml
-NM - Steelblue:
-  !include nm-02-steelblue.yaml
+NM - Dark Steelblue:
+  !include nm-03-dark-steelblue.yaml
 ```
 
 And the `themes.yaml` file should (already) be included into your Home Assistant config:
@@ -263,8 +263,8 @@ views:
   - !include lovelace/views/view-sake8.yaml
 ```
 
-!!! Warning "The views themselves reference the `gonsboro` and `steelblue` themes, you can keep your existing theme"
-    You don't have to switch to the `gonsboro` or `steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
+!!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"
+    You don't have to switch to the `gonsboro` or `dark steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
 
 **:octicons-check-circle-16: Step 3c:**
 Restart Home Assistant to have the dashboard installed
