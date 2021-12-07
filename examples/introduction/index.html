@@ -1409,12 +1409,12 @@ The eight examples show in most cases more than one card, or more than one visua
 <p>I have tested SAK - and thus the examples - on the following platforms:</p>
 <ul>
 <li>Safari (mobile and desktop view) on iOS/iPadOS 14 &amp; 15, iPhone &amp; iPad</li>
-<li>Chrome &gt; 90.x on Windows 10, on my 10 year old Desktop <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </li>
+<li>Google Chrome &gt; 90.x on Windows 10, on my 10 year old Desktop <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </li>
 </ul>
-<p>So Android is not tested. According to Google, the Chrome engine on Android is the same as the one on the desktop, so that should work.
+<p>By testing Chrome, I assume I validated all the Chromium based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium based browsers which I could not test as I don't have any Android devices.
 A quick view on a friends Samsung showed no problems, but that is no 100% guarantee of course.</p>
-<p>Due to the browser differences and long standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chrome.</p>
-<p>One notable difference between the two is the (shadow) filter implementation of Safari. It works, but takes a small performance hit compared to Chrome, which has a much better and faster filter implementation. Safari users will therefore see a difference between a switch to a view with Neumorphic design and Flat design: the latter is faster.</p>
+<p>Due to the browser differences and long standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.</p>
+<p>One notable difference between the two is the SVG filter implementation of Safari. It works, but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a <em>switch</em> to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.</p>
 <h2 id="real-world-examples-from-my-own-installation"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
