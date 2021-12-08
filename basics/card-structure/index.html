@@ -1430,7 +1430,22 @@
 <span class="normal">59</span>
 <span class="normal">60</span>
 <span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># Define the type of the card to use.</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># Define the type of the card to use.</span>
   <span class="c1">#</span>
   <span class="c1"># This is normally part of a &quot;cards&quot; section from a horizontal or vertical Lovelace stack</span>
   <span class="c1"># -----</span>
@@ -1447,6 +1462,9 @@
   <span class="c1">#</span>
   <span class="c1"># Odd values like 1/0.05 are also possible. Size is 100x5</span>
   <span class="c1"># This is used for instance to just draw a line/separator</span>
+  <span class="c1">#</span>
+  <span class="c1"># Specification:</span>
+  <span class="c1"># - aspectratio (string)</span>
   <span class="c1"># -----</span>
 <span class="hll">  <span class="nt">aspectratio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1/1</span>
 </span>
@@ -1459,12 +1477,18 @@
 </span>
   <span class="c1">#</span>
   <span class="c1"># ***** card/layout section *****</span>
+  <span class="c1">#</span>
+  <span class="c1"># Specification:</span>
+  <span class="c1"># - layout (map)</span>
   <span class="c1"># -----</span>
 <span class="hll">  <span class="nt">layout</span><span class="p">:</span>
 </span>
     <span class="c1"># ***** card/layout/styles section *****</span>
     <span class="c1">#</span>
     <span class="c1"># Overall styles for the card and toolsets. Mainly used for defining filters!</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specification:</span>
+    <span class="c1"># - styles (map)</span>
     <span class="c1"># -----</span>
 <span class="hll">    <span class="nt">styles</span><span class="p">:</span>
 </span>      <span class="nt">card</span><span class="p">:</span>
@@ -1479,19 +1503,25 @@
     <span class="c1"># ***** card/layout/toolsets section *****</span>
     <span class="c1">#</span>
     <span class="c1"># Define the list of toolsets from here</span>
+    <span class="c1">#</span>
+    <span class="c1"># Specification:</span>
+    <span class="c1"># - toolsets (list of toolset configs)</span>
     <span class="c1"># -----</span>
 <span class="hll">    <span class="nt">toolsets</span><span class="p">:</span>
 </span>      <span class="c1"># define list of toolsets with its tools</span>
-<span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">background</span>
-</span>        <span class="c1">#</span>
+      <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">background</span>
+        <span class="c1">#</span>
         <span class="c1"># define list of tools within toolset</span>
+        <span class="c1">#</span>
+        <span class="c1"># Specification:</span>
+        <span class="c1"># - tools (list of tool configs)</span>
         <span class="c1">#</span>
 <span class="hll">        <span class="nt">tools</span><span class="p">:</span>
 </span>          <span class="c1">#</span>
           <span class="c1"># define the tools</span>
           <span class="c1">#</span>
-<span class="hll">          <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;usersvg&#39;</span>
-</span>          <span class="l l-Scalar l-Scalar-Plain">&lt;...etc...&gt;</span>
+          <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;usersvg&#39;</span>
+          <span class="l l-Scalar l-Scalar-Plain">&lt;...etc...&gt;</span>
 </code></pre></div>
 </td></tr></table>
 
