@@ -32,6 +32,22 @@ This visualization is divided into three major blocks:
 
 In total approx 50 entities are used to build this visualization.
 
+##:sak-sak-logo: How to make it work in your own installation
+
+###Required Home Assistant integrations
+The visualization is build on the `Met.no` and `Airvisual` entities, so you need these integrations:
+
+- [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
+- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+
+###Required entitiy id changes
+
+The `Airvisual` entities should be the same for any installation, so no changes required on that part.
+
+The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!
+
+!!! Info "Other weather integrations won't work, as they create different states and attributes"
+
 ##:sak-sak-logo: Configuration
 
 === "If you LOVE YAML"

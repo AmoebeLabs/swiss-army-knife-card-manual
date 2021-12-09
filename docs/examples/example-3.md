@@ -19,6 +19,14 @@ The card is build using the following tools:
 ##:sak-sak-logo: Data sources
 - Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 
+##:sak-sak-logo: How to make it work in your own installation
+
+###Required Home Assistant integrations
+The visualization is build on `temperature`, `humidity` and `pressure` entities. It does **not** depend on any specific integration.
+
+###Required entity id changes
+You can replace the existing `temperature`, `humidity` and `pressure` entities with any sensor entity. 
+
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view

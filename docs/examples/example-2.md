@@ -43,6 +43,15 @@ The other 4 - identical - cards show the light button, the area (Woonkamer = Liv
 - Ikea Tradfri Zigbee lights using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 - Dumb on/off lights using MQTT.
 
+##:sak-sak-logo: How to make it work in your own installation
+
+###Required Home Assistant integrations
+The visualization is build on light entities that have a on/off `state` and a `brightness`. It does **not** depend on any specific integration.
+Any entity from the `light` domain with these entity/attribute should work.
+
+###Required entity id changes
+Replace the `light` entities (`state` and `brightness` attribute) with your own entities.
+
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view
