@@ -5,8 +5,7 @@ template: overrides/main.html
 [line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # The Line tool
 [:octicons-tag-24: 1.0.0][line-tool support] ·
-:octicons-package-dependents-24: Output ·
-:octicons-tools-24: WIP
+:octicons-package-dependents-24: Output
 
 The Line tool is based on the SVG basic `<line>` element shape
 
@@ -17,38 +16,56 @@ The Line tool is based on the SVG basic `<line>` element shape
 ##:sak-sak-logo: Basic usage
 
 === "Standalone"
-    ```yaml linenums="1" hl_lines="1"
+    ```yaml title="Horizontal / Vertical config" linenums="1" hl_lines="1"
     - type: 'line'              # tooltype is 'line'
       position:                 # Position on (100x100) canvas
+        orientation: 'vertical' # Vertical, horizontal
         cx: 50                  # cx=50 is center position
         cy: 50                  # cy=50 is center position
         length: 25              # length of line.
-        orientation: 'vertical' # Vertical or horizontal
+      style:
+        line:
+          stroke-width: 2       # Set stroke width using CSS attribute
+    ```
+    ```yaml title="FromTo config" linenums="1" hl_lines="1"
+    - type: 'line'              # tooltype is 'line'
+      position:                 # Position on (100x100) canvas
+        orientation: 'fromto'   # fromto (x1,y1,x2,y2)
+        x1: 0                   # from: upperleft corner
+        y1: 0
+        x2: 100                 # to: lowerright corner
+        y2: 100
       style:
         line:
           stroke-width: 2       # Set stroke width using CSS attribute
     ```
 === "Connected"
-    ```yaml linenums="1" hl_lines="1 7"
+    ```yaml title="Horizontal / Vertical config" linenums="1" hl_lines="1 7"
     - type: 'line'              # tooltype is 'line'
       position:                 # Position on (100x100) canvas
+        orientation: 'vertical' # Vertical, horizontal or fromto
         cx: 50                  # cx=50 is center position
         cy: 50                  # cy=50 is center position
         length: 25              # length of line.
-        orientation: 'vertical' # Vertical or horizontal
       entity_index: 0           # connect to state of entity 0
       style:
         line:
           stroke-width: 2       # Set stroke width using CSS attribute
     ```
-
-!!! Tip "There will be future support for (x1,y1) and (x2,y2) coordinates to draw non vertical/horizontal lines"
-    Until then you can try the transform attribute to rotate the tool:
-    
-    - Use `transform: rotate(45deg)` for example to rotate the line by 45 degrees.
-    
-    Note however that this does not always give the expected results as the transform origin is not always the center of the tool, but the center of the toolset.
-    
+    ```yaml title="FromTo config" linenums="1" hl_lines="1 8"
+    - type: 'line'              # tooltype is 'line'
+      position:                 # Position on (100x100) canvas
+        orientation: 'fromto'   # fromto (x1,y1,x2,y2)
+        x1: 0                   # from: upperleft corner
+        y1: 0
+        x2: 100                 # to: lowerright corner
+        y2: 100
+      entity_index: 0           # connect to state of entity 0
+      style:
+        line:
+          stroke-width: 2       # Set stroke width using CSS attribute
+    ```
+   
 ##:sak-sak-logo: Styling
 The Line tool has support for the following forms of styling:
 
@@ -62,10 +79,10 @@ The Line tool is composed of a single object: "line" and this is the selector fo
 ```yaml linenums="1" hl_lines="8 11"
 - type: 'line'
   position:
+    orientation: 'vertical'
     cx: 50
     cy: 50
     length: 25
-    orientation: 'vertical'
   classes:
     line:                   # Line selector
       <...>

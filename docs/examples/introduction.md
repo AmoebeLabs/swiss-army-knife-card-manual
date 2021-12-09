@@ -20,8 +20,8 @@ The eight examples show in most cases more than one card, or more than one visua
 
 Some of them use SAK templates, some of them Decluttering templates, some both, and some none: they contain the full configuration in the view itself.
 
-!!! Info "All examples use the `NM - Gonsboro` theme. This one is included on Github."
-    Apart from the box-shadow for the cards, this theme also defines some color schemes used by the cards.
+!!! Info "All examples use their own theme defined in the view-sake*.yaml. Themes are included on Github."
+    Apart from the box-shadow for the cards, themes also define some color schemes used by the cards.
     
     Other themes might show black colors where theme colors are used.
     
@@ -39,6 +39,7 @@ Due to the browser differences and long standing bugs in Safari, some parts of S
 One notable difference between the two is the SVG filter implementation of Safari. It works, but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.
 
 ##:sak-sak-logo: Real world examples from my own installation
+All examples are real screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported and processed to a 1080x1080 pixels cutout.
 
 | An overview of all the examples | |
 | ------------ | ---------------- |

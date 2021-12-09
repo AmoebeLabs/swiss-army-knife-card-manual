@@ -33,6 +33,24 @@ The Slider2 tool is an input tool with configurable track, thumb and label posit
   </g>
 </svg>
 
+<svg viewBox="-200 75 450 75" width="400px" xmlns="http://www.w3.org/2000/svg" overflow="visible" pointer-events="all" id="rangeslider-qzbh29328">
+  <defs>
+    <linearGradient id="light-color-temperature-gradient" x1="1" x2="0">
+      <stop stop-color="#ffa000"/>
+      <stop offset=".5" stop-color="#fff"/>
+      <stop offset="1" stop-color="#a6d1ff"/>
+    </linearGradient>
+  </defs>
+  <rect id="rs-track" class="sak-slider__track" x="-180" y="116" width="360" height="16" rx="8" style="fill: url(#light-color-temperature-gradient); fill-opacity: 1; stroke-width: 0.1em; stroke: white;"></rect>
+    <g id="rs-thumb-group" x="-10" y="114" style="transform: translate(64px, 0px);">
+      <rect id="rs-thumb" class="sak-slider__thumb" x="-10" y="114" width="20" height="20" rx="10" style="stroke-width: 0.3em; stroke: var(--md-primary-bg-color); stroke-opacity: 1; fill: var(--md-primary-fg-color); fill-opacity: 0.8;"></rect>
+    </g>
+</svg>
+
+!!! Info "The slider2 can possibly also be configured as as output in the future..."
+    And used as a very compact sort of "gauge", if you look at the second example with in this case a (light) color temperature gradient fill on the track.
+    Adding colorlist or colorstop functionality would be a nice feature too!
+    
 ##:sak-sak-logo: Basic usage
 
 === "Connected"

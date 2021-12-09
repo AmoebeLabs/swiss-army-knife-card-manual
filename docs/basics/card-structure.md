@@ -5,7 +5,7 @@ template: overrides/main.html
 ##:sak-sak-logo: The Swiss Army Knife YAML structure
 The main aspects of a SAK Card are shown below using yellow lines.
 
-```yaml linenums="1" hl_lines="5 7 19 26 31 37 51 53 57 61"
+```yaml linenums="1" hl_lines="5 7 22 29 37 46 63 72"
   # Define the type of the card to use.
   #
   # This is normally part of a "cards" section from a horizontal or vertical Lovelace stack
@@ -23,6 +23,9 @@ The main aspects of a SAK Card are shown below using yellow lines.
   #
   # Odd values like 1/0.05 are also possible. Size is 100x5
   # This is used for instance to just draw a line/separator
+  #
+  # Specification:
+  # - aspectratio (string)
   # -----
   aspectratio: 1/1
 
@@ -35,12 +38,18 @@ The main aspects of a SAK Card are shown below using yellow lines.
 
   #
   # ***** card/layout section *****
+  #
+  # Specification:
+  # - layout (map)
   # -----
   layout:
 
     # ***** card/layout/styles section *****
     #
     # Overall styles for the card and toolsets. Mainly used for defining filters!
+    #
+    # Specification:
+    # - styles (map)
     # -----
     styles:
       card:
@@ -55,12 +64,18 @@ The main aspects of a SAK Card are shown below using yellow lines.
     # ***** card/layout/toolsets section *****
     #
     # Define the list of toolsets from here
+    #
+    # Specification:
+    # - toolsets (list of toolset configs)
     # -----
     toolsets:
       # define list of toolsets with its tools
       - toolset: background
         #
         # define list of tools within toolset
+        #
+        # Specification:
+        # - tools (list of tool configs)
         #
         tools:
           #
