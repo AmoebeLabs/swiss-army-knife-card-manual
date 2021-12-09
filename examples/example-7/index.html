@@ -1272,6 +1272,69 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-to-make-it-work-in-your-own-installation" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ How to make it work in your own installation
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ How to make it work in your own installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-home-assistant-integrations" class="md-nav__link">
+    Required Home Assistant integrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Home Assistant integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-the-hestia-server-card" class="md-nav__link">
+    For the Hestia server card:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-for-the-poseidonserver-card" class="md-nav__link">
+    And for the Poseidonserver card:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-sensor-id-changes" class="md-nav__link">
+    Required sensor id changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     
 
@@ -1431,6 +1494,69 @@
 
  Data sources
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-it-work-in-your-own-installation" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ How to make it work in your own installation
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ How to make it work in your own installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-home-assistant-integrations" class="md-nav__link">
+    Required Home Assistant integrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Home Assistant integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-the-hestia-server-card" class="md-nav__link">
+    For the Hestia server card:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-for-the-poseidonserver-card" class="md-nav__link">
+    And for the Poseidonserver card:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-sensor-id-changes" class="md-nav__link">
+    Required sensor id changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1598,8 +1724,158 @@
 <li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
 <li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
 </ul>
+<p>Below the <code>sensor:</code> configuration for the System Monitor and extra Glances RESTful sensors:</p>
+<p><table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">System Monitor sensors</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># System Monitor</span>
+<span class="c1"># ==============</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/systemmonitor/</span>
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">systemmonitor</span>
+    <span class="nt">resources</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_use_percent</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_use</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_free</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_free</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_use</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_use_percent</span>    
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_1m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_5m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_15m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">processor_use</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">last_boot</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Extra Glances sensors</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># REStful stuff, Glances for instance</span>
+<span class="c1"># ===================================</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/rest/</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/sensor.rest/</span>
+<span class="c1">#</span>
+<span class="c1"># Get Load sensors from Glances directly. The integration does not give them...</span>
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rest</span>
+    <span class="nt">resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://poseidon.srv.home:61208/api/3/load</span>
+    <span class="nt">scan_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">glances_poseidon_load</span>
+    <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">value_json}}&quot;</span>
+    <span class="nt">json_attributes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min1</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min5</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min15</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cpucore</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">template</span>
+    <span class="nt">sensors</span><span class="p">:</span>
+      <span class="nt">glances_poseidon_load_min1</span><span class="p">:</span>
+        <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">state_attr(&#39;sensor.glances_poseidon_load&#39;,</span><span class="nv"> </span><span class="s">&#39;min1&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="nt">friendly_name</span><span class="p">:</span> <span class="s">&quot;Glances-Poseidon</span><span class="nv"> </span><span class="s">Load</span><span class="nv"> </span><span class="s">1min&quot;</span>
+        <span class="nt">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;1m&quot;</span>
+      <span class="nt">glances_poseidon_load_min5</span><span class="p">:</span>
+        <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">state_attr(&#39;sensor.glances_poseidon_load&#39;,</span><span class="nv"> </span><span class="s">&#39;min5&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="nt">friendly_name</span><span class="p">:</span> <span class="s">&quot;Glances-Poseidon</span><span class="nv"> </span><span class="s">Load</span><span class="nv"> </span><span class="s">5min&quot;</span>
+        <span class="nt">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;5m&quot;</span>
+      <span class="nt">glances_poseidon_load_min15</span><span class="p">:</span>
+        <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">state_attr(&#39;sensor.glances_poseidon_load&#39;,</span><span class="nv"> </span><span class="s">&#39;min15&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="nt">friendly_name</span><span class="p">:</span> <span class="s">&quot;Glances-Poseidon</span><span class="nv"> </span><span class="s">Load</span><span class="nv"> </span><span class="s">15min&quot;</span>
+        <span class="nt">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;15m&quot;</span>
+</code></pre></div>
+</td></tr></table></p>
 <div class="admonition info">
 <p class="admonition-title">The top card uses the system monitor integration, the bottom card the Glances and RESTful sensor integration</p>
+</div>
+<h2 id="how-to-make-it-work-in-your-own-installation"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
+<h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
+<p>The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:</p>
+<h4 id="for-the-hestia-server-card">For the <code>Hestia</code> server card:<a class="headerlink" href="#for-the-hestia-server-card" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></li>
+</ul>
+<h4 id="and-for-the-poseidonserver-card">And for the <code>Poseidon</code>server card:<a class="headerlink" href="#and-for-the-poseidonserver-card" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
+</ul>
+<h3 id="required-sensor-id-changes">Required sensor id changes<a class="headerlink" href="#required-sensor-id-changes" title="Permanent link">&para;</a></h3>
+<p>The <code>System Monitor</code> entities should be the same for any installation, so no changes required on that part.</p>
+<p>The <code>Glances</code> integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
+My integration is called <code>Glances-Poseidon</code> and thus the entities for instance <code>sensor.glances_poseidon_cpu_load</code>. You have to change the entities to your own entity id's.</p>
+<div class="admonition info">
+<p class="admonition-title">If you have only 1 server, remove the second server...</p>
 </div>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
