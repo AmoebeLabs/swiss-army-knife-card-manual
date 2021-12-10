@@ -41,6 +41,8 @@ One notable difference between the two is the SVG filter implementation of Safar
 ##:sak-sak-logo: Real world examples from my own installation
 All examples are real screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported and processed to a 1080x1080 pixels cutout.
 
+Many examples use the `Met.no` weather and `Airvisual` integrations. Each example also describes what you should change to make the examples work in your own installation. The above integrations are in most cases required to make things work.
+
 | An overview of all the examples | |
 | ------------ | ---------------- |
 | **[Example 1]:** ![sak-example-1b] | **[Example 2]:** ![sak-example-2] |
@@ -56,6 +58,7 @@ All examples are real screenshots of my iPhone, which are then added to an iPhon
   [Example 6]: ../examples/example-6.md
   [Example 7]: ../examples/example-7.md
   [Example 8]: ../examples/example-8.md
+
 
 | And some gifs to show the animations| |
 | ---------------- | ---------------- |
