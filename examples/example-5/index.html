@@ -1281,6 +1281,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alternative-entities" class="md-nav__link">
+    Alternative entities
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1515,6 +1522,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alternative-entities" class="md-nav__link">
+    Alternative entities
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1709,16 +1723,17 @@
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
 <h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p>The visualization is build on the Met.no and Airvisual sensors, so you need these integrations:</p>
+<p>The visualization is build on the Met.no, so you need these integrations:</p>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/met/">Met.no Weather integration</a></li>
 </ul>
 <h3 id="required-entity-id-changes">Required entity id changes<a class="headerlink" href="#required-entity-id-changes" title="Permanent link">&para;</a></h3>
-<p>The <code>Airvisual</code> entities should be the same for any installation, so no changes required on that part.</p>
 <p>The <code>Met.no</code> integration creates the <code>weather.changeme</code> entity. Adapt the <code>changeme</code> part to your own installation!</p>
 <div class="admonition info">
 <p class="admonition-title">Other weather integrations won't work, as they create different states and attributes</p>
 </div>
+<h3 id="alternative-entities">Alternative entities<a class="headerlink" href="#alternative-entities" title="Permanent link">&para;</a></h3>
+<p>You can also replace the <code>humidity</code>, <code>temperature</code> and <code>pressure</code> weather entities with other <code>humidity</code>, <code>temperature</code> and <code>pressure</code> entities from other integrations. An Aqara Zigbee device could be used for instance as the source.</p>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
