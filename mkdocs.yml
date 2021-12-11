@@ -147,4 +147,5 @@ nav:
     - 8. Homekit alike: examples/example-8.md
   - Helpers:
     - Introduction: helpers/introduction.md
-    - Gradient converter: helpers/css-svg-gradient-converter.md
+    - Pallette generators: helpers/palette-generators.md
+    - Gradient generator / converter: helpers/gradient-generator-converter.md
