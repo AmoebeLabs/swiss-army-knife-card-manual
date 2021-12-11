@@ -116,12 +116,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife.docs.amoebelabs.com/helpers/css-svg-gradient-converter/</loc>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/helpers/gradient-generator-converter/</loc>
          <lastmod>2021-12-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiss-army-knife.docs.amoebelabs.com/helpers/introduction/</loc>
+         <lastmod>2021-12-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/helpers/palette-generators/</loc>
          <lastmod>2021-12-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
