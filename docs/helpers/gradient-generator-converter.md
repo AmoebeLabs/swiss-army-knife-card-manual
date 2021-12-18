@@ -66,11 +66,11 @@ And the radial gradient result we need would be:
 ```yaml
   - descr radial-gradient
     content: |
-      <linearGradient id="radial-gradient" x1="1" x2="0">
+      <radialGradient id="radial-gradient" x1="1" x2="0">
         <stop stop-color="#ffa000"/>
         <stop offset=".5" stop-color="#fff"/>
         <stop offset="1" stop-color="#a6d1ff"/>
-      </linearGradient>
+      </radialGradient>
 
 ```
 

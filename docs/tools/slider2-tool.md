@@ -9,7 +9,6 @@ template: overrides/main.html
 :octicons-package-dependencies-24: Input ·
 :octicons-beaker-24: Experimental ·
 :octicons-tools-24: WIP ·
-:octicons-bug-24: Known Bugs
 
 The Slider2 tool is an input tool with configurable track, thumb and label position and styling.
 
@@ -47,8 +46,8 @@ The Slider2 tool is an input tool with configurable track, thumb and label posit
     </g>
 </svg>
 
-!!! Info "The slider2 can possibly also be configured as as output in the future..."
-    And used as a very compact sort of "gauge", if you look at the second example with in this case a (light) color temperature gradient fill on the track.
+!!! Info "The slider2 can possibly also be configured as state value output in the future..."
+    And used as a very compact sort of "gauge", if you look at the second example with in this case a (for lights) color temperature gradient fill on the track.
     Adding colorlist or colorstop functionality would be a nice feature too!
     
 ##:sak-sak-logo: Basic usage
@@ -138,8 +137,8 @@ The Slider2 tool has support for the following forms of styling:
 | `styles`     | :material-check: | Using inslider2 SVG and CSS styles |
 
 
-The Slider2 tool is composed of three parts: "track", "thumb" and "label" can be used as the selector for styling:
-```yaml linenums="1" hl_lines="7 9 11 14 16 18"
+The Slider2 tool is composed of three parts: "track", "thumb" and "label" + "uom" can be used as the selector for styling:
+```yaml linenums="1" hl_lines="7 9 11 13 16 18 20 22"
 - type: 'slider2'
   position:
     cx: 50
@@ -152,12 +151,16 @@ The Slider2 tool is composed of three parts: "track", "thumb" and "label" can be
       <...>
     label:                    # Label selector
       <...>
+    uom:                      # Unit of label selector
+      <...>
   styles:
     track:                    # Track selector
       <...>
     thumb:                    # Thumb selector
       <...>
     label:                    # Label selector
+      <...>
+    uom:                      # Unit of label selector
       <...>
 ```
 
