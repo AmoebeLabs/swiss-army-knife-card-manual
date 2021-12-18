@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/examples/example-10/</loc>
+         <lastmod>2021-12-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://swiss-army-knife.docs.amoebelabs.com/examples/example-2/</loc>
          <lastmod>2021-12-18</lastmod>
          <changefreq>daily</changefreq>
@@ -107,6 +112,11 @@
     </url>
     <url>
          <loc>https://swiss-army-knife.docs.amoebelabs.com/examples/example-8/</loc>
+         <lastmod>2021-12-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/examples/example-9/</loc>
          <lastmod>2021-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
