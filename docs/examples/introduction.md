@@ -10,6 +10,8 @@ template: overrides/main.html
 [sak-example-6]: ../assets/screenshots/sak-example-6.png
 [sak-example-7]: ../assets/screenshots/sak-example-7.png
 [sak-example-8]: ../assets/screenshots/sak-example-8.png
+[sak-example-9]: ../assets/screenshots/sak-example-9.png
+[sak-example-10]: ../assets/screenshots/sak-example-10.png
 
 [sak-example-2gif]: ../assets/screenshots/sak-example-2.gif
 [sak-example-6gif]: ../assets/screenshots/sak-example-6.gif
@@ -49,6 +51,7 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
 | **[Example 3]:** ![sak-example-3]  | **[Example 4]:** ![sak-example-4] |
 | **[Example 5]:** ![sak-example-5]  | **[Example 6]:** ![sak-example-6] |
 | **[Example 7]:** ![sak-example-7]  | **[Example 8]:** ![sak-example-8] |
+| **[Example 9]:** ![sak-example-9]  | **[Example 10]:** ![sak-example-10] |
 
   [Example 1]: ../examples/example-1.md
   [Example 2]: ../examples/example-2.md
@@ -58,6 +61,8 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
   [Example 6]: ../examples/example-6.md
   [Example 7]: ../examples/example-7.md
   [Example 8]: ../examples/example-8.md
+  [Example 9]: ../examples/example-9.md
+  [Example 10]: ../examples/example-10.md
 
 
 | And some gifs to show the animations| |
