@@ -1597,8 +1597,8 @@
     </g>
 </svg></p>
 <div class="admonition info">
-<p class="admonition-title">The slider2 can possibly also be configured as as output in the future...</p>
-<p>And used as a very compact sort of "gauge", if you look at the second example with in this case a (light) color temperature gradient fill on the track.
+<p class="admonition-title">The slider2 can possibly also be configured as state value output in the future...</p>
+<p>And used as a very compact sort of "gauge", if you look at the second example with in this case a (for lights) color temperature gradient fill on the track.
 Adding colorlist or colorstop functionality would be a nice feature too!</p>
 </div>
 <h2 id="basic-usage"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
@@ -1852,7 +1852,7 @@ Adding colorlist or colorstop functionality would be a nice feature too!</p>
 </tr>
 </tbody>
 </table>
-<p>The Slider2 tool is composed of three parts: "track", "thumb" and "label" can be used as the selector for styling:
+<p>The Slider2 tool is composed of three parts: "track", "thumb" and "label" + "uom" can be used as the selector for styling:
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1871,7 +1871,11 @@ Adding colorlist or colorstop functionality would be a nice feature too!</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;slider2&#39;</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;slider2&#39;</span>
   <span class="nt">position</span><span class="p">:</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
@@ -1883,12 +1887,16 @@ Adding colorlist or colorstop functionality would be a nice feature too!</p>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
 <span class="hll">    <span class="nt">label</span><span class="p">:</span>                    <span class="c1"># Label selector</span>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+<span class="hll">    <span class="nt">uom</span><span class="p">:</span>                      <span class="c1"># Unit of label selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
   <span class="nt">styles</span><span class="p">:</span>
 <span class="hll">    <span class="nt">track</span><span class="p">:</span>                    <span class="c1"># Track selector</span>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
 <span class="hll">    <span class="nt">thumb</span><span class="p">:</span>                    <span class="c1"># Thumb selector</span>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
 <span class="hll">    <span class="nt">label</span><span class="p">:</span>                    <span class="c1"># Label selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+<span class="hll">    <span class="nt">uom</span><span class="p">:</span>                      <span class="c1"># Unit of label selector</span>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
 </code></pre></div>
 </td></tr></table></p>
