@@ -7,7 +7,7 @@ template: overrides/main.html
   [SAK Example]: ../assets/screenshots/sak-example-10.png
 
 ##:sak-sak-logo: Visualization
-Inside 'weather', occupancy, airvisual and some Light switching square cards with state, icon, history, segmented arc and card animations.
+Inside environment sensors, occupancy, airvisual and some Light switching square cards with state, icon, history, segmented arc and card animations.
 
 !!! Info "Cards 1, 2 and 3 use a similar design whith small variations in the state bar (top of card), thickness of segemented arc and history bars."
 

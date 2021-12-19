@@ -10,7 +10,7 @@ template: overrides/main.html
 
 This viz shows some high contrast examples. Not the nicest design, but that's related to high contrast.
 
-Vis shows inside 'weather', occupancy, airvisual and some Light switching square cards with state, icon, history, segmented arc and card animations.
+Vis shows inside environment, occupancy, airvisual and some Light switching square cards with state, icon, history, segmented arc and card animations.
 
 ##:sak-sak-logo: Data sources
 - First row: Aqara temperature, humidity and pressure sensor using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
