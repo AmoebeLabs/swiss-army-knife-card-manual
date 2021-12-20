@@ -630,6 +630,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#another-example-derived_entity-template" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Another example: derived_entity template
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1557,6 +1572,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#another-example-derived_entity-template" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Another example: derived_entity template
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1637,7 +1667,7 @@
 </svg>
 </span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>Templates have been created to enable re-use of various parts of the SAK Card's YAML config.</p>
-<p>Templates nog only cover toolsets, but also things like colorstops.</p>
+<p>Templates not only cover toolsets, but also things like colorstops.</p>
 <div class="admonition question">
 <p class="admonition-title">Every part of the cards config could be converted to a template</p>
 <p>Well, at least that is the intention. It hasn't been tested though!</p>
@@ -1684,6 +1714,7 @@
 <ul>
 <li>it shows the name of the template to use</li>
 <li>it shows the variables to pass to the template</li>
+<li>and last but not least: the <code>type</code> of the template <strong>MUST</strong> match the part it is replacing. In this case a toolset.</li>
 </ul>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1693,11 +1724,11 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>
-  <span class="c1"># Use pre-defined template for this part.</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>               <span class="c1"># template type be of type &quot;toolset&quot;</span>
+</span>  <span class="c1"># Use pre-defined template for this part.</span>
   <span class="c1"># Template has variables.</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span>
+</span>    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
     <span class="nt">variables</span><span class="p">:</span>                  <span class="c1"># Pass the list of variables</span>
       <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>               <span class="c1"># - entity id</span>
       <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>                <span class="c1"># - center x position</span>
@@ -1706,8 +1737,8 @@
 </td></tr></table>
 <p>Below the partial config:</p>
 <ul>
-<li>the first 5 lines define the template part of the config</li>
-<li>from line 6, the toolset itself is defined. Identical to any inline toolset config.</li>
+<li>the first 7 lines define the template part of the config</li>
+<li>from line 8, the toolset itself is defined. Identical to any inline toolset config.</li>
 </ul>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1741,22 +1772,22 @@
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">template</span><span class="p">:</span>
-</span>  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset</span>
+</span>  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset</span>                   <span class="c1"># type MUST equal tag</span>
   <span class="nt">defaults</span><span class="p">:</span>                       <span class="c1"># Default values for vars</span>
     <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
     <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
-<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
-</span>    <span class="p p-Indicator">-</span> <span class="nt">show_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="nt">toolset</span><span class="p">:</span>                          <span class="c1"># From here the toolset is defined!</span>
-  <span class="nt">from_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>             <span class="c1"># Debug, ignore</span>
+    <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="p p-Indicator">-</span> <span class="nt">show_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="hll"><span class="nt">toolset</span><span class="p">:</span>                          <span class="c1"># From here the toolset is defined!</span>
+</span>  <span class="nt">from_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>             <span class="c1"># Debug, ignore</span>
   <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc-icon-state</span>      <span class="c1"># Debug, ignore</span>
   <span class="nt">position</span><span class="p">:</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="s">&#39;[[cx]]&#39;</span>                  <span class="c1"># Templated var!!</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="s">&#39;[[cy]]&#39;</span>                  <span class="c1"># Templated var!!</span>
     <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
   <span class="nt">tools</span><span class="p">:</span>
-<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
-</span>      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                       <span class="c1"># Unique id within tools config</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                       <span class="c1"># Unique id within tools config</span>
       <span class="nt">entity_index</span><span class="p">:</span> <span class="s">&#39;[[entity]]&#39;</span>  <span class="c1"># Templated var!!</span>
       <span class="nt">position</span><span class="p">:</span>
         <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
@@ -1767,8 +1798,8 @@
         <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
       <span class="nt">scale</span><span class="p">:</span>
         <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-<span class="hll">        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-</span>      <span class="nt">show</span><span class="p">:</span>
+        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+      <span class="nt">show</span><span class="p">:</span>
         <span class="nt">scale</span><span class="p">:</span> <span class="s">&#39;[[show_scale]]&#39;</span>   <span class="c1"># Templated var!!</span>
         <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
   <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>                           <span class="c1"># rest of config removed for brevity</span>
@@ -1804,7 +1835,7 @@
 </svg>
 </span> An example: colorstop<a class="headerlink" href="#an-example-colorstop" title="Permanent link">&para;</a></h3>
 <p>Say you want some consistency for the cards that show the inside temperature colors.</p>
-<p>You define a colorstop template, and after that use that in several cards/tools. </p>
+<p>You define a colorstops template, and after that use that in several cards/tools. </p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1841,14 +1872,18 @@
   <span class="nt">show</span><span class="p">:</span>
     <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>       <span class="c1"># Use a colorstop</span>
   <span class="nt">segments</span><span class="p">:</span>
-    <span class="nt">colorstops</span><span class="p">:</span>
-<span class="hll">      <span class="nt">template</span><span class="p">:</span>             <span class="c1"># Use template colorstop (re-use!)</span>
+    <span class="nt">colorstops</span><span class="p">:</span>             <span class="c1"># The colorstops map is replaced</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span>             <span class="c1"># Use template colorstops (re-use!)</span>
 </span><span class="hll">        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops_temperature_inside</span>
 </span><span class="hll">        <span class="nt">variables</span><span class="p">:</span>          <span class="c1"># Pass variables to template</span>
 </span><span class="hll">          <span class="p p-Indicator">-</span> <span class="nt">thegap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 </td></tr></table>
 <p>The template is defined in <code>sak_templates.yaml</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Notice again the template <code>type</code> that matches the part it replaces!</p>
+<p>The template <code>type</code> on line 3 must match line 6 in the template.</p>
+</div>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1861,15 +1896,211 @@
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">colorstops_temperature_inside</span><span class="p">:</span>
 </span>  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>
-    <span class="nt">defaults</span><span class="p">:</span>               <span class="c1"># Give vars a default value</span>
+<span class="hll">    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>        <span class="c1"># MUST reference colorstops</span>
+</span>    <span class="nt">defaults</span><span class="p">:</span>               <span class="c1"># Give vars a default value</span>
       <span class="p p-Indicator">-</span> <span class="nt">thegap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="nt">colorstops</span><span class="p">:</span>
-    <span class="nt">gap</span><span class="p">:</span> <span class="s">&#39;[[thegap]]&#39;</span>       <span class="c1"># Use &#39;[[ ]]&#39; for template vars</span>
+<span class="hll">  <span class="nt">colorstops</span><span class="p">:</span>               <span class="c1"># The contents of the template!</span>
+</span>    <span class="nt">gap</span><span class="p">:</span> <span class="s">&#39;[[thegap]]&#39;</span>       <span class="c1"># Use &#39;[[ ]]&#39; for template vars</span>
     <span class="nt">colors</span><span class="p">:</span>
       <span class="nt">17</span><span class="p">:</span> <span class="s">&#39;PowderBlue&#39;</span>
       <span class="nt">19</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
       <span class="nt">21</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-04)&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<p>The result would be a replaced colorstops part:</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">result</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;segarc&#39;</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-130</span>
+    <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">130</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">scale</span><span class="p">:</span>
+    <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>                 <span class="c1"># Inside temperature</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-4.5</span>
+  <span class="nt">show</span><span class="p">:</span>
+    <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>       <span class="c1"># Use a colorstop</span>
+  <span class="nt">segments</span><span class="p">:</span>
+<span class="hll">    <span class="nt">colorstops</span><span class="p">:</span>             <span class="c1"># The colorstops map is replaced</span>
+</span><span class="hll">      <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span class="hll">      <span class="nt">colors</span><span class="p">:</span>
+</span><span class="hll">        <span class="nt">17</span><span class="p">:</span> <span class="s">&#39;PowderBlue&#39;</span>
+</span><span class="hll">        <span class="nt">19</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
+</span><span class="hll">        <span class="nt">21</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-04)&#39;</span>
+</span></code></pre></div>
+</td></tr></table>
+<h3 id="another-example-derived_entity-template"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Another example: derived_entity template<a class="headerlink" href="#another-example-derived_entity-template" title="Permanent link">&para;</a></h3>
+<p>Many examples calculate the <code>brightness</code> attribute from a light using a <code>derived_entity</code>: Home Assistant passes the <code>brightness</code> attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.</p>
+<p><code>Example 10</code> is using a template for one card to show that you could re-use this JavaScript template.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+  <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+  <span class="nt">scale</span><span class="p">:</span>
+    <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+  <span class="nt">show</span><span class="p">:</span>
+    <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
+  <span class="nt">derived_entity</span><span class="p">:</span>
+<span class="hll">    <span class="nt">template</span><span class="p">:</span>
+</span><span class="hll">      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">derived_entity_brightness</span>
+</span><span class="hll">      <span class="c1"># BUG:</span>
+</span><span class="hll">      <span class="c1"># Do need a variable section here and defaults in</span>
+</span><span class="hll">      <span class="c1"># template itself. That should not be the case...</span>
+</span><span class="hll">      <span class="c1">#</span>
+</span><span class="hll">      <span class="c1"># A template without variables SHOULD be possible...</span>
+</span><span class="hll">      <span class="nt">variables</span><span class="p">:</span>
+</span><span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">dummyvar</span><span class="p">:</span> <span class="s">&#39;bug&#39;</span>
+</span>  <span class="nt">segments</span><span class="p">:</span>
+    <span class="nt">colorlist</span><span class="p">:</span>
+      <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+      <span class="nt">colors</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&#39;var(--primary-text-color)&#39;</span>
+  <span class="nt">animation</span><span class="p">:</span>
+    <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+  <span class="nt">styles</span><span class="p">:</span>
+    <span class="nt">foreground</span><span class="p">:</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+    <span class="nt">background</span><span class="p">:</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-theme-default-darken-15)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The template is defined in <code>sak_templates.yaml</code></p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">derived_entity_brightness</span><span class="p">:</span>
+</span>  <span class="nt">template</span><span class="p">:</span>
+<span class="hll">    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">derived_entity</span>
+</span>    <span class="nt">defaults</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">dummyvar</span><span class="p">:</span> <span class="s">&#39;dummy&#39;</span>
+<span class="hll">  <span class="nt">derived_entity</span><span class="p">:</span>
+</span>    <span class="nt">input </span><span class="p">:</span> <span class="s">&#39;[[[</span><span class="nv"> </span><span class="s">return</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">]]]&#39;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+      <span class="no">[[[</span>
+        <span class="no">if (typeof(entity) === &#39;undefined&#39;) return;</span>
+        <span class="no">if (typeof(state) === &#39;undefined&#39;) return;</span>
+
+        <span class="no">var bri = Math.round(state / 2.55);</span>
+        <span class="no">return (bri ? bri : &#39;0&#39;);</span>
+      <span class="no">]]]</span>
+    <span class="nt">unit</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+      <span class="no">[[[</span>
+        <span class="no">if (typeof(state) === &#39;undefined&#39;) return undefined;</span>
+        <span class="no">return &#39;%&#39;;</span>
+      <span class="no">]]]</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="advanced-usage"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
@@ -2081,7 +2312,7 @@
 </code></pre></div>
 </td></tr></table>
 <div class="admonition warning">
-<p class="admonition-title">Overwriting parts of a template can be error-prone. So take care!</p>
+<p class="admonition-title">Overwriting parts of a template is powerfull but can be error-prone. So take care!</p>
 </div>
 
               
