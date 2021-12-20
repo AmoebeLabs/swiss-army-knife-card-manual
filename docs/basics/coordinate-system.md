@@ -33,7 +33,7 @@ The tools are neatly configured around the center position (50,50) of the toolse
 - the `icon` is placed at (50,40) and
 - the `state` is placed at (50,60).
 
-The first toolset is placed at (40,50) on the card, and de second toolset at (160,50) on the card. 
+The first toolset is placed at (40,50) on the card, and the second toolset at (160,50) on the card. 
 
 In a kind of 3D world, it looks like this:
 ![sak-card-toolset-tool-placement]

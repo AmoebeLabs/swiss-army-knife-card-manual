@@ -99,6 +99,8 @@ It is by far the most complex tool. Was fun to make, and fairly unique.
 
 !!! Info "A circle for example has a start_angle of 0 and end_angle of 360"
 
+!!! Info "The arc can become an ellipse by specifying radius_x and radius_y separately"
+
 ##:sak-sak-logo: Extended usage
 
 === "Connected"

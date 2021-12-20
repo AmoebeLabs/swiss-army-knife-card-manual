@@ -5,7 +5,7 @@ template: overrides/main.html
 ##:sak-sak-logo: Basics
 Templates have been created to enable re-use of various parts of the SAK Card's YAML config.
 
-Templates nog only cover toolsets, but also things like colorstops.
+Templates not only cover toolsets, but also things like colorstops.
 
 !!! Question "Every part of the cards config could be converted to a template"
     Well, at least that is the intention. It hasn't been tested though!
@@ -23,9 +23,10 @@ This example shows the use of a Toolset template.
 
 - it shows the name of the template to use
 - it shows the variables to pass to the template
+- and last but not least: the `type` of the template **MUST** match the part it is replacing. In this case a toolset.
 
-```yaml title="view" linenums="1" hl_lines="18-21"
-- toolset: memory
+```yaml title="view" linenums="1" hl_lines="1 4"
+- toolset: memory               # template type be of type "toolset"
   # Use pre-defined template for this part.
   # Template has variables.
   template:
@@ -38,12 +39,12 @@ This example shows the use of a Toolset template.
 
 Below the partial config:
 
-- the first 5 lines define the template part of the config
-- from line 6, the toolset itself is defined. Identical to any inline toolset config.
+- the first 7 lines define the template part of the config
+- from line 8, the toolset itself is defined. Identical to any inline toolset config.
 
-```yaml title="template" linenums="1" hl_lines="1 6 16 28"
+```yaml title="template" linenums="1" hl_lines="1 8"
 template:
-  type: toolset
+  type: toolset                   # type MUST equal tag
   defaults:                       # Default values for vars
     - entity: 0
     - cx: 25
@@ -79,7 +80,7 @@ toolset:                          # From here the toolset is defined!
 ###:sak-sak-logo: An example: colorstop
 Say you want some consistency for the cards that show the inside temperature colors.
 
-You define a colorstop template, and after that use that in several cards/tools. 
+You define a colorstops template, and after that use that in several cards/tools. 
 
 ```yaml title="view" linenums="1" hl_lines="18-21"
 - type: 'segarc'
@@ -98,8 +99,8 @@ You define a colorstop template, and after that use that in several cards/tools.
   show:
     style: colorstops       # Use a colorstop
   segments:
-    colorstops:
-      template:             # Use template colorstop (re-use!)
+    colorstops:             # The colorstops map is replaced
+      template:             # Use template colorstops (re-use!)
         name: colorstops_temperature_inside
         variables:          # Pass variables to template
           - thegap: 1
@@ -107,19 +108,122 @@ You define a colorstop template, and after that use that in several cards/tools.
 
 The template is defined in `sak_templates.yaml`
 
-```yaml title="template" linenums="1" hl_lines="1"
+!!! Warning "Notice again the template `type` that matches the part it replaces!"
+    The template `type` on line 3 must match line 6 in the template.
+
+
+```yaml title="template" linenums="1" hl_lines="1 3 6"
 colorstops_temperature_inside:
   template:
-    type: colorstops
+    type: colorstops        # MUST reference colorstops
     defaults:               # Give vars a default value
       - thegap: 1
-  colorstops:
+  colorstops:               # The contents of the template!
     gap: '[[thegap]]'       # Use '[[ ]]' for template vars
     colors:
       17: 'PowderBlue'
       19: 'var(--theme-gradient-color-01)'
       21: 'var(--theme-gradient-color-04)'
 ```
+
+The result would be a replaced colorstops part:
+
+```yaml title="result" linenums="1" hl_lines="17-22"
+- type: 'segarc'
+  position:
+    cx: 50
+    cy: 50
+    start_angle: -130
+    end_angle: 130
+    width: 7
+    radius: 45
+  entity_index: 0
+  scale:
+    min: 15                 # Inside temperature
+    max: 25
+    offset: -4.5
+  show:
+    style: colorstops       # Use a colorstop
+  segments:
+    colorstops:             # The colorstops map is replaced
+      gap: 1
+      colors:
+        17: 'PowderBlue'
+        19: 'var(--theme-gradient-color-01)'
+        21: 'var(--theme-gradient-color-04)'
+```
+
+###:sak-sak-logo: Another example: derived_entity template
+Many examples calculate the `brightness` attribute from a light using a `derived_entity`: Home Assistant passes the `brightness` attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.
+
+`Example 10` is using a template for one card to show that you could re-use this JavaScript template.
+
+```yaml title="view" linenums="1" hl_lines="18-26"
+- type: segarc
+  id: 0
+  entity_index: 1
+  position:
+    cx: 80
+    cy: 25
+    start_angle: 0
+    end_angle: 360
+    width: 2
+    radius: 15
+  scale:
+    min: 0
+    max: 100
+  show:
+    scale: false
+    style: 'colorlist'
+  derived_entity:
+    template:
+      name: derived_entity_brightness
+      # BUG:
+      # Do need a variable section here and defaults in
+      # template itself. That should not be the case...
+      #
+      # A template without variables SHOULD be possible...
+      variables:
+        - dummyvar: 'bug'
+  segments:
+    colorlist:
+      gap: 1
+      colors:
+        - 'var(--primary-text-color)'
+  animation:
+    duration: 5
+  styles:
+    foreground:
+      fill: var(--primary-text-color)
+    background:
+      fill: var(--cs-theme-default-darken-15)
+```
+
+The template is defined in `sak_templates.yaml`
+
+```yaml title="template" linenums="1" hl_lines="1 3 6"
+derived_entity_brightness:
+  template:
+    type: derived_entity
+    defaults:
+      - dummyvar: 'dummy'
+  derived_entity:
+    input : '[[[ return state ]]]'
+    state: >
+      [[[
+        if (typeof(entity) === 'undefined') return;
+        if (typeof(state) === 'undefined') return;
+        
+        var bri = Math.round(state / 2.55);
+        return (bri ? bri : '0');
+      ]]]
+    unit: >
+      [[[
+        if (typeof(state) === 'undefined') return undefined;
+        return '%';
+      ]]]
+```
+
 
 ##:sak-sak-logo: Advanced usage
 This example shows the simple use of overwriting parts of the Toolset template without using template variables.
@@ -215,4 +319,4 @@ The full config for the segarc tool is below. The yellow lines show the parts (r
           filter: url(#is-1)
 ```
 
-!!! Warning "Overwriting parts of a template can be error-prone. So take care!"
+!!! Warning "Overwriting parts of a template is powerfull but can be error-prone. So take care!"
