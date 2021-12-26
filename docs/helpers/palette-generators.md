@@ -4,6 +4,13 @@ template: overrides/main.html
 
 [paletton-com]: ../assets/screenshots/paletton-com.png
 [mcg-mbitson-com]: ../assets/screenshots/mcg-mbitson-com.png
+[colordesigner-io]: ../assets/screenshots/colordesigner-io-full.png
+##:sak-sak-logo: Color Designer
+Color Designer is great for creating tints and shades, among a few other color combinations.
+
+URL: https://colordesigner.io/
+
+[![colordesigner-io]][colordesigner-io]
 
 ##:sak-sak-logo: Paletton
 Paletton is one of the nice color palette generators around.
