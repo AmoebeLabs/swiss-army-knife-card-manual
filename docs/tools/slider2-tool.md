@@ -10,7 +10,7 @@ template: overrides/main.html
 :octicons-beaker-24: Experimental ·
 :octicons-tools-24: WIP ·
 
-The Slider2 tool is an input tool with configurable track, thumb and label position and styling.
+The Slider2 tool is an input tool with configurable track, active track, thumb and label position and styling.
 
 <svg viewBox="-200 75 450 75" xmlns="http://www.w3.org/2000/svg" width="400px">
   <g class="toolset__group-outer" style="transform-origin:center; transform-box:fill-box;" id="toolset-8qgsve32l" transform="rotate(0) scale(1, 1)">
@@ -32,6 +32,34 @@ The Slider2 tool is an input tool with configurable track, thumb and label posit
   </g>
 </svg>
 
+<svg viewBox="-200 75 450 75" xmlns="http://www.w3.org/2000/svg" width="400px">
+  <defs>
+    <linearGradient id="light-brightness-gradient" x1="1" x2="0">
+      <stop stop-color="#eeeeee"/>
+      <stop offset="1" stop-color="#555555"/>
+    </linearGradient>
+    <linearGradient id="light-brightness-gradient--orange" x1="1" x2="0">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="darkorange"/>
+    </linearGradient>
+  </defs>
+  <g class="toolset__group-outer" style="transform-origin:center; transform-box:fill-box;" id="toolset-atn0ynfcn" transform="rotate(0) scale(1, 1)">
+    <svg style="overflow:visible;">
+      <g class="toolset__group" transform="translate(0, 0)">
+        <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" style="touch-action:none; pointer-events:none;" id="rangeslider-gdwcswl8y">
+          <rect id="rs-track" class="sak-slider__track" x="-180" y="104" width="360" height="40" rx="10" style="fill: url(#light-brightness-gradient); fill-opacity: 1; stroke-width: 0.1em; stroke: white; pointer-events: none;"></rect>
+          <rect id="active-track" touch-action="none" class="sak-slider__active" x="-180" y="104" width="150.8080808080808" height="40" rx="10" style="fill: url(#light-brightness-gradient--orange); pointer-events: none;"></rect>
+          <g id="rs-thumb-group" x="-10" y="104" style="transform:translate(-29.191919191919197px, 0px)">
+            <g style="transform-origin:center;transform-box: fill-box;">
+              <rect id="rs-thumb" class="sak-slider__thumb" x="-10" y="104" width="20" height="40" rx="10" style="stroke-width: 0.2em; stroke: darkgrey; stroke-opacity: 1; fill: var(--primary-text-color); fill-opacity: 0.8; pointer-events: none;"></rect>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </svg>
+  </g>
+</svg>
+        
 <svg viewBox="-200 75 450 75" width="400px" xmlns="http://www.w3.org/2000/svg" overflow="visible" pointer-events="all" id="rangeslider-qzbh29328">
   <defs>
     <linearGradient id="light-color-temperature-gradient" x1="1" x2="0">
@@ -128,6 +156,37 @@ Below example is the configuration of the example above.
       stroke-opacity: 0.8
 ```
 
+##:sak-sak-logo: Display active track
+The second example shows an orange gradient for the active track.
+
+The active track must be enabled using:
+```yaml linenums="1"
+  show:
+    active: true
+```
+
+And defined at the position level:
+```yaml linenums="1" hl_lines="12-14"
+- type: slider2
+  position:
+    cx: 40
+    cy: 81
+    capture:
+      width: 80
+      height: 15
+    track:
+      width: 70
+      height: 2
+      radius: 1
+    active:
+      height: 2
+      radius: 1
+    thumb:
+      width: 5
+      height: 10
+      radius: 1
+```
+
 ##:sak-sak-logo: Styling
 The Slider2 tool has support for the following forms of styling:
 
@@ -137,7 +196,7 @@ The Slider2 tool has support for the following forms of styling:
 | `styles`     | :material-check: | Using inslider2 SVG and CSS styles |
 
 
-The Slider2 tool is composed of three parts: "track", "thumb" and "label" + "uom" can be used as the selector for styling:
+The Slider2 tool is composed of three parts: "track", "active", "thumb" and "label" + "uom" can be used as the selector for styling:
 ```yaml linenums="1" hl_lines="7 9 11 13 16 18 20 22"
 - type: 'slider2'
   position:
@@ -147,6 +206,8 @@ The Slider2 tool is composed of three parts: "track", "thumb" and "label" + "uom
   classes:
     track:                    # Track selector
       <...>
+    active:                   # Active track selector
+      <...>
     thumb:                    # Thumb selector
       <...>
     label:                    # Label selector
@@ -155,6 +216,8 @@ The Slider2 tool is composed of three parts: "track", "thumb" and "label" + "uom
       <...>
   styles:
     track:                    # Track selector
+      <...>
+    active:                   # Active track selector
       <...>
     thumb:                    # Thumb selector
       <...>
