@@ -232,6 +232,14 @@ Populair properties:
 | Property      | Does what?         | Example                                                 |
 | :------------- | :----------------- | :------------------------------------------------------ |
 
+##:sak-sak-logo: Haptics
+The slider supports its own fixed haptic feedback
+
+| Action | Haptic | Description |
+| ------ | ------ | ----------- |
+| Click slider | light | Feedback that slider is clicked |
+| Move slider | selection | Feedback for every update to HA of the slider value |
+
 ##:sak-sak-logo: Animations
 The Slider2 tool has support for the following forms of animations:
 
