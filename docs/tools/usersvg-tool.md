@@ -100,6 +100,8 @@ Populair properties:
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | TBD             | TBD                   | TBD |
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The User SVG tool has support for the following forms of animations:
 

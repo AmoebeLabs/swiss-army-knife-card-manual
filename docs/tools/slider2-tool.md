@@ -91,7 +91,7 @@ The Slider2 tool is an input tool with configurable track, active track, thumb a
 ```
 
 ##:sak-sak-logo: Advanced usage
-Below example is the configuration of the example above.
+Below example is the configuration of the first example above.
 
 === "Connected"
 ```yaml title="From: view-sake2 (1st row, 1st card)" linenums="1" hl_lines="1"
@@ -196,8 +196,8 @@ The Slider2 tool has support for the following forms of styling:
 | `styles`     | :material-check: | Using inslider2 SVG and CSS styles |
 
 
-The Slider2 tool is composed of three parts: "track", "active", "thumb" and "label" + "uom" can be used as the selector for styling:
-```yaml linenums="1" hl_lines="7 9 11 13 16 18 20 22"
+The Slider2 tool is composed of four parts: "track", "active", "thumb" and "label" + "uom" can be used as the selector for styling:
+```yaml linenums="1" hl_lines="7 9 11 13 15 18 20 22 24 26"
 - type: 'slider2'
   position:
     cx: 50
@@ -233,6 +233,8 @@ Populair properties:
 | :------------- | :----------------- | :------------------------------------------------------ |
 
 ##:sak-sak-logo: Haptics
+!!! Info "See: https://companion.home-assistant.io/docs/integrations/haptics/ for devices that support haptics"
+
 The slider supports its own fixed haptic feedback
 
 | Action | Haptic | Description |

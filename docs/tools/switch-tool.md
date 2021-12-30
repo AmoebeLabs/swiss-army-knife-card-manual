@@ -76,7 +76,7 @@ The Switch tool has support for the following forms of styling:
 
 
 The Switch tool is composed of two parts: "track" and "thumb" can be used as the selector for styling:
-```yaml linenums="1" hl_lines="8 11"
+```yaml linenums="1" hl_lines="8 10 13 15"
 - type: 'switch'
   position:
     cx: 50
@@ -100,24 +100,7 @@ Populair properties:
 | Property      | Does what?         | Example                                                 |
 | :------------- | :----------------- | :------------------------------------------------------ |
 
-##:sak-sak-logo: Haptics
-The switch tool supports haptic feedback through the entity definition
-
-| Action | Haptic   | Description |
-| ------ | -------- | ----------- |
-| Click  | `haptic` | Uses the haptic property defined in the entities defintion of the card. If not specified, a default of `light` is used |
-
-Possible values for haptic feedback:
-
-| Haptic	| Description |
-| ------- | ----------- |
-| success	| Indicates that a task or action has completed.| 
-| warning	| Indicates that a task or action has produced a warning of some kind.| 
-| failure	| Indicates that a task or action has failed.| 
-| light	| Provides a physical metaphor that complements the visual experience.| 
-| medium	| Provides a physical metaphor that complements the visual experience.| 
-| heavy	| Provides a physical metaphor that complements the visual experience.| 
-| selection	| Indicates that the selection is actively changing.| 
+--8<-- "docs/tools/default-haptics.md"
 
 ##:sak-sak-logo: Animations
 The Switch tool has support for the following forms of animations:

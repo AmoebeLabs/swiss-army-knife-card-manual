@@ -73,6 +73,8 @@ Populair properties:
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Ellipse tool has support for the following forms of animations:
 

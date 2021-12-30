@@ -116,6 +116,8 @@ Populair properties:
 | `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of text to 70% |
 | `stroke-linecap`| Format end of line    | `stroke-linecap: round` sets the endline to round. `butt` sets it to square|
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Entity Barchart tool has support for the following forms of animations:
 

@@ -68,6 +68,8 @@ Populair properties:
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Circle tool has support for the following forms of animations:
 

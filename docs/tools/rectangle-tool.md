@@ -81,6 +81,8 @@ Populair properties:
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Rectangle tool has support for the following forms of animations:
 

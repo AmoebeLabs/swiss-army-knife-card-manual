@@ -166,6 +166,8 @@ Populair properties:
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
 | `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of text to 70% |
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Entity State tool has support for the following forms of animations:
 

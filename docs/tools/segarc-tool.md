@@ -184,6 +184,8 @@ Populair properties for both 'foreground' and 'background' selectors:
 | `fill-opacity`  | Opacity for fill      | `fill-opacity: 0.5` sets the fill opacity to 50% |
 | `stroke-opacity`| Opacity for stroke    | `stroke-opacity: 0.5` sets the stroke opacity to 50% |
 
+--8<-- "docs/tools/default-haptics.md"
+
 ##:sak-sak-logo: Animations
 The Segmented Arc tool 'foreground' part has support for the following forms of animations:
 
