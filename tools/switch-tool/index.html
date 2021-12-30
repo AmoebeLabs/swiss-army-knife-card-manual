@@ -1866,13 +1866,13 @@
   <span class="nt">classes</span><span class="p">:</span>
 <span class="hll">    <span class="nt">track</span><span class="p">:</span>                    <span class="c1"># Track selector</span>
 </span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
-    <span class="nt">thumb</span><span class="p">:</span>                    <span class="c1"># Thumb selector</span>
-<span class="hll">      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
-</span>  <span class="nt">styles</span><span class="p">:</span>
-    <span class="nt">track</span><span class="p">:</span>                    <span class="c1"># Track selector</span>
-      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
-    <span class="nt">thumb</span><span class="p">:</span>                    <span class="c1"># Thumb selector</span>
-      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+<span class="hll">    <span class="nt">thumb</span><span class="p">:</span>                    <span class="c1"># Thumb selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+  <span class="nt">styles</span><span class="p">:</span>
+<span class="hll">    <span class="nt">track</span><span class="p">:</span>                    <span class="c1"># Track selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+<span class="hll">    <span class="nt">thumb</span><span class="p">:</span>                    <span class="c1"># Thumb selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
 </code></pre></div>
 </td></tr></table></p>
 <p>Populair properties:</p>
@@ -1921,7 +1921,10 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Haptics<a class="headerlink" href="#haptics" title="Permanent link">&para;</a></h2>
-<p>The switch tool supports haptic feedback through the entity definition</p>
+<div class="admonition info">
+<p class="admonition-title">See: <a href="https://companion.home-assistant.io/docs/integrations/haptics/">https://companion.home-assistant.io/docs/integrations/haptics/</a> for devices that support haptics</p>
+</div>
+<p>The tool supports haptic feedback through the entity <code>tap_action</code> definition</p>
 <table>
 <thead>
 <tr>
@@ -1934,10 +1937,31 @@
 <tr>
 <td>Click</td>
 <td><code>haptic</code></td>
-<td>Uses the haptic property defined in the entities defintion of the card. If not specified, a default of <code>light</code> is used</td>
+<td>Uses the haptic property defined in the tap definition of the card. If not specified, a default of <code>light</code> is used</td>
 </tr>
 </tbody>
 </table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">entities</span><span class="p">:</span> 
+  <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.livingroom_light_front</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Muurlamp</span>
+    <span class="nt">area</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Woonkamer</span>
+    <span class="nt">icon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:wall-sconce</span>
+    <span class="nt">tap_action</span><span class="p">:</span>
+      <span class="nt">action</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">call-service</span>
+      <span class="nt">service</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light.toggle</span>
+      <span class="nt">service_data</span><span class="p">:</span> <span class="p p-Indicator">{</span> <span class="s">&quot;entity_id&quot;</span><span class="nt"> </span><span class="p">:</span> <span class="s">&quot;light.livingroom_light_front&quot;</span> <span class="p p-Indicator">}</span>
+<span class="hll">      <span class="nt">haptic</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">light</span>
+</span></code></pre></div>
+</td></tr></table>
 <p>Possible values for haptic feedback:</p>
 <table>
 <thead>
