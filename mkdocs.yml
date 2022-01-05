@@ -98,6 +98,7 @@ nav:
   - Getting started:
     - Introduction: start/introduction.md
     - Installation: start/installation.md
+    - Previous version 0.9.0-b1: start/installation-0.9.0-b1.md
     - Designing your card: start/designing-your-card.md
     - Changelog: changelog/changelog.md
   - Basics:
@@ -106,6 +107,7 @@ nav:
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
     - Templates: basics/templates.md
+    - Haptics: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md
       - Classes: basics/styling/classes.md

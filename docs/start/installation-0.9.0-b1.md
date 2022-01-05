@@ -12,15 +12,14 @@ On top of that you can install the examples using an extra dashboard.
 
 By the time this card is released, it will become available in HACS.
 
-##:sak-sak-logo: Manual install (for Beta 0.9.0-b2, January 2022)
+##:sak-sak-logo: Manual install (for Beta 0.9.0-b1, December 2021)
 
-This second beta contains some changes in the layout and `!includes` to make it more up-to-date with current Home Assistant possibilities and requires less manual work.
+!!! Warning "This is an OLD version!!"
 
-The first beta was still based on an very old config of mine. This version uses the possibilities described in [Splitting up the configuration](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
-
-This beta version expects the files to be using the following directory structure with their files.
+The beta version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
 
+    
 ###My Folder Structure
 
 !!! Info "I use separate folders for many things in Home Assistant"
@@ -36,34 +35,33 @@ Below, as reference the folder structure I use
     ├─ themes/
     ├─ www/
     │
-    ├─ configuration.yaml
-    ├─ ui-lovelace.yaml
+    └─ configuration.yaml
+    └─ ui-lovelace.yaml
     └─ sak-examples-dashboard.yaml
     ```
+
 === "Lovelace folder"
       My Lovelace folder contains the following folders:
       ```
       lovelace/
       .
       ├─ decluttering_templates
-      │  ├─ decluttering_templates.yaml
+      │  └─ decluttering_templates.yaml
       │  └─ (etc)
       │
       ├─ sak_templates/
-      │  ├─ sak_templates.yaml
-      │  ├─ definitions/
-      │  │  ├─ sak-css-definitions.yaml
-      │  │  └─ user-css-definitions.yaml
-      │  └─ templates/
-      │     └─<templates>.yaml
+      │  └─ sak_templates.yaml
+      │  └─ sak-css-definitions.yaml
+      │  └─ user-css-definitions.yaml
+      │  └─ (etc)
       │
       ├─ resources
       │  └─ resources.yaml
       │
       ├─ views/
-      │  ├─ view-sake1.yml
-      │  ├─ (...)
-      │  └─ view-sake10.yml
+      │  └─ view-sake1.yaml
+      │  └─ (...)
+      │  └─ view-sake8.yaml
       ```
       !!! Warning "The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!"
           This location is hard-coded into the SAK card. SAK needs the templates to function!
@@ -81,11 +79,11 @@ Below, as reference the folder structure I use
        │  └─ balls-background-1.svg   # Used by view-sake6.yaml
        │
        ├─ weather/                    # Used by all weather-type usersvg tools
-       │  ├─ *-day.svg
+       │  └─ *-day.svg
        │  └─ *-night.svg
        │
-       ├─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
-       ├─ (...)
+       └─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
+       └─ (...)
        └─ ic-face-6.svg
     ```
 
@@ -93,7 +91,8 @@ Below, as reference the folder structure I use
     ```
     themes/
     .
-    ├─ nm-01-gonsboro.yaml
+    └─ themes.yaml
+    └─ nm-01-gonsboro.yaml
     └─ nm-03-dark-steelblue.yaml
     ```
 
@@ -133,18 +132,16 @@ The second step is to add the `sak_templates`. These are mandatory.
 **:octicons-check-circle-16: Step 2a:**
 Add the SAK templates to the `sak_templates` folder.
 
-Create the `sak_templates` folder in the `lovelace` folder and add all the folders and files.
+Create the `sak_templates` folder in the `lovelace` folder and add all the files.
 
 ```yaml 
 lovelace/
 .
 ├─ sak_templates/
-│  ├─ sak_templates.yaml
-│  ├─ definitions/
-│  │  ├─ sak-css-definitions.yaml
-│  │  └─ user-css-definitions.yaml
-│  └─ templates/
-│     └─<templates>.yaml```
+│  └─ sak_templates.yaml
+│  └─ sak-css-definitions.yaml
+│  └─ user-css-definitions.yaml
+│  └─ (etc)
 ```
 
 **:octicons-check-circle-16: Step 2b:**
@@ -155,8 +152,8 @@ Include sak_templates to `ui-lovelace.yaml`
 sak_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 ```
-!!! Info "The supplied `sak_templates.yaml` file contains a wildcard include for the `templates` folder."
-    So ANY template you add in that folder will be automatically included. You don't have to change this file!
+!!! Info "The supplied `sak_templates.yaml` file contains the templates for SAK."
+    You don't have to change this file!
 
 ###:octicons-thumbsup-24: You made it!
 If this is all you want, you're ready to use the Swiss Army Knife card. If not, continue with the next paragraph for the example dashboard install.
@@ -188,17 +185,22 @@ Add the decluttering templates for SAK to your installation.
 
 ###:octicons-checklist-24: Step 2: Add themes
 
-Place the two themes into your `themes` folder.
-If you use a wildcard include in your `configuration.yaml`, then you don't have to do anything anymore:
-```yaml title="configuration.yaml"
-frontend:
-  themes: !include_dir_merge_named themes/
+Both themes are used by the examples, so include the themes into your `themes.yaml` file in the themes folder:
+```yaml title="themes.yaml"
+NM - Gonsboro:
+  !include nm-01-gonsboro.yaml
+NM - Dark Steelblue:
+  !include nm-03-dark-steelblue.yaml
 ```
 
-If you use explicit includes, include the themes manually:
-```yaml
-!include nm-01-gonsboro.yaml
-!include nm-03-dark-steelblue.yaml
+And the `themes.yaml` file should (already) be included into your Home Assistant config:
+```yaml title="configuration.yaml"
+# frontend
+# ========
+# Enables the frontend to define themes
+# - https://www.home-assistant.io/integrations/frontend/#defining-themes
+frontend:
+  themes: !include themes/themes.yaml
 ```
 
 ###:octicons-checklist-24: Step 3: Add SAK examples dashboard
@@ -239,7 +241,7 @@ lovelace:
       show_in_sidebar: true
 ```
 
-The dashboard contains the 10 example views:
+The dashboard contains the 8 example views:
 ```yaml title="sak-examples-dashboard.yaml"
 # Decluttering Templates
 decluttering_templates:
@@ -253,16 +255,14 @@ title: Swiss Army Knife Examples
 views:
 
   # Swiss Army Knife example views...
-  - !include lovelace/views/view-sake1.yml
-  - !include lovelace/views/view-sake2.yml
-  - !include lovelace/views/view-sake3.yml
-  - !include lovelace/views/view-sake4.yml
-  - !include lovelace/views/view-sake5.yml
-  - !include lovelace/views/view-sake6.yml
-  - !include lovelace/views/view-sake7.yml
-  - !include lovelace/views/view-sake8.yml
-  - !include lovelace/views/view-sake9.yml
-  - !include lovelace/views/view-sake10.yml
+  - !include lovelace/views/view-sake1.yaml
+  - !include lovelace/views/view-sake2.yaml
+  - !include lovelace/views/view-sake3.yaml
+  - !include lovelace/views/view-sake4.yaml
+  - !include lovelace/views/view-sake5.yaml
+  - !include lovelace/views/view-sake6.yaml
+  - !include lovelace/views/view-sake7.yaml
+  - !include lovelace/views/view-sake8.yaml
 ```
 
 !!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"
@@ -280,3 +280,4 @@ Now enjoy the examples and don't forget that you have to replace my entities wit
 [sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
 ![sak-example-dashboard][sak-example-dashboard]
 
+You see example 8 with its `gonsboro` theme, while the rest of the installation uses the `default` Home Assistant theme.
