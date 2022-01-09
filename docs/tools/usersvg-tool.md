@@ -39,7 +39,7 @@ The User SVG tool makes it possible to add (external) SVGs to your card.
 === "Connected"
     This one is taken from example 1, the display of the 'face' used for AirVisual.
     ```yaml title="From: view-sake1" linenums="1" hl_lines="1 5"
-    - type: 'usersvg'              # tooltype is 'usersvg'
+    - type: 'usersvg'           # tooltype is 'usersvg'
       position:                 # Position on (100x100) canvas
         cx: 50                  # cx=50 is center position
         cy: 50                  # cy=50 is center position

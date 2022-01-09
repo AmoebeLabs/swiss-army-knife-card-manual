@@ -88,8 +88,8 @@ The Entity History tool has support for the following forms of styling:
 | `classes`    | :material-check: | Using SAK or User defined class definitions  |
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
 
-The Entity Icon tool is composed of a single object: "bar" and this is the selector for styling:
-```yaml linenums="1"hl_lines="9 12"
+The Entity History tool is composed of a single object: "bar" and this is the selector for styling:
+```yaml linenums="1"hl_lines="13 16"
 - type: 'bar'
   position:
     cx: 50
@@ -113,7 +113,7 @@ Populair properties:
 | Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
 | `fill`          | Fill color            | `fill: red` sets fill to color red |
-| `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of text to 70% |
+| `opacity`       | Opacity (stroke/fill) | `opacity: 0.7` sets the opacity of bar to 70% |
 | `stroke-linecap`| Format end of line    | `stroke-linecap: round` sets the endline to round. `butt` sets it to square|
 
 --8<-- "docs/tools/default-haptics.md"

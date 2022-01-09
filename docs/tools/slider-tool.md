@@ -2,15 +2,15 @@
 template: overrides/main.html
 ---
 
-[slider2-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[slider-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 
-# The Slider2 tool
-[:octicons-tag-24: 1.0.0][slider2-tool support] ·
+# The slider tool
+[:octicons-tag-24: 1.0.0][slider-tool support] ·
 :octicons-package-dependencies-24: Input ·
 :octicons-beaker-24: Experimental ·
 :octicons-tools-24: WIP ·
 
-The Slider2 tool is an input tool with configurable track, active track, thumb and label position and styling.
+The slider tool is an input tool with configurable track, active track, thumb and label position and styling.
 
 <svg viewBox="-200 75 450 75" xmlns="http://www.w3.org/2000/svg" width="400px">
   <g class="toolset__group-outer" style="transform-origin:center; transform-box:fill-box;" id="toolset-8qgsve32l" transform="rotate(0) scale(1, 1)">
@@ -74,7 +74,7 @@ The Slider2 tool is an input tool with configurable track, active track, thumb a
     </g>
 </svg>
 
-!!! Info "The slider2 can possibly also be configured as state value output in the future..."
+!!! Info "The slider can possibly also be configured as state value output in the future..."
     And used as a very compact sort of "gauge", if you look at the second example with in this case a (for lights) color temperature gradient fill on the track.
     Adding colorlist or colorstop functionality would be a nice feature too!
     
@@ -83,7 +83,7 @@ The Slider2 tool is an input tool with configurable track, active track, thumb a
 === "Connected"
 --> TODO: find out if there is a simple, basic usage...
 ```yaml linenums="1" hl_lines="1 6"
-- type: 'slider2'             # tooltype is 'slider2'
+- type: 'slider'              # tooltype is 'slider'
   position:                   # Position on (100x100) canvas
     cx: 50                    # cx=50 is center position
     cy: 50                    # cy=50 is center position
@@ -95,7 +95,7 @@ Below example is the configuration of the first example above.
 
 === "Connected"
 ```yaml title="From: view-sake2 (1st row, 1st card)" linenums="1" hl_lines="1"
-- type: slider2
+- type: slider
   position:
     cx: 40
     cy: 81
@@ -167,7 +167,7 @@ The active track must be enabled using:
 
 And defined at the position level:
 ```yaml linenums="1" hl_lines="12-14"
-- type: slider2
+- type: slider
   position:
     cx: 40
     cy: 81
@@ -188,17 +188,17 @@ And defined at the position level:
 ```
 
 ##:sak-sak-logo: Styling
-The Slider2 tool has support for the following forms of styling:
+The slider tool has support for the following forms of styling:
 
 | Method       | Support          | Description |
 | :----------- | :--------------: | :-------------------- |
 | `classes`    | :material-check: | Using SAK or User defined class definitions |
-| `styles`     | :material-check: | Using inslider2 SVG and CSS styles |
+| `styles`     | :material-check: | Using inslider SVG and CSS styles |
 
 
-The Slider2 tool is composed of four parts: "track", "active", "thumb" and "label" + "uom" can be used as the selector for styling:
+The slider tool is composed of four parts: "track", "active", "thumb" and "label" + "uom" can be used as the selector for styling:
 ```yaml linenums="1" hl_lines="7 9 11 13 15 18 20 22 24 26"
-- type: 'slider2'
+- type: 'slider'
   position:
     cx: 50
     cy: 50
@@ -243,7 +243,7 @@ The slider supports its own fixed haptic feedback
 | Move slider | selection | Feedback for every update to HA of the slider value |
 
 ##:sak-sak-logo: Animations
-The Slider2 tool has support for the following forms of animations:
+The slider tool has support for the following forms of animations:
 
 | Method       | Support          | Description            |
 | :----------- | :--------------: | :-------------------- |

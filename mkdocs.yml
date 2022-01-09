@@ -129,7 +129,7 @@ nav:
     - Advanced tools:
       - Horse Shoe: tools/horseshoe-tool.md
       - Segmented Arc: tools/segarc-tool.md
-      - Slider: tools/slider2-tool.md
+      - Slider: tools/slider-tool.md
       - Switch: tools/switch-tool.md
       - User SVG: tools/usersvg-tool.md
     - HA Entity tools:

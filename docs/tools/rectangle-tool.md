@@ -53,7 +53,7 @@ The Rectangle tool has support for the following forms of styling:
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
 
 The Rectangle tool is composed of a single object: "rectangle" and this is the selector for styling:
-```yaml linenums="1"hl_lines="7 10"
+```yaml linenums="1"hl_lines="9 12"
 - type: 'rectangle'
   position:
     cx: 50

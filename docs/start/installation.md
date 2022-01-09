@@ -214,11 +214,11 @@ www/
    │  └─ balls-background-1.svg   # Used by view-sake6.yaml
    │
    ├─ weather/                    # Used by all weather-type usersvg tools
-   │  └─ *-day.svg
+   │  ├─ *-day.svg
    │  └─ *-night.svg
    │
-   └─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
-   └─ (...)
+   ├─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
+   ├─ (...)
    └─ ic-face-6.svg
 ```
 
