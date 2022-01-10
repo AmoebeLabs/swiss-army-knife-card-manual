@@ -56,7 +56,7 @@ Replace the `light` entities (`state` and `brightness` attribute) with your own 
 
 #### Lovelace view
 
-This example is in the `view-sake2.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake2.yml` file in the `/lovelace/views` folder.
 
 !!! Info "This example uses decluttering templates for all cards except for the first row of lights!"
     Both SAK templates and Decluttering templates are used to display the cards.

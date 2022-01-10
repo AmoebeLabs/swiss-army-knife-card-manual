@@ -24,7 +24,7 @@ You can replace the existing `temperature`, `humidity` and `lux` entities with a
 
 #### Lovelace view
 
-This example is in the `view-sake4.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake4.yml` file in the `/lovelace/views` folder.
 
 **First row of cards**
 

@@ -107,7 +107,7 @@ My integration is called `Glances-Poseidon` and thus the entities for instance `
 
 #### Lovelace view
 
-This example is in the `view-sake7.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake7.yml` file in the `/lovelace/views` folder.
 
 #### Decluttering templates
 None.

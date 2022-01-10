@@ -31,7 +31,7 @@ You can replace the existing `temperature`, `humidity` and `pressure` entities w
 
 #### Lovelace view
 
-This example is in the `view-sake3.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake3.yml` file in the `/lovelace/views` folder.
 
 !!! Info "This example uses decluttering and SAK templates for the card"
     Both SAK templates and Decluttering templates are used to display the cards. This view is therefore as compact and easy to read as possible and is a good example of re-use.

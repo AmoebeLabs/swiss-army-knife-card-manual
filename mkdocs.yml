@@ -150,6 +150,7 @@ nav:
     - 8. Homekit alike: examples/example-8.md
     - 9. High Contrast: examples/example-9.md
     - 10. Colorful mix: examples/example-10.md
+    - 11. Boiler and electricity: examples/example-11.md
   - Helpers:
     - Introduction: helpers/introduction.md
     - Pallette generators: helpers/palette-generators.md

@@ -40,7 +40,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 - Airvisual data showing the state dependent icon and the AQI value.
 
 #### Lovelace view
-This example is in the `view-sake6.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake6.yml` file in the `/lovelace/views` folder.
 
 #### File assets
 This view uses the following external file assets:

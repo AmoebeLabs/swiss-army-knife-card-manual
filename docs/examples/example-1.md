@@ -68,7 +68,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 
 #### Lovelace view
 
-This example is in the `view-sake1.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake1.yml` file in the `/lovelace/views` folder.
 
 #### File assets
 To display the weather type, you need the external *animated* SVG's which are located in the `/local/images/weather` folder

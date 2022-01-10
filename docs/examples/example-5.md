@@ -35,7 +35,7 @@ Both views use 3 `segmented arc`s with scale, an entity state and unit of measur
 
 #### Lovelace view
 
-This example is in the `view-sake5.yaml` file in the `/lovelace/views` folder.
+This example is in the `view-sake5.yml` file in the `/lovelace/views` folder.
 
 #### Decluttering templates
 None used. All inline YAML!
