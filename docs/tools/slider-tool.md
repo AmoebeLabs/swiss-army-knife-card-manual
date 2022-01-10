@@ -138,6 +138,7 @@ Below example is the configuration of the first example above.
   #
   # The action for the slider if value has changed
   slider_action:
+    update_interval: 200      # Update every 200 ms while dragging
     service: light.turn_on
     parameter: brightness_pct
   scale:                      # Min/Max slider value
@@ -155,6 +156,17 @@ Below example is the configuration of the first example above.
       stroke: var(--md--primary-fg-color)
       stroke-opacity: 0.8
 ```
+
+##:sak-sak-logo: Update while dragging
+The slider can update the setpoint/value while dragging. Thsi means that the brightness of a light is adjusted while dragging.
+
+The interval is specified by the `update_interval` property:
+
+- default value is `0`, ie NO update while dragging, only on release of the slider
+- any other value (in milliseconds) starts a timer that checks if the slider is changed, and than calls the `slider_action` config.
+
+!!! Warning "Don't specifiy a very small value, as it may overload your Zigbee/Wifi network"
+    A value of `200` (5x per second) or `250` (4x per second) works very well in my setup using Tradfri lights.
 
 ##:sak-sak-logo: Display active track
 The second example shows an orange gradient for the active track.
