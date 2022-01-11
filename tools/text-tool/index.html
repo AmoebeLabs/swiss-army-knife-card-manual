@@ -1647,10 +1647,12 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>              <span class="c1"># tooltype is &#39;text&#39;</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>              <span class="c1"># tooltype is &#39;text&#39;</span>
 </span>  <span class="nt">position</span><span class="p">:</span>                 <span class="c1"># Position on (100x100) canvas</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cx=50 is center position</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cy=50 is center position</span>
+  <span class="nt">text</span><span class="p">:</span> <span class="s">&#39;My</span><span class="nv"> </span><span class="s">Text&#39;</span>
   <span class="nt">styles</span><span class="p">:</span>
     <span class="nt">text</span><span class="p">:</span>
       <span class="nt">font-size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12em</span>       <span class="c1"># set font size to 12em</span>
@@ -1668,11 +1670,13 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>              <span class="c1"># tooltype is &#39;text&#39;</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>              <span class="c1"># tooltype is &#39;text&#39;</span>
 </span>  <span class="nt">position</span><span class="p">:</span>                 <span class="c1"># Position on (100x100) canvas</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cx=50 is center position</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>                  <span class="c1"># cy=50 is center position</span>
   <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>           <span class="c1"># connect to state of entity 0</span>
+  <span class="nt">text</span><span class="p">:</span> <span class="s">&#39;My</span><span class="nv"> </span><span class="s">Text&#39;</span>
   <span class="nt">styles</span><span class="p">:</span>
     <span class="nt">text</span><span class="p">:</span>
       <span class="nt">font-size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12em</span>       <span class="c1"># set font size to 12em</span>
@@ -1743,17 +1747,19 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;text&#39;</span>
   <span class="nt">position</span><span class="p">:</span>
     <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
     <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+  <span class="nt">text</span><span class="p">:</span> <span class="s">&#39;My</span><span class="nv"> </span><span class="s">Text&#39;</span>
   <span class="nt">classes</span><span class="p">:</span>
-    <span class="nt">text</span><span class="p">:</span>                   <span class="c1"># Text selector</span>
-<span class="hll">      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
-</span>  <span class="nt">styles</span><span class="p">:</span>
-    <span class="nt">text</span><span class="p">:</span>                   <span class="c1"># Text selector</span>
-<span class="hll">      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
-</span></code></pre></div>
+<span class="hll">    <span class="nt">text</span><span class="p">:</span>                   <span class="c1"># Text selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+  <span class="nt">styles</span><span class="p">:</span>
+<span class="hll">    <span class="nt">text</span><span class="p">:</span>                   <span class="c1"># Text selector</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>
+</code></pre></div>
 </td></tr></table>
 Populair properties:</p>
 <table>

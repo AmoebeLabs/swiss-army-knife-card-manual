@@ -1778,8 +1778,16 @@
 </svg>
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
 <p>This visualization shows colorful boiler and electricity cards using possibly very "Dutch / European" integrations.</p>
-<p>It shows a thermostat with some extra data (heat/hot water active) and the boilers setpoints and actual data.
-The second card shows the data from my 3 phase smart meter. My 4 kWp solar system is disconnected, so you see no returned electricity.</p>
+<p>The second card shows the data from my 3 phase smart meter. My 4 kWp solar system is disconnected, so you see no returned electricity.</p>
+<p><strong>Boiler</strong></p>
+<p>It shows a thermostat with some extra data (heat/hot water active) and the boilers setpoints and actual measured temperatures.</p>
+<p>The thermostat card uses two overlayed segmented arcs:
+- One (with scale) for the actual room temperature measured by the thermostat
+- One (no scale, superimposed on previous segarc) for the setpoint.</p>
+<p>You can see the setpoint in the screenshot: the room temperature is 19.3 degrees celcius and the setpoint is 19.5 degrees celcius. The latter one is a smaller segarc.</p>
+<p><strong>Electricity</strong></p>
+<p>The electricity card shows my 230V/3x25A smart meter data where the upper segmented arc shows the delivered (from grid) electricity, and the lower part the returned (to the grid) electricity from for instance a solar system.</p>
+<p>In my case my 4 kWp solar systems converter deliveres up to 3680 W (230V / 16A) and is connected to a single phase (L3).</p>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1850,7 +1858,7 @@ The second card shows the data from my 3 phase smart meter. My 4 kWp solar syste
 <li><a href="https://www.home-assistant.io/integrations/dsmr_reader/">DMSR Reader integration</a></li>
 </ul>
 <h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
-<p>You should be able to adapt entities for your own thermostat/boiler config.</p>
+<p>The OpenTherm Integration uses a name for the thermostat, in my case this  is <code>calenta</code>. If you also use the OpenTherm Integration, replace <code>calenta</code> with your own installation name. In other cases you should be able to adapt entities for your own thermostat/boiler config.</p>
 <p>If you are using the DSMR Reader integration, no changes are necessary for the electricity part.</p>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1882,11 +1890,126 @@ The second card shows the data from my 3 phase smart meter. My 4 kWp solar syste
 </svg>
 </span> Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h4 id="lovelace-view">Lovelace view<a class="headerlink" href="#lovelace-view" title="Permanent link">&para;</a></h4>
-<p>This example is in the <code>view-sak11.yml</code> file in the <code>/lovelace/views</code> folder.</p>
+<table>
+<thead>
+<tr>
+<th>file</th>
+<th>location</th>
+<th>included from</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>view-sake11.yml</code></td>
+<td><code>/lovelace/views</code></td>
+<td><code>sak-examples-dashboard.yaml</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="decluttering-templates">Decluttering templates<a class="headerlink" href="#decluttering-templates" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="sak-templates">SAK templates<a class="headerlink" href="#sak-templates" title="Permanent link">&para;</a></h4>
-<p>None.</p>
+<p>This view uses a template for the electricity card.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toolset_electricity_delivered_returned</code></td>
+<td><code>toolset-electricity-delivered-returned-template.yaml</code></td>
+</tr>
+</tbody>
+</table>
+<p>The four parts therefore can use the same definition:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1"># ================================================================</span>
+<span class="hll">  <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">totals</span>
+</span>    <span class="nt">template</span><span class="p">:</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset_electricity_delivered_returned</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_delivered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_returned</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+
+  <span class="c1"># ================================================================</span>
+<span class="hll">  <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">L1</span>
+</span>    <span class="nt">template</span><span class="p">:</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset_electricity_delivered_returned</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_delivered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_returned</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="p p-Indicator">-</span> <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.7</span>
+
+  <span class="c1"># ================================================================</span>
+<span class="hll">  <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">L2</span>
+</span>    <span class="nt">template</span><span class="p">:</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset_electricity_delivered_returned</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_delivered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_returned</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">125</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="p p-Indicator">-</span> <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.7</span>
+
+  <span class="c1"># ================================================================</span>
+<span class="hll">  <span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">L3</span>
+</span>    <span class="nt">template</span><span class="p">:</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset_electricity_delivered_returned</span>
+      <span class="nt">variables</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_delivered</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+        <span class="p p-Indicator">-</span> <span class="nt">entity_returned</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">170</span>
+        <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="p p-Indicator">-</span> <span class="nt">opacity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.7</span>
+</code></pre></div>
+</td></tr></table></p>
 <h2 id="interactions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1917,7 +2040,7 @@ The second card shows the data from my 3 phase smart meter. My 4 kWp solar syste
 </svg>
 </span> Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The slider for the thermostat will set the temperature using the <code>Calenta.set_temperature</code> service (Calenta is the name of my thermostat) in 0.5 degree Celcius steps and a range between 17..23.</li>
+<li>The slider for the thermostat will set the temperature using the <code>climate.set_temperature</code> service for my <code>climate.calenta</code> boiler entity in 0.5 degree Celcius steps and a range between 17..23 degrees Celcius.</li>
 <li>All tools support by default the "more-info" dialog once clicked.</li>
 </ul>
 
