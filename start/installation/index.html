@@ -1840,7 +1840,7 @@ If your structure differs, put the files into YOUR location, and don't forget to
 ├─ views/
 │  ├─ view-sake1.yml
 │  ├─ (...)
-│  └─ view-sake10.yml
+│  └─ view-sake11.yml
 </code></pre></div>
   !!! Warning "The location of the <code>sak_templates</code> folder in the <code>lovelace</code> folder is MANDATORY!"
       This location is hard-coded into the SAK card. SAK needs the templates to function!</p>
@@ -2018,7 +2018,7 @@ Add <code>sak-examples-dashboard.yaml</code> in the root folder and include it i
       <span class="nt">icon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mdi:hospital-box</span>
       <span class="nt">show_in_sidebar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>The dashboard contains the 10 example views:
+<p>The dashboard contains the 11 example views:
 <div class="highlight"><span class="filename">sak-examples-dashboard.yaml</span><pre><span></span><code><span class="c1"># Decluttering Templates</span>
 <span class="nt">decluttering_templates</span><span class="p">:</span>
   <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/decluttering_templates/decluttering_templates.yaml</span>
@@ -2041,6 +2041,7 @@ Add <code>sak-examples-dashboard.yaml</code> in the root folder and include it i
   <span class="p p-Indicator">-</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/views/view-sake8.yml</span>
   <span class="p p-Indicator">-</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/views/view-sake9.yml</span>
   <span class="p p-Indicator">-</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/views/view-sake10.yml</span>
+  <span class="p p-Indicator">-</span> <span class="kt">!include</span> <span class="l l-Scalar l-Scalar-Plain">lovelace/views/view-sake11.yml</span>
 </code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">The views themselves reference the <code>gonsboro</code> and <code>dark steelblue</code> themes, you can keep your existing theme</p>
