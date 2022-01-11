@@ -23,8 +23,9 @@ You can replace the existing `temperature`, `humidity` and `lux` entities with a
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view
-
-This example is in the `view-sake4.yml` file in the `/lovelace/views` folder.
+| file | location | included from |
+| ---- | -------- | ------------- |
+| `view-sake4.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
 **First row of cards**
 

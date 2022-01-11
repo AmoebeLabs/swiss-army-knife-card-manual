@@ -37,7 +37,9 @@ Last but not least: an `occupancy` sensor is used. If you don't have any `occupa
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view
-This example is in the `view-sake8.yml` file in the `/lovelace/views` folder.
+| file | location | included from |
+| ---- | -------- | ------------- |
+| `view-sake8.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
 !!! Example "The 1st card on the 2nd row shows the use of some of the built-in CSS animations..."
     ```yaml linenums="1" hl_lines="2 16 33 41"

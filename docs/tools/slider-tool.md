@@ -7,8 +7,6 @@ template: overrides/main.html
 # The slider tool
 [:octicons-tag-24: 1.0.0][slider-tool support] ·
 :octicons-package-dependencies-24: Input ·
-:octicons-beaker-24: Experimental ·
-:octicons-tools-24: WIP ·
 
 The slider tool is an input tool with configurable track, active track, thumb and label position and styling.
 
@@ -158,7 +156,7 @@ Below example is the configuration of the first example above.
 ```
 
 ##:sak-sak-logo: Update while dragging
-The slider can update the setpoint/value while dragging. Thsi means that the brightness of a light is adjusted while dragging.
+The slider can update the setpoint/value while dragging. This means that the brightness of a light is adjusted while dragging.
 
 The interval is specified by the `update_interval` property:
 
@@ -166,7 +164,9 @@ The interval is specified by the `update_interval` property:
 - any other value (in milliseconds) starts a timer that checks if the slider is changed, and than calls the `slider_action` config.
 
 !!! Warning "Don't specifiy a very small value, as it may overload your Zigbee/Wifi network"
-    A value of `200` (5x per second) or `250` (4x per second) works very well in my setup using Tradfri lights.
+    A value of `200` (5x / second) or `250` (4x / second) works very well in my setup using Tradfri lights and zzh! stick.
+    
+    If you combine this with a light transition, brightness changes are nice and smooth!
 
 ##:sak-sak-logo: Display active track
 The second example shows an orange gradient for the active track.

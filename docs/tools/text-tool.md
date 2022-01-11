@@ -24,6 +24,7 @@ The Text tool is based on the SVG basic `<text>`element shape.
     position:                 # Position on (100x100) canvas
       cx: 50                  # cx=50 is center position
       cy: 50                  # cy=50 is center position
+    text: 'My Text'
     styles:
       text:
         font-size: 12em       # set font size to 12em
@@ -35,6 +36,7 @@ The Text tool is based on the SVG basic `<text>`element shape.
       cx: 50                  # cx=50 is center position
       cy: 50                  # cy=50 is center position
     entity_index: 0           # connect to state of entity 0
+    text: 'My Text'
     styles:
       text:
         font-size: 12em       # set font size to 12em
@@ -56,6 +58,7 @@ The Text tool is composed of a single object: "text" and this is the selector fo
   position:
     cx: 50
     cy: 50
+  text: 'My Text'
   classes:
     text:                   # Text selector
       <...>
@@ -90,7 +93,3 @@ The Text tool has support for the following forms of animations:
 | `animations` | :material-check: | Operator state based animations with class/style styling |
 
 !!! Info "The use of animations require the tool to be connected to an entity"
-
-
-
-

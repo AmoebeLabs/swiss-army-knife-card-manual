@@ -106,8 +106,9 @@ My integration is called `Glances-Poseidon` and thus the entities for instance `
 - And finally the three system load toolsets (1m, 5m and 15m) nicely wrapped alongside the CPU display.
 
 #### Lovelace view
-
-This example is in the `view-sake7.yml` file in the `/lovelace/views` folder.
+| file | location | included from |
+| ---- | -------- | ------------- |
+| `view-sake7.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
 #### Decluttering templates
 None.

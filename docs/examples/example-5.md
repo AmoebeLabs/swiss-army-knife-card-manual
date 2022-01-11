@@ -34,8 +34,10 @@ You can also replace the `humidity`, `temperature` and `pressure` weather entiti
 Both views use 3 `segmented arc`s with scale, an entity state and unit of measurement and icon.
 
 #### Lovelace view
+| file | location | included from |
+| ---- | -------- | ------------- |
+| `view-sake5.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
-This example is in the `view-sake5.yml` file in the `/lovelace/views` folder.
 
 #### Decluttering templates
 None used. All inline YAML!

@@ -38,8 +38,10 @@ The lights can be replaced with any entity that has a `brightness` attribute.
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view
-This example is in the `view-sak10.yml` file in the `/lovelace/views` folder.
 
+| file | location | included from |
+| ---- | -------- | ------------- |
+| `view-sake10.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
 #### Decluttering templates
 None.
