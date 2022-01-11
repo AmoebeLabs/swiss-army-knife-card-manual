@@ -63,7 +63,7 @@ Below, as reference the folder structure I use
       ├─ views/
       │  ├─ view-sake1.yml
       │  ├─ (...)
-      │  └─ view-sake10.yml
+      │  └─ view-sake11.yml
       ```
       !!! Warning "The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!"
           This location is hard-coded into the SAK card. SAK needs the templates to function!
@@ -239,7 +239,7 @@ lovelace:
       show_in_sidebar: true
 ```
 
-The dashboard contains the 10 example views:
+The dashboard contains the 11 example views:
 ```yaml title="sak-examples-dashboard.yaml"
 # Decluttering Templates
 decluttering_templates:
@@ -263,6 +263,7 @@ views:
   - !include lovelace/views/view-sake8.yml
   - !include lovelace/views/view-sake9.yml
   - !include lovelace/views/view-sake10.yml
+  - !include lovelace/views/view-sake11.yml
 ```
 
 !!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"
