@@ -1830,7 +1830,8 @@ If your structure differs, put the files into YOUR location, and don't forget to
 │  ├─ sak_templates.yaml
 │  ├─ definitions/
 │  │  ├─ sak-css-definitions.yaml
-│  │  └─ user-css-definitions.yaml
+│  │  ├─ user-css-definitions.yaml
+│  │  └─ sak-svg-definitions.yaml
 │  └─ templates/
 │     └─&lt;templates&gt;.yaml
 │
@@ -1842,8 +1843,8 @@ If your structure differs, put the files into YOUR location, and don't forget to
 │  ├─ (...)
 │  └─ view-sake11.yml
 </code></pre></div>
-  !!! Warning "The location of the <code>sak_templates</code> folder in the <code>lovelace</code> folder is MANDATORY!"
-      This location is hard-coded into the SAK card. SAK needs the templates to function!</p>
+  The location of the <code>sak_templates</code> folder in the <code>lovelace</code> folder is MANDATORY!
+  This location is hard-coded into the SAK card. SAK needs the templates to function!</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>www/
@@ -1887,7 +1888,7 @@ Put the card into the community (<code>HACS</code>) folder.</p>
 </code></pre></div>
 <p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm11.78-1.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5z"/></svg></span> Step 1b:</strong>
 Add the card to the <code>resources.yaml</code> file.</p>
-<p><div class="highlight"><span class="filename">resources.yaml</span><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hacsfiles/wip-swiss-army-knife-card/dev-swiss-army-knife-card.js</span>
+<p><div class="highlight"><span class="filename">resources.yaml</span><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hacsfiles/wip-swiss-army-knife-card/dev-swiss-army-knife-card.min.js</span>
   <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">module</span>
 </code></pre></div>
 The <code>resources.yaml</code> file should be included in your <code>configuration.yaml</code> config. I assume that that is already in place if you're using custom cards.
