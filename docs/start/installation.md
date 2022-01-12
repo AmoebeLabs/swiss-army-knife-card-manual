@@ -53,7 +53,8 @@ Below, as reference the folder structure I use
       │  ├─ sak_templates.yaml
       │  ├─ definitions/
       │  │  ├─ sak-css-definitions.yaml
-      │  │  └─ user-css-definitions.yaml
+      │  │  ├─ user-css-definitions.yaml
+      │  │  └─ sak-svg-definitions.yaml
       │  └─ templates/
       │     └─<templates>.yaml
       │
@@ -65,9 +66,8 @@ Below, as reference the folder structure I use
       │  ├─ (...)
       │  └─ view-sake11.yml
       ```
-      !!! Warning "The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!"
-          This location is hard-coded into the SAK card. SAK needs the templates to function!
-    
+      The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!
+      This location is hard-coded into the SAK card. SAK needs the templates to function!
 === "www folder"
     ```
     www/
@@ -116,7 +116,7 @@ www/
 Add the card to the `resources.yaml` file.
 
 ```yaml title="resources.yaml"
-- url: /hacsfiles/wip-swiss-army-knife-card/dev-swiss-army-knife-card.js
+- url: /hacsfiles/wip-swiss-army-knife-card/dev-swiss-army-knife-card.min.js
   type: module
 ```
 The `resources.yaml` file should be included in your `configuration.yaml` config. I assume that that is already in place if you're using custom cards.
