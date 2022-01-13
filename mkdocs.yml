@@ -107,6 +107,7 @@ nav:
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
     - Templates: basics/templates.md
+    - Interactions: basics/interactions.md
     - Haptics: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md

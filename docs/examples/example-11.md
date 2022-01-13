@@ -42,10 +42,95 @@ You need both integrations, or replace all entities with your own:
 
 ###Required entitiy id changes
 
+**Boiler**
+
 The OpenTherm Integration uses a name for the thermostat, in my case this  is `calenta`. If you also use the OpenTherm Integration, replace `calenta` with your own installation name. In other cases you should be able to adapt entities for your own thermostat/boiler config.
+
+The entities for the first card of the boiler:
+
+- The first entity is the current room temperature (`sensor.room_temp_thermostat_calenta`)
+- The last is just a random Zigbee sensor showing the current humidity inside (`sensor.studym_iaq_humidity`)
+- The other sensors are to control the thermostat (`room_setpoint_thermostat_calenta`) using the slider and the boiler active / flame / hot water requests.
+
+```yaml linenums="1" hl_lines="3 5 8 11 14 18"
+- type: 'custom:dev-swiss-army-knife-card'
+  entities:
+    - entity: sensor.room_temp_thermostat_calenta
+      name: Actueel
+    - entity: binary_sensor.slave_ch_active_boiler_calenta
+      icon: 'mdi:radiator'
+      name: Warmtevraag?
+    - entity: binary_sensor.slave_dhw_active_boiler_calenta
+      icon: 'mdi:shower'
+      name: WW vraag?
+    - entity: binary_sensor.slave_flame_on_boiler_calenta
+      icon: 'mdi:fire'
+      name: Brander Aan?
+    - entity: sensor.room_setpoint_thermostat_calenta
+      icon: 'mdi:thermostat-box'
+      name: Gewenst
+      decimals: 1
+    - entity: sensor.studym_iaq_humidity
+      unit: '%'
+      decimals: 0
+```
+
+The entities for the second card of the boiler:
+
+!!! note "The `slave_flame_on` entity is used to show a white background (using a rectangle) of the boiler is `on`"
+
+```yaml linenums="1" hl_lines="3 6 9 12"
+- type: 'custom:dev-swiss-army-knife-card'
+  entities:
+    - entity: binary_sensor.slave_flame_on_boiler_calenta
+      icon: 'mdi:fire'
+      name: Brander Aan?
+    - entity: sensor.control_setpoint_boiler_calenta
+      name: Setpoint
+      decimals: 1
+    - entity: sensor.ch_water_temp_boiler_calenta
+      name: Actual
+      decimals: 1
+    - entity: sensor.return_water_temp_boiler_calenta
+      name: Return
+      decimals: 1
+```
+
+**Electricity**
 
 If you are using the DSMR Reader integration, no changes are necessary for the electricity part.
 
+The DSMR Reader integration generates generic sensor entities:
+
+```yaml linenums="1" hl_lines="4 8 11 14 17 20 23 26"
+- type: 'custom:dev-swiss-army-knife-card'
+  entities:
+    #Total
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      decimals: 3
+      name: 'Total'
+      area: 'Tha Moon'
+    - entity: sensor.dsmr_reading_electricity_currently_returned
+      decimals: 3
+    #L1
+    - entity:  sensor.dsmr_reading_phase_currently_delivered_l1
+      name: 'L1'
+      decimals: 3
+    - entity:  sensor.dsmr_reading_phase_currently_returned_l1
+      decimals: 3
+    #L2
+    - entity:  sensor.dsmr_reading_phase_currently_delivered_l2
+      name: 'L2'
+      decimals: 3
+    - entity:  sensor.dsmr_reading_phase_currently_returned_l2
+      decimals: 3
+    #L3
+    - entity:  sensor.dsmr_reading_phase_currently_delivered_l3
+      name: 'L3'
+      decimals: 3
+    - entity:  sensor.dsmr_reading_phase_currently_returned_l3
+      decimals: 3
+```
 ##:sak-sak-logo: Configuration
 
 #### Lovelace view
