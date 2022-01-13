@@ -573,6 +573,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../basics/interactions/" class="md-nav__link">
+        Interactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../basics/haptics/" class="md-nav__link">
         Haptics
       </a>
@@ -590,18 +604,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" data-md-state="indeterminate" type="checkbox" id="__nav_3_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_7">
+        <label class="md-nav__link" for="__nav_3_8">
           Styling
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Styling" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_7">
+        <label class="md-nav__title" for="__nav_3_8">
           <span class="md-nav__icon md-icon"></span>
           Styling
         </label>
@@ -665,18 +679,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" data-md-state="indeterminate" type="checkbox" id="__nav_3_9" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_8">
+        <label class="md-nav__link" for="__nav_3_9">
           Animations
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Animations" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_8">
+        <label class="md-nav__title" for="__nav_3_9">
           <span class="md-nav__icon md-icon"></span>
           Animations
         </label>
@@ -1858,8 +1872,146 @@
 <li><a href="https://www.home-assistant.io/integrations/dsmr_reader/">DMSR Reader integration</a></li>
 </ul>
 <h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
+<p><strong>Boiler</strong></p>
 <p>The OpenTherm Integration uses a name for the thermostat, in my case this  is <code>calenta</code>. If you also use the OpenTherm Integration, replace <code>calenta</code> with your own installation name. In other cases you should be able to adapt entities for your own thermostat/boiler config.</p>
+<p>The entities for the first card of the boiler:</p>
+<ul>
+<li>The first entity is the current room temperature (<code>sensor.room_temp_thermostat_calenta</code>)</li>
+<li>The last is just a random Zigbee sensor showing the current humidity inside (<code>sensor.studym_iaq_humidity</code>)</li>
+<li>The other sensors are to control the thermostat (<code>room_setpoint_thermostat_calenta</code>) using the slider and the boiler active / flame / hot water requests.</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:dev-swiss-army-knife-card&#39;</span>
+  <span class="nt">entities</span><span class="p">:</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.room_temp_thermostat_calenta</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Actueel</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">binary_sensor.slave_ch_active_boiler_calenta</span>
+</span>      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:radiator&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Warmtevraag?</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">binary_sensor.slave_dhw_active_boiler_calenta</span>
+</span>      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:shower&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">WW vraag?</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">binary_sensor.slave_flame_on_boiler_calenta</span>
+</span>      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:fire&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Brander Aan?</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.room_setpoint_thermostat_calenta</span>
+</span>      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:thermostat-box&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Gewenst</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.studym_iaq_humidity</span>
+</span>      <span class="nt">unit</span><span class="p">:</span> <span class="s">&#39;%&#39;</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</code></pre></div>
+</td></tr></table>
+<p>The entities for the second card of the boiler:</p>
+<div class="admonition note">
+<p class="admonition-title">The <code>slave_flame_on</code> entity is used to show a white background (using a rectangle) of the boiler is <code>on</code></p>
+</div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:dev-swiss-army-knife-card&#39;</span>
+  <span class="nt">entities</span><span class="p">:</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">binary_sensor.slave_flame_on_boiler_calenta</span>
+</span>      <span class="nt">icon</span><span class="p">:</span> <span class="s">&#39;mdi:fire&#39;</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Brander Aan?</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.control_setpoint_boiler_calenta</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Setpoint</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.ch_water_temp_boiler_calenta</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Actual</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.return_water_temp_boiler_calenta</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Return</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>Electricity</strong></p>
 <p>If you are using the DSMR Reader integration, no changes are necessary for the electricity part.</p>
+<p>The DSMR Reader integration generates generic sensor entities:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;custom:dev-swiss-army-knife-card&#39;</span>
+  <span class="nt">entities</span><span class="p">:</span>
+    <span class="c1">#Total</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_electricity_currently_delivered</span>
+</span>      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;Total&#39;</span>
+      <span class="nt">area</span><span class="p">:</span> <span class="s">&#39;Tha</span><span class="nv"> </span><span class="s">Moon&#39;</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_electricity_currently_returned</span>
+</span>      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="c1">#L1</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_delivered_l1</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;L1&#39;</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_returned_l1</span>
+</span>      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="c1">#L2</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_delivered_l2</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;L2&#39;</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_returned_l2</span>
+</span>      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+    <span class="c1">#L3</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_delivered_l3</span>
+</span>      <span class="nt">name</span><span class="p">:</span> <span class="s">&#39;L3&#39;</span>
+      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">sensor.dsmr_reading_phase_currently_returned_l3</span>
+</span>      <span class="nt">decimals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
