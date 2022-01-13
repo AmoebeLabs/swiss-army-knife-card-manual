@@ -1604,11 +1604,16 @@
 <p>The Swiss Army Knife card supports user interactions. These interactions are NOT card based, but tool based: in other words, every SAK Tool can be interactive.</p>
 <p>As the tools are SVG based, the interaction depends on some typical SVG properties:</p>
 <ul>
-<li>In most cases only the foreground (color) of the SVG can be tapped. This means that it can be difficult to tap an <code>icon</code>. You need an extra background (circle, rectangle) behind the icon to act as a tap area.</li>
-<li>Other settings, like transparancy, or a <code>fill: none</code> can also change the possibility to interact with the tool.</li>
+<li>In most cases only the foreground (color) of the SVG can be tapped. This means that - without doing something about it - it can be difficult to tap an <code>icon</code>. You need an extra background (rectangle) behind the icon to act as a tap area.</li>
+<li>Other settings, like transparancy, or a <code>fill: none</code> can also change the possibility to interact with the tool. A rectangle for instance with such a fill won't respond to tap actions.</li>
 </ul>
+<p>For a visual explanation: see <a href="https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/">Managing SVG Interaction With The Pointer Events Property</a></p>
 <div class="admonition info">
-<p class="admonition-title">There is an issue that will automatically adds a touch background to an icon to make interaction easier!</p>
+<p class="admonition-title">The SAK Icon Tool draws an invisible background behind the <code>icon</code> in order to respond to tap actions</p>
+<p>It uses a rectangle without stroke, but with a fill color of <code>fill: rgba(0,0,0,0)</code>. This makes it visual invisible, but still respond to pointer/touch events.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Use <code>fill: rgba(0,0,0,0)</code> for 'invisible' backgrounds for circles/rectangles that need interaction!</p>
 </div>
 <h2 id="current-entity-based-support"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
