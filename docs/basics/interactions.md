@@ -6,10 +6,15 @@ The Swiss Army Knife card supports user interactions. These interactions are NOT
 
 As the tools are SVG based, the interaction depends on some typical SVG properties:
 
-- In most cases only the foreground (color) of the SVG can be tapped. This means that it can be difficult to tap an `icon`. You need an extra background (circle, rectangle) behind the icon to act as a tap area.
-- Other settings, like transparancy, or a `fill: none` can also change the possibility to interact with the tool.
+- In most cases only the foreground (color) of the SVG can be tapped. This means that - without doing something about it - it can be difficult to tap an `icon`. You need an extra background (rectangle) behind the icon to act as a tap area.
+- Other settings, like transparancy, or a `fill: none` can also change the possibility to interact with the tool. A rectangle for instance with such a fill won't respond to tap actions.
 
-!!! Info "There is an issue that will automatically adds a touch background to an icon to make interaction easier!"
+For a visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)
+
+!!! Info "The SAK Icon Tool draws an invisible background behind the `icon` in order to respond to tap actions"
+    It uses a rectangle without stroke, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visual invisible, but still respond to pointer/touch events.
+
+!!! Tip "Use `fill: rgba(0,0,0,0)` for 'invisible' backgrounds for circles/rectangles that need interaction!"
 
 ##:sak-sak-logo: Current - entity based - support
 
