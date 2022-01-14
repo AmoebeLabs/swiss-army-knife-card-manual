@@ -4,17 +4,28 @@ template: overrides/main.html
 
 The Swiss Army Knife card supports user interactions. These interactions are NOT card based, but tool based: in other words, every SAK Tool can be interactive.
 
-As the tools are SVG based, the interaction depends on some typical SVG properties:
+##:sak-sak-logo: Interacting with SVG objects
 
-- In most cases only the foreground (color) of the SVG can be tapped. This means that - without doing something about it - it can be difficult to tap an `icon`. You need an extra background (rectangle) behind the icon to act as a tap area.
-- Other settings, like transparancy, or a `fill: none` can also change the possibility to interact with the tool. A rectangle for instance with such a fill won't respond to tap actions.
+There are some things you have to remember when interacting with SVG Objects as their interaction differs from HTML objects. HTML does create a so called bounding box around the objects to make interacting (mouse or touch) with them easier. SVG doesn't have that functionality yet: that is part of the not yet released SVG 2.0 specification.
 
-For a visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)
+Interacting with an SVG object depends on things like the `fill` of an object, its `visibility`, and the fact if it is painted or not.
 
-!!! Info "The SAK Icon Tool draws an invisible background behind the `icon` in order to respond to tap actions"
-    It uses a rectangle without stroke, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visual invisible, but still respond to pointer/touch events.
+!!! Tip "For an interactive, visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)"
+
+###What does this mean for SAK Tools?
+
+Generally speaking: there are no problems for SAK tools: you won't notice the difference between SVG and HTML based objects.
+
+This applies at least for text based tools like entity names, area's and states.
+
+For the graphical tools like circles and rectangles for instance it depends on the `fill` color: as long as the object has a fill, user interactions will work as expected. Don't use `fill: none`, unless you don't want interactions with the inner part of the tool.
 
 !!! Tip "Use `fill: rgba(0,0,0,0)` for 'invisible' backgrounds for circles/rectangles that need interaction!"
+
+Icons are an exception: icons are actually SVG images. As the background of an icon hasn't any fill, it would be difficult to interact with a 3-dot menu icon for instance. You would have to touch the dots to get any interaction noticed!
+
+Therefore, the SAK Icon Tool draws an invisible background behind the `icon` in order to respond to tap actions. It uses a rectangle without stroke, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visual invisible, but still respond to pointer/touch events.
+
 
 ##:sak-sak-logo: Current - entity based - support
 
@@ -42,6 +53,7 @@ If you want different actions, say a `toggle` for the circle (button), and `more
 ```yaml linenums="1" hl_lines="7-12 20-22"
 - type: 'custom:dev-swiss-army-knife-card'
   entities:
+    # Entity to be used for switching light (circle tool)
     - entity: light.livingroom_light_cupboard_light
       name: Boekenkast
       area: Woonkamer
@@ -53,6 +65,17 @@ If you want different actions, say a `toggle` for the circle (button), and `more
           entity_id: light.livingroom_light_cupboard_light
         haptic: light
 
+    # Entity to be used for state, name, area "more-info" popup action
+    # Is same as first entity, but with different tap_action!
+    - entity: light.livingroom_light_cupboard_light
+      name: Boekenkast
+      area: Woonkamer
+      icon: mdi:book-open-outline
+      tap_action:
+        action: more-info
+        haptic: success
+
+    # Brightness attribute gives "more-info" popup action
     - entity: light.livingroom_light_cupboard_light
       name: Boekenkast
       area: Woonkamer
@@ -87,6 +110,15 @@ The slider is the only tool having its own `slider_action` section. This was nee
     ```
 
 ##:sak-sak-logo: Future - per tool - support
+
+In the future a change will be made, so that every tool can have its own `actions` section, independent of the `entities` definition.
+This means that the same entity, but different tool can have:
+
+- No interaction at all
+- A tap action to for instance toggle a light
+- A tap action to get the more-info popup dialog or a custom popup dialog
+- A tap action to go to another view, ie an URL
+- etc.
 
 === "Light example"
     Example with a light entity and three tools on a card.
