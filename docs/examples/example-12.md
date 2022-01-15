@@ -20,6 +20,10 @@ The first one shows air quality data from AirVisual in a three 'columns' layout:
 
 The rest of the cards have all the same format showing data from my Aqara Zigbee environment sensors. Next to the sensor values (temperature, humidity and pressure) data about the battery and linkquality are also displayed.
 
+!!! Note "If you remove the battery and linkquality, there is space for an extra icon/state/segmented arc"
+
+This card could also be useful for server monitoring showing CPU, Memory, Disk usage and some other data.
+
 ##:sak-sak-logo: Data sources
 - First card: [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 - Other cards: Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
