@@ -7,13 +7,14 @@ template: overrides/main.html
   [SAK Example]: ../assets/screenshots/sak-example-12.png
 
 ##:sak-sak-logo: Visualization
-This visualization shows some wide cards instead of the abundant square cards. All cards have an aspect ratio of 6/1.
+This visualization shows some multi entity wide cards instead of the abundant square cards.  
+All cards have an aspect ratio of 6/1.
 
 The information density is pretty high, but still readable on my iPhone.
 
 **First card**
 
-The first one shows some air quality from AirVisual in a three 'columns': The air quality icon and description and the state with a segmented arc in the second 'column', anf finally the history over the last 24 hours.
+The first one shows air quality data from AirVisual in a three 'columns' layout: The air quality icon and description in the first 'column', the state with a segmented arc in the second 'column', and finally the history over the last 24 hours in the last 'column'.
 
 **Other cards**
 
