@@ -1428,6 +1428,26 @@
     Required Home Assistant integrations
   </a>
   
+    <nav class="md-nav" aria-label="Required Home Assistant integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-the-hestia-server-card" class="md-nav__link">
+    For the Hestia server card:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-for-the-poseidonserver-card" class="md-nav__link">
+    And for the Poseidonserver card:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1681,6 +1701,26 @@
     Required Home Assistant integrations
   </a>
   
+    <nav class="md-nav" aria-label="Required Home Assistant integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-the-hestia-server-card" class="md-nav__link">
+    For the Hestia server card:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-for-the-poseidonserver-card" class="md-nav__link">
+    And for the Poseidonserver card:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1810,12 +1850,10 @@ All cards have an aspect ratio of 6/1.</p>
 <p>The information density is pretty high, but still readable on my iPhone.</p>
 <p><strong>First card</strong></p>
 <p>The first one shows air quality data from AirVisual in a three 'columns' layout: The air quality icon and description in the first 'column', the state with a segmented arc in the second 'column', and finally the history over the last 24 hours in the last 'column'.</p>
-<p><strong>Other cards</strong></p>
-<p>The rest of the cards have all the same format showing data from my Aqara Zigbee environment sensors. Next to the sensor values (temperature, humidity and pressure) data about the battery and linkquality are also displayed.</p>
-<div class="admonition note">
-<p class="admonition-title">If you remove the battery and linkquality, there is space for an extra icon/state/segmented arc</p>
-</div>
-<p>This card could also be useful for server monitoring showing CPU, Memory, Disk usage and some other data.</p>
+<p><strong>Environment cards</strong></p>
+<p>The environment cards have all the same format showing data from my Aqara Zigbee environment sensors. Next to the sensor values (temperature, humidity and pressure) data about the battery and linkquality are also displayed.</p>
+<p><strong>Server cards</strong></p>
+<p>These show the logical stuff like cpu, memory, disk and system load information.</p>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1847,8 +1885,104 @@ All cards have an aspect ratio of 6/1.</p>
 </span> Data sources<a class="headerlink" href="#data-sources" title="Permanent link">&para;</a></h2>
 <ul>
 <li>First card: <a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
-<li>Other cards: Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
+<li>Environment cards: Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the <a href="https://www.home-assistant.io/integrations/mqtt/">MQTT integration</a></li>
+<li>Server cards: <ul>
+<li><a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
 </ul>
+</li>
+</ul>
+<p>Below the <code>sensor:</code> configuration for the System Monitor and extra Glances RESTful sensors:</p>
+<p><table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">System Monitor sensors</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># System Monitor</span>
+<span class="c1"># ==============</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/systemmonitor/</span>
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">systemmonitor</span>
+    <span class="nt">resources</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_use_percent</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_use</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">disk_free</span>
+        <span class="nt">arg</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_free</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_use</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory_use_percent</span>    
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_1m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_5m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">load_15m</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">processor_use</span>
+      <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">last_boot</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Extra Glances sensors</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># REStful stuff, Glances for instance</span>
+<span class="c1"># ===================================</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/rest/</span>
+<span class="c1"># - https://www.home-assistant.io/integrations/sensor.rest/</span>
+<span class="c1">#</span>
+<span class="c1"># Get Load sensors from Glances directly. The integration does not give them...</span>
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rest</span>
+    <span class="nt">resource</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://poseidon.srv.home:61208/api/3/load</span>
+    <span class="nt">scan_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">glances_poseidon_load</span>
+    <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">value_json}}&quot;</span>
+    <span class="nt">json_attributes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min1</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min5</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">min15</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cpucore</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">template</span>
+    <span class="nt">sensors</span><span class="p">:</span>
+      <span class="nt">glances_poseidon_load_min1</span><span class="p">:</span>
+        <span class="nt">value_template</span><span class="p">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">state_attr(&#39;sensor.glances_poseidon_load&#39;,</span><span class="nv"> </span><span class="s">&#39;min1&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="nt">friendly_name</span><span class="p">:</span> <span class="s">&quot;Glances-Poseidon</span><span class="nv"> </span><span class="s">Load</span><span class="nv"> </span><span class="s">1min&quot;</span>
+        <span class="nt">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;1m&quot;</span>
+</code></pre></div>
+</td></tr></table></p>
+<div class="admonition info">
+<p class="admonition-title">The top card uses the system monitor integration, the bottom card the Glances and RESTful sensor integration</p>
+</div>
 <h2 id="how-to-make-it-work-in-your-own-installation"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1879,15 +2013,36 @@ All cards have an aspect ratio of 6/1.</p>
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
 <h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p>You only need the AirVisual integration. The other environment sensors can be replaced with a sensor from your own installation.</p>
+<p><strong>First card</strong></p>
+<p>You only need the AirVisual integration.</p>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
+</ul>
+<p><strong>Environment cards</strong></p>
+<p>The environment sensors can be replaced with a sensor from your own installation.</p>
+<p><strong>Server cards</strong></p>
+<p>The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:</p>
+<h4 id="for-the-hestia-server-card">For the <code>Hestia</code> server card:<a class="headerlink" href="#for-the-hestia-server-card" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></li>
+</ul>
+<h4 id="and-for-the-poseidonserver-card">And for the <code>Poseidon</code>server card:<a class="headerlink" href="#and-for-the-poseidonserver-card" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
+<li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
 </ul>
 <h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
 <p><strong>First card</strong></p>
 <p>The <code>Airvisual</code> entities should be the same for any installation, so no changes required on that part.</p>
-<p><strong>Other cards</strong></p>
+<p><strong>Environment cards</strong></p>
 <p>You can replace the existing <code>temperature</code>, <code>humidity</code>, <code>pressure</code>, <code>battery</code> and <code>linkquality</code> entities with a version of your own sensor entities. </p>
+<p><strong>Server cards</strong></p>
+<p>The <code>System Monitor</code> entities should be the same for any installation, so no changes required on that part.</p>
+<p>The <code>Glances</code> integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
+My integration is called <code>Glances-Poseidon</code> and thus the entities for instance <code>sensor.glances_poseidon_cpu_load</code>. You have to change the entities to your own entity id's.</p>
+<div class="admonition info">
+<p class="admonition-title">If you have only 1 server, remove the second server...</p>
+</div>
 <h2 id="configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
