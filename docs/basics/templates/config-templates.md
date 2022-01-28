@@ -2,30 +2,52 @@
 template: overrides/main.html
 ---
 
+##:sak-sak-logo: Introduction
+The great thing about SAK is that you can define your own card layout given the tools possibilities. This implies that you need more YAML than the average card who's layout is mostly fixed.
+
+More YAML means more work, possibly more errors, but also a lot of changes in different views if you make a change and want that change for all your views.
+
+On a card level, the nice `decluttering template card` already solves a great deal by putting a card's configuration into a template, which you can re-use in any view you want.
+
+SAK templates operate on a different level: it enables the re-use of things like `tools`, `toolsets`, `JavaScript templates/snippets`, `colorstops/lists` and more.
+
+!!! Important "SAK templates therefore make re-use within a SAK card, and between SAK cards possible!"
+
+[Example 7]: ../examples/example-7.md
+  
+And as you can scale a `toolset`, you can use different sizes of a `toolset` template in various cards. [Example 7] shows an example of re-using a toolset in various sizes.
+
 ##:sak-sak-logo: Basics
-Templates have been created to enable re-use of various parts of the SAK Card's YAML config.
 
-Templates not only cover toolsets, but also things like colorstops.
+**Usage**
 
-!!! Question "Every part of the cards config could be converted to a template"
-    Well, at least that is the intention. It hasn't been tested though!
+SAK Templates can cover almost any part of the SAK YAML configuration.
 
-!!! Success "A toolset template can use a colorstop template"
-    Yup. Templates can use templates. But take care: don't create a loop. There is no safeguard for this (ab)use.
+Most used templates are:
+
+- toolsets
+- derived entities
+- colorstops and colorlists
+
+!!! Note "A template can use another template"
+    Yup. Templates can use templates. A toolset template for instance can use a colorstop template. 
     
-!!! Success "SAK templates use the same 'format' as the decluttering template"
-    Why not! And it makes it easier to use for people already acquainted with the decluttering card.
+    But take care: don't create a loop. There is no safeguard for this (ab)use.
 
-    However, SAK templates work on a lower level: where decluttering template works for cards, SAK templates enable re-use within **and** between cards.
-    
-###:sak-sak-logo: An example: Toolset
+**Location**
+
+SAK templates are stored in the `lovelace\sak_templates\templates` folder and automatically included by the `sak_templates.yaml` file in the `lovelace/sak_templates` folder. You don't have to manually add a template once stored in the `templates` folder.
+
+##:sak-sak-logo: Examples
+
+###:sak-sak-logo: A Toolset Example
 This example shows the use of a Toolset template.
 
 - it shows the name of the template to use
 - it shows the variables to pass to the template
 - and last but not least: the `type` of the template **MUST** match the part it is replacing. In this case a toolset.
 
-```yaml title="view" linenums="1" hl_lines="1 4"
+```yaml title="view-xyz.yaml" linenums="1" hl_lines="4-9"
 - toolset: memory               # template type be of type "toolset"
   # Use pre-defined template for this part.
   # Template has variables.
@@ -39,20 +61,18 @@ This example shows the use of a Toolset template.
 
 Below the partial config:
 
-- the first 7 lines define the template part of the config
-- from line 8, the toolset itself is defined. Identical to any inline toolset config.
+- the first 7 lines define the template part with passed variables of the config
+- from line 8, the toolset itself is defined. Identical to any inline toolset config. Except for the variable substitution of course :smile:
 
-```yaml title="template" linenums="1" hl_lines="1 8"
+```yaml title="tools-segarc-icon-state template.yaml" linenums="1" hl_lines="1 2 8"
 template:
-  type: toolset                   # type MUST equal tag
+  type: toolset                   # toolset template it is...
   defaults:                       # Default values for vars
     - entity: 0
     - cx: 25
     - cy: 50
     - show_scale: false
 toolset:                          # From here the toolset is defined!
-  from_template: true             # Debug, ignore
-  toolset: segarc-icon-state      # Debug, ignore
   position:
     cx: '[[cx]]'                  # Templated var!!
     cy: '[[cy]]'                  # Templated var!!
@@ -77,7 +97,7 @@ toolset:                          # From here the toolset is defined!
   <...>                           # rest of config removed for brevity
 ```
 
-###:sak-sak-logo: An example: colorstop
+###:sak-sak-logo: A Colorstop example
 Say you want some consistency for the cards that show the inside temperature colors.
 
 You define a colorstops template, and after that use that in several cards/tools. 
@@ -153,10 +173,11 @@ The result would be a replaced colorstops part:
         21: 'var(--theme-gradient-color-04)'
 ```
 
-###:sak-sak-logo: Another example: derived_entity template
+###:sak-sak-logo: A Derived Entity Example
 Many examples calculate the `brightness` attribute from a light using a `derived_entity`: Home Assistant passes the `brightness` attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.
+[Example 10]: ../examples/example-10.md
 
-`Example 10` is using a template for one card to show that you could re-use this JavaScript template.
+[Example 10] is using a template for one card to show that you could re-use this JavaScript template.
 
 ```yaml title="view" linenums="1" hl_lines="18-26"
 - type: segarc
@@ -225,9 +246,19 @@ derived_entity_brightness:
 ```
 
 
-##:sak-sak-logo: Advanced usage
+##:sak-sak-logo: Advanced usage, Overrides and Extensions
+
+The standard way of changing the template is to pass pre-defined variables to the template. 
+<br>In some cases however, one wants to change more parts of the template in which case variables may not suit those needs.
+
+In those cases, SAK templates provide the same sort of functionality as the built-in YAML Overrides and Extensions.
+
+###:sak-sak-logo: Example position override
+
 This example shows the simple use of overwriting parts of the Toolset template without using template variables.
 <br>In this case the `position` record is simply overwritten instead of passing `cx` and `cy` as variables.
+
+!!! Info "This use of SAK Templates has some similarities with the use of overrides and extensions from YAML Anchors"
 
 ```yaml title="From: view-sake7.yaml" linenums="1" hl_lines="18-21"
 - toolset: memory
@@ -242,7 +273,8 @@ This example shows the simple use of overwriting parts of the Toolset template w
     cy: 74                      # ...variables!
 ```
 
-##:sak-sak-logo: More advanced usage
+###:sak-sak-logo: Example with tool override within toolset
+
 We can even go a bit further and overwrite a tool within the list of tools.
 
 !!! Important "A tool needs a unique ID to be able to overwrite the tool config"
@@ -287,6 +319,9 @@ The full config for the segarc tool is below. The yellow lines show the parts (r
 - the `show` config
 - the `segments` config
 
+!!! Note "The tool to replace parts of is selected by the `id: ` field"
+
+
 ```yaml title="From: template" linenums="1" hl_lines="14 17" 
     - type: segarc
       id: 0
@@ -316,6 +351,44 @@ The full config for the segarc tool is below. The yellow lines show the parts (r
           fill: var(--theme-gradient-color-01)
         background:
           fill: var(--cs-theme-default-darken-15)
+          filter: url(#is-1)
+```
+
+The resulting YAML config will be as follows with the overridden and/or extended `position:`,  `show:` and `segments:` maps.
+
+```yaml title="From: result" linenums="1" hl_lines="5-7 16-17 19-25"
+    - type: segarc
+      id: 0
+      entity_index: 0
+      position:
+        cx: 72.5              # Override
+        cy: 74                # Override
+        scale: .8             # Extension
+        start_angle: 0
+        end_angle: 360
+        width: 5
+        radius: 25
+      scale:
+        min: 0
+        max: 100
+      show:
+        scale: true           # Override
+        style: 'colorstops'   # Override
+      segments:
+        colorstops:           # Override
+          gap: 1
+          colors:
+            00: 'DarkSeaGreen'
+            70: 'yellow'
+            80: 'orange'
+            90: 'red'
+      animation:
+        duration: 5
+      styles:
+        foreground:
+          fill: var(--theme-gradient-color-01)
+        background:
+          fill: var(--theme-background-color-darken-20)
           filter: url(#is-1)
 ```
 
