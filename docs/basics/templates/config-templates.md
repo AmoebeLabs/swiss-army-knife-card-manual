@@ -13,7 +13,7 @@ SAK templates operate on a different level: it enables the re-use of things like
 
 !!! Important "SAK templates therefore make re-use within a SAK card, and between SAK cards possible!"
 
-[Example 7]: ../examples/example-7.md
+[Example 7]: ../../examples/example-7.md
   
 And as you can scale a `toolset`, you can use different sizes of a `toolset` template in various cards. [Example 7] shows an example of re-using a toolset in various sizes.
 
@@ -175,7 +175,7 @@ The result would be a replaced colorstops part:
 
 ###:sak-sak-logo: A Derived Entity Example
 Many examples calculate the `brightness` attribute from a light using a `derived_entity`: Home Assistant passes the `brightness` attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.
-[Example 10]: ../examples/example-10.md
+[Example 10]: ../../examples/example-10.md
 
 [Example 10] is using a template for one card to show that you could re-use this JavaScript template.
 
