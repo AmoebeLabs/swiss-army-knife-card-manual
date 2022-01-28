@@ -3,13 +3,9 @@ template: overrides/main.html
 ---
 
 ##:sak-sak-logo: Introduction
-The great thing about SAK is that you can define your own card layout given the tools possibilities. This implies that you need more YAML than the average card who's layout is mostly fixed.
+If you are familiar with the `decluttering template card`, you already know how to re-use cards and specialize them using variables.
 
-More YAML means more work, possibly more errors, but also a lot of changes in different views if you make a change and want that change for all your views.
-
-On a card level, the nice `decluttering template card` already solves a great deal by putting a card's configuration into a template, which you can re-use in any view you want.
-
-SAK templates operate on a different level: it enables the re-use of things like `tools`, `toolsets`, `JavaScript templates/snippets`, `colorstops/lists` and more.
+SAK templates operate on a different level: they enable the re-use of `tools`, `toolsets`, `JavaScript templates/snippets`, `colorstops/lists` and more.
 
 !!! Important "SAK templates therefore make re-use within a SAK card, and between SAK cards possible!"
 
@@ -36,11 +32,11 @@ Most used templates are:
 
 **Location**
 
-SAK templates are stored in the `lovelace\sak_templates\templates` folder and automatically included by the `sak_templates.yaml` file in the `lovelace/sak_templates` folder. You don't have to manually add a template once stored in the `templates` folder.
+SAK templates are stored in the `lovelace\sak_templates\templates` folder and automatically included by the `sak_templates.yaml` file in the `lovelace/sak_templates` folder.
 
 ##:sak-sak-logo: Examples
 
-###:sak-sak-logo: A Toolset Example
+###:sak-sak-logo: Toolset example
 This example shows the use of a Toolset template.
 
 - it shows the name of the template to use
@@ -97,7 +93,7 @@ toolset:                          # From here the toolset is defined!
   <...>                           # rest of config removed for brevity
 ```
 
-###:sak-sak-logo: A Colorstop example
+###:sak-sak-logo: Colorstop example
 Say you want some consistency for the cards that show the inside temperature colors.
 
 You define a colorstops template, and after that use that in several cards/tools. 
@@ -119,7 +115,7 @@ You define a colorstops template, and after that use that in several cards/tools
   show:
     style: colorstops       # Use a colorstop
   segments:
-    colorstops:             # The colorstops map is replaced
+    colorstops:             # The colorstops dict is replaced
       template:             # Use template colorstops (re-use!)
         name: colorstops_temperature_inside
         variables:          # Pass variables to template
@@ -165,7 +161,7 @@ The result would be a replaced colorstops part:
   show:
     style: colorstops       # Use a colorstop
   segments:
-    colorstops:             # The colorstops map is replaced
+    colorstops:             # The colorstops dict is replaced
       gap: 1
       colors:
         17: 'PowderBlue'
@@ -173,7 +169,7 @@ The result would be a replaced colorstops part:
         21: 'var(--theme-gradient-color-04)'
 ```
 
-###:sak-sak-logo: A Derived Entity Example
+###:sak-sak-logo: Derived Entity example
 Many examples calculate the `brightness` attribute from a light using a `derived_entity`: Home Assistant passes the `brightness` attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.
 [Example 10]: ../../examples/example-10.md
 
@@ -217,7 +213,7 @@ Many examples calculate the `brightness` attribute from a light using a `derived
     foreground:
       fill: var(--primary-text-color)
     background:
-      fill: var(--cs-theme-default-darken-15)
+      fill: var(--theme-background-color-darken-20)
 ```
 
 The template is defined in `sak_templates.yaml`
@@ -253,7 +249,7 @@ The standard way of changing the template is to pass pre-defined variables to th
 
 In those cases, SAK templates provide the same sort of functionality as the built-in YAML Overrides and Extensions.
 
-###:sak-sak-logo: Example position override
+###:sak-sak-logo: Position override example
 
 This example shows the simple use of overwriting parts of the Toolset template without using template variables.
 <br>In this case the `position` record is simply overwritten instead of passing `cx` and `cy` as variables.
@@ -273,7 +269,7 @@ This example shows the simple use of overwriting parts of the Toolset template w
     cy: 74                      # ...variables!
 ```
 
-###:sak-sak-logo: Example with tool override within toolset
+###:sak-sak-logo: Tool override within toolset example
 
 We can even go a bit further and overwrite a tool within the list of tools.
 
@@ -314,10 +310,10 @@ The yellow lines show the parts that are overwritten.
 
 ```
 
-The full config for the segarc tool is below. The yellow lines show the parts (records/maps) that are overwritten:
+The full config for the segarc tool is below. The yellow lines show the dictionaries that are overridden:
 
-- the `show` config
-- the `segments` config
+- the `show` config dictionary
+- the `segments` config dictionary
 
 !!! Note "The tool to replace parts of is selected by the `id: ` field"
 
@@ -350,16 +346,16 @@ The full config for the segarc tool is below. The yellow lines show the parts (r
         foreground:
           fill: var(--theme-gradient-color-01)
         background:
-          fill: var(--cs-theme-default-darken-15)
+          fill: var(--theme-background-color-darken-20)
           filter: url(#is-1)
 ```
 
-The resulting YAML config will be as follows with the overridden and/or extended `position:`,  `show:` and `segments:` maps.
+The resulting YAML config will be as follows with the overridden and/or extended `position:`,  `show:` and `segments:` dicts.
 
 ```yaml title="From: result" linenums="1" hl_lines="5-7 16-17 19-25"
     - type: segarc
       id: 0
-      entity_index: 0
+      entity_index: 0         # Replaced variable
       position:
         cx: 72.5              # Override
         cy: 74                # Override
@@ -392,4 +388,4 @@ The resulting YAML config will be as follows with the overridden and/or extended
           filter: url(#is-1)
 ```
 
-!!! Warning "Overwriting parts of a template is powerfull but can be error-prone. So take care!"
+!!! Warning "Overriding and extending parts of a template is powerfull but can be error-prone. So take care!"

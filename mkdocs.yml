@@ -106,10 +106,11 @@ nav:
     - Card structure: basics/card-structure.md
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
-    - Templates:
+    - Templates and Snippets:
+      - Overview: basics/templates/overview.md
       - YAML built-in: basics/templates/yaml-built-in.md
-      - SAK configuration templates: basics/templates/config-templates.md
-      - Javascript templates: basics/templates/javascript-templates.md
+      - SAK templates: basics/templates/sak-templates.md
+      - Javascript snippets: basics/templates/javascript-snippets.md
     - Interactions: basics/interactions.md
     - Haptics: basics/haptics.md
     - Styling:
