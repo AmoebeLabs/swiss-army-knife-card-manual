@@ -1,0 +1,2853 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Swiss Army Knife custom card for Home Assistant lets you create your own visualization given the tools and SVG/CSS styling options provided by this card">
+      
+      
+        <meta name="author" content="Marco">
+      
+      
+        <link rel="canonical" href="https://swiss-army-knife.docs.amoebelabs.com/basics/templates/config-templates/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.0b2">
+    
+    
+      
+        <title>SAK configuration templates - Swiss Army Knife custom card</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0c73cc44.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../overrides/assets/stylesheets/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-YH4P44GYYJ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-YH4P44GYYJ",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH4P44GYYJ"></script>
+
+
+    
+    
+
+  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="../../../overrides/assets/stylesheets/main.scss" -->
+  <!-- /> -->
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <a style="color:white;opacity:.9;" onmouseover="this.style.color='white';this.style.fontSize=''";" onmouseout="this.style.color='white';;this.style.fontSize=''">
+    <span style="font-size:16px;">Note:</span> This is <strong>preliminary work-in-progress</strong> documentation for the not yet released custom Home Assistant card!
+  </a>
+
+
+          </div>
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Swiss Army Knife custom card" class="md-header__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
+      
+  <img src="../../../assets/logo/sak-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Swiss Army Knife custom card
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SAK configuration templates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/amoebelabs/swiss-army-knife" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amoebelabs/swiss-army-knife
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../start/introduction/" class="md-tabs__link">
+        Getting started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../svg-as-basis/" class="md-tabs__link md-tabs__link--active">
+        Basics
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/circle-tool/" class="md-tabs__link">
+        Tools
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/introduction/" class="md-tabs__link">
+        Examples
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../helpers/introduction/" class="md-tabs__link">
+        Helpers
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Swiss Army Knife custom card" class="md-nav__button md-logo" aria-label="Swiss Army Knife custom card" data-md-component="logo">
+      
+  <img src="../../../assets/logo/sak-logo.svg" alt="logo">
+
+    </a>
+    Swiss Army Knife custom card
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/amoebelabs/swiss-army-knife" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    amoebelabs/swiss-army-knife
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/installation-0.9.0-b1/" class="md-nav__link">
+        Previous version 0.9.0-b1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/designing-your-card/" class="md-nav__link">
+        Designing your card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../svg-as-basis/" class="md-nav__link">
+        SVG as basis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../card-structure/" class="md-nav__link">
+        Card structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools-and-toolsets/" class="md-nav__link">
+        Tools and Toolsets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coordinate-system/" class="md-nav__link">
+        Coordinate system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml-built-in/" class="md-nav__link">
+        YAML built-in
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SAK configuration templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SAK configuration templates
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-toolset-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Toolset Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-colorstop-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Colorstop example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-derived-entity-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Derived Entity Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage-overrides-and-extensions" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Advanced usage, Overrides and Extensions
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Advanced usage, Overrides and Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-position-override" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Example position override
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-with-tool-override-within-toolset" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Example with tool override within toolset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript-templates/" class="md-nav__link">
+        Javascript templates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interactions/" class="md-nav__link">
+        Interactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../haptics/" class="md-nav__link">
+        Haptics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Styling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Styling" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Styling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../styling/styles/" class="md-nav__link">
+        Styles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" data-md-state="indeterminate" type="checkbox" id="__nav_3_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          Animations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Animations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Animations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animations/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animations/css-animations/" class="md-nav__link">
+        CSS Animations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animations/colorstops/" class="md-nav__link">
+        Colorstops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../animations/state-operators/" class="md-nav__link">
+        State operators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Basic tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basic tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basic tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/circle-tool/" class="md-nav__link">
+        Circle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/ellipse-tool/" class="md-nav__link">
+        Ellipse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/line-tool/" class="md-nav__link">
+        Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/rectangle-tool/" class="md-nav__link">
+        Rectangle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/rectangle-ex-tool/" class="md-nav__link">
+        RectangleEx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/regular-poly-tool/" class="md-nav__link">
+        Regular Poly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/text-tool/" class="md-nav__link">
+        Text
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Advanced tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/horseshoe-tool/" class="md-nav__link">
+        Horse Shoe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/segarc-tool/" class="md-nav__link">
+        Segmented Arc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/slider-tool/" class="md-nav__link">
+        Slider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/switch-tool/" class="md-nav__link">
+        Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/usersvg-tool/" class="md-nav__link">
+        User SVG
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          HA Entity tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HA Entity tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          HA Entity tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/entity-area-tool/" class="md-nav__link">
+        Entity Area
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/entity-icon-tool/" class="md-nav__link">
+        Entity Icon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/entity-name-tool/" class="md-nav__link">
+        Entity Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/entity-state-tool/" class="md-nav__link">
+        Entity State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/entity-barchart-tool/" class="md-nav__link">
+        Entity History
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-1/" class="md-nav__link">
+        1. Airvisual & Weather forecast
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-2/" class="md-nav__link">
+        2. Lights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-3/" class="md-nav__link">
+        3. Sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-4/" class="md-nav__link">
+        4. More sensors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-5/" class="md-nav__link">
+        5. Car dashboard alike
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-6/" class="md-nav__link">
+        6. Weather on SVG background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-7/" class="md-nav__link">
+        7. Servers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-8/" class="md-nav__link">
+        8. Homekit alike
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-9/" class="md-nav__link">
+        9. High Contrast
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-10/" class="md-nav__link">
+        10. Colorful mix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-11/" class="md-nav__link">
+        11. Boiler and electricity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/example-12/" class="md-nav__link">
+        12. Wide cards
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Helpers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Helpers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Helpers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpers/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpers/palette-generators/" class="md-nav__link">
+        Pallette generators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpers/gradient-generator-converter/" class="md-nav__link">
+        Gradient generator / converter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-toolset-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Toolset Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-colorstop-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Colorstop example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-derived-entity-example" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ A Derived Entity Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage-overrides-and-extensions" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Advanced usage, Overrides and Extensions
+  </a>
+  
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Advanced usage, Overrides and Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-position-override" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Example position override
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-with-tool-override-within-toolset" class="md-nav__link">
+    
+
+
+  
+  
+  
+  
+
+ Example with tool override within toolset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>SAK configuration templates</h1>
+
+<h2 id="introduction"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The great thing about SAK is that you can define your own card layout given the tools possibilities. This implies that you need more YAML than the average card who's layout is mostly fixed.</p>
+<p>More YAML means more work, possibly more errors, but also a lot of changes in different views if you make a change and want that change for all your views.</p>
+<p>On a card level, the nice <code>decluttering template card</code> already solves a great deal by putting a card's configuration into a template, which you can re-use in any view you want.</p>
+<p>SAK templates operate on a different level: it enables the re-use of things like <code>tools</code>, <code>toolsets</code>, <code>JavaScript templates/snippets</code>, <code>colorstops/lists</code> and more.</p>
+<div class="admonition important">
+<p class="admonition-title">SAK templates therefore make re-use within a SAK card, and between SAK cards possible!</p>
+</div>
+<p>And as you can scale a <code>toolset</code>, you can use different sizes of a <code>toolset</code> template in various cards. <a href="../examples/example-7.md">Example 7</a> shows an example of re-using a toolset in various sizes.</p>
+<h2 id="basics"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<p><strong>Usage</strong></p>
+<p>SAK Templates can cover almost any part of the SAK YAML configuration.</p>
+<p>Most used templates are:</p>
+<ul>
+<li>toolsets</li>
+<li>derived entities</li>
+<li>colorstops and colorlists</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">A template can use another template</p>
+<p>Yup. Templates can use templates. A toolset template for instance can use a colorstop template. </p>
+<p>But take care: don't create a loop. There is no safeguard for this (ab)use.</p>
+</div>
+<p><strong>Location</strong></p>
+<p>SAK templates are stored in the <code>lovelace\sak_templates\templates</code> folder and automatically included by the <code>sak_templates.yaml</code> file in the <code>lovelace/sak_templates</code> folder. You don't have to manually add a template once stored in the <code>templates</code> folder.</p>
+<h2 id="examples"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="a-toolset-example"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> A Toolset Example<a class="headerlink" href="#a-toolset-example" title="Permanent link">&para;</a></h3>
+<p>This example shows the use of a Toolset template.</p>
+<ul>
+<li>it shows the name of the template to use</li>
+<li>it shows the variables to pass to the template</li>
+<li>and last but not least: the <code>type</code> of the template <strong>MUST</strong> match the part it is replacing. In this case a toolset.</li>
+</ul>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view-xyz.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>               <span class="c1"># template type be of type &quot;toolset&quot;</span>
+  <span class="c1"># Use pre-defined template for this part.</span>
+  <span class="c1"># Template has variables.</span>
+<span class="hll">  <span class="nt">template</span><span class="p">:</span>
+</span><span class="hll">    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
+</span><span class="hll">    <span class="nt">variables</span><span class="p">:</span>                  <span class="c1"># Pass the list of variables</span>
+</span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>               <span class="c1"># - entity id</span>
+</span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>                <span class="c1"># - center x position</span>
+</span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>                  <span class="c1"># - center y position</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Below the partial config:</p>
+<ul>
+<li>the first 7 lines define the template part with passed variables of the config</li>
+<li>from line 8, the toolset itself is defined. Identical to any inline toolset config. Except for the variable substitution of course <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></li>
+</ul>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">tools-segarc-icon-state template.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">template</span><span class="p">:</span>
+</span><span class="hll">  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">toolset</span>                   <span class="c1"># toolset template it is...</span>
+</span>  <span class="nt">defaults</span><span class="p">:</span>                       <span class="c1"># Default values for vars</span>
+    <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="p p-Indicator">-</span> <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="p p-Indicator">-</span> <span class="nt">show_scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="hll"><span class="nt">toolset</span><span class="p">:</span>                          <span class="c1"># From here the toolset is defined!</span>
+</span>  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="s">&#39;[[cx]]&#39;</span>                  <span class="c1"># Templated var!!</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="s">&#39;[[cy]]&#39;</span>                  <span class="c1"># Templated var!!</span>
+    <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">tools</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                       <span class="c1"># Unique id within tools config</span>
+      <span class="nt">entity_index</span><span class="p">:</span> <span class="s">&#39;[[entity]]&#39;</span>  <span class="c1"># Templated var!!</span>
+      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+        <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+        <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+      <span class="nt">scale</span><span class="p">:</span>
+        <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+      <span class="nt">show</span><span class="p">:</span>
+        <span class="nt">scale</span><span class="p">:</span> <span class="s">&#39;[[show_scale]]&#39;</span>   <span class="c1"># Templated var!!</span>
+        <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">&lt;...&gt;</span>                           <span class="c1"># rest of config removed for brevity</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="a-colorstop-example"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> A Colorstop example<a class="headerlink" href="#a-colorstop-example" title="Permanent link">&para;</a></h3>
+<p>Say you want some consistency for the cards that show the inside temperature colors.</p>
+<p>You define a colorstops template, and after that use that in several cards/tools. </p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;segarc&#39;</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-130</span>
+    <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">130</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">scale</span><span class="p">:</span>
+    <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>                 <span class="c1"># Inside temperature</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-4.5</span>
+  <span class="nt">show</span><span class="p">:</span>
+    <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>       <span class="c1"># Use a colorstop</span>
+  <span class="nt">segments</span><span class="p">:</span>
+    <span class="nt">colorstops</span><span class="p">:</span>             <span class="c1"># The colorstops map is replaced</span>
+<span class="hll">      <span class="nt">template</span><span class="p">:</span>             <span class="c1"># Use template colorstops (re-use!)</span>
+</span><span class="hll">        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops_temperature_inside</span>
+</span><span class="hll">        <span class="nt">variables</span><span class="p">:</span>          <span class="c1"># Pass variables to template</span>
+</span><span class="hll">          <span class="p p-Indicator">-</span> <span class="nt">thegap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>The template is defined in <code>sak_templates.yaml</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Notice again the template <code>type</code> that matches the part it replaces!</p>
+<p>The template <code>type</code> on line 3 must match line 6 in the template.</p>
+</div>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">colorstops_temperature_inside</span><span class="p">:</span>
+</span>  <span class="nt">template</span><span class="p">:</span>
+<span class="hll">    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>        <span class="c1"># MUST reference colorstops</span>
+</span>    <span class="nt">defaults</span><span class="p">:</span>               <span class="c1"># Give vars a default value</span>
+      <span class="p p-Indicator">-</span> <span class="nt">thegap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="hll">  <span class="nt">colorstops</span><span class="p">:</span>               <span class="c1"># The contents of the template!</span>
+</span>    <span class="nt">gap</span><span class="p">:</span> <span class="s">&#39;[[thegap]]&#39;</span>       <span class="c1"># Use &#39;[[ ]]&#39; for template vars</span>
+    <span class="nt">colors</span><span class="p">:</span>
+      <span class="nt">17</span><span class="p">:</span> <span class="s">&#39;PowderBlue&#39;</span>
+      <span class="nt">19</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
+      <span class="nt">21</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-04)&#39;</span>
+</code></pre></div>
+</td></tr></table>
+<p>The result would be a replaced colorstops part:</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">result</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;segarc&#39;</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+    <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-130</span>
+    <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">130</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">45</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">scale</span><span class="p">:</span>
+    <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>                 <span class="c1"># Inside temperature</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="nt">offset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-4.5</span>
+  <span class="nt">show</span><span class="p">:</span>
+    <span class="nt">style</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">colorstops</span>       <span class="c1"># Use a colorstop</span>
+  <span class="nt">segments</span><span class="p">:</span>
+<span class="hll">    <span class="nt">colorstops</span><span class="p">:</span>             <span class="c1"># The colorstops map is replaced</span>
+</span><span class="hll">      <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span class="hll">      <span class="nt">colors</span><span class="p">:</span>
+</span><span class="hll">        <span class="nt">17</span><span class="p">:</span> <span class="s">&#39;PowderBlue&#39;</span>
+</span><span class="hll">        <span class="nt">19</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
+</span><span class="hll">        <span class="nt">21</span><span class="p">:</span> <span class="s">&#39;var(--theme-gradient-color-04)&#39;</span>
+</span></code></pre></div>
+</td></tr></table>
+<h3 id="a-derived-entity-example"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> A Derived Entity Example<a class="headerlink" href="#a-derived-entity-example" title="Permanent link">&para;</a></h3>
+<p>Many examples calculate the <code>brightness</code> attribute from a light using a <code>derived_entity</code>: Home Assistant passes the <code>brightness</code> attribute as a value between 0 and 255. This range is converted using a JavaScript template to a 0..100 (%) range.</p>
+<p><a href="../examples/example-10.md">Example 10</a> is using a template for one card to show that you could re-use this JavaScript template.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+  <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">position</span><span class="p">:</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+    <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+    <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+  <span class="nt">scale</span><span class="p">:</span>
+    <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+  <span class="nt">show</span><span class="p">:</span>
+    <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
+  <span class="nt">derived_entity</span><span class="p">:</span>
+<span class="hll">    <span class="nt">template</span><span class="p">:</span>
+</span><span class="hll">      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">derived_entity_brightness</span>
+</span><span class="hll">      <span class="c1"># BUG:</span>
+</span><span class="hll">      <span class="c1"># Do need a variable section here and defaults in</span>
+</span><span class="hll">      <span class="c1"># template itself. That should not be the case...</span>
+</span><span class="hll">      <span class="c1">#</span>
+</span><span class="hll">      <span class="c1"># A template without variables SHOULD be possible...</span>
+</span><span class="hll">      <span class="nt">variables</span><span class="p">:</span>
+</span><span class="hll">        <span class="p p-Indicator">-</span> <span class="nt">dummyvar</span><span class="p">:</span> <span class="s">&#39;bug&#39;</span>
+</span>  <span class="nt">segments</span><span class="p">:</span>
+    <span class="nt">colorlist</span><span class="p">:</span>
+      <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+      <span class="nt">colors</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&#39;var(--primary-text-color)&#39;</span>
+  <span class="nt">animation</span><span class="p">:</span>
+    <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+  <span class="nt">styles</span><span class="p">:</span>
+    <span class="nt">foreground</span><span class="p">:</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--primary-text-color)</span>
+    <span class="nt">background</span><span class="p">:</span>
+      <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-theme-default-darken-15)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The template is defined in <code>sak_templates.yaml</code></p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="hll"><span class="nt">derived_entity_brightness</span><span class="p">:</span>
+</span>  <span class="nt">template</span><span class="p">:</span>
+<span class="hll">    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">derived_entity</span>
+</span>    <span class="nt">defaults</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">dummyvar</span><span class="p">:</span> <span class="s">&#39;dummy&#39;</span>
+<span class="hll">  <span class="nt">derived_entity</span><span class="p">:</span>
+</span>    <span class="nt">input </span><span class="p">:</span> <span class="s">&#39;[[[</span><span class="nv"> </span><span class="s">return</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">]]]&#39;</span>
+    <span class="nt">state</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+      <span class="no">[[[</span>
+        <span class="no">if (typeof(entity) === &#39;undefined&#39;) return;</span>
+        <span class="no">if (typeof(state) === &#39;undefined&#39;) return;</span>
+
+        <span class="no">var bri = Math.round(state / 2.55);</span>
+        <span class="no">return (bri ? bri : &#39;0&#39;);</span>
+      <span class="no">]]]</span>
+    <span class="nt">unit</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
+      <span class="no">[[[</span>
+        <span class="no">if (typeof(state) === &#39;undefined&#39;) return undefined;</span>
+        <span class="no">return &#39;%&#39;;</span>
+      <span class="no">]]]</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="advanced-usage-overrides-and-extensions"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Advanced usage, Overrides and Extensions<a class="headerlink" href="#advanced-usage-overrides-and-extensions" title="Permanent link">&para;</a></h2>
+<p>The standard way of changing the template is to pass pre-defined variables to the template. 
+<br>In some cases however, one wants to change more parts of the template in which case variables may not suit those needs.</p>
+<p>In those cases, SAK templates provide the same sort of functionality as the built-in YAML Overrides and Extensions.</p>
+<h3 id="example-position-override"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Example position override<a class="headerlink" href="#example-position-override" title="Permanent link">&para;</a></h3>
+<p>This example shows the simple use of overwriting parts of the Toolset template without using template variables.
+<br>In this case the <code>position</code> record is simply overwritten instead of passing <code>cx</code> and <code>cy</code> as variables.</p>
+<div class="admonition info">
+<p class="admonition-title">This use of SAK Templates has some similarities with the use of overrides and extensions from YAML Anchors</p>
+</div>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake7.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>
+  <span class="c1"># Use pre-defined template for this part.</span>
+  <span class="c1"># Template has variables.</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
+    <span class="nt">variables</span><span class="p">:</span>                  <span class="c1"># Pass the list of variables</span>
+      <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>               <span class="c1"># - entity id</span>
+  <span class="nt">position</span><span class="p">:</span>                     <span class="c1"># &#39;Overwrite&#39; the position from template</span>
+    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>                    <span class="c1"># Yes, we could have passed these as...</span>
+    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>                      <span class="c1"># ...variables!</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="example-with-tool-override-within-toolset"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
+	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
+  <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
+    l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
+    c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
+    c-1.519,2.679-1.476,5.956,0.119,8.602l142.618,237.116C162.977,467.447,208.263,512,263.858,512
+    c56.465,0,102.4-45.935,102.4-102.4v-99.089c27.435,27.87,67.345,55.151,119.262,56.422h0.205c2.935,0,5.675-1.51,7.236-4.002
+    C494.557,360.371,494.693,357.163,493.311,354.483z M161.458,378.863L41.582,179.558c22.315,1.493,44.169,7.612,64.034,17.946
+    l-7.023,28.8c-0.546,2.219-0.179,4.548,1.015,6.494c1.195,1.937,3.115,3.319,5.333,3.84l25.259,5.914l-5.837,24.926
+    c-0.555,2.389-0.06,4.915,1.374,6.912c1.434,1.997,3.661,3.277,6.101,3.524l29.619,2.893V378.863z M263.858,34.133
+    c28.237,0,51.2,22.972,51.2,51.2c0,28.237-22.963,51.2-51.2,51.2s-51.2-22.963-51.2-51.2
+    C212.658,57.105,235.621,34.133,263.858,34.133z M263.858,477.867c-28.237,0-51.2-22.963-51.2-51.2
+    c0-28.228,22.963-51.2,51.2-51.2s51.2,22.972,51.2,51.2C315.058,454.903,292.095,477.867,263.858,477.867z M332.125,281.6
+    c0,4.719-3.814,8.533-8.533,8.533h-25.6v25.6c0,4.719-3.814,8.533-8.533,8.533h-51.2c-4.719,0-8.533-3.814-8.533-8.533v-25.6
+    h-25.6c-4.719,0-8.533-3.814-8.533-8.533v-51.2c0-4.71,3.814-8.533,8.533-8.533h25.6v-25.6c0-4.71,3.814-8.533,8.533-8.533h51.2
+    c4.719,0,8.533,3.823,8.533,8.533v25.6h25.6c4.719,0,8.533,3.823,8.533,8.533V281.6z M366.258,285.244v-69.257l17.946,36.599
+    c1.468,3.021,4.506,4.77,7.663,4.77c1.254,0,2.543-0.273,3.746-0.87c4.241-2.065,5.982-7.185,3.9-11.418l-33.254-67.84v-31.215
+    L471.09,348.681C424.054,342.255,388.752,311.808,366.258,285.244z"/>
+  <path d="M263.858,119.469c18.825,0,34.133-15.309,34.133-34.133s-15.309-34.133-34.133-34.133s-34.133,15.309-34.133,34.133
+    S245.034,119.469,263.858,119.469z"/>
+  <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
+    s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/>
+  <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
+    c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/>
+</svg>
+</span> Example with tool override within toolset<a class="headerlink" href="#example-with-tool-override-within-toolset" title="Permanent link">&para;</a></h3>
+<p>We can even go a bit further and overwrite a tool within the list of tools.</p>
+<div class="admonition important">
+<p class="admonition-title">A tool needs a unique ID to be able to overwrite the tool config</p>
+<p>In this case the <code>segarc</code> has <code>id: 0</code> and <strong>parts</strong> of the config are overwritten!</p>
+</div>
+<p>The yellow lines show the parts that are overwritten.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake7</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">toolset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">memory</span>
+  <span class="c1"># Use pre-defined template for this part.</span>
+  <span class="c1"># Template has variables.</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tools_segarc_icon_state</span>
+    <span class="nt">variables</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">entity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="hll">  <span class="nt">position</span><span class="p">:</span>
+</span><span class="hll">    <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>
+</span><span class="hll">    <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>
+</span><span class="hll">    <span class="c1"># Scale to 80% of toolset template.</span>
+</span><span class="hll">    <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.8</span>
+</span>  <span class="c1"># Overwrite template with the following configuration not covered by the template</span>
+  <span class="c1"># variables. id is required to make this work. So much possibilities...</span>
+<span class="hll">  <span class="nt">tools</span><span class="p">:</span>
+</span><span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+</span><span class="hll">      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</span><span class="hll">      <span class="nt">show</span><span class="p">:</span>
+</span><span class="hll">        <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span class="hll">        <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorstops&#39;</span>
+</span><span class="hll">      <span class="nt">segments</span><span class="p">:</span>
+</span><span class="hll">        <span class="nt">colorstops</span><span class="p">:</span>
+</span><span class="hll">          <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span class="hll">          <span class="nt">colors</span><span class="p">:</span>
+</span><span class="hll">            <span class="nt">00</span><span class="p">:</span> <span class="s">&#39;DarkSeaGreen&#39;</span>
+</span><span class="hll">            <span class="nt">70</span><span class="p">:</span> <span class="s">&#39;yellow&#39;</span>
+</span><span class="hll">            <span class="nt">80</span><span class="p">:</span> <span class="s">&#39;orange&#39;</span>
+</span><span class="hll">            <span class="nt">90</span><span class="p">:</span> <span class="s">&#39;red&#39;</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>The full config for the segarc tool is below. The yellow lines show the parts (records/maps) that are overwritten:</p>
+<ul>
+<li>the <code>show</code> config</li>
+<li>the <code>segments</code> config</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">The tool to replace parts of is selected by the <code>id:</code> field</p>
+</div>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">entity_index</span><span class="p">:</span> <span class="s">&#39;[[entity]]&#39;</span>
+      <span class="nt">position</span><span class="p">:</span>
+        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+        <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+        <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+        <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+      <span class="nt">scale</span><span class="p">:</span>
+        <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="hll">      <span class="nt">show</span><span class="p">:</span>
+</span>        <span class="nt">scale</span><span class="p">:</span> <span class="s">&#39;[[show_scale]]&#39;</span>
+        <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorlist&#39;</span>
+<span class="hll">      <span class="nt">segments</span><span class="p">:</span>
+</span>        <span class="nt">colorlist</span><span class="p">:</span>
+          <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+          <span class="nt">colors</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="s">&#39;var(--theme-gradient-color-01)&#39;</span>
+      <span class="nt">animation</span><span class="p">:</span>
+        <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">foreground</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--theme-gradient-color-01)</span>
+        <span class="nt">background</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--cs-theme-default-darken-15)</span>
+          <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#is-1)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The resulting YAML config will be as follows with the overridden and/or extended <code>position:</code>,  <code>show:</code> and <code>segments:</code> maps.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: result</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">segarc</span>
+      <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">entity_index</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">position</span><span class="p">:</span>
+<span class="hll">        <span class="nt">cx</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">72.5</span>              <span class="c1"># Override</span>
+</span><span class="hll">        <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>                <span class="c1"># Override</span>
+</span><span class="hll">        <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.8</span>             <span class="c1"># Extension</span>
+</span>        <span class="nt">start_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">end_angle</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">360</span>
+        <span class="nt">width</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+        <span class="nt">radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
+      <span class="nt">scale</span><span class="p">:</span>
+        <span class="nt">min</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+        <span class="nt">max</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+      <span class="nt">show</span><span class="p">:</span>
+<span class="hll">        <span class="nt">scale</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>           <span class="c1"># Override</span>
+</span><span class="hll">        <span class="nt">style</span><span class="p">:</span> <span class="s">&#39;colorstops&#39;</span>   <span class="c1"># Override</span>
+</span>      <span class="nt">segments</span><span class="p">:</span>
+<span class="hll">        <span class="nt">colorstops</span><span class="p">:</span>           <span class="c1"># Override</span>
+</span><span class="hll">          <span class="nt">gap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span class="hll">          <span class="nt">colors</span><span class="p">:</span>
+</span><span class="hll">            <span class="nt">00</span><span class="p">:</span> <span class="s">&#39;DarkSeaGreen&#39;</span>
+</span><span class="hll">            <span class="nt">70</span><span class="p">:</span> <span class="s">&#39;yellow&#39;</span>
+</span><span class="hll">            <span class="nt">80</span><span class="p">:</span> <span class="s">&#39;orange&#39;</span>
+</span><span class="hll">            <span class="nt">90</span><span class="p">:</span> <span class="s">&#39;red&#39;</span>
+</span>      <span class="nt">animation</span><span class="p">:</span>
+        <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+      <span class="nt">styles</span><span class="p">:</span>
+        <span class="nt">foreground</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--theme-gradient-color-01)</span>
+        <span class="nt">background</span><span class="p">:</span>
+          <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--theme-background-color-darken-20)</span>
+          <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#is-1)</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition warning">
+<p class="admonition-title">Overwriting parts of a template is powerfull but can be error-prone. So take care!</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../yaml-built-in/" class="md-footer__link md-footer__link--prev" aria-label="Previous: YAML built-in" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              YAML built-in
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../javascript-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: Javascript templates" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Javascript templates
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/amoebelabs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/amoebelabs" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/amoebelabs" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.01824240.min.js", "version": null}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.0885dc41.min.js"></script>
+      
+    
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <!-- <script src="../../../overrides/assets/javascripts/bundle.js"></script> -->
+
+  </body>
+</html>
