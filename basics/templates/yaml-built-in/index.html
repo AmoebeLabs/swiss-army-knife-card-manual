@@ -572,16 +572,30 @@
       
       
         <label class="md-nav__link" for="__nav_3_5">
-          Templates
+          Templates and Snippets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+      <nav class="md-nav" aria-label="Templates and Snippets" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
-          Templates
+          Templates and Snippets
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -634,7 +648,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yaml-anchors-and-alias" class="md-nav__link">
+  <a href="#yaml-anchors-and-aliases" class="md-nav__link">
     
 
 
@@ -643,7 +657,7 @@
   
   
 
- YAML Anchors and Alias
+ YAML Anchors and Aliases
   </a>
   
     <nav class="md-nav" aria-label="
@@ -654,19 +668,19 @@
   
   
 
- YAML Anchors and Alias">
+ YAML Anchors and Aliases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-basic-example" class="md-nav__link">
-    A basic example
+  <a href="#basic-example" class="md-nav__link">
+    Basic example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#a-more-complex-example" class="md-nav__link">
-    A more complex example
+  <a href="#more-complex-example" class="md-nav__link">
+    More complex example
   </a>
   
 </li>
@@ -706,8 +720,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../config-templates/" class="md-nav__link">
-        SAK configuration templates
+      <a href="../sak-templates/" class="md-nav__link">
+        SAK templates
       </a>
     </li>
   
@@ -720,8 +734,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../javascript-templates/" class="md-nav__link">
-        Javascript templates
+      <a href="../javascript-snippets/" class="md-nav__link">
+        Javascript snippets
       </a>
     </li>
   
@@ -1636,7 +1650,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yaml-anchors-and-alias" class="md-nav__link">
+  <a href="#yaml-anchors-and-aliases" class="md-nav__link">
     
 
 
@@ -1645,7 +1659,7 @@
   
   
 
- YAML Anchors and Alias
+ YAML Anchors and Aliases
   </a>
   
     <nav class="md-nav" aria-label="
@@ -1656,19 +1670,19 @@
   
   
 
- YAML Anchors and Alias">
+ YAML Anchors and Aliases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-basic-example" class="md-nav__link">
-    A basic example
+  <a href="#basic-example" class="md-nav__link">
+    Basic example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#a-more-complex-example" class="md-nav__link">
-    A more complex example
+  <a href="#more-complex-example" class="md-nav__link">
+    More complex example
   </a>
   
 </li>
@@ -1739,7 +1753,7 @@
 </span> Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>YAML has built-in methods to cut the visual clutter in large YAML files.</p>
 <p>It does that by the use of so called <code>Anchors</code> and <code>Aliases</code>. On top of that YAML provides <code>Overrides</code> and <code>Extensions</code> to tweak the <code>Anchor</code> functionality.</p>
-<h2 id="yaml-anchors-and-alias"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<h2 id="yaml-anchors-and-aliases"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
 	 class="sak sak-logo" viewBox="0 0 512 512" xml:space="preserve">
@@ -1767,11 +1781,11 @@
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
-</span> YAML Anchors and Alias<a class="headerlink" href="#yaml-anchors-and-alias" title="Permanent link">&para;</a></h2>
-<p>Anchors and Aliases are YAML constructions that allow you to reduce repeat syntax and extend existing data nodes. You can place Anchors (&amp;) on an entity to mark a multi-line section. You can then use an Alias (*) call that anchor later in the document to reference that section.</p>
+</span> YAML Anchors and Aliases<a class="headerlink" href="#yaml-anchors-and-aliases" title="Permanent link">&para;</a></h2>
+<p>Anchors and Aliases are YAML constructions that allow you to reduce repeat syntax and extend existing dictionaries. You can place Anchors (&amp;) on an entity to mark a multi-line section. You can then use an Alias (*) call that anchor later in the document to reference that section.</p>
 <p>The Alias essentially acts as a "see above’’ command, which makes the program pause standard traversal, return to the anchor point, then resume standard traversal after the Anchored portion is finished.</p>
-<h3 id="a-basic-example">A basic example<a class="headerlink" href="#a-basic-example" title="Permanent link">&para;</a></h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<h3 id="basic-example">Basic example<a class="headerlink" href="#basic-example" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Source</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1782,8 +1796,8 @@
 <span class="hll"><span class="p p-Indicator">-</span> <span class="nv">*flag</span>             <span class="c1"># The Alias</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>When this list is read by a YAML parser, the value identified by the anchor (Apple) will be filled at the alias when the YAML is composed. The literal anchor and alias are discarded so they don’t appear in the final result.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p>When this list is read by the Home Assistant YAML parser, the value identified by the anchor (Apple) will be filled at the alias when the YAML is composed. The literal anchor and alias are discarded so they don’t appear in the final result.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Result</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1794,9 +1808,9 @@
 <span class="hll"><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Apple</span>
 </span></code></pre></div>
 </td></tr></table>
-<h3 id="a-more-complex-example">A more complex example<a class="headerlink" href="#a-more-complex-example" title="Permanent link">&para;</a></h3>
-<p>We can also define a map as an Anchor, and re-use the complete map on another location:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<h3 id="more-complex-example">More complex example<a class="headerlink" href="#more-complex-example" title="Permanent link">&para;</a></h3>
+<p>We can also define a dictionary as an Anchor, and re-use the complete dictionary on other locations:</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Source</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1813,7 +1827,7 @@
 <span class="normal">15</span>
 <span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">definitions</span><span class="p">:</span> 
   <span class="nt">steps</span><span class="p">:</span>
-    <span class="c1"># The full step map / object is the Anchor</span>
+    <span class="c1"># The full step dict is the Anchor</span>
 <span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> <span class="nl">&amp;build-test</span>
 </span><span class="hll">        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build and test</span>
 </span><span class="hll">        <span class="nt">script</span><span class="p">:</span>
@@ -1829,8 +1843,8 @@
 <span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> <span class="nv">*build-test</span>   <span class="c1"># Re-use </span>
 </span></code></pre></div>
 </td></tr></table>
-<p>When this map/object is read by a YAML parser, the full map/object will be filled.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>When this dictionary is read by the YAML parser, the full dictionary will be filled.</p>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Result</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1857,7 +1871,7 @@
 <span class="normal">25</span>
 <span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">definitions</span><span class="p">:</span> 
   <span class="nt">steps</span><span class="p">:</span>
-    <span class="c1"># The full step map / object is the Anchor</span>
+    <span class="c1"># The full step dict is the Anchor</span>
 <span class="hll">    <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> <span class="nl">&amp;build-test</span>
 </span>        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build and test</span>
         <span class="nt">script</span><span class="p">:</span>
@@ -1912,7 +1926,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> YAML Overrides and Extensions<a class="headerlink" href="#yaml-overrides-and-extensions" title="Permanent link">&para;</a></h2>
-<p>You can also tweak the Anchor when called by entering &lt;&lt;: before the Alias. Below this, you can write any desired changes. Mappings are overridden if the new mapping has the same name or is added afterward if different.</p>
+<p>You can also tweak the Anchor when called by entering <code>&lt;&lt;:</code> before the Alias. Below this, you can write any desired changes. Field/dicts are overridden if the new field/dict has the same name or is added afterward if different.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1930,8 +1944,7 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">definitions</span><span class="p">:</span> 
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">definitions</span><span class="p">:</span> 
   <span class="nt">steps</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> <span class="nl">&amp;build-test</span>
         <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build and test</span>
@@ -1940,17 +1953,16 @@
         <span class="nt">artifacts</span><span class="p">:</span>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">target/**</span>
 
-
 <span class="nt">pipelines</span><span class="p">:</span>
   <span class="nt">branches</span><span class="p">:</span>
     <span class="nt">develop</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> <span class="nv">*build-test</span>
     <span class="nt">master</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">step</span><span class="p">:</span> 
-          <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*build-test</span>
-          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Testing on Master</span> <span class="c1">#override</span>
-          <span class="nt">ongoing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>          <span class="c1">#extension</span>
-</code></pre></div>
+          <span class="nt">&lt;&lt;</span><span class="p">:</span> <span class="nv">*build-test</span>         <span class="c1"># Re-use</span>
+<span class="hll">          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Testing on Master</span> <span class="c1"># override name field</span>
+</span><span class="hll">          <span class="nt">ongoing</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>          <span class="c1"># extension</span>
+</span></code></pre></div>
 </td></tr></table>
 
               
@@ -1970,7 +1982,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../coordinate-system/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Coordinate system" rel="prev">
+        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1979,20 +1991,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Coordinate system
+              Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../config-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: SAK configuration templates" rel="next">
+        <a href="../sak-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: SAK templates" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              SAK configuration templates
+              SAK templates
             </div>
           </div>
           <div class="md-footer__button md-icon">

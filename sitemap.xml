@@ -71,12 +71,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife.docs.amoebelabs.com/basics/templates/config-templates/</loc>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/basics/templates/javascript-snippets/</loc>
          <lastmod>2022-01-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife.docs.amoebelabs.com/basics/templates/javascript-templates/</loc>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/basics/templates/overview/</loc>
+         <lastmod>2022-01-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife.docs.amoebelabs.com/basics/templates/sak-templates/</loc>
          <lastmod>2022-01-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
