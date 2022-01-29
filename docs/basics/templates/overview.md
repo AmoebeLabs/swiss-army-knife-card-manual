@@ -14,11 +14,11 @@ There are three types of templating available:
 
 They all have different usage.
 
-| Type | re-use in view? | re-use between cards? | type of re-use |
-| ---- | --------------- | ------------------ | ---------------|
-| YAML built-in | Yes | No | YAML dictionaries and fields |
-| SAK templates | Yes | Yes | toolsets, tools, derived_entity, colorstops/list, etc. About any part of the config can be templated |
-| Decluttering card | Yes | No | Full card template with variables |
+| Type | re-use method | what type of re-use |
+| ---- | --------------- | ------------------ |
+| YAML built-in | re-use within YAML file only using anchors and aliases | YAML dictionaries and fields |
+| SAK templates | re-use of YAML parts using global templates | toolsets, tools, derived_entity, colorstops/list, etc. About any part of the config can be templated |
+| Decluttering card | re-use of card configurations using global card templates | Full card template with variables |
 
 As the decluttering card is a card template, it can use SAK templates.
 

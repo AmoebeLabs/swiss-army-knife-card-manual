@@ -41,7 +41,6 @@ This example shows the use of a Toolset template.
 
 - it shows the name of the template to use
 - it shows the variables to pass to the template
-- and last but not least: the `type` of the template **MUST** match the part it is replacing. In this case a toolset.
 
 ```yaml title="view-xyz.yaml" linenums="1" hl_lines="4-9"
 - toolset: memory               # template type be of type "toolset"
@@ -55,7 +54,7 @@ This example shows the use of a Toolset template.
       - cy: 74                  # - center y position
 ```
 
-Below the partial config:
+Below the partial config of the `tools_segarc_icon_state` template:
 
 - the first 7 lines define the template part with passed variables of the config
 - from line 8, the toolset itself is defined. Identical to any inline toolset config. Except for the variable substitution of course :smile:
@@ -96,7 +95,7 @@ toolset:                          # From here the toolset is defined!
 ###:sak-sak-logo: Colorstop example
 Say you want some consistency for the cards that show the inside temperature colors.
 
-You define a colorstops template, and after that use that in several cards/tools. 
+You define a colorstops template, and use that in several cards/tools. 
 
 ```yaml title="view" linenums="1" hl_lines="18-21"
 - type: 'segarc'
@@ -122,11 +121,7 @@ You define a colorstops template, and after that use that in several cards/tools
           - thegap: 1
 ```
 
-The template is defined in `sak_templates.yaml`
-
-!!! Warning "Notice again the template `type` that matches the part it replaces!"
-    The template `type` on line 3 must match line 6 in the template.
-
+And the full `colorstop` template definition:
 
 ```yaml title="template" linenums="1" hl_lines="1 3 6"
 colorstops_temperature_inside:
@@ -216,7 +211,7 @@ Many examples calculate the `brightness` attribute from a light using a `derived
       fill: var(--theme-background-color-darken-20)
 ```
 
-The template is defined in `sak_templates.yaml`
+And the template definition:
 
 ```yaml title="template" linenums="1" hl_lines="1 3 6"
 derived_entity_brightness:
@@ -241,7 +236,6 @@ derived_entity_brightness:
       ]]]
 ```
 
-
 ##:sak-sak-logo: Advanced usage, Overrides and Extensions
 
 The standard way of changing the template is to pass pre-defined variables to the template. 
@@ -252,9 +246,7 @@ In those cases, SAK templates provide the same sort of functionality as the buil
 ###:sak-sak-logo: Position override example
 
 This example shows the simple use of overwriting parts of the Toolset template without using template variables.
-<br>In this case the `position` record is simply overwritten instead of passing `cx` and `cy` as variables.
-
-!!! Info "This use of SAK Templates has some similarities with the use of overrides and extensions from YAML Anchors"
+<br>In this case the `position` record is simply overridden instead of passing `cx` and `cy` as variables.
 
 ```yaml title="From: view-sake7.yaml" linenums="1" hl_lines="18-21"
 - toolset: memory
@@ -275,6 +267,8 @@ We can even go a bit further and overwrite a tool within the list of tools.
 
 !!! Important "A tool needs a unique ID to be able to overwrite the tool config"
     In this case the `segarc` has `id: 0` and **parts** of the config are overwritten!
+
+!!! Warning "Overriding and extending parts of a template is powerfull but can be error-prone. So take care!"
     
 The yellow lines show the parts that are overwritten.
 
@@ -388,4 +382,3 @@ The resulting YAML config will be as follows with the overridden and/or extended
           filter: url(#is-1)
 ```
 
-!!! Warning "Overriding and extending parts of a template is powerfull but can be error-prone. So take care!"

@@ -9,9 +9,7 @@ It does that by the use of so called `Anchors` and `Aliases`. On top of that YAM
 
 ##:sak-sak-logo: YAML Anchors and Aliases
 
-Anchors and Aliases are YAML constructions that allow you to reduce repeat syntax and extend existing dictionaries. You can place Anchors (&) on an entity to mark a multi-line section. You can then use an Alias (\*) call that anchor later in the document to reference that section.
-
-The Alias essentially acts as a "see above’’ command, which makes the program pause standard traversal, return to the anchor point, then resume standard traversal after the Anchored portion is finished.
+`Anchors` and `Aliases` are YAML constructions that allow you to reduce repeat syntax and extend existing dictionaries. You can place `Anchors` (`&`) on an entity to mark a multi-line section. You can then use an `Alias` (`*`) and use that `Anchor` later in the YAML document to reference that section.
 
 ### Basic example
 
@@ -23,7 +21,7 @@ The Alias essentially acts as a "see above’’ command, which makes the progra
 - *flag             # The Alias
 ```
 
-When this list is read by the Home Assistant YAML parser, the value identified by the anchor (Apple) will be filled at the alias when the YAML is composed. The literal anchor and alias are discarded so they don’t appear in the final result.
+When this list is read by the Home Assistant YAML parser, the value identified by the `anchor` (Apple) will be filled at the `alias` when the YAML is composed. The literal `anchor` (`&`) and `alias` (`*`) are discarded so they don’t appear in the final result.
 
 ```yaml title="Result" linenums="1" hl_lines="1 5"
 - Apple
@@ -35,7 +33,7 @@ When this list is read by the Home Assistant YAML parser, the value identified b
 
 ### More complex example
 
-We can also define a dictionary as an Anchor, and re-use the complete dictionary on other locations:
+We can also define a dictionary as an `Anchor`, and re-use the complete dictionary on other locations:
 
 ```yaml title="Source" linenums="1" hl_lines="4-9 14 16"
 
@@ -90,7 +88,7 @@ pipelines:
 
 ##:sak-sak-logo: YAML Overrides and Extensions
 
-You can also tweak the Anchor when called by entering `<<:` before the Alias. Below this, you can write any desired changes. Field/dicts are overridden if the new field/dict has the same name or is added afterward if different.
+You can also tweak the `Anchor` when called by entering `<<:` before the `Alias`. Below this, you can write any desired changes. Field/dicts are overridden if the new field/dict has the same name or is added afterward if different.
 
 ```yaml linenums="1" hl_lines="17-19"
 definitions: 
