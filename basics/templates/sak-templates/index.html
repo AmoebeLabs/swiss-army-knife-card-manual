@@ -2043,7 +2043,6 @@
 <ul>
 <li>it shows the name of the template to use</li>
 <li>it shows the variables to pass to the template</li>
-<li>and last but not least: the <code>type</code> of the template <strong>MUST</strong> match the part it is replacing. In this case a toolset.</li>
 </ul>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view-xyz.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2064,7 +2063,7 @@
 </span><span class="hll">      <span class="p p-Indicator">-</span> <span class="nt">cy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">74</span>                  <span class="c1"># - center y position</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>Below the partial config:</p>
+<p>Below the partial config of the <code>tools_segarc_icon_state</code> template:</p>
 <ul>
 <li>the first 7 lines define the template part with passed variables of the config</li>
 <li>from line 8, the toolset itself is defined. Identical to any inline toolset config. Except for the variable substitution of course <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></li>
@@ -2160,7 +2159,7 @@
 </svg>
 </span> Colorstop example<a class="headerlink" href="#colorstop-example" title="Permanent link">&para;</a></h3>
 <p>Say you want some consistency for the cards that show the inside temperature colors.</p>
-<p>You define a colorstops template, and after that use that in several cards/tools. </p>
+<p>You define a colorstops template, and use that in several cards/tools. </p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">view</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2204,11 +2203,7 @@
 </span><span class="hll">          <span class="p p-Indicator">-</span> <span class="nt">thegap</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>The template is defined in <code>sak_templates.yaml</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Notice again the template <code>type</code> that matches the part it replaces!</p>
-<p>The template <code>type</code> on line 3 must match line 6 in the template.</p>
-</div>
+<p>And the full <code>colorstop</code> template definition:</p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2386,7 +2381,7 @@
       <span class="nt">fill</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">var(--theme-background-color-darken-20)</span>
 </code></pre></div>
 </td></tr></table>
-<p>The template is defined in <code>sak_templates.yaml</code></p>
+<p>And the template definition:</p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">template</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2490,10 +2485,7 @@
 </svg>
 </span> Position override example<a class="headerlink" href="#position-override-example" title="Permanent link">&para;</a></h3>
 <p>This example shows the simple use of overwriting parts of the Toolset template without using template variables.
-<br>In this case the <code>position</code> record is simply overwritten instead of passing <code>cx</code> and <code>cy</code> as variables.</p>
-<div class="admonition info">
-<p class="admonition-title">This use of SAK Templates has some similarities with the use of overrides and extensions from YAML Anchors</p>
-</div>
+<br>In this case the <code>position</code> record is simply overridden instead of passing <code>cx</code> and <code>cy</code> as variables.</p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake7.yaml</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2548,6 +2540,9 @@
 <div class="admonition important">
 <p class="admonition-title">A tool needs a unique ID to be able to overwrite the tool config</p>
 <p>In this case the <code>segarc</code> has <code>id: 0</code> and <strong>parts</strong> of the config are overwritten!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Overriding and extending parts of a template is powerfull but can be error-prone. So take care!</p>
 </div>
 <p>The yellow lines show the parts that are overwritten.</p>
 <table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">From: view-sake7</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2742,9 +2737,6 @@
           <span class="nt">filter</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">url(#is-1)</span>
 </code></pre></div>
 </td></tr></table>
-<div class="admonition warning">
-<p class="admonition-title">Overriding and extending parts of a template is powerfull but can be error-prone. So take care!</p>
-</div>
 
               
             </article>
