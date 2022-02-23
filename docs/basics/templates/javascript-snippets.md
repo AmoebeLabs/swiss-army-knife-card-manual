@@ -1,6 +1,7 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
 ##:sak-sak-logo: Basics
 The Swiss Army Knife has support for JavaScript **function** templates as part of the YAML configuration.
@@ -34,8 +35,8 @@ Support is currently limited to two places:
 
 ##:sak-sak-logo: Derived Entity Example
 
-One of the places where JavaScript templates are supported is the creation of a so called "derived entity". 
-This one is derived from the received state on the tool and replaces the original state.
+One of the places where JavaScript templates are supported is to create what is called a "derived entity".
+This one is derived from the received state on the tool and replaces the original tool state.
 
 Below shows a card with a light and brightness entity/attribute.
 

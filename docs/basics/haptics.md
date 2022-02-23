@@ -1,6 +1,7 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
 The Swiss Army Knife card supports haptics.
 

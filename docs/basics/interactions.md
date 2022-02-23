@@ -1,30 +1,31 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
-The Swiss Army Knife card supports user interactions. These interactions are NOT card based, but tool based: in other words, every SAK Tool can be interactive.
+The Swiss Army Knife card supports user interactions. These interactions are NOT card-based but tool-based: in other words, every SAK Tool can be interactive.
 
 ##:sak-sak-logo: Interacting with SVG objects
 
-There are some things you have to remember when interacting with SVG Objects as their interaction differs from HTML objects. HTML does create a so called bounding box around the objects to make interacting (mouse or touch) with them easier. SVG doesn't have that functionality yet: that is part of the not yet released SVG 2.0 specification.
+There are some things to keep in mind when interacting with SVG objects because their interaction is different from HTML objects. HTML does create a so-called bounding box around the objects to facilitate interaction (mouse or touch) with them. SVG doesn't have that functionality yet: it's part of the unreleased SVG 2.0 specification.
 
-Interacting with an SVG object depends on things like the `fill` of an object, its `visibility`, and the fact if it is painted or not.
+Interaction with an SVG object depends on things like an object's 'fill', its 'visibility', and whether it has been painted or not.
 
 !!! Tip "For an interactive, visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)"
 
 ###What does this mean for SAK Tools?
 
-Generally speaking: there are no problems for SAK tools: you won't notice the difference between SVG and HTML based objects.
+Generally speaking: there are no problems with SAK tools: you won't notice the difference between SVG and HTML-based objects.
 
-This applies at least for text based tools like entity names, area's and states.
+This applies at least to text-based tools like entity names, areas, and states.
 
 For the graphical tools like circles and rectangles for instance it depends on the `fill` color: as long as the object has a fill, user interactions will work as expected. Don't use `fill: none`, unless you don't want interactions with the inner part of the tool.
 
 !!! Tip "Use `fill: rgba(0,0,0,0)` for 'invisible' backgrounds for circles/rectangles that need interaction!"
 
-Icons are an exception: icons are actually SVG images. As the background of an icon hasn't any fill, it would be difficult to interact with a 3-dot menu icon for instance. You would have to touch the dots to get any interaction noticed!
+Icons are an exception: icons are actually SVG images. Since an icon's background has no fill, it would be difficult to use a three-dot menu icon, for example. You'd have to touch the dots to get every interaction noticed!
 
-Therefore, the SAK Icon Tool draws an invisible background behind the `icon` in order to respond to tap actions. It uses a rectangle without stroke, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visual invisible, but still respond to pointer/touch events.
+Therefore, the SAK Icon Tool draws an invisible background behind the `icon` to respond to tap actions. It uses a rectangle without a line, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visually invisible, but still responds to pointer/touch events.
 
 
 ##:sak-sak-logo: Current - entity based - support
@@ -111,8 +112,7 @@ The slider is the only tool having its own `slider_action` section. This was nee
 
 ##:sak-sak-logo: Future - per tool - support
 
-In the future a change will be made, so that every tool can have its own `actions` section, independent of the `entities` definition.
-This means that the same entity, but different tool can have:
+In the future, each tool will have its own `actions` section, independent of the definition of `entities`. <br>It means that the same entity, but a different tool, can have:
 
 - No interaction at all
 - A tap action to for instance toggle a light

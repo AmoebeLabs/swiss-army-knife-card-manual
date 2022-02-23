@@ -1,17 +1,18 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
 State operators enable you to style a tool in a much more advanced way than is possible with colorstops.
-State operators can do more equations, and also use non numerical states.
+State operators can do more equations, and also use nonnumerical states.
 
-So it is more complex than the colorstop, but also has a lot more functionality.
+So it is more complex than the colorstop but also has a lot more functionality.
 <br>State operators are defined in the `animations` section of the tool.
 
 ##:sak-sak-logo: Basic usage
 
 Basic usage uses the implicit state operator "==", ie tests if state is equal to some value.
-Below example is from a circle connected to a light entity.
+The below example is from a circle connected to a light entity.
 ```yaml linenums="1" hl_lines="8 12"
   - type: circle
     position:
@@ -117,9 +118,9 @@ Below example is from a circle connected to a light entity.
 ##:sak-sak-logo: JavaScript template usage
 Advanced usage example using JavaScript to determine the state.
 
-This example is from the views that use the weather-type and display an **animated** external SVG to display the current weather-type.
+This example is from the views that use the weather type and display an **animated** external SVG to display the current weather type.
 
-As you can see the current state is returned, ie always a match. The `usersvg` tool then returns the current image which is also a JavaScript template that checks the state of the sun.sun and adds either "day" or "night" to the state to distinguish between day (sun) and night (moon) weather types.
+As you can see the current state is returned, ie always a match. The `usersvg` tool then returns the current image which is also a JavaScript template that checks the state of the `sun.sun` and adds either "day" or "night" to the state to distinguish between day (sun) and night (moon) weather types.
 
 ```yaml linenums="1" hl_lines="17 18"    
 - type: 'usersvg'

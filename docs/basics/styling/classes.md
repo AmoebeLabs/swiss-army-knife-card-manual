@@ -1,9 +1,10 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
-CSS Classes can be used to get uniform styling over multiple cards with minimal work.
-<br>More than one class can be enabled to be used for a tool.
+To uniformly style multiple cards with minimal work, CSS Classes are the way to go.
+<br>More than one class can be enabled to style a tool.
 
 ##:sak-sak-logo: Basic usage
 
@@ -67,7 +68,7 @@ Just as you can override default SAK classes, you can define your own set of cla
 
 These classes are defined in the `user-css-definitions.yaml` file in the `sak_templates` folder.
 
-Example \#8, the Homekit alike cards use user defined classes to style the cards.
+[Example \#8][Example 8], the Homekit alike cards use user defined classes to style the cards.
 
 ```yaml linenums="1"
 # Demo using classes for example #8, some Homekit alike cards...
@@ -116,3 +117,6 @@ And this looks like this in the example view, `view-sake8.yaml` file:
     name:
       homekit-name__name: true  # Use homekit class
 ```
+
+<!-- References -->
+[Example 8]: ../../examples/example-8.md

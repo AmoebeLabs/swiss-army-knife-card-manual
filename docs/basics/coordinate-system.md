@@ -1,11 +1,12 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
 [sak-example-22t]: ../assets/screenshots/sak-example-22t.png
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 
-The Swiss Army Knife card uses its own, simplified, coordinate system to simplify the design and placement of toolsets and tools on a card.
+The Swiss Army Knife map uses a simplified coordinate system to simplify the design and placement of toolsets and tools on a card.
 
 ##:sak-sak-logo: Basics
 The coordinate system of a SAK Card is based on the following characteristics:
@@ -25,7 +26,7 @@ The coordinate system of a SAK Card is based on the following characteristics:
 The next paragraph shows an example, and the paragraphs thereafter more details.
 
 ##:sak-sak-logo: An example: Toolset and tool placement @ work
-Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a `circle`, `icon` and `state`.  
+Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a `circle`, `icon`, and `state`. 
 
 The tools are neatly configured around the center position (50,50) of the toolset grid:
 
@@ -164,9 +165,8 @@ Furthermore, all dimensions are *relative* to the grid:
 !!! Note "Don't forget that toolsets can scale tools and are re-usable if defined as a template" 
 
 ##:sak-sak-logo: Use relative sizes for styles too, where possible
-So tool dimension are relative. It is advised to use relative dimensions too for styling.  
-One easy example is the CSS `font-size` attribute: use `em` and not `px` to configure the size of a font, ie use `font-size: 12em`. 
+The dimensions of the tool are relative. Therefore, it is recommended to also use relative dimensions for styling. A simple example is the CSS `font-size` attribute: use `em` and not `px` to configure the size of a font, ie use `font-size: 12em`. 
 
-SAK has configured the default `font-size` for SAK cards to be about the same size as 1% of the grid: so `font-size: 10em` should be about 10% of the grid in size.
+SAK has set the default `font-size` for SAK cards to be about the same size as 1% of the grid: so `font-size: 10em` should equal 10% of the grid.
 
 

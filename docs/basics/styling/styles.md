@@ -1,8 +1,9 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
-Each tool can be styled using SVG attribute and in most cases CSS attribute styles.
+Each tool can be styled using SVG attributes and in most cases CSS attribute styles.
 <br>These styles are defined in the styles section.
 
 Within that styles section, the tool or toolpart must be selected. For single part tools, the selector is the same as the type of the tool. For multi-part tools, each part has its own styling sub-section.
@@ -38,7 +39,8 @@ Within that styles section, the tool or toolpart must be selected. For single pa
 ```
 
 ##:sak-sak-logo: Overriding CSS Class styles
-The next configuration results in a circle with red stroke and blue fill. The stroke comes from the Class definition, and the fill from the class definition is overwritten by the style configuration.
+
+The following configuration results in a circle with a red stroke and blue fill. The stroke comes from the Class definition. The fill from the class definition is overridden by the style configuration.
 
 ```yaml linenums="1" hl_lines="6 9"
 - type: 'circle'

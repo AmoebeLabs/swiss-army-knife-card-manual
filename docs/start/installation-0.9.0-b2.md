@@ -16,15 +16,17 @@ By the time this card is released, it will become available in HACS.
 
 !!! Note "NTS: As SAK needs template files, I guess installation can't be fully automated..."
 
-##:sak-sak-logo: Manual install (for Beta 0.9.0-b3, February 2022)
+##:sak-sak-logo: Manual install (for Beta 0.9.0-b2, January 2022)
 
-This third beta contains some fixes, extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
+!!! Warning "This is an OLD version!!"
 
-\#TODO: List changes and adapt manual install
+This second beta contains some changes in the layout and `!includes` to make it more up-to-date with current Home Assistant possibilities and requires less manual work.
 
+The first beta was still based on an very old config of mine. This version uses the possibilities described in [Splitting up the configuration](https://www.home-assistant.io/docs/configuration/splitting_configuration/).
 
 This beta version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
+
 
 ###My Folder Structure
 
@@ -167,7 +169,7 @@ sak_templates:
 If this is all you want, you're ready to use the Swiss Army Knife card. If not, continue with the next paragraph for the example dashboard install.
 
 ##:sak-sak-logo: Examples dashboard install
-If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather, and Airvisual images. And last but not least: the used `gonsboro`, `dark steelblue` and [HAM3][ha-m3-themes-url] themes in the examples.
+If you want to use the examples, you need the full install that includes the example views, decluttering templates, backgrounds and weather and Airvisual images. And last but not least: the used `gonsboro` and `dark steelblue` themes in the examples.
 
 !!! Hint "Check my folder structure to understand my setup"
     So you can adapt it to yours if different.
@@ -283,10 +285,6 @@ Restart Home Assistant to have the dashboard installed
 Now enjoy the examples and don't forget that you have to replace my entities with yours to see the cards as intended!
 
 
+[sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
 ![sak-example-dashboard][sak-example-dashboard]
 
-<!-- Images -->
-[sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
-
-<!-- External links -->
-[ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/

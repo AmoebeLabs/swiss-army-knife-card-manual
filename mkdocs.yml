@@ -13,7 +13,7 @@ repo_name: amoebelabs/swiss-army-knife
 repo_url: https://github.com/amoebelabs/swiss-army-knife
 edit_uri: ""
 
-copyright: Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+copyright: Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
 
 theme:
   name: material
@@ -98,7 +98,9 @@ nav:
   - Getting started:
     - Introduction: start/introduction.md
     - Installation: start/installation.md
-    - Previous version 0.9.0-b1: start/installation-0.9.0-b1.md
+    - Older versions:
+      - Version 0.9.0-b2: start/installation-0.9.0-b2.md
+      - Version 0.9.0-b1: start/installation-0.9.0-b1.md
     - Designing your card: start/designing-your-card.md
     - Changelog: changelog/changelog.md
   - Basics:

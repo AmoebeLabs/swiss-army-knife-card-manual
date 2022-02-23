@@ -1,6 +1,7 @@
 ---
 template: overrides/main.html
 ---
+<!-- GT/GL -->
 
 ##:sak-sak-logo: Basics
 YAML has built-in methods to cut the visual clutter in large YAML files.
@@ -110,3 +111,6 @@ pipelines:
           name: Testing on Master # override name field
           ongoing: false          # extension
 ```
+
+!!! Warning "Home Assistant will issue warnings if using overrides, as it thinks you are defining the same field twice"
+    You can safely ignore those warnings :smile: 
