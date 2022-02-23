@@ -426,10 +426,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Older versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Older versions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/installation-0.9.0-b2/" class="md-nav__link">
+        Version 0.9.0-b2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../start/installation-0.9.0-b1/" class="md-nav__link">
-        Previous version 0.9.0-b1
+        Version 0.9.0-b1
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1634,13 +1681,15 @@
 
   <h1>Introduction</h1>
 
-<p>I have put several examples into there own SAK Example view for easy reference.
-The eight examples show in most cases more than one card, or more than one visualization.</p>
-<p>Some of them use SAK templates, some of them Decluttering templates, some both, and some none: they contain the full configuration in the view itself.</p>
+<!-- GT/GL -->
+
+<p>I have placed several examples in their own SAK Example view for easy reference.
+In most cases, the twelve examples show more than one map or more than one visualization.</p>
+<p>Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.</p>
 <div class="admonition info">
-<p class="admonition-title">All examples use their own theme defined in the view-sake*.yaml. Themes are included on Github.</p>
-<p>Apart from the box-shadow for the cards, themes also define some color schemes used by the cards.</p>
-<p>Other themes might show black colors where theme colors are used.</p>
+<p class="admonition-title">All samples use their own theme defined in the view-sake*.yaml. Themes are included in Github.</p>
+<p>Aside from the box shading for the cards, themes also define some of the color schemes used by the cards.</p>
+<p>Other themes may display black colors where theme colors are used.</p>
 </div>
 <h2 id="platforms-tested"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1676,10 +1725,10 @@ The eight examples show in most cases more than one card, or more than one visua
 <li>Safari (mobile and desktop view) on iOS/iPadOS 14 &amp; 15, iPhone &amp; iPad</li>
 <li>Google Chrome &gt; 90.x on Windows 10, on my 10 year old Desktop <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> </li>
 </ul>
-<p>By testing Chrome, I assume I validated all the Chromium based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium based browsers which I could not test as I don't have any Android devices.
-A quick view on a friends Samsung showed no problems, but that is no 100% guarantee of course.</p>
-<p>Due to the browser differences and long standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.</p>
-<p>One notable difference between the two is the SVG filter implementation of Safari. It works, but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a <em>switch</em> to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.</p>
+<p>By testing Chrome, I assume I validated all the Chromium-based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium-based browsers which I could not test as I don't have any Android devices.
+A quick view on a friend's Samsung showed no problems, but that is no 100% guarantee of course.</p>
+<p>Due to the browser differences and long-standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.</p>
+<p>One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a <em>switch</em> to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.</p>
 <h2 id="real-world-examples-from-my-own-installation"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1709,8 +1758,8 @@ A quick view on a friends Samsung showed no problems, but that is no 100% guaran
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Real world examples from my own installation<a class="headerlink" href="#real-world-examples-from-my-own-installation" title="Permanent link">&para;</a></h2>
-<p>All examples are real screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported and processed to a 1080x1080 pixels cutout.</p>
-<p>Many examples use the <code>Met.no</code> weather and <code>Airvisual</code> integrations. Each example also describes what you should change to make the examples work in your own installation. The above integrations are in most cases required to make things work.</p>
+<p>All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.</p>
+<p>Many examples use the <code>Met.no</code> weather and <code>Airvisual</code> integrations. Each example also describes what you need to change in order for the examples to work in your installation. The above integrations are necessary in most cases to make things work.</p>
 <table>
 <thead>
 <tr>
@@ -1763,6 +1812,8 @@ A quick view on a friends Samsung showed no problems, but that is no 100% guaran
 </tr>
 </tbody>
 </table>
+<!-- Images -->
+<!-- References -->
 
               
             </article>
@@ -1818,7 +1869,7 @@ A quick view on a friends Samsung showed no problems, but that is no 100% guaran
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+      Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
     </div>
   
   

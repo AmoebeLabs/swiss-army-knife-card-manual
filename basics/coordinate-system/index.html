@@ -426,10 +426,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Older versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Older versions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/installation-0.9.0-b2/" class="md-nav__link">
+        Version 0.9.0-b2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../start/installation-0.9.0-b1/" class="md-nav__link">
-        Previous version 0.9.0-b1
+        Version 0.9.0-b1
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1780,7 +1827,9 @@
 
   <h1>Coordinate system</h1>
 
-<p>The Swiss Army Knife card uses its own, simplified, coordinate system to simplify the design and placement of toolsets and tools on a card.</p>
+<!-- GT/GL -->
+
+<p>The Swiss Army Knife map uses a simplified coordinate system to simplify the design and placement of toolsets and tools on a card.</p>
 <h2 id="basics"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1853,7 +1902,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> An example: Toolset and tool placement @ work<a class="headerlink" href="#an-example-toolset-and-tool-placement-work" title="Permanent link">&para;</a></h2>
-<p>Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a <code>circle</code>, <code>icon</code> and <code>state</code>.  </p>
+<p>Now we know the basics, let's look at the example with a card size of 200x100 (2/1 aspect ratio) and two identical toolsets consisting of a <code>circle</code>, <code>icon</code>, and <code>state</code>. </p>
 <p>The tools are neatly configured around the center position (50,50) of the toolset grid:</p>
 <ul>
 <li>the <code>circle</code> is placed at (50,50) with its radius of 25,</li>
@@ -2117,9 +2166,8 @@ Such toolsets are therefore designed for larger cards.</p>
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Use relative sizes for styles too, where possible<a class="headerlink" href="#use-relative-sizes-for-styles-too-where-possible" title="Permanent link">&para;</a></h2>
-<p>So tool dimension are relative. It is advised to use relative dimensions too for styling.<br />
-One easy example is the CSS <code>font-size</code> attribute: use <code>em</code> and not <code>px</code> to configure the size of a font, ie use <code>font-size: 12em</code>. </p>
-<p>SAK has configured the default <code>font-size</code> for SAK cards to be about the same size as 1% of the grid: so <code>font-size: 10em</code> should be about 10% of the grid in size.</p>
+<p>The dimensions of the tool are relative. Therefore, it is recommended to also use relative dimensions for styling. A simple example is the CSS <code>font-size</code> attribute: use <code>em</code> and not <code>px</code> to configure the size of a font, ie use <code>font-size: 12em</code>. </p>
+<p>SAK has set the default <code>font-size</code> for SAK cards to be about the same size as 1% of the grid: so <code>font-size: 10em</code> should equal 10% of the grid.</p>
 
               
             </article>
@@ -2175,7 +2223,7 @@ One easy example is the CSS <code>font-size</code> attribute: use <code>em</code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+      Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
     </div>
   
   

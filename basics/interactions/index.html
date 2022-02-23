@@ -426,10 +426,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Older versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Older versions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/installation-0.9.0-b2/" class="md-nav__link">
+        Version 0.9.0-b2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../start/installation-0.9.0-b1/" class="md-nav__link">
-        Previous version 0.9.0-b1
+        Version 0.9.0-b1
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1762,7 +1809,9 @@
 
   <h1>Interactions</h1>
 
-<p>The Swiss Army Knife card supports user interactions. These interactions are NOT card based, but tool based: in other words, every SAK Tool can be interactive.</p>
+<!-- GT/GL -->
+
+<p>The Swiss Army Knife card supports user interactions. These interactions are NOT card-based but tool-based: in other words, every SAK Tool can be interactive.</p>
 <h2 id="interacting-with-svg-objects"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1792,20 +1841,20 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Interacting with SVG objects<a class="headerlink" href="#interacting-with-svg-objects" title="Permanent link">&para;</a></h2>
-<p>There are some things you have to remember when interacting with SVG Objects as their interaction differs from HTML objects. HTML does create a so called bounding box around the objects to make interacting (mouse or touch) with them easier. SVG doesn't have that functionality yet: that is part of the not yet released SVG 2.0 specification.</p>
-<p>Interacting with an SVG object depends on things like the <code>fill</code> of an object, its <code>visibility</code>, and the fact if it is painted or not.</p>
+<p>There are some things to keep in mind when interacting with SVG objects because their interaction is different from HTML objects. HTML does create a so-called bounding box around the objects to facilitate interaction (mouse or touch) with them. SVG doesn't have that functionality yet: it's part of the unreleased SVG 2.0 specification.</p>
+<p>Interaction with an SVG object depends on things like an object's 'fill', its 'visibility', and whether it has been painted or not.</p>
 <div class="admonition tip">
 <p class="admonition-title">For an interactive, visual explanation: see <a href="https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/">Managing SVG Interaction With The Pointer Events Property</a></p>
 </div>
 <h3 id="what-does-this-mean-for-sak-tools">What does this mean for SAK Tools?<a class="headerlink" href="#what-does-this-mean-for-sak-tools" title="Permanent link">&para;</a></h3>
-<p>Generally speaking: there are no problems for SAK tools: you won't notice the difference between SVG and HTML based objects.</p>
-<p>This applies at least for text based tools like entity names, area's and states.</p>
+<p>Generally speaking: there are no problems with SAK tools: you won't notice the difference between SVG and HTML-based objects.</p>
+<p>This applies at least to text-based tools like entity names, areas, and states.</p>
 <p>For the graphical tools like circles and rectangles for instance it depends on the <code>fill</code> color: as long as the object has a fill, user interactions will work as expected. Don't use <code>fill: none</code>, unless you don't want interactions with the inner part of the tool.</p>
 <div class="admonition tip">
 <p class="admonition-title">Use <code>fill: rgba(0,0,0,0)</code> for 'invisible' backgrounds for circles/rectangles that need interaction!</p>
 </div>
-<p>Icons are an exception: icons are actually SVG images. As the background of an icon hasn't any fill, it would be difficult to interact with a 3-dot menu icon for instance. You would have to touch the dots to get any interaction noticed!</p>
-<p>Therefore, the SAK Icon Tool draws an invisible background behind the <code>icon</code> in order to respond to tap actions. It uses a rectangle without stroke, but with a fill color of <code>fill: rgba(0,0,0,0)</code>. This makes it visual invisible, but still respond to pointer/touch events.</p>
+<p>Icons are an exception: icons are actually SVG images. Since an icon's background has no fill, it would be difficult to use a three-dot menu icon, for example. You'd have to touch the dots to get every interaction noticed!</p>
+<p>Therefore, the SAK Icon Tool draws an invisible background behind the <code>icon</code> to respond to tap actions. It uses a rectangle without a line, but with a fill color of <code>fill: rgba(0,0,0,0)</code>. This makes it visually invisible, but still responds to pointer/touch events.</p>
 <h2 id="current-entity-based-support"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -2000,8 +2049,7 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Future - per tool - support<a class="headerlink" href="#future-per-tool-support" title="Permanent link">&para;</a></h2>
-<p>In the future a change will be made, so that every tool can have its own <code>actions</code> section, independent of the <code>entities</code> definition.
-This means that the same entity, but different tool can have:</p>
+<p>In the future, each tool will have its own <code>actions</code> section, independent of the definition of <code>entities</code>. <br>It means that the same entity, but a different tool, can have:</p>
 <ul>
 <li>No interaction at all</li>
 <li>A tap action to for instance toggle a light</li>
@@ -2205,7 +2253,7 @@ As actions are defined PER tool, we can define a single entity and use that for 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+      Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
     </div>
   
   

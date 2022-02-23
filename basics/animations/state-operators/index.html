@@ -426,10 +426,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Older versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Older versions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start/installation-0.9.0-b2/" class="md-nav__link">
+        Version 0.9.0-b2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../start/installation-0.9.0-b1/" class="md-nav__link">
-        Previous version 0.9.0-b1
+        Version 0.9.0-b1
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1696,9 +1743,11 @@
 
   <h1>State operators</h1>
 
+<!-- GT/GL -->
+
 <p>State operators enable you to style a tool in a much more advanced way than is possible with colorstops.
-State operators can do more equations, and also use non numerical states.</p>
-<p>So it is more complex than the colorstop, but also has a lot more functionality.
+State operators can do more equations, and also use nonnumerical states.</p>
+<p>So it is more complex than the colorstop but also has a lot more functionality.
 <br>State operators are defined in the <code>animations</code> section of the tool.</p>
 <h2 id="basic-usage"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1730,7 +1779,7 @@ State operators can do more equations, and also use non numerical states.</p>
 </svg>
 </span> Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
 <p>Basic usage uses the implicit state operator "==", ie tests if state is equal to some value.
-Below example is from a circle connected to a light entity.
+The below example is from a circle connected to a light entity.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1966,8 +2015,8 @@ Below example is from a circle connected to a light entity.
 </svg>
 </span> JavaScript template usage<a class="headerlink" href="#javascript-template-usage" title="Permanent link">&para;</a></h2>
 <p>Advanced usage example using JavaScript to determine the state.</p>
-<p>This example is from the views that use the weather-type and display an <strong>animated</strong> external SVG to display the current weather-type.</p>
-<p>As you can see the current state is returned, ie always a match. The <code>usersvg</code> tool then returns the current image which is also a JavaScript template that checks the state of the sun.sun and adds either "day" or "night" to the state to distinguish between day (sun) and night (moon) weather types.</p>
+<p>This example is from the views that use the weather type and display an <strong>animated</strong> external SVG to display the current weather type.</p>
+<p>As you can see the current state is returned, ie always a match. The <code>usersvg</code> tool then returns the current image which is also a JavaScript template that checks the state of the <code>sun.sun</code> and adds either "day" or "night" to the state to distinguish between day (sun) and night (moon) weather types.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2146,7 +2195,7 @@ Below example is from a circle connected to a light entity.
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+      Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
     </div>
   
   

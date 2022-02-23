@@ -537,10 +537,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Older versions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Older versions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation-0.9.0-b2/" class="md-nav__link">
+        Version 0.9.0-b2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../installation-0.9.0-b1/" class="md-nav__link">
-        Previous version 0.9.0-b1
+        Version 0.9.0-b1
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1728,6 +1775,8 @@
               
                 
 
+<!-- GT/GL -->
+
 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
 <h2 id="introduction"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1758,8 +1807,8 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>I'm a long time user of Home Assistant. In those days YAML was about the only way to configure Home Assistant, and every two weeks you were confronted with the famous list of "breaking changes" which led to changing your configuration and explaining the wife that it was ok that lights went on during daytime and not in the evening: I just needed a few hours to fix it. No worries <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> <img alt="💋" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f48b.svg" title=":kiss:" /></p>
-<p>I'm visually oriented. And with the introduction of Lovelace and the numerous custom cards as a result, many choices to visualize the sensor data were created: for about everything you wanted, there was a built-in card or custom card thanks to the vibrant community.</p>
+<p>I am a longtime Home Assistant user. At the time, YAML was about the only way to configure Home Assistant. About every two weeks, you were confronted with the famous list of "breaking changes" that led you to change your configuration and explain to the wife that it was okay for the lights to come on during the day and not at night: it only takes me a few hours to fix it. No worries <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> <img alt="💋" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f48b.svg" title=":kiss:" /></p>
+<p>I am visually oriented. And with the introduction of Lovelace and the creation of countless custom cards, many choices were made available to visualize the sensor data. And thanks to the vibrant community, there was a built-in or custom-card for about everything you wanted.</p>
 <h2 id="happy-but-i-want-more"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1790,8 +1839,8 @@
 </svg>
 </span> Happy, but I want more!<a class="headerlink" href="#happy-but-i-want-more" title="Permanent link">&para;</a></h2>
 <p>Despite all those choices, I adapted these cards in many cases to get the visualization I wanted. And by doing that I learned step-by-step the inner workings of a custom card and the basis for these cards: the web-component Lit.</p>
-<p>During the adaption of another custom card, the question "What if I would have the possibility to design my own visualization?" came up more and more. In that case I could design completely different cards than currently available.
-<br>But: I'm not a real programmer, I learn by looking how other people solve problems, and by understanding that, I can create my own code to solve my own problems, so how feasible is it to create my own card?</p>
+<p>During the adaption of another custom card, the question "What if I would have the possibility to design my own visualization?" came up more and more. In that case, I could design completely different cards than currently available.
+<br>But: I'm not a real programmer, I learn by looking at how other people solve problems, and by understanding that, I can create my own code to solve my own problems. So, how feasible is it to create my own card?</p>
 <h2 id="and-then-shit-happened"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1822,7 +1871,7 @@
 </svg>
 </span> And then shit happened...<a class="headerlink" href="#and-then-shit-happened" title="Permanent link">&para;</a></h2>
 <p>The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans were good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.</p>
-<p>At the time of that fatal message I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The Swiss Army Knife with all its tools was born!</p>
+<p>At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The Swiss Army Knife with all its tools was born!</p>
 <h2 id="the-dilemma-release-or-not"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -1852,15 +1901,15 @@
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> The dilemma: release or not?<a class="headerlink" href="#the-dilemma-release-or-not" title="Permanent link">&para;</a></h2>
-<p>I stopped working on this card after my sister died: I had other things to do, and its purpose was suddenly "gone" somehow.</p>
-<p>In November 2021 I asked myself "What to do now?". The card is not finished, no one but me has used it, has no documentation and given the size that might be a pretty big undertaking. Furthermore bugs will be found and need to be fixed. And I need to do other things too...</p>
-<p>But what if I got help?</p>
-<p>I placed a teaser of the card on the Dutch Tweakers forum: And one of them proposed a closed beta. And so it was! About 10 Home Assistant users wanted to become beta testers. That is doable for me! This made me start producing the documentation you're reading now!</p>
-<p>The documentation is made with Material for MkDocs: a great piece of software that has a great navigation system, even greater formatting solutions and on top of that customization to better suit my needs.</p>
+<p>I stopped working on this map after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.</p>
+<p>In November 2021 I asked myself "What to do now?". The card is unfinished, no one but me has used it, has no documentation, and given its size, that could be quite a big undertaking. In addition, users will find bugs that need fixing. And I have to do other things too.</p>
+<p>But what if I get help?</p>
+<p>I posted a teaser of the map on the Dutch Tweakers forum: and one of them suggested a closed beta. And so it was! About 30 Home Assistant users wanted to become beta testers. That is doable for me! It got me to start creating the documentation you are reading right now!</p>
+<p>I used Material for MkDocs to create this documentation: a great piece of software with a good navigation system, even better formatting solutions, and on top of that customization to better suit my needs.</p>
 <div class="admonition info">
 <p class="admonition-title">The documentation uses the "Learn by Example" paradigm</p>
-<p>Its a method I really like. Instead of long, very long tables with information, actual examples are shown which are easy to understand and use in practice. The examples also show the context and relation between options, something that most tables don't, or have trouble describing.</p>
-<p>The examples are real examples used in my own Home Assistant environment. They use of course my entity declarations, which you have to change to use your own sensors to make the visualization work. It is because of that reason I use the Met.no weather integration a lot: this one is very easy to adapt to your own installation.</p>
+<p>It's a method I really like. Instead of long, very long tables of information, concrete examples are shown that are easy to understand and use in practice. The examples also show the context and relationship between options, something most tables don't have or are difficult to describe.</p>
+<p>The examples are real examples used in my own Home Assistant environment. They use (of course) my entity declarations, which you have to replace with your own sensors to make the visualization work. It is because of that reason I use the AirVisual and Met.no weather integration a lot: these ones are very easy to adapt to your own installation.</p>
 </div>
 <h2 id="some-statistics"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1895,9 +1944,9 @@
 <ul>
 <li>As of December 2021 about <strong>1.000</strong> hours of work are put into this card. That is with a 40 hour week about 6 months of work!</li>
 <li>The size of the card itself, including comments is about <strong>8.000</strong> lines of JavaScript. I hope, somewhere in the future, I can convert this to TypeScript.</li>
-<li>I made about <strong>50</strong> sketches and designs for visualizations. Just to try out functionality, or to create new functionality.</li>
+<li>I made about <strong>50</strong> sketches and designs in ProCreate on my iPad for visualizations. Just to try out functionality, or to create new functionality.</li>
 <li>In total, the created Lovelace Views, SAK templates and Decluttering templates cover about <strong>11.000</strong> lines of YAML. File sizes vary between <strong>170</strong> lines for a view with perfect re-use, templates, etc. up to so-called copy/paste views containing many cards and resulting in a size of <strong>3.500</strong> lines of YAML.</li>
-<li>About 10 example views are created to be used as an example or inspiration for other users than me. These examples are included in the documentation (See <a href="../../examples/introduction/">Examples</a>) and in GitHub.</li>
+<li>About 12 example views are created to be used as an example or inspiration for other users than me. These examples are included in the documentation (See <a href="../../examples/introduction/">Examples</a>) and in GitHub.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">As this card is not yet publicly released, nothing is available on GitHub yet!</p>
@@ -1957,7 +2006,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2020 - 2021 Marco @AmoebeLabs
+      Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
     </div>
   
   
