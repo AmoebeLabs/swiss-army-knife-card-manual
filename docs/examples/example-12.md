@@ -2,9 +2,11 @@
 template: overrides/main.html
 ---
 
-[![SAK Example]][SAK Example]
+[![SAK Example Light]][SAK Example Light]
+_Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
-  [SAK Example]: ../assets/screenshots/sak-example-12.png
+<br>[![SAK Example Dark]][SAK Example Dark]
+_Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
 ##:sak-sak-logo: Visualization
 This visualization shows some multi entity wide cards instead of the abundant square cards.  
@@ -150,3 +152,14 @@ TBD.
 
 ##:sak-sak-logo: Interactions
 - All tools support by default the "more-info" dialog once clicked.
+
+<!--- References to pictures... --->
+
+[SAK Example]: ../assets/screenshots/sak-example-12.png
+[SAK Example Light]: ../assets/screenshots/sak-example-12-m3-d06-light.png
+[SAK Example Dark]: ../assets/screenshots/sak-example-12-m3-d06-dark.png
+
+
+<!--- External References... --->
+
+[ham3-d06-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/example-d6/
