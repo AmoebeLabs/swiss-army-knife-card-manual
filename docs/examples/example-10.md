@@ -7,7 +7,7 @@ template: overrides/main.html
   [SAK Example]: ../assets/screenshots/sak-example-10.png
 
 ##:sak-sak-logo: Visualization
-Inside environment sensors, occupancy, airvisual and some Light switching square cards with state, icon, history, segmented arc and card animations.
+Indoor environment sensors, occupancy, airvisual, and some light switchable square cards with status, icon, history, segmented arc, and card animations.
 
 !!! Info "Cards 1, 2 and 3 use a similar design whith small variations in the state bar (top of card), thickness of segemented arc and history bars."
 
@@ -18,7 +18,7 @@ Inside environment sensors, occupancy, airvisual and some Light switching square
 - Third row: Ikea Tradfri Zigbee Lights, again using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 
 ##:sak-sak-logo: How to make it work in your own installation
-Except for the Air Visual integration, the others are generic temperature, humidity and pressure sensors, occupancy switch and light switches, so you can replace them with your own entities.
+Other than the Air Visual integration, the other generic ones are temperature, humidity, and pressure sensors, occupancy switches, and light switches, so you can replace them with your own entities.
 
 ###Required Home Assistant integrations
 The only integration you need are the `Airvisual` entities, so you need this integration:
@@ -27,13 +27,11 @@ The only integration you need are the `Airvisual` entities, so you need this int
 
 ###Required entitiy id changes
 
-For the first row, replace the sensor entities with you own. As long as the entities don't use an attribute for the value, the history tool will work.
+For the first row, replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. 
 
-The `Airvisual` entities should be the same for any installation, so no changes required on that part.
+The `Airvisual` entities should be the same for every installation, so no changes are needed on that part. If you don't have a `presence` sensor, replace it with an on/off sensor and the card should at least work!
 
-If you don't have any `occupancy` sensor, replace it with any on/off sensor and the card should at least work!
-
-The lights can be replaced with any entity that has a `brightness` attribute.
+Replace the light entities with your light entities that have a `brightness` attribute.
 
 ##:sak-sak-logo: Configuration
 
@@ -58,7 +56,7 @@ None.
 
 You see two lines below the "46 AQI" state: a scale and the actual value. This is the `segmented arc` which is configured in such a way that it resembles a straight line. So this is not a new tool you're seeing :smile:
 
-The `segarc` config is using an elleptical display and a small arc to resemble a line.
+The `segarc` config uses an elliptical display and a small arc to resemble a line.
 
 ```yaml linenums="1" hl_lines="6-10"
 - type: 'segarc'

@@ -20,11 +20,11 @@ The first one shows air quality data from AirVisual in a three 'columns' layout:
 
 **Environment cards**
 
-The environment cards have all the same format showing data from my Aqara Zigbee environment sensors. Next to the sensor values (temperature, humidity and pressure) data about the battery and linkquality are also displayed.
+The environmental cards are all the same format and show data from my Aqara Zigbee environmental sensors. In addition to the sensor values ​​(temperature, humidity, and pressure), battery and link quality data is also displayed.
 
 **Server cards**
 
-These show the logical stuff like cpu, memory, disk and system load information.
+These show the usual suspects like cpu, memory, disk, and system load information.
 
 ##:sak-sak-logo: Data sources
 - First card: [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
@@ -92,13 +92,13 @@ Below the `sensor:` configuration for the System Monitor and extra Glances RESTf
 ###Required Home Assistant integrations
 **First card**
 
-You only need the AirVisual integration.
+You need the AirVisual integration.
 
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
  **Environment cards**
  
-The environment sensors can be replaced with a sensor from your own installation.
+Replace the environment sensors with sensors from your own installation.
 
 **Server cards**
 
@@ -116,18 +116,17 @@ The visualization is build on the system monitor, glances and rest sensors, so y
 
 **First card**
 
-The `Airvisual` entities should be the same for any installation, so no changes required on that part.
+The `Airvisual` entities should be the same for any installation. No changes required on that part.
 
 **Environment cards**
 
-You can replace the existing `temperature`, `humidity`, `pressure`, `battery` and `linkquality` entities with a version of your own sensor entities. 
+Replace my `temperature`, `humidity`, `pressure`, `battery`, and `linkquality` entities with your sensor entities. 
 
 **Server cards**
 
-The `System Monitor` entities should be the same for any installation, so no changes required on that part.
+The `System Monitor` entities should be the same for each installation, so no changes are required for that part. 
 
-The `Glances` integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
-My integration is called `Glances-Poseidon` and thus the entities for instance `sensor.glances_poseidon_cpu_load`. You have to change the entities to your own entity id's.
+The `Glances` integration creates environment dependent entities: the server name is usually appended to the integration. My integration is called `Glances-Poseidon` with entity names like `sensor.glances_poseidon_cpu_load`. You must change the entities to your own entity IDs.
 
 !!! Info "If you have only 1 server, remove the second server..."
 
