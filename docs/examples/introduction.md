@@ -24,7 +24,7 @@ A quick view on a friend's Samsung showed no problems, but that is no 100% guara
 
 Due to the browser differences and long-standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.
 
-One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and Flat design: the latter is faster with the initial loading of the view.
+One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and a Flat design: the latter is faster with the initial loading of the view.
 
 ##:sak-sak-logo: Real world examples from my own installation
 All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.
