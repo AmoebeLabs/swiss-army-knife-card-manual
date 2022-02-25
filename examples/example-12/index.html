@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The Swiss Army Knife custom card for Home Assistant lets you create your own visualization given the tools and SVG/CSS styling options provided by this card">
+        <meta name="description" content="The custom Swiss Army Knife card for Home Assistant allows you to create your own visualization using the SVG tools and CSS styling options this card provides. <br><br>Got curious about what you can create? Read on!">
       
       
         <meta name="author" content="Marco">
@@ -1976,9 +1976,9 @@ All cards have an aspect ratio of 6/1.</p>
 <p><strong>First card</strong></p>
 <p>The first one shows air quality data from AirVisual in a three 'columns' layout: The air quality icon and description in the first 'column', the state with a segmented arc in the second 'column', and finally the history over the last 24 hours in the last 'column'.</p>
 <p><strong>Environment cards</strong></p>
-<p>The environment cards have all the same format showing data from my Aqara Zigbee environment sensors. Next to the sensor values (temperature, humidity and pressure) data about the battery and linkquality are also displayed.</p>
+<p>The environmental cards are all the same format and show data from my Aqara Zigbee environmental sensors. In addition to the sensor values ​​(temperature, humidity, and pressure), battery and link quality data is also displayed.</p>
 <p><strong>Server cards</strong></p>
-<p>These show the logical stuff like cpu, memory, disk and system load information.</p>
+<p>These show the usual suspects like cpu, memory, disk, and system load information.</p>
 <h2 id="data-sources"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"
@@ -2139,12 +2139,12 @@ All cards have an aspect ratio of 6/1.</p>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
 <h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
 <p><strong>First card</strong></p>
-<p>You only need the AirVisual integration.</p>
+<p>You need the AirVisual integration.</p>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
 </ul>
 <p><strong>Environment cards</strong></p>
-<p>The environment sensors can be replaced with a sensor from your own installation.</p>
+<p>Replace the environment sensors with sensors from your own installation.</p>
 <p><strong>Server cards</strong></p>
 <p>The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:</p>
 <h4 id="for-the-hestia-server-card">For the <code>Hestia</code> server card:<a class="headerlink" href="#for-the-hestia-server-card" title="Permanent link">&para;</a></h4>
@@ -2158,13 +2158,12 @@ All cards have an aspect ratio of 6/1.</p>
 </ul>
 <h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
 <p><strong>First card</strong></p>
-<p>The <code>Airvisual</code> entities should be the same for any installation, so no changes required on that part.</p>
+<p>The <code>Airvisual</code> entities should be the same for any installation. No changes required on that part.</p>
 <p><strong>Environment cards</strong></p>
-<p>You can replace the existing <code>temperature</code>, <code>humidity</code>, <code>pressure</code>, <code>battery</code> and <code>linkquality</code> entities with a version of your own sensor entities. </p>
+<p>Replace my <code>temperature</code>, <code>humidity</code>, <code>pressure</code>, <code>battery</code>, and <code>linkquality</code> entities with your sensor entities. </p>
 <p><strong>Server cards</strong></p>
-<p>The <code>System Monitor</code> entities should be the same for any installation, so no changes required on that part.</p>
-<p>The <code>Glances</code> integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
-My integration is called <code>Glances-Poseidon</code> and thus the entities for instance <code>sensor.glances_poseidon_cpu_load</code>. You have to change the entities to your own entity id's.</p>
+<p>The <code>System Monitor</code> entities should be the same for each installation, so no changes are required for that part. </p>
+<p>The <code>Glances</code> integration creates environment dependent entities: the server name is usually appended to the integration. My integration is called <code>Glances-Poseidon</code> with entity names like <code>sensor.glances_poseidon_cpu_load</code>. You must change the entities to your own entity IDs.</p>
 <div class="admonition info">
 <p class="admonition-title">If you have only 1 server, remove the second server...</p>
 </div>
