@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 ##:sak-sak-logo: The Swiss Army Knife YAML structure

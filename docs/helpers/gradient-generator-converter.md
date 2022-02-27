@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 [css-gradient-io]: ../assets/screenshots/css-gradient-io.png

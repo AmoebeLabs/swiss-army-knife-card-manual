@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 The installation can be done in two ways:
 

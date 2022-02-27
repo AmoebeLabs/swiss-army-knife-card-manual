@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 [segarc-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0

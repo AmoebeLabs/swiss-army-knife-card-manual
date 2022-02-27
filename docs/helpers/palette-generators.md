@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 [paletton-com]: ../assets/screenshots/paletton-com.png

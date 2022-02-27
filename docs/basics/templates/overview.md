@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 The Swiss Army Knife has support for several sorts of templates to re-use YAML parts or add JavaScript snippets.

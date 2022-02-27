@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.

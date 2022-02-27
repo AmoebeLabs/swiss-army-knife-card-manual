@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 One way to style the color of a tool is using colorstops where the state of the entity is used to choose a color for the tool. Both the `fill` and `stroke` attributes can be painted.

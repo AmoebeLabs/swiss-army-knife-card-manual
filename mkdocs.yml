@@ -20,7 +20,7 @@ theme:
   palette:
     primary: blue grey
   logo: assets/logo/sak-logo.svg
-  custom_dir: docs
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -33,11 +33,11 @@ plugins:
   - search
   
 extra_css:
-  - overrides/assets/stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 extra:
   social:
-    - icon: material/cup
+    - icon: bmc/bmc-logo
       link: https://www.buymeacoffee.com/amoebelabs 
     - icon: fontawesome/brands/github
       link: https://github.com/amoebelabs  
@@ -71,7 +71,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
       options:
         custom_icons:
-          - docs/overrides/.icons
+          - overrides/.icons
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys

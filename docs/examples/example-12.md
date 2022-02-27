@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 [![SAK Example Light]][SAK Example Light]

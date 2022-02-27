@@ -1,4 +1,4 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 

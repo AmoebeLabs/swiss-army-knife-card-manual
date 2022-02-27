@@ -1,5 +1,5 @@
 ---
-template: overrides/main.html
+template: main.html
 ---
 
 The Swiss Army Knife card uses SVG (Scalable Vector Graphics) as its sole basis to visualize a card.

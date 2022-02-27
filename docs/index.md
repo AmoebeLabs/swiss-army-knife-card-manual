@@ -1,6 +1,6 @@
 ﻿---
 title: Frontpage
-template: overrides/home-sak.html
+template: home-sak.html
 ---
 
 #<center> Welcome to the documentation for the <br>Swiss Army Knife custom card <br>for Home Assistant</center>
