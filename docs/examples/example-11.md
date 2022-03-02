@@ -2,9 +2,11 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
+[![SAK Example Light]][SAK Example Light]
+_Light example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
-  [SAK Example]: ../assets/screenshots/sak-example-11.png
+<br>[![SAK Example Dark]][SAK Example Dark]
+_Dark example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
 ##:sak-sak-logo: Visualization
 This visualization shows colorful boiler and electricity cards with possibly very "Dutch/European" integrations.
@@ -198,3 +200,13 @@ The four parts therefore can use the same definition:
 ##:sak-sak-logo: Interactions
 - The slider for the thermostat will set the temperature using the `climate.set_temperature` service for my `climate.calenta` boiler entity in 0.5 degrees Celcius steps and a range between 17..23 degrees Celcius.
 - All tools support by default the "more-info" dialog once clicked.
+
+<!--- References to pictures... --->
+
+[SAK Example]: ../assets/screenshots/sak-example-11.png
+[SAK Example Light]: ../assets/screenshots/sak-example-11-m3-c11-light.png
+[SAK Example Dark]: ../assets/screenshots/sak-example-11-m3-c11-dark.png
+
+<!--- External References... --->
+
+[ham3-c11-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/example-c11/

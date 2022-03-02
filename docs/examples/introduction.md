@@ -58,7 +58,7 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
 [sak-example-8]: ../assets/screenshots/sak-example-8.png
 [sak-example-9]: ../assets/screenshots/sak-example-9.png
 [sak-example-10]: ../assets/screenshots/sak-example-10.png
-[sak-example-11]: ../assets/screenshots/sak-example-11.png
+[sak-example-11]: ../assets/screenshots/sak-example-11-m3-c11-light.png
 [sak-example-12]: ../assets/screenshots/sak-example-12-m3-d06-light.png
 
 [sak-example-2gif]: ../assets/screenshots/sak-example-2.gif
