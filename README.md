@@ -1,6 +1,10 @@
 This is the home of the Swiss Army Knife custom card for Home Assistant documentation.
 
-Currently in closed BETA with around 40 users.
+Development status as of March 2022:
+
+- Currently in **closed** BETA with around 40 users.
+- Next step will be a **public** release candidate (RC), announced here and on the Home Assistant community forum.
+- And if that goes well, version 1.0.0 will be released 🚀.
 
 For online documentation, see: https://swiss-army-knife.docs.amoebelabs.com/
 
