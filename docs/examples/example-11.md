@@ -2,10 +2,10 @@
 template: main.html
 ---
 
-[![SAK Example Light]][SAK Example Light]
+![AmoebeLabs Swiss Army Knife Custom Card Example 11 Light]
 _Light example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
-<br>[![SAK Example Dark]][SAK Example Dark]
+<br>![AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark]
 _Dark example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
 ##:sak-sak-logo: Visualization
@@ -19,9 +19,9 @@ It shows a thermostat with some extra data (heat/hot water active) and the boile
 
 The thermostat card uses two overlayed segmented arcs:
 - One (with scale) for the actual room temperature measured by the thermostat
-- One (no scale, superimposed on previous segarc) for the setpoint.
+- One (white, no scale, superimposed on previous segarc) for the setpoint.
 
-You can see the setpoint in the screenshot: the room temperature is 19.3 degrees celcius and the setpoint is 19.5 degrees celcius. The latter one is a smaller segarc.
+You can see the setpoint in the screenshot: the room temperature is 19.6 degrees celcius and the setpoint is 20.0 degrees celcius. The latter one is a smaller segarc.
 
 **Electricity**
 
@@ -201,11 +201,11 @@ The four parts therefore can use the same definition:
 - The slider for the thermostat will set the temperature using the `climate.set_temperature` service for my `climate.calenta` boiler entity in 0.5 degrees Celcius steps and a range between 17..23 degrees Celcius.
 - All tools support by default the "more-info" dialog once clicked.
 
-<!--- References to pictures... --->
+<!-- Image references -->
 
-[SAK Example]: ../assets/screenshots/sak-example-11.png
-[SAK Example Light]: ../assets/screenshots/sak-example-11-m3-c11-light.png
-[SAK Example Dark]: ../assets/screenshots/sak-example-11-m3-c11-dark.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 11]: ../assets/screenshots/sak-example-11.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 11 Light]: ../assets/screenshots/sak-example-11-m3-c11-light.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark]: ../assets/screenshots/sak-example-11-m3-c11-dark.png
 
 <!--- External References... --->
 

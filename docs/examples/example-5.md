@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-5.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 5]
 
 ##:sak-sak-logo: Visualization
 This visualization is inspired by a car dashboard.
@@ -50,3 +48,7 @@ None used. All inline YAML!
 
 ##:sak-sak-logo: Remarks
 None.
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 5]: ../assets/screenshots/sak-example-5.png

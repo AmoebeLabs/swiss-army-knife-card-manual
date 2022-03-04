@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-4.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 4]
   
 ##:sak-sak-logo: Visualization
 Once again a visualization of sensors values using two completely different card designs. The first row is a Neumorphic design, and the second implements a very simple and clean Flat design with a few colored blocks as the background of the card.
@@ -92,3 +90,7 @@ The following templates are defined in the `/lovelace/sak_templates/sak-template
 
 ##:sak-sak-logo: Remarks
 None.
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 4]: ../assets/screenshots/sak-example-4.png

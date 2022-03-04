@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-7.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 7]
 
 ##:sak-sak-logo: Visualization
 Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running Home Assistant and another bunch of containers and a second server as a frontend for the ugly internet. This one is also running a bunch of docker containers.
@@ -136,3 +134,7 @@ None.
 
 ##:sak-sak-logo: Remarks
 !!! Success "This view is a nice example of the use of toolset scaling!"
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 7]: ../assets/screenshots/sak-example-7.png

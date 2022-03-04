@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-8.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 8]
 
 ##:sak-sak-logo: Visualization
 Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards with icon and card animations.
@@ -113,3 +111,7 @@ None.
 ##:sak-sak-logo: Remarks
 !!! Info "Due to rendering differences for icons, Safari based systems show the icon animation, and other/Chrome based browsers not."
     This should be fixed in the future...
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 8]: ../assets/screenshots/sak-example-8.png

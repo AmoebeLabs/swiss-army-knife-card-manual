@@ -104,6 +104,7 @@ And the final result after placing all the SAK tools on top of the background: a
 ![sak-example-6]
 
 <!-- Images -->
+
 [sak-circles-background]: ../assets/screenshots/sak-circles-background.png
 [sak-circles-background-ad]: ../assets/screenshots/sak-circles-background-ad.png
 [sak-design-sketch-procreate]: ../assets/screenshots/sak-design-sketch-procreate.png
@@ -118,7 +119,7 @@ And the final result after placing all the SAK tools on top of the background: a
 [sak-example-6]: ..//assets/screenshots/sak-example-6.png
 [sak-example-7]: ..//assets/screenshots/sak-example-7.png
 
-<!-- Refernces -->
+<!-- References -->
 
 [example 2]: ../examples/example-2.md
 [example 6]: ../examples/example-6.md

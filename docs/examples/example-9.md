@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-9.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 9]
 
 ##:sak-sak-logo: Visualization
 
@@ -55,3 +53,7 @@ None.
 
 ##:sak-sak-logo: Remarks
 For some reason, the AQI value doesn't update always on initial display of the view. No idea why yet...
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 9]: ../assets/screenshots/sak-example-9.png

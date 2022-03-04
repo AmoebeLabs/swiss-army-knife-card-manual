@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-10.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 10]
 
 ##:sak-sak-logo: Visualization
 Indoor environment sensors, occupancy, airvisual, and some light switchable square cards with status, icon, history, segmented arc, and card animations.
@@ -76,3 +74,7 @@ The `segarc` config uses an elliptical display and a small arc to resemble a lin
     width: 2
     offset: 3
 ```
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 10]: ../assets/screenshots/sak-example-10.png

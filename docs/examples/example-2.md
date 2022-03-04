@@ -4,10 +4,8 @@ template: main.html
 
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.
 
-[![SAK Example 2]][SAK Example 2]
+![AmoebeLabs Swiss Army Knife Custom Card Example 2]
 
-  [SAK Example 2]: ../assets/screenshots/sak-example-2.png
-  
 ##:sak-sak-logo: Visualization
 !!! Tip
     This visualization shows some non-card alike aspects of the Swiss Army Knife: the horizontal divider lines, and the texts "SCENES", "VERLICHTING (Lights)" and "WOONKAMER (Livingroom)" are all made with SAK.
@@ -187,3 +185,8 @@ The first row has an explicit "more-info" menu button and sliders for brightness
 
 - Home Assistant sends a brightness value between 0..255.
 <br>A little piece of javascript in the card converts this to 0..100% as a derived state, including a unit of measurement setting of "%". This means that the value and the uom can be styled as if it is an existing state.
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 2]: ../assets/screenshots/sak-example-2.png
+  

@@ -2,9 +2,7 @@
 template: main.html
 ---
 
-[![SAK Example]][SAK Example]
-
-  [SAK Example]: ../assets/screenshots/sak-example-6.png
+![AmoebeLabs Swiss Army Knife Custom Card Example 6]:
 
 ##:sak-sak-logo: Visualization
 Let's do something different and use the weather for a nice view :smile:
@@ -61,3 +59,7 @@ None used.
 
 ##:sak-sak-logo: Remarks
 None.
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 6]: ../assets/screenshots/sak-example-6.png

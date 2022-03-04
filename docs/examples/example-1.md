@@ -5,10 +5,8 @@ template: main.html
 
 A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.
 
-[![SAK Example 1]][SAK Example 1]
+![AmoebeLabs Swiss Army Knife Custom Card Example 1]
 
-  [SAK Example 1]: ../assets/screenshots/sak-example-1b.png
-  
 ##:sak-sak-logo: Visualization
 This visualization is divided into three major blocks:
 
@@ -122,3 +120,7 @@ To display the weather type, you need the external *animated* SVG's which are lo
 - 
 This view shows the dutch translation for "Partly Cloudy --> Gedeeltelijk bewolkt" and the wind direction "WSW --> WZW".
 > Support for translations is possible using a YAML configuration.
+
+<!-- Image references -->
+
+[AmoebeLabs Swiss Army Knife Custom Card Example 1]: ../assets/screenshots/sak-example-1b.png

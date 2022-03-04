@@ -2,10 +2,10 @@
 template: main.html
 ---
 
-[![SAK Example Light]][SAK Example Light]
+![AmoebeLabs Swiss Army Knife Custom Card Example 12 Light]
 _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
-<br>[![SAK Example Dark]][SAK Example Dark]
+<br>![AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark]
 _Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
 ##:sak-sak-logo: Visualization
@@ -152,12 +152,11 @@ TBD.
 ##:sak-sak-logo: Interactions
 - All tools support by default the "more-info" dialog once clicked.
 
-<!--- References to pictures... --->
+<!-- Image references -->
 
-[SAK Example]: ../assets/screenshots/sak-example-12.png
-[SAK Example Light]: ../assets/screenshots/sak-example-12-m3-d06-light.png
-[SAK Example Dark]: ../assets/screenshots/sak-example-12-m3-d06-dark.png
-
+[AmoebeLabs Swiss Army Knife Custom Card Example 12]: ../assets/screenshots/sak-example-12.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 Light]: ../assets/screenshots/sak-example-12-m3-d06-light.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark]: ../assets/screenshots/sak-example-12-m3-d06-dark.png
 
 <!--- External References... --->
 
