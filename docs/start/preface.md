@@ -1,5 +1,6 @@
 ---
 template: main.html
+title: Getting Started Preface
 ---
 <!-- GT/GL -->
 

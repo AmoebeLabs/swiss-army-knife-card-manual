@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 6]:
+![AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]:
 
 ##:sak-sak-logo: Visualization
 Let's do something different and use the weather for a nice view :smile:
@@ -62,4 +62,4 @@ None.
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 6]: ../assets/screenshots/sak-example-6.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]: ../assets/screenshots/sak-example-6.png "Swiss Army Knife Example 6 - Weather on SVG background"

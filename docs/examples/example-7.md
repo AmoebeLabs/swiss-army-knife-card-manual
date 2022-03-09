@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 7]
+![AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]
 
 ##:sak-sak-logo: Visualization
 Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running Home Assistant and another bunch of containers and a second server as a frontend for the ugly internet. This one is also running a bunch of docker containers.
@@ -137,4 +137,4 @@ None.
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 7]: ../assets/screenshots/sak-example-7.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife Example 7 - Servers"

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 9]
+![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]
 
 ##:sak-sak-logo: Visualization
 
@@ -56,4 +56,4 @@ For some reason, the AQI value doesn't update always on initial display of the v
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 9]: ../assets/screenshots/sak-example-9.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]: ../assets/screenshots/sak-example-9.png "Swiss Army Knife Example 9 - Hight Contrast"

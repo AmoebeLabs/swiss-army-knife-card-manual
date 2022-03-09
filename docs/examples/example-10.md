@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 10]
+![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]
 
 ##:sak-sak-logo: Visualization
 Indoor environment sensors, occupancy, airvisual, and some light switchable square cards with status, icon, history, segmented arc, and card animations.
@@ -77,4 +77,4 @@ The `segarc` config uses an elliptical display and a small arc to resemble a lin
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 10]: ../assets/screenshots/sak-example-10.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]: ../assets/screenshots/sak-example-10.png "Swiss Army Knife Example 10 - Colorful mix"

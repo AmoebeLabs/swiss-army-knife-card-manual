@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 5]
+![AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]
 
 ##:sak-sak-logo: Visualization
 This visualization is inspired by a car dashboard.
@@ -51,4 +51,4 @@ None.
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 5]: ../assets/screenshots/sak-example-5.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]: ../assets/screenshots/sak-example-5.png "Swiss Army Knife Example 5 - Car dashboard alike"

@@ -1,5 +1,6 @@
 ---
 template: main.html
+title: Examples Introduction
 ---
 <!-- GT/GL -->
 

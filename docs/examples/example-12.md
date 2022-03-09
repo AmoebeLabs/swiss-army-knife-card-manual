@@ -2,10 +2,10 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 12 Light]
+![AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]
 _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
-<br>![AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark]
+<br>![AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]
 _Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
 ##:sak-sak-logo: Visualization
@@ -104,11 +104,11 @@ Replace the environment sensors with sensors from your own installation.
 
 The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:
 
-####For the `Hestia` server card:
+####For the `Hestia` server card
 
 - [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
 
-####And for the `Poseidon`server card:
+####And for the `Poseidon` server card
 - [The Glances integration](https://www.home-assistant.io/integrations/glances/)
 - [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
 
@@ -155,8 +155,8 @@ TBD.
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 12]: ../assets/screenshots/sak-example-12.png
-[AmoebeLabs Swiss Army Knife Custom Card Example 12 Light]: ../assets/screenshots/sak-example-12-m3-d06-light.png
-[AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark]: ../assets/screenshots/sak-example-12-m3-d06-dark.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-light.png "Swiss Army Knife Example 12 - Wide cards, light theme"
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-dark.png "Swiss Army Knife Example 12 - Wide cards, dark theme"
 
 <!--- External References... --->
 

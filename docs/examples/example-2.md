@@ -4,7 +4,7 @@ template: main.html
 
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 2]
+![AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]
 
 ##:sak-sak-logo: Visualization
 !!! Tip
@@ -188,5 +188,5 @@ The first row has an explicit "more-info" menu button and sliders for brightness
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 2]: ../assets/screenshots/sak-example-2.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]: ../assets/screenshots/sak-example-2.png "Swiss Army Knife Example 2 - Lights"
   

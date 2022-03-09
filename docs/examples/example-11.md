@@ -2,10 +2,10 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 11 Light]
+![AmoebeLabs Swiss Army Knife Custom Card Example 11 Light - Boiler and electricity]
 _Light example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
-<br>![AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark]
+<br>![AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark - Boiler and electricity]
 _Dark example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
 
 ##:sak-sak-logo: Visualization
@@ -204,8 +204,8 @@ The four parts therefore can use the same definition:
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 11]: ../assets/screenshots/sak-example-11.png
-[AmoebeLabs Swiss Army Knife Custom Card Example 11 Light]: ../assets/screenshots/sak-example-11-m3-c11-light.png
-[AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark]: ../assets/screenshots/sak-example-11-m3-c11-dark.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 11 Light - Boiler and electricity]: ../assets/screenshots/sak-example-11-m3-c11-light.png "Swiss Army Knife Example 11 - Boiler and electricity, light theme"
+[AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark - Boiler and electricity]: ../assets/screenshots/sak-example-11-m3-c11-dark.png "Swiss Army Knife Example 11 - Boiler and electricity, dark theme"
 
 <!--- External References... --->
 

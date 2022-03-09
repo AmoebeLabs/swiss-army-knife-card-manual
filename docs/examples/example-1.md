@@ -5,7 +5,7 @@ template: main.html
 
 A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 1]
+![AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]
 
 ##:sak-sak-logo: Visualization
 This visualization is divided into three major blocks:
@@ -123,4 +123,4 @@ This view shows the dutch translation for "Partly Cloudy --> Gedeeltelijk bewolk
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 1]: ../assets/screenshots/sak-example-1b.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1b.png "Swiss Army Knife Example 1 - AirVisual and Weather forecast"

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 8]
+![AmoebeLabs Swiss Army Knife Custom Card Example 8 - Homekit alike]
 
 ##:sak-sak-logo: Visualization
 Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards with icon and card animations.
@@ -114,4 +114,4 @@ None.
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 8]: ../assets/screenshots/sak-example-8.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 8 - Homekit alike]: ../assets/screenshots/sak-example-8.png "Swiss Army Knife Example 8 - Homekit alike"

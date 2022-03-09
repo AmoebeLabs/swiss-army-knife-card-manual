@@ -4,7 +4,7 @@ template: main.html
 
 Visualization of some environment sensors.
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 3]
+![AmoebeLabs Swiss Army Knife Custom Card Example 3 - Sensors]
 
 ##:sak-sak-logo: Visualization
 The card is build using the following tools:
@@ -132,4 +132,4 @@ The `sak_sensor_history_template_nm_tpl` decluttering template and `toolset_sens
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 3]: ../assets/screenshots/sak-example-3.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 3 - Sensors]: ../assets/screenshots/sak-example-3.png "Swiss Army Knife Example 3 - Sensors"
