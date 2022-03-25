@@ -17,7 +17,9 @@ copyright: Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
 theme:
   name: material
   palette:
-    primary: blue grey
+    # primary: blue grey
+    primary: amoebelabs
+    accent: amoebelabs
   logo: assets/logo/sak-logo.svg
   custom_dir: overrides
   features:
