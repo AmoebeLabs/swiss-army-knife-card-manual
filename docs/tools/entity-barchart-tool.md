@@ -64,7 +64,7 @@ It is a basic chart, more of a sparkline with only display functionality.
       </g>
 </svg>      
 ##:sak-sak-logo: Basic usage
-
+The Entity History tool needs a center position, height, width, and margin to display the history graph. It also needs the number of hours, the number of bars per hour, and the orientation. Last but not least, it needs the entity_index from which the history is displayed
 === "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'bar'               # tooltype is 'bar'

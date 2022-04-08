@@ -45,7 +45,7 @@ It can build both regular convex polygons and regular star polygons. They have a
 
 
 ##:sak-sak-logo: Basic usage
-
+The Regular Poly tool needs a center position, radius, number of sides, the number of sides to skip, and an optional angle offset to rotate the regular polygon to the desired state.
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
     - type: 'regpoly'           # tooltype is 'regpoly'

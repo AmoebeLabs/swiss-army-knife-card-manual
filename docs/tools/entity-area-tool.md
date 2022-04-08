@@ -16,7 +16,7 @@ The Entity Area tool displays the Home Assistant Entity Area value.
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The Entity Area tool needs a center position and the entity_index from which the area text is used.
 === "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'area'              # tooltype is 'area'

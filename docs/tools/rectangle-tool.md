@@ -15,7 +15,7 @@ The Rectangle tool is based on the SVG basic `<rect>`element shape.
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The Rectangle tool needs a center position, height, width, and optional corner radius.
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
     - type: 'rectangle'         # tooltype is 'rectangle'

@@ -14,6 +14,7 @@ The Circle tool is based on the SVG basic `<circle>`element shape.
 </svg>
 
 ##:sak-sak-logo: Basic usage
+The Circle tool needs a center position and a radius.
 
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"

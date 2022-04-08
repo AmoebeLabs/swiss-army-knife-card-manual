@@ -14,7 +14,7 @@ The Line tool is based on the SVG basic `<line>` element shape
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The Line tool needs a center position and a length, or start and endpoints.
 === "Standalone"
     ```yaml title="Horizontal / Vertical config" linenums="1" hl_lines="1"
     - type: 'line'              # tooltype is 'line'

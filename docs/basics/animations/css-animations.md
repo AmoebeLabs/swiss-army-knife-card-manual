@@ -5,8 +5,7 @@ template: main.html
 [css-animations support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
 # CSS Animations
 [:octicons-tag-24: 1.0.0][css-animations support] ·
-:octicons-package-dependents-24: Output ·
-:octicons-beaker-24: Experimental
+:octicons-package-dependents-24: Output
 
 ##:sak-sak-logo: Basic usage
 
@@ -30,11 +29,7 @@ Their name and what they do are shown in the following table
 | tada <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:tada 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg> | wobble <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:wobble 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg> | zoomOut <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:zoomOut 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" overflow="visible" fill="var(--md-primary-fg-color--100)"> </rect></svg>
 | spin <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:spin 5s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg> | blinkingText <br><svg viewBox="0 0 200 100" width="100px"> <rect x="50" y="25" width="100" height="50" style="animation:blinkingText 1s infinite;transform-origin:100px 50px;" stroke-width="2" stroke="var(--md-primary-fg-color)" fill="var(--md-primary-fg-color--100)"> </rect></svg> | The END |
 
-!!! Warning "They seem to work, but still experimental?"
-    Yes. The animations itself work, but depending on the location of the tool, you might get unexpected results. Some animations expect/require the animation center to be in the center of the tool, which is not always the case. This means that a `spin` might NOT rotate around the point you expect.
-    
-    I hope to fix this in the future by calculating the real center and correct this using the css `transform-origin` property.
-    
+   
 !!! Tip "Use animations sparingly"
     You don't want your Home Assistant dashboard look like a website from the 90ties :smile: 
     

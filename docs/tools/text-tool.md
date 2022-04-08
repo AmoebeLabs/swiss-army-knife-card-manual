@@ -17,7 +17,7 @@ The Text tool is based on the SVG basic `<text>`element shape.
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The Text tool needs a center position, and - of course - some text to display.
 === "Standalone"
   ```yaml linenums="1" hl_lines="1"
   - type: 'text'              # tooltype is 'text'

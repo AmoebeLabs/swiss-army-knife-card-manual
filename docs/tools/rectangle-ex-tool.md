@@ -21,7 +21,7 @@ The RectEx tool lets you define the radius for each corner, where the Rectangle 
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The RectEx tool needs a center position, height, and width. You can specify a corner radius for each corner, or pair of corners.
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
     - type: 'rectex'            # tooltype is 'rectex'

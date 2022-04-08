@@ -14,7 +14,7 @@ The Ellipse tool is based on the SVG basic `<ellipse>`element shape.
 </svg>
 
 ##:sak-sak-logo: Basic usage
-
+The Ellipse tool needs a center position and a radius for both x and y directions.
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
     - type: 'ellipse'           # tooltype is 'ellipse'

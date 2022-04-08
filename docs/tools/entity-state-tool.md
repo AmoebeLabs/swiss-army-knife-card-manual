@@ -54,7 +54,7 @@ The Entity State tool displays the Home Assistant Entity State value and unit of
 
 
 ##:sak-sak-logo: Basic usage
-
+The Entity State tool needs a center position and the entity_index from which the state value is used.
 === "Connected"
 ```yaml linenums="1" hl_lines="1"
 - type: 'state'             # tooltype is 'state'

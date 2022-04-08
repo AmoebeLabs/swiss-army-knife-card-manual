@@ -34,12 +34,12 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
 
 | An overview of all the examples | |
 | ------------ | ---------------- |
-| **[Example 1 - Airvisual and Weather forecast][Example 1]:** [![sak-example-1b]][Example 1]  | **[Example 2 - Lights][Example 2]:** [![sak-example-2]][Example 2] |
-| **[Example 3 - Sensors][Example 3]:** [![sak-example-3]][Example 3]   | **[Example 4 - More sensors][Example 4]:** [![sak-example-4]][Example 4] |
-| **[Example 5 - Car dashboard alike][Example 5]:** [![sak-example-5]][Example 5]   | **[Example 6 - Weather on SVG background][Example 6]:** [![sak-example-6]][Example 6] |
-| **[Example 7 - Servers][Example 7]:** [![sak-example-7]][Example 7]   | **[Example 8 - Homekit alike][Example 8]:** [![sak-example-8]][Example 8] |
-| **[Example 9 - High Contrast][Example 9]:** [![sak-example-9]][Example 9]   | **[Example 10 - Colorful mix][Example 10]:** [![sak-example-10]][Example 10] |
-| **[Example 11 - Boiler and Electricity][Example 11]:** [![sak-example-11]][Example 11] | **[Example 12 - Wide cards][Example 12]:** [![sak-example-12]][Example 12] |
+| **[Example 1 - Airvisual and Weather forecast][Example 1]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]][Example 1]  | **[Example 2 - Lights][Example 2]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]][Example 2] |
+| **[Example 3 - Sensors][Example 3]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 3 - Sensors]][Example 3]   | **[Example 4 - More sensors][Example 4]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 4 - More sensors]][Example 4] |
+| **[Example 5 - Car dashboard alike][Example 5]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]][Example 5]   | **[Example 6 - Weather on SVG background][Example 6]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]][Example 6] |
+| **[Example 7 - Servers][Example 7]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]][Example 7]   | **[Example 8 - Homekit alike][Example 8]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 8 - Homekit alike]][Example 8] |
+| **[Example 9 - High Contrast][Example 9]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]][Example 9]   | **[Example 10 - Colorful mix][Example 10]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]][Example 10] |
+| **[Example 11 - Boiler and Electricity][Example 11]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 11 - Boiler and electricity]][Example 11] | **[Example 12 - Wide cards][Example 12]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 12 - Wide cards]][Example 12] |
 
 
 | And some gifs to show the animations| |
@@ -49,18 +49,18 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
 
 <!--- References to pictures... --->
 
-[sak-example-1b]: ../assets/screenshots/sak-example-1b.png
-[sak-example-2]: ../assets/screenshots/sak-example-2.png
-[sak-example-3]: ../assets/screenshots/sak-example-3.png
-[sak-example-4]: ../assets/screenshots/sak-example-4.png
-[sak-example-5]: ../assets/screenshots/sak-example-5.png
-[sak-example-6]: ../assets/screenshots/sak-example-6.png
-[sak-example-7]: ../assets/screenshots/sak-example-7.png
-[sak-example-8]: ../assets/screenshots/sak-example-8.png
-[sak-example-9]: ../assets/screenshots/sak-example-9.png
-[sak-example-10]: ../assets/screenshots/sak-example-10.png
-[sak-example-11]: ../assets/screenshots/sak-example-11-m3-c11-light.png
-[sak-example-12]: ../assets/screenshots/sak-example-12-m3-d06-light.png
+[AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1b.png "Swiss Army Knife Example 1 - AirVisual and Weather forecast"
+[AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]: ../assets/screenshots/sak-example-2.png "Swiss Army Knife Example 2 - Lights"
+[AmoebeLabs Swiss Army Knife Custom Card Example 3 - Sensors]: ../assets/screenshots/sak-example-3.png "Swiss Army Knife Example 3 - Sensors"
+[AmoebeLabs Swiss Army Knife Custom Card Example 4 - More sensors]: ../assets/screenshots/sak-example-4.png "Swiss Army Knife Example 4 - More sensors"
+[AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]: ../assets/screenshots/sak-example-5.png "Swiss Army Knife Example 5 - Car dashboard alike"
+[AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]: ../assets/screenshots/sak-example-6.png "Swiss Army Knife Example 6 - Weather on SVG background"
+[AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife Example 7 - Servers"
+[AmoebeLabs Swiss Army Knife Custom Card Example 8 - Homekit alike]: ../assets/screenshots/sak-example-8.png "Swiss Army Knife Example 8 - Homekit alike"
+[AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]: ../assets/screenshots/sak-example-9.png "Swiss Army Knife Example 9 - Hight Contrast"
+[AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]: ../assets/screenshots/sak-example-10.png "Swiss Army Knife Example 10 - Colorful mix"
+[AmoebeLabs Swiss Army Knife Custom Card Example 11 - Boiler and electricity]: ../assets/screenshots/sak-example-11-m3-c11-light.png "Swiss Army Knife Example 11 - Boiler and electricity, light theme"
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-light.png "Swiss Army Knife Example 12 - Wide cards, light theme"
 
 [sak-example-2gif]: ../assets/screenshots/sak-example-2.gif
 [sak-example-6gif]: ../assets/screenshots/sak-example-6.gif
