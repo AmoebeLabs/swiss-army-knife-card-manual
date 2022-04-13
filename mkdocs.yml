@@ -1,3 +1,6 @@
+# History
+# 2022.04.13
+# - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.30
 
 # Project information
 site_name: Swiss Army Knife custom card
