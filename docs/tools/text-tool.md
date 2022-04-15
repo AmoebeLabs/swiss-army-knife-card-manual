@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Text tool
 [:octicons-tag-24: 1.0.0][text-tool support] ·
 :octicons-package-dependents-24: Output ·

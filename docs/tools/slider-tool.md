@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[slider-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[slider-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 
 # The slider tool
 [:octicons-tag-24: 1.0.0][slider-tool support] ·

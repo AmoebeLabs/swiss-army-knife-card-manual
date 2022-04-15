@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[entity-area-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[entity-area-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Entity Area tool
 [:octicons-tag-24: 1.0.0][entity-area-tool support] ·
 :octicons-package-dependents-24: Output

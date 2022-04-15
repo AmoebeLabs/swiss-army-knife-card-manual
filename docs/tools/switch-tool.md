@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 
 # The Switch tool
 [:octicons-tag-24: 1.0.0][switch-tool support] ·

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Rectangle Ex(tended) tool
 [:octicons-tag-24: 1.0.0][rectex-tool support] ·
 :octicons-package-dependents-24: Output

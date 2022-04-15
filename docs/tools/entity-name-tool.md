@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[entity-name-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[entity-name-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Entity Name tool
 [:octicons-tag-24: 1.0.0][entity-name-tool support] ·
 :octicons-package-dependents-24: Output

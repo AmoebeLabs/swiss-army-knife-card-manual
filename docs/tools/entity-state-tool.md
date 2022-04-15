@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Entity State tool
 [:octicons-tag-24: 1.0.0][entity-state-tool support] ·
 :octicons-package-dependents-24: Output

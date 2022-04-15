@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Ellipse tool
 [:octicons-tag-24: 1.0.0][ellipse-tool support] ·
 :octicons-package-dependents-24: Output

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[horseshoe-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[horseshoe-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Horse Shoe tool
 [:octicons-tag-24: 1.0.0][horseshoe-tool support] ·
 :octicons-package-dependents-24: Output

@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[circle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[circle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Circle tool
 [:octicons-tag-24: 1.0.0][circle-tool support] ·
 :octicons-package-dependents-24: Output

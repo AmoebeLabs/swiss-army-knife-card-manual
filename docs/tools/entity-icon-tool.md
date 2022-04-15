@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[entity-icon-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[entity-icon-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Entity Icon tool
 [:octicons-tag-24: 1.0.0][entity-icon-tool support] ·
 :octicons-package-dependents-24: Output

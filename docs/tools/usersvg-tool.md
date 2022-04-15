@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 
 [usersvg-partly-cloudy-day]: ../assets/screenshots/partly-cloudy-day.svg
 [usersvg-partly-cloudy-day-rain]: ../assets/screenshots/partly-cloudy-day-rain.svg

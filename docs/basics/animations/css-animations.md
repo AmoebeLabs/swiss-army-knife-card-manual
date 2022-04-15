@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[css-animations support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[css-animations support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # CSS Animations
 [:octicons-tag-24: 1.0.0][css-animations support] ·
 :octicons-package-dependents-24: Output

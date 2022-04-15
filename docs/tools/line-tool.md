@@ -2,7 +2,7 @@
 template: main.html
 ---
 
-[line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/tag/1.0.0
+[line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
 # The Line tool
 [:octicons-tag-24: 1.0.0][line-tool support] ·
 :octicons-package-dependents-24: Output
