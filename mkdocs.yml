@@ -1,6 +1,6 @@
 # History
 # 2022.04.13
-# - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.30
+# - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.3.0
 
 # Project information
 site_name: Swiss Army Knife custom card
@@ -42,17 +42,17 @@ extra_css:
 extra:
   social:
     - icon: bmc/bmc-logo
-      link: https://www.buymeacoffee.com/amoebelabs
+      link: https://www.buymeacoffee.com/amoebelabs/
     - icon: amoebelabs/al-logo-social
       link: https://amoebelabs.com
     - icon: m3/m3-logo-social
       link: https://ha-m3-themes.docs.amoebelabs.com
     - icon: fontawesome/brands/github
-      link: https://github.com/amoebelabs  
+      link: https://github.com/amoebelabs/
     - icon: fontawesome/brands/instagram
-      link: https://instagram.com/amoebelabs  
+      link: https://www.instagram.com/amoebelabs/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/amoebelabs  
+      link: https://twitter.com/amoebelabs/
 
   analytics:
     provider: google
