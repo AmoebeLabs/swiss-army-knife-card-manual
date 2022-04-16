@@ -114,10 +114,10 @@ nav:
     - Designing your card: start/designing-your-card.md
     - Changelog: changelog/changelog.md
   - Basics:
-    - SVG as basis: basics/svg-as-basis.md
-    - Card structure: basics/card-structure.md
+#    - SVG as basis: basics/svg-as-basis.md
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
+    - Card structure: basics/card-structure.md
     - Templates and Snippets:
       - Overview: basics/templates/overview.md
       - YAML built-in: basics/templates/yaml-built-in.md
@@ -130,7 +130,7 @@ nav:
       - Classes: basics/styling/classes.md
       - Styles: basics/styling/styles.md
     - Animations:
-      - Overview: basics/animations/overview.md
+#      - Overview: basics/animations/overview.md
       - CSS Animations: basics/animations/css-animations.md
       - Colorstops: basics/animations/colorstops.md
       - State operators: basics/animations/state-operators.md
@@ -170,6 +170,6 @@ nav:
     - 11. Boiler and electricity: examples/example-11.md
     - 12. Wide cards: examples/example-12.md
   - Helpers:
-    - Introduction: helpers/introduction.md
+#    - Introduction: helpers/introduction.md
     - Pallette generators: helpers/palette-generators.md
     - Gradient generator / converter: helpers/gradient-generator-converter.md

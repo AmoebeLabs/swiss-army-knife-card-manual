@@ -1,6 +1,7 @@
 ---
 template: main.html
 ---
+#Example 6: Weather on SVG background
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]:
 
@@ -10,7 +11,7 @@ Let's do something different and use the weather for a nice view :smile:
 This view is made with the aid of Affinity Designer. The 'balls' background is created with this tool and exported as an SVG file.
 <br>On top of those circels the weather and Airvisual data is displayed.
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
@@ -30,7 +31,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 
 !!! Info "Other weather integrations won't work, as they create different states and attributes"
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 - Background as external SVG, loaded with the `usersvg` tool
 - Upper left the title
 - The weather (temperature, humidity, pressure) in three circles.

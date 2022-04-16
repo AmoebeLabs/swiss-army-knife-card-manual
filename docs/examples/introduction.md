@@ -1,31 +1,23 @@
 ---
 template: main.html
 title: Examples Introduction
+description: These 12 examples show some examples of the Swiss Army Knife custom card possibilities. The examples are from my own installation, using real sensors.
 ---
 <!-- GT/GL -->
 
-I have placed several examples in their own SAK Example view for easy reference.
-In most cases, the twelve examples show more than one map or more than one visualization.
+#Introducing 12 examples
+I have placed twelve examples in their own SAK Example view for easy reference.
+In most cases, the examples show more than one map or more than one visualization.
 
 Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.
 
-!!! Info "All samples use their own theme defined in the view-sake*.yaml. Themes are included in Github."
+!!! Info "All examples except 12 use their own theme defined in the view-sake*.yaml. Themes are included in Github."
     Aside from the box shading for the cards, themes also define some of the color schemes used by the cards.
     
     Other themes may display black colors where theme colors are used.
-    
-##:sak-sak-logo: Platforms tested
-I have tested SAK - and thus the examples - on the following platforms:
 
-- Safari (mobile and desktop view) on iOS/iPadOS 14 & 15, iPhone & iPad
-- Google Chrome > 90.x on Windows 10, on my 10 year old Desktop :smile: 
-
-By testing Chrome, I assume I validated all the Chromium-based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium-based browsers which I could not test as I don't have any Android devices.
-A quick view on a friend's Samsung showed no problems, but that is no 100% guarantee of course.
-
-Due to the browser differences and long-standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.
-
-One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and a Flat design: the latter is faster with the initial loading of the view.
+!!! Info "Example 12, the wide cards uses a Home Assistant Material 3 theme"
+    Example 12 is used as the example view to create the [Material 3 themes](https://ha-m3-themes.docs.amoebelabs.com/).
 
 ##:sak-sak-logo: Real world examples from my own installation
 All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.
@@ -46,6 +38,20 @@ Many examples use the `Met.no` weather and `Airvisual` integrations. Each exampl
 | ---------------- | ---------------- |
 | **[Example 2]:** ![sak-example-2gif] | **[Example 6]:** ![sak-example-6gif] |
 | **[Example 8]:** ![sak-example-8gif] | **[Example 8]:** ![sak-example-8gif] |
+
+    
+##:sak-sak-logo: Platforms tested
+I have tested SAK - and thus the examples - on the following platforms:
+
+- Safari (mobile and desktop view) on iOS/iPadOS 14 & 15, iPhone & iPad
+- Google Chrome > 90.x on Windows 10, on my 10 year old Desktop :smile: 
+
+By testing Chrome, I assume I validated all the Chromium-based browsers (Chrome, Edge, Opera, Vivaldi, Brave, Blisk, etc). That should also cover Android devices using Chromium-based browsers which I could not test as I don't have any Android devices.
+A quick view on a friend's Samsung showed no problems, but that is no 100% guarantee of course.
+
+Due to the browser differences and long-standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.
+
+One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and a Flat design: the latter is faster with the initial loading of the view.
 
 <!--- References to pictures... --->
 

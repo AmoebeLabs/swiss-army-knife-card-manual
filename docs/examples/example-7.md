@@ -1,6 +1,7 @@
 ---
 template: main.html
 ---
+#Example 7: Server statistics
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]
 
@@ -10,7 +11,7 @@ Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running
 !!! Info "Both systems were 'loaded' before the screenshot was taken to show the different colorstops"
     The default load of the NUC is around 3% and the frontend around 11%.
     
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
 - [The Glances integration](https://www.home-assistant.io/integrations/glances/)
 - [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
@@ -97,7 +98,7 @@ My integration is called `Glances-Poseidon` and thus the entities for instance `
 
 !!! Info "If you have only 1 server, remove the second server..."
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 - The upper-left shows the DISC usage values as text in a rectangle and in a `segmented arc` for the percentage. The scale is green upto 70% and then changes to yellow, orange (80%) and red (90%).
 - In the lower-left, the same for RAM usage.
 - The central part shows the CPU usage

@@ -1,6 +1,7 @@
 ---
 template: main.html
 ---
+#Example 8: Homekit alike cards
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 8 - Homekit alike]
 
@@ -9,7 +10,7 @@ Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards
 
 !!! Info "Cards 2, 3 and 5 share the same design, the others are different"
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 - Aqara Occupancy sensor using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
@@ -32,7 +33,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 
 Last but not least: an `occupancy` sensor is used. If you don't have any `occupancy` sensor, replace it with any on/off sensor and the card should at least work!
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 | file | location | included from |

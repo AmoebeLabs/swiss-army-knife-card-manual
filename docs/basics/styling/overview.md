@@ -2,6 +2,7 @@
 template: main.html
 ---
 <!-- GT/GL -->
+#Overview of possible CSS and SVG styling
 
 The Swiss Army Knife has built-in support for SVG and CSS styling.
 

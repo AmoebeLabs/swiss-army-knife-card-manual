@@ -1,6 +1,7 @@
 ---
 template: main.html
 ---
+#Example 10: A colorful mix
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]
 
@@ -9,11 +10,13 @@ Indoor environment sensors, occupancy, airvisual, and some light switchable squa
 
 !!! Info "Cards 1, 2 and 3 use a similar design whith small variations in the state bar (top of card), thickness of segemented arc and history bars."
 
-##:sak-sak-logo: Data sources
-- First row: Aqara temperature, humidity and pressure sensor using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
-- Second row: Aqara Occupancy sensor using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
+##:sak-sak-logo: Used Home Assistant Integrations
+- First row: Aqara temperature, humidity and pressure Zigbee sensors
+- Second row: Aqara Occupancy Zigbee sensor
 - Second row: [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
-- Third row: Ikea Tradfri Zigbee Lights, again using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
+- Third row: Ikea Tradfri Zigbee Lights
+
+!!! Success "I use [zigbee2mqtt][zigbee2mqtt-url] for the Zigbee sensors and lights. Zigbee2mqtt can be used either as docker container or [Home Assistant Add-on][zigbee2mqtt-addon-url] combined with the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)"
 
 ##:sak-sak-logo: How to make it work in your own installation
 Other than the Air Visual integration, the other generic ones are temperature, humidity, and pressure sensors, occupancy switches, and light switches, so you can replace them with your own entities.
@@ -31,7 +34,7 @@ The `Airvisual` entities should be the same for every installation, so no change
 
 Replace the light entities with your light entities that have a `brightness` attribute.
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 

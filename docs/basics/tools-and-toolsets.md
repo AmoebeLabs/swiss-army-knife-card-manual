@@ -6,8 +6,10 @@ template: main.html
 Tools and Toolsets are the main ingredients of the Swiss Army Knife custom card.
 <br>They provide the means to visualize Home Assistant data in a free and creative manner.
 
-##:sak-sak-logo: Tools
-SAK offers a series of tools (currently 17) to create visualizations.
+The Swiss Army Knife uses SVG (Scalable Vector Graphics) as its sole basis to visualize a the tools on a card.
+
+##:sak-sak-logo: Tools to create visualizations
+The Swiss Army Knife card offers a series of tools (currently 17) to create visualizations.
 
 The tools are:
 
@@ -31,7 +33,7 @@ The tools are:
 | [state][swiss-army-knife-ha-tool-state]               | HA specific | Represents an Entity State & Unit of Measurement |
 | [bar][swiss-army-knife-ha-tool-bar]                   | HA specific | Represents an simple state history (horizontal or vertical bars)|
 
-##:sak-sak-logo: Toolsets
+##:sak-sak-logo: Toolsets to combine and control tools
 Toolsets provide extra functionality to tools.
 
 ####Grouping of tools

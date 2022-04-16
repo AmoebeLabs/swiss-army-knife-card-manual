@@ -1,7 +1,7 @@
 ---
 template: main.html
 ---
-
+#Example 5: Car dashboard alike cards
 ![AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]
 
 ##:sak-sak-logo: Visualization
@@ -9,7 +9,7 @@ This visualization is inspired by a car dashboard.
 
 The first uses a Flat design, the second a Neumorphic design. Both designs use the same tools, but look different.
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 
 ##:sak-sak-logo: How to make it work in your own installation
@@ -28,7 +28,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 ###Alternative entities
 You can also replace the `humidity`, `temperature` and `pressure` weather entities with other `humidity`, `temperature` and `pressure` entities from other integrations. An Aqara Zigbee device could be used for instance as the source.
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 Both views use 3 `segmented arc`s with scale, an entity state and unit of measurement and icon.
 
 #### Lovelace view

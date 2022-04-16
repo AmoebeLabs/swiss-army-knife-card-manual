@@ -1,6 +1,9 @@
 ---
 template: main.html
 ---
+#Example 12: Wide cards showing lots of sensors
+
+!!! Info "This example view requires one of the [Home Assistant Material 3 Themes][ham3-url]"
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]
 _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
@@ -26,7 +29,7 @@ The environmental cards are all the same format and show data from my Aqara Zigb
 
 These show the usual suspects like cpu, memory, disk, and system load information.
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - First card: [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 - Environment cards: Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 - Server cards: 
@@ -131,7 +134,7 @@ The `Glances` integration creates environment dependent entities: the server nam
 !!! Info "If you have only 1 server, remove the second server..."
 
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 
@@ -161,3 +164,4 @@ TBD.
 <!--- External References... --->
 
 [ham3-d06-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/example-d6/
+[ham3-url]: https://ha-m3-themes.docs.amoebelabs.com/

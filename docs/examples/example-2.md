@@ -1,7 +1,8 @@
 ---
 template: main.html
+description: The Lights example shows the possibility to switch ligths on and off and to control brightness using a slider. Includes a more info menu button for more settings.
 ---
-
+#Example 2: Controlling Lights
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]
@@ -37,7 +38,7 @@ The other 4 - identical - cards show the light button, the area (Woonkamer = Liv
 !!! Info "Brightness is only displayed if the light is on"
     This is a change in Home Assistant some months ago.
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - Ikea Tradfri Zigbee lights using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 - Dumb on/off lights using MQTT.
 
@@ -50,7 +51,7 @@ Any entity from the `light` domain with these entity/attribute should work.
 ###Required entity id changes
 Replace the `light` entities (`state` and `brightness` attribute) with your own entities.
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 | file | location | included from |

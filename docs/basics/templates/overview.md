@@ -1,7 +1,7 @@
 ---
 template: main.html
 ---
-
+#Overview of Template possibilities
 The Swiss Army Knife has support for several sorts of templates to re-use YAML parts or add JavaScript snippets.
 
 ##:sak-sak-logo: Templating

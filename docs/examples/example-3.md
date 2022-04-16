@@ -1,7 +1,8 @@
 ---
 template: main.html
+description: The environment sensor cards show Aqara temperature, humidity and pressure sensors with 24 hours of history. The look and feel is a Neumorphic design.
 ---
-
+#Example 3: Environment sensors with history
 Visualization of some environment sensors.
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 3 - Sensors]
@@ -14,8 +15,10 @@ The card is build using the following tools:
 - The name of the entity
 - A barchart showing the trend over de last 24 hours using a light to dark orange gradient setting as colorstop
 
-##:sak-sak-logo: Data sources
-- Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
+##:sak-sak-logo: Used Home Assistant Integrations
+- Aqara Zigbee sensors with temperature, humidity and pressure data
+
+!!! Success "I use [zigbee2mqtt][zigbee2mqtt-url] for the Zigbee sensors and lights. Zigbee2mqtt can be used either as docker container or [Home Assistant Add-on][zigbee2mqtt-addon-url] combined with the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)"
 
 ##:sak-sak-logo: How to make it work in your own installation
 
@@ -25,7 +28,7 @@ The visualization is build on `temperature`, `humidity` and `pressure` entities.
 ###Required entity id changes
 You can replace the existing `temperature`, `humidity` and `pressure` entities with any sensor entity. 
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 | file | location | included from |

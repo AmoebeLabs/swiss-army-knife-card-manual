@@ -4,7 +4,7 @@ title: Getting Started Preface
 ---
 <!-- GT/GL -->
 
-#Getting started
+#Preface
 
 ##:sak-sak-logo: Introduction
 

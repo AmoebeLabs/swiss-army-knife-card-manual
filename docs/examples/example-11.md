@@ -1,12 +1,13 @@
 ---
 template: main.html
 ---
+#Example 11: Boiler and Electricity cards
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 11 Light - Boiler and electricity]
-_Light example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
+_Light example using [Home Assistant Material 3 theme c11 (Purple)][ham3-c11-url]_
 
 <br>![AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark - Boiler and electricity]
-_Dark example using [HA Material 3 theme c11 (Purple)][ham3-c11-url]_
+_Dark example using [Home Assistant Material 3 theme c11 (Purple)][ham3-c11-url]_
 
 ##:sak-sak-logo: Visualization
 This visualization shows colorful boiler and electricity cards with possibly very "Dutch/European" integrations.
@@ -29,7 +30,7 @@ The electricity card shows my 230V/3x25A smart meter data where the upper segmen
 
 In my case, my 4 kWp solar systems converter delivers up to 3680 W (230V / 16A) and is connected to a single phase (L3).
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - Boiler: OpenTherm Gateway integration. I'm using both a MQTT based integration and the official [OpenTherm Gateway integration](https://www.home-assistant.io/integrations/opentherm_gw#sensors).
 - Electricity: DSMR smart meter readings using the separate DSMR Reader application, ie the [DMSR Reader integration](https://www.home-assistant.io/integrations/dsmr_reader/) which uses MQTT to transfer the data to Home Assistant.
 
@@ -133,7 +134,7 @@ The DSMR Reader integration generates generic sensor entities:
     - entity:  sensor.dsmr_reading_phase_currently_returned_l3
       decimals: 3
 ```
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 

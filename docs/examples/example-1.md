@@ -1,7 +1,10 @@
 ---
 template: main.html
+description: The Airvisual and weather forecast example card shows a single card with Airvisual data, the current weather and a 5 day weather forecast
+
 ---
 <!-- GT/GL -->
+#Example 1: AirVisual and Weather forecast
 
 A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.
 
@@ -25,7 +28,7 @@ This visualization is divided into three major blocks:
     - The minimum expected temperature
     - The expected precipitation
   
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
@@ -47,7 +50,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
 
 !!! Info "Other weather integrations won't work, as they create different states and attributes"
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 === "If you LOVE YAML"
     !!! Success "It's your lucky day"

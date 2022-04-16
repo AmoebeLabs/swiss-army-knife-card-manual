@@ -1,13 +1,13 @@
 ---
 template: main.html
 ---
-
+#Example 4: More Environment sensor cards
 ![AmoebeLabs Swiss Army Knife Custom Card Example 4 - More sensors]
   
 ##:sak-sak-logo: Visualization
 Once again a visualization of sensors values using two completely different card designs. The first row is a Neumorphic design, and the second implements a very simple and clean Flat design with a few colored blocks as the background of the card.
 
-##:sak-sak-logo: Data sources
+##:sak-sak-logo: Used Home Assistant Integrations
 - Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 
 ##:sak-sak-logo: How to make it work in your own installation
@@ -18,7 +18,7 @@ The visualization is build on `temperature`, `humidity` and `lux` entities. It d
 ###Required entity id changes
 You can replace the existing `temperature`, `humidity` and `lux` entities with any sensor entity. 
 
-##:sak-sak-logo: Configuration
+##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
 | file | location | included from |

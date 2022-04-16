@@ -2,6 +2,7 @@
 template: main.html
 ---
 <!-- GT/GL -->
+#Swiss Army Knife templates
 
 ##:sak-sak-logo: Introduction
 If you are familiar with the `decluttering template card`, you already know how to re-use cards and specialize them using variables.
