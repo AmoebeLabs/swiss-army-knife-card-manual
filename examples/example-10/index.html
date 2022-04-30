@@ -1765,15 +1765,29 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
+  <a href="#environment-sensors-first-row" class="md-nav__link">
+    Environment sensors (First row)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#movementoccupancy-sensor-second-row" class="md-nav__link">
+    Movement/occupancy sensor (Second row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#airvisual-second-row" class="md-nav__link">
+    AirVisual (Second row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lights-third-row" class="md-nav__link">
+    Lights (Third row)
   </a>
   
 </li>
@@ -2049,15 +2063,29 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
+  <a href="#environment-sensors-first-row" class="md-nav__link">
+    Environment sensors (First row)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#movementoccupancy-sensor-second-row" class="md-nav__link">
+    Movement/occupancy sensor (Second row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#airvisual-second-row" class="md-nav__link">
+    AirVisual (Second row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lights-third-row" class="md-nav__link">
+    Lights (Third row)
   </a>
   
 </li>
@@ -2264,15 +2292,20 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
 <p>Other than the Air Visual integration, the other generic ones are temperature, humidity, and pressure sensors, occupancy switches, and light switches, so you can replace them with your own entities.</p>
-<h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p>The only integration you need are the <code>Airvisual</code> entities, so you need this integration:</p>
-<ul>
-<li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
-</ul>
-<h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
-<p>For the first row, replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. </p>
-<p>The <code>Airvisual</code> entities should be the same for every installation, so no changes are needed on that part. If you don't have a <code>presence</code> sensor, replace it with an on/off sensor and the card should at least work!</p>
-<p>Replace the light entities with your light entities that have a <code>brightness</code> attribute.</p>
+<h4 id="environment-sensors-first-row">Environment sensors (First row)<a class="headerlink" href="#environment-sensors-first-row" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+Replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. </p>
+<h4 id="movementoccupancy-sensor-second-row">Movement/occupancy sensor (Second row)<a class="headerlink" href="#movementoccupancy-sensor-second-row" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+Replace the occupancy entity with your own entity.</p>
+<h4 id="airvisual-second-row">AirVisual (Second row)<a class="headerlink" href="#airvisual-second-row" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+The only integration you need are the <code>Airvisual</code> entities, so you need the <a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The <code>Airvisual</code> entities should be the same for every installation, so no changes are needed on that part. If you don't have a <code>presence</code> sensor, replace it with an on/off sensor and the card should at least work!</p>
+<h4 id="lights-third-row">Lights (Third row)<a class="headerlink" href="#lights-third-row" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+Replace the light entities with your light entities that have a <code>brightness</code> attribute.</p>
 <h2 id="view-and-card-configuration"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" fill="white"

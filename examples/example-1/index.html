@@ -1639,15 +1639,8 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#card" class="md-nav__link">
+    Card
   </a>
   
 </li>
@@ -2042,15 +2035,8 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#card" class="md-nav__link">
+    Card
   </a>
   
 </li>
@@ -2266,14 +2252,15 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
-<h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p>The visualization is build on the <code>Met.no</code> and <code>Airvisual</code> entities, so you need these integrations:</p>
+<h4 id="card">Card<a class="headerlink" href="#card" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+The visualization is build on the <code>Met.no</code> and <code>Airvisual</code> entities, so you need these integrations:</p>
 <ul>
 <li><a href="https://www.home-assistant.io/integrations/met/">Met.no Weather integration</a></li>
 <li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
 </ul>
-<h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
-<p>The <code>Airvisual</code> entities should be the same for any installation, so no changes required on that part.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The <code>Airvisual</code> entities should be the same for any installation, so no changes required on that part.</p>
 <p>The <code>Met.no</code> integration creates the <code>weather.changeme</code> entity. Adapt the <code>changeme</code> part to your own installation!</p>
 <div class="admonition info">
 <p class="admonition-title">Other weather integrations won't work, as they create different states and attributes</p>

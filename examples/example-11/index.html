@@ -1737,6 +1737,34 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
  Visualization
   </a>
   
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boiler" class="md-nav__link">
+    Boiler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electricity" class="md-nav__link">
+    Electricity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1779,15 +1807,15 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
+  <a href="#boiler-top-two-cards" class="md-nav__link">
+    Boiler (top two cards)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#electricity_1" class="md-nav__link">
+    Electricity
   </a>
   
 </li>
@@ -1992,6 +2020,34 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
  Visualization
   </a>
   
+    <nav class="md-nav" aria-label="
+
+
+  
+  
+  
+  
+
+ Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boiler" class="md-nav__link">
+    Boiler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electricity" class="md-nav__link">
+    Electricity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2034,15 +2090,15 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
+  <a href="#boiler-top-two-cards" class="md-nav__link">
+    Boiler (top two cards)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#electricity_1" class="md-nav__link">
+    Electricity
   </a>
   
 </li>
@@ -2167,13 +2223,13 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 </span> Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
 <p>This visualization shows colorful boiler and electricity cards with possibly very "Dutch/European" integrations.</p>
 <p>The second card has the data from my 3 phase smart meter. My 4 kWp solar system is disconnected, so you don't see any returned power.</p>
-<p><strong>Boiler</strong></p>
+<h4 id="boiler">Boiler<a class="headerlink" href="#boiler" title="Permanent link">&para;</a></h4>
 <p>It shows a thermostat with some extra data (heat/hot water active) and the boilers' setpoints and actual measured temperatures.</p>
 <p>The thermostat card uses two overlayed segmented arcs:
 - One (with scale) for the actual room temperature measured by the thermostat
 - One (white, no scale, superimposed on previous segarc) for the setpoint.</p>
 <p>You can see the setpoint in the screenshot: the room temperature is 19.6 degrees celcius and the setpoint is 20.0 degrees celcius. The latter one is a smaller segarc.</p>
-<p><strong>Electricity</strong></p>
+<h4 id="electricity">Electricity<a class="headerlink" href="#electricity" title="Permanent link">&para;</a></h4>
 <p>The electricity card shows my 230V/3x25A smart meter data where the upper segmented arc shows the delivered (from the grid) electricity, and the lower part the returned (to the grid) electricity from for instance a solar system.</p>
 <p>In my case, my 4 kWp solar systems converter delivers up to 3680 W (230V / 16A) and is connected to a single phase (L3).</p>
 <h2 id="used-home-assistant-integrations"><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
@@ -2239,22 +2295,18 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
 <p>Both boiler and electricity are quite specific, but give you a nice idea what is possible to control a thermostat for instance.</p>
-<h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p>You need both integrations, or replace all entities with your own:</p>
-<ul>
-<li><a href="https://www.home-assistant.io/integrations/opentherm_gw#sensors">OpenTherm Gateway integration</a></li>
-<li><a href="https://www.home-assistant.io/integrations/dsmr_reader/">DMSR Reader integration</a></li>
-</ul>
-<h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
-<p><strong>Boiler</strong></p>
-<p>The OpenTherm Integration uses a name for the thermostat, in my case, this is <code>calenta</code>. If you also use the OpenTherm Integration, replace <code>calenta</code> with your own installation name. In other cases, you should be able to customize entities for your own thermostat/boiler configuration.</p>
+<h4 id="boiler-top-two-cards">Boiler (top two cards)<a class="headerlink" href="#boiler-top-two-cards" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+<a href="https://www.home-assistant.io/integrations/opentherm_gw#sensors">OpenTherm Gateway integration</a></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The OpenTherm Integration uses a name for the thermostat, in my case, this is <code>calenta</code>. If you also use the OpenTherm Integration, replace <code>calenta</code> with your own installation name. In other cases, you should be able to customize entities for your own thermostat/boiler configuration.</p>
 <p>The entities for the first card of the boiler:</p>
 <ul>
 <li>The first entity is the current room temperature (<code>sensor.room_temp_thermostat_calenta</code>)</li>
 <li>The last is just a random Zigbee sensor showing the current humidity inside (<code>sensor.studym_iaq_humidity</code>)</li>
 <li>The other sensors are to control the thermostat (<code>room_setpoint_thermostat_calenta</code>) using the slider and the boiler active / flame / hot water requests.</li>
 </ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2295,7 +2347,7 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class="w">      </span><span class="nt">decimals</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 </code></pre></div>
 </td></tr></table>
-<p>The entities for the second card of the boiler:</p>
+The entities for the second card of the boiler:</p>
 <div class="admonition note">
 <p class="admonition-title">The <code>slave_flame_on</code> entity is used to show a white background (using a rectangle) of the boiler is <code>on</code></p>
 </div>
@@ -2328,8 +2380,11 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class="w">      </span><span class="nt">decimals</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 </code></pre></div>
 </td></tr></table>
-<p><strong>Electricity</strong></p>
-<p>If you are using the DSMR Reader integration, no changes are necessary for the electricity part.</p>
+<h4 id="electricity_1">Electricity<a class="headerlink" href="#electricity_1" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+- <a href="https://www.home-assistant.io/integrations/dsmr_reader/">DMSR Reader integration</a></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+If you are using the DSMR Reader integration, no changes are necessary for the electricity part.</p>
 <p>The DSMR Reader integration generates generic sensor entities:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>

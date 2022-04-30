@@ -1793,35 +1793,36 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
-  </a>
-  
-    <nav class="md-nav" aria-label="Required Home Assistant integrations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-the-hestia-server-card" class="md-nav__link">
-    For the Hestia server card
+  <a href="#in-general" class="md-nav__link">
+    In general
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#and-for-the-poseidon-server-card" class="md-nav__link">
-    And for the Poseidon server card
+  <a href="#airvisual-card" class="md-nav__link">
+    Airvisual card
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#environment-cards" class="md-nav__link">
+    Environment cards
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#the-hestia-server-card" class="md-nav__link">
+    The Hestia server card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-poseidon-server-card" class="md-nav__link">
+    The Poseidon server card
   </a>
   
 </li>
@@ -2054,35 +2055,36 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-home-assistant-integrations" class="md-nav__link">
-    Required Home Assistant integrations
-  </a>
-  
-    <nav class="md-nav" aria-label="Required Home Assistant integrations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-the-hestia-server-card" class="md-nav__link">
-    For the Hestia server card
+  <a href="#in-general" class="md-nav__link">
+    In general
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#and-for-the-poseidon-server-card" class="md-nav__link">
-    And for the Poseidon server card
+  <a href="#airvisual-card" class="md-nav__link">
+    Airvisual card
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#environment-cards" class="md-nav__link">
+    Environment cards
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-entitiy-id-changes" class="md-nav__link">
-    Required entitiy id changes
+  <a href="#the-hestia-server-card" class="md-nav__link">
+    The Hestia server card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-poseidon-server-card" class="md-nav__link">
+    The Poseidon server card
   </a>
   
 </li>
@@ -2375,33 +2377,28 @@ All cards have an aspect ratio of 6/1.</p>
     C284.739,238.936,280.925,235.121,280.925,230.403z"/>
 </svg>
 </span> How to make it work in your own installation<a class="headerlink" href="#how-to-make-it-work-in-your-own-installation" title="Permanent link">&para;</a></h2>
-<h3 id="required-home-assistant-integrations">Required Home Assistant integrations<a class="headerlink" href="#required-home-assistant-integrations" title="Permanent link">&para;</a></h3>
-<p><strong>First card</strong></p>
-<p>You need the AirVisual integration.</p>
-<ul>
-<li><a href="https://www.home-assistant.io/integrations/airvisual/">Airvisual integration</a></li>
-</ul>
-<p><strong>Environment cards</strong></p>
-<p>Replace the environment sensors with sensors from your own installation.</p>
-<p><strong>Server cards</strong></p>
-<p>The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:</p>
-<h4 id="for-the-hestia-server-card">For the <code>Hestia</code> server card<a class="headerlink" href="#for-the-hestia-server-card" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></li>
-</ul>
-<h4 id="and-for-the-poseidon-server-card">And for the <code>Poseidon</code> server card<a class="headerlink" href="#and-for-the-poseidon-server-card" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a></li>
-<li><a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</li>
-</ul>
-<h3 id="required-entitiy-id-changes">Required entitiy id changes<a class="headerlink" href="#required-entitiy-id-changes" title="Permanent link">&para;</a></h3>
-<p><strong>First card</strong></p>
-<p>The <code>Airvisual</code> entities should be the same for any installation. No changes required on that part.</p>
-<p><strong>Environment cards</strong></p>
-<p>Replace my <code>temperature</code>, <code>humidity</code>, <code>pressure</code>, <code>battery</code>, and <code>linkquality</code> entities with your sensor entities. </p>
-<p><strong>Server cards</strong></p>
-<p>The <code>System Monitor</code> entities should be the same for each installation, so no changes are required for that part. </p>
-<p>The <code>Glances</code> integration creates environment dependent entities: the server name is usually appended to the integration. My integration is called <code>Glances-Poseidon</code> with entity names like <code>sensor.glances_poseidon_cpu_load</code>. You must change the entities to your own entity IDs.</p>
+<h4 id="in-general">In general<a class="headerlink" href="#in-general" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Theme</em><br>
+This card requires the use of one of the Material 3 Themes for Home Assistant to be displayed as intended <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<h4 id="airvisual-card">Airvisual card<a class="headerlink" href="#airvisual-card" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+You need the <a href="https://www.home-assistant.io/integrations/airvisual/">AirVisual integration</a>.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The <code>Airvisual</code> entities should be the same for any installation.</p>
+<h4 id="environment-cards">Environment cards<a class="headerlink" href="#environment-cards" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+Replace my <code>temperature</code>, <code>humidity</code>, <code>pressure</code>, <code>battery</code>, and <code>linkquality</code> entities with your sensor entities. </p>
+<h4 id="the-hestia-server-card">The Hestia server card<a class="headerlink" href="#the-hestia-server-card" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+<a href="https://www.home-assistant.io/integrations/systemmonitor/">The System Monitor integration</a></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The <code>System Monitor</code> entities should be the same for each installation, so no changes are required for that part. </p>
+<h4 id="the-poseidon-server-card">The Poseidon server card<a class="headerlink" href="#the-poseidon-server-card" title="Permanent link">&para;</a></h4>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Integrations</em><br>
+    - <a href="https://www.home-assistant.io/integrations/glances/">The Glances integration</a><br>
+    - <a href="https://www.home-assistant.io/integrations/sensor.rest/">The RESTful sensor integration</a> to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8-4.5-4.5 1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"/></svg></span> <em>Required Entity Changes</em><br>
+The <code>Glances</code> integration creates environment dependent entities: the server name is usually appended to the integration. My integration is called <code>Glances-Poseidon</code> with entity names like <code>sensor.glances_poseidon_cpu_load</code>. You must change the entities to your own entity IDs.</p>
 <div class="admonition info">
 <p class="admonition-title">If you have only 1 server, remove the second server...</p>
 </div>
