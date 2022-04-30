@@ -15,17 +15,17 @@ The first uses a Flat design, the second a Neumorphic design. Both designs use t
 ##:sak-sak-logo: How to make it work in your own installation
 
 ###Required Home Assistant integrations
-The visualization is build on the Met.no, so you need these integrations:
+####Both cards
 
-- [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
-
-###Required entity id changes
-
-The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The visualization is build on the Met.no, so you need the [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 
 !!! Info "Other weather integrations won't work, as they create different states and attributes"
 
-###Alternative entities
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!
+
+:material-checkbox-multiple-marked-outline: _Alternative entities_<br>
 You can also replace the `humidity`, `temperature` and `pressure` weather entities with other `humidity`, `temperature` and `pressure` entities from other integrations. An Aqara Zigbee device could be used for instance as the source.
 
 ##:sak-sak-logo: View and Card Configuration

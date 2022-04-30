@@ -14,7 +14,7 @@ This visualization shows colorful boiler and electricity cards with possibly ver
 
 The second card has the data from my 3 phase smart meter. My 4 kWp solar system is disconnected, so you don't see any returned power.
 
-**Boiler**
+####Boiler
 
 It shows a thermostat with some extra data (heat/hot water active) and the boilers' setpoints and actual measured temperatures.
 
@@ -24,7 +24,7 @@ The thermostat card uses two overlayed segmented arcs:
 
 You can see the setpoint in the screenshot: the room temperature is 19.6 degrees celcius and the setpoint is 20.0 degrees celcius. The latter one is a smaller segarc.
 
-**Electricity**
+####Electricity
 
 The electricity card shows my 230V/3x25A smart meter data where the upper segmented arc shows the delivered (from the grid) electricity, and the lower part the returned (to the grid) electricity from for instance a solar system.
 
@@ -37,16 +37,12 @@ In my case, my 4 kWp solar systems converter delivers up to 3680 W (230V / 16A) 
 ##:sak-sak-logo: How to make it work in your own installation
 Both boiler and electricity are quite specific, but give you a nice idea what is possible to control a thermostat for instance.
 
-###Required Home Assistant integrations
-You need both integrations, or replace all entities with your own:
+####Boiler (top two cards)
 
-- [OpenTherm Gateway integration](https://www.home-assistant.io/integrations/opentherm_gw#sensors)
-- [DMSR Reader integration](https://www.home-assistant.io/integrations/dsmr_reader/)
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+[OpenTherm Gateway integration](https://www.home-assistant.io/integrations/opentherm_gw#sensors)
 
-###Required entitiy id changes
-
-**Boiler**
-
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The OpenTherm Integration uses a name for the thermostat, in my case, this is `calenta`. If you also use the OpenTherm Integration, replace `calenta` with your own installation name. In other cases, you should be able to customize entities for your own thermostat/boiler configuration.
 
 The entities for the first card of the boiler:
@@ -77,7 +73,6 @@ The entities for the first card of the boiler:
       unit: '%'
       decimals: 0
 ```
-
 The entities for the second card of the boiler:
 
 !!! note "The `slave_flame_on` entity is used to show a white background (using a rectangle) of the boiler is `on`"
@@ -99,8 +94,12 @@ The entities for the second card of the boiler:
       decimals: 1
 ```
 
-**Electricity**
+####Electricity
 
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+- [DMSR Reader integration](https://www.home-assistant.io/integrations/dsmr_reader/)
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 If you are using the DSMR Reader integration, no changes are necessary for the electricity part.
 
 The DSMR Reader integration generates generic sensor entities:

@@ -21,17 +21,27 @@ Indoor environment sensors, occupancy, airvisual, and some light switchable squa
 ##:sak-sak-logo: How to make it work in your own installation
 Other than the Air Visual integration, the other generic ones are temperature, humidity, and pressure sensors, occupancy switches, and light switches, so you can replace them with your own entities.
 
-###Required Home Assistant integrations
-The only integration you need are the `Airvisual` entities, so you need this integration:
+####Environment sensors (First row)
 
-- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. 
 
-###Required entitiy id changes
+####Movement/occupancy sensor (Second row)
 
-For the first row, replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. 
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the occupancy entity with your own entity.
 
+####AirVisual (Second row)
+
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The only integration you need are the `Airvisual` entities, so you need the [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `Airvisual` entities should be the same for every installation, so no changes are needed on that part. If you don't have a `presence` sensor, replace it with an on/off sensor and the card should at least work!
 
+####Lights (Third row)
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 Replace the light entities with your light entities that have a `brightness` attribute.
 
 ##:sak-sak-logo: View and Card Configuration

@@ -17,20 +17,24 @@ Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
-The visualization is build on the `Met.no` and `Airvisual` entities, so you need these integrations:
+####Outside environment sensors
 
-- [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
-- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The visualization is build on the `Met.no` generated entities, so you need the [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 
-###Required entitiy id changes
-
-The `Airvisual` entities should be the same for any installation, so no changes required on that part.
-
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!
 
 !!! Info "Other weather integrations won't work, as they create different states and attributes"
 
+####Airvisual sensors
+
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The only integration you need are the `Airvisual` entities, so you need the [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+
+####Movement/occupancy sensor
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 Last but not least: an `occupancy` sensor is used. If you don't have any `occupancy` sensor, replace it with any on/off sensor and the card should at least work!
 
 ##:sak-sak-logo: View and Card Configuration

@@ -17,13 +17,15 @@ This view is made with the aid of Affinity Designer. The 'balls' background is c
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
+**Card**
+
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
 The visualization is build on the Met.no and Airvisual entities, so you need these integrations:
 
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
-###Required entity id changes
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 
 The `Airvisual` entities should be the same for any installation, so no changes required on that part.
 

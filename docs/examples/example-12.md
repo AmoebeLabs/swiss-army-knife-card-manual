@@ -92,47 +92,41 @@ Below the `sensor:` configuration for the System Monitor and extra Glances RESTf
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
-**First card**
+####In general
 
-You need the AirVisual integration.
+:material-checkbox-multiple-marked-outline: _Theme_<br>
+This card requires the use of one of the Material 3 Themes for Home Assistant to be displayed as intended :smile:
 
-- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+####Airvisual card
 
- **Environment cards**
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+You need the [AirVisual integration](https://www.home-assistant.io/integrations/airvisual/).
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+The `Airvisual` entities should be the same for any installation.
+
+####Environment cards
  
-Replace the environment sensors with sensors from your own installation.
-
-**Server cards**
-
-The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:
-
-####For the `Hestia` server card
-
-- [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
-
-####And for the `Poseidon` server card
-- [The Glances integration](https://www.home-assistant.io/integrations/glances/)
-- [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
-
-###Required entitiy id changes
-
-**First card**
-
-The `Airvisual` entities should be the same for any installation. No changes required on that part.
-
-**Environment cards**
-
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 Replace my `temperature`, `humidity`, `pressure`, `battery`, and `linkquality` entities with your sensor entities. 
 
-**Server cards**
+####The Hestia server card
 
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+[The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `System Monitor` entities should be the same for each installation, so no changes are required for that part. 
 
+####The Poseidon server card
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+    - [The Glances integration](https://www.home-assistant.io/integrations/glances/)<br>
+    - [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `Glances` integration creates environment dependent entities: the server name is usually appended to the integration. My integration is called `Glances-Poseidon` with entity names like `sensor.glances_poseidon_cpu_load`. You must change the entities to your own entity IDs.
 
 !!! Info "If you have only 1 server, remove the second server..."
-
 
 ##:sak-sak-logo: View and Card Configuration
 

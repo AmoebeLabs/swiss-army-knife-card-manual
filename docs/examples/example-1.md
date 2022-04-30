@@ -35,15 +35,15 @@ This visualization is divided into three major blocks:
 In total approx 50 entities are used to build this visualization.
 
 ##:sak-sak-logo: How to make it work in your own installation
+####Card
 
-###Required Home Assistant integrations
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
 The visualization is build on the `Met.no` and `Airvisual` entities, so you need these integrations:
 
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
-###Required entitiy id changes
-
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `Airvisual` entities should be the same for any installation, so no changes required on that part.
 
 The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!

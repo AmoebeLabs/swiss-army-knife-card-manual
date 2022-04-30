@@ -25,20 +25,28 @@ It uses indoor environment, occupancy, airvisual AQI data, and some square light
 ##:sak-sak-logo: How to make it work in your own installation
 Except for the Air Visual integration, the others are generic temperature, humidity and pressure sensors, occupancy switch and light switches, so you can replace them with your own entities.
 
-###Required Home Assistant integrations
-The only integration you need are the `Airvisual` entities, so you need this integration:
+####Environment sensors (First row)
 
-- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the sensor entities with your own entities. As long as the entities do not use an attribute for the value, the history tool will work. 
 
-###Required entitiy id changes
+####Movement/occupancy sensor (Second + Third row)
 
-For the first row, replace the sensor entities with you own. As long as the entities don't use an attribute for the value, the history tool will work.
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the occupancy entity with your own entity. If you don't have a `presence` sensor, replace it with an on/off sensor and the card should at least work!
 
-The `Airvisual` entities should be the same for any installation, so no changes required on that part.
+####AirVisual (Second + Third row)
 
-If you don't have any `occupancy` sensor, replace it with any on/off sensor and the card should at least work!
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The only integration you need are the `Airvisual` entities, so you need the [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
-The lights can be replaced with any entity that has a `brightness` attribute.
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+The `Airvisual` entities should be the same for every installation, so no changes are needed on that part. 
+
+####Lights (Second + Third row)
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the light entities with your light entities that have a `brightness` attribute.
 
 ##:sak-sak-logo: View and Card Configuration
 

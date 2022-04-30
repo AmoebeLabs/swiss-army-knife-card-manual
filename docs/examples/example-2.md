@@ -44,12 +44,14 @@ The other 4 - identical - cards show the light button, the area (Woonkamer = Liv
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
-The visualization is build on light entities that have a on/off `state` and a `brightness`. It does **not** depend on any specific integration.
-Any entity from the `light` domain with these entity/attribute should work.
+####All cards
 
-###Required entity id changes
-Replace the `light` entities (`state` and `brightness` attribute) with your own entities.
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The visualization is build on light entities that have a on/off `state` and a `brightness`. It does **not** depend on any specific integration.
+Any entity from the `light` domain with these entity/attribute should wor
+
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+Replace the `light` entities (`state` and `brightness` attribute) with your own entities 
 
 ##:sak-sak-logo: View and Card Configuration
 

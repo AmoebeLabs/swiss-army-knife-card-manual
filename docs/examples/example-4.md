@@ -12,10 +12,12 @@ Once again a visualization of sensors values using two completely different card
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
+####All cards
+
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
 The visualization is build on `temperature`, `humidity` and `lux` entities. It does **not** depend on any specific integration.
 
-###Required entity id changes
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 You can replace the existing `temperature`, `humidity` and `lux` entities with any sensor entity. 
 
 ##:sak-sak-logo: View and Card Configuration

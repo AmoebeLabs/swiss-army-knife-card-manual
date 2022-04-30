@@ -78,21 +78,21 @@ Below the `sensor:` configuration for the System Monitor and extra Glances RESTf
 
 ##:sak-sak-logo: How to make it work in your own installation
 
-###Required Home Assistant integrations
-The visualization is build on the system monitor, glances and rest sensors, so you need these integrations:
+####The Hestia server card
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+The visualization is build on the system monitor, so you need the [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
 
-####For the `Hestia` server card:
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+The `System Monitor` entities should be the same for any installation, so no changes required on that part.
 
-- [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
 
-####And for the `Poseidon`server card:
+####The Poseidon server card
+:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+
 - [The Glances integration](https://www.home-assistant.io/integrations/glances/)
 - [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
 
-###Required sensor id changes
-
-The `System Monitor` entities should be the same for any installation, so no changes required on that part.
-
+:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
 The `Glances` integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
 My integration is called `Glances-Poseidon` and thus the entities for instance `sensor.glances_poseidon_cpu_load`. You have to change the entities to your own entity id's.
 

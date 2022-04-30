@@ -11,12 +11,12 @@ In most cases, the examples show more than one map or more than one visualizatio
 
 Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.
 
-!!! Info "All examples except 12 use their own theme defined in the view-sake*.yaml. Themes are included in Github."
+!!! Info "All examples except 11 and 12 use their own theme defined in the view-sake*.yaml. Themes are on Github."
     Aside from the box shading for the cards, themes also define some of the color schemes used by the cards.
     
     Other themes may display black colors where theme colors are used.
 
-!!! Info "Example 12, the wide cards uses a Home Assistant Material 3 theme"
+!!! Info "Example 11 and 12 use a Home Assistant Material 3 theme"
     Example 12 is used as the example view to create the [Material 3 themes](https://ha-m3-themes.docs.amoebelabs.com/).
 
 ##:sak-sak-logo: Real world examples from my own installation
