@@ -1,0 +1,188 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+    
+
+    .mdx-container {
+        padding-top: .0rem;
+    
+        background:
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(0, 0%, 100%, 1)' /></svg>") no-repeat bottom,
+          linear-gradient(
+            to bottom,
+            var(--md-primary-fg-color) 30%,
+            var(--md-default-bg-color) 99%
+          );
+
+        background[data-md-color-scheme="slate"]:
+            url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1123 258'><path d='M1124,2c0,0 0,256 0,256l-1125,0l0,-48c0,0 16,5 55,5c116,0 197,-92 325,-92c121,0 114,46 254,46c140,0 214,-167 572,-166Z' style='fill: hsla(232, 15%, 21%, 1)' /></svg>") no-repeat bottom,
+            linear-gradient(
+              to bottom,
+              var(--md-primary-fg-color) 30%,
+              var(--md-default-bg-color) 99%
+            );
+    }
+
+    .mdx-hero {
+        margin: 0px 1rem;
+        color: var(--md-primary-bg-color);
+        /*justify-content: center;*/
+            margin: 0rem 1rem 7rem 1rem;
+    }
+
+    .mdx-hero h1 {
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .mdx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        margin: 0 1rem;
+    }
+
+    .mdx-hero__image{
+        max-width: 100%;
+        order:1;
+        padding-right: 0.0rem;
+        margin-right: 0.0.rem;
+        flex-basis: 72%;
+    }
+    @media screen and (max-width:30em) {
+        .mdx_hero {
+          margin: 0rem 0rem 4rem 0rem;
+        }
+          
+        .mdx-hero h1 {
+            font-size: 1.4rem
+        }
+
+        .mdx-hero__image{
+            width:auto;
+        }
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .mdx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdx-hero__content {
+            max-width: 20rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 1.0rem;
+            align-items: center;
+        }
+    }
+    
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+
+        <div class="mdx-hero__image">
+          <img
+            src="assets/screenshots/sak-double-example-transparent-v2.webp"
+            srcset="assets/screenshots/sak-double-example-transparent-3000x2400.webp 3000w,
+                    assets/screenshots/sak-double-example-transparent-1500x1200.webp 1500w,
+                    assets/screenshots/sak-double-example-transparent-1200x960.webp 1200w,
+                    assets/screenshots/sak-double-example-transparent-1000x800.webp 1000w,
+                    assets/screenshots/sak-double-example-transparent-800x600.webp 800w,
+                    assets/screenshots/sak-double-example-transparent-600x480.webp 600w"
+            alt="Swiss Army Knife example"
+            width="1000"
+            height="800"
+            draggable="false"
+          >
+        </div>
+
+        <!-- Hero content -->
+        <div class="mdx-hero__content">
+          <h1>Swiss Army Knife custom card documentation</h1>
+          <p>{{ config.site_description }}</p>
+          <a
+            href="{{ page.next_page.url | url }}"
+            title="{{ page.next_page.title | e }}"
+            class="md-button md-button--primary"
+          >
+            Getting started
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}
