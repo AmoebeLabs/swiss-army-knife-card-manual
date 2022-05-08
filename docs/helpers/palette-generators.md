@@ -1,6 +1,6 @@
 ---
 template: main.html
-description: Use these color palette generators to create colors for the Swiss Army Knife custom card that match the lightness and WCAG contrast guidelines to make your card stand out!
+description: Use these color palette generators to create colors for the Swiss Army Knife custom card that match the lightness and WCAG contrast guidelines for your card!
 ---
 
 #Color Palette generators
