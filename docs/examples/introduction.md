@@ -22,7 +22,7 @@ Some use SAK templates, some use Decluttering templates, some use both and some 
 ##:sak-sak-logo: Real world examples from my own installation
 All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.
 
-Many examples use the `Met.no` weather and `Airvisual` integrations. Each example also describes what you need to change in order for the examples to work in your installation. The above integrations are necessary in most cases to make things work.
+Many examples use the [Met.no](https://www.home-assistant.io/integrations/met/) weather and [Airvisual](https://www.home-assistant.io/integrations/airvisual/) integrations. Each example also describes what you need to change in order for the examples to work in your installation. The above integrations are necessary in most cases to make things work.
 
 | An overview of all the examples | |
 | ------------ | ---------------- |

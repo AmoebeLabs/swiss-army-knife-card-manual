@@ -280,13 +280,26 @@ Restart Home Assistant to have the dashboard installed
 !!! Info "Make sure to validate your config before you restart Home Assistant :smile:"
 
 ###:octicons-thumbsup-24: You made it again!
-Now enjoy the examples and don't forget that you have to replace my entities with yours to see the cards as intended!
+Now enjoy the [examples][swiss-army-knife-examples-url] and don't forget that you have to replace my entities with yours to see the cards as intended!
+
+If you want to start building right away, head over to the [tools and toolsets][swiss-army-knife-tools-and-toolsets-url] section! Check the interactions page for user [interactions][swiss-army-knife-interactions-url] with the tools and toolsets, and last but not least the extensive CSS [class][swiss-army-knife-styling-classes-url] and [element][swiss-army-knife-styling-styles-url] styling options, [CSS animations][swiss-army-knife-animations-css-url], [colorstops][swiss-army-knife-animations-colorstops-url] and [state operators][swiss-army-knife-animations-state-operators-url].
 
 
 ![sak-example-dashboard][sak-example-dashboard]
 
 <!-- Images -->
 [sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
+
+<!-- Internal links -->
+[swiss-army-knife-examples-url]: ../../examples/introduction/
+[swiss-army-knife-tools-and-toolsets-url]: ../../basics/tools-and-toolsets/
+[swiss-army-knife-interactions-url]: ../..//basics/interactions/
+[swiss-army-knife-styling-classes-url]: ../../basics/styling/classes/
+[swiss-army-knife-styling-styles-url]: ../../basics/styling/styles/
+[swiss-army-knife-animations-css-url]: ../../basics/animations/css-animations/
+[swiss-army-knife-animations-colorstops-url]: ../../basics/animations/colorstops/
+[swiss-army-knife-animations-state-operators-url]: ../../basics/animations/state-operators/
+
 
 <!-- External links -->
 [ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/
