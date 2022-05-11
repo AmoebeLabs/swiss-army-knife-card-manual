@@ -56,7 +56,7 @@ The discs with the arc, icon, and state use the same toolset (using a template) 
 ![Swiss Army Knife Example 7 - Servers]
 
 !!! Important "Because of the scaling, tools need NOT to be designed to their final size on a card"
-    You can re-use the same toolset in different sizes, altough they are designed on a 100x100 grid.
+    You can re-use the same toolset in different sizes, although they are designed on a 100x100 grid.
 
 !!! Note "Height and Width can be scaled independently if required. Scaling does not affect the center position."
 
