@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: "Example 8: Homekit alike cards"
+description: Visualization with Weather, Airvisual cards and one occupancy sensor card using Homekit alike cards with icon and card animations.
+tags:
+  - Examples
 ---
 #Example 8: Homekit alike cards
 

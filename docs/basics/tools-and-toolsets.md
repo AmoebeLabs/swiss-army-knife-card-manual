@@ -1,5 +1,10 @@
 ---
 template: main.html
+description: Tools and Toolsets are the main ingredients of the Swiss Army Knife custom card. They provide the means to visualize Home Assistant data in a free and creative manner.
+tags:
+  - Tools
+  - Toolsets
+  
 ---
 <!-- GT/GL -->
 

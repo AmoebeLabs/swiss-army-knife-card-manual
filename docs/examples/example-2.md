@@ -1,6 +1,9 @@
 ---
 template: main.html
-description: The Lights example shows the possibility to switch ligths on and off and to control brightness using a slider. Includes a more info menu button for more settings.
+description: The Lights example shows the possibility to switch lights on and off and to control brightness using a slider. Includes a more info menu button for more settings.
+title: "Example 2: Controlling Lights"
+tags:
+  - Examples
 ---
 #Example 2: Controlling Lights
 Visualization of lights and interaction to switch lights on and off and to control brightness using a slider for the first row.

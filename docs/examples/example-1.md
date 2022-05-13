@@ -1,8 +1,11 @@
 ---
 template: main.html
 description: The Airvisual and weather forecast example card shows a single card with Airvisual data, the current weather and a 5 day weather forecast
-
+title: "Example 1: AirVisual and Weather forecast"
+tags:
+  - Examples
 ---
+
 <!-- GT/GL -->
 #Example 1: AirVisual and Weather forecast
 

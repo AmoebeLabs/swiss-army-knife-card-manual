@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The basic Rectangle tool
+description: The rectangle tool is a basic tool based on the SVG rect element. You can apply CSS styling, user interactions and animations on this tool.
+tags:
+  - Tools
+  - Tool
+  - Rectangle
 ---
 
 [rectangle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

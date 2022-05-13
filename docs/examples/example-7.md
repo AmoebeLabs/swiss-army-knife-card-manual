@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: "Example 7: Server statistics"
+description: Visualization of the basic data of two servers. My basic NUC running Home Assistant and another bunch of containers and a second server as a frontend.
+tags:
+  - Examples
 ---
 #Example 7: Server statistics
 

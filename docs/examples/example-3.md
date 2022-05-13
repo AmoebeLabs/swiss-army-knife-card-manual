@@ -1,6 +1,9 @@
 ---
 template: main.html
+title: "Example 3: Environment sensors"
 description: The environment sensor cards show Aqara temperature, humidity and pressure sensors with 24 hours of history. The look and feel is a Neumorphic design.
+tags:
+  - Examples
 ---
 #Example 3: Environment sensors with history
 Visualization of some environment sensors.

@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The basic Text tool
+description: The text tool is a basic tool based on the SVG text element. You can apply CSS styling, user interactions and animations on this tool.
+tags:
+  - Tools
+  - Tool
+  - Text
 ---
 
 [text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

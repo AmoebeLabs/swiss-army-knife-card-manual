@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The basic Line tool
+description: The line tool is a basic tool based on the SVG line element. You can apply CSS styling, user interactions and animations on this tool.
+tags:
+  - Tools
+  - Tool
+  - Line
 ---
 
 [line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

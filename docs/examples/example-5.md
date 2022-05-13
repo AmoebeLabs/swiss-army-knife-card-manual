@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: "Example 5: Car dashboard alike cards"
+description: This visualization is inspired by a car dashboard. The first uses a Flat design, the second a Neumorphic design. Both designs use the same tools, but look different.
+tags:
+  - Examples
 ---
 #Example 5: Car dashboard alike cards
 ![AmoebeLabs Swiss Army Knife Custom Card Example 5 - Car dashboard alike]

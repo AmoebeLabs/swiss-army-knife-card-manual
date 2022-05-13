@@ -1,6 +1,9 @@
 ---
 template: main.html
+title: "Example 9: High Contrast cards"
 description: This visualization shows some high-contrast examples of the Swiss Army Knife custom card. A lot of black and white with contrasting colors to show states!
+tags:
+  - Examples
 ---
 
 #Example 9: High Contrast

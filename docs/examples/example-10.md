@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: "Example 10: A colorful mix"
+description: This visualization shows cards with lots of colors showing indoor environment sensors, occupancy, AirVisual and some light switches and history.
+tags:
+  - Examples
 ---
 #Example 10: A colorful mix
 

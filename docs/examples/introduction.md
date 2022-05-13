@@ -2,6 +2,9 @@
 template: main.html
 title: Examples Introduction
 description: These 12 examples show some examples of the Swiss Army Knife custom card possibilities. The examples are from my own installation, using real sensors.
+tags:
+  - Examples
+  
 ---
 <!-- GT/GL -->
 
