@@ -1,7 +1,7 @@
 ---
 template: main.html
-description: The Airvisual and weather forecast example card shows a single card with Airvisual data, the current weather and a 5 day weather forecast
 title: "Example 1: AirVisual and Weather forecast"
+description: The Airvisual and weather forecast example card shows a single card with Airvisual data, the current weather and a 5 day weather forecast
 tags:
   - Examples
 ---
@@ -40,13 +40,13 @@ In total approx 50 entities are used to build this visualization.
 ##:sak-sak-logo: How to make it work in your own installation
 ####Card
 
-:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 The visualization is build on the `Met.no` and `Airvisual` entities, so you need these integrations:
 
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 
-:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The `Airvisual` entities should be the same for any installation, so no changes required on that part.
 
 The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!

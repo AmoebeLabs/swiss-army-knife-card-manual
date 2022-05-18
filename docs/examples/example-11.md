@@ -43,10 +43,10 @@ Both boiler and electricity are quite specific, but give you a nice idea what is
 
 ####Boiler (top two cards)
 
-:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 [OpenTherm Gateway integration](https://www.home-assistant.io/integrations/opentherm_gw#sensors)
 
-:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The OpenTherm Integration uses a name for the thermostat, in my case, this is `calenta`. If you also use the OpenTherm Integration, replace `calenta` with your own installation name. In other cases, you should be able to customize entities for your own thermostat/boiler configuration.
 
 The entities for the first card of the boiler:

@@ -83,27 +83,27 @@ Below the `sensor:` configuration for the System Monitor and extra Glances RESTf
 ##:sak-sak-logo: How to make it work in your own installation
 
 ####The Hestia server card
-:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 The visualization is build on the system monitor, so you need the [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
 
-:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The `System Monitor` entities should be the same for any installation, so no changes required on that part.
 
 
 ####The Poseidon server card
-:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 
 - [The Glances integration](https://www.home-assistant.io/integrations/glances/)
 - [The RESTful sensor integration](https://www.home-assistant.io/integrations/sensor.rest/) to get extra sensors from Glances, as the default Glances integration does not give you all the 'load' sensors.
 
-:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The `Glances` integration creates environment dependent entities: the server name is usually added to the integration, and thus entity id's.
 My integration is called `Glances-Poseidon` and thus the entities for instance `sensor.glances_poseidon_cpu_load`. You have to change the entities to your own entity id's.
 
 !!! Info "If you have only 1 server, remove the second server..."
 
 ##:sak-sak-logo: View and Card Configuration
-- The upper-left shows the DISC usage values as text in a rectangle and in a `segmented arc` for the percentage. The scale is green upto 70% and then changes to yellow, orange (80%) and red (90%).
+- The upper-left shows the DISC usage values as text in a rectangle and in a [`segmented arc`][Swiss Army Knife Custom card Segmented Arc Tool] for the percentage. The scale is green upto 70% and then changes to yellow, orange (80%) and red (90%).
 - In the lower-left, the same for RAM usage.
 - The central part shows the CPU usage
 - And finally the three system load toolsets (1m, 5m and 15m) nicely wrapped alongside the CPU display.
@@ -143,3 +143,6 @@ None.
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife Example 7 - Servers"
+
+<!-- Internal references -->
+[Swiss Army Knife Custom card Segmented Arc Tool]: ../..//tools/segarc-tool/

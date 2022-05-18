@@ -9,7 +9,7 @@ tags:
 <!-- GT/GL -->
 
 #Introducing 12 examples
-I have placed twelve examples in their own SAK Example view for easy reference.
+I have placed twelve examples in their own Swiss Army Knife Example view for easy reference.
 In most cases, the examples show more than one map or more than one visualization.
 
 Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.
@@ -20,7 +20,7 @@ Some use SAK templates, some use Decluttering templates, some use both and some 
     Other themes may display black colors where theme colors are used.
 
 !!! Info "Example 11 and 12 use a Home Assistant Material 3 theme"
-    Example 12 is used as the example view to create the [Material 3 themes](https://ha-m3-themes.docs.amoebelabs.com/).
+    Example 12 is used as the example view to create the [Material 3 themes](https://ha-m3-themes.docs.amoebelabs.com/). Check the [examples section](https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/).
 
 ##:sak-sak-logo: Real world examples from my own installation
 All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.
@@ -55,6 +55,8 @@ A quick view on a friend's Samsung showed no problems, but that is no 100% guara
 Due to the browser differences and long-standing bugs in Safari, some parts of SAK have different rendering paths for Safari and Chromium.
 
 One notable difference between the two is the SVG filter implementation of Safari. It works but takes a small performance hit compared to Chromium, which has a better and faster filter implementation. Safari users will therefore see a difference between a _switch_ to a view with filters (like a Neumorphic design) and a Flat design: the latter is faster with the initial loading of the view.
+
+I update [Home Assistant Container](https://www.home-assistant.io/installation/) every few months, and try to keep up with changes in Home Assistant to adapt this card to these changes.
 
 <!--- References to pictures... --->
 

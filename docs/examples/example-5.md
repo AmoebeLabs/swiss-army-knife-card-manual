@@ -21,12 +21,12 @@ The first uses a Flat design, the second a Neumorphic design. Both designs use t
 ###Required Home Assistant integrations
 ####Both cards
 
-:material-checkbox-multiple-marked-outline: _Required Integrations_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 The visualization is build on the Met.no, so you need the [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 
 !!! Info "Other weather integrations won't work, as they create different states and attributes"
 
-:material-checkbox-multiple-marked-outline: _Required Entity Changes_<br>
+:material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The `Met.no` integration creates the `weather.changeme` entity. Adapt the `changeme` part to your own installation!
 
 :material-checkbox-multiple-marked-outline: _Alternative entities_<br>
