@@ -9,7 +9,7 @@ tags:
 <!-- GT/GL -->
 
 #Introducing 12 examples
-I have placed twelve examples in their own Swiss Army Knife Example view for easy reference.
+I have placed twelve examples in their own Swiss Army Knife custom card Example view for easy reference.
 In most cases, the examples show more than one map or more than one visualization.
 
 Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.

@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: How to design your card
+description: How to design your own card using inspiration from the internet and using design applications like ProCreate and Affinity to create your ultimate design.
+tags:
+  - Design
 ---
 <!-- GT/GL -->
 

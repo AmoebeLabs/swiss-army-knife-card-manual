@@ -4,7 +4,6 @@
 
 # Project information
 site_name: Swiss Army Knife custom card
-#site_url: https://amoebelabs.github.io/swiss-army-knife/
 site_url: https://swiss-army-knife.docs.amoebelabs.com/
 site_author: Marco
 site_description: >-
@@ -36,7 +35,13 @@ theme:
 plugins:
   - search
   - tags
-  
+  - minify:
+      minify_html: true
+# Todo for pages that I want to rename etc. without loosing Google / Bing indexing...
+#  - redirects:
+#      redirect_maps:
+#        'old.md': 'new.md'
+        
 extra_css:
   - assets/stylesheets/extra.css
 
@@ -112,7 +117,7 @@ nav:
     - Older versions:
       - Version 0.9.0-b2: start/installation-0.9.0-b2.md
       - Version 0.9.0-b1: start/installation-0.9.0-b1.md
-    - Designing your card: start/designing-your-card.md
+    - How to design your card: start/designing-your-card.md
     - Changelog: changelog/changelog.md
   - Basics:
 #    - SVG as basis: basics/svg-as-basis.md
@@ -124,8 +129,8 @@ nav:
       - YAML built-in: basics/templates/yaml-built-in.md
       - SAK templates: basics/templates/sak-templates.md
       - Javascript snippets: basics/templates/javascript-snippets.md
-    - Interactions: basics/interactions.md
-    - Haptics: basics/haptics.md
+    - User Interactions: basics/interactions.md
+    - Haptic Feedback: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md
       - Classes: basics/styling/classes.md
@@ -133,8 +138,8 @@ nav:
     - Animations:
 #      - Overview: basics/animations/overview.md
       - CSS Animations: basics/animations/css-animations.md
-      - Colorstops: basics/animations/colorstops.md
-      - State operators: basics/animations/state-operators.md
+      - Colorstop Animations: basics/animations/colorstops.md
+      - State Operator Animations: basics/animations/state-operators.md
   - Tools:
     - Basic tools:
       - Circle: tools/circle-tool.md

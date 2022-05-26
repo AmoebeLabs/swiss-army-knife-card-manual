@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The advanced Slider tool
+description: The slider tool is an input tool with configurable track, active track, thumb and label position and styling.
+tags:
+  - Tools
+  - Tool
+  - Slider
 ---
 
 [slider-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

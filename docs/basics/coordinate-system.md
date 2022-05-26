@@ -1,12 +1,17 @@
 ---
 template: main.html
+title: Coordinate System
+description: The Swiss Army Knife map uses a easy to understand coordinate system to simplify the design and placement of toolsets and tools on a card
+tags:
+  - Coordinate System
+  - Design
 ---
 <!-- GT/GL -->
 
 [sak-example-22t]: ../assets/screenshots/sak-example-22t.png
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 
-The Swiss Army Knife map uses a simplified coordinate system to simplify the design and placement of toolsets and tools on a card.
+The Swiss Army Knife map uses a easy to understand coordinate system to simplify the design and placement of toolsets and tools on a card.
 
 ##:sak-sak-logo: Basics
 The coordinate system of a SAK Card is based on the following characteristics:
@@ -21,7 +26,7 @@ The coordinate system of a SAK Card is based on the following characteristics:
 - A Toolset has a default 100x100 grid size. It does NOT depend on the size of a card.
 - The top-left is the origin (0,0)
 - The center coordinates of a toolset are (50,50)
-- All tool dimensions are relative to the default toolset grid size: a line with a length of 10 means 10% of the grid.
+- All tool dimensions are relative to the default toolset grid size: a line with a length of 10 means 10% of this default grid.
 
 The next paragraph shows an example, and the paragraphs thereafter more details.
 
@@ -138,7 +143,7 @@ The result of these different internal sizes can be seen in the following exampl
   <text x="260" y="55" font-size="12" text-anchor="middle" fill="var(--md-primary-bg-color)">4/4</text>
 </svg>
 
-!!! Info "The `1/1`, `2/1` and `3/1` are mostly used for mobile phones, and the much larger ones, say 4/4 for panels"
+!!! Info "The 1/1, 2/1 and 3/1 are mostly used for mobile phones, and the much larger ones, say 4/4 for panels"
     The tools on a 4/4 would be too small to read on a mobile phone, but are excellent on large displays.
 
 ##:sak-sak-logo: More indepth: Toolset aspect ratio and size

@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The Entity History tool
+description: The Entity History tool displays the Home Assistant Entity History value. The simple barchart can be styled using CSS.
+tags:
+  - Tools
+  - Tool
+  - Entity History
 ---
 
 [entity-history-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

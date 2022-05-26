@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The advanced Switch tool
+description: The switch tool is an on/off input tool with configurable track and thumb styling. It can be used in horizontal and vertical positions.
+tags:
+  - Tools
+  - Tool
+  - Switch
 ---
 
 [switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

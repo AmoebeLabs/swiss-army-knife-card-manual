@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The advanced User SVG tool
+description: The User SVG tool allows you to add external SVGs to your card. It is a great way to extend the card's visualization possibilities.
+tags:
+  - Tools
+  - Tool
+  - User SVG
 ---
 
 [usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

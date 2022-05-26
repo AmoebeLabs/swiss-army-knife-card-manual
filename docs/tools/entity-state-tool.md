@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The Entity State tool
+description: The Entity State tool displays the Home Assistant Entity State value. The text can be styled using CSS.
+tags:
+  - Tools
+  - Tool
+  - Entity State
 ---
 
 [entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

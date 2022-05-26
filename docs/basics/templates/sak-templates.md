@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: Swiss Army Knife templates
+description: The Swiss Army Knife custom card has built-in template functionality aimed at re-using card definitions, toolsets, entities, colorstops and more.
+tags:
+  - Templates
+  - Built-in
 ---
 <!-- GT/GL -->
 #Swiss Army Knife templates

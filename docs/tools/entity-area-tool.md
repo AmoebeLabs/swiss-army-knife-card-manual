@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: The Entity Area tool
+description: The Entity Area tool displays the Home Assistant Entity Area value. The text can be styled using CSS.
+tags:
+  - Tools
+  - Tool
+  - Entity Area
 ---
 
 [entity-area-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

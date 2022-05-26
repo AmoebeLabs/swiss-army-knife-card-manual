@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: User Interactions
+description: The Swiss Army Knife card supports user interactions. These interactions are NOT card-based but tool-based: in other words, every SAK Tool can be interactive.
+tags:
+  - Interactions
+  - Input
 ---
 <!-- GT/GL -->
 

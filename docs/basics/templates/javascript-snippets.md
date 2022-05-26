@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: JavaScript Template Snippets
+description: The Swiss Army Knife has support for JavaScript function templates as part of the YAML configuration. So you can re-use JavaScript snippets.
+tags:
+  - Templates
+  - Built-in
+  - JavaScript
 ---
 <!-- GT/GL -->
 

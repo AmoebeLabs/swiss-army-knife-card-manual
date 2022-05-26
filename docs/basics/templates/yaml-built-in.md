@@ -1,7 +1,14 @@
 ---
 template: main.html
+title: YAML built-in template functionality
+description: YAML has built-in methods to cut the visual clutter in large YAML files. It does that by the use of Anchors, Aliases, Overrides and Extensions.
+tags:
+  - Templates
+  - YAML
 ---
 <!-- GT/GL -->
+
+#YAML built-in templating
 
 ##:sak-sak-logo: Basics
 YAML has built-in methods to cut the visual clutter in large YAML files.
