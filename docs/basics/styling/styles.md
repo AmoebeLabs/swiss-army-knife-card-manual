@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: Style with inline CSS styles
+description: Each tool can be styled using SVG attributes and in most cases CSS attribute styles. These styles are defined in the styles section.
+tags:
+  - Styling
+  - CSS
 ---
 <!-- GT/GL -->
 

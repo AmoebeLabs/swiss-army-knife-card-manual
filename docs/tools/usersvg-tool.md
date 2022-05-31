@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The advanced User SVG tool
+title: Advanced User SVG tool
 description: The User SVG tool allows you to add external SVGs to your card. It is a great way to extend the card's visualization possibilities.
 tags:
   - Tools

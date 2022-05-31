@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The Entity Name tool
+title: Entity Name tool
 description: The Entity Name tool displays the Home Assistant Entity Name value. The text can be styled using CSS.
 tags:
   - Tools

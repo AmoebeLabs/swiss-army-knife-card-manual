@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The basic RectangleEx tool
+title: Basic RectangleEx tool
 description: The extended rectangle tool is a basic tool based on the SVG path element. You can apply CSS styling, user interactions and animations on this tool.
 tags:
   - Tools

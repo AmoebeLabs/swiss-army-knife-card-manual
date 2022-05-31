@@ -3,7 +3,7 @@
 # - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.3.0
 
 # Project information
-site_name: Swiss Army Knife custom card
+site_name: Swiss Army Knife custom card for Home Assistant
 site_url: https://swiss-army-knife.docs.amoebelabs.com/
 site_author: Marco
 site_description: >-
@@ -133,8 +133,8 @@ nav:
     - Haptic Feedback: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md
-      - Classes: basics/styling/classes.md
-      - Styles: basics/styling/styles.md
+      - CSS Classes: basics/styling/classes.md
+      - CSS Styles: basics/styling/styles.md
     - Animations:
 #      - Overview: basics/animations/overview.md
       - CSS Animations: basics/animations/css-animations.md

@@ -12,7 +12,7 @@ tags:
 I have placed twelve examples in their own Swiss Army Knife custom card Example view for easy reference.
 In most cases, the examples show more than one map or more than one visualization.
 
-Some use SAK templates, some use Decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.
+Some use SAK templates, some use decluttering templates, some use both and some don't: they contain the entire configuration in the view itself.
 
 !!! Info "All examples except 11 and 12 use their own theme defined in the view-sake*.yaml. Themes are on Github."
     Aside from the box shading for the cards, themes also define some of the color schemes used by the cards.

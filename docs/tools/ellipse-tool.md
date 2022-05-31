@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The basic Ellipse tool
+title: Basic Ellipse tool
 description: The ellipse tool is a basic tool based on the SVG ellipse element. You can apply CSS styling, user interactions and animations on this tool.
 tags:
   - Tools

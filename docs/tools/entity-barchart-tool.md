@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The Entity History tool
+title: Entity History tool
 description: The Entity History tool displays the Home Assistant Entity History value. The simple barchart can be styled using CSS.
 tags:
   - Tools

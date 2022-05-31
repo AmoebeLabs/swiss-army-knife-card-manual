@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: CSS Animations
+description: The Swiss Army Knife has a number of built-in CSS animations. You can use these, or extend the set by defining your own.
+tags:
+  - Animations
+  - CSS
 ---
 
 [css-animations support]: https://github.com/amoebelabs/swiss-army-knife/releases/

@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: Style with CSS Classes
+description: To uniformly style multiple cards with minimal work, CSS Classes are the way to go. More than one class can be enabled to style a tool.
+tags:
+  - Styling
+  - CSS
 ---
 <!-- GT/GL -->
 

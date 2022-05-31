@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: Advanced Horseshoe tool
+description: The horseshoe tool ...
+tags:
+  - Tools
+  - Tool
+  - Horseshoe
 ---
 
 [horseshoe-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/

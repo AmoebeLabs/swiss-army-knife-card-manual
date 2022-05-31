@@ -1,5 +1,10 @@
 ---
 template: main.html
+title: State Operator Animations
+description: State operators enable you to style a tool in a much more advanced way than is possible with colorstops. State operators can do more equations.
+tags:
+  - Animations
+  - State Operator
 ---
 <!-- GT/GL -->
 

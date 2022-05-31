@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The basic Circle tool
+title: Basic Circle tool
 description: The circle tool is a basic tool based on the SVG circle element. You can apply CSS styling, user interactions and animations on this tool.
 tags:
   - Tools

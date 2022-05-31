@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The Entity State tool
+title: Entity State tool
 description: The Entity State tool displays the Home Assistant Entity State value. The text can be styled using CSS.
 tags:
   - Tools

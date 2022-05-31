@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The advanced Segmented Arc tool
+title: Advanced Segmented Arc tool
 description: The segmented arc tool is an advanced and multi-part complex tool. You can apply CSS styling, user interactions and animations on this tool.
 tags:
   - Tools

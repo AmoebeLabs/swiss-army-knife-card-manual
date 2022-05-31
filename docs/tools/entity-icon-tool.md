@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The Entity Icon tool
+title: Entity Icon tool
 description: The Entity Icon tool displays the Home Assistant Entity Icon value. The icon can be styled and animated using CSS.
 tags:
   - Tools

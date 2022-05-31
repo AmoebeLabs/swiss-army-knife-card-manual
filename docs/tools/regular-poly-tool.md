@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: The basic Regular Polygon tool
+title: Basic Regular Polygon tool
 description: The regular polygon tool is a basic tool based on the Schlafli symbol. You can apply CSS styling, user interactions and animations on this tool.
 tags:
   - Tools
