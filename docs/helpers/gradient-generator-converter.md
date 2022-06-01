@@ -1,5 +1,11 @@
 ---
 template: main.html
+description: Several helpers to create custom CSS Gradients and SVG Converters so you can use them in your own cards.
+tags:
+  - Helpers
+  - Converters
+  - Gradient
+  - SVG
 ---
 
 [css-gradient-io]: ../assets/screenshots/css-gradient-io.png

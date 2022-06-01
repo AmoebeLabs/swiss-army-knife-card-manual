@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: Installation v0.9.0-b1
+description: The installation of beta version 0.9.0-beta1
+tags:
+  - Install
 ---
 The installation can be done in two ways:
 

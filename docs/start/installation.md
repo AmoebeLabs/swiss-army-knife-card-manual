@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: Installation
+description: The installation of the Swiss Army Knife custom card can be done in two ways: Automatic install using HACS or manual install.
+tags:
+  - Install
 ---
 <!-- GT/GL -->
 

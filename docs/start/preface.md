@@ -1,6 +1,10 @@
 ---
 template: main.html
 title: Getting Started Preface
+description: Some background on the creation of the Swiss Army Knife custom card...
+tags:
+  - Preface
+  - Background
 ---
 <!-- GT/GL -->
 

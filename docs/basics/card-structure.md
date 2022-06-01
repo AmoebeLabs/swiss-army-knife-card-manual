@@ -1,5 +1,11 @@
 ---
 template: main.html
+title: YAML Card Structure
+description: Each Swiss Army Knife custom card follows the same structure to define the card, toolsets and tools to create the visualization you want.
+tags:
+  - YAML
+  - Structure
+  - Card
 ---
 
 ##:sak-sak-logo: The Swiss Army Knife YAML structure

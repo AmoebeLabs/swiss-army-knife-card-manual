@@ -1,5 +1,9 @@
 ---
 template: main.html
+title: Installation v0.9.0-b2
+description: The installation of beta version 0.9.0-beta2
+tags:
+  - Install
 ---
 <!-- GT/GL -->
 
