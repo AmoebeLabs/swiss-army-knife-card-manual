@@ -107,6 +107,13 @@ And the final result after placing all the SAK tools ([circles][circle-tool], [e
 
 ![Swiss Army Knife custom card example 6 - Weather on SVG background]
 
+##:sak-sak-logo: A word on Theme usage
+If you want your design to work in both Light and Dark theme mode, make sure you use theme colors for the implementation of your design.
+
+Swiss Army Knife examples [11][example-11] and [12][example-12] us my [Home Assistant Material 3 themes][ha-m3-themes-url] to implement cards that adapt to theme colors and to theme modes (dark/light).
+
+Enjoy!
+
 <!-- Images -->
 
 [sak-circles-background]: ../assets/screenshots/sak-circles-background.png
@@ -129,6 +136,7 @@ And the final result after placing all the SAK tools ([circles][circle-tool], [e
 [example 6]: ../examples/example-6.md
 [example 7]: ../examples/example-7.md
 [example-8]: ../examples/example-8.md
+[example-11]: ../examples/example-11.md
 [example-12]: ../examples/example-12.md
 [circle-tool]: ../tools/circle-tool.md
 [entity-icon-tool]: ../tools/entity-icon-tool.md
@@ -140,3 +148,4 @@ And the final result after placing all the SAK tools ([circles][circle-tool], [e
 <!-- External References -->
 
 [affinity-website-url]: https://affinity.serif.com/en-gb/
+[ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/
