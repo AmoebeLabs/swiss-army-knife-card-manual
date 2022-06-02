@@ -54,8 +54,8 @@ Once you've decided what style you want, you can start designing your cards. You
 I used this a lot and created about 50 of these sketches in Procreate on my iPad. Only some of them made it in production. Many were not useful, too complex to make, or just ugly.
 
 Below you see one of those sketches. It shows a pre-version of the server example (See: [example 7]) and a production example of the lights (See: [example 2]). Not yet Leonardo da Vinci quality, but I'm learning. At least my handwriting is on par with a doctor :smile:
-  
-[![sak-design-sketch-procreate]][sak-design-sketch-procreate]
+
+![Swiss Army Knife custom card hand sketching a design with Procreate]
 
 I then use this sketch as the basis to create the card. It took some guessing about coordinates and sizes. I use Notepad++ as an editor to produce the YAML. After every "save" action, I hit F5 to refresh HA's view to check if I'm satisfied with the result. If not, rinse and repeat...
 
@@ -111,7 +111,7 @@ And the final result after placing all the SAK tools on top of the background: a
 
 [sak-circles-background]: ../assets/screenshots/sak-circles-background.png
 [sak-circles-background-ad]: ../assets/screenshots/sak-circles-background-ad.png
-[sak-design-sketch-procreate]: ../assets/screenshots/sak-design-sketch-procreate.png
+[Swiss Army Knife custom card hand sketching a design with Procreate]: ../assets/screenshots/sak-design-sketch-procreate.png "Swiss Army Knife custom card hand sketching a design with Procreate"
 [sak-inspiration-1b]: ../assets/screenshots/sak-inspiration-1b.png
 [sak-inspiration-2]: ../assets/screenshots/sak-inspiration-2.jpg
 [sak-inspiration-3]: ../assets/screenshots/sak-inspiration-3.png 
