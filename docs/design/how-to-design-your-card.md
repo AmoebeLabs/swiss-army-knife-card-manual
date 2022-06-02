@@ -10,7 +10,7 @@ tags:
 ##:sak-sak-logo: Where to start?
 So, you came here to read how to design your own card. That's good!
 
-If you're a graphic designer or some UX guy/woman, you will probably have tons of ideas, and after understanding the possibilities, you immediately fire up Adobe Indesign, Affinity Designer, Inkscape, or Procreate on your PC/Mac/iPad or went online on Figma or some other online tool to sketch your design.
+If you're a graphic designer or some UX guy/woman, you will probably have tons of ideas, and after understanding the possibilities, you immediately fire up Adobe Indesign, Affinity Designer, Inkscape, or Procreate on your PC/Mac/iPad or went online using Figma or some other online tool to sketch your design.
 
 You're one of those people: 
 
@@ -33,7 +33,7 @@ If you browse the internet you can find all sorts of visualizations. I just pick
     Of course, you can't build them *EXACTLY* that way, but you can come a long way mimicking these examples.
 
 !!! Info "You will find several designs in the examples"
-    Most of them are (currently) using a Neumorphic design, but other flat and Homekit alike designs are also there.
+    About half of them use a Neumorphic design, and the other half [flat][example-12] and [Homekit alike][example-8] designs.
     
 ##:sak-sak-logo: Ok, I got inspired. Now what?
 
@@ -57,23 +57,23 @@ Below you see one of those sketches. It shows a pre-version of the server exampl
 
 ![Swiss Army Knife custom card hand sketching a design with Procreate]
 
-I then use this sketch as the basis to create the card. It took some guessing about coordinates and sizes. I use Notepad++ as an editor to produce the YAML. After every "save" action, I hit F5 to refresh HA's view to check if I'm satisfied with the result. If not, rinse and repeat...
+I then use this sketch as the basis to create the card. It took some guessing about coordinates and sizes. I use Notepad++ as an editor to produce the YAML. After every "save" action, I hit F5 to refresh Home Assistant's view to check if I'm satisfied with the result. If not, rinse and repeat...
 
 The server card took a lot of trial-and-error to get the 4 CPU/Load circles aligned the way I wanted to:
 
-![sak-example-7]
+![Swiss Army Knife custom card example 7 - Servers]
 
 The lights were much easier, as it involved much less parts:
 
-![sak-example-2]
+![Swiss Army Knife custom card example 2 - Lights]
 
 
 ###:sak-sak-logo: The professional approach: using an app
-Below you see Affinity Designer in action.
+Below you see [Affinity Designer][affinity-website-url] in action.
 
-For [example 6], I wanted to create something different with circles as the background, and on top of that some SAK tools (circles) with weather and airvisual data.
+For [example 6], I wanted to create something different with circles as the background, and on top of that some SAK tools [(circles)][circle-tool] with weather and airvisual data.
 
-The design is for a square card, so I created an artboard with a size 100mmx100mm. This is the default 'coordinate' system for a square card. As a result, the coordinates shown by Affinity Designer can be copied 1:1 in the cards YAML definition. No trial-and-error this time placing the tools at the right location.
+The design is for a square card, so I created an artboard with a size 100mmx100mm. This is the default ['coordinate' system][swiss-army-knife-coordinate-system] for a square card. As a result, the coordinates shown by Affinity Designer can be copied 1:1 in the cards YAML definition. No trial-and-error this time placing the tools at the right location.
 
 !!! Info "The units used are NOT relevant, it's all about a 100x100 canvas. Use centons if you like..."
 
@@ -103,9 +103,9 @@ The resulting partial YAML definition is as follows:
           fill: white
 ```
 
-And the final result after placing all the SAK tools on top of the background: a nice visualization, a bit artistic, clean, and showing a fair bit of information. The gradient also gives a nice touch to the overall look & feel.
+And the final result after placing all the SAK tools ([circles][circle-tool], [entity icon][entity-icon-tool], [entity state][entity-state-tool], and [weather type][user-svg-tool]) on top of the [background][user-svg-tool]: a nice visualization, a bit artistic, clean, and showing a fair bit of information. The gradient also gives a nice touch to the overall look & feel.
 
-![sak-example-6]
+![Swiss Army Knife custom card example 6 - Weather on SVG background]
 
 <!-- Images -->
 
@@ -118,14 +118,25 @@ And the final result after placing all the SAK tools on top of the background: a
 [sak-inspiration-4]: ../assets/screenshots/sak-inspiration-4.png 
 [sak-inspiration-5b]: ../assets/screenshots/sak-inspiration-5b.png
 [sak-inspiration-7b]: ../assets/screenshots/sak-inspiration-7b.png
-[sak-inspiration-combined]: ../assets/screenshots/sak-inspiration-combined.png
-[sak-example-2]: ..//assets/screenshots/sak-example-2.png
-[sak-example-6]: ..//assets/screenshots/sak-example-6.png
-[sak-example-7]: ..//assets/screenshots/sak-example-7.png
+[sak-inspiration-combined]: ../assets/screenshots/sak-inspiration-combined.png "3 design examples to get inspired!"
+[Swiss Army Knife custom card example 2 - Lights]: ../assets/screenshots/sak-example-2.png "Swiss Army Knife custom card example 2 - Lights"
+[Swiss Army Knife custom card example 6 - Weather on SVG background]: ../assets/screenshots/sak-example-6.png "Swiss Army Knife custom card example 6 - Weather on SVG background"
+[Swiss Army Knife custom card example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife custom card example 7 - Servers"
 
-<!-- References -->
+<!-- Internal References -->
 
 [example 2]: ../examples/example-2.md
 [example 6]: ../examples/example-6.md
 [example 7]: ../examples/example-7.md
+[example-8]: ../examples/example-8.md
+[example-12]: ../examples/example-12.md
+[circle-tool]: ../tools/circle-tool.md
+[entity-icon-tool]: ../tools/entity-icon-tool.md
+[entity-state-tool]: ../tools/entity-state-tool.md
+[user-svg-tool]: ../tools/usersvg-tool.md
 
+[swiss-army-knife-coordinate-system]: ../basics/coordinate-system.md
+
+<!-- External References -->
+
+[affinity-website-url]: https://affinity.serif.com/en-gb/
