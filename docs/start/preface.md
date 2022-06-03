@@ -29,13 +29,15 @@ The kind of shit that can't be fixed easily: my little sister got diagnosed with
 At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The Swiss Army Knife with all its tools was born!
 
 ##:sak-sak-logo: The dilemma: release or not?
-I stopped working on this map after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.
+I stopped working on this custom card after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.
 
 In November 2021 I asked myself "What to do now?". The card is unfinished, no one but me has used it, has no documentation, and given its size, that could be quite a big undertaking. In addition, users will find bugs that need fixing. And I have to do other things too.
 
 But what if I get help?
 
-I posted a teaser of the map on the Dutch Tweakers forum: and one of them suggested a closed beta. And so it was! About 30 Home Assistant users wanted to become beta testers. That is doable for me! It got me to start creating the documentation you are reading right now!
+I posted a teaser of the card on the Dutch Tweakers forum: and one of them suggested a closed beta. And so it was! About 40 Home Assistant users wanted to become beta testers. That is doable for me! It got me to start creating the documentation you are reading right now!
+
+Back in 2021, I had the idea to release the custom card (as RC or BETA) around March/April 2022, but handling my sister's estate appeared to be more complex than I anticipated, so the public BETA release was delayed until the end of June 2022. Nearly 2 years after I started building this card!
 
 I used Material for MkDocs to create this documentation: a great piece of software with a good navigation system, even better formatting solutions, and on top of that customization to better suit my needs.
 
