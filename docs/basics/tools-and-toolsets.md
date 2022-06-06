@@ -80,11 +80,11 @@ Example showing independent x/y scaling on the 3rd disc
     
 ###Styling
 
-<!--- References to pictures... --->
+<!--- Image references --->
 [Swiss Army Knife Example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife example 7 - Servers"
 
 
-<!--- References to internal links... --->
+<!--- Internal references --->
 
 [swiss-army-knife-basic-tool-circle]: ../tools/circle-tool.md "Swiss Army Knife - Circle Tool"
 [swiss-army-knife-basic-tool-ellipse]: ../tools/ellipse-tool.md "Swiss Army Knife - Ellipse Tool"
@@ -108,5 +108,5 @@ Example showing independent x/y scaling on the 3rd disc
 
 [example 7]: ../examples/example-7.md
 
-<!--- References to external links... --->
+<!--- External references --->
 

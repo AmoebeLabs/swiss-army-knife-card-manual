@@ -1,41 +1,44 @@
 ---
 template: main.html
 title: Installation
-description: The installation of the Swiss Army Knife custom card can be done in two ways: Automatic install using HACS or manual install.
+description: "The installation of the Swiss Army Knife custom card can be done in two ways: Hybrid install using HACS and manual steps or full manual install."
 tags:
   - Install
 ---
+
 <!-- GT/GL -->
 
 The installation can be done in two ways:
 
-- automatic install using HACS
-- manual install
+- hybrid install using HACS and manual steps
+- full manual install
 
 On top of that you can install the examples using an extra dashboard.
 
-##:sak-sak-logo: Automatic install using HACS
+##:sak-sak-logo: Hybrid install using HACS with additional manual steps
 
 By the time this card is released, it will become available in HACS.
 
-!!! Note "NTS: As SAK needs template files, I guess installation can't be fully automated..."
+If I'm not mistaken, HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
-##:sak-sak-logo: Manual install (for Beta 0.9.0-b3, February 2022)
-
-This third beta contains some fixes, extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
-
-\#TODO: List changes and adapt manual install
+The installation of the Examples Dashboard, which requires example views and SAK templates along some decluttering templates can't be automated using HACS. It requires some manual steps.
 
 
-This beta version expects the files to be using the following directory structure with their files.
+!!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
+
+##:sak-sak-logo: Full Manual install (for v0.9.0-rc1, June/July 2022)
+
+This public release candidate contains some fixes from Beta2, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
+
+This release candidate version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
 
 ###My Folder Structure
 
 !!! Info "I use separate folders for many things in Home Assistant"
-    Read and adapt to your own config and structure.
+    Read and adapt to your own configuration and structure.
     
-Below, as reference the folder structure I use
+Below, as reference the folder structure I use. This one shows the files for the full install, including the example dashboard and views.
 
 === "Home Assistant"
     ```
@@ -61,9 +64,7 @@ Below, as reference the folder structure I use
       ├─ sak_templates/
       │  ├─ sak_templates.yaml
       │  ├─ definitions/
-      │  │  ├─ sak-css-definitions.yaml
-      │  │  ├─ user-css-definitions.yaml
-      │  │  └─ sak-svg-definitions.yaml
+      │  │  └─ user-css-definitions.yaml
       │  └─ templates/
       │     └─<templates>.yaml
       │
@@ -73,17 +74,20 @@ Below, as reference the folder structure I use
       ├─ views/
       │  ├─ view-sake1.yml
       │  ├─ (...)
-      │  └─ view-sake11.yml
+      │  └─ view-sake12.yml
       ```
-      The location of the `sak_templates` folder in the `lovelace` folder is MANDATORY!
-      This location is hard-coded into the SAK card. SAK needs the templates to function!
+      As you can see, I use separate folders for my configuration. The `sak_templates` folder is included from the `ui-lovelace.yaml` file.
 === "www folder"
     ```
     www/
     .
     ├─ community/
-    │  └─ wip-swiss-army-knife-card/
-    │     └─ dev-swiss-army-knife-card.js
+    │  └─ swiss-army-knife-card/
+    │     ├─ swiss-army-knife-card.min.js
+    │     ├─ SVGInjector.min.js       # Temporary hack
+    │     ├─ sak_templates.yaml       # System templates with..
+    │     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
+    │     └─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
     │
     ├─ images/
        ├─ backgrounds/
@@ -93,48 +97,51 @@ Below, as reference the folder structure I use
        │  ├─ *-day.svg
        │  └─ *-night.svg
        │
-       ├─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
-       ├─ (...)
-       └─ ic-face-6.svg
+       ├─ airvisual/                  # Used by Airvisual face display usersvg tools
+       │  ├─ ic-face-1.svg               
+       │  ├─ (...)
+       │  └─ ic-face-6.svg
     ```
 
 === "Themes folder"
     ```
     themes/
     .
-    ├─ nm-01-gonsboro.yaml
-    └─ nm-03-dark-steelblue.yaml
+    ├─ <Material 3 theme>             # Required for example 11 and 12
+    ├─ nm-01-gonsboro.yaml            # Used theme for the Neumorphic examples
+    └─ nm-03-dark-steelblue.yaml      # Used theme for the Neumorphic examples
     ```
 
 ###:octicons-checklist-24: Step 1: Add Swiss Army Knife Card to your installation
-The folder has a wip prefix and the card itself a dev prefix. These will be removed in the official release.
-This way they can't overwrite each other...
-
 **:octicons-check-circle-16: Step 1a:**
-Put the card into the community (`HACS`) folder.
+Put the contents of the `/dist` folder of the card into the community (`HACS`) folder.
 
 ```
 www/
 .
 ├─ community/
-│  └─ wip-swiss-army-knife-card/
-│     └─ dev-swiss-army-knife-card.js
+│  └─ swiss-army-knife-card/
+│     ├─ swiss-army-knife-card.min.js
+│     ├─ SVGInjector.min.js       # Temporary hack
+│     ├─ sak_templates.yaml       # System templates with..
+│     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
+│     └─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
 ```
 
 **:octicons-check-circle-16: Step 1b:**
 Add the card to the `resources.yaml` file.
 
 ```yaml title="resources.yaml"
-- url: /hacsfiles/wip-swiss-army-knife-card/dev-swiss-army-knife-card.min.js
+- url: /hacsfiles/swiss-army-knife-card/swiss-army-knife-card.min.js
   type: module
 ```
-The `resources.yaml` file should be included in your `configuration.yaml` config. I assume that that is already in place if you're using custom cards.
+The `resources.yaml` file should be included in your `configuration.yaml` file. I assume that that is already in place if you're using custom cards.
 ```yaml title="configuration.yaml"
 lovelace:
   mode: yaml
   resources: !include lovelace/resources/resources.yaml
 ```
-!!! Warning "I have a YAML only config. Pleas adjust to your own configuration"
+!!! Warning "I have a YAML only configuration. Pleas adjust to your own configuration"
 
 ###:octicons-checklist-24: Step 2: Add Swiss Army Knife templates
 The second step is to add the `sak_templates`. These are mandatory.
@@ -150,10 +157,10 @@ lovelace/
 ├─ sak_templates/
 │  ├─ sak_templates.yaml
 │  ├─ definitions/
-│  │  ├─ sak-css-definitions.yaml
+│  │  ├─ user-svg-definitions.yaml
 │  │  └─ user-css-definitions.yaml
 │  └─ templates/
-│     └─<templates>.yaml```
+│     └─<templates>.yaml
 ```
 
 **:octicons-check-circle-16: Step 2b:**
@@ -161,7 +168,16 @@ Include sak_templates to `ui-lovelace.yaml`
 
 ```yaml title="ui-lovelace.yaml"
 # Swiss Army Knife Templates
-sak_templates:
+#
+# The system templates come with the HACS install and can be updated
+# with a new release. That part is automatic!
+sak_sys_templates:
+  !include www/community/swiss-army-knife-card/sak_templates.yaml
+
+# The user templates are created by the user, and won't be updated 
+# with a new release. If changes are required, then the user has to
+# upate the template configuration files.
+sak_user_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 ```
 !!! Info "The supplied `sak_templates.yaml` file contains a wildcard include for the `templates` folder."
@@ -226,9 +242,10 @@ www/
    │  ├─ *-day.svg
    │  └─ *-night.svg
    │
-   ├─ ic-face-1.svg               # Used by Airvisual face display usersvg tools
-   ├─ (...)
-   └─ ic-face-6.svg
+   ├─ airvisual/                  # Used by Airvisual face display usersvg tools
+   │  ├─ ic-face-1.svg               
+   │  ├─ (...)
+   │  └─ ic-face-6.svg
 ```
 
 **:octicons-check-circle-16: Step 3b:**
@@ -248,14 +265,31 @@ lovelace:
       show_in_sidebar: true
 ```
 
-The dashboard contains the 11 example views:
+The dashboard contains the 12 example views and one view (sake99) for showing the definition of a Material 3 theme:
 ```yaml title="sak-examples-dashboard.yaml"
+#################################################################
+#                                                               # 
+#             Swiss Army Knife examples dashboard               #
+#                                                               #
+#             Created: 2021.12.05                               #
+#                                                               #
+#################################################################
+  
 # Decluttering Templates
 decluttering_templates:
   !include lovelace/decluttering_templates/decluttering_templates.yaml
 
 # Swiss Army Knife Templates
-sak_templates:
+#
+# The system templates come with the HACS install and can be updated
+# with a new release. That part is automatic!
+sak_sys_templates:
+  !include www/community/swiss-army-knife-card/sak_templates.yaml
+
+# The user templates are created by the user, and won't be updated 
+# with a new release. If changes are required, then the user has to
+# upate the template configuration files.
+sak_user_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 
 title: Swiss Army Knife Examples
@@ -263,16 +297,20 @@ views:
 
   # Swiss Army Knife example views...
   - !include lovelace/views/view-sake1.yml
+  - !include lovelace/views/view-sake1-m3.yml
   - !include lovelace/views/view-sake2.yml
   - !include lovelace/views/view-sake3.yml
   - !include lovelace/views/view-sake4.yml
   - !include lovelace/views/view-sake5.yml
   - !include lovelace/views/view-sake6.yml
+  - !include lovelace/views/view-sake6-m3.yml
   - !include lovelace/views/view-sake7.yml
   - !include lovelace/views/view-sake8.yml
   - !include lovelace/views/view-sake9.yml
   - !include lovelace/views/view-sake10.yml
-  - !include lovelace/views/view-sake11.yml
+  - !include lovelace/views/view-sake11-m3.yml
+  - !include lovelace/views/view-sake12-m3.yml
+  - !include lovelace/views/view-sake99-m3.yml
 ```
 
 !!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"

@@ -58,7 +58,7 @@ One notable difference between the two is the SVG filter implementation of Safar
 
 I update [Home Assistant Container](https://www.home-assistant.io/installation/) every few months, and try to keep up with changes in Home Assistant to adapt this card to these changes.
 
-<!--- References to pictures... --->
+<!--- Image references --->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1b.png "Swiss Army Knife Example 1 - AirVisual and Weather forecast"
 [AmoebeLabs Swiss Army Knife Custom Card Example 2 - Lights]: ../assets/screenshots/sak-example-2.png "Swiss Army Knife Example 2 - Lights"
@@ -77,7 +77,7 @@ I update [Home Assistant Container](https://www.home-assistant.io/installation/)
 [sak-example-6gif]: ../assets/screenshots/sak-example-6.gif
 [sak-example-8gif]: ../assets/screenshots/sak-example-8.gif
 
-<!--- References to internal links... --->
+<!--- Internal references --->
 
 [Example 1]: ../examples/example-1.md
 [Example 2]: ../examples/example-2.md
@@ -92,5 +92,5 @@ I update [Home Assistant Container](https://www.home-assistant.io/installation/)
 [Example 11]: ../examples/example-11.md
 [Example 12]: ../examples/example-12.md
 
-<!--- References to external links... --->
+<!--- External references --->
 

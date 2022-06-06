@@ -56,7 +56,7 @@ The entities for the first card of the boiler:
 - The other sensors are to control the thermostat (`room_setpoint_thermostat_calenta`) using the slider and the boiler active / flame / hot water requests.
 
 ```yaml linenums="1" hl_lines="3 5 8 11 14 18"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   entities:
     - entity: sensor.room_temp_thermostat_calenta
       name: Actueel
@@ -82,7 +82,7 @@ The entities for the second card of the boiler:
 !!! note "The `slave_flame_on` entity is used to show a white background (using a rectangle) of the boiler is `on`"
 
 ```yaml linenums="1" hl_lines="3 6 9 12"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   entities:
     - entity: binary_sensor.slave_flame_on_boiler_calenta
       icon: 'mdi:fire'
@@ -109,7 +109,7 @@ If you are using the DSMR Reader integration, no changes are necessary for the e
 The DSMR Reader integration generates generic sensor entities:
 
 ```yaml linenums="1" hl_lines="4 8 11 14 17 20 23 26"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   entities:
     #Total
     - entity: sensor.dsmr_reading_electricity_currently_delivered
@@ -211,6 +211,6 @@ The four parts therefore can use the same definition:
 [AmoebeLabs Swiss Army Knife Custom Card Example 11 Light - Boiler and electricity]: ../assets/screenshots/sak-example-11-m3-c11-light.png "Swiss Army Knife Example 11 - Boiler and electricity, light theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 11 Dark - Boiler and electricity]: ../assets/screenshots/sak-example-11-m3-c11-dark.png "Swiss Army Knife Example 11 - Boiler and electricity, dark theme"
 
-<!--- External References... --->
+<!-- External References -->
 
-[ham3-c11-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/example-c11/
+[ham3-c11-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-c11-purple/

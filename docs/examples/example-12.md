@@ -189,5 +189,6 @@ TBD.
 
 <!--- External References... --->
 
-[ham3-d06-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/example-d6/
+[ham3-d06-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
 [ham3-url]: https://ha-m3-themes.docs.amoebelabs.com/
+[ham3-c12-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-c12-magenta/

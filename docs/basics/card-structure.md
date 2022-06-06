@@ -16,7 +16,7 @@ The main aspects of a SAK Card are shown below using yellow lines.
   #
   # This is normally part of a "cards" section from a horizontal or vertical Lovelace stack
   # -----
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   # Define the entities
   entities:
     - <list of entities>

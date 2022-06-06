@@ -49,7 +49,7 @@ Below shows a card with a light and brightness entity/attribute.
 The slider tool uses entity 1 (brightness) which is translated from a number to a percentage.
 
 ```yaml title="view-sake2.yml" linenums="1" hl_lines="13 29 31 40"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
 
   entities: 
     - entity: light.livingroom_light_duo_left_light

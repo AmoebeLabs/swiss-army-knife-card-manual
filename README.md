@@ -5,8 +5,8 @@ __Updated development status as of June 2022:__
 Due to a lot of work to handle my sister's estate, I was unable to do any work on this card, but it will still be released, yet with a bit more unresolved issues!
 
 - Currently in **closed** BETA with around 40 users.
-- Next step will be a **public** BETA, announced here and on the Home Assistant community forum.
-- Depending on the issues, more BETA's (v0.9.x) will be released.
+- Next step will be a **public** Release Candidate (v0.9.0-rc1), announced here and on the Home Assistant community forum.
+- Depending on the issues, more RC's ((v0.9.0-rcx) will be released.
 - And if that goes well, version 1.0.0 will be released 🚀.
 
 __Previous development status as of March 2022:__

@@ -39,7 +39,7 @@ Therefore, the SAK Icon Tool draws an invisible background behind the `icon` to 
 The current method is through the `tap_action` definition in the `entities` list section of the card. Just like most Home Assistant cards.
 
 ```yaml linenums="1" hl_lines="7-12"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   entities:
     - entity: light.livingroom_light_cupboard_light
       name: Boekenkast
@@ -57,7 +57,7 @@ The current method is through the `tap_action` definition in the `entities` list
 
 If you want different actions, say a `toggle` for the circle (button), and `more-info` for tapping the perentage state/attribute, you have to be a bit creative and define the **same** entity once more, but with a different `tap_action`:
 ```yaml linenums="1" hl_lines="7-12 20-22"
-- type: 'custom:dev-swiss-army-knife-card'
+- type: 'custom:swiss-army-knife-card'
   entities:
     # Entity to be used for switching light (circle tool)
     - entity: light.livingroom_light_cupboard_light

@@ -116,7 +116,7 @@ The `sak_sensor_history_template_nm_tpl` decluttering template and `toolset_sens
           - bar_color_max: var(--cs-orange-darken-20)
 
     card:
-      type: 'custom:dev-swiss-army-knife-card'
+      type: 'custom:swiss-army-knife-card'
       entities: 
         - entity: '[[entity]]'
           name: '[[name]]'
