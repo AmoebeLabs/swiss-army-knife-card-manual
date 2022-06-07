@@ -6,7 +6,12 @@ tags:
   - Install
 ---
 
-<!-- GT/GL -->
+<br>[![release][release-badge]][release-url]
+![downloads][downloads-badge]
+<br>![LGTM Grade][lgtm-grade-badge]
+![LGTM Alerts][lgtm-alerts-badge]
+
+# Installation
 
 Welcome to the installation manual for the versatile Swiss Army Knife custom card for Home Assistant.
 
@@ -19,7 +24,9 @@ On top of that you can install the examples using an extra dashboard.
 
 ##:sak-sak-logo: Hybrid install using HACS with additional manual steps
 
-By the time this card is released, it will become available in HACS.
+[![hacs][hacs-badge]][hacs-url]
+[![hacs][beta_badge]][hacs-url]
+<br>By the time this card is released, it will become available in HACS.
 
 If I'm not mistaken, HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
@@ -28,7 +35,7 @@ The installation of the Examples Dashboard, which requires example views and SAK
 
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
-##:sak-sak-logo: Full Manual install (for v0.9.0-rc1, June/July 2022)
+##:sak-sak-logo: Full Manual install (for v1.0.0-rc1, June/July 2022)
 
 This public release candidate contains some fixes from Beta2, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
 
@@ -336,6 +343,19 @@ If you want to start building right away, head over to the [tools and toolsets][
 <!-- Images -->
 [sak-example-dashboard]: ../assets/screenshots/sak-example-dashboard.png
 
+<!-- Badge references -->
+
+<!-- Badges -->
+
+[hacs-url]: https://github.com/hacs/integration
+[hacs-badge]: https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge&logo=homeassistantcommunitystore
+[beta_badge]: https://img.shields.io/badge/State-Beta-orange?style=for-the-badge&logo=homeassistantcommunitystore
+[release-badge]: https://img.shields.io/github/v/release/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&include_prereleases&logo=github
+[downloads-badge]: https://img.shields.io/github/downloads/AmoebeLabs/swiss-army-knife-card/total?style=for-the-badge&logo=github
+[lgtm-grade-badge]: https://img.shields.io/lgtm/grade/javascript/github/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&logo=lgtm
+[lgtm-alerts-badge]: https://img.shields.io/lgtm/alerts/github/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&logo=lgtm
+
+
 <!-- Internal links -->
 [swiss-army-knife-examples-url]: ../../examples/introduction/
 [swiss-army-knife-tools-and-toolsets-url]: ../../basics/tools-and-toolsets/
@@ -347,6 +367,6 @@ If you want to start building right away, head over to the [tools and toolsets][
 [swiss-army-knife-animations-state-operators-url]: ../../basics/animations/state-operators/
 [swiss-army-knife-how-to-design-your-card-md]: ../../design/how-to-design-your-card/
 
-
 <!-- External links -->
 [ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/
+[release-url]: https://github.com/AmoebeLabs/swiss-army-knife-card/releases
