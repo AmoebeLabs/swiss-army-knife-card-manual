@@ -6,7 +6,7 @@ tags:
   - Introduction
 ---
 <!-- GT/GL -->
-# What is this custom card, and for whom is it meant?
+# What is this card, and for whom is it?
 
 ##:sak-sak-logo: What is this custom card?
 
