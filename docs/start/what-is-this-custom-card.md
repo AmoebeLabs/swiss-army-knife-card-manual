@@ -6,7 +6,7 @@ tags:
   - Introduction
 ---
 <!-- GT/GL -->
-# What is this custom card, and what not?
+# What is this custom card, and for whom is it meant?
 
 ##:sak-sak-logo: What is this custom card?
 
@@ -27,10 +27,12 @@ Swiss Army Knife examples [11][Example 11] and [12][Example 12] use these [Home 
 | **[Example 9 - High Contrast][Example 9]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]][Example 9]   | **[Example 10 - Colorful mix][Example 10]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]][Example 10] |
 | **[Example 11 - Boiler and Electricity][Example 11]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 11 - Boiler and electricity]][Example 11] | **[Example 12 - Wide cards][Example 12]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 12 - Wide cards]][Example 12] |
 
-##:sak-sak-logo: What is this card not?
-It is not a standard card. It has no fixed design, nor fixed functionality.
+##:sak-sak-logo: And for whom is it meant?
+It is not a standard card. It has no fixed design, nor fixed functionality. It doesn't do anything out-of-the-box!
 
-It doesn't do anything out-of-the-box. This card needs some time to learn and implement. If that is not your thing, you should look either at a different card, adapt one of the examples from my installation, or even better: use one of the examples made by me or someone else in the community!
+This card needs YOU. It needs some time to design, learn and implement this card. If that is what you want, this is your card. Let your creativity flow and enjoy the results!
+
+If that is not your thing, you should look either at a different card, adapt one of the examples from my installation, or even better: use one of the examples made by me or someone else in the community!
 
 You don't have to design your card if some design suits you of course!
 
