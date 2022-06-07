@@ -110,7 +110,7 @@ And the final result after placing all the SAK tools ([circles][circle-tool], [e
 ##:sak-sak-logo: A word on Theme usage
 If you want your design to work in both Light and Dark theme mode, make sure you use theme colors for the implementation of your design.
 
-Swiss Army Knife examples [11][example-11] and [12][example-12] us my [Home Assistant Material 3 themes][ha-m3-themes-url] to implement cards that adapt to theme colors and to theme modes (dark/light).
+Swiss Army Knife examples [11][example-11] and [12][example-12] use my [Home Assistant Material 3 themes][ha-m3-themes-url] to implement cards that adapt to theme colors and to theme modes (dark/light).
 
 Enjoy!
 

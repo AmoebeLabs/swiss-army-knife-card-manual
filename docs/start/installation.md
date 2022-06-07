@@ -8,6 +8,8 @@ tags:
 
 <!-- GT/GL -->
 
+Welcome to the installation manual for the versatile Swiss Army Knife custom card for Home Assistant.
+
 The installation can be done in two ways:
 
 - hybrid install using HACS and manual steps

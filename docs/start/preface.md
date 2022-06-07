@@ -9,6 +9,7 @@ tags:
 <!-- GT/GL -->
 
 #Preface
+Welcome to the preface of the versatile Swiss Army Knife custom card for Home Assistant!
 
 ##:sak-sak-logo: Introduction
 
@@ -26,7 +27,7 @@ During the adaption of another custom card, the question "What if I would have t
 
 The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans were good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.
 
-At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The Swiss Army Knife with all its tools was born!
+At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The versatile multi-tool custom card aka the Swiss Army Knife custom card was born!
 
 ##:sak-sak-logo: The dilemma: release or not?
 I stopped working on this custom card after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.
@@ -35,16 +36,16 @@ In November 2021 I asked myself "What to do now?". The card is unfinished, no on
 
 But what if I get help?
 
-I posted a teaser of the card on the Dutch Tweakers forum: and one of them suggested a closed beta. And so it was! About 40 Home Assistant users wanted to become beta testers. That is doable for me! It got me to start creating the documentation you are reading right now!
+I posted a teaser of the card on the [Dutch Tweakers forum][tweakers-sak-topic-url]: and one of them suggested a closed beta. And so it was! About 40 Home Assistant users wanted to become beta testers. That is doable for me! It got me to start creating the documentation you are reading right now!
 
-Back in 2021, I had the idea to release the custom card (as RC or BETA) around March/April 2022, but handling my sister's estate appeared to be more complex than I anticipated, so the public BETA release was delayed until the end of June 2022. Nearly 2 years after I started building this card!
+Back in 2021, I had the idea to release the custom card (as RC or BETA) around March/April 2022, but handling my sister's estate appeared to be more complex than I anticipated, so the public RC release was delayed until the end of June 2022. Nearly 2 years after I started building this card!
 
 I used Material for MkDocs to create this documentation: a great piece of software with a good navigation system, even better formatting solutions, and on top of that customization to better suit my needs.
 
 !!! Info "The documentation uses the "Learn by Example" paradigm"
     It's a method I really like. Instead of long, very long tables of information, concrete examples are shown that are easy to understand and use in practice. The examples also show the context and relationship between options, something most tables don't have or are difficult to describe.
     
-    The examples are real examples used in my own Home Assistant environment. They use (of course) my entity declarations, which you have to replace with your own sensors to make the visualization work. It is because of that reason I use the AirVisual and Met.no weather integration a lot: these ones are very easy to adapt to your own installation.
+    The [examples][examples] are real examples used in my own Home Assistant environment. They use (of course) my entity declarations, which you have to replace with your own sensors to make the visualization work. It is because of that reason I use the AirVisual and Met.no weather integration a lot: these ones are very easy to adapt to your own installation.
     
 ##:sak-sak-logo: Some statistics
 Last but not least: some statistics.
@@ -55,6 +56,12 @@ Last but not least: some statistics.
 - In total, the created Lovelace Views, SAK templates and Decluttering templates cover about **11.000** lines of YAML. File sizes vary between **170** lines for a view with perfect re-use, templates, etc. up to so-called copy/paste views containing many cards and resulting in a size of **3.500** lines of YAML.
 - About 12 example views are created to be used as an example or inspiration for other users than me. These examples are included in the documentation (See [Examples]) and in GitHub.
 
-  [examples]: ../examples/introduction.md
-  
-!!! Note "As this card is not yet publicly released, nothing is available on GitHub yet!"
+<!-- Internal References -->
+
+[examples]: ../examples/introduction.md
+
+<!-- External References -->
+
+[tweakers-sak-topic-url]: https://gathering.tweakers.net/forum/list_messages/2099646
+
+
