@@ -27,7 +27,7 @@ During the adaption of another custom card, the question "What if I would have t
 
 The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans were good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.
 
-At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The versatile multi-tool custom card aka the Swiss Army Knife custom card was born!
+At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The versatile multi-tool custom card aka the [Swiss Army Knife custom card][what-is-it-for-whom] was born!
 
 ##:sak-sak-logo: The dilemma: release or not?
 I stopped working on this custom card after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.
@@ -59,6 +59,7 @@ Last but not least: some statistics.
 <!-- Internal References -->
 
 [examples]: ../examples/introduction.md
+[what-is-it-for-whom]: what-is-this-card-and-for-whom-is-it.md
 
 <!-- External References -->
 

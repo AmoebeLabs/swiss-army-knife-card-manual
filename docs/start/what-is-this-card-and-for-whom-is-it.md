@@ -39,7 +39,7 @@ You don't have to design your card if some design suits you of course!
 And if that card is put into a decluttering template for instance, you only have to define the entities for that card and some settings. In this way, a custom-designed card can be used as a fixed-layout card!
 
 [Example 3][Example 3] for instance is made that way. The view contains these definitions:
-```yaml
+```yaml title="From: view-sake3.yml" linenums="1"
   - type: horizontal-stack
     cards:
       - type: custom:decluttering-card
