@@ -41,6 +41,7 @@ plugins:
   - redirects:
       redirect_maps:
         'start/designing-your-card.md': 'design/how-to-design-your-card.md'
+        'basics/interactions.md': 'basics/user-interactions.md'
         
 extra_css:
   - assets/stylesheets/extra.css
@@ -131,7 +132,7 @@ nav:
       - YAML built-in: basics/templates/yaml-built-in.md
       - SAK templates: basics/templates/sak-templates.md
       - Javascript snippets: basics/templates/javascript-snippets.md
-    - User Interactions: basics/interactions.md
+    - User Interactions: basics/user-interactions.md
     - Haptic Feedback: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md

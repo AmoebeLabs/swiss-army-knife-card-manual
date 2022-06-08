@@ -6,12 +6,12 @@ tags:
   - Install
 ---
 
-<br>[![release][release-badge]][release-url]
-![downloads][downloads-badge]
-<br>![LGTM Grade][lgtm-grade-badge]
+![LGTM Grade][lgtm-grade-badge]
 ![LGTM Alerts][lgtm-alerts-badge]
 
 # Installation
+[![release][release-badge]][release-url]
+[![downloads][downloads-badge]][release-url]
 
 Welcome to the installation manual for the versatile Swiss Army Knife custom card for Home Assistant.
 
