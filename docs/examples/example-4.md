@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: "Example 4: Different Environment sensor cards"
+title: "Example 4: Different Environment cards"
 description: The environment sensor cards show Aqara temperature, humidity and pressure sensors with 24 hours of history. The look and feel is a flat design.
 tags:
   - Examples

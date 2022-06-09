@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: "Example 12: Wide cards showing lots of sensors"
+title: "Example 12: Wide cards, lots of sensors"
 description: This visualization shows some multi entity wide cards instead of the abundant square cards. The information density is pretty high, but still readable!
 tags:
   - Examples

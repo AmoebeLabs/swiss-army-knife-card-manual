@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: What is this versatile custom card?
+title: "What is this card and for whom is it?"
 description: "The versatile Swiss Army Knife custom card for Home Assistant is not your standard custom card: It allows you to design your unique visualization!"
 tags:
   - Introduction

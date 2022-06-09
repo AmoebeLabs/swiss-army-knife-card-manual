@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: "Example 11: Boiler and Electricity cards"
+title: "Example 11: Boiler and Electricity card"
 description: This visualization shows colorful boiler and main 3-phase electricity cards with possibly very "Dutch/European" integrations.
 tags:
   - Examples
