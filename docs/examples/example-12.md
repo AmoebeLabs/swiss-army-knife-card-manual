@@ -163,15 +163,18 @@ The `Glances` integration creates environment dependent entities: the server nam
 | ---- | -------- | ------------- |
 | `view-sake12-m3.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
+!!! Info "There is a second variant of this card"
+    `view-sake12-ani-m3.yml` has some animated circles in the second card, including a rotating battery icon. Just for fun, and to show these possibilities.
+
 #### Decluttering templates
-TBD.
+The only declutering template this card uses is the `header_template`.
 
 #### SAK templates
-TBD.
+This view does not use any SAK Template. It should of course, but in this case, I applied the renowned copy-paste-adapt paradigm. And that gives you 3.200 lines of YAML!
 
 | name | file |
 | ---- | -------- |
-| `tbd` | `tbd.yaml` |
+| `none` | `none.yaml` |
 
 <!-- Image references -->
 
