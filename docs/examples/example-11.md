@@ -137,6 +137,11 @@ The DSMR Reader integration generates generic sensor entities:
     - entity:  sensor.dsmr_reading_phase_currently_returned_l3
       decimals: 3
 ```
+
+##:sak-sak-logo: Interactions
+- The slider for the thermostat will set the temperature using the `climate.set_temperature` service for my `climate.calenta` boiler entity in 0.5 degrees Celcius steps and a range between 17..23 degrees Celcius.
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
@@ -201,9 +206,6 @@ The four parts therefore can use the same definition:
         - opacity: 0.7
 ```
 
-##:sak-sak-logo: Interactions
-- The slider for the thermostat will set the temperature using the `climate.set_temperature` service for my `climate.calenta` boiler entity in 0.5 degrees Celcius steps and a range between 17..23 degrees Celcius.
-- All tools support by default the "more-info" dialog once clicked.
 
 <!-- Image references -->
 

@@ -10,11 +10,27 @@ tags:
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]
 
+And a short GIF to give you an idea of the [CSS animations][css-animations]:
+
+Actions:
+
+- I moved :smile:
+- I switched the "Duo Rechts" light to on.
+- I changed the brightness using the slider of the bottom card. In this configuration, updating while dragging the slider is disabled, so you only see the other card changing the brightness if the slider of the bottom card is released!
+- And finally, I switched the "Duo Rechts" light to off.
+
+![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast Movie]
+
 ##:sak-sak-logo: Visualization
 
 This visualization shows some high-contrast examples. A lot of black and white with contrasting colors to show states!
 
 It uses indoor environment, occupancy, airvisual AQI data, and some square light cards with status, icon, history, segmented arc and map animations.
+
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+- The lights can be switched on/off by clicking/tapping the rectangle area where the icon is positioned.
+- Both lights only have a `tap_action` defined, so the sliders only update the brightness once released.
 
 ##:sak-sak-logo: Used Home Assistant Integrations
 - First row: Aqara temperature, humidity and pressure Zigbee sensors
@@ -64,15 +80,16 @@ None.
 #### SAK templates
 None.
 
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
-
 ##:sak-sak-logo: Remarks
 None.
 
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast]: ../assets/screenshots/sak-example-9.png "Swiss Army Knife Example 9 - Hight Contrast"
+[AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast Movie]: ../assets/screenshots/swiss-army-knife-example-9b-800x800.gif "Swiss Army Knife Example 9 - Hight Contrast Movie"
+
+<!-- Internal references -->
+[css-animations]: ../basics/animations/css-animations.md
 
 <!-- External references -->
 [zigbee2mqtt-url]: https://www.zigbee2mqtt.io/

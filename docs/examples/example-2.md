@@ -41,6 +41,26 @@ The other 4 - identical - cards show the light button, the area (Woonkamer = Liv
 !!! Info "Brightness is only displayed if the light is on"
     This is a change in Home Assistant some months ago.
 
+##:sak-sak-logo: Interactions
+Sliders --> :octicons-beaker-24: Experimental
+
+**First row**
+
+The first row has an explicit "more-info" menu button and sliders for brightness
+
+-	The menu in the upper left corner calls the "more-info" popup for the light.
+-	Clicking the light icon toggles the state of the light. The circle behind the icon functions as a "button".
+- Dragging the slider will set the brightness and update the lights brightness semi-realtime 4 times a second.
+
+  
+**Other rows**
+
+- All cards displayed toggle the light by clicking on the light icon. The circle behind the icon functions as a "button".
+
+**All rows**
+
+- All cards displayed show the "more-info" dialog if name, area or brightness percentage is clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - Ikea Tradfri Zigbee lights using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 - Dumb on/off lights using MQTT.
@@ -51,7 +71,7 @@ The other 4 - identical - cards show the light button, the area (Woonkamer = Liv
 
 :material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 The visualization is build on light entities that have a on/off `state` and a `brightness`. It does **not** depend on any specific integration.
-Any entity from the `light` domain with these entity/attribute should wor
+Any entity from the `light` domain with these entity/attribute should work
 
 :material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 Replace the `light` entities (`state` and `brightness` attribute) with your own entities 
@@ -155,37 +175,6 @@ The following templates are defined in the `/lovelace/sak_templates/sak-template
     toolset_light_button_slider3_nm:
       !include toolset-light-button-slider3-nm-template.yaml
     ```
-
-
-##:sak-sak-logo: Interactions
-Sliders --> :octicons-beaker-24: Experimental
-
-**First row**
-
-The first row has an explicit "more-info" menu button and sliders for brightness
-
--	The menu in the upper left corner calls the "more-info" popup for the light.
--	Clicking the light icon toggles the state of the light
--	Clicking on the slider will set the brightness to the percentage.
-- Dragging the slider will set the brightness and update the lights brightness semi-realtime 4 times a second.
-
-!!! Warning "Menu in upper left corner can be difficult to touch/click"
-    The SVG Icon has no real "touch/click" area attached (yet). Therefore it is difficult to activate the menu as SVG Icons can only be touched/clicked on the foreground part of the icon.
-    
-!!! Success "The slider has a touch/click area attached, so is perfectly to use"
-    Except for a little bug where the thumb is pulled to the edge of the touch/click area or the brightness is set to 100%, and cannot be controlled anymore. In this case clicking/touching the slider makes the thumb accessible again.
-
-!!! Bug "The thumb of the slider of the first card is not positioned correctly"
-    The slider expects to be in the center of the card, which this slider is not. As a result the thumb is positioned more to the left than it should be. 
-    
-    Will be fixed of course :smile:.
-    
-**Other rows**
-
-- All cards displayed toggle the light by clicking on the light icon
-- All cards displayed show the "more-info" dialog if name or brightness percentage is clicked.
-
-
 
 ##:sak-sak-logo: Remarks
 

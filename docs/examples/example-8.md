@@ -41,6 +41,9 @@ The only integration you need are the `Airvisual` entities, so you need the [Air
 :material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 Last but not least: an `occupancy` sensor is used. If you don't have any `occupancy` sensor, replace it with any on/off sensor and the card should at least work!
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: View and Card Configuration
 
 #### Lovelace view
@@ -113,9 +116,6 @@ None.
 
 #### SAK templates
 None.
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: Remarks
 !!! Info "Due to rendering differences for icons, Safari based systems show the icon animation, and other/Chrome based browsers not."

@@ -14,6 +14,9 @@ Visualization of the basic data of two servers. My basic NUC (J3455 CPU) running
 
 !!! Info "Both systems were 'loaded' before the screenshot was taken to show the different colorstops"
     The default load of the NUC is around 3% and the frontend around 11%.
+
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
     
 ##:sak-sak-logo: Used Home Assistant Integrations
 - [The System Monitor integration](https://www.home-assistant.io/integrations/systemmonitor/)
@@ -133,10 +136,6 @@ None.
         # Scale to 80% of toolset template.
         scale: .8
     ```
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
-
 ##:sak-sak-logo: Remarks
 !!! Success "This view is a nice example of the use of toolset scaling!"
 

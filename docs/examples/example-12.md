@@ -53,6 +53,9 @@ The last column uses the [entity icon][Swiss Army Knife Custom card Entity Icon 
 
 The first column of the server cards are again identical to the previous cards. Additional to that 4 [segmented arcs][Swiss Army Knife Custom card Segmented Arc Tool], each containing the [entity icon][Swiss Army Knife Custom card Entity Icon Tool] and [state value][Swiss Army Knife Custom card Entity State Tool] of the CPU, RAM, DISC and LOAD sensors.
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - First card: [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
 - Environment cards: Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
@@ -158,7 +161,7 @@ The `Glances` integration creates environment dependent entities: the server nam
 
 | file | location | included from |
 | ---- | -------- | ------------- |
-| `view-sake12.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
+| `view-sake12-m3.yml` | `/lovelace/views` | `sak-examples-dashboard.yaml`|
 
 #### Decluttering templates
 TBD.
@@ -169,9 +172,6 @@ TBD.
 | name | file |
 | ---- | -------- |
 | `tbd` | `tbd.yaml` |
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 <!-- Image references -->
 

@@ -18,6 +18,9 @@ The card is build using the following tools:
 - The name of the entity
 - A barchart showing the trend over de last 24 hours using a light to dark orange gradient setting as colorstop
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - Aqara Zigbee sensors with temperature, humidity and pressure data
 
@@ -95,9 +98,6 @@ The following templates are defined in the `/lovelace/sak_templates/sak-template
 
 - The `header` is the template used for the header texts
 - The `toolset_sensor_history` is used for the sensor cards.
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: Remarks
 !!! Success "This view is an excellent example of how to pass variables from a decluttering to a SAK template"

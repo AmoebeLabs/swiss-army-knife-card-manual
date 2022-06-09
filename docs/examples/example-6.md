@@ -15,6 +15,9 @@ Let's do something different and use the weather for a nice view :smile:
 This view is made with the aid of Affinity Designer. The 'balls' background is created with this tool and exported as an SVG file.
 <br>On top of those circles the weather and Airvisual data is displayed.
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
@@ -60,9 +63,6 @@ None used.
 
 #### SAK templates
 None used.
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: Remarks
 None.

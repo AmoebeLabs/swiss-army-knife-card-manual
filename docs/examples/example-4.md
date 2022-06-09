@@ -11,6 +11,9 @@ tags:
 ##:sak-sak-logo: Visualization
 Once again a visualization of sensors values using two completely different card designs. The first row is a Neumorphic design, and the second implements a very simple and clean Flat design with a few colored blocks as the background of the card.
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - Aqara Zigbee sensors with temperature, humidity and pressure data using zigbee2mqtt, ie the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 
@@ -89,10 +92,6 @@ The first row shows cards with a simple Flat design with:
 The following templates are defined in the `/lovelace/sak_templates/sak-templates.yaml` file:
 
 - The `toolset_arc180_sparklinebar24` is the template used for the first row of cards
-
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: Remarks
 None.

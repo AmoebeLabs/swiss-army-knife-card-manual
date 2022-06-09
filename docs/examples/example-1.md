@@ -31,6 +31,10 @@ This visualization is divided into three major blocks:
     - The minimum expected temperature
     - The expected precipitation
   
+
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 - [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
@@ -60,7 +64,7 @@ The `Met.no` integration creates the `weather.changeme` entity. Adapt the `chang
       
         This is your go-to card: absolutely NO re-use, so no templates are used to define this card.
         
-        It's a whopping 1.500 lines of YAML!
+        It's a whopping 1.500 lines of YAML to display about 50 entities. Only 30 lines/entity!
 
         It was my first card, made in a time where templates didn't exist yet!
 
@@ -118,10 +122,6 @@ To display the weather type, you need the external *animated* SVG's which are lo
               return (state + '-day');
             ]]]
     ```
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
-
 ##:sak-sak-logo: Remarks
 - 
 This view shows the dutch translation for "Partly Cloudy --> Gedeeltelijk bewolkt" and the wind direction "WSW --> WZW".

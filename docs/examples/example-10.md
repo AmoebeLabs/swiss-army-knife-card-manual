@@ -9,10 +9,27 @@ tags:
 
 ![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]
 
+And a short GIF to give you an idea of the [CSS animations][css-animations]:
+
+Actions:
+
+- I moved :smile:
+- I switched all three lights to on.
+- I changed the brightness of the right-most light back and forth.
+- And finally, I switched all three lights to off.
+
+![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix Movie]
+
 ##:sak-sak-logo: Visualization
 Indoor environment sensors, occupancy, airvisual, and some light switchable square cards with status, icon, history, segmented arc, and card animations.
 
-!!! Info "Cards 1, 2 and 3 use a similar design whith small variations in the state bar (top of card), thickness of segemented arc and history bars."
+!!! Info "Cards 1, 2 and 3 use a similar design with small variations in the state bar (top of card), thickness of segmented arc and history bars."
+
+
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+- The lights can be switched on/off by clicking/tapping the large light icon.
+- All lights brightness update during dragging.
 
 ##:sak-sak-logo: Used Home Assistant Integrations
 - First row: Aqara temperature, humidity and pressure Zigbee sensors
@@ -62,9 +79,6 @@ None.
 #### SAK templates
 None.
 
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
-
 ##:sak-sak-logo: Remarks
 
 **The AQI Card (second row, second card)**
@@ -95,3 +109,4 @@ The `segarc` config uses an elliptical display and a small arc to resemble a lin
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]: ../assets/screenshots/sak-example-10.png "Swiss Army Knife Example 10 - Colorful mix"
+[AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix Movie]: ../assets/screenshots/swiss-army-knife-example-10-800x800.gif "Swiss Army Knife Example 10 - Colorful mix Movie"

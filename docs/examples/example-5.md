@@ -13,6 +13,9 @@ This visualization is inspired by a car dashboard.
 
 The first uses a Flat design, the second a Neumorphic design. Both designs use the same tools, but look different.
 
+##:sak-sak-logo: Interactions
+- All tools support by default the "more-info" dialog once clicked.
+
 ##:sak-sak-logo: Used Home Assistant Integrations
 - [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
 
@@ -46,9 +49,6 @@ None used. All inline YAML!
 
 #### SAK templates
 None used. All inline YAML!
-
-##:sak-sak-logo: Interactions
-- All tools support by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: Remarks
 None.
