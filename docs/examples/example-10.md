@@ -110,3 +110,6 @@ The `segarc` config uses an elliptical display and a small arc to resemble a lin
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix]: ../assets/screenshots/sak-example-10.png "Swiss Army Knife Example 10 - Colorful mix"
 [AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix Movie]: ../assets/screenshots/swiss-army-knife-example-10-800x800.gif "Swiss Army Knife Example 10 - Colorful mix Movie"
+
+<!-- Internal references -->
+[css-animations]: ../basics/animations/css-animations.md

@@ -37,10 +37,10 @@ Many examples use the [Met.no](https://www.home-assistant.io/integrations/met/) 
 | **[Example 11 - Boiler and Electricity][Example 11]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 11 - Boiler and electricity]][Example 11] | **[Example 12 - Wide cards][Example 12]:** [![AmoebeLabs Swiss Army Knife Custom Card Example 12 - Wide cards]][Example 12] |
 
 
-| And some gifs to show the animations| |
+| And some gifs to show the [CSS animations][css-animations]| |
 | ---------------- | ---------------- |
 | **[Example 2]:** ![sak-example-2gif] | **[Example 6]:** ![sak-example-6gif] |
-| **[Example 8]:** ![sak-example-8gif] | **[Example 8]:** ![sak-example-8gif] |
+| **[Example 9]:** ![AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast Movie] | **[Example 10]:** ![AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix Movie] |
 
     
 ##:sak-sak-logo: Platforms tested
@@ -77,6 +77,9 @@ I update [Home Assistant Container](https://www.home-assistant.io/installation/)
 [sak-example-6gif]: ../assets/screenshots/sak-example-6.gif
 [sak-example-8gif]: ../assets/screenshots/sak-example-8.gif
 
+[AmoebeLabs Swiss Army Knife Custom Card Example 9 - Hight Contrast Movie]: ../assets/screenshots/swiss-army-knife-example-9b-800x800.gif "Swiss Army Knife Example 9 - Hight Contrast Movie"
+[AmoebeLabs Swiss Army Knife Custom Card Example 10 - Colorful mix Movie]: ../assets/screenshots/swiss-army-knife-example-10-800x800.gif "Swiss Army Knife Example 10 - Colorful mix Movie"
+
 <!--- Internal references --->
 
 [Example 1]: ../examples/example-1.md
@@ -91,6 +94,7 @@ I update [Home Assistant Container](https://www.home-assistant.io/installation/)
 [Example 10]: ../examples/example-10.md
 [Example 11]: ../examples/example-11.md
 [Example 12]: ../examples/example-12.md
+[css-animations]: ../basics/animations/css-animations.md
 
 <!--- External references --->
 
