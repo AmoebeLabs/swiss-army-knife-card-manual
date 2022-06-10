@@ -38,10 +38,12 @@ plugins:
   - minify:
       minify_html: true
   # Redirect pages pages that I want to rename etc. without loosing Google / Bing indexing...
+  # And users getting a 404 while clicking on an old link of course!
   - redirects:
       redirect_maps:
         'start/designing-your-card.md': 'design/how-to-design-your-card.md'
         'basics/interactions.md': 'basics/user-interactions.md'
+        'basics/svg-as-basis.md': 'basics/tools-and-toolsets.md'
         
 extra_css:
   - assets/stylesheets/extra.css
@@ -119,11 +121,9 @@ nav:
     - Older versions:
       - Version 0.9.0-b2: start/installation-0.9.0-b2.md
       - Version 0.9.0-b1: start/installation-0.9.0-b1.md
-#    - How to design your card: start/designing-your-card.md
     - Changelog: changelog/changelog.md
   - How to design your card: design/how-to-design-your-card.md
   - Basics:
-#    - SVG as basis: basics/svg-as-basis.md
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
     - Card structure: basics/card-structure.md
@@ -139,7 +139,6 @@ nav:
       - CSS Classes: basics/styling/classes.md
       - CSS Styles: basics/styling/styles.md
     - Animations:
-#      - Overview: basics/animations/overview.md
       - CSS Animations: basics/animations/css-animations.md
       - Colorstop Animations: basics/animations/colorstops.md
       - State Operator Animations: basics/animations/state-operators.md
@@ -179,6 +178,5 @@ nav:
     - 11. Boiler and electricity: examples/example-11.md
     - 12. Wide cards: examples/example-12.md
   - Helpers:
-#    - Introduction: helpers/introduction.md
     - Pallette generators: helpers/palette-generators.md
     - Gradient generator / converter: helpers/gradient-generator-converter.md
