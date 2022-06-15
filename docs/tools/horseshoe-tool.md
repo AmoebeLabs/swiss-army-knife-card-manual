@@ -8,7 +8,7 @@ tags:
   - Horseshoe
 ---
 
-[horseshoe-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[horseshoe-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Horse Shoe tool
 [:octicons-tag-24: 1.0.0][horseshoe-tool support] ·
 :octicons-package-dependents-24: Output

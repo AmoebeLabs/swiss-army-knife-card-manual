@@ -8,7 +8,7 @@ tags:
   - Slider
 ---
 
-[slider-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[slider-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 
 # The slider tool
 [:octicons-tag-24: 1.0.0][slider-tool support] ·

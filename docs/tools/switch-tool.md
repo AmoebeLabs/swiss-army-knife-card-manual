@@ -8,7 +8,7 @@ tags:
   - Switch
 ---
 
-[switch-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[switch-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 
 # The Switch tool
 [:octicons-tag-24: 1.0.0][switch-tool support] ·

@@ -8,7 +8,7 @@ tags:
   - Entity History
 ---
 
-[entity-history-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[entity-history-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Entity History tool
 [:octicons-tag-24: 1.0.0][entity-history-tool support] ·
 :octicons-package-dependents-24: Output

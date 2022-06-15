@@ -8,7 +8,7 @@ tags:
   - Circle
 ---
 
-[circle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[circle-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Circle tool
 [:octicons-tag-24: 1.0.0][circle-tool support] ·
 :octicons-package-dependents-24: Output

@@ -8,7 +8,7 @@ tags:
   - RectangleEx
 ---
 
-[rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[rectex-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Rectangle Ex(tended) tool
 [:octicons-tag-24: 1.0.0][rectex-tool support] ·
 :octicons-package-dependents-24: Output

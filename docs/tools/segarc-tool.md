@@ -8,7 +8,7 @@ tags:
   - Segmented Arc
 ---
 
-[segarc-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[segarc-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Segmented Arc tool
 [:octicons-tag-24: 1.0.0][segarc-tool support] ·
 :octicons-package-dependents-24: Output

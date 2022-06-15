@@ -8,7 +8,7 @@ tags:
   - Ellipse
 ---
 
-[ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[ellipse-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Ellipse tool
 [:octicons-tag-24: 1.0.0][ellipse-tool support] ·
 :octicons-package-dependents-24: Output

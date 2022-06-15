@@ -8,7 +8,7 @@ tags:
   - Entity State
 ---
 
-[entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[entity-state-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Entity State tool
 [:octicons-tag-24: 1.0.0][entity-state-tool support] ·
 :octicons-package-dependents-24: Output

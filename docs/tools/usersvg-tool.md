@@ -8,7 +8,7 @@ tags:
   - User SVG
 ---
 
-[usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 
 [usersvg-partly-cloudy-day]: ../assets/screenshots/partly-cloudy-day.svg
 [usersvg-partly-cloudy-day-rain]: ../assets/screenshots/partly-cloudy-day-rain.svg

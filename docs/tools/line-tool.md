@@ -8,7 +8,7 @@ tags:
   - Line
 ---
 
-[line-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[line-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Line tool
 [:octicons-tag-24: 1.0.0][line-tool support] ·
 :octicons-package-dependents-24: Output

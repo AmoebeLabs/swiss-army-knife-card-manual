@@ -8,7 +8,7 @@ tags:
   - Rectangle
 ---
 
-[rectangle-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[rectangle-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Rectangle tool
 [:octicons-tag-24: 1.0.0][rectangle-tool support] ·
 :octicons-package-dependents-24: Output

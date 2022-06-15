@@ -8,7 +8,7 @@ tags:
   - Text
 ---
 
-[text-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[text-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Text tool
 [:octicons-tag-24: 1.0.0][text-tool support] ·
 :octicons-package-dependents-24: Output ·

@@ -8,7 +8,7 @@ tags:
   - Regular Polygon
 ---
 
-[regpoly-tool support]: https://github.com/amoebelabs/swiss-army-knife/releases/
+[regpoly-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
 # The Regular Polygon tool
 [:octicons-tag-24: 1.0.0][regpoly-tool support] ·
 :octicons-package-dependents-24: Output
