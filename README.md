@@ -1,9 +1,9 @@
 [![hacs][hacs-badge]][hacs-url]
 [![hacs][beta_badge]][hacs-url]
 <br>[![release][release-badge]][release-url]
-![downloads][downloads-badge]
-![LGTM Grade][lgtm-grade-badge]
-![LGTM Alerts][lgtm-alerts-badge]
+[![downloads][downloads-badge]][release-url]
+[![LGTM Grade][lgtm-grade-badge]][lgtm-url]
+[![LGTM Alerts][lgtm-alerts-badge]][lgtm-url]
 
 # ![](docs/assets/images/swiss-army-knife24.png) Swiss Army Knife custom card manual
 
@@ -75,6 +75,7 @@ It has 22 light and dark [example themes](https://material3-themes-manual.amoebe
 [hacs]: https://hacs.xyz
 [release-url]: https://github.com/AmoebeLabs/swiss-army-knife-card/releases
 [sak-docs-url]: https://swiss-army-knife-card-manual.amoebelabs.com/
+[lgtm-url]: https://lgtm.com/
 
 [example-11]: https://swiss-army-knife-card-manual.amoebelabs.com/examples/example-11/
 [example-12]: https://swiss-army-knife-card-manual.amoebelabs.com/examples/example-12/
