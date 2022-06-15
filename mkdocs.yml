@@ -41,6 +41,7 @@ plugins:
   # And users getting a 404 while clicking on an old link of course!
   - redirects:
       redirect_maps:
+        'start/introduction.md': 'start/preface.md'
         'start/designing-your-card.md': 'design/how-to-design-your-card.md'
         'basics/interactions.md': 'basics/user-interactions.md'
         'basics/svg-as-basis.md': 'basics/tools-and-toolsets.md'
