@@ -368,5 +368,5 @@ If you want to start building right away, head over to the [tools and toolsets][
 [swiss-army-knife-how-to-design-your-card-md]: ../../design/how-to-design-your-card/
 
 <!-- External links -->
-[ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/
+[ha-m3-themes-url]: https://material3-themes-manual.amoebelabs.com/examples/introduction/
 [release-url]: https://github.com/AmoebeLabs/swiss-army-knife-card/releases

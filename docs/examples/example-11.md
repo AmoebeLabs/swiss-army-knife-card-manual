@@ -215,4 +215,4 @@ The four parts therefore can use the same definition:
 
 <!-- External References -->
 
-[ham3-c11-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-c11-purple/
+[ham3-c11-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-c11-purple/

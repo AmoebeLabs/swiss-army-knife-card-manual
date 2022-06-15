@@ -16,7 +16,7 @@ With the Accessible palette website, you can create Material Design color system
 
 You can use a single color with varying lightness for displaying steps in the segmented arc for instance.
 
-Also a great tool if you are using the [Material 3 themes for Home Assistant!](https://ha-m3-themes.docs.amoebelabs.com)
+Also a great tool if you are using the [Material 3 themes for Home Assistant!](https://material3-themes-manual.amoebelabs.com)
 
 URL: https://accessiblepalette.com/
 

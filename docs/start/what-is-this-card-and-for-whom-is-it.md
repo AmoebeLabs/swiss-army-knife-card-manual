@@ -106,5 +106,5 @@ Either way, enjoy this card!
 <!-- External References -->
 
 [affinity-website-url]: https://affinity.serif.com/en-gb/
-[ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/
-[ha-m3-examples-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/
+[ha-m3-themes-url]: https://material3-themes-manual.amoebelabs.com/
+[ha-m3-examples-url]: https://material3-themes-manual.amoebelabs.com/examples/introduction/

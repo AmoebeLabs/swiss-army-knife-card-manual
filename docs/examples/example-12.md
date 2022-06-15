@@ -192,6 +192,6 @@ This view does not use any SAK Template. It should of course, but in this case, 
 
 <!--- External References... --->
 
-[ham3-d06-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
-[ham3-url]: https://ha-m3-themes.docs.amoebelabs.com/
-[ham3-c12-url]: https://ha-m3-themes.docs.amoebelabs.com/examples/material3-example-theme-c12-magenta/
+[ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
+[ham3-url]: https://material3-themes-manual.amoebelabs.com/
+[ham3-c12-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-c12-magenta/

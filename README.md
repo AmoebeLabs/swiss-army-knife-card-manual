@@ -18,7 +18,7 @@ __Previous development status as of March 2022:__
 For online documentation, see: https://swiss-army-knife.docs.amoebelabs.com/
 <br>There are [12 example views](https://swiss-army-knife.docs.amoebelabs.com/examples/introduction/) available to learn from.
 
-For the Material 3 themes used on [some of the cards](https://swiss-army-knife.docs.amoebelabs.com/examples/example-12/), see: https://ha-m3-themes.docs.amoebelabs.com/
+For the Material 3 themes used on [some of the cards](https://swiss-army-knife.docs.amoebelabs.com/examples/example-12/), see: https://material3-themes-manual.amoebelabs.com/
 
 ![frontpage](sak-frontpage.png)
 

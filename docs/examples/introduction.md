@@ -20,7 +20,7 @@ Some use SAK templates, some use decluttering templates, some use both and some 
     Other themes may display black colors where theme colors are used.
 
 !!! Info "Example 11 and 12 use a Home Assistant Material 3 theme"
-    Example 12 is used as the example view to create the [Material 3 themes](https://ha-m3-themes.docs.amoebelabs.com/). Check the [examples section](https://ha-m3-themes.docs.amoebelabs.com/examples/introduction/).
+    Example 12 is used as the example view to create the [Material 3 themes](https://material3-themes-manual.amoebelabs.com/). Check the [examples section](https://material3-themes-manual.amoebelabs.com/examples/introduction/).
 
 ##:sak-sak-logo: Real world examples from my own installation
 All samples are actual screenshots of my iPhone, which are then added to an iPhone mockup in Affinity Designer, exported, and processed into an Instagram-compatible 1080x1080 pixel crop.

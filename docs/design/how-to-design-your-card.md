@@ -148,4 +148,4 @@ Enjoy!
 <!-- External References -->
 
 [affinity-website-url]: https://affinity.serif.com/en-gb/
-[ha-m3-themes-url]: https://ha-m3-themes.docs.amoebelabs.com/
+[ha-m3-themes-url]: https://material3-themes-manual.amoebelabs.com/
