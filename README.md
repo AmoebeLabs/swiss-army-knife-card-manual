@@ -51,8 +51,9 @@ All these examples are available on Github and described in the [installation ma
 
 ## ![](docs/assets/images/swiss-army-knife24.png) Material 3 themes for Home Assistant
 
-For the Material 3 themes used on [some of the cards](https://swiss-army-knife-card-manual.amoebelabs.com/examples/example-12/), see: https://material3-themes-manual.amoebelabs.com/
+For the Material 3 themes used by some of the cards, see: https://material3-themes-manual.amoebelabs.com/
 
+It has 22 light and dark [example themes](https://material3-themes-manual.amoebelabs.com/examples/introduction/) used by example card [11][example-11] and [12][example-12]!
 
 <a href="https://www.buymeacoffee.com/amoebelabs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
