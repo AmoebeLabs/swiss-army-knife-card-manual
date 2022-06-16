@@ -18,25 +18,57 @@ The Entity Icon tool displays the Home Assistant Entity Icon.
    :material-thermometer:
 
 ##:sak-sak-logo: Basic usage
-The Entity Icon tool needs a center position and the entity_index from which the icon definition is used.
+The Entity Icon tool needs a center position, size and alignment.
+=== "Standalone"
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'icon'              # tooltype is 'icon'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        icon_size: 10           # Relative size of 10 (em)
+        align: center           # Align (center, end, start)
+      icon: mdi:dots-vertical   # Specify icon in tool
+      styles:
+        icon:
+          fill: var(--primary-text-color)
+    ```
 === "Connected"
-```yaml linenums="1" hl_lines="1"
-- type: 'icon'              # tooltype is 'icon'
-  position:                 # Position on (100x100) canvas
-    cx: 50                  # cx=50 is center position
-    cy: 50                  # cy=50 is center position
-    icon_size: 10           # Relative size of 10 (em)
-    align: center           # Align (center, end, start)
-  entity_index: 0           # connect to state of entity 0
-  styles:
-    icon:
-      fill: var(--primary-text-color)
-      color: var(--primary-text-color)
-```
+    The Entity Icon tool fetches the icon from the entity_index.
+    ```yaml linenums="1" hl_lines="1"
+    - type: 'icon'              # tooltype is 'icon'
+      position:                 # Position on (100x100) canvas
+        cx: 50                  # cx=50 is center position
+        cy: 50                  # cy=50 is center position
+        icon_size: 10           # Relative size of 10 (em)
+        align: center           # Align (center, end, start)
+      entity_index: 0           # connect to state of entity 0
+      styles:
+        icon:
+          fill: var(--primary-text-color)
+    ```
+=== "Connected - Icon overruled"
+    The Entity Icon tool can have it's entity icon overruled by the tool. 
+    ```yaml title="From example view-sake2.yml" linenums="1"hl_lines="8"
+    - type: icon
+      position:
+        cx: 10
+        cy: 10
+        align: center
+        icon_size: 15
+      entity_index: 0
+      icon: mdi:dots-vertical   # Overwrite icon from entity: use menu icon
+      user_actions:
+        tap_action:
+          haptic: success
+          actions:
+            - action: more-info # display more-info popup when clicked
+      styles:
+        capture:
+          opacity: 0
+        icon:
+          fill: var(--primary-text-color)
+    ```
 
-!!! Warning "At this moment BOTH fill and color must be specified for the icon"
-    This is due to different browser rendering paths (Chrome alike and Safari) for icons
-    
 ##:sak-sak-logo: Styling
 The Entity Icon tool has support for the following forms of styling:
 
