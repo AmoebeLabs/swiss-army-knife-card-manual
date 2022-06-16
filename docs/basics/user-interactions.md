@@ -46,6 +46,8 @@ Each tool has its own `user_actions` section, independent of the definition of `
 !!! success "You can define multiple actions per tap/click action!"
     So you can call multiple Home Assistant backend services with a single click.
 
+    See the third example in the "Some examples" paragraph.
+
 !!! info "A tool connected to an entity will automatically declare the 'more-info' action."
     But **ONLY** if there is no `tap_action` defined!
     
@@ -57,9 +59,9 @@ Each tool has its own `user_actions` section, independent of the definition of `
     And use a fill color of `fill: rgba(0,0,0,0)`. This way, you get an invisible rectangle covering your card that does respond to pointer/touch events.
     
 === "Light example"
-    Example with a light entity and three tools on a card.
+    Example with a light entity and three tools on a card as background.
     As actions are defined PER tool, we can define a single entity and use that for every tool, but still have different actions for each tool / entity combination!
-    ```yaml linenums="1" hl_lines="8-13 21-34 42-46"
+    ```yaml linenums="1" hl_lines="8-13 26-39 47-51"
     tools:
       # ------------------------------------------------------------
       - type: circle
@@ -114,7 +116,7 @@ Each tool has its own `user_actions` section, independent of the definition of `
     ```
 === "Thermostat example"
     Example with a thermostat entity setpoint: a slider
-    ```yaml linenums="1"
+    ```yaml linenums="1" hl_lines="9-18"
     tools:
       # ------------------------------------------------------------
       - type: slider
@@ -136,7 +138,13 @@ Each tool has its own `user_actions` section, independent of the definition of `
     ```
 === "Calling multiple services with a single click/tap"
     Example with an icon switching two (other) lights and viewing the more-info popup for the current entity.
-    ```yaml linenums="1"
+    
+    !!! Info "I'm not saying this specific example is useful, but it is just to show how you would define this!"
+
+    !!! Success "You can also see how to override an entity_id in the service call."
+        If not specified, the entity_id is derived from the entity_index.
+    
+    ```yaml linenums="1" hl_lines="10-22"
     tools:
       - type: icon
         position:
@@ -150,19 +158,18 @@ Each tool has its own `user_actions` section, independent of the definition of `
           tap_action:
             haptic: success
             actions:
-              - action: more-info
-              - action: call-service
+              - action: more-info       # Action 1
+              - action: call-service    # Action 2
                 service: light.toggle
                 service_data:
                   entity_id: light.livingroom_light_duo_right_light
-              - action: call-service
+              - action: call-service    # Action 3
                 service: light.toggle
                 service_data:
                   entity_id: light.livingroom_light_front_right_light
         styles:
           icon:
             fill: var(--primary-text-color)
-            color: var(--primary-text-color)
     ```
 
 ##:sak-sak-logo: Previous - entity based - support
