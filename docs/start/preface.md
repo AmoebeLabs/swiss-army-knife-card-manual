@@ -21,13 +21,13 @@ I am visually oriented. And with the introduction of Lovelace and the creation o
 Despite all those choices, I adapted these cards in many cases to get the visualization I wanted. And by doing that I learned step-by-step the inner workings of a custom card and the basis for these cards: the web-component Lit.
 
 During the adaption of another custom card, the question "What if I would have the possibility to design my own visualization?" came up more and more. In that case, I could design completely different cards than currently available.
-<br>But: I'm not a real programmer, I learn by looking at how other people solve problems, and by understanding that, I can create my own code to solve my own problems. So, how feasible is it to create my own card?
+<br>But: I'm not a real programmer, I learn by looking at how other people solve problems, and by understanding that, I can create my own code to solve my own problems. So, how feasible is it to create this kind of card?
 
 ##:sak-sak-logo: And then shit happened...
 
 The kind of shit that can't be fixed easily: my little sister got diagnosed with cancer. The first MRI scans were good though: 100% chance of survival and she got her operation. But then things turned for the worse: metastatic cancer. She died 6 months later in 2021, almost in full isolation due to the covid pandemic.
 
-At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building my own card: The versatile multi-tool custom card aka the [Swiss Army Knife custom card][what-is-it-for-whom] was born!
+At the time of that fatal message, I needed something positive to balance all the negative things and decided to take the challenge and start building this card: The versatile multi-tool custom card aka the [Swiss Army Knife custom card][what-is-it-for-whom] was born!
 
 ##:sak-sak-logo: The dilemma: release or not?
 I stopped working on this custom card after my sister died: I had other things to do, and its purpose had suddenly "disappeared" somehow.
@@ -50,8 +50,8 @@ I used Material for MkDocs to create this documentation: a great piece of softwa
 ##:sak-sak-logo: Some statistics
 Last but not least: some statistics.
 
-- As of December 2021 about **1.000** hours of work are put into this card. That is with a 40 hour week about 6 months of work!
-- The size of the card itself, including comments is about **8.000** lines of JavaScript. I hope, somewhere in the future, I can convert this to TypeScript.
+- As of June 2022 about **1.500** hours of work are put into this card, the [12 examples][examples], the [Material 3 themes][material3-themes-manual-url] and both manuals. That is with a 40 hour workweek about 9 months of work!
+- The size of the card itself, including comments is about **7.000** lines of JavaScript. I hope, somewhere in the future, I can convert this to TypeScript.
 - I made about **50** sketches and designs in ProCreate on my iPad for visualizations. Just to try out functionality, or to create new functionality.
 - In total, the created Lovelace Views, SAK templates and Decluttering templates cover about **11.000** lines of YAML. File sizes vary between **170** lines for a view with perfect re-use, templates, etc. up to so-called copy/paste views containing many cards and resulting in a size of **3.500** lines of YAML.
 - About 12 example views are created to be used as an example or inspiration for other users than me. These examples are included in the documentation (See [Examples]) and in GitHub.
@@ -64,5 +64,6 @@ Last but not least: some statistics.
 <!-- External References -->
 
 [tweakers-sak-topic-url]: https://gathering.tweakers.net/forum/list_messages/2099646
+[material3-themes-manual-url]: https://material3-themes-manual.amoebelabs.com/examples/introduction/
 
 

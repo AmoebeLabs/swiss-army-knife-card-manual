@@ -104,7 +104,7 @@ Example showing independent x/y scaling on the 3rd disc
 [swiss-army-knife-ha-tool-state]: ../tools/entity-state-tool.md "Swiss Army Knife - Entity State Tool"
 [swiss-army-knife-ha-tool-bar]: ../tools/entity-barchart-tool.md "Swiss Army Knife - Entity History Bar Tool"
 [swiss-army-knife-sak-templates]: ../templates/sak-templates/
-[swiss-army-knife-coordinate-system]:../coordinate-system/
+[swiss-army-knife-coordinate-system]: ../coordinate-system/
 
 [example 7]: ../examples/example-7.md
 

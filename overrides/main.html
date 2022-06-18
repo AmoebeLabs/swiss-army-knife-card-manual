@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 
+{% block htmltitle %}
+
+  <!-- The full title (config.site_name) is a bit long, so use a shortened version for each page. Better for SEO -->
+  {% set htmltitle = "Swiss Army Knife Custom Card" %}
+  {% if page and page.meta and page.meta.title %}
+    {% set htmltitle = page.meta.title ~ " - " ~ htmltitle %}
+  {% elif page and page.title and not page.is_homepage %}
+    {% set htmltitle = page.title ~ " - " ~ htmltitle %}
+  {% endif %}
+
+  <title>{{ htmltitle }}</title>
+  
+{% endblock %}
+  
 <!-- Custom front matter -->
 {% block extrahead %}
 
@@ -18,13 +32,20 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- {% set title = config.site_name %} -->
+  <!-- {% if page and page.meta and page.meta.title %} -->
+    <!-- {% set title = title ~ " - " ~ page.meta.title %} -->
+  <!-- {% elif page and page.title and not page.is_homepage %} -->
+    <!-- {% set title = title ~ " - " ~ page.title %} -->
+  <!-- {% endif %} -->
+
   {% set title = config.site_name %}
   {% if page and page.meta and page.meta.title %}
-    {% set title = title ~ " - " ~ page.meta.title %}
+    {% set title = page.meta.title ~ " - " ~ title %}
   {% elif page and page.title and not page.is_homepage %}
-    {% set title = title ~ " - " ~ page.title %}
+    {% set title = page.title ~ " - " ~ title %}
   {% endif %}
-
+  
   <!-- OpenGraph / Facebook meta data -->
 
   <meta property="og:type" content="website" />
