@@ -176,8 +176,9 @@ nav:
     - 8. Homekit alike: examples/example-8.md
     - 9. High Contrast: examples/example-9.md
     - 10. Colorful mix: examples/example-10.md
-    - 11. Boiler and electricity: examples/example-11.md
-    - 12. Wide cards: examples/example-12.md
+    - 11. Boiler and electricity (m3): examples/example-11.md
+    - 12. Wide cards (m3): examples/example-12.md
+    - 99. Material 3 converter and theme viewer (m3): examples/example-99.md
   - Helpers:
     - Pallette generators: helpers/palette-generators.md
     - Gradient generator / converter: helpers/gradient-generator-converter.md

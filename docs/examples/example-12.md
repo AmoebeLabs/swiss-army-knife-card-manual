@@ -167,7 +167,7 @@ The `Glances` integration creates environment dependent entities: the server nam
     `view-sake12-ani-m3.yml` has some animated circles in the second card, including a rotating battery icon. Just for fun, and to show these possibilities.
 
 #### Decluttering templates
-The only declutering template this card uses is the `header_template`.
+The only decluttering template this card uses is the `header_template`.
 
 #### SAK templates
 This view does not use any SAK Template. It should of course, but in this case, I applied the renowned copy-paste-adapt paradigm. And that gives you 3.200 lines of YAML!

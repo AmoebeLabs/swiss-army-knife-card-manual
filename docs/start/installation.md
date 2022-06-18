@@ -28,14 +28,14 @@ On top of that you can install the examples using an extra dashboard.
 [![hacs][beta_badge]][hacs-url]
 <br>By the time this card is released, it will become available in HACS.
 
-If I'm not mistaken, HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
+HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
 The installation of the Examples Dashboard, which requires example views and SAK templates along some decluttering templates can't be automated using HACS. It requires some manual steps.
 
 
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
-##:sak-sak-logo: Full Manual install (for v1.0.0-rc1, June/July 2022)
+##:sak-sak-logo: Full Manual install (for v1.0.0-rc.1, June/July 2022)
 
 This public release candidate contains some fixes from Beta2, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
 
@@ -92,7 +92,7 @@ Below, as reference the folder structure I use. This one shows the files for the
     .
     ├─ community/
     │  └─ swiss-army-knife-card/
-    │     ├─ swiss-army-knife-card.min.js
+    │     ├─ swiss-army-knife-card.js
     │     ├─ SVGInjector.min.js       # Temporary hack
     │     ├─ sak_templates.yaml       # System templates with..
     │     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
@@ -123,25 +123,30 @@ Below, as reference the folder structure I use. This one shows the files for the
 
 ###:octicons-checklist-24: Step 1: Add Swiss Army Knife Card to your installation
 **:octicons-check-circle-16: Step 1a:**
-Put the contents of the `/dist` folder of the card into the community (`HACS`) folder.
+Download the zip release file onto your computer and unzip!
+
+**:octicons-check-circle-16: Step 1b:**
+Create the `swiss-army-knife-card` folder in the `www/community` folder.
+
+Put the contents of the `/dist` folder of the card into that folder.
 
 ```
 www/
 .
 ├─ community/
 │  └─ swiss-army-knife-card/
-│     ├─ swiss-army-knife-card.min.js
+│     ├─ swiss-army-knife-card.js
 │     ├─ SVGInjector.min.js       # Temporary hack
 │     ├─ sak_templates.yaml       # System templates with..
 │     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
 │     └─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
 ```
 
-**:octicons-check-circle-16: Step 1b:**
+**:octicons-check-circle-16: Step 1c:**
 Add the card to the `resources.yaml` file.
 
 ```yaml title="resources.yaml"
-- url: /hacsfiles/swiss-army-knife-card/swiss-army-knife-card.min.js
+- url: /hacsfiles/swiss-army-knife-card/swiss-army-knife-card.js
   type: module
 ```
 The `resources.yaml` file should be included in your `configuration.yaml` file. I assume that that is already in place if you're using custom cards.
@@ -152,13 +157,29 @@ lovelace:
 ```
 !!! Warning "I have a YAML only configuration. Pleas adjust to your own configuration"
 
+###:octicons-checklist-24: Step 2: Create folder structure for templates and definitions
+
+Create the `sak_templates` folder in the `lovelace` folder and add all the folders and (empty) files.
+
+```yaml 
+lovelace/
+.
+├─ sak_templates/
+│  ├─ sak_templates.yaml
+│  ├─ definitions/
+│  │  ├─ user-svg-definitions.yaml
+│  │  └─ user-css-definitions.yaml
+│  └─ templates/
+│     └─<templates>.yaml
+```
+
 ###:octicons-checklist-24: Step 2: Add Swiss Army Knife templates
 The second step is to add the `sak_templates`. These are mandatory.
 
 **:octicons-check-circle-16: Step 2a:**
 Add the SAK templates to the `sak_templates` folder.
 
-Create the `sak_templates` folder in the `lovelace` folder and add all the folders and files.
+Create the `sak_templates` folder in the `lovelace` folder and add all the folders and files. The files are in the `ha-config` folder.
 
 ```yaml 
 lovelace/
@@ -222,7 +243,7 @@ Add the decluttering templates for SAK to your installation.
 
 ###:octicons-checklist-24: Step 2: Add themes
 
-Place the two themes into your `themes` folder.
+Place the supplied themes (`ha-config/lovelace/themes` folder) into your `themes` folder.
 If you use a wildcard include in your `configuration.yaml`, then you don't have to do anything anymore:
 ```yaml title="configuration.yaml"
 frontend:
@@ -233,6 +254,7 @@ If you use explicit includes, include the themes manually:
 ```yaml
 !include nm-01-gonsboro.yaml
 !include nm-03-dark-steelblue.yaml
+!include ...
 ```
 
 ###:octicons-checklist-24: Step 3: Add SAK examples dashboard
@@ -324,6 +346,8 @@ views:
 
 !!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"
     You don't have to switch to the `gonsboro` or `dark steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
+
+!!! Success "The views with '-m3' suffix in their name require a Material 3 Theme to be selected for Home Assistant"
 
 **:octicons-check-circle-16: Step 3c:**
 Restart Home Assistant to have the dashboard installed
