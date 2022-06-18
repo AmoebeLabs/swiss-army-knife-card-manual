@@ -10,6 +10,8 @@ tags:
 ![AmoebeLabs Swiss Army Knife Custom Card Example 6 - Weather on SVG background]:
 
 ##:sak-sak-logo: Visualization
+!!! Note "There is also a variant with '-m3' in the filename. This one uses a Material 3 theme for its colors"
+    
 Let's do something different and use the weather for a nice view :smile:
 
 This view is made with the aid of Affinity Designer. The 'balls' background is created with this tool and exported as an SVG file.
