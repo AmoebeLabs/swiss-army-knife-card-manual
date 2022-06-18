@@ -3,14 +3,14 @@
 # - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.3.0
 
 # Project information
-site_name: Swiss Army Knife custom card for Home Assistant
+site_name: Swiss Army Knife Card for Home Assistant
 site_url: https://swiss-army-knife-card-manual.amoebelabs.com/
 site_author: Marco
 site_description: >-
-  The versatile custom Swiss Army Knife card for Home Assistant allows you to create your unique visualization using several graphical tools and styling options.
+  The versatile custom Swiss Army Knife Card for Home Assistant allows you to create your unique visualization using several graphical tools and styling options.
 
 # Repository
-repo_name: amoebelabs/swiss-army-knife-card-manual
+repo_name: Swiss Army Knife Card Manual #amoebelabs/swiss-army-knife-card-manual
 repo_url: https://github.com/amoebelabs/swiss-army-knife-card-manual
 edit_uri: ""
 
