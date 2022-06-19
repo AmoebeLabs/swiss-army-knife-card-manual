@@ -16,8 +16,7 @@ _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 _Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
 ##:sak-sak-logo: Visualization
-!!! Note "There is also a variant with '-ani' in the filename. This one shows some animations in the second card"
-    Probably not very useful, but it does show some animation examples.
+
     
 This visualization shows some multi entity wide cards instead of the abundant square cards.  
 All cards have an aspect ratio of 6/1.
