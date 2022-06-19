@@ -22,22 +22,26 @@ The installation can be done in two ways:
 
 On top of that you can install the examples using an extra dashboard.
 
+!!! Important "I'm using a full YAML configuration, so there might be some flaws in the installation for storage based configurations"
+    Check Home Assistant - Multiple Dashboards (https://www.home-assistant.io/dashboards/dashboards/) for more info about mixing storage mode and YAML mode dashboards.
+    
 ##:sak-sak-logo: Hybrid install using HACS with additional manual steps
 
 [![hacs][hacs-badge]][hacs-url]
-[![hacs][beta_badge]][hacs-url]
-<br>By the time this card is released, it will become available in HACS.
+[![hacs][rc_badge]][hacs-url]
+<br>This card is available in HACS as of June 19th, 2022
 
 HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
 The installation of the Examples Dashboard, which requires example views and SAK templates along some decluttering templates can't be automated using HACS. It requires some manual steps.
 
+Follow the HACS messages to install the card and add this card to your `resources.yaml` file if not using storage but YAML mode!
 
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
-##:sak-sak-logo: Full Manual install (for v1.0.0-rc.1, June/July 2022)
+##:sak-sak-logo: Full Manual install (for v1.0.0-rc.1, June 19th, 2022)
 
-This public release candidate contains some fixes from Beta2, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
+This public release candidate contains some fixes from the beta's, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
 
 This release candidate version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
@@ -374,6 +378,7 @@ If you want to start building right away, head over to the [tools and toolsets][
 [hacs-url]: https://github.com/hacs/integration
 [hacs-badge]: https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge&logo=homeassistantcommunitystore
 [beta_badge]: https://img.shields.io/badge/State-Beta-orange?style=for-the-badge&logo=homeassistantcommunitystore
+[rc_badge]: https://img.shields.io/badge/State-Release%20Candidate-orange?style=for-the-badge&logo=homeassistantcommunitystore
 [release-badge]: https://img.shields.io/github/v/release/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&include_prereleases&logo=github
 [downloads-badge]: https://img.shields.io/github/downloads/AmoebeLabs/swiss-army-knife-card/total?style=for-the-badge&logo=github
 [lgtm-grade-badge]: https://img.shields.io/lgtm/grade/javascript/github/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&logo=lgtm
