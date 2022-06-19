@@ -1,5 +1,5 @@
 [![hacs][hacs-badge]][hacs-url]
-[![hacs][beta_badge]][hacs-url]
+[![hacs][rc_badge]][hacs-url]
 <br>[![release][release-badge]][release-url]
 [![downloads][downloads-badge]][release-url]
 [![LGTM Grade][lgtm-grade-badge]][lgtm-url]
@@ -18,12 +18,9 @@ What you can make is only limited by the 17 provided tools and your own imaginat
 
 ## ![](docs/assets/images/swiss-army-knife24.png) __Development status as of June 2022:__
 
-Due to a lot of work to handle my sister's estate, I was unable to do any work on this card the past couple of months. This month work has resumed to release the card as a Release Candidate!
+The card has been released on June 19th, 2022 to the public as a release candidate!
 
-- Currently in **closed** BETA with around 40 users.
-- Next step will be a **public** Release Candidate (v1.0.0-rc.1), announced here and on the Home Assistant community forum.
-- Depending on the issues, more RC's ((v1.0.0-rc.x) will be released.
-- And if that goes well, I will release version 1.x.y after about a month 🚀.
+Depending on the issues, more RC's ((v1.0.0-rc.x) will be released, and if that goes well, I will release version 1.x.y after about a month 🚀.
 
 <a href="https://www.buymeacoffee.com/amoebelabs" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
@@ -61,7 +58,7 @@ It has 22 light and dark [example themes](https://material3-themes-manual.amoebe
 
 [hacs-url]: https://github.com/hacs/integration
 [hacs-badge]: https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge&logo=homeassistantcommunitystore
-[beta_badge]: https://img.shields.io/badge/State-Beta-orange?style=for-the-badge&logo=homeassistantcommunitystore
+[rc_badge]: https://img.shields.io/badge/State-Release%20Candidate-orange?style=for-the-badge&logo=homeassistantcommunitystore
 [release-badge]: https://img.shields.io/github/v/release/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&include_prereleases&logo=github
 [downloads-badge]: https://img.shields.io/github/downloads/AmoebeLabs/swiss-army-knife-card/total?style=for-the-badge&logo=github
 [lgtm-grade-badge]: https://img.shields.io/lgtm/grade/javascript/github/AmoebeLabs/swiss-army-knife-card?style=for-the-badge&logo=lgtm
