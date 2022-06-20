@@ -24,12 +24,15 @@ On top of that you can install the examples using an extra dashboard.
 
 !!! Important "I'm using a full YAML configuration, so there might be some flaws in the installation for storage based configurations"
     Check Home Assistant - Multiple Dashboards (https://www.home-assistant.io/dashboards/dashboards/) for more info about mixing storage mode and YAML mode dashboards.
+
+
+This public release candidate contains some fixes from the beta's, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
     
-##:sak-sak-logo: Hybrid install using HACS with additional manual steps
+##:sak-sak-logo: Hybrid install using HACS Default
 
 [![hacs][hacs-badge]][hacs-url]
 [![hacs][rc_badge]][hacs-url]
-<br>This card is available in HACS as of June 19th, 2022
+<br>This card is available in HACS as of June 19th, 2022.
 
 HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
@@ -39,10 +42,18 @@ Follow the HACS messages to install the card and add this card to your `resource
 
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
+##:sak-sak-logo: Hybrid install using HACS Custom
+The plugin might be not directly available as a HACS Default plugin.
+
+In the mean time, you can add this card as a custom repository:
+
+Add https://github.com/AmoebeLabs/swiss-army-knife-card as a plugin, and you should be able to install the card using HACS!
+
+Follow the HACS messages to install the card and add this card to your `resources.yaml` file if not using storage but YAML mode!
+
+!!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
+
 ##:sak-sak-logo: Full Manual install (for v1.0.0-rc.1, June 19th, 2022)
-
-This public release candidate contains some fixes from the beta's, some breaking changes (configuration), extra examples, and - for some of the examples - the introduction / integration with HAM3: [The Material 3 themes for Home Assistant!][ha-m3-themes-url]
-
 This release candidate version expects the files to be using the following directory structure with their files.
 If your structure differs, put the files into YOUR location, and don't forget to adjust the `!include` statements.
 
@@ -74,15 +85,15 @@ Below, as reference the folder structure I use. This one shows the files for the
       │  ├─ decluttering_templates.yaml
       │  └─ (etc)
       │
-      ├─ sak_templates/
-      │  ├─ sak_templates.yaml
-      │  ├─ definitions/
-      │  │  └─ user-css-definitions.yaml
-      │  └─ templates/
-      │     └─<templates>.yaml
-      │
       ├─ resources
       │  └─ resources.yaml
+      │
+      ├─ sak_templates/
+      │  ├─ definitions/
+      │  │  └─ user-css-definitions.yaml
+      │  ├─ sak_templates.yaml
+      │  └─ templates/
+      │     └─<templates>.yaml
       │
       ├─ views/
       │  ├─ view-sake1.yml
@@ -96,24 +107,27 @@ Below, as reference the folder structure I use. This one shows the files for the
     .
     ├─ community/
     │  └─ swiss-army-knife-card/
-    │     ├─ swiss-army-knife-card.js
-    │     ├─ SVGInjector.min.js       # Temporary hack
-    │     ├─ sak_templates.yaml       # System templates with..
-    │     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
-    │     └─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
+    │     ├─ sak_templates.yaml           # System templates with..
+    │     ├─ sak-css-definitions.yml      # ..SAK defined CSS definitions for each tool
+    │     ├─ sak-svg-definitions.yml      # ..SAK defined SVG definitions like filters
+    │     ├─ SVGInjector.min.js           # Modified SVGInjector
+    │     ├─ SVGInjector.min.js.gz        # Zipped version (done by HACS)
+    │     ├─ swiss-army-knife-card.js     # SAK card (minified)
+    │     └─ swiss-army-knife-card.js.gz  # Zipped version (done by HACS)
     │
     ├─ images/
-       ├─ backgrounds/
-       │  └─ balls-background-1.svg   # Used by view-sake6.yaml
-       │
-       ├─ weather/                    # Used by all weather-type usersvg tools
-       │  ├─ *-day.svg
-       │  └─ *-night.svg
-       │
-       ├─ airvisual/                  # Used by Airvisual face display usersvg tools
+       ├─ airvisual/                      # Used by Airvisual face display usersvg tools
        │  ├─ ic-face-1.svg               
        │  ├─ (...)
        │  └─ ic-face-6.svg
+       │
+       ├─ backgrounds/
+       │  └─ balls-background-1.svg       # Used by view-sake6.yaml
+       │
+       ├─ weather/                        # Used by all weather-type usersvg tools
+       │  ├─ *-day.svg
+       │  └─ *-night.svg
+       │
     ```
 
 === "Themes folder"
@@ -139,11 +153,11 @@ www/
 .
 ├─ community/
 │  └─ swiss-army-knife-card/
-│     ├─ swiss-army-knife-card.js
-│     ├─ SVGInjector.min.js       # Temporary hack
 │     ├─ sak_templates.yaml       # System templates with..
 │     ├─ sak-css-definitions.yml  # ..SAK defined CSS definitions for each tool
-│     └─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
+│     ├─ sak-svg-definitions.yml  # ..SAK defined SVG definitions like filters
+│     ├─ SVGInjector.min.js       # Modified SVGInjector
+│     └─ swiss-army-knife-card.js
 ```
 
 **:octicons-check-circle-16: Step 1c:**
@@ -160,8 +174,11 @@ lovelace:
   resources: !include lovelace/resources/resources.yaml
 ```
 !!! Warning "I have a YAML only configuration. Pleas adjust to your own configuration"
+    If you use storage mode, add the resource using the UI.
 
-###:octicons-checklist-24: Step 2: Create folder structure for templates and definitions
+###:octicons-checklist-24: Step 2: Create folders for templates and definitions
+
+**:octicons-check-circle-16: Step 2a:**
 
 Create the `sak_templates` folder in the `lovelace` folder and add all the folders and (empty) files.
 
@@ -169,21 +186,17 @@ Create the `sak_templates` folder in the `lovelace` folder and add all the folde
 lovelace/
 .
 ├─ sak_templates/
-│  ├─ sak_templates.yaml
 │  ├─ definitions/
 │  │  ├─ user-svg-definitions.yaml
 │  │  └─ user-css-definitions.yaml
+│  ├─ sak_templates.yaml
 │  └─ templates/
 │     └─<templates>.yaml
 ```
 
-###:octicons-checklist-24: Step 2: Add Swiss Army Knife templates
-The second step is to add the `sak_templates`. These are mandatory.
+**:octicons-check-circle-16: Step 2b:**
 
-**:octicons-check-circle-16: Step 2a:**
-Add the SAK templates to the `sak_templates` folder.
-
-Create the `sak_templates` folder in the `lovelace` folder and add all the folders and files. The files are in the `ha-config` folder.
+Add the SAK templates in the `ha-config` folder into the `sak_templates` folder.
 
 ```yaml 
 lovelace/
@@ -197,7 +210,7 @@ lovelace/
 │     └─<templates>.yaml
 ```
 
-**:octicons-check-circle-16: Step 2b:**
+**:octicons-check-circle-16: Step 2c:**
 Include sak_templates to `ui-lovelace.yaml`
 
 ```yaml title="ui-lovelace.yaml"
@@ -270,6 +283,11 @@ Add the external images used by the views to your configuration
 www/
 .
 └─ images/
+   ├─ airvisual/                  # Used by Airvisual face display usersvg tools
+   │  ├─ ic-face-1.svg               
+   │  ├─ (...)
+   │  └─ ic-face-6.svg
+   │
    ├─ backgrounds/
    │  └─ balls-background-1.svg   # Used by view-sake6.yaml
    │
@@ -277,10 +295,6 @@ www/
    │  ├─ *-day.svg
    │  └─ *-night.svg
    │
-   ├─ airvisual/                  # Used by Airvisual face display usersvg tools
-   │  ├─ ic-face-1.svg               
-   │  ├─ (...)
-   │  └─ ic-face-6.svg
 ```
 
 **:octicons-check-circle-16: Step 3b:**
@@ -352,6 +366,7 @@ views:
     You don't have to switch to the `gonsboro` or `dark steelblue` theme for your installation to see the examples "as the creator meant them to be seen", so your existing views stay the same.
 
 !!! Success "The views with '-m3' suffix in their name require a Material 3 Theme to be selected for Home Assistant"
+    All the Material 3 themes are included in the `ha-config` folder on Github!
 
 **:octicons-check-circle-16: Step 3c:**
 Restart Home Assistant to have the dashboard installed
