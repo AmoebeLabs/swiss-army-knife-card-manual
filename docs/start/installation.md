@@ -32,7 +32,10 @@ This public release candidate contains some fixes from the beta's, some breaking
 
 [![hacs][hacs-badge]][hacs-url]
 [![hacs][rc_badge]][hacs-url]
-<br>This card is available in HACS as of June 19th, 2022.
+<br>This card is merged in HACS as of June 19th, 2022. But it might not be directly available!
+
+!!! Important "According to https://hacs-repositories.web.app/, the merged repository is not yet available!"
+    But you can use the HACS custom install. See next paragraph.
 
 HACS takes care of manual step 1. So if you installed using HACS, continue with manual step 2.
 
@@ -43,9 +46,7 @@ Follow the HACS messages to install the card and add this card to your `resource
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
 ##:sak-sak-logo: Hybrid install using HACS Custom
-The plugin might be not directly available as a HACS Default plugin.
-
-In the mean time, you can add this card as a custom repository:
+You can install this card using the add custom repository option in HACS as long as the plugin is not yet available.
 
 Add https://github.com/AmoebeLabs/swiss-army-knife-card as a plugin, and you should be able to install the card using HACS!
 
