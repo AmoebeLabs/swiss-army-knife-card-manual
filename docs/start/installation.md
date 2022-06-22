@@ -10,6 +10,9 @@ tags:
 ![LGTM Alerts][lgtm-alerts-badge]
 
 # Installation
+!!! Tip "If you think the installation steps and description can be made better or simplified, please let me know!"
+    It may benefit other users.
+
 [![release][release-badge]][release-url]
 [![downloads][downloads-badge]][release-url]
 
@@ -97,9 +100,10 @@ Below, as reference the folder structure I use. This one shows the files for the
       │     └─<templates>.yaml
       │
       ├─ views/
-      │  ├─ view-sake1.yml
-      │  ├─ (...)
-      │  └─ view-sake12.yml
+      │  └─sak-example-views/
+      │    ├─ view-sake1.yml
+      │    ├─ (...)
+      │    └─ view-sake12-m3.yml
       ```
       As you can see, I use separate folders for my configuration. The `sak_templates` folder is included from the `ui-lovelace.yaml` file.
 === "www folder"
@@ -181,7 +185,9 @@ lovelace:
 
 **:octicons-check-circle-16: Step 2a:**
 
-Create the `sak_templates` folder in the `lovelace` folder and add all the folders and (empty) files.
+Copy the `sak_templates` folder from the `ha-config\lovelace\` folder into your `lovelace` folder.
+
+After that you should have the following folders and files (the `user-svg-definitions.yaml` might be absent, as this one is empty!):
 
 ```yaml 
 lovelace/
@@ -196,22 +202,6 @@ lovelace/
 ```
 
 **:octicons-check-circle-16: Step 2b:**
-
-Add the SAK templates in the `ha-config` folder into the `sak_templates` folder.
-
-```yaml 
-lovelace/
-.
-├─ sak_templates/
-│  ├─ sak_templates.yaml
-│  ├─ definitions/
-│  │  ├─ user-svg-definitions.yaml
-│  │  └─ user-css-definitions.yaml
-│  └─ templates/
-│     └─<templates>.yaml
-```
-
-**:octicons-check-circle-16: Step 2c:**
 Include sak_templates to `ui-lovelace.yaml`
 
 ```yaml title="ui-lovelace.yaml"
@@ -276,7 +266,7 @@ If you use explicit includes, include the themes manually:
 ```
 
 ###:octicons-checklist-24: Step 3: Add SAK examples dashboard
-The Swiss Army Knife examples have their own dashboard. This way using them doesn't interfere with you running installation. You can access the examples from the side panel.
+The Swiss Army Knife examples have their own dashboard. This way using them doesn't interfere with you running installation. The YAML dashboard can be used both in YAML and Storage mode. You can access the examples from the side panel.
 
 **:octicons-check-circle-16: Step 3a:**
 Add the external images used by the views to your configuration
@@ -301,27 +291,44 @@ www/
 **:octicons-check-circle-16: Step 3b:**
 Add `sak-examples-dashboard.yaml` in the root folder and include it into your `configuration.yaml`:
 
-```yaml title="configuration.yaml"
-lovelace:
-  mode: yaml
-  resources: !include lovelace/resources/resources.yaml
-
-  dashboards:
-    sak-examples:
+=== "YAML Mode"
+    ```yaml title="configuration.yaml"
+    lovelace:
       mode: yaml
-      filename: sak-examples-dashboard.yaml
-      title: Swiss Army Knife Examples
-      icon: mdi:hospital-box
-      show_in_sidebar: true
-```
+      resources: !include lovelace/resources/resources.yaml
 
-The dashboard contains the 12 example views and one view (sake99) for showing the definition of a Material 3 theme:
+      dashboards:
+        sak-examples:
+          mode: yaml
+          filename: sak-examples-dashboard.yaml
+          title: Swiss Army Knife Examples
+          icon: mdi:hospital-box
+          show_in_sidebar: true
+    ```
+=== "Storage Mode"
+    If you are using storage mode, your configuration should look like this [according to Home Assistant documentation about "Multiple Dashboards"][ha-dashboards-docs-url].
+    ```yaml title="Adding more dashboards with YAML"
+    lovelace:
+      mode: storage
+
+    # Add yaml dashboards
+      dashboards:
+        sak-examples:
+          mode: yaml
+          filename: sak-examples-dashboard.yaml
+          title: Swiss Army Knife Examples
+          icon: mdi:hospital-box
+          show_in_sidebar: true
+    ```
+
+The `sak-example-dashboard` contains the 12 example views and one view (sake99) for showing the definition of a Material 3 theme:
 ```yaml title="sak-examples-dashboard.yaml"
 #################################################################
 #                                                               # 
-#             Swiss Army Knife examples dashboard               #
+#             Swiss Army Knife examples dashboard (RC)          #
 #                                                               #
-#             Created: 2021.12.05                               #
+#             Created: 2021.12.05 (up to Beta 3)                #
+#             Created: 2022.06.05 (from RC 1 onwards)           #
 #                                                               #
 #################################################################
   
@@ -338,7 +345,7 @@ sak_sys_templates:
 
 # The user templates are created by the user, and won't be updated 
 # with a new release. If changes are required, then the user has to
-# upate the template configuration files.
+# update the template configuration files.
 sak_user_templates:
   !include lovelace/sak_templates/sak_templates.yaml
 
@@ -346,21 +353,24 @@ title: Swiss Army Knife Examples
 views:
 
   # Swiss Army Knife example views...
-  - !include lovelace/views/view-sake1.yml
-  - !include lovelace/views/view-sake1-m3.yml
-  - !include lovelace/views/view-sake2.yml
-  - !include lovelace/views/view-sake3.yml
-  - !include lovelace/views/view-sake4.yml
-  - !include lovelace/views/view-sake5.yml
-  - !include lovelace/views/view-sake6.yml
-  - !include lovelace/views/view-sake6-m3.yml
-  - !include lovelace/views/view-sake7.yml
-  - !include lovelace/views/view-sake8.yml
-  - !include lovelace/views/view-sake9.yml
-  - !include lovelace/views/view-sake10.yml
-  - !include lovelace/views/view-sake11-m3.yml
-  - !include lovelace/views/view-sake12-m3.yml
-  - !include lovelace/views/view-sake99-m3.yml
+  #
+  # Each example is manually included, so you can select just a
+  # few for testing and integration...
+  - !include lovelace/views/sak-example-views/view-sake1.yml
+  - !include lovelace/views/sak-example-views/view-sake1-m3.yml
+  - !include lovelace/views/sak-example-views/view-sake2.yml
+  - !include lovelace/views/sak-example-views/view-sake3.yml
+  - !include lovelace/views/sak-example-views/view-sake4.yml
+  - !include lovelace/views/sak-example-views/view-sake5.yml
+  - !include lovelace/views/sak-example-views/view-sake6.yml
+  - !include lovelace/views/sak-example-views/view-sake6-m3.yml
+  - !include lovelace/views/sak-example-views/view-sake7.yml
+  - !include lovelace/views/sak-example-views/view-sake8.yml
+  - !include lovelace/views/sak-example-views/view-sake9.yml
+  - !include lovelace/views/sak-example-views/view-sake10.yml
+  - !include lovelace/views/sak-example-views/view-sake11-m3.yml
+  - !include lovelace/views/sak-example-views/view-sake12-m3.yml
+  - !include lovelace/views/sak-example-views/view-sake99-m3.yml
 ```
 
 !!! Warning "The views themselves reference the `gonsboro` and `dark steelblue` themes, you can keep your existing theme"
@@ -415,3 +425,4 @@ If you want to start building right away, head over to the [tools and toolsets][
 <!-- External links -->
 [ha-m3-themes-url]: https://material3-themes-manual.amoebelabs.com/examples/introduction/
 [release-url]: https://github.com/AmoebeLabs/swiss-army-knife-card/releases
+[ha-dashboards-docs-url]: https://www.home-assistant.io/dashboards/dashboards/#adding-more-dashboards-with-yaml
