@@ -46,7 +46,7 @@ Follow the HACS messages to install the card and add this card to your `resource
 !!! Note "As the Swiss Army Knife custom card needs its own folders and template files, the installation can't be fully automated..."
 
 ##:sak-sak-logo: Hybrid install using HACS Custom
-You can install this card using the add custom repository option in HACS as long as the plugin is not yet available.
+You can install this card using the add custom repository option in HACS while the plugin is not yet available.
 
 Add https://github.com/AmoebeLabs/swiss-army-knife-card as a plugin, and you should be able to install the card using HACS!
 

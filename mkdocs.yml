@@ -10,8 +10,8 @@ site_description: >-
   The versatile custom Swiss Army Knife Card for Home Assistant allows you to create your unique visualization using several graphical tools and styling options.
 
 # Repository
-repo_name: Swiss Army Knife Card Manual #amoebelabs/swiss-army-knife-card-manual
-repo_url: https://github.com/amoebelabs/swiss-army-knife-card-manual
+repo_name: Swiss Army Knife Card
+repo_url: https://github.com/amoebelabs/swiss-army-knife-card
 edit_uri: ""
 
 copyright: Copyright &copy; 2020 - 2022 Marco @AmoebeLabs
@@ -39,6 +39,7 @@ plugins:
       minify_html: true
   # Redirect pages pages that I want to rename etc. without loosing Google / Bing indexing...
   # And users getting a 404 while clicking on an old link of course!
+  # This is using a HTML refresh with 0 seconds and contains a "no-index" for the old page.
   - redirects:
       redirect_maps:
         'start/introduction.md': 'start/preface.md'
