@@ -11,15 +11,34 @@ tags:
 
 A single card displaying data from Airvisual, the current weather and a 5 day weather forecast.
 
-![AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]
+Topcard showing AirVisual data with some weather data:
+![AmoebeLabs Swiss Army Knife Custom Card Example 1a - AirVisual and Weather forecast]
+
+Bottom card showing weather and weather forecast:
+![AmoebeLabs Swiss Army Knife Custom Card Example 1b - AirVisual and Weather forecast]
 
 ##:sak-sak-logo: Visualization
+
+###:sak-sak-logo: AirVisual
+The AirVisual card shows two blocks:
+
+1. The left part shows the AirVisual data with 24 hours of  history
+    - The AQI 'face', an external SVG
+    - The AQI value with interpretation (good, etc.)
+    - The AQI main pollutant.
+    - 24 hour history of the AQI value
+    
+2. The right part shows weather data.
+    - The weathertype is displayed using an external *animated* SVG
+    - And below that, the outside temperature, humidity, pressure and wind speed.
+    
+###:sak-sak-logo: Weather forecast
 This visualization is divided into three major blocks:
 
 1. The top part shows the weathertype, temperature, humidity and AQI value.
 
     - The weathertype is displayed using an external *animated* SVG
-    - Next are three `segmented arc` tools with dedicated colorstops and the state value and icon inside. The AQI icon is state dependant.
+    - Next are three `segmented arc` tools with dedicated colorstops and the state value and icon inside. The AQI icon is state dependent.
 
 2. The second / middle block shows pressure, wind and wind direction and sunset and sunrise
 
@@ -129,4 +148,5 @@ This view shows the dutch translation for "Partly Cloudy --> Gedeeltelijk bewolk
 
 <!-- Image references -->
 
-[AmoebeLabs Swiss Army Knife Custom Card Example 1 - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1b.png "Swiss Army Knife Example 1 - AirVisual and Weather forecast"
+[AmoebeLabs Swiss Army Knife Custom Card Example 1a - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1a.png "Swiss Army Knife Example 1a - AirVisual and Weather forecast"
+[AmoebeLabs Swiss Army Knife Custom Card Example 1b - AirVisual and Weather forecast]: ../assets/screenshots/sak-example-1b.png "Swiss Army Knife Example 1b - AirVisual and Weather forecast"
