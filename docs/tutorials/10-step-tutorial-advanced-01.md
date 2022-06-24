@@ -2,6 +2,8 @@
 template: main.html
 title: "Tutorial 4: Use template from Tutorial 3"
 description: In this 10 step tutorial, you learn how to make toolset template based on the 2nd tutorial.
+hide:
+  toc
 tags:
   - Tutorials
   - 10 Steps or less
@@ -13,8 +15,15 @@ tags:
 In this tutorial, we are going to make the following wide card:
 ![10-step-tutorial-advanced-01-step-10]
 
-##:sak-sak-logo: Prerequisites
+Such a card is part of [Example 12][example 12].
 
+But as opposed to the example, we will create a toolset template for the 4 segmented arcs with icon and state displayed. So the result of the tutorial is in fact better than the original! And much shorter due to the use of templates.
+
+##:sak-sak-logo: Prerequisites
+This tutorial requires:
+
+- An active Material 3 theme
+ 
 ##:sak-sak-logo: Step 1: Create the yml view file
 <div class="grid-container-1" markdown>
 
@@ -27,7 +36,9 @@ In this tutorial, we are going to make the following wide card:
 </div>
 </div>
 
-##:sak-sak-logo: Step 2: define the view basics, card, entities and layout structure
+##:sak-sak-logo: Step 2: Define the view basics, card, entities and layout
+We are going to use 5 entities from the System Monitor integration.
+
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
@@ -75,6 +86,13 @@ cards:
       
 ##:sak-sak-logo: Step 3: Header, first column
 
+The header is divided into three colomns: the half circle with the icon, then the name and the state, and in the last header column the vertical line.
+
+Define the first column of the header:
+
+- half a circle, which is in fact a full circle but clipped by the card due to our positioning the circles center at the card's edge.
+- a fixed icon
+
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
@@ -95,13 +113,13 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 position:
                   cx: 0
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: circle
                     position:
                       cx: 50
@@ -112,13 +130,13 @@ cards:
                         stroke: none
                         fill: var(--theme-sys-palette-primary30)
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 position:
                   cx: 30
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: icon
                     position:
                       cx: 50
@@ -159,21 +177,21 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-name
                 position:
                   cx: 120
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: name
                     position:
                       cx: 50
@@ -186,7 +204,7 @@ cards:
                         font-weight: 700
                         opacity: 1
 
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: state
                     position:
                       cx: 50
@@ -229,25 +247,25 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-name
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: line1
                 position:
                   cx: 200
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: line
                     position:
                       cx: 50
@@ -269,10 +287,14 @@ cards:
 
 
 ##:sak-sak-logo: Step 6: Add segmented arc as part of the segarc, icon, state toolset
+We design the toolset with a `segarc`, `icon` and `state` in this card before converting it to a toolset template.
+
+The `segarc` consists of 4 segments, each having a slightly different primary Material 3 theme color.
+
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml linenums="1" hl_lines="40-72"
+```yaml linenums="1" hl_lines="39-71"
 title: TUT-AD-01
 path: tut-ad-01
 panel: false
@@ -289,30 +311,29 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-name
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: line1
                 # Removed for brevity!
 
-
-              # ======================================================
+              # ================================================================
               - toolset: colomn-cpu
                 position:
                   cx: 260
                   cy: 50
                 tools:
-                # -------------------------------------------------- 
+                # -------------------------------------------------------------- 
                 - type: 'segarc'
                   id: 0
                   position:
@@ -357,7 +378,7 @@ cards:
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml linenums="1" hl_lines="73-80"
+```yaml linenums="1" hl_lines="72-79"
 title: TUT-AD-01
 path: tut-ad-01
 panel: false
@@ -374,30 +395,29 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-name
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: line1
                 # Removed for brevity!
 
-
-              # ======================================================
+              # ================================================================
               - toolset: colomn-cpu
                 position:
                   cx: 260
                   cy: 50
                 tools:
-                # -------------------------------------------------- 
+                # --------------------------------------------------------------
                 - type: 'segarc'
                   id: 0
                   position:
@@ -430,7 +450,7 @@ cards:
                     background:
                       fill: var(--theme-sys-elevation-surface-neutral4)
                       opacity: 1
-                # --------------------------------------------------
+                # --------------------------------------------------------------
                 - type: icon
                   position:
                     cx: 50
@@ -447,10 +467,12 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 8: Add state as part of the segarc, icon, state toolset
+And the last part of the toolset: the `state`. The `uom` is shown below the `state` value.
+
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml linenums="1" hl_lines="81-97"
+```yaml linenums="1" hl_lines="80-96"
 title: TUT-AD-01
 path: tut-ad-01
 panel: false
@@ -467,30 +489,29 @@ cards:
           aspectratio: 6/1
           layout:
             toolsets:
-              # ======================================================
+              # ================================================================
               - toolset: half-circle
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-name
                 # Removed for brevity!
 
-              # ======================================================
+              # ================================================================
               - toolset: line1
                 # Removed for brevity!
 
-
-              # ======================================================
+              # ================================================================
               - toolset: colomn-cpu
                 position:
                   cx: 260
                   cy: 50
                 tools:
-                # -------------------------------------------------- 
+                # --------------------------------------------------------------
                 - type: 'segarc'
                   id: 0
                   position:
@@ -523,7 +544,7 @@ cards:
                     background:
                       fill: var(--theme-sys-elevation-surface-neutral4)
                       opacity: 1
-                # --------------------------------------------------
+                # --------------------------------------------------------------
                 - type: icon
                   position:
                     cx: 50
@@ -531,7 +552,7 @@ cards:
                     align: center
                     icon_size: 25
                   entity_index: 0
-                # --------------------------------------------------
+                # --------------------------------------------------------------
                 - type: state
                   position:
                     cx: 50
@@ -556,7 +577,7 @@ cards:
 </div>
 </div>
 
-##:sak-sak-logo: Step 9: create template
+##:sak-sak-logo: Step 9: Create template for segarc/icon/state toolset
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
@@ -565,32 +586,34 @@ toolset_tutorial_advanced_01:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
+      - var_segarc_scale_min: 0
+      - var_segarc_scale_max: 100
   toolset:
     toolset: tutorial-advanced-01
     position:
-        cx: '[[cx]]'
-        cy: '[[cy]]'
+        cx: '[[var_toolset_position_cx]]'
+        cy: '[[var_toolset_position_cy]]'
     tools:
-      # --------------------------------------------------
+      # ------------------------------------------------------------------------
       - type: icon
         position:
           cx: 50
           cy: 30
           align: center
           icon_size: 25
-        entity_index: '[[entity]]'
+        entity_index: '[[var_entity_index]]'
 
-      # --------------------------------------------------
+      # ------------------------------------------------------------------------
       - type: state
         position:
           cx: 50
           cy: 55
-        entity_index: '[[entity]]'
+        entity_index: '[[var_entity_index]]'
         show:
-          uom: bottom
+          uom: bottom                               # Show UOM below state value
         styles:
           state:
             text-anchor: middle
@@ -601,33 +624,33 @@ toolset_tutorial_advanced_01:
             fill: var(--primary-text-color)
             font-weight: 700
 
-      # -------------------------------------------------- 
+      # ------------------------------------------------------------------------
       - type: 'segarc'
         id: 0
         position:
           cx: 50
           cy: 50
-          start_angle: 0
-          end_angle: 360
+          start_angle: 0                            # Arc clockwise from
+          end_angle: 360                            # 0 to 360 degrees
           width: 6
-          radius: 40
-        entity_index: '[[entity]]'
+          radius: 40                                # Radius on 100x100 grid
+        entity_index: '[[var_entity_index]]'
         scale:
-          min: 0
-          max: 100
+          min: '[[var_segarc_scale_min]]'
+          max: '[[var_segarc_scale_max]]'
           width: 6
           offset: 12
         show:
-          scale: false
+          scale: false                              # Disable scale of segarc
           style: 'colorlist'
         segments:
           colorlist:
-            gap: 1
+            gap: 1                                  # Gap between segments
             colors:
-              - var(--theme-sys-palette-primary50)
-              - var(--theme-sys-palette-primary45)
-              - var(--theme-sys-palette-primary40)
-              - var(--theme-sys-palette-primary35)
+              - var(--theme-sys-palette-primary50)  # Use 4 system palette
+              - var(--theme-sys-palette-primary45)  # colors that adhere
+              - var(--theme-sys-palette-primary40)  # to light and dark
+              - var(--theme-sys-palette-primary35)  # theme modes!
         styles:
           foreground:
             fill: darkgrey
@@ -644,11 +667,13 @@ toolset_tutorial_advanced_01:
 
 
 
-##:sak-sak-logo: Step 10: Use template x 4
+##:sak-sak-logo: Step 10: Finalize card by using 4 of the templates
+Use the in the previous step created tools template to finalize the card. Use the templates to show the CPU, Memory, Disk and load values.
+
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml linenums="1" hl_lines="127-161"
+```yaml linenums="1" hl_lines="123-153"
 title: TUT-AD-01
 path: tut-ad-01
 panel: false
@@ -681,39 +706,17 @@ cards:
               format: relative
 
           # Define aspect ratio
-          aspectratio: 6/1
+          aspectratio: 6/1                          # Card is 600x100 grid
 
           layout:
-            styles:
-              card:
-              toolsets:
-              
             toolsets:
-              # ======================================================
-              - toolset: line1
+              # ================================================================
+              - toolset: half-circle
                 position:
-                  cx: 200
+                  cx: 0                             # Center on cards border 
                   cy: 50
                 tools:
-                  # --------------------------------------------------
-                  - type: line
-                    position:
-                      cx: 50
-                      cy: 50
-                      orientation: vertical
-                      length: 50
-                    styles:
-                      line:
-                        fill: var(--primary-text-color)
-                        opacity: 0.5
-
-              # ======================================================
-              - toolset: color1
-                position:
-                  cx: 0
-                  cy: 50
-                tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: circle
                     position:
                       cx: 50
@@ -724,13 +727,13 @@ cards:
                         stroke: none
                         fill: var(--theme-sys-palette-primary30)
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-icon
                 position:
                   cx: 30
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: icon
                     position:
                       cx: 50
@@ -743,12 +746,13 @@ cards:
                         fill: var(--primary-background-color)
                         opacity: 0.9
                     
+              # ================================================================
               - toolset: colomn-name
                 position:
                   cx: 120
                   cy: 50
                 tools:
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: name
                     position:
                       cx: 50
@@ -760,8 +764,7 @@ cards:
                         font-size: 25em
                         font-weight: 700
                         opacity: 1
-
-                  # --------------------------------------------------
+                  # ------------------------------------------------------------
                   - type: state
                     position:
                       cx: 50
@@ -775,41 +778,56 @@ cards:
                         font-size: 14em
                         font-weight: 500
 
-              # ======================================================
+              # ================================================================
+              - toolset: line1
+                position:
+                  cx: 200                           # On 1/3 of card width
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: line
+                    position:
+                      cx: 50
+                      cy: 50
+                      orientation: vertical
+                      length: 50
+                    styles:
+                      line:
+                        fill: var(--primary-text-color)
+                        opacity: 0.5
+
+              # ================================================================
               - toolset: colomn-cpu
                 template:
                   name: toolset_tutorial_advanced_01
                   variables:
-                    - entity: 0
-                    - cx: 260
-                    - cy: 50
+                    - var_toolset_position_cx: 260
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-memory
                 template:
                   name: toolset_tutorial_advanced_01
                   variables:
-                    - entity: 1
-                    - cx: 355
-                    - cy: 50
+                    - var_entity_index: 1
+                    - var_toolset_position_cx: 355
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-disk
                 template:
                   name: toolset_tutorial_advanced_01
                   variables:
-                    - entity: 2
-                    - cx: 450
-                    - cy: 50
+                    - var_entity_index: 2
+                    - var_toolset_position_cx: 450
 
-              # ======================================================
+              # ================================================================
               - toolset: colomn-load
                 template:
                   name: toolset_tutorial_advanced_01
                   variables:
-                    - entity: 3
-                    - cx: 545
-                    - cy: 50
+                    - var_entity_index: 3
+                    - var_toolset_position_cx: 545
+                    - var_segarc_scale_max: 2
+
 ```
 </div>
 
@@ -834,3 +852,5 @@ cards:
 
 <!-- Internal references -->
 [10-step-tutorial-advanced-03]: ../tutorials/10-step-tutorial-advanced-03.md
+
+[example 12]: ../examples/example-12.md
