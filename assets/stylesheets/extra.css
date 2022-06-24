@@ -66,6 +66,13 @@
     --md-accent-fg-color: var(--md-accent-fg-color--700);
   }
 
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: var(--md-code-bg-color);
+    padding: 5px;
+  }
+
   .grid-container-2 {
     display: grid;
     grid-template-columns: 67% 33%;
