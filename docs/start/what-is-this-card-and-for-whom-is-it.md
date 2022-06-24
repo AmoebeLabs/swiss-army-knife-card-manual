@@ -100,6 +100,7 @@ The answer is: it _depends!_
     Well, head over to the installation, and install the Examples Dashboard. Then integrate them using your own entities, and start learning from those examples!
     
     The examples use different strategies:
+
     - A lot of copy/paste YAML
     - Swiss Army Knife Templates
     - Decluttering Templates

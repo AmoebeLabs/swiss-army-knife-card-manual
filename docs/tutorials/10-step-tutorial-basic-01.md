@@ -17,7 +17,7 @@ In this tutorial, we are going to make the following square card:![10-step-tutor
 
 <div class="grid-item" markdown>
 - Create `view-tutorial-basic-01.yml` in the `lovelace/views/sak-tutorial-views/` folder.
-- Add it to the `sak-tutorials-view.yaml` in your root folder.
+- Add it to the `sak-tutorials-dashboard.yaml` in your root folder.
 </div>
 
 <div class="grid-item" markdown>
@@ -106,6 +106,8 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 5: Add a circle tool
+Add a [Circle tool][circle-tool] centered on the card with a radius of 45.
+
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
@@ -189,6 +191,7 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 7: Add an icon
+Add an [Entity Icon tool][entity-icon-tool] horizontally centered and vertically above the center and give it a size of 25 (25% of the 100x100 grid) and center it on that position.
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
@@ -242,6 +245,10 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 8: Add the state
+Add an [Entity State tool][entity-state-tool] horizontally centered and vertically below the center and give it a font size of 15em (15% of the 100x100 grid).
+
+!!! Note "An entity state tool _MUST_ have a font-size!"
+
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="40-47"
@@ -302,6 +309,8 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 9: Add the name
+Add an [Entity Name tool][entity-name-tool] horizontally and vertically centered.
+
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="48-52"
@@ -444,3 +453,10 @@ cards:
 [10-step-tutorial-basic-01-step-8]: ../assets/screenshots/10-step-tutorial-basic-01-step-8.png
 [10-step-tutorial-basic-01-step-9]: ../assets/screenshots/10-step-tutorial-basic-01-step-9.png
 [10-step-tutorial-basic-01-step-10]: ../assets/screenshots/10-step-tutorial-basic-01-step-10.png
+
+<!-- Internal references -->
+
+[entity-icon-tool]: ../tools/entity-icon-tool.md
+[circle-tool]: ../tools/circle-tool.md
+[entity-name-tool]: ../tools/entity-name-tool.md
+[entity-state-tool]: ../tools/entity-state-tool.md

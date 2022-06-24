@@ -24,7 +24,7 @@ By doing this, we learn something about toolset placement: We place tools on a d
 
 <div class="grid-item" markdown>
 - Create `view-tutorial-basic-02.yml` in the `lovelace/views/sak-tutorial-views/` folder.
-- Add it to the `sak-tutorials-view.yaml` in your root folder.
+- Add it to the `sak-tutorials-dashboard.yaml` in your root folder.
 </div>
 
 <div class="grid-item" markdown>
