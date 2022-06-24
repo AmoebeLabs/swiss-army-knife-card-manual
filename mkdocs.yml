@@ -172,6 +172,9 @@ nav:
       - Tutorial 2, card with two circles, icons, states and names: tutorials/10-step-tutorial-basic-02.md
       - Tutorial 3, create toolset template from Tutorial 1: tutorials/10-step-tutorial-basic-03.md
       - Tutorial 4, use toolset template to create Tutorial 2 again: tutorials/10-step-tutorial-basic-04.md
+    - Advanced tutorials:
+      - Tutorial 1, wide card with server statistics using Material 3 theme: tutorials/10-step-tutorial-advanced-01.md
+    
   - Examples:
     - Introduction: examples/introduction.md
     - 1. Airvisual & Weather forecast: examples/example-1.md

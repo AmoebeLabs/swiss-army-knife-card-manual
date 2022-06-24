@@ -332,6 +332,8 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 7: Duplicate toolset and name it second
+Duplicate first toolset to create the identical second one. You won't see any difference on the card, as the two toolsets are exactly positioned on top of each other and display the exact same entity data.
+
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
@@ -445,6 +447,8 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 8: connect second toolset to entity index 1
+Connect second toolset to entity index 1. You will now see the two toolsets displayed over each other.
+
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="14-15 78 83 91"
@@ -552,6 +556,8 @@ cards:
 </div>
 
 ##:sak-sak-logo: Step 9: Position the second toolset
+Finally, position the second toolset below the first toolset. The center position is (50,150).
+
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="61-62"
