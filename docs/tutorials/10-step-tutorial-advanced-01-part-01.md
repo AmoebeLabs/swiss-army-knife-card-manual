@@ -673,7 +673,7 @@ Use the in the previous step created tools template to finalize the card. Use th
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml linenums="1" hl_lines="123-153"
+```yaml title="view-tutorial-advanced-01.yml" linenums="1" hl_lines="123-153"
 title: TUT-AD-01
 path: tut-ad-01
 panel: false
@@ -832,6 +832,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
+The final result:
 ![10-step-tutorial-advanced-01-step-10]
 </div>
 </div>
