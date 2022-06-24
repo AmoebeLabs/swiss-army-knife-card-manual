@@ -4,20 +4,20 @@ title: "Tutorial 1: Circle with icon, state and name"
 description: In this 10 step tutorial, you learn how to make a square card with a circle, and on top of that an icon, state and name of an entity.
 tags:
   - Tutorials
-  - 10 Steps
+  - 10 Steps or less
 ---
 
                        
 #Tutorial 1: Circle with icon, state and name
 
-In this tutorial, we are going to make the following square card:![basic-10-step-tutorial-1-step-10]
+In this tutorial, we are going to make the following square card:![10-step-tutorial-basic-01-step-10]
 
 ##:sak-sak-logo: Step 1: Create the yml view file
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
-- Create `view-tut-b01.yml`
-- Add it to the `sak-examples-view.yaml`
+- Create `view-tutorial-basic-01.yml` in the `lovelace/views/sak-tutorial-views/` folder.
+- Add it to the `sak-tutorials-view.yaml` in your root folder.
 </div>
 
 <div class="grid-item" markdown>
@@ -29,8 +29,8 @@ In this tutorial, we are going to make the following square card:![basic-10-step
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -46,12 +46,15 @@ cards:
 
       
 ##:sak-sak-logo: Step 3: Define a square card with 1 entity
+
+You should replace the `sensor.humidity` with a sensor of your own.
+
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9-13"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -75,8 +78,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="14-20"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -107,8 +110,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="21-25"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -136,7 +139,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-5]
+![10-step-tutorial-basic-01-step-5]
 </div>
 </div>
 
@@ -145,8 +148,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="26-32"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -181,7 +184,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-6]
+![10-step-tutorial-basic-01-step-6]
 </div>
 </div>
 
@@ -190,8 +193,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="33-39"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -233,7 +236,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-7]
+![10-step-tutorial-basic-01-step-7]
 </div>
 
 </div>
@@ -242,8 +245,8 @@ cards:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="40-47"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -293,7 +296,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-8]
+![10-step-tutorial-basic-01-step-8]
 </div>
 
 </div>
@@ -302,8 +305,8 @@ cards:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="48-52"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -358,7 +361,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-9]
+![10-step-tutorial-basic-01-step-9]
 </div>
 </div>
 
@@ -366,8 +369,8 @@ cards:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="53-56"
-title: TUT-B01
-path: tut-b01
+title: TUT-BA-01
+path: tut-ba-01
 panel: false
 cards:
 - type: vertical-stack
@@ -426,17 +429,18 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![basic-10-step-tutorial-1-step-10]
+![10-step-tutorial-basic-01-step-10]
 </div>
 
 </div>
 
+##:sak-sak-logo: Done!
 
 <!-- Image references -->
 
-[basic-10-step-tutorial-1-step-5]: ../assets/screenshots/basic-10-step-tutorial-1-step-5.png
-[basic-10-step-tutorial-1-step-6]: ../assets/screenshots/basic-10-step-tutorial-1-step-6.png
-[basic-10-step-tutorial-1-step-7]: ../assets/screenshots/basic-10-step-tutorial-1-step-7.png
-[basic-10-step-tutorial-1-step-8]: ../assets/screenshots/basic-10-step-tutorial-1-step-8.png
-[basic-10-step-tutorial-1-step-9]: ../assets/screenshots/basic-10-step-tutorial-1-step-9.png
-[basic-10-step-tutorial-1-step-10]: ../assets/screenshots/basic-10-step-tutorial-1-step-10.png
+[10-step-tutorial-basic-01-step-5]: ../assets/screenshots/10-step-tutorial-basic-01-step-5.png
+[10-step-tutorial-basic-01-step-6]: ../assets/screenshots/10-step-tutorial-basic-01-step-6.png
+[10-step-tutorial-basic-01-step-7]: ../assets/screenshots/10-step-tutorial-basic-01-step-7.png
+[10-step-tutorial-basic-01-step-8]: ../assets/screenshots/10-step-tutorial-basic-01-step-8.png
+[10-step-tutorial-basic-01-step-9]: ../assets/screenshots/10-step-tutorial-basic-01-step-9.png
+[10-step-tutorial-basic-01-step-10]: ../assets/screenshots/10-step-tutorial-basic-01-step-10.png

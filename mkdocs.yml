@@ -166,9 +166,10 @@ nav:
       - Entity State: tools/entity-state-tool.md
       - Entity History: tools/entity-barchart-tool.md
   - Tutorials:
-    - 10 step tutorials: tutorials/10-step-tutorial-introduction.md
+    - 10 step or less tutorials: tutorials/10-step-tutorial-introduction.md
     - Basic tutorials:
-      - Tutorial 1, circle with icon, state and name: tutorials/basic-10-step-tutorial-1.md
+      - Tutorial 1, card with circle, icon, state and name: tutorials/10-step-tutorial-basic-01.md
+      - Tutorial 2, card with two circles, icons, states and names: tutorials/10-step-tutorial-basic-02.md
   - Examples:
     - Introduction: examples/introduction.md
     - 1. Airvisual & Weather forecast: examples/example-1.md
