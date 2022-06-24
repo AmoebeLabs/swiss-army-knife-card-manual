@@ -2,6 +2,8 @@
 template: main.html
 title: "Tutorial 3: Convert Tutorial 1 toolset to a template"
 description: In this 10 step tutorial, you learn how to make toolset template based on the 2nd tutorial.
+hide:
+  toc
 tags:
   - Tutorials
   - 10 Steps or less
@@ -55,9 +57,9 @@ toolset_tutorial_basic_03:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
   toolset:
 ```
 </div>
@@ -66,7 +68,7 @@ toolset_tutorial_basic_03:
 </div>
 </div>
 
-##:sak-sak-logo: Step 4: Remember tutorial 1
+##:sak-sak-logo: Step 4: Remember tutorial 1?
 This is the `yml` file we created earlier!
 
 <div class="grid-container-2" markdown>
@@ -146,9 +148,9 @@ toolset_tutorial_basic_03:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
   toolset:
     toolset: just-a-name
     position:
@@ -207,9 +209,9 @@ toolset_tutorial_basic_03:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
   toolset:
     toolset: tutorial-basic-03
     position:
@@ -268,14 +270,14 @@ toolset_tutorial_basic_03:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
   toolset:
     toolset: tutorial-basic-03
     position:
-      cx: '[[cx]]'
-      cy: '[[cy]]'
+      cx: '[[var_toolset_position_cx]]'
+      cy: '[[var_toolset_position_cy]]'
     tools:
       - type: circle
         position:
@@ -329,14 +331,14 @@ toolset_tutorial_basic_03:
   template:
     type: toolset
     defaults: 
-      - entity: 0
-      - cx: 50
-      - cy: 50
+      - var_entity_index: 0
+      - var_toolset_position_cx: 50
+      - var_toolset_position_cy: 50
   toolset:
     toolset: tutorial-basic-03
     position:
-      cx: '[[cx]]'
-      cy: '[[cy]]'
+      cx: '[[var_toolset_position_cx]]'
+      cy: '[[var_toolset_position_cy]]'
     tools:
       - type: circle
         position:
@@ -356,12 +358,12 @@ toolset_tutorial_basic_03:
           cy: 25
           align: center
           icon_size: 25
-        entity_index: '[[entity]]'
+        entity_index: '[[var_entity_index]]'
       - type: state
         position:
           cx: 50
           cy: 70
-        entity_index: '[[entity]]'
+        entity_index: '[[var_entity_index]]'
         styles:
           state:
             font-size: 15em
@@ -369,7 +371,7 @@ toolset_tutorial_basic_03:
         position:
           cx: 50
           cy: 50
-        entity_index: '[[entity]]'
+        entity_index: '[[var_entity_index]]'
         styles:
           name:
             font-size: 15em

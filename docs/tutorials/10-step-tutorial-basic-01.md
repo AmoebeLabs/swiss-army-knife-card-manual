@@ -2,6 +2,8 @@
 template: main.html
 title: "Tutorial 1: Circle with icon, state and name"
 description: In this 10 step tutorial, you learn how to make a square card with a circle, and on top of that an icon, state and name of an entity.
+hide:
+  toc
 tags:
   - Tutorials
   - 10 Steps or less

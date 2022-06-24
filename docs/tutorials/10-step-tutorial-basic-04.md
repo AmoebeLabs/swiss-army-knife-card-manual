@@ -2,6 +2,8 @@
 template: main.html
 title: "Tutorial 4: Use template from Tutorial 3"
 description: In this 10 step tutorial, you learn how to make toolset template based on the 2nd tutorial.
+hide:
+  toc
 tags:
   - Tutorials
   - 10 Steps or less
@@ -106,7 +108,7 @@ cards:
                 template:
                   name: toolset_tutorial_basic_03
                   variables:
-                    - entity: 0
+                    - var_entity_index: 0
 ```
 </div>
 
@@ -141,13 +143,13 @@ cards:
                 template:
                   name: toolset_tutorial_basic_03
                   variables:
-                    - entity: 0
+                    - var_entity_index: 0
               - toolset: second
                 template:
                   name: toolset_tutorial_basic_03
                   variables:
-                    - entity: 1
-                    - cy: 150
+                    - var_entity_index: 1
+                    - var_toolset_position_cy: 150
 ```
 </div>
 
@@ -167,3 +169,21 @@ cards:
 
 <!-- Internal references -->
 [10-step-tutorial-basic-03]: ../tutorials/10-step-tutorial-basic-03.md
+
+[swiss-army-knife-basic-tool-circle]: ../tools/circle-tool.md "Swiss Army Knife - Circle Tool"
+[swiss-army-knife-basic-tool-ellipse]: ../tools/ellipse-tool.md "Swiss Army Knife - Ellipse Tool"
+[swiss-army-knife-basic-tool-line]: ../tools/line-tool.md "Swiss Army Knife - Line Tool"
+[swiss-army-knife-basic-tool-rectangle]: ../tools/rectangle-tool.md "Swiss Army Knife - Rectangle Tool"
+[swiss-army-knife-basic-tool-rectex]: ../tools/rectangle-ex-tool.md "Swiss Army Knife - Rectangle Ex Tool"
+[swiss-army-knife-basic-tool-regpoly]: ../tools/regular-poly-tool.md "Swiss Army Knife - Regular Poly Tool"
+[swiss-army-knife-basic-tool-text]: ../tools/text-tool.md "Swiss Army Knife - Text Tool"
+[swiss-army-knife-advanced-tool-horseshoe]: ../tools/horseshoe-tool.md "Swiss Army Knife - Horse shoe Tool"
+[swiss-army-knife-advanced-tool-segarc]: ../tools/segarc-tool.md "Swiss Army Knife - Segmented Arc Tool"
+[swiss-army-knife-advanced-tool-slider]: ../tools/slider-tool.md "Swiss Army Knife - Slider Tool"
+[swiss-army-knife-advanced-tool-switch]: ../tools/switch-tool.md "Swiss Army Knife - Switch Tool"
+[swiss-army-knife-advanced-tool-usersvg]: ../tools/usersvg-tool.md "Swiss Army Knife - User SVG Tool"
+[swiss-army-knife-ha-tool-area]: ../tools/entity-area-tool.md "Swiss Army Knife - Entity Area Tool"
+[swiss-army-knife-ha-tool-icon]: ../tools/entity-icon-tool.md "Swiss Army Knife - Entity Icon Tool"
+[swiss-army-knife-ha-tool-name]: ../tools/entity-name-tool.md "Swiss Army Knife - Entity Name Tool"
+[swiss-army-knife-ha-tool-state]: ../tools/entity-state-tool.md "Swiss Army Knife - Entity State Tool"
+[swiss-army-knife-ha-tool-bar]: ../tools/entity-barchart-tool.md "Swiss Army Knife - Entity History Bar Tool"
