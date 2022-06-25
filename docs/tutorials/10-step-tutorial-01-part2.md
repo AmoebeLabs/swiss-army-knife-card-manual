@@ -10,9 +10,9 @@ tags:
 ---
 
                        
-#Basic Series \#1 Tutorial Part 2
+#Tutorial \#1, Part 2
 
-In this tutorial, you will learn to make the following tall 1 by 2 card:![10-step-tutorial-basic-series01-part2-step9]
+In this tutorial, you will learn to make the following tall 1 by 2 card:![10-step-tutorial-01-part2-step9]
 
 By doing this, you learn something about toolset placement: We place tools on a different position on the card without changing the position of the tools itself, but just by moving the position of the overall toolset!
 
@@ -38,8 +38,8 @@ By doing this, you learn something about toolset placement: We place tools on a 
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -60,8 +60,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9-56"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -120,7 +120,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step3]
+![10-step-tutorial-01-part2-step3]
 </div>
 </div>
 
@@ -129,8 +129,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="10"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -189,7 +189,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step4]
+![10-step-tutorial-01-part2-step4]
 </div>
 </div>
 
@@ -198,8 +198,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="16"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -258,7 +258,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step5]
+![10-step-tutorial-01-part2-step5]
 </div>
 </div>
 
@@ -267,8 +267,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="14-15"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -329,7 +329,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step6]
+![10-step-tutorial-01-part2-step6]
 </div>
 </div>
 
@@ -340,8 +340,8 @@ Duplicate first toolset to create the identical second one. You won't see any di
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="59-99"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -443,7 +443,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step7]
+![10-step-tutorial-01-part2-step7]
 </div>
 
 </div>
@@ -454,8 +454,8 @@ Connect second toolset to entity index 1. You will now see the two toolsets disp
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="14-15 78 83 91"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -553,7 +553,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step8]
+![10-step-tutorial-01-part2-step8]
 </div>
 </div>
 
@@ -563,8 +563,8 @@ Finally, position the second toolset below the first toolset. The center positio
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="61-62"
-title: TUT-B-S01-P2
-path: tut-b-s01-p2
+title: TUT-01-P2
+path: tut-01-p2
 panel: false
 cards:
 - type: vertical-stack
@@ -666,7 +666,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part2-step9]
+![10-step-tutorial-01-part2-step9]
 </div>
 
 </div>
@@ -674,13 +674,13 @@ cards:
 
 <!-- Image references -->
 
-[10-step-tutorial-basic-series01-part2-step3]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step10.png
-[10-step-tutorial-basic-series01-part2-step4]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step7.png
-[10-step-tutorial-basic-series01-part2-step5]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step7.png
-[10-step-tutorial-basic-series01-part2-step6]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step7.png
-[10-step-tutorial-basic-series01-part2-step7]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step7.png
-[10-step-tutorial-basic-series01-part2-step8]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step8.png
-[10-step-tutorial-basic-series01-part2-step9]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step9.png
+[10-step-tutorial-01-part2-step3]: ../assets/screenshots/10-step-tutorial-01-part1-step10.png
+[10-step-tutorial-01-part2-step4]: ../assets/screenshots/10-step-tutorial-01-part2-step7.png
+[10-step-tutorial-01-part2-step5]: ../assets/screenshots/10-step-tutorial-01-part2-step7.png
+[10-step-tutorial-01-part2-step6]: ../assets/screenshots/10-step-tutorial-01-part2-step7.png
+[10-step-tutorial-01-part2-step7]: ../assets/screenshots/10-step-tutorial-01-part2-step7.png
+[10-step-tutorial-01-part2-step8]: ../assets/screenshots/10-step-tutorial-01-part2-step8.png
+[10-step-tutorial-01-part2-step9]: ../assets/screenshots/10-step-tutorial-01-part2-step9.png
 
 
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png

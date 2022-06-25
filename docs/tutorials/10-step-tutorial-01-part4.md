@@ -9,12 +9,12 @@ tags:
   - 10 Steps or less
 ---
 
+
+#Tutorial \#1, Part 4
+
+In this tutorial, you will learn how to create a Swiss Army Knife toolset template from the toolset created in [Part 3][10-step-tutorial-01-part3].
                        
-#Tutorial 4: Use template toolset from tutorial 3 to create tutorial 2
-
-In this tutorial, we are going to create a Swiss Army Knife toolset template from the toolset created in [Tutorial 3][10-step-tutorial-basic-series01-part3].
-
-By doing this, we learn something about how to _use_ a toolset template and variables.
+By doing this, you learn something about how to _use_ a toolset template and variables.
 
 ##:sak-sak-logo: Prerequisites
 
@@ -23,7 +23,7 @@ By doing this, we learn something about how to _use_ a toolset template and vari
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
-- Create `view-tutorial-basic-04.yml` in the `lovelace/views/sak-tutorial-views/` folder.
+- Create `view-tutorial-basic-series01-part4.yml` in the `lovelace/views/sak-tutorial-views/` folder.
 - Add it to the `sak-tutorials-dashboard.yaml` in your root folder.
 </div>
 
@@ -36,8 +36,8 @@ By doing this, we learn something about how to _use_ a toolset template and vari
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-title: TUT-B-S01-P4
-path: tut-b-s01-p4
+title: TUT-01-P4
+path: tut-01-p4
 panel: false
 cards:
 - type: vertical-stack
@@ -58,8 +58,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9-17"
-title: TUT-B-S01-P4
-path: tut-b-s01-p4
+title: TUT-01-P4
+path: tut-01-p4
 panel: false
 cards:
 - type: vertical-stack
@@ -87,8 +87,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="18-22"
-title: TUT-B-S01-P4
-path: tut-b-s01-p4
+title: TUT-01-P4
+path: tut-01-p4
 panel: false
 cards:
 - type: vertical-stack
@@ -106,24 +106,30 @@ cards:
             toolsets:
               - toolset: first
                 template:
-                  name: toolset_tutorial_basic_03
+                  name: toolset_tutorial_01_part3
                   variables:
                     - var_entity_index: 0
 ```
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part4-step4]
+![10-step-tutorial-01-part4-step4]
 </div>
 </div>
 
 ##:sak-sak-logo: Step 5: Add second toolset using the template
+
+Actions:
+
+- Add second template
+- Pass entity index 1 as a variable
+- Pass the new toolset cy position as a variable
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="23-28"
-title: TUT-B-S01-P4
-path: tut-b-s01-p4
+title: TUT-01-P4
+path: tut-01-p4
 panel: false
 cards:
 - type: vertical-stack
@@ -141,12 +147,12 @@ cards:
             toolsets:
               - toolset: first
                 template:
-                  name: toolset_tutorial_basic_series01_part3
+                  name: toolset_tutorial_01_part3
                   variables:
                     - var_entity_index: 0
               - toolset: second
                 template:
-                  name: toolset_tutorial_basic_series01_part3
+                  name: toolset_tutorial_01_part3
                   variables:
                     - var_entity_index: 1
                     - var_toolset_position_cy: 150
@@ -154,7 +160,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part4-step5]
+![10-step-tutorial-01-part4-step5]
 </div>
 </div>
 
@@ -162,13 +168,13 @@ cards:
 
 <!-- Image references -->
 
-[10-step-tutorial-basic-series01-part4-step4]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step7.png
-[10-step-tutorial-basic-series01-part4-step5]: ../assets/screenshots/10-step-tutorial-basic-series01-part2-step9.png
+[10-step-tutorial-01-part4-step4]: ../assets/screenshots/10-step-tutorial-01-part2-step7.png
+[10-step-tutorial-01-part4-step5]: ../assets/screenshots/10-step-tutorial-01-part2-step9.png
 
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 
 <!-- Internal references -->
-[10-step-tutorial-basic-01-part-03]: ../tutorials/10-step-tutorial-basic-01-part-03.md
+[10-step-tutorial-01-part3]: ../tutorials/10-step-tutorial-01-part3.md
 
 [swiss-army-knife-basic-tool-circle]: ../tools/circle-tool.md "Swiss Army Knife - Circle Tool"
 [swiss-army-knife-basic-tool-ellipse]: ../tools/ellipse-tool.md "Swiss Army Knife - Ellipse Tool"

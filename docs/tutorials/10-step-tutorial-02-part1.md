@@ -8,12 +8,10 @@ tags:
   - Tutorials
   - 10 Steps or less
 ---
-
+#Tutorial \#2, Part 1
                        
-#Tutorial 1: Advanced, example 12
-
 In this tutorial, we are going to make the following wide card:
-![10-step-tutorial-advanced-series01-part1-step10]
+![10-step-tutorial-02-part1-step10]
 
 Such a card is part of [Example 12][example 12].
 
@@ -28,7 +26,7 @@ This tutorial requires:
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-- Create `view-tutorial-advanced-01.yml` in the `lovelace/views/sak-tutorial-views/` folder.
+- Create `view-tutorial-02-part1.yml` in the `lovelace/views/sak-tutorial-views/` folder.
 - Add it to the `sak-tutorials-dashboard.yaml` in your root folder.
 </div>
 
@@ -43,8 +41,8 @@ We are going to use 5 entities from the System Monitor integration.
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -86,7 +84,7 @@ cards:
       
 ##:sak-sak-logo: Step 3: Header, first column
 
-The header is divided into three colomns: the half circle with the icon, then the name and the state, and in the last header column the vertical line.
+The header is divided into three columns: the half circle with the icon, then the name and the state, and in the last header column the vertical line.
 
 Define the first column of the header:
 
@@ -97,8 +95,8 @@ Define the first column of the header:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="17-51"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -152,7 +150,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step3]
+![10-step-tutorial-02-part1-step3]
 </div>
 </div>
 
@@ -161,8 +159,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="25-56"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -222,7 +220,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step4]
+![10-step-tutorial-02-part1-step4]
 </div>
 </div>
 
@@ -231,8 +229,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="29-45"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -281,7 +279,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step5]
+![10-step-tutorial-02-part1-step5]
 </div>
 </div>
 
@@ -295,8 +293,8 @@ The `segarc` consists of 4 segments, each having a slightly different primary Ma
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="39-71"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -333,44 +331,44 @@ cards:
                   cx: 260
                   cy: 50
                 tools:
-                # -------------------------------------------------------------- 
-                - type: 'segarc'
-                  id: 0
-                  position:
-                    cx: 50
-                    cy: 50
-                    start_angle: 0
-                    end_angle: 360
-                    width: 6
-                    radius: 40
-                  entity_index: 0
-                  scale:
-                    min: 0
-                    max: 100
-                    width: 6
-                    offset: 12
-                  show:
-                    scale: false
-                    style: 'colorlist'
-                  segments:
-                    colorlist:
-                      gap: 1
-                      colors:
-                        - var(--theme-sys-palette-primary50)
-                        - var(--theme-sys-palette-primary45)
-                        - var(--theme-sys-palette-primary40)
-                        - var(--theme-sys-palette-primary35)
-                  styles:
-                    foreground:
-                      fill: darkgrey
-                    background:
-                      fill: var(--theme-sys-elevation-surface-neutral4)
-                      opacity: 1
+                  # -------------------------------------------------------------- 
+                  - type: 'segarc'
+                    id: 0
+                    position:
+                      cx: 50
+                      cy: 50
+                      start_angle: 0
+                      end_angle: 360
+                      width: 6
+                      radius: 40
+                    entity_index: 0
+                    scale:
+                      min: 0
+                      max: 100
+                      width: 6
+                      offset: 12
+                    show:
+                      scale: false
+                      style: 'colorlist'
+                    segments:
+                      colorlist:
+                        gap: 1
+                        colors:
+                          - var(--theme-sys-palette-primary50)
+                          - var(--theme-sys-palette-primary45)
+                          - var(--theme-sys-palette-primary40)
+                          - var(--theme-sys-palette-primary35)
+                    styles:
+                      foreground:
+                        fill: darkgrey
+                      background:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
+                        opacity: 1
 ```
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step6]
+![10-step-tutorial-02-part1-step6]
 </div>
 </div>
 
@@ -379,8 +377,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="72-79"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -417,52 +415,52 @@ cards:
                   cx: 260
                   cy: 50
                 tools:
-                # --------------------------------------------------------------
-                - type: 'segarc'
-                  id: 0
-                  position:
-                    cx: 50
-                    cy: 50
-                    start_angle: 0
-                    end_angle: 360
-                    width: 6
-                    radius: 40
-                  entity_index: 0
-                  scale:
-                    min: 0
-                    max: 100
-                    width: 6
-                    offset: 12
-                  show:
-                    scale: false
-                    style: 'colorlist'
-                  segments:
-                    colorlist:
-                      gap: 1
-                      colors:
-                        - var(--theme-sys-palette-primary50)
-                        - var(--theme-sys-palette-primary45)
-                        - var(--theme-sys-palette-primary40)
-                        - var(--theme-sys-palette-primary35)
-                  styles:
-                    foreground:
-                      fill: darkgrey
-                    background:
-                      fill: var(--theme-sys-elevation-surface-neutral4)
-                      opacity: 1
-                # --------------------------------------------------------------
-                - type: icon
-                  position:
-                    cx: 50
-                    cy: 30
-                    align: center
-                    icon_size: 25
-                  entity_index: 0
+                  # --------------------------------------------------------------
+                  - type: 'segarc'
+                    id: 0
+                    position:
+                      cx: 50
+                      cy: 50
+                      start_angle: 0
+                      end_angle: 360
+                      width: 6
+                      radius: 40
+                    entity_index: 0
+                    scale:
+                      min: 0
+                      max: 100
+                      width: 6
+                      offset: 12
+                    show:
+                      scale: false
+                      style: 'colorlist'
+                    segments:
+                      colorlist:
+                        gap: 1
+                        colors:
+                          - var(--theme-sys-palette-primary50)
+                          - var(--theme-sys-palette-primary45)
+                          - var(--theme-sys-palette-primary40)
+                          - var(--theme-sys-palette-primary35)
+                    styles:
+                      foreground:
+                        fill: darkgrey
+                      background:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
+                        opacity: 1
+                  # --------------------------------------------------------------
+                  - type: icon
+                    position:
+                      cx: 50
+                      cy: 30
+                      align: center
+                      icon_size: 25
+                    entity_index: 0
 ```
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step7]
+![10-step-tutorial-02-part1-step7]
 </div>
 </div>
 
@@ -473,8 +471,8 @@ And the last part of the toolset: the `state`. The `uom` is shown below the `sta
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="80-96"
-title: TUT-AD-01
-path: tut-ad-01
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -511,69 +509,69 @@ cards:
                   cx: 260
                   cy: 50
                 tools:
-                # --------------------------------------------------------------
-                - type: 'segarc'
-                  id: 0
-                  position:
-                    cx: 50
-                    cy: 50
-                    start_angle: 0
-                    end_angle: 360
-                    width: 6
-                    radius: 40
-                  entity_index: 0
-                  scale:
-                    min: 0
-                    max: 100
-                    width: 6
-                    offset: 12
-                  show:
-                    scale: false
-                    style: 'colorlist'
-                  segments:
-                    colorlist:
-                      gap: 1
-                      colors:
-                        - var(--theme-sys-palette-primary50)
-                        - var(--theme-sys-palette-primary45)
-                        - var(--theme-sys-palette-primary40)
-                        - var(--theme-sys-palette-primary35)
-                  styles:
-                    foreground:
-                      fill: darkgrey
-                    background:
-                      fill: var(--theme-sys-elevation-surface-neutral4)
-                      opacity: 1
-                # --------------------------------------------------------------
-                - type: icon
-                  position:
-                    cx: 50
-                    cy: 30
-                    align: center
-                    icon_size: 25
-                  entity_index: 0
-                # --------------------------------------------------------------
-                - type: state
-                  position:
-                    cx: 50
-                    cy: 55
-                  entity_index: 0
-                  show:
-                    uom: bottom
-                  styles:
-                    state:
-                      text-anchor: middle
-                      font-size: 20em
-                      font-weight: 700
-                      fill: var(--primary-text-color)
-                    uom:
-                      fill: var(--primary-text-color)
-                      font-weight: 700
+                  # --------------------------------------------------------------
+                  - type: 'segarc'
+                    id: 0
+                    position:
+                      cx: 50
+                      cy: 50
+                      start_angle: 0                            # Arc clockwise from
+                      end_angle: 360                            # 0 to 360 degrees
+                      width: 6
+                      radius: 40                                # Radius on 100x100 grid
+                    entity_index: 0
+                    scale:
+                      min: 0
+                      max: 100
+                      width: 6
+                      offset: 12
+                    show:
+                      scale: false                              # Disable scale of segarc
+                      style: 'colorlist'
+                    segments:
+                      colorlist:
+                        gap: 1                                  # Gap between segments
+                        colors:
+                          - var(--theme-sys-palette-primary50)  # Use 4 system palette
+                          - var(--theme-sys-palette-primary45)  # colors that adhere
+                          - var(--theme-sys-palette-primary40)  # to light and dark
+                          - var(--theme-sys-palette-primary35)  # theme modes!
+                    styles:
+                      foreground:
+                        fill: darkgrey
+                      background:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
+                        opacity: 1
+                  # --------------------------------------------------------------
+                  - type: icon
+                    position:
+                      cx: 50
+                      cy: 30
+                      align: center
+                      icon_size: 25
+                    entity_index: 0
+                  # --------------------------------------------------------------
+                  - type: state
+                    position:
+                      cx: 50
+                      cy: 55
+                    entity_index: 0
+                    show:
+                      uom: bottom
+                    styles:
+                      state:
+                        text-anchor: middle
+                        font-size: 20em
+                        font-weight: 700
+                        fill: var(--primary-text-color)
+                      uom:
+                        fill: var(--primary-text-color)
+                        font-weight: 700
 ```
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-series01-part1-step8]
+![10-step-tutorial-02-part1-step8]
 </div>
 </div>
 
@@ -582,7 +580,7 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-toolset_tutorial_advanced_01:
+toolset_tutorial_02_part1:
   template:
     type: toolset
     defaults: 
@@ -673,9 +671,9 @@ Use the in the previous step created tools template to finalize the card. Use th
 <div class="grid-container-1" markdown>
 
 <div class="grid-item" markdown>
-```yaml title="view-tutorial-advanced-01.yml" linenums="1" hl_lines="123-153"
-title: TUT-AD-01
-path: tut-ad-01
+```yaml title="view-tutorial-01-part1.yml" linenums="1" hl_lines="123-153"
+title: TUT-02-P1
+path: tut-02-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -799,14 +797,14 @@ cards:
               # ================================================================
               - toolset: colomn-cpu
                 template:
-                  name: toolset_tutorial_advanced_01
+                  name: toolset_tutorial_02_part1
                   variables:
                     - var_toolset_position_cx: 260
 
               # ================================================================
               - toolset: colomn-memory
                 template:
-                  name: toolset_tutorial_advanced_01
+                  name: toolset_tutorial_02_part1
                   variables:
                     - var_entity_index: 1
                     - var_toolset_position_cx: 355
@@ -814,7 +812,7 @@ cards:
               # ================================================================
               - toolset: colomn-disk
                 template:
-                  name: toolset_tutorial_advanced_01
+                  name: toolset_tutorial_02_part1
                   variables:
                     - var_entity_index: 2
                     - var_toolset_position_cx: 450
@@ -822,7 +820,7 @@ cards:
               # ================================================================
               - toolset: colomn-load
                 template:
-                  name: toolset_tutorial_advanced_01
+                  name: toolset_tutorial_02_part1
                   variables:
                     - var_entity_index: 3
                     - var_toolset_position_cx: 545
@@ -833,7 +831,7 @@ cards:
 
 <div class="grid-item" markdown>
 The final result:
-![10-step-tutorial-advanced-series01-part1-step10]
+![10-step-tutorial-02-part1-step10]
 </div>
 </div>
 
@@ -841,13 +839,13 @@ The final result:
 
 <!-- Image references -->
 
-[10-step-tutorial-advanced-series01-part1-step3]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step3.png
-[10-step-tutorial-advanced-series01-part1-step4]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step4.png
-[10-step-tutorial-advanced-series01-part1-step5]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step5.png
-[10-step-tutorial-advanced-series01-part1-step6]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step6.png
-[10-step-tutorial-advanced-series01-part1-step7]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step7.png
-[10-step-tutorial-advanced-series01-part1-step8]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step8.png
-[10-step-tutorial-advanced-series01-part1-step10]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step10.png
+[10-step-tutorial-02-part1-step3]: ../assets/screenshots/10-step-tutorial-02-part1-step3.png
+[10-step-tutorial-02-part1-step4]: ../assets/screenshots/10-step-tutorial-02-part1-step4.png
+[10-step-tutorial-02-part1-step5]: ../assets/screenshots/10-step-tutorial-02-part1-step5.png
+[10-step-tutorial-02-part1-step6]: ../assets/screenshots/10-step-tutorial-02-part1-step6.png
+[10-step-tutorial-02-part1-step7]: ../assets/screenshots/10-step-tutorial-02-part1-step7.png
+[10-step-tutorial-02-part1-step8]: ../assets/screenshots/10-step-tutorial-02-part1-step8.png
+[10-step-tutorial-02-part1-step10]: ../assets/screenshots/10-step-tutorial-02-part1-step10.png
 
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 

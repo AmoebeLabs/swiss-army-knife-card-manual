@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: "Advanced Series 1 Tutorial"
+title: "Tutorial #2, Introduction"
 description: In this 10 step tutorial, you learn how to make a square card with a circle, and on top of that an icon, state and name of an entity.
 hide:
   toc
@@ -9,7 +9,10 @@ tags:
   - 10 Steps or less
 ---
                        
-#Advanced Series \#1 Tutorial Introduction
+#Tutorial \#2, Introduction
+
+##:sak-sak-logo: Skill Level / Required Knowledge
+:octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star} ... :octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}
 
 ##:sak-sak-logo: Contents
 

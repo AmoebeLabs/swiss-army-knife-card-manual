@@ -10,7 +10,7 @@ tags:
 ---
 
                        
-#Basic Series \#1 Tutorial Part 3
+#Tutorial \#1, Part 3
 
 In this tutorial, you will learn how to create a Swiss Army Knife toolset template from the toolset created in part 1 and to define and use template variables.
 
@@ -21,7 +21,7 @@ In this tutorial, you will learn how to create a Swiss Army Knife toolset templa
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
-- Create `toolset-tutorial-basic-series01-part3-template.yaml` in the `lovelace/sak_templates/templates/toolsets/` folder.
+- Create `toolset-tutorial-basic-01-part3-template.yaml` in the `lovelace/sak_templates/templates/toolsets/` folder.
 - The template is automatically included once you force a refresh of Lovelace.
 </div>
 
@@ -69,12 +69,16 @@ toolset_tutorial_basic_03:
 ##:sak-sak-logo: Step 4: Remember tutorial 1?
 This is the `yml` file we created earlier!
 
+Actions:
+
+- Select and copy the toolset part.
+
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="16-56"
-title: TUT-B-S01-P1
-path: tut-b-s01-p1
+title: TUT-01-P1
+path: tut-01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -133,16 +137,23 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-series01-part3-step-4]
+![10-step-tutorial-01-part3-step4]
 </div>
 </div>
 
 ##:sak-sak-logo: Step 5: Copy toolset part to template and take care of indentation
+
+Actions:
+
+- Copy the selected YAML code in Step 4 into this file.
+- Remove the dash before toolset, as this is not an array anymore (single toolset, not toolsets)
+- Shift all to the left to get the correct YAML indentation.
+
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9-49"
-toolset_tutorial_basic_03:
+toolset_tutorial_01_part3:
   template:
     type: toolset
     defaults: 
@@ -198,12 +209,12 @@ toolset_tutorial_basic_03:
 </div>
 </div>
 
-##:sak-sak-logo: Step 6: rename toolset name
+##:sak-sak-logo: Step 6: Rename toolset name
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9"
-toolset_tutorial_basic_03:
+toolset_tutorial_01_part3:
   template:
     type: toolset
     defaults: 
@@ -211,7 +222,7 @@ toolset_tutorial_basic_03:
       - var_toolset_position_cx: 50
       - var_toolset_position_cy: 50
   toolset:
-    toolset: tutorial-basic-03
+    toolset: tutorial-basic-01-part3
     position:
       cx: 50
       cy: 50
@@ -264,7 +275,7 @@ toolset_tutorial_basic_03:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="11-12"
-toolset_tutorial_basic_03:
+toolset_tutorial_01_part3:
   template:
     type: toolset
     defaults: 
@@ -272,7 +283,7 @@ toolset_tutorial_basic_03:
       - var_toolset_position_cx: 50
       - var_toolset_position_cy: 50
   toolset:
-    toolset: tutorial-basic-03
+    toolset: tutorial-basic-01-part3
     position:
       cx: '[[var_toolset_position_cx]]'
       cy: '[[var_toolset_position_cy]]'
@@ -325,7 +336,7 @@ toolset_tutorial_basic_03:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="32 37 45"
-toolset_tutorial_basic_series01_part3:
+toolset_tutorial_01_part3:
   template:
     type: toolset
     defaults: 
@@ -333,7 +344,7 @@ toolset_tutorial_basic_series01_part3:
       - var_toolset_position_cx: 50
       - var_toolset_position_cy: 50
   toolset:
-    toolset: tutorial-basic-03
+    toolset: tutorial-basic-01-part3
     position:
       cx: '[[var_toolset_position_cx]]'
       cy: '[[var_toolset_position_cy]]'
@@ -385,4 +396,4 @@ toolset_tutorial_basic_series01_part3:
 
 <!-- Image references -->
 
-[10-step-tutorial-basic-series01-part3-step4]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step10.png
+[10-step-tutorial-01-part3-step4]: ../assets/screenshots/10-step-tutorial-01-part1-step10.png
