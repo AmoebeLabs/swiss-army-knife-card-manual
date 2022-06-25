@@ -13,7 +13,7 @@ tags:
 #Tutorial 1: Advanced, example 12
 
 In this tutorial, we are going to make the following wide card:
-![10-step-tutorial-advanced-01-step-10]
+![10-step-tutorial-advanced-series01-part1-step10]
 
 Such a card is part of [Example 12][example 12].
 
@@ -152,7 +152,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-3]
+![10-step-tutorial-advanced-series01-part1-step3]
 </div>
 </div>
 
@@ -222,7 +222,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-4]
+![10-step-tutorial-advanced-series01-part1-step4]
 </div>
 </div>
 
@@ -281,7 +281,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-5]
+![10-step-tutorial-advanced-series01-part1-step5]
 </div>
 </div>
 
@@ -370,7 +370,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-6]
+![10-step-tutorial-advanced-series01-part1-step6]
 </div>
 </div>
 
@@ -462,7 +462,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-7]
+![10-step-tutorial-advanced-series01-part1-step7]
 </div>
 </div>
 
@@ -573,7 +573,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-advanced-01-step-8]
+![10-step-tutorial-advanced-series01-part1-step8]
 </div>
 </div>
 
@@ -833,7 +833,7 @@ cards:
 
 <div class="grid-item" markdown>
 The final result:
-![10-step-tutorial-advanced-01-step-10]
+![10-step-tutorial-advanced-series01-part1-step10]
 </div>
 </div>
 
@@ -841,13 +841,13 @@ The final result:
 
 <!-- Image references -->
 
-[10-step-tutorial-advanced-01-step-3]: ../assets/screenshots/10-step-tutorial-advanced-01-step-3.png
-[10-step-tutorial-advanced-01-step-4]: ../assets/screenshots/10-step-tutorial-advanced-01-step-4.png
-[10-step-tutorial-advanced-01-step-5]: ../assets/screenshots/10-step-tutorial-advanced-01-step-5.png
-[10-step-tutorial-advanced-01-step-6]: ../assets/screenshots/10-step-tutorial-advanced-01-step-6.png
-[10-step-tutorial-advanced-01-step-7]: ../assets/screenshots/10-step-tutorial-advanced-01-step-7.png
-[10-step-tutorial-advanced-01-step-8]: ../assets/screenshots/10-step-tutorial-advanced-01-step-8.png
-[10-step-tutorial-advanced-01-step-10]: ../assets/screenshots/10-step-tutorial-advanced-01-step-10.png
+[10-step-tutorial-advanced-series01-part1-step3]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step3.png
+[10-step-tutorial-advanced-series01-part1-step4]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step4.png
+[10-step-tutorial-advanced-series01-part1-step5]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step5.png
+[10-step-tutorial-advanced-series01-part1-step6]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step6.png
+[10-step-tutorial-advanced-series01-part1-step7]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step7.png
+[10-step-tutorial-advanced-series01-part1-step8]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step8.png
+[10-step-tutorial-advanced-series01-part1-step10]: ../assets/screenshots/10-step-tutorial-advanced-series01-part1-step10.png
 
 [sak-card-toolset-tool-placement]: ../assets/screenshots/sak-card-toolset-tool-placement-bluegrey.png
 

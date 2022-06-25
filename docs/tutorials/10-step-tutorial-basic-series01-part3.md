@@ -10,11 +10,9 @@ tags:
 ---
 
                        
-#Tutorial 3: Create toolset template from previous tutorial
+#Basic Series \#1 Tutorial Part 3
 
-In this tutorial, we are going to create a Swiss Army Knife toolset template from the toolset created in Tutorial 1.
-
-By doing this, we learn something about how to create a toolset template and define variables.
+In this tutorial, you will learn how to create a Swiss Army Knife toolset template from the toolset created in part 1 and to define and use template variables.
 
 ##:sak-sak-logo: Prerequisites
 
@@ -23,7 +21,7 @@ By doing this, we learn something about how to create a toolset template and def
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
-- Create `toolset-tutorial-basic-03-template.yaml` in the `lovelace/sak_templates/templates/toolsets/` folder.
+- Create `toolset-tutorial-basic-series01-part3-template.yaml` in the `lovelace/sak_templates/templates/toolsets/` folder.
 - The template is automatically included once you force a refresh of Lovelace.
 </div>
 
@@ -75,8 +73,8 @@ This is the `yml` file we created earlier!
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="16-56"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -135,7 +133,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-03-step-4]
+![10-step-tutorial-basic-series01-part3-step-4]
 </div>
 </div>
 
@@ -327,7 +325,7 @@ toolset_tutorial_basic_03:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="32 37 45"
-toolset_tutorial_basic_03:
+toolset_tutorial_basic_series01_part3:
   template:
     type: toolset
     defaults: 
@@ -387,4 +385,4 @@ toolset_tutorial_basic_03:
 
 <!-- Image references -->
 
-[10-step-tutorial-basic-03-step-4]: ../assets/screenshots/10-step-tutorial-basic-01-step-10.png
+[10-step-tutorial-basic-series01-part3-step4]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step10.png

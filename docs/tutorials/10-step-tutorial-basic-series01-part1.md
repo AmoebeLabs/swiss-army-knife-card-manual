@@ -1,6 +1,6 @@
 ---
 template: main.html
-title: "Tutorial 1: Circle with icon, state and name"
+title: "Basic Series 1 Tutorial"
 description: In this 10 step tutorial, you learn how to make a square card with a circle, and on top of that an icon, state and name of an entity.
 hide:
   toc
@@ -9,16 +9,15 @@ tags:
   - 10 Steps or less
 ---
 
-                       
-#Tutorial 1: Circle with icon, state and name
+#Basic Series \#1 Tutorial Part 1
 
-In this tutorial, we are going to make the following square card:![10-step-tutorial-basic-01-step-10]
+In this part, you will learn to make the following square card:![10-step-tutorial-basic-series01-part1-step-10]
 
 ##:sak-sak-logo: Step 1: Create the yml view file
 <div class="grid-container-2" markdown>
 
 <div class="grid-item" markdown>
-- Create `view-tutorial-basic-01.yml` in the `lovelace/views/sak-tutorial-views/` folder.
+- Create `view-tutorial-basic-series01-part1.yml` in the `lovelace/views/sak-tutorial-views/` folder.
 - Add it to the `sak-tutorials-dashboard.yaml` in your root folder.
 </div>
 
@@ -31,8 +30,8 @@ In this tutorial, we are going to make the following square card:![10-step-tutor
 
 <div class="grid-item" markdown>
 ```yaml linenums="1"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -55,8 +54,8 @@ You should replace the `sensor.humidity` with a sensor of your own.
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="9-13"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -80,8 +79,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="14-20"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -114,8 +113,8 @@ Add a [Circle tool][circle-tool] centered on the card with a radius of 45.
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="21-25"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -143,7 +142,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-5]
+![10-step-tutorial-basic-series01-part1-step-5]
 </div>
 </div>
 
@@ -152,8 +151,8 @@ cards:
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="26-32"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -188,7 +187,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-6]
+![10-step-tutorial-basic-series01-part1-step-6]
 </div>
 </div>
 
@@ -198,8 +197,8 @@ Add an [Entity Icon tool][entity-icon-tool] horizontally centered and vertically
 
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="33-39"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -241,7 +240,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-7]
+![10-step-tutorial-basic-series01-part1-step-7]
 </div>
 
 </div>
@@ -254,8 +253,8 @@ Add an [Entity State tool][entity-state-tool] horizontally centered and vertical
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="40-47"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -305,7 +304,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-8]
+![10-step-tutorial-basic-series01-part1-step-8]
 </div>
 
 </div>
@@ -316,8 +315,8 @@ Add an [Entity Name tool][entity-name-tool] horizontally and vertically centered
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="48-52"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -372,7 +371,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-9]
+![10-step-tutorial-basic-series01-part1-step-9]
 </div>
 </div>
 
@@ -380,8 +379,8 @@ cards:
 <div class="grid-container-2" markdown>
 <div class="grid-item" markdown>
 ```yaml linenums="1" hl_lines="53-56"
-title: TUT-BA-01
-path: tut-ba-01
+title: TUT-B-S01-P1
+path: tut-b-s01-p1
 panel: false
 cards:
 - type: vertical-stack
@@ -440,7 +439,7 @@ cards:
 </div>
 
 <div class="grid-item" markdown>
-![10-step-tutorial-basic-01-step-10]
+![10-step-tutorial-basic-series01-part1-step-10]
 </div>
 
 </div>
@@ -449,12 +448,12 @@ cards:
 
 <!-- Image references -->
 
-[10-step-tutorial-basic-01-step-5]: ../assets/screenshots/10-step-tutorial-basic-01-step-5.png
-[10-step-tutorial-basic-01-step-6]: ../assets/screenshots/10-step-tutorial-basic-01-step-6.png
-[10-step-tutorial-basic-01-step-7]: ../assets/screenshots/10-step-tutorial-basic-01-step-7.png
-[10-step-tutorial-basic-01-step-8]: ../assets/screenshots/10-step-tutorial-basic-01-step-8.png
-[10-step-tutorial-basic-01-step-9]: ../assets/screenshots/10-step-tutorial-basic-01-step-9.png
-[10-step-tutorial-basic-01-step-10]: ../assets/screenshots/10-step-tutorial-basic-01-step-10.png
+[10-step-tutorial-basic-series01-part1-step-5]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step5.png
+[10-step-tutorial-basic-series01-part1-step-6]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step6.png
+[10-step-tutorial-basic-series01-part1-step-7]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step7.png
+[10-step-tutorial-basic-series01-part1-step-8]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step8.png
+[10-step-tutorial-basic-series01-part1-step-9]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step9.png
+[10-step-tutorial-basic-series01-part1-step-10]: ../assets/screenshots/10-step-tutorial-basic-series01-part1-step10.png
 
 <!-- Internal references -->
 

@@ -168,14 +168,16 @@ nav:
   - 10 Step Tutorials:
     - 10 step or less tutorials: tutorials/10-step-tutorial-introduction.md
     - Basic tutorials:
-      - "Series #1":
-        - Tutorial 1.1, card with circle, icon, state and name: tutorials/10-step-tutorial-basic-01-part-01.md
-        - Tutorial 1.2, card with two circles, icons, states and names: tutorials/10-step-tutorial-basic-01-part-02.md
-        - Tutorial 1.3, create toolset template from Tutorial 1: tutorials/10-step-tutorial-basic-01-part-03.md
-        - Tutorial 1.4, use toolset template to create Tutorial 2 again: tutorials/10-step-tutorial-basic-01-part-04.md
+      - "Basic Series #1":
+        - Intro - From simple card to a template: tutorials/10-step-tutorial-basic-series01-intro.md
+        - 1.1 - Create Card with circle, icon, state and name: tutorials/10-step-tutorial-basic-series01-part1.md
+        - 1.2 - Duplicate toolset: tutorials/10-step-tutorial-basic-series01-part2.md
+        - 1.3 - Create toolset template from 1.1: tutorials/10-step-tutorial-basic-series01-part3.md
+        - 1.4 - Use toolset template to create 1.2 again: tutorials/10-step-tutorial-basic-series01-part4.md
     - Advanced tutorials:
-      - "Series #1":
-        - Tutorial 1.1, wide card with server statistics using Material 3 theme: tutorials/10-step-tutorial-advanced-01-part-01.md
+      - "Advanced Series #1":
+        - Intro - Wide card from Example 12: tutorials/10-step-tutorial-advanced-series01-intro.md
+        - 1.1 - Create wide card with server statistics using Material 3 theme: tutorials/10-step-tutorial-advanced-series01-part1.md
     
   - Examples:
     - Introduction: examples/introduction.md
