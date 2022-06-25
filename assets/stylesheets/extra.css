@@ -68,6 +68,10 @@
     --md-code-hl-color: hsla(0, 0%, 80%, 0.5);
   }
 
+  .skill-level-star {
+    color: orange;
+  }
+  
   .grid-container-1 {
     display: grid;
     grid-template-columns: auto;
