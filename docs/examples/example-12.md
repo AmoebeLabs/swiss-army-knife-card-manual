@@ -15,6 +15,12 @@ _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 <br>![AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]
 _Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
+
+##:sak-sak-logo: How to
+The Hestia server statistics card is available as [tutorial \#2][Swiss Army Knife Tutorial 02].
+
+In this tutorial you learn how to recreate that specific card and as a bonus you learn to make a SAK template that is used for the 4 sensors.
+
 ##:sak-sak-logo: Visualization
 
     
@@ -191,6 +197,8 @@ This view does not use any SAK Template. It should of course, but in this case, 
 [Swiss Army Knife Custom card Entity State Tool]:    ../../tools/entity-state-tool/
 [Swiss Army Knife Custom card Entity Icon Tool]:    ../../tools/entity-icon-tool/
 [Swiss Army Knife Custom card Entity History Tool]: ../../tools/entity-barchart-tool/
+
+[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
 
 <!--- External References... --->
 
