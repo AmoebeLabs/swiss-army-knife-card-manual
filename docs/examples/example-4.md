@@ -8,6 +8,12 @@ tags:
 #Example 4: More Environment sensor cards
 ![AmoebeLabs Swiss Army Knife Custom Card Example 4 - More sensors]
   
+
+##:sak-sak-logo: How to
+The lux card on the second row is available as [tutorial \#3][Swiss Army Knife Tutorial 03].
+
+In this tutorial you learn how to recreate that specific card.
+
 ##:sak-sak-logo: Visualization
 Once again a visualization of sensors values using two completely different card designs. The first row is a Neumorphic design, and the second implements a very simple and clean Flat design with a few colored blocks as the background of the card.
 
@@ -99,3 +105,6 @@ None.
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 4 - More sensors]: ../assets/screenshots/sak-example-4.png "Swiss Army Knife Example 4 - More sensors"
+
+<-- Internal References -->
+[Swiss Army Knife Tutorial 03]: ../tutorials/10-step-tutorial-03-intro.md
