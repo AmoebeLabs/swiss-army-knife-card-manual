@@ -21,6 +21,7 @@ In this tutorial series, you will learn the following:
 - Recreate the advanced wide server statistics card from example 12
 - Create a template with variables from the segmented arc / icon / state toolset
 - Use the template to visualize the server statistics
+- See how much YAML it saves by using SAK toolset templates
 
 ##:sak-sak-logo: Prerequisites
 

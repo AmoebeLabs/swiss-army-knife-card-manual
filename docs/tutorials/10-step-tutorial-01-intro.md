@@ -12,7 +12,9 @@ tags:
 #Tutorial \#1 Introduction
 
 ##:sak-sak-logo: Skill Level / Required Knowledge
-:octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star} ... :octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}
+
+First two parts: :octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}
+Last two parts: :octicons-star-fill-24:{.skill-level-star}:octicons-star-fill-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}:octicons-star-24:{.skill-level-star}
 
 
 ##:sak-sak-logo: Contents
