@@ -64,6 +64,8 @@
     --md-accent-fg-color--700: #00C7D2;
 
     --md-accent-fg-color: var(--md-accent-fg-color--700);
+    
+    --md-code-hl-color: hsla(0, 0%, 80%, 0.5);
   }
 
   .grid-container-1 {
