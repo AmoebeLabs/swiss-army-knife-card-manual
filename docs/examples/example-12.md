@@ -21,6 +21,26 @@ The Hestia server statistics card is available as [tutorial \#2][Swiss Army Knif
 
 In this tutorial you learn how to recreate that specific card and as a bonus you learn to make a SAK template that is used for the 4 sensors.
 
+Furthermore, to show how you can create a full set of cards using a certain look & feel, I just created this example:
+
+Full length (aspectratio 6/1) cards:
+
+- An AirVisual Card
+- An Environment Card with battery/linkquality (Bath \#2)
+- A Server Statistics Card (Hestia)
+
+Half length (aspectratio 3/1) cards:
+
+- A Power Usage Card (Kitchen)
+- A Switch w/ Power Usage Card (Air)
+- An Occupancy Card with battery/linkquality (Movement)
+- A Fan Card (Fan)
+- A Fire Detection Card with battery/linkquality (Fire 1st, same sensor as Movement)
+- A Switch Card (Heater)
+
+The animated version looks like this:
+![AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]
+
 ##:sak-sak-logo: Visualization
 
     
@@ -189,6 +209,8 @@ This view does not use any SAK Template. It should of course, but in this case, 
 [AmoebeLabs Swiss Army Knife Custom Card Example 12]: ../assets/screenshots/sak-example-12.png
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-light.png "Swiss Army Knife Example 12 - Wide cards, light theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-dark.png "Swiss Army Knife Example 12 - Wide cards, dark theme"
+[AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]: ../assets/screenshots/swiss-army-knife-example-12c-800x800.gif
+
 
 <!--- Internal References... --->
 [Swiss Army Knife Custom card Segmented Arc Tool]:  ../..//tools/segarc-tool/

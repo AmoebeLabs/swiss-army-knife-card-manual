@@ -48,7 +48,7 @@ The first row shows cards with a Neumorphic design with:
 - Segmented Arc with humidity template colorstop and scale
 - State with unit of measurement
 - Name of the entity
-- State historry over the last 24 hours
+- State history over the last 24 hours
 
 **Second row of cards**
 
@@ -59,7 +59,7 @@ The first row shows cards with a simple Flat design with:
 - A vertical line as a divider
 - Icon of the entity
 - Name of the entity
-- State historry over the last 24 hours
+- State history over the last 24 hours
 
 #### Decluttering templates
 !!! Example "The first row of cards uses a decluttering template..."
