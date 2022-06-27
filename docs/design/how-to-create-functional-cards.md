@@ -51,9 +51,9 @@ The animated version looks like this:
 
 And YES, you can have Alert icons too if you want :smile:
 
-![AmoebeLabs Swiss Army Knife Example 12 Alert Icons]
+![AmoebeLabs Swiss Army Knife Example 12 Light]
 
-The first alert is defined as follows:
+The first alert (Movement) is defined as follows:
 ```yaml linenums="1"
 - type: icon
   position:
@@ -61,21 +61,35 @@ The first alert is defined as follows:
     cy: 50
     align: center
     icon_size: 25
-  entity_index: 0                 # Use state from 0
-  icon: mdi:alert-circle          # Use alert circle icon
+  entity_index: 0                       # Use state from 0
+  icon: mdi:alert-circle                # Use alert circle icon
   animations:
-    - state: 'on'                 # If ON
+    - state: 'on'                       # If ON
       styles:
         icon:
-          fill: red               # Set icon to red color
-    - state: 'off'                # If OFF
+          fill: var(--brand-google-red) # Set icon to red color
+    - state: 'off'                      # If OFF
       styles:
         icon:
-          display: none           # Hide icon
+          display: none                 # Hide icon
   styles:
     icon:
-      fill: grey                  # Default grey color
+      fill: grey                        # Default grey color
 ```
+
+!!! Note "The last row are rounded cards, and meant to be displayed smaller, hence 3 in a horizontal stack"
+    They are exact the same size as the cards above, but are scaled down by the horizontal stack.
+    
+    Just three variations on exactly the same tool: the `badge` tool. Not yet documented, but it just takes care of a badge-alike background.
+    You can set the size for the left/right part and the size of the triangle.
+
+And the dark variants with switches / alerts ON:
+
+![AmoebeLabs Swiss Army Knife Example 12 Dark On]
+
+...And switched OFF:
+
+![AmoebeLabs Swiss Army Knife Example 12 Dark Off]
 
 <!-- Image references -->
 
@@ -85,6 +99,9 @@ The first alert is defined as follows:
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]: ../assets/screenshots/swiss-army-knife-example-12c-800x800.gif
 
 [AmoebeLabs Swiss Army Knife Example 12 Alert Icons]: ../assets/screenshots/swiss-army-knife-example-12-alert-icons.png
+[AmoebeLabs Swiss Army Knife Example 12 Light]: ../assets/screenshots/swiss-army-knife-example-12d-light.png
+[AmoebeLabs Swiss Army Knife Example 12 Dark On]: ../assets/screenshots/swiss-army-knife-example-12d-dark-on.png
+[AmoebeLabs Swiss Army Knife Example 12 Dark Off]: ../assets/screenshots/swiss-army-knife-example-12d-dark-off.png
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
