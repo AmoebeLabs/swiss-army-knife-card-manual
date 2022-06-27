@@ -41,6 +41,10 @@ Half length (aspectratio 3/1) cards:
 The animated version looks like this:
 ![AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]
 
+And YES, you can have Alert icons too if you want :smile:
+
+![AmoebeLabs Swiss Army Knife Example 12 Alert Icons]
+
 ##:sak-sak-logo: Visualization
 
     
@@ -210,6 +214,7 @@ This view does not use any SAK Template. It should of course, but in this case, 
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-light.png "Swiss Army Knife Example 12 - Wide cards, light theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-dark.png "Swiss Army Knife Example 12 - Wide cards, dark theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]: ../assets/screenshots/swiss-army-knife-example-12c-800x800.gif
+[AmoebeLabs Swiss Army Knife Example 12 Alert Icons]: ../assets/screenshots/swiss-army-knife-example-12-alert-icons.png
 
 
 <!--- Internal References... --->

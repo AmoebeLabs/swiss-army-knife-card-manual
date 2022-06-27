@@ -49,12 +49,42 @@ The animated version looks like this:
 ![AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]
 
 
+And YES, you can have Alert icons too if you want :smile:
+
+![AmoebeLabs Swiss Army Knife Example 12 Alert Icons]
+
+The first alert is defined as follows:
+```yaml linenums="1"
+- type: icon
+  position:
+    cx: 50
+    cy: 50
+    align: center
+    icon_size: 25
+  entity_index: 0                 # Use state from 0
+  icon: mdi:alert-circle          # Use alert circle icon
+  animations:
+    - state: 'on'                 # If ON
+      styles:
+        icon:
+          fill: red               # Set icon to red color
+    - state: 'off'                # If OFF
+      styles:
+        icon:
+          display: none           # Hide icon
+  styles:
+    icon:
+      fill: grey                  # Default grey color
+```
+
 <!-- Image references -->
 
 [AmoebeLabs Swiss Army Knife Custom Card Example 12]: ../assets/screenshots/sak-example-12.png
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Light - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-light.png "Swiss Army Knife Example 12 - Wide cards, light theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Dark - Wide cards]: ../assets/screenshots/sak-example-12-m3-d06-dark.png "Swiss Army Knife Example 12 - Wide cards, dark theme"
 [AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]: ../assets/screenshots/swiss-army-knife-example-12c-800x800.gif
+
+[AmoebeLabs Swiss Army Knife Example 12 Alert Icons]: ../assets/screenshots/swiss-army-knife-example-12-alert-icons.png
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
