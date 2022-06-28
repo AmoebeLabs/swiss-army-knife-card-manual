@@ -9,7 +9,7 @@ tags:
 
 ##:sak-sak-logo: The next step: create functional cards!
 
-!!! Warning "These pages is still a work in progress, so AS IS"
+!!! Important "This page is still a work in progress!"
 
 
 !!! Info "This example view requires one of the [Home Assistant Material 3 Themes][ham3-url]"
