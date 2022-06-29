@@ -18,15 +18,20 @@ These cards have no fixed size, so fill up the available space.
 ![Swiss Army Knife Functional Card Switch Sensor D06 Dark Off]
 
 ##:sak-sak-logo: Description
-This card is a minimal card which can switch a binary sensor. Either a switch or a light entity in most cases.
+This card is a minimal 1/3 width card which can switch a binary sensor. Either a switch or a light entity in most cases.
+
+The 'switch' can be recognized by the secondary theme color when in 'off' position.
 
 ####Card:
 
-- Badge is background of card
-- Icon
-- Line below as button indicator
-- Entity name
-- Entity state below it
+- Badge is background of card.
+- Left part of badge:
+    - Acts as button and has a secondary theme color
+    - Contains the entity icon
+    - Has a line below the icon as a sort of button indicator
+- Right part of badge:
+    - Contains the entity name
+    - And the entity state below it
 
 ##:sak-sak-logo: YAML Definition
 
@@ -34,8 +39,10 @@ This card is a minimal card which can switch a binary sensor. Either a switch or
 The Badge tool is used for the background, and this time as interaction area. The left part is used to switch the entity.
 Interaction is on whole tool, but right part is disabled using `pointer-events: none`.
 
+The color of the "button" follows the [filled tonal button Material 3 guideline](https://m3.material.io/components/buttons/guidelines#07a1577b-aaf5-4824-a698-03526421058b) and uses the secondary color.
+
 ```yaml linenums="1"
-              - toolset: test
+              - toolset: badge-background
                 position:
                   cx: 150
                   cy: 50
@@ -63,19 +70,19 @@ Interaction is on whole tool, but right part is disabled using `pointer-events: 
                             fill: var(--theme-sys-palette-primary30)
                       - state: 'off'
                         styles:
-                          left:
-                            fill: var(--theme-sys-elevation-surface-neutral4)
+                          left:                     # Use as filled tonal button (m3)
+                            fill: var(--theme-sys-color-secondary-container)
                     styles:
                       left:
                         fill: grey
                       right:
-                        fill: none
-                        pointer-events: none
+                        fill: none                  # Show background
+                        pointer-events: none        # Disable user interaction
 
 ```
 
 ### Entity Icon and "Switch" on Left part of Badge
-On the left I placed the entity icon, and a line as indication that this part is used as a switch to toggle the Fan.
+On the left I placed the entity icon, and a line as indication that this part is used as a switch to toggle the Fan. The secondary color should also indicate the user that this part acts like a button!
 
 ```yaml linenums="1"
               - toolset: colomn-icon
@@ -102,14 +109,15 @@ On the left I placed the entity icon, and a line as indication that this part is
                         icon: 'mdi:fan'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
-                            opacity: 0.9
+                            fill: var(--theme-sys-color-on-secondary-container)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
                         opacity: 0.9
-                        pointer-events: none
+                        pointer-events: none        # Disable user interaction
+                        # transition: fill 1s ease
 
+                  # ------------------------------------------------------------
                   - type: line
                     position:
                       cx: 50
@@ -122,18 +130,18 @@ On the left I placed the entity icon, and a line as indication that this part is
                         styles:
                           line:
                             animation: headShake 1s linear infinite
-                            stroke: var(--primary-background-color)
-                            stroke: var(--theme-sys-palette-primary90)
+                            stroke: var(--theme-sys-color-secondary-container)
                       - state: 'off'
                         styles:
                           line:
-                            stroke: var(--theme-sys-palette-primary30)
+                            stroke: var(--theme-sys-color-secondary)
                     styles:
                       line:
                         stroke-width: 6em
 ```
 ### Name and state
-
+Display entity name and below it the entity state.
+Both are positioned in the middle of the right part of the badge tool.
 ```yaml linenums="1"
               - toolset: colomn-name
                 position:
@@ -170,6 +178,8 @@ On the left I placed the entity icon, and a line as indication that this part is
 
 ??? Info "Full definition of card"
     ```yaml linenums="1"
+    - type: horizontal-stack
+      cards:
         - type: 'custom:swiss-army-knife-card'
           entities:
             - entity: light.livingroom_light_duo_right_light
@@ -183,7 +193,7 @@ On the left I placed the entity icon, and a line as indication that this part is
           layout:
             toolsets:
               # ================================================================
-              - toolset: test
+              - toolset: badge-background
                 position:
                   cx: 150
                   cy: 50
@@ -211,14 +221,14 @@ On the left I placed the entity icon, and a line as indication that this part is
                             fill: var(--theme-sys-palette-primary30)
                       - state: 'off'
                         styles:
-                          left:
-                            fill: var(--theme-sys-elevation-surface-neutral4)
+                          left:                     # Use as filled tonal button (m3)
+                            fill: var(--theme-sys-color-secondary-container)
                     styles:
                       left:
                         fill: grey
                       right:
-                        fill: none
-                        pointer-events: none
+                        fill: none                  # Show background
+                        pointer-events: none        # Disable user interaction
 
               # ================================================================
               - toolset: colomn-icon
@@ -245,15 +255,15 @@ On the left I placed the entity icon, and a line as indication that this part is
                         icon: 'mdi:fan'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
-                            opacity: 0.9
+                            fill: var(--theme-sys-color-on-secondary-container)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
                         opacity: 0.9
-                        pointer-events: none
+                        pointer-events: none        # Disable user interaction
                         # transition: fill 1s ease
 
+                  # ------------------------------------------------------------
                   - type: line
                     position:
                       cx: 50
@@ -266,12 +276,11 @@ On the left I placed the entity icon, and a line as indication that this part is
                         styles:
                           line:
                             animation: headShake 1s linear infinite
-                            stroke: var(--primary-background-color)
-                            stroke: var(--theme-sys-palette-primary90)
+                            stroke: var(--theme-sys-color-secondary-container)
                       - state: 'off'
                         styles:
                           line:
-                            stroke: var(--theme-sys-palette-primary30)
+                            stroke: var(--theme-sys-color-secondary)
                     styles:
                       line:
                         stroke-width: 6em

@@ -49,65 +49,23 @@ The animated version looks like this:
 ![AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]
 
 
-And YES, you can have Alert icons too if you want :smile:
+Current implementation:
 
-![AmoebeLabs Swiss Army Knife Example 12 D06 Light]
+![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light Off]
 
-The first alert (Movement) is defined as follows:
-```yaml linenums="1"
-- type: icon
-  position:
-    cx: 50
-    cy: 50
-    align: center
-    icon_size: 25
-  entity_index: 0                       # Use state from 0
-  icon: mdi:alert-circle                # Use alert circle icon
-  animations:
-    - state: 'on'                       # If ON
-      styles:
-        icon:
-          fill: var(--brand-google-red) # Set icon to red color
-    - state: 'off'                      # If OFF
-      styles:
-        icon:
-          display: none                 # Hide icon
-  styles:
-    icon:
-      fill: grey                        # Default grey color
-```
-
-!!! Note "The last row are rounded cards, and meant to be displayed smaller, hence 3 in a horizontal stack"
-    They are exact the same size as the cards above, but are scaled down by the horizontal stack.
-    
-    Just three variations on exactly the same tool: the `badge` tool. Not yet documented, but it just takes care of a badge-alike background.
-    You can set the size for the left/right part and the size of the triangle.
+![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light On]
 
 And the dark variants with switches / alerts ON:
 
-![AmoebeLabs Swiss Army Knife Example 12 D06 Dark On]
-
-...And switched OFF:
-
-![AmoebeLabs Swiss Army Knife Example 12 D06 Dark Off]
+![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Dark On]
 
 And using a Purple Material 3 theme:
 
-![AmoebeLabs Swiss Army Knife Example 12 C11 Light]
+![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 C11 Light On]
 
 And an Olive Green Material 3 theme:
 
-![AmoebeLabs Swiss Army Knife Example 12 D07 Light]
-
-![Swiss Army Knife Functional Card AirVisual D06 Light]
-![Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark On]
-![Swiss Army Knife Functional Card Binary Sensor Alert D06 Light On]
-![Swiss Army Knife Functional Card Binary Sensor Alert D06 Light Off]
-![Swiss Army Knife Functional Card Switch D06 Light]
-![Swiss Army Knife Functional Card Power Outlet D06 Light]
-![Swiss Army Knife Functional Card AQI Sensor D06 Light]
-![Swiss Army Knife Functional Card Binary Sensor D06 Light]
-
+![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D07 Light On]
 
 <!-- Image references -->
 
@@ -123,6 +81,12 @@ And an Olive Green Material 3 theme:
 
 [AmoebeLabs Swiss Army Knife Example 12 D07 Light]: ../assets/screenshots/swiss-army-knife-example-12d-d07-light.png
 [AmoebeLabs Swiss Army Knife Example 12 C11 Light]: ../assets/screenshots/swiss-army-knife-example-12d-c11-light.png
+
+[AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light Off]: ../assets/screenshots/sak-functional-cards-12-overview-d06-light-off.png
+[AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light On]: ../assets/screenshots/sak-functional-cards-12-overview-d06-light-on.png
+[AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D07 Light On]: ../assets/screenshots/sak-functional-cards-12-overview-d07-light-on.png
+[AmoebeLabs Swiss Army Knife Functional Cards Overview 12 C11 Light On]: ../assets/screenshots/sak-functional-cards-12-overview-c11-light-on.png
+[AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Dark On]: ../assets/screenshots/sak-functional-cards-12-overview-d06-dark-on.png
 
 [Swiss Army Knife Functional Card AirVisual D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-airvisual-theme-d06-light.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark On]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-dark-on.png
