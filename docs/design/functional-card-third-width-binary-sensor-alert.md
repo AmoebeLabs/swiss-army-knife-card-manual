@@ -7,12 +7,14 @@ hide:
 tags:
   - Design
   - Functional Card
+---
 <!-- GT/GL -->
 
 These cards are meant to be used 3 in a row.
 
 ![Swiss Army Knife Functional Card Binary Sensor Alert D06 Light Off]
 ![Swiss Army Knife Functional Card Binary Sensor Alert D06 Light On]
+![Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark Off]
 ![Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark On]
 
 ##:sak-sak-logo: Description
@@ -32,7 +34,7 @@ These two cards are slightly different, but both show you a binary sensor with a
 - Badge is background of card
 - A separate icon is used as an alert. This icon is only displayed if binary sensor has the state `on`.
 - Entity name
-- Battery state in the upper right corner
+- Slightly stretched battery state in the upper right corner
 
 ##:sak-sak-logo: YAML Definition First Card
 
@@ -59,7 +61,7 @@ The Badge tool is used for the background.
                       - state: 'on'                 # Animate for state ON
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'                # Animate for state OFF
                         styles:
                           left:
@@ -74,7 +76,7 @@ The Badge tool is used for the background.
 ### Entity Icon on Left part of Badge
 
 ```yaml linenums="1"
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5
                   cy: 50
@@ -98,7 +100,7 @@ The Badge tool is used for the background.
                         icon: 'mdi:fire'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
+                            fill: var(--theme-sys-color-secondary)
                             opacity: 0.9
                     styles:
                       icon:
@@ -108,7 +110,7 @@ The Badge tool is used for the background.
 
 ### Entity Name and Entity State
 ```yaml linenums="1"
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5               # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -138,6 +140,7 @@ The Badge tool is used for the background.
                         text-anchor: middle
                         font-size: 16em
                         font-weight: 500
+                        opacity: 0.7
 ```
 
 ### Battery state of Entity in upper-right of Badge
@@ -158,7 +161,8 @@ The Badge tool is used for the background.
                     entity_index: 2
                     styles:
                       icon:
-                        opacity: 0.9
+                        fill: var(--theme-sys-color-tertiary)
+                        opacity: 0.5
 ```
 
 ??? Info "Full definition of card"
@@ -200,7 +204,7 @@ The Badge tool is used for the background.
                       - state: 'on'                 # Animate for state ON
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'                # Animate for state OFF
                         styles:
                           left:
@@ -212,7 +216,7 @@ The Badge tool is used for the background.
                         fill: none                 # Show background of card
 
               # ================================================================
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5
                   cy: 50
@@ -236,7 +240,7 @@ The Badge tool is used for the background.
                         icon: 'mdi:fire'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
+                            fill: var(--theme-sys-color-secondary)
                             opacity: 0.9
                     styles:
                       icon:
@@ -260,10 +264,11 @@ The Badge tool is used for the background.
                     entity_index: 2
                     styles:
                       icon:
-                        opacity: 0.9
-
+                        fill: var(--theme-sys-color-tertiary)
+                        opacity: 0.5
+                        
               # ================================================================
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5               # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -293,6 +298,8 @@ The Badge tool is used for the background.
                         text-anchor: middle
                         font-size: 16em
                         font-weight: 500
+                        opacity: 0.7
+
     ```
 
 ##:sak-sak-logo: YAML Definition Second Card
@@ -321,7 +328,7 @@ The Badge tool is used for the background.
                       - state: 'on'
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'
                         styles:
                           left:
@@ -336,7 +343,7 @@ The Badge tool is used for the background.
 ### Entity Icon on Left part of Badge
 
 ```yaml linenums="1"
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5
                   cy: 50
@@ -357,7 +364,7 @@ The Badge tool is used for the background.
                       - state: 'off'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
+                            fill: var(--theme-sys-color-secondary)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
@@ -378,47 +385,45 @@ The Alert Icon with background circle.
                     position:
                       cx: 50
                       cy: 50
-                      radius: 15
-                    entity_index: 0
+                      radius: 13
+                    entity_index: 0                 # Use state from 0
                     animations:
-                      - state: 'on'
+                      - state: 'on'                 # If ON
                         styles:
                           circle:
-                            stroke: var(--brand-google-red)
-                      - state: 'off'
+                            fill: var(--primary-background-color)
+                      - state: 'off'                # If OFF
                         styles:
                           circle:
-                            display: none
-                    styles:
-                      circle:
-                        stroke-width: 2em
+                            display: none           # Hide icon
 
+                  # ------------------------------------------------------------
                   - type: icon
                     position:
                       cx: 50
                       cy: 50
                       align: center
                       icon_size: 25
-                    entity_index: 0
-                    icon: mdi:alert-circle
+                    entity_index: 0                 # Use state from 0
+                    icon: mdi:alert-circle          # Use alert circle icon
                     animations:
-                      - state: 'on'
+                      - state: 'on'                 # If ON
                         styles:
                           icon:
-                            fill: var(--brand-google-red)
-                      - state: 'off'
+                            fill: var(--brand-google-red, red) # Set icon to red color
+                      - state: 'off'                # If OFF
                         styles:
                           icon:
-                            display: none
+                            display: none           # Hide icon
                     styles:
                       icon:
-                        fill: grey                        
+                        fill: grey                  # Default grey color                     
 ```
 
 ### Entity Name
 Just the name. No state below it.
 ```yaml linenums="1"
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5               # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -438,28 +443,29 @@ Just the name. No state below it.
 ```
 
 ### Battery state of Entity in upper-right of Badge
-The battery state.
+And the slightly stretched battery state. This shows the scale functionality of toolsets!
 
-??? Success "Toolset definition is the same as the first card"
-    ```yaml linenums="1"
-                  - toolset: battery-icon
-                    position:
-                      cx: 280
-                      cy: 15
-                      rotate: 90
-                    tools:
-                      # ------------------------------------------------------------
-                      - type: icon
-                        position:
-                          cx: 50
-                          cy: 50
-                          align: center
-                          icon_size: 30
-                        entity_index: 2
-                        styles:
-                          icon:
-                            opacity: 0.9
-    ```
+```yaml linenums="1" hl_lines="5"
+          - toolset: battery-icon
+            position:
+              cx: 270
+              cy: 15
+              scale_y: 1.5                      # Make battery taller
+              rotate: 90
+            tools:
+              # ------------------------------------------------------------
+              - type: icon
+                position:
+                  cx: 50
+                  cy: 50
+                  align: center
+                  icon_size: 30
+                entity_index: 2
+                styles:
+                  icon:
+                    fill: var(--theme-sys-color-tertiary)
+                    opacity: 0.5
+```
 
 ??? Info "Full definition of card"
     ```yaml linenums="1"
@@ -476,6 +482,9 @@ The battery state.
           aspectratio: 3/1                          # Card is 300x100 grid
 
           layout:
+            styles:
+              card:
+                # border-radius: 25em
             toolsets:
               # ================================================================
               - toolset: badge-background
@@ -497,7 +506,7 @@ The battery state.
                       - state: 'on'
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'
                         styles:
                           left:
@@ -507,9 +516,8 @@ The battery state.
                         fill: grey
                       right:
                         fill: none
-
               # ================================================================
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5
                   cy: 50
@@ -530,7 +538,7 @@ The battery state.
                       - state: 'off'
                         styles:
                           icon:
-                            fill: var(--primary-text-color)
+                            fill: var(--theme-sys-color-secondary)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
@@ -547,44 +555,42 @@ The battery state.
                     position:
                       cx: 50
                       cy: 50
-                      radius: 15
-                    entity_index: 0
+                      radius: 13
+                    entity_index: 0                 # Use state from 0
                     animations:
-                      - state: 'on'
+                      - state: 'on'                 # If ON
                         styles:
                           circle:
-                            stroke: var(--brand-google-red)
-                      - state: 'off'
+                            fill: var(--primary-background-color)
+                      - state: 'off'                # If OFF
                         styles:
                           circle:
-                            display: none
-                    styles:
-                      circle:
-                        stroke-width: 2em
+                            display: none           # Hide icon
 
+                  # ------------------------------------------------------------
                   - type: icon
                     position:
                       cx: 50
                       cy: 50
                       align: center
                       icon_size: 25
-                    entity_index: 0
-                    icon: mdi:alert-circle
+                    entity_index: 0                 # Use state from 0
+                    icon: mdi:alert-circle          # Use alert circle icon
                     animations:
-                      - state: 'on'
+                      - state: 'on'                 # If ON
                         styles:
                           icon:
-                            fill: var(--brand-google-red)
-                      - state: 'off'
+                            fill: var(--brand-google-red, red) # Set icon to red color
+                      - state: 'off'                # If OFF
                         styles:
                           icon:
-                            display: none
+                            display: none           # Hide icon
                     styles:
                       icon:
-                        fill: grey                        
+                        fill: grey                  # Default grey color
 
               # ================================================================
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5               # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -605,8 +611,9 @@ The battery state.
               # ================================================================
               - toolset: battery-icon
                 position:
-                  cx: 280
+                  cx: 270
                   cy: 15
+                  scale_y: 1.5                      # Make battery taller
                   rotate: 90
                 tools:
                   # ------------------------------------------------------------
@@ -619,9 +626,8 @@ The battery state.
                     entity_index: 2
                     styles:
                       icon:
-                        opacity: 0.9
-
-
+                        fill: var(--theme-sys-color-tertiary)
+                        opacity: 0.5
     ```
 
 ##:sak-sak-logo: Usage
@@ -629,6 +635,7 @@ For use / re-use, use decluttering card etc.
 
 <!-- Image references -->
 
+[Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark Off]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-dark-off.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark On]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-dark-on.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Light On]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-light-on.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Light Off]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-light-off.png

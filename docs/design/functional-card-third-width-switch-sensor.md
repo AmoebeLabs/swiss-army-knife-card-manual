@@ -16,6 +16,7 @@ These cards have no fixed size, so fill up the available space.
 ![Swiss Army Knife Functional Card Switch Sensor D06 Light Off]
 ![Swiss Army Knife Functional Card Switch Sensor D06 Light On]
 ![Swiss Army Knife Functional Card Switch Sensor D06 Dark Off]
+![Swiss Army Knife Functional Card Switch Sensor D06 Dark On]
 
 ##:sak-sak-logo: Description
 This card is a minimal 1/3 width card which can switch a binary sensor. Either a switch or a light entity in most cases.
@@ -67,7 +68,7 @@ The color of the "button" follows the [filled tonal button Material 3 guideline]
                       - state: 'on'
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'
                         styles:
                           left:                     # Use as filled tonal button (m3)
@@ -78,14 +79,13 @@ The color of the "button" follows the [filled tonal button Material 3 guideline]
                       right:
                         fill: none                  # Show background
                         pointer-events: none        # Disable user interaction
-
 ```
 
 ### Entity Icon and "Switch" on Left part of Badge
 On the left I placed the entity icon, and a line as indication that this part is used as a switch to toggle the Fan. The secondary color should also indicate the user that this part acts like a button!
 
 ```yaml linenums="1"
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5                           # On 12.5% f width
                   cy: 50
@@ -109,7 +109,8 @@ On the left I placed the entity icon, and a line as indication that this part is
                         icon: 'mdi:fan'
                         styles:
                           icon:
-                            fill: var(--theme-sys-color-on-secondary-container)
+                            # fill: var(--theme-sys-color-on-secondary-container)
+                            fill: var(--theme-sys-color-secondary)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
@@ -143,7 +144,7 @@ On the left I placed the entity icon, and a line as indication that this part is
 Display entity name and below it the entity state.
 Both are positioned in the middle of the right part of the badge tool.
 ```yaml linenums="1"
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5                 # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -173,13 +174,11 @@ Both are positioned in the middle of the right part of the badge tool.
                         text-anchor: middle
                         font-size: 16em
                         font-weight: 500
-
+                        opacity: 0.7
 ``` 
 
 ??? Info "Full definition of card"
     ```yaml linenums="1"
-    - type: horizontal-stack
-      cards:
         - type: 'custom:swiss-army-knife-card'
           entities:
             - entity: light.livingroom_light_duo_right_light
@@ -218,7 +217,7 @@ Both are positioned in the middle of the right part of the badge tool.
                       - state: 'on'
                         styles:
                           left:
-                            fill: var(--theme-sys-palette-primary30)
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'
                         styles:
                           left:                     # Use as filled tonal button (m3)
@@ -231,7 +230,7 @@ Both are positioned in the middle of the right part of the badge tool.
                         pointer-events: none        # Disable user interaction
 
               # ================================================================
-              - toolset: colomn-icon
+              - toolset: column-icon
                 position:
                   cx: 37.5                           # On 12.5% f width
                   cy: 50
@@ -255,7 +254,8 @@ Both are positioned in the middle of the right part of the badge tool.
                         icon: 'mdi:fan'
                         styles:
                           icon:
-                            fill: var(--theme-sys-color-on-secondary-container)
+                            # fill: var(--theme-sys-color-on-secondary-container)
+                            fill: var(--theme-sys-color-secondary)
                     styles:
                       icon:
                         fill: var(--primary-background-color)
@@ -287,7 +287,7 @@ Both are positioned in the middle of the right part of the badge tool.
 
                     
               # ================================================================
-              - toolset: colomn-name
+              - toolset: column-name
                 position:
                   cx: 187.5                 # Left part = 75, so 75+(300-75)/2
                   cy: 50
@@ -317,6 +317,8 @@ Both are positioned in the middle of the right part of the badge tool.
                         text-anchor: middle
                         font-size: 16em
                         font-weight: 500
+                        opacity: 0.7
+
     ```
 
 ##:sak-sak-logo: Usage
@@ -325,6 +327,7 @@ For use / re-use, use decluttering card etc.
 <!-- Image references -->
 
 [Swiss Army Knife Functional Card Switch Sensor D06 Dark Off]: ../assets/screenshots/sak-functional-card-12-third-width-switch-sensor-theme-d06-dark-off.png
+[Swiss Army Knife Functional Card Switch Sensor D06 Dark On]: ../assets/screenshots/sak-functional-card-12-third-width-switch-sensor-theme-d06-dark-on.png
 [Swiss Army Knife Functional Card Switch Sensor D06 Light On]: ../assets/screenshots/sak-functional-card-12-third-width-switch-sensor-theme-d06-light-on.png
 [Swiss Army Knife Functional Card Switch Sensor D06 Light Off]: ../assets/screenshots/sak-functional-card-12-third-width-switch-sensor-theme-d06-light-off.png
 

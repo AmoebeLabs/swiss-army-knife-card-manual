@@ -10,6 +10,7 @@ tags:
 ---
 
 ![Swiss Army Knife Functional Card Server Statistics D06 Light]
+![Swiss Army Knife Functional Card Server Statistics D06 Dark]
 
 <!-- GT/GL -->
 ##:sak-sak-logo: Description
@@ -191,7 +192,9 @@ For use / re-use, use decluttering card etc.
 [Swiss Army Knife Functional Card Power Outlet D06 Light]: ../assets/screenshots/sak-functional-card-12-half-width-power-outlet-theme-d06-light.png
 [Swiss Army Knife Functional Card AQI Sensor D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-environment-sensor-theme-d06-light.png
 [Swiss Army Knife Functional Card Binary Sensor D06 Light]: ../assets/screenshots/sak-functional-card-12-half-width-binary-sensor-theme-d06-light.png
+
 [Swiss Army Knife Functional Card Server Statistics D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-server-statistics-theme-d06-light.png
+[Swiss Army Knife Functional Card Server Statistics D06 Dark]: ../assets/screenshots/sak-functional-card-12-full-width-server-statistics-theme-d06-dark.png
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md

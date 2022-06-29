@@ -9,7 +9,8 @@ tags:
   - Functional Card
 ---
 
-![Swiss Army Knife Functional Card AQI Sensor D06 Light]
+![Swiss Army Knife Functional Card Environment Sensor D06 Light]
+![Swiss Army Knife Functional Card Environment Sensor D06 Dark]
 
 <!-- GT/GL -->
 ##:sak-sak-logo: Description
@@ -481,14 +482,17 @@ tags:
 [AmoebeLabs Swiss Army Knife Example 12 C11 Light]: ../assets/screenshots/swiss-army-knife-example-12d-c11-light.png
 
 [Swiss Army Knife Functional Card AirVisual D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-airvisual-theme-d06-light.png
+
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Dark On]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-dark-on.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Light On]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-light-on.png
 [Swiss Army Knife Functional Card Binary Sensor Alert D06 Light Off]: ../assets/screenshots/sak-functional-card-12-third-width-binary-sensor-alert-theme-d06-light-off.png
 [Swiss Army Knife Functional Card Switch D06 Light]: ../assets/screenshots/sak-functional-card-12-half-width-switch-theme-d06-light.png
 [Swiss Army Knife Functional Card Power Outlet D06 Light]: ../assets/screenshots/sak-functional-card-12-half-width-power-outlet-theme-d06-light.png
-[Swiss Army Knife Functional Card AQI Sensor D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-environment-sensor-theme-d06-light.png
 [Swiss Army Knife Functional Card Binary Sensor D06 Light]: ../assets/screenshots/sak-functional-card-12-half-width-binary-sensor-theme-d06-light.png
 [Swiss Army Knife Functional Card Server Statistics D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-server-statistics-theme-d06-light.png
+
+[Swiss Army Knife Functional Card Environment Sensor D06 Light]: ../assets/screenshots/sak-functional-card-12-full-width-environment-sensor-theme-d06-light.png
+[Swiss Army Knife Functional Card Environment Sensor D06 Dark]: ../assets/screenshots/sak-functional-card-12-full-width-environment-sensor-theme-d06-dark.png
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
