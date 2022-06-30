@@ -9,8 +9,35 @@ tags:
 
 ##:sak-sak-logo: The next step: create functional cards!
 
-!!! Warning "These pages is still a work in progress, so AS IS"
+In the end, we all want functional cards, no matter what look & feel we are using. We want something for binary and analog sensors, switches, power outlets, etc.
 
+This section, and the next sections is all about creating such cards.
+
+The steps I normally take to work from a certain look & feel to functional cards is as follows:
+
+- Create some cards to establish that look & feel.
+- Make a list of functional cards you like to have
+- Sketch them
+- Create them
+
+Now depending on how you want to work you:
+
+- create SAK toolset templates from the start, just as I show in one of th 10 Step Tutorials. This can save you a lot of time creating functional cards, as you can re-use parts from the beginning!
+- Create all cards first, check the similar toolsets, and create SAK templates 
+
+The same holds true about using CSS Classes:
+
+- Create user CSS Classes from the start of your design
+- Or experiment first with several cards, before creating those classes.
+
+Either way: you will get your functional cards!
+
+
+##:sak-sak-logo: Step 1: Choose your look & feel
+
+For these sections, I choose Example 12 as the basis for creating some example functional cards.
+
+!!! Warning "These pages is still a work in progress, so AS IS"
 
 !!! Info "This example view requires one of the [Home Assistant Material 3 Themes][ham3-url]"
 
@@ -21,43 +48,91 @@ _Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 _Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
 
-##:sak-sak-logo: How to
+##:sak-sak-logo: Step 2: Make a list
+I use a Mobile First approach. All cards should be readable and usable on my iPhone. So cards can't be very small!
+
+In most cases that means for the card size:
+
+- Full width cards, ie 1 card in a horizontal stack
+- Half width cards, ie 2 cards in a horizontal stack
+- Third width cards, ie 3 cards in a horizontal stack
+
+
+###Full Width Cards
+
+I created the following full width cards:
+
+- 6/1 AirVisual Card
+- 6/1 Environment Sensor Card (based on my Zigbee sensors)
+- 6/1 Server Statistics Card
+
 The Hestia server statistics card is available as [tutorial \#2][Swiss Army Knife Tutorial 02].
 
-In this tutorial you learn how to recreate that specific card and as a bonus you learn to make a SAK template that is used for the 4 sensors.
+In that tutorial you learn how to recreate that specific card and as a bonus you learn to make a SAK template that is used for the 4 sensors!
 
-Furthermore, to show how you can create a full set of cards using a certain look & feel, I just created this example:
+[Swiss Army Knife Functional Cards 12 Full Width Overview D06 Light]: ../assets/screenshots/sak-functional-cards-12-full-width-overview-d06-light.png
+![Swiss Army Knife Functional Cards 12 Full Width Overview D06 Light]
+_Light example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
-You see the following fixed-function cards:
 
-Full length (aspectratio 6/1) cards:
+[Swiss Army Knife Functional Cards 12 Full Width Overview D06 Dark]: ../assets/screenshots/sak-functional-cards-12-full-width-overview-d06-dark.png
+![Swiss Army Knife Functional Cards 12 Full Width Overview D06 Dark]
+_Dark example using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
 
-- An AirVisual Card
-- An Environment Card with battery/linkquality (Bath \#2)
-- A Server Statistics Card (Hestia)
+###Half Width Cards
 
-Half length (aspectratio 3/1) cards:
+I created the following half width cards:
 
-- A Power Usage Card (Kitchen)
-- A Switch w/ Power Usage Card (Air)
-- An Occupancy Card with battery/linkquality (Movement)
-- A Fan Card (Fan)
-- A Fire Detection Card with battery/linkquality (Fire 1st, same sensor as Movement)
-- A Switch Card (Heater)
+- 3/1 Analog Sensor Card
+- 3/1 Power Outlet Card (Switch + Power usage)
+- 3/1 Binary Sensor with Alert Card (Fire, Movement)
+- 3/1 Switch Card (Fan, Heater)
+- 4/1 Binary Sensor with Alert Card (Fire, Movement)
+- 4/1 Switch Card (Fan, Heater)
+- 4/1 Analog Sensor Card with Minimalistic use of the Segmented Arc
+- 4/1 Analog Sensor Card with Minimalistic use of the Segmented Arc and 24 hour history bar as background.
+
+The 4/1 cards contains less information, or things are combined (no explicit switch, but using part of card as the switch), and use a more minimalistic approach.
+
+[Swiss Army Knife Functional Cards 12 Half Width Overview D06 Light Off]: ../assets/screenshots/sak-functional-cards-12-half-width-overview-d06-light-off.png
+![Swiss Army Knife Functional Cards 12 Half Width Overview D06 Light Off]
+_Light example with switches/alerts OFF using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Half Width Overview D06 Light On]: ../assets/screenshots/sak-functional-cards-12-half-width-overview-d06-light-on.png
+![Swiss Army Knife Functional Cards 12 Half Width Overview D06 Light On]
+_Light example with switches/alerts ON using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Half Width Overview D06 Dark Off]: ../assets/screenshots/sak-functional-cards-12-half-width-overview-d06-dark-off.png
+![Swiss Army Knife Functional Cards 12 Half Width Overview D06 Dark Off]
+_Dark example with switches/alerts OFF using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Half Width Overview D06 Dark On]: ../assets/screenshots/sak-functional-cards-12-half-width-overview-d06-dark-on.png
+![Swiss Army Knife Functional Cards 12 Half Width Overview D06 Dark On]
+_Dark example with switches/alerts ON using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+###Third Width Cards
+[Swiss Army Knife Functional Cards 12 Third Width Overview D06 Light Off]: ../assets/screenshots/sak-functional-cards-12-third-width-overview-d06-light-off.png
+![Swiss Army Knife Functional Cards 12 Third Width Overview D06 Light Off]
+_Light example with switches/alerts OFF using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Third Width Overview D06 Light On]: ../assets/screenshots/sak-functional-cards-12-third-width-overview-d06-light-on.png
+![Swiss Army Knife Functional Cards 12 Third Width Overview D06 Light On]
+_Light example with switches/alerts ON using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Third Width Overview D06 Dark Off]: ../assets/screenshots/sak-functional-cards-12-third-width-overview-d06-dark-off.png
+![Swiss Army Knife Functional Cards 12 Third Width Overview D06 Dark Off]
+_Dark example with switches/alerts OFF using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+[Swiss Army Knife Functional Cards 12 Third Width Overview D06 Dark On]: ../assets/screenshots/sak-functional-cards-12-third-width-overview-d06-dark-on.png
+![Swiss Army Knife Functional Cards 12 Third Width Overview D06 Dark On]
+_Dark example with switches/alerts ON using [HA Material 3 theme d06 (Teal blue)][ham3-d06-url]_
+
+##:sak-sak-logo: How to
+
+
 
 The animated version looks like this:
 ![AmoebeLabs Swiss Army Knife Custom Card Example 12 Cards]
-
-
-Current implementation:
-
-![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light Off]
-
-![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Light On]
-
-And the dark variants with switches / alerts ON:
-
-![AmoebeLabs Swiss Army Knife Functional Cards Overview 12 D06 Dark On]
 
 And using a Purple Material 3 theme:
 
