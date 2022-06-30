@@ -32,6 +32,7 @@ The same holds true about using CSS Classes:
 
 Either way: you will get your functional cards!
 
+!!! Info "This section serves as an example of functional cards, not as a starting point to win a Red-Dot Award!"
 
 ##:sak-sak-logo: Step 1: Choose your look & feel
 

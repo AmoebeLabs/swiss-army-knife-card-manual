@@ -29,7 +29,7 @@ The 'switch' can be recognized by the secondary theme color when in 'off' positi
 - Left part of badge:
     - Acts as button and has a secondary theme color
     - Contains the entity icon
-    - Has a line below the icon as a sort of button indicator
+    - Contains a little switch to indicate that this part of the badge functions as a button
 - Right part of badge:
     - Contains the entity name
     - And the entity state below it

@@ -129,14 +129,17 @@ nav:
     - The step to Functional Cards:
       - How to create functional cards: design/how-to-create-functional-cards.md
       - Full Width Cards:
-        - Airvisual sensors: design/functional-card-full-width-airvisual.md
-        - Environment sensors: design/functional-card-full-width-environment-sensor.md
-        - Server Statistics: design/functional-card-full-width-server-statistics-sensor.md
+        - Airvisual Card: design/functional-card-full-width-airvisual-card.md
+        - Environment Card: design/functional-card-full-width-environment-card.md
+        - Server Card: design/functional-card-full-width-server-statistics-card.md
       - Half Width Cards:
-        - Power Outlet sensors: design/functional-card-half-width-power-outlet-sensor.md
-      - Small, Third Width Cards:
-        - Binary Sensor with Alert: design/functional-card-third-width-binary-sensor-alert.md
-        - Switch Sensor: design/functional-card-third-width-switch-sensor.md
+        - Sensor Card: design/functional-card-half-width-sensor-cards.md
+        - Binary Card with Alert: design/functional-card-half-width-binary-sensor-alert-card.md
+        - Power Outlet Cards: design/functional-card-half-width-power-outlet-card.md
+        - Switch Card: design/functional-card-half-width-switch-card.md
+      - Third Width Cards:
+        - Binary Card with Alert: design/functional-card-third-width-binary-sensor-alert-card.md
+        - Switch Card: design/functional-card-third-width-switch-card.md
   - Basics:
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
