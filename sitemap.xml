@@ -86,17 +86,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-airvisual/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-airvisual-card/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-environment-sensor/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-environment-card/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-server-statistics-sensor/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-full-width-server-statistics-card/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-half-width-binary-sensor-alert-card/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -106,17 +111,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-half-width-power-outlet-sensor/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-half-width-power-outlet-card/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-third-width-binary-sensor-alert/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-half-width-sensor-cards/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-third-width-switch-sensor/</loc>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-half-width-switch-card/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-third-width-binary-sensor-alert-card/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-third-width-switch-card/</loc>
          <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
