@@ -16,7 +16,19 @@ tags:
 ##:sak-sak-logo: Visualization
 
 ####Card:
-
+  - First column:
+      - Contains the 'half circle' design element
+      - An icon that shows the entity
+      - Name and Secondary Info
+      - Vertical Line as separator
+  - Second column:
+      - CPU Load with icon, state and segemented arc
+      - Memory Used with icon, state and segemented arc
+      - Disk Used with icon, state and segemented arc
+      - System 1minute Load with icon, state and segemented arc
+  
+##:sak-sak-logo: Interaction
+- All tools connected to an entity do show by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: YAML Definition
 

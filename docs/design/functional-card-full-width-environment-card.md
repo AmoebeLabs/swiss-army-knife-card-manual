@@ -16,7 +16,21 @@ tags:
 ##:sak-sak-logo: Visualization
 
 ####Card:
-
+  - First column:
+      - Contains the 'half circle' design element
+      - An icon that shows the entity
+      - Name and Secondary Info
+      - Vertical Line as separator
+  - Second column:
+      - Temperature with icon, state and segemented arc
+      - Humidty with icon, state and segemented arc
+      - Pressure with icon, state and segemented arc
+  - Third column:
+      - Battery with icon, state and segmented arc
+      - Linkquality with icon, state and segmented arc
+  
+##:sak-sak-logo: Interaction
+- All tools connected to an entity do show by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: YAML Definition
 

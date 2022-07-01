@@ -16,11 +16,268 @@ tags:
 ##:sak-sak-logo: Visualization
 
 ####Card:
-
+  - First column:
+      - Contains the 'half circle' design element
+      - An icon that shows the entity
+      - Name and Secondary Info
+      - Vertical Line as separator
+  - Second column:
+      - Animated, state dependent AQI Icon
+      - AQI state
+      - Segmented Arc with colorstop
+      - Vertical Line as separator
+  - Third column:
+      - Text "Last 24 hours"
+      - 24 hour history
+  
+##:sak-sak-logo: Interaction
+- All tools connected to an entity do show by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: YAML Definition
 
+??? Info "Full definition of card"
+    ```yaml linenums="1"
+        - type: 'custom:swiss-army-knife-card'
+          entities:
+            - entity: sensor.u_s_air_quality_index
+              name: 'Tha Moon'
+            - entity: sensor.u_s_air_pollution_level
+            - entity: sensor.u_s_air_quality_index
+              secondary_info: last_changed
+              format: relative
 
+          # Define aspect ratio
+          aspectratio: 6/1
+
+          layout:
+            styles:
+              card:
+              toolsets:
+              
+            toolsets:
+              # ================================================================
+              - toolset: line1
+                position:
+                  cx: 200
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: line
+                    position:
+                      cx: 50
+                      cy: 50
+                      orientation: vertical
+                      length: 50
+                    styles:
+                      line:
+                        fill: var(--primary-text-color)
+                        opacity: 0.5
+
+              # ================================================================
+              - toolset: line2
+                position:
+                  cx: 400
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: line
+                    position:
+                      cx: 50
+                      cy: 50
+                      orientation: vertical
+                      length: 50
+                    styles:
+                      line:
+                        fill: var(--primary-text-color)
+                        opacity: 0.5
+
+
+              # ================================================================
+              - toolset: half-circle
+                position:
+                  cx: 0                             # Center on cards border 
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: circle
+                    position:
+                      cx: 50
+                      cy: 50
+                      radius: 48
+                    styles:
+                      circle:
+                        fill: none
+                        stroke: var(--theme-sys-color-secondary)
+                        stroke-width: 3em
+                        opacity: 0.5
+
+              # ================================================================
+              - toolset: column-icon
+                position:
+                  cx: 25
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: icon
+                    position:
+                      cx: 50
+                      cy: 50
+                      align: center
+                      icon_size: 30
+                    entity_index: 0
+                    styles:
+                      icon:
+                        fill: var(--theme-sys-color-secondary)
+
+              - toolset: column-name
+                position:
+                  cx: 120
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: name
+                    position:
+                      cx: 50
+                      cy: 50
+                    entity_index: 0
+                    styles:
+                      name:
+                        text-anchor: middle
+                        font-size: 20em
+                        font-weight: 700
+                  # ------------------------------------------------------------
+                  - type: state
+                    position:
+                      cx: 50
+                      cy: 80
+                    entity_index: 2
+                    show:
+                      uom: none
+                    styles:
+                      state:
+                        text-anchor: middle
+                        font-size: 14em
+                        font-weight: 500
+                        opacity: 0.7
+
+              - toolset: column-state
+                position:
+                  cx: 300
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: icon
+                    position:
+                      cx: 25
+                      cy: 25
+                      align: end
+                      icon_size: 30
+                    entity_index: 1
+                    styles:
+                      icon:
+                        fill: var(--theme-sys-color-secondary)
+                  # ------------------------------------------------------------
+                  - type: state
+                    position:
+                      cx: 50
+                      cy: 25
+                    entity_index: 0
+                    styles:
+                      state:
+                        text-anchor: start
+                        font-size: 25em
+                        font-weight: 700
+                        fill: var(--primary-text-color)
+                      uom:
+                        fill: var(--primary-text-color)
+                        font-weight: 700
+
+                  # ------------------------------------------------------------ 
+                  - type: 'segarc'
+                    id: 0
+                    position:
+                      cx: 50
+                      cy: 70
+                      start_angle: 190
+                      end_angle: 170
+                      width: 8
+                      radius_x: 405         # 20 degrees = 1/9 = 45*9 = 405
+                      radius_y: 1
+                    entity_index: 0
+                    scale:
+                      min: 0
+                      max: 300
+                      width: 6
+                      offset: 12
+                    show:
+                      scale: true
+                      style: 'colorstops'
+                    segments:
+                      colorstops:
+                        gap: 0.1
+                        colors:
+                          0: '#A8E05F'
+                          51: '#FDD74B'
+                          101: '#FE9B57'
+                          151: '#FE6A69'
+                          201: '#A97ABC'
+                          301: '#A87383'
+                    styles:
+                      foreground:
+                        fill: darkgrey
+                      background:
+                        fill: var(--theme-sys-elevation-surface-neutral5)
+
+              - toolset: column-history
+                position:
+                  cx: 500
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: text
+                    position:
+                      orientation: vertical
+                      cx: 50
+                      cy: 20
+                    text: "Last 24 hours"
+                    styles:
+                      text:
+                        text-anchor: middle
+                        font-size: 15em
+                        font-weight: 700
+
+                  # ------------------------------------------------------------
+                  - type: bar
+                    id: 1
+                    entity_index: 0
+                    position:
+                      orientation: vertical
+                      cx: 50
+                      cy: 60
+                      width: 150
+                      height: 40
+                      margin: 1
+                    hours: 24
+                    barhours: 1
+                    show:
+                      style: 'colorstops'
+                    colorstops:
+                      fill: true
+                      colors:
+                        0: '#A8E05F'
+                        51: '#FDD74B'
+                        101: '#FE9B57'
+                        151: '#FE6A69'
+                        201: '#A97ABC'
+                        301: '#A87383'
+                    styles:
+                      bar:
+                        stroke-linecap: square
+
+    ```
+
+##:sak-sak-logo: Usage
+For use / re-use, use decluttering card etc.
 
 <!-- Image references -->
 
