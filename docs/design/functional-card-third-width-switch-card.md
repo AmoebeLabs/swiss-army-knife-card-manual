@@ -88,62 +88,80 @@ Right part of badge:
                             pointer-events: none        # Disable user interaction
     ```
 
-??? example "Entity Icon and Switch on Left part of Badge"
+??? example "Animated, state dependent Entity Icon"
     ```yaml linenums="1"
-                  - toolset: column-icon
+              - toolset: column-icon
+                position:
+                  cx: 37.5                           # On 12.5% f width
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: icon
                     position:
-                      cx: 37.5                           # On 12.5% f width
+                      cx: 50
                       cy: 50
-                    tools:
-                      # ------------------------------------------------------------
-                      - type: icon
-                        position:
-                          cx: 50
-                          cy: 50
-                          align: center
-                          icon_size: 45
-                        entity_index: 0
-                        animations:
-                          - state: 'on'
-                            icon: 'mdi:fan'
-                            styles:
-                              icon:
-                                animation: spin 3s linear infinite
-                                fill: var(--primary-background-color)
-                          - state: 'off'
-                            icon: 'mdi:fan'
-                            styles:
-                              icon:
-                                # fill: var(--theme-sys-color-on-secondary-container)
-                                fill: var(--theme-sys-color-secondary)
+                      align: center
+                      icon_size: 45
+                    entity_index: 0
+                    animations:
+                      - state: 'on'
+                        icon: 'mdi:fan'
                         styles:
                           icon:
+                            animation: spin 3s linear infinite
                             fill: var(--primary-background-color)
-                            opacity: 0.9
-                            pointer-events: none        # Disable user interaction
-                            # transition: fill 1s ease
-
-                      # ------------------------------------------------------------
-                      - type: line
-                        position:
-                          cx: 50
-                          cy: 85
-                          orientation: horizontal
-                          length: 25
-                        entity_index: 0
-                        animations:
-                          - state: 'on'
-                            styles:
-                              line:
-                                animation: headShake 1s linear infinite
-                                stroke: var(--theme-sys-color-secondary-container)
-                          - state: 'off'
-                            styles:
-                              line:
-                                stroke: var(--theme-sys-color-secondary)
+                      - state: 'off'
+                        icon: 'mdi:fan'
                         styles:
-                          line:
-                            stroke-width: 6em
+                          icon:
+                            # fill: var(--theme-sys-color-on-secondary-container)
+                            fill: var(--theme-sys-color-secondary)
+                    styles:
+                      icon:
+                        fill: var(--primary-background-color)
+                        opacity: 0.9
+                        pointer-events: none        # Disable user interaction
+                        # transition: fill 1s ease
+    ```
+??? example "Switch"
+    ```yaml linenums="1"
+              - toolset: switch
+                position:
+                  cx: 37.5                           # On 1/3 of card width
+                  cy: 85
+                  scale: 2
+                tools:
+                  # ------------------------------------------------------------
+                  - type: switch
+                    position:
+                      cx: 50
+                      cy: 50
+                      orientation: 'horizontal'
+                      track:
+                        width: 15
+                        height: 5
+                        radius: 2.5
+                      thumb:
+                        width: 3
+                        height: 3
+                        radius: 2.5
+                        offset: 4.5
+                    entity_index: 0
+                    user_actions:
+                      tap_action:
+                        haptic: light
+                        actions:
+                          - action: call-service
+                            service: switch.toggle
+                    styles:
+                      track:
+                        --switch-checked-track-color: var(--primary-background-color)
+                        --switch-unchecked-track-color: var(--theme-sys-color-secondary)
+                        --switch-checked-button-color: var(--primary-color)
+                        --switch-unchecked-button-color: var(--primary-background-color)
+                      thumb:
+                        --thumb-stroke: 'var(--primary-background-color)'
+
     ```
 
 ??? example "Entity Name and Secondary Info"
@@ -267,33 +285,48 @@ Right part of badge:
                         pointer-events: none        # Disable user interaction
                         # transition: fill 1s ease
 
+              # ================================================================
+              - toolset: switch
+                position:
+                  cx: 37.5                           # On 1/3 of card width
+                  cy: 85
+                  scale: 2
+                tools:
                   # ------------------------------------------------------------
-                  - type: line
+                  - type: switch
                     position:
                       cx: 50
-                      cy: 85
-                      orientation: horizontal
-                      length: 25
+                      cy: 50
+                      orientation: 'horizontal'
+                      track:
+                        width: 15
+                        height: 5
+                        radius: 2.5
+                      thumb:
+                        width: 3
+                        height: 3
+                        radius: 2.5
+                        offset: 4.5
                     entity_index: 0
-                    animations:
-                      - state: 'on'
-                        styles:
-                          line:
-                            animation: headShake 1s linear infinite
-                            stroke: var(--theme-sys-color-secondary-container)
-                      - state: 'off'
-                        styles:
-                          line:
-                            stroke: var(--theme-sys-color-secondary)
+                    user_actions:
+                      tap_action:
+                        haptic: light
+                        actions:
+                          - action: call-service
+                            service: switch.toggle
                     styles:
-                      line:
-                        stroke-width: 6em
+                      track:
+                        --switch-checked-track-color: var(--primary-background-color)
+                        --switch-unchecked-track-color: var(--theme-sys-color-secondary)
+                        --switch-checked-button-color: var(--primary-color)
+                        --switch-unchecked-button-color: var(--primary-background-color)
+                      thumb:
+                        --thumb-stroke: 'var(--primary-background-color)'
 
-                    
               # ================================================================
               - toolset: column-name
                 position:
-                  cx: 187.5                 # Left part = 75, so 75+(300-75)/2
+                  cx: 100                   # Left part = 75, so 75+(300-75)/2
                   cy: 50
                 tools:
                   # ------------------------------------------------------------
@@ -304,7 +337,7 @@ Right part of badge:
                     entity_index: 0
                     styles:
                       name:
-                        text-anchor: middle
+                        text-anchor: start
                         font-size: 30em
                         font-weight: 700
                         opacity: 1
@@ -318,11 +351,10 @@ Right part of badge:
                       uom: none
                     styles:
                       state:
-                        text-anchor: middle
+                        text-anchor: start
                         font-size: 16em
                         font-weight: 500
                         opacity: 0.7
-
     ```
 
 ##:sak-sak-logo: Usage
