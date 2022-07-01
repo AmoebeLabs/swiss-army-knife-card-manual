@@ -11,17 +11,19 @@ tags:
 <!-- GT/GL -->
 
 ## Two Cards with 3/1 aspect ratio:
-
+<div style="max-width:800px;" markdown>
 ![Swiss Army Knife Functional Card Switch Sensor D06 Light Off]
 ![Swiss Army Knife Functional Card Switch Sensor D06 Light On]
 ![Swiss Army Knife Functional Card Switch Sensor D06 Dark Off]
 ![Swiss Army Knife Functional Card Switch Sensor D06 Dark On]
-
+</div>
 ## Card with 4/1 aspect ratio:
+<div style="max-width:800px;" markdown>
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Light Off]
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Light On]
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Dark Off]
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Dark On]
+</div>
 
 ##:sak-sak-logo: Visualization
 These cards are half width cards for switches. Either a switch or a light entity in most cases.
