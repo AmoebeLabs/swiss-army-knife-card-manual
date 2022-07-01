@@ -13,7 +13,7 @@ tags:
 ![Swiss Army Knife Functional Card Environment Sensor D06 Dark]
 
 <!-- GT/GL -->
-##:sak-sak-logo: Description
+##:sak-sak-logo: Visualization
 
 ####Card:
 

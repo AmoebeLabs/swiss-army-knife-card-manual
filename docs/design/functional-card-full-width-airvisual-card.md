@@ -13,7 +13,7 @@ tags:
 ![Swiss Army Knife Functional Card AirVisual D06 Light]
 ![Swiss Army Knife Functional Card AirVisual D06 Dark]
 
-##:sak-sak-logo: Description
+##:sak-sak-logo: Visualization
 
 ####Card:
 

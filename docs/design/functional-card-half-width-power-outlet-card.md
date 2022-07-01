@@ -15,7 +15,7 @@ tags:
 ![Swiss Army Knife Functional Card Power Outlet D06 Dark On]
 
 <!-- GT/GL -->
-##:sak-sak-logo: Description
+##:sak-sak-logo: Visualization
 
 ####Card:
 

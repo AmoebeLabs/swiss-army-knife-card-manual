@@ -10,8 +10,6 @@ tags:
 ---
 <!-- GT/GL -->
 
-These cards are meant to be used 2 in a row. So the below example has 1 filler cards to complement the single card in this horizontal row.
-
 ## Two Cards with 3/1 aspect ratio:
 
 ![Swiss Army Knife Functional Card Switch Sensor D06 Light Off]
@@ -25,7 +23,7 @@ These cards are meant to be used 2 in a row. So the below example has 1 filler c
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Dark Off]
 ![Swiss Army Knife Functional Card Switch Sensor2 D06 Dark On]
 
-##:sak-sak-logo: Description
+##:sak-sak-logo: Visualization
 These cards are half width cards for switches. Either a switch or a light entity in most cases.
 
 === "First 3/1 Card"
@@ -45,155 +43,166 @@ These cards are half width cards for switches. Either a switch or a light entity
         - Contains a little switch to indicate that this part of the badge functions as a button
     - Right part of badge:
         - Contains the entity name
-        - And the entity state below it
+        - And the Secondary Info below it
+
+##:sak-sak-logo: Interaction
+
+=== "First 3/1 Card"
+    - Has a switch tool that toggles the state of the entity
+    - All other tools connected to an entity do show by default the "more-info" dialog once clicked.    
+=== "Second 3/1 Card"
+    - Has an icon instead of a switch tool that toggles the state of the entity
+    - All other tools connected to an entity do show by default the "more-info" dialog once clicked.    
+=== "4/1 Card"
+    - Left part of badge:
+        - The whole left part functions as a button to toggle the binary sensor entity:
+            - Left part has a user action
+            - The icon has `pointer-events: none` to pass events to the badge behind it
+            - The switch tool has its own user action, as - due to a bug - this one won't accept `pointer-events: none` to pass events to the badge behind it.
+    - Right part of badge:
+        - All tools connected to an entity do show by default the "more-info" dialog once clicked.
 
 ##:sak-sak-logo: YAML Definition
 
 === "First 3/1 Card"
-    ### Half Circle
-
-    ```yaml linenums="1"
-              - toolset: half-circle
-                position:
-                  cx: 0                             # Center on cards border 
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: circle
+    ??? example "Animated, state dependent Half Circle"
+        ```yaml linenums="1"
+                  - toolset: half-circle
                     position:
-                      cx: 50
+                      cx: 0                             # Center on cards border 
                       cy: 50
-                      radius: 50
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: circle
+                        position:
+                          cx: 50
+                          cy: 50
+                          radius: 50
+                        entity_index: 0
+                        animations:
+                          - state: 'on'
+                            styles:
+                              circle:
+                                fill: var(--theme-sys-color-primary)
+                          - state: 'off'
+                            styles:
+                              circle:
+                                fill: var(--theme-sys-elevation-surface-neutral4)
                         styles:
                           circle:
-                            fill: var(--theme-sys-color-primary)
-                      - state: 'off'
-                        styles:
-                          circle:
-                            fill: var(--theme-sys-elevation-surface-neutral4)
-                    styles:
-                      circle:
-                        stroke: none
-                        # transition: fill 1s ease
-    ```
+                            stroke: none
+                            # transition: fill 1s ease
+        ```
 
-    ### Entity Icon 
-    On the left I placed the entity icon, and a line as indication that this part is used as a switch to toggle the Fan. The secondary color should also indicate the user that this part acts like a button!
-
-    ```yaml linenums="1"
-              - toolset: column-icon
-                position:
-                  cx: 25
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
+    ??? example "Animated, state dependent Entity Icon"
+        ```yaml linenums="1"
+                  - toolset: column-icon
                     position:
-                      cx: 50
+                      cx: 25
                       cy: 50
-                      align: center
-                      icon_size: 35
-                    icon: mdi:fan
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: icon
+                        position:
+                          cx: 50
+                          cy: 50
+                          align: center
+                          icon_size: 35
+                        icon: mdi:fan
+                        entity_index: 0
+                        animations:
+                          - state: 'on'
+                            styles:
+                              icon:
+                                animation: spin 3s linear infinite
+                                fill: var(--primary-background-color)
+                          - state: 'off'
+                            styles:
+                              icon:
+                                fill: var(--theme-sys-color-secondary)
                         styles:
                           icon:
-                            animation: spin 3s linear infinite
                             fill: var(--primary-background-color)
-                      - state: 'off'
+                            opacity: 0.9
+                            # transition: fill 1s ease
+        ```
+
+    ??? example "Name and Secondary Info"
+        ```yaml linenums="1"
+                  - toolset: column-name
+                    position:
+                      cx: 120
+                      cy: 50
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: name
+                        position:
+                          cx: 50
+                          cy: 50
+                        entity_index: 0
                         styles:
-                          icon:
-                            fill: var(--theme-sys-color-secondary)
-                    styles:
-                      icon:
-                        fill: var(--primary-background-color)
-                        opacity: 0.9
-                        # transition: fill 1s ease
+                          name:
+                            text-anchor: middle
+                            font-size: 25em
+                            font-weight: 700
+                            opacity: 1
+                      # ------------------------------------------------------------
+                      - type: state
+                        position:
+                          cx: 50
+                          cy: 80
+                        entity_index: 1
+                        show:
+                          uom: none
+                        styles:
+                          state:
+                            text-anchor: middle
+                            font-size: 14em
+                            font-weight: 500
+                            opacity: 0.7
+        ``` 
 
-    ```
-    ### Name and state
-    Display entity name and below it the entity state.
-    Both are positioned in the middle of the right part of the badge tool.
-    ```yaml linenums="1"
-              - toolset: column-name
-                position:
-                  cx: 120
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: name
+    ??? example "Vertical line as separator"
+        ```yaml linenums="1"
+                  - toolset: line1
                     position:
-                      cx: 50
+                      cx: 200                           # On 1/3 of card width
                       cy: 50
-                    entity_index: 0
-                    styles:
-                      name:
-                        text-anchor: middle
-                        font-size: 25em
-                        font-weight: 700
-                        opacity: 1
-                  # ------------------------------------------------------------
-                  - type: state
-                    position:
-                      cx: 50
-                      cy: 80
-                    entity_index: 1
-                    show:
-                      uom: none
-                    styles:
-                      state:
-                        text-anchor: middle
-                        font-size: 14em
-                        font-weight: 500
-                        opacity: 0.7
-
-    ``` 
-
-    ### Vertical line as separator
-    ```yaml linenums="1"
-              - toolset: line1
-                position:
-                  cx: 200                           # On 1/3 of card width
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: line
-                    position:
-                      cx: 50
-                      cy: 50
-                      orientation: vertical
-                      length: 50
-                    styles:
-                      line:
-                        fill: var(--primary-text-color)
-                        opacity: 0.5
-    ```
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: line
+                        position:
+                          cx: 50
+                          cy: 50
+                          orientation: vertical
+                          length: 50
+                        styles:
+                          line:
+                            fill: var(--primary-text-color)
+                            opacity: 0.5
+        ```
     
-    ### Switch
-    ```yaml linenums="1"
-              - toolset: switch
-                position:
-                  cx: 250                           # On 1/3 of card width
-                  cy: 50
-                  scale: 3
-                tools:
-                  # ------------------------------------------------------------
-                  - type: switch
+    ??? example "Switch"
+        ```yaml linenums="1"
+                  - toolset: switch
                     position:
-                      cx: 50
+                      cx: 250                           # On 1/3 of card width
                       cy: 50
-                    entity_index: 0
-                    user_actions:
-                      tap_action:
-                        haptic: light
-                        actions:
-                          - action: call-service
-                            service: light.toggle
-    ```
+                      scale: 3
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: switch
+                        position:
+                          cx: 50
+                          cy: 50
+                        entity_index: 0
+                        user_actions:
+                          tap_action:
+                            haptic: light
+                            actions:
+                              - action: call-service
+                                service: light.toggle
+        ```
 
 
     ??? Info "Full definition of card"
@@ -343,166 +352,162 @@ These cards are half width cards for switches. Either a switch or a light entity
 
 
 === "Second 3/1 Card"
-    ### Half Circle
-    ```yaml linenums="1"
-              - toolset: half-circle
-                position:
-                  cx: 0                             # Center on cards border 
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: circle
+    ??? example "Animated, state dependent Half Circle"
+        ```yaml linenums="1"
+                  - toolset: half-circle
                     position:
-                      cx: 50
+                      cx: 0                             # Center on cards border 
                       cy: 50
-                      radius: 50
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: circle
+                        position:
+                          cx: 50
+                          cy: 50
+                          radius: 50
+                        entity_index: 0
+                        animations:
+                          - state: 'on'
+                            styles:
+                              circle:
+                                fill: var(--theme-sys-color-primary)
+                          - state: 'off'
+                            styles:
+                              circle:
+                                fill: var(--theme-sys-elevation-surface-neutral4)
+                                # opacity: 0.4
                         styles:
                           circle:
-                            fill: var(--theme-sys-color-primary)
-                      - state: 'off'
-                        styles:
-                          circle:
-                            fill: var(--theme-sys-elevation-surface-neutral4)
-                            # opacity: 0.4
-                    styles:
-                      circle:
-                        stroke: none
-                        # transition: fill 1s ease
-    ```
+                            stroke: none
+                            # transition: fill 1s ease
+        ```
 
-    ### Entity Icon 
-    On the left I placed the entity icon
-
-    ```yaml linenums="1"
-              - toolset: column-icon
-                position:
-                  cx: 25
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
+    ??? example "Animated, state dependent Entity Icon" 
+        ```yaml linenums="1"
+                  - toolset: column-icon
                     position:
-                      cx: 50
+                      cx: 25
                       cy: 50
-                      align: center
-                      icon_size: 30
-                    icon: mdi:35
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
-                        icon: mdi:radiator
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: icon
+                        position:
+                          cx: 50
+                          cy: 50
+                          align: center
+                          icon_size: 30
+                        icon: mdi:35
+                        entity_index: 0
+                        animations:
+                          - state: 'on'
+                            icon: mdi:radiator
+                            styles:
+                              icon:
+                                # animation: pulse 3s linear infinite
+                                fill: var(--primary-background-color)
+                          - state: 'off'
+                            icon: mdi:radiator-off
+                            styles:
+                              icon:
+                                fill: var(--theme-sys-color-secondary)
                         styles:
                           icon:
-                            # animation: pulse 3s linear infinite
                             fill: var(--primary-background-color)
-                      - state: 'off'
-                        icon: mdi:radiator-off
-                        styles:
-                          icon:
-                            fill: var(--theme-sys-color-secondary)
-                    styles:
-                      icon:
-                        fill: var(--primary-background-color)
-                        opacity: 0.9
-                        # transition: fill 1s ease
-    ```
-    ### Name and state
-    Display entity name and below it the entity state.
-    Both are positioned in the middle of the right part of the badge tool.
-    ```yaml linenums="1"
-              - toolset: column-name
-                position:
-                  cx: 120
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: name
-                    position:
-                      cx: 50
-                      cy: 50
-                    entity_index: 0
-                    styles:
-                      name:
-                        text-anchor: middle
-                        font-size: 25em
-                        font-weight: 700
-                        opacity: 1
-                  # ------------------------------------------------------------
-                  - type: state
-                    position:
-                      cx: 50
-                      cy: 80
-                    entity_index: 1
-                    show:
-                      uom: none
-                    styles:
-                      state:
-                        text-anchor: middle
-                        font-size: 14em
-                        font-weight: 500
-                        opacity: 0.7
-    ``` 
+                            opacity: 0.9
+                            # transition: fill 1s ease
+        ```
 
-    ### Vertical line as separator
-    ```yaml linenums="1"
-              - toolset: line1
-                position:
-                  cx: 200                           # On 1/3 of card width
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: line
+    ??? example "Name and Secondary Info"
+        ```yaml linenums="1"
+                  - toolset: column-name
                     position:
-                      cx: 50
+                      cx: 120
                       cy: 50
-                      orientation: vertical
-                      length: 50
-                    styles:
-                      line:
-                        fill: var(--primary-text-color)
-                        opacity: 0.5
-    ```
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: name
+                        position:
+                          cx: 50
+                          cy: 50
+                        entity_index: 0
+                        styles:
+                          name:
+                            text-anchor: middle
+                            font-size: 25em
+                            font-weight: 700
+                            opacity: 1
+                      # ------------------------------------------------------------
+                      - type: state
+                        position:
+                          cx: 50
+                          cy: 80
+                        entity_index: 1
+                        show:
+                          uom: none
+                        styles:
+                          state:
+                            text-anchor: middle
+                            font-size: 14em
+                            font-weight: 500
+                            opacity: 0.7
+        ``` 
+
+    ??? example "Vertical line as separator"
+        ```yaml linenums="1"
+                  - toolset: line1
+                    position:
+                      cx: 200                           # On 1/3 of card width
+                      cy: 50
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: line
+                        position:
+                          cx: 50
+                          cy: 50
+                          orientation: vertical
+                          length: 50
+                        styles:
+                          line:
+                            fill: var(--primary-text-color)
+                            opacity: 0.5
+        ```
     
-    ### Icon as button
-    ```yaml linenums="1"
-              - toolset: button-like
-                position:
-                  cx: 250
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
+    ??? example "Animated Icon as button"
+        ```yaml linenums="1"
+                  - toolset: button-like
                     position:
-                      cx: 50
+                      cx: 250
                       cy: 50
-                      align: center
-                      icon_size: 60
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
-                        icon: mdi:toggle-switch-variant
+                    tools:
+                      # ------------------------------------------------------------
+                      - type: icon
+                        position:
+                          cx: 50
+                          cy: 50
+                          align: center
+                          icon_size: 60
+                        entity_index: 0
+                        animations:
+                          - state: 'on'
+                            icon: mdi:toggle-switch-variant
+                            styles:
+                              icon:
+                                fill: var(--theme-sys-color-primary)
+                          - state: 'off'
+                            icon: mdi:toggle-switch-variant-off
+                            styles:
+                              icon:
+                                fill: var(--theme-sys-color-secondary-container)
+                        user_actions:
+                          tap_action:
+                            haptic: light
+                            actions:
+                              - action: call-service
+                                service: light.toggle
                         styles:
                           icon:
-                            fill: var(--theme-sys-color-primary)
-                      - state: 'off'
-                        icon: mdi:toggle-switch-variant-off
-                        styles:
-                          icon:
-                            fill: var(--theme-sys-color-secondary-container)
-                    user_actions:
-                      tap_action:
-                        haptic: light
-                        actions:
-                          - action: call-service
-                            service: light.toggle
-                    styles:
-                      icon:
-                        fill: var(--primary-background-color)
-
-    ```
+                            fill: var(--primary-background-color)
+        ```
 
     ??? Info "Full definition of card"
         ```yaml linenums="1"
