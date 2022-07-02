@@ -7,6 +7,7 @@ hide:
 tags:
   - Design
   - Functional Card
+  - Environment Card
 ---
 
 ![Swiss Army Knife Functional Card Environment Sensor D06 Light](../assets/screenshots/sak-functional-card-12-environment-sensor-theme-d06-light.png){width="600"}

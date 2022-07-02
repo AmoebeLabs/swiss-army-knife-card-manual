@@ -7,7 +7,7 @@ hide:
 tags:
   - Design
   - Functional Card
-  - Server Statistics Card
+  - Power Outlet Card
 ---
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization

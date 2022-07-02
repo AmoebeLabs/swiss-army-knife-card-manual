@@ -11,24 +11,24 @@ tags:
 ---
 <!-- GT/GL -->
 
-![Swiss Army Knife Functional Card Binary Sensor With Alert2 D06 Light Off](../assets/screenshots/sak-functional-card-12-binary-sensor-alert2-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Card Binary Sensor With Alert2 D06 Light On](../assets/screenshots/sak-functional-card-12-binary-sensor-alert2-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Card Binary Sensor With Alert2 D06 Dark Off](../assets/screenshots/sak-functional-card-12-binary-sensor-alert2-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Card Binary Sensor With Alert2 D06 Dark On](../assets/screenshots/sak-functional-card-12-binary-sensor-alert2-theme-d06-dark-on.png){width="300"}
+![Swiss Army Knife Functional Card Binary Sensor With Alert4 D06 Light Off](../assets/screenshots/sak-functional-card-12-binary-sensor-alert4-theme-d06-light-off.png){width="200"}
+![Swiss Army Knife Functional Card Binary Sensor With Alert4 D06 Light On](../assets/screenshots/sak-functional-card-12-binary-sensor-alert4-theme-d06-light-on.png){width="200"}
+<br>![Swiss Army Knife Functional Card Binary Sensor With Alert4 D06 Dark Off](../assets/screenshots/sak-functional-card-12-binary-sensor-alert4-theme-d06-dark-off.png){width="200"}
+![Swiss Army Knife Functional Card Binary Sensor With Alert4 D06 Dark On](../assets/screenshots/sak-functional-card-12-binary-sensor-alert4-theme-d06-dark-on.png){width="200"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspectratio| Target Size |
 |-|-|-|
-| A card that shows the state of a binary sensor, including an icon as an alert. <br>Nice for doors, windows and occupancy alerts.| 4/1 | Grid with 2 columns |
+| A card that shows the state of a binary sensor, including an icon as an alert. <br>Nice for doors, windows and occupancy alerts.| 3/1 | Grid with 3 columns |
 
 | SAK Tool| Used for |
 |-|-|
-| Circle | The half circle, as the left part of the circle is cutoff by the card. Animated, state dependent|
-| Icon | Entity Icon. Animated, state dependent|
+| Badge | Background of card. Left part is animated, state dependent|
+| Icon | Entity Icon. Animated, state dependent. Red if active|
 | Icon | Alert Icon. Animated, state dependent. Only visible if state is `on`|
 | Name | Name of Entity|
-| State | Secondary Info|
+| State | Secondary Info of Entity|
 | Icon | Stretched battery Icon in the upper left corner of the card. Animated, state dependent. Becomes yellow or blinking red if battery almost dead|
 
 ##:sak-sak-logo: Interaction
@@ -42,7 +42,7 @@ If the below YAML example definition is encapsulated into a decluttering_templat
 
 ```yaml linenums="1"
 - type: custom:decluttering-card
-  template: sak_card_binary_sensor_alert2
+  template: sak_card_binary_sensor_alert4
   variables:
     - ...
 ```
@@ -52,10 +52,10 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 ```yaml linenums="1"
 - type: custom:swiss-army-knife-card
-  template: sak_card_binary_sensor_alert2
+  template: sak_card_binary_sensor_alert4
   entities:
     - entity: binary_sensor.livingroom_movement_occupancy
-      name: 'Livingroom #2'
+      name: 'Livingroom'
     - entity: binary_sensor.livingroom_movement_occupancy
       secondary_info: last_changed
       format: relative
@@ -70,14 +70,14 @@ In the future, SAK will support card templates, and usage would be (I hope) some
         - type: 'custom:swiss-army-knife-card'
           entities:
             - entity: binary_sensor.livingroom_movement_occupancy
-              name: 'Livingroom #2'
+              name: 'Livingroom'
             - entity: binary_sensor.livingroom_movement_occupancy
               secondary_info: last_changed
               format: relative
-            - entity: sensor.livingroom_movement_battery
+            - entity: sensor.studym_iaq_battery
               decimals: 0
           # Define aspect ratio
-          aspectratio: 4/1                          # Card is 300x100 grid
+          aspectratio: 3/1                          # Card is 300x100 grid
 
           layout:
             styles:
@@ -85,34 +85,39 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                 # border-radius: 25em
             toolsets:
               # ================================================================
-              - toolset: half-circle
+              - toolset: badge-background
                 position:
-                  cx: 0                             # Center on cards border 
+                  cx: 150
                   cy: 50
                 tools:
-                  # ------------------------------------------------------------
-                  - type: circle
+                  - type: badge
                     position:
                       cx: 50
                       cy: 50
-                      radius: 50
+                      height: 100
+                      width: 300
+                      ratio: 25
+                      radius: 5
+                      divider: 20
                     entity_index: 0
                     animations:
                       - state: 'on'
                         styles:
-                          circle:
-                            fill: var(--theme-sys-color-secondary-container)
+                          left:
+                            fill: var(--theme-sys-color-primary)
                       - state: 'off'
                         styles:
-                          circle:
-                            fill: var(--theme-sys-elevation-surface-neutral2)
+                          left:
+                            fill: var(--theme-sys-elevation-surface-neutral4)
                     styles:
-                      circle:
-                        stroke: none
+                      left:
+                        fill: grey
+                      right:
+                        fill: none
               # ================================================================
               - toolset: column-icon
                 position:
-                  cx: 25
+                  cx: 37.5
                   cy: 50
                 tools:
                   # ------------------------------------------------------------
@@ -127,19 +132,20 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                       - state: 'on'
                         styles:
                           icon:
-                            fill: var(--theme-sys-color-secondary)
+                            fill: var(--primary-background-color)
                       - state: 'off'
                         styles:
                           icon:
-                            fill: var(--theme-sys-elevation-surface-neutral10)
+                            fill: var(--theme-sys-color-secondary)
                     styles:
                       icon:
+                        fill: var(--primary-background-color)
                         opacity: 0.9
                     
               # ================================================================
               - toolset: alert-icon
                 position:
-                  cx: 40
+                  cx: 75
                   cy: 18
                 tools:
                   # ------------------------------------------------------------
@@ -147,7 +153,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                     position:
                       cx: 50
                       cy: 50
-                      radius: 15
+                      radius: 13
                     entity_index: 0                 # Use state from 0
                     animations:
                       - state: 'on'                 # If ON
@@ -165,7 +171,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                       cx: 50
                       cy: 50
                       align: center
-                      icon_size: 28
+                      icon_size: 25
                     entity_index: 0                 # Use state from 0
                     icon: mdi:alert-circle          # Use alert circle icon
                     animations:
@@ -184,14 +190,14 @@ In the future, SAK will support card templates, and usage would be (I hope) some
               # ================================================================
               - toolset: column-name
                 position:
-                  cx: 70                # Left part = 75, so 75+(300-75)/2
+                  cx: 100
                   cy: 50
                 tools:
                   # ------------------------------------------------------------
                   - type: name
                     position:
                       cx: 50
-                      cy: 37
+                      cy: 50
                     entity_index: 0
                     styles:
                       name:
@@ -199,25 +205,11 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                         font-size: 30em
                         font-weight: 700
                         opacity: 1
-                  # ------------------------------------------------------------
-                  - type: state
-                    position:
-                      cx: 50
-                      cy: 70
-                    entity_index: 1
-                    show:
-                      uom: none
-                    styles:
-                      state:
-                        text-anchor: start
-                        font-size: 26em
-                        font-weight: 500
-                        opacity: 0.7
 
               # ================================================================
               - toolset: battery-icon
                 position:
-                  cx: 370
+                  cx: 270
                   cy: 15
                   scale_y: 1.5                      # Make battery taller
                   rotate: 90
@@ -227,7 +219,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                     position:
                       cx: 50
                       cy: 50
-                      align: end
+                      align: center
                       icon_size: 30
                     entity_index: 2
                     animations:

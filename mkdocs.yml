@@ -128,21 +128,23 @@ nav:
     - How to design your card: design/how-to-design-your-card.md
     - The step to Functional Cards:
       - How to create functional cards: design/how-to-create-functional-cards.md
-    - Examples:
-      - Airvisual Card: design/functional-card-airvisual-card.md
-      - "Binary Card with Alert #1": design/functional-card-binary-sensor-alert1-card.md
-      - "Binary Card with Alert #2": design/functional-card-binary-sensor-alert2-card.md
-      - Environment Card: design/functional-card-environment-card.md
-      - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
-      - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
-      - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md
-      - "Power Outlet Card #4": design/functional-card-power-outlet4-card.md
-      - "Sensor Card #1": design/functional-card-sensor1-card.md
-      - "Sensor Card #2": design/functional-card-sensor2-card.md
-      - Server Card: design/functional-card-server-statistics-card.md
-      - "Switch Card #1": design/functional-card-switch1-card.md
-      - "Switch Card #2": design/functional-card-switch2-card.md
-      - "Switch Card #3": design/functional-card-switch3-card.md
+      - Examples:
+        - Airvisual Card: design/functional-card-airvisual-card.md
+        - "Binary Card with Alert #1": design/functional-card-binary-sensor-alert1-card.md
+        - "Binary Card with Alert #2": design/functional-card-binary-sensor-alert2-card.md
+        - "Binary Card with Alert #3": design/functional-card-binary-sensor-alert3-card.md
+        - "Binary Card with Alert #4": design/functional-card-binary-sensor-alert4-card.md
+        - Environment Card: design/functional-card-environment-card.md
+        - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
+        - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
+        - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md
+        - "Power Outlet Card #4": design/functional-card-power-outlet4-card.md
+        - "Sensor Card #1": design/functional-card-sensor1-card.md
+        - "Sensor Card #2": design/functional-card-sensor2-card.md
+        - Server Card: design/functional-card-server-statistics-card.md
+        - "Switch Card #1": design/functional-card-switch1-card.md
+        - "Switch Card #2": design/functional-card-switch2-card.md
+        - "Switch Card #3": design/functional-card-switch3-card.md
   - Basics:
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
