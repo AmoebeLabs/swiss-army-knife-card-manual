@@ -101,7 +101,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-binary-sensor-alert3-card/</loc>
+         <lastmod>2022-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-binary-sensor-alert4-card/</loc>
+         <lastmod>2022-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-environment-card/</loc>
+         <lastmod>2022-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiss-army-knife-card-manual.amoebelabs.com/design/functional-card-power-outlet1-card/</loc>
          <lastmod>2022-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
