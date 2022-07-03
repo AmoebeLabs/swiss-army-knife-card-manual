@@ -130,11 +130,13 @@ nav:
       - How to create functional cards: design/how-to-create-functional-cards.md
       - Examples:
         - Airvisual Card: design/functional-card-airvisual-card.md
+        - Battery Card: design/functional-card-battery-sensor2-card.md
         - "Binary Card with Alert #1": design/functional-card-binary-sensor-alert1-card.md
         - "Binary Card with Alert #2": design/functional-card-binary-sensor-alert2-card.md
         - "Binary Card with Alert #3": design/functional-card-binary-sensor-alert3-card.md
         - "Binary Card with Alert #4": design/functional-card-binary-sensor-alert4-card.md
         - Environment Card: design/functional-card-environment-card.md
+        - Navigate Card: design/functional-card-navigate-card.md
         - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
         - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
         - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md

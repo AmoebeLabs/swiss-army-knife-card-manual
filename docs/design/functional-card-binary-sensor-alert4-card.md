@@ -1,7 +1,7 @@
 ---
 template: main.html
-title: "Functional Cards: Binary Sensor with Alert Card"
-description: Example of functional card, Binary Sensor with Alert
+title: "Functional Cards: Binary Sensor with Alert Card #4"
+description: "Example of functional card, Binary Sensor with Alert #4"
 hide:
   toc
 tags:
@@ -28,7 +28,6 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Icon | Entity Icon. Animated, state dependent. Red if active|
 | Icon | Alert Icon. Animated, state dependent. Only visible if state is `on`|
 | Name | Name of Entity|
-| State | Secondary Info of Entity|
 | Icon | Stretched battery Icon in the upper left corner of the card. Animated, state dependent. Becomes yellow or blinking red if battery almost dead|
 
 ##:sak-sak-logo: Interaction
