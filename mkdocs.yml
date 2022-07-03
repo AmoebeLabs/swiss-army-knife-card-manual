@@ -129,7 +129,8 @@ nav:
     - The step to Functional Cards:
       - How to create functional cards: design/how-to-create-functional-cards.md
       - Examples:
-        - Airvisual Card: design/functional-card-airvisual-card.md
+        - "Airvisual Card #1": design/functional-card-airvisual1-card.md
+        - "Airvisual Card #2": design/functional-card-airvisual2-card.md
         - Battery Card: design/functional-card-battery-sensor2-card.md
         - "Binary Card with Alert #1": design/functional-card-binary-sensor-alert1-card.md
         - "Binary Card with Alert #2": design/functional-card-binary-sensor-alert2-card.md
