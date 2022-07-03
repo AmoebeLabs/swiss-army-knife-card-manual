@@ -38,7 +38,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Left part of badge | The whole left part functions as a button to toggle the binary sensor entity |
 | Right part of badge | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage
+##:sak-sak-logo: Usage (Not Yet Implemented)
 If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
 
 ```yaml linenums="1"

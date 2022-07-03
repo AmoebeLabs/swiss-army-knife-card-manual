@@ -34,7 +34,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Card | This card navigates to the configured view|
 
-##:sak-sak-logo: Usage
+##:sak-sak-logo: Usage (Not Yet Implemented)
 If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
 
 ```yaml linenums="1"

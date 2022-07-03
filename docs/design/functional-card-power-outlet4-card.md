@@ -42,7 +42,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Left Circle | Toggles the on/off state of the power outlet|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage
+##:sak-sak-logo: Usage (Not Yet Implemented)
 If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
 
 ```yaml linenums="1"

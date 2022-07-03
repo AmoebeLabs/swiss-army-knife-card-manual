@@ -132,16 +132,22 @@ nav:
         - "Airvisual Card #1": design/functional-card-airvisual1-card.md
         - "Airvisual Card #2": design/functional-card-airvisual2-card.md
         - Battery Card: design/functional-card-battery-sensor2-card.md
+        - "Binary Card": design/functional-card-binary-sensor1-card.md
         - "Binary Card with Alert #1": design/functional-card-binary-sensor-alert1-card.md
         - "Binary Card with Alert #2": design/functional-card-binary-sensor-alert2-card.md
         - "Binary Card with Alert #3": design/functional-card-binary-sensor-alert3-card.md
         - "Binary Card with Alert #4": design/functional-card-binary-sensor-alert4-card.md
         - Environment Card: design/functional-card-environment-card.md
+        - Header Card: design/functional-card-header-card.md
+        - Input Boolean Card: design/functional-card-input-boolean-card.md
+        - "Light Card #1": design/functional-card-light1-card.md
+        - "Light Card with slider #2": design/functional-card-light2-card.md
         - Navigate Card: design/functional-card-navigate-card.md
         - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
         - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
         - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md
         - "Power Outlet Card #4": design/functional-card-power-outlet4-card.md
+        - Scene Card: design/functional-card-scene-card.md
         - "Sensor Card #1": design/functional-card-sensor1-card.md
         - "Sensor Card #2": design/functional-card-sensor2-card.md
         - Server Card: design/functional-card-server-statistics-card.md

@@ -1,7 +1,7 @@
 ---
 template: main.html
 title: "Functional Cards: AirVisual Sensor #2"
-description: Example of functional card, AirVisual sensor #2.
+description: "Example of functional card, AirVisual sensor #2."
 hide:hide:
   toc
 tags:
@@ -17,7 +17,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-!!! info "This card is (again) based on the Sensor Card #2. But instead of an icon it shows an external SVG"
+!!! info "This card is (again) based on the [Sensor Card \#2][Swiss Army Knife Functional Card Sensor2]. But instead of an icon it shows an external SVG"
 
 | Description| Aspectratio| Target Size |
 |-|-|-|
@@ -38,7 +38,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage
+##:sak-sak-logo: Usage (Not Yet Implemented)
 If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
 
 ```yaml linenums="1"
@@ -258,6 +258,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Functional Card Sensor2]: functional-card-sensor2-card.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
