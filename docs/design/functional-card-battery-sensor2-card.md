@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Battery Sensor Card"
 description: "Example of functional card, Battery Sensor card"
-hide:
+hideno:
   toc
 tags:
   - Design

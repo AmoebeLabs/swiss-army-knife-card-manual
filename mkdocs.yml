@@ -140,9 +140,10 @@ nav:
         - Environment Card: design/functional-card-environment-card.md
         - Header Card: design/functional-card-header-card.md
         - Input Boolean Card: design/functional-card-input-boolean-card.md
-        - "Light Card #1": design/functional-card-light1-card.md
-        - "Light Card with slider #2": design/functional-card-light2-card.md
+        - Light Card: design/functional-card-light-card.md
+        - Light Card with slider: design/functional-card-light-slider-card.md
         - Navigate Card: design/functional-card-navigate-card.md
+        # - Person Card: design/functional-card-person-card.md
         - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
         - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
         - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md
@@ -154,6 +155,7 @@ nav:
         - "Switch Card #1": design/functional-card-switch1-card.md
         - "Switch Card #2": design/functional-card-switch2-card.md
         - "Switch Card #3": design/functional-card-switch3-card.md
+        # - Weather Card: design/functional-card-weather-card.md
   - Basics:
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md

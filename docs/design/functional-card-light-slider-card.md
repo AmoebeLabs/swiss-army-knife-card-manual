@@ -1,8 +1,8 @@
 ---
 template: main.html
-title: "Functional Cards: Light Switch with slider Card #2"
-description: "Example of functional card, Light card #2"
-hide:
+title: "Functional Cards: Light Switch with slider Card"
+description: "Example of functional card, Light card with slider"
+hideno:
   toc
 tags:
   - Design
@@ -11,16 +11,16 @@ tags:
 ---
 <!-- GT/GL -->
 
-![Swiss Army Knife Functional Card Light2 D06 Light Off](../assets/screenshots/sak-functional-card-12-light2-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Card Light2 D06 Light On](../assets/screenshots/sak-functional-card-12-light2-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Card Light2 D06 Dark Off](../assets/screenshots/sak-functional-card-12-light2-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Card Light2 D06 Dark On](../assets/screenshots/sak-functional-card-12-light2-theme-d06-dark-on.png){width="300"}
+![Swiss Army Knife Functional Card Light with Slider D06 Light Off](../assets/screenshots/sak-functional-card-12-light-slider-theme-d06-light-off.png){width="300"}
+![Swiss Army Knife Functional Card Light with Slider D06 Light On](../assets/screenshots/sak-functional-card-12-light-slider-theme-d06-light-on.png){width="300"}
+<br>![Swiss Army Knife Functional Card Light with Slider D06 Dark Off](../assets/screenshots/sak-functional-card-12-light-slider-theme-d06-dark-off.png){width="300"}
+![Swiss Army Knife Functional Card Light with Slider D06 Dark On](../assets/screenshots/sak-functional-card-12-light-slider-theme-d06-dark-on.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspectratio| Target Size |
 |-|-|-|
-| A card that can control a light and includes a slider for brightness percentage| 4/1 | Grid with 2 columns |
+| A card that can control a light and includes a slider for brightness percentage| 3/1 | Grid with 2 columns |
 
 | SAK Tool| Used for |
 |-|-|
@@ -28,7 +28,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Icon | Entity Icon. Animated, state dependent|
 | Switch | The Switch to toggle the light|
 | Name | Name of Entity|
-| State | Secondary Info|
+| State | Brightness Attribute (from slider)|
 | Slider | Slider to control the brightness of the light|
 
 ##:sak-sak-logo: Interaction
@@ -36,6 +36,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Part | Description|
 |-|-|
 | Left part | Toggles the light once tapped|
+| Slider | Sets the brightness of the light|
 | Other parts | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage (Not Yet Implemented)

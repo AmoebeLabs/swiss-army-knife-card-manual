@@ -1,8 +1,8 @@
 ---
 template: main.html
-title: "Functional Cards: Light Card #1"
-description: "Example of functional card, Light Card #1"
-hide:
+title: "Functional Cards: Light Card"
+description: "Example of functional card, Light Card"
+hideno:
   toc
 tags:
   - Design
@@ -11,10 +11,10 @@ tags:
 ---
 <!-- GT/GL -->
 
-![Swiss Army Knife Functional Card Light1 D06 Light Off](../assets/screenshots/sak-functional-card-12-light1-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Card Light1 D06 Light On](../assets/screenshots/sak-functional-card-12-light1-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Card Light1 D06 Dark Off](../assets/screenshots/sak-functional-card-12-light1-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Card Light1 D06 Dark On](../assets/screenshots/sak-functional-card-12-light1-theme-d06-dark-on.png){width="300"}
+![Swiss Army Knife Functional Card Light D06 Light Off](../assets/screenshots/sak-functional-card-12-light-theme-d06-light-off.png){width="300"}
+![Swiss Army Knife Functional Card Light D06 Light On](../assets/screenshots/sak-functional-card-12-light-theme-d06-light-on.png){width="300"}
+<br>![Swiss Army Knife Functional Card Light D06 Dark Off](../assets/screenshots/sak-functional-card-12-light-theme-d06-dark-off.png){width="300"}
+![Swiss Army Knife Functional Card Light D06 Dark On](../assets/screenshots/sak-functional-card-12-light-theme-d06-dark-on.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

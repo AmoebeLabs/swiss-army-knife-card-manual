@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Server Statistics Sensor"
 description: Example of functional card, Server Statistics sensor.
-hide:
+hideno:
   toc
 tags:
   - Design

@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: AirVisual Sensor #2"
 description: "Example of functional card, AirVisual sensor #2."
-hide:hide:
+hideno:
   toc
 tags:
   - Design

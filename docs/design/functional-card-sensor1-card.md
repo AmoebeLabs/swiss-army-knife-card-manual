@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Sensor Card #1"
 description: E"xample of functional card, sensor card #1"
-hide:
+hideno:
   toc
 tags:
   - Design

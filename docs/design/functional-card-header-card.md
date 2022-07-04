@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Header Card"
 description: Example of functional card, Header card.
-hide:hide:
+hideno:
   toc
 tags:
   - Design
@@ -50,7 +50,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
   variables:
     - sak_card_header_content: 'Livingroom'
     - sak_card_header_font_color: var(--secondary-text-color)
-    - sak_card_header_font_size: 3e
+    - sak_card_header_font_size: 3em
 ```
 
 ##:sak-sak-logo: YAML Example Definition

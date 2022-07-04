@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Environment Sensor"
 description: Example of functional card, Environment sensor.
-hide:
+hideno:
   toc
 tags:
   - Design

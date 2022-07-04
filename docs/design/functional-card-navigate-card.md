@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Navigate Card"
 description: Example of functional card, Navigate to other view Card
-hide:
+hideno:
   toc
 tags:
   - Design
@@ -41,6 +41,7 @@ If the below YAML example definition is encapsulated into a decluttering_templat
 - type: custom:decluttering-card
   template: sak_card_navigate
   variables:
+    - sak_navigation_title: 'Some View'
     - sak_navigation_path: 'tut-03-p1'
 ```
 
@@ -51,6 +52,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 - type: custom:swiss-army-knife-card
   template: sak_card_navigate
   variables:
+    - sak_navigation_title: 'Some View'
     - sak_navigation_path: 'tut-03-p1'
 ```
 

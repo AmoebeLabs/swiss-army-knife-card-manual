@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Switch #2"
 description: "Example of functional card, switch #2"
-hide:
+hideno:
   toc
 tags:
   - Design

@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Binary Sensor Card"
 description: Example of functional card, Binary Sensor
-hide:
+hideno:
   toc
 tags:
   - Design

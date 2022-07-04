@@ -2,7 +2,7 @@
 template: main.html
 title: "Functional Cards: Power Outlet Card #3"
 description: "Example of functional card, power outlet card #3"
-hide:
+hideno:
   toc
 tags:
   - Design
