@@ -44,7 +44,7 @@ If the below YAML example definition is encapsulated into a decluttering_templat
 
 ```yaml linenums="1"
 - type: custom:decluttering-card
-  template: sak_card_binary_sensor1
+  template: sak_card_light_with_slider
   variables:
     - ...
 ```
@@ -53,7 +53,10 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 
 ```yaml linenums="1"
-TBD
+- type: custom:swiss-army-knife-card
+  template: sak_card_light_with_slider
+  variables:
+    - ...
 ```
 
 ##:sak-sak-logo: YAML Example Definition
