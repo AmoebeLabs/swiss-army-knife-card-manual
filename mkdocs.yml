@@ -143,7 +143,7 @@ nav:
         - Light Card: design/functional-card-light-card.md
         - Light Card with slider: design/functional-card-light-slider-card.md
         - Navigate Card: design/functional-card-navigate-card.md
-        # - Person Card: design/functional-card-person-card.md
+        - Person Card: design/functional-card-person-card.md
         - "Power Outlet Card #1": design/functional-card-power-outlet1-card.md
         - "Power Outlet Card #2": design/functional-card-power-outlet2-card.md
         - "Power Outlet Card #3": design/functional-card-power-outlet3-card.md
