@@ -22,15 +22,16 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 !!! info "This card shows you some possibilities to apply JavaScript to the animations section"
     The card itself is not very fancy, but the [use of JavaScript][Swiss Army Knife Javascript Snippets] to fetch the zone's Icon, and to do some color changes is a nice example of the possibilities that JavaScript adds to the tool. It are just a few lines, but very powerful!
     
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that shows where a person is, in which zone, or in no zone as away / not home.| 4/1 | Grid with 2 columns |
 
 | SAK Tool| Used for |
 |-|-|
-| Circle | The half circle, as the left part of the circle is cutoff by the card.
+| Icon | Background Icon (only in first screenshot) :smile: |
+| Circle | The half circle, as the left part of the circle is cutoff by the card |
 | Icon | Entity Icon. Animated, state dependent|
-| Icon | Zone Icon, ie where is the person according to the zone configuration|
+| Icon | Zone Icon, ie where is the person according to the zone configuration. Animated, state dependent|
 | Name | Name of Entity|
 | State | State of entity|
 
@@ -68,7 +69,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
     ```yaml
         - type: 'custom:swiss-army-knife-card'
           entities:
-            - entity: person.zoefdehaas
+            - entity: person.marco
               name: 'Marco'
               icon: mdi:face-man
           # Define aspect ratio
@@ -78,6 +79,25 @@ In the future, SAK will support card templates, and usage would be (I hope) some
             styles:
               card:
             toolsets:
+              # ================================================================
+                # Extra background icon. Just for fun and filling some space
+              - toolset: background-icon
+                position:
+                  cx: 350
+                  cy: 50
+                tools:
+                  # ------------------------------------------------------------
+                  - type: icon
+                    position:
+                      cx: 50
+                      cy: 50
+                      align: center
+                      icon_size: 100
+                    icon: mdi:map-marker-radius-outline
+                    styles:
+                      icon:
+                        fill: var(--theme-sys-elevation-surface-neutral2)
+                        
               # ================================================================
               - toolset: half-circle
                 position:

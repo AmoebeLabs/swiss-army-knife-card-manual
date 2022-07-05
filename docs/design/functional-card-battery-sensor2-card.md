@@ -24,7 +24,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "The second card has name and state reversed, so now the state (38%) is more prominent than the name of the entity"
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | An example battery sensor level card with segmented arc and history| 4/1 | Grid with 2 columns |
 

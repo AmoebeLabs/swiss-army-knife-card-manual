@@ -17,7 +17,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that displays the main server statistics. <br>CPU load, memory used, disk used and the 1 minute system load | 6/1 | Grid with 1 column |
 

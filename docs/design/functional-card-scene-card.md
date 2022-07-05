@@ -18,7 +18,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "Its a card, but it just demonstrates how to use the `scene` user action on a tool"
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that shows an icon and text, and has a `scene` user action.| 3/1 | Grid with 3 columns |
 

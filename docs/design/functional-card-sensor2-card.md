@@ -18,7 +18,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that displays a sensor value. Both using a segmented arc and as state.<br>The 24 hour history is shown in the background| 4/1 | Grid with 2 columns |
 

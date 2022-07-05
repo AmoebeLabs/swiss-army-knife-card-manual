@@ -19,7 +19,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that displays the on/off state of a power outlet, but also displays the power value. <br>Both using a segmented arc and as state.| 4/1 | Grid with 2 columns |
 

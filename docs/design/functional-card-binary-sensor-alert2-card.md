@@ -18,7 +18,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that shows the state of a binary sensor, including an icon as an alert. <br>Nice for doors, windows and occupancy alerts.| 4/1 | Grid with 2 columns |
 

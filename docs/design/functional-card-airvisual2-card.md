@@ -19,7 +19,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "This card is (again) based on the [Sensor Card \#2][Swiss Army Knife Functional Card Sensor2]. But instead of an icon it shows an external SVG"
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that displays data from AirVisual. <br>Both the current data, as a 24 hour history is shown | 3/1 | Grid with 2 columns |
 

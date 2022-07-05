@@ -21,7 +21,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 !!! info "This light card and the light card with slider are kept almost identical"
     This means you can mix lights with and without brightness slider, as their size is the same.
     
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that can control a light| 4/1 | Grid with 2 columns |
 

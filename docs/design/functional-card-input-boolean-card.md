@@ -19,7 +19,7 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
 | A card that can toggle an input_boolean, just like toggling a switch or a light | 4/1 | Grid with 2 columns |
 

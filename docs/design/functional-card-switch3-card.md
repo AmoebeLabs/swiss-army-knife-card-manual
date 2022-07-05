@@ -19,9 +19,9 @@ tags:
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-| Description| Aspectratio| Target Size |
+| Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A simple switch card with the "switch" on the left side of the card | 4/1 | Grid with 3 columns |
+| A simple switch card with the "switch" on the left side of the card | 3/1 | Grid with 3 columns |
 
 | SAK Tool| Used for |
 |-|-|
@@ -35,7 +35,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Part | Description|
 |-|-|
-| Left part of badge | The whole left part functions as a button to toggle the binary sensor entity |
+| Left part of badge | The whole left part functions as a button to toggle the switch |
 | Right part of badge | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage (Not Yet Implemented)
@@ -72,9 +72,9 @@ In the future, SAK will support card templates, and usage would be (I hope) some
     ```yaml linenums="1"
         - type: 'custom:swiss-army-knife-card'
           entities:
-            - entity: light.livingroom_light_duo_right_light
+            - entity: switch.fan
               name: 'Fan'
-            - entity: light.livingroom_light_duo_right_light
+            - entity: switch.fan
               secondary_info: last_changed
               format: relative
           # Define aspect ratio
@@ -103,7 +103,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                         haptic: light
                         actions:
                           - action: call-service
-                            service: light.toggle
+                            service: switch.toggle
                     animations:
                       - state: 'on'
                         styles:
