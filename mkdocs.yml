@@ -151,6 +151,8 @@ nav:
         - Scene Card: design/functional-card-scene-card.md
         - "Sensor Card #1": design/functional-card-sensor1-card.md
         - "Sensor Card #2": design/functional-card-sensor2-card.md
+        - "Sensor Card #3": design/functional-card-sensor3-card.md
+        - "Sensor Card #4": design/functional-card-sensor4-card.md
         - Server Card: design/functional-card-server-statistics-card.md
         - "Switch Card #1": design/functional-card-switch1-card.md
         - "Switch Card #2": design/functional-card-switch2-card.md
