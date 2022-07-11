@@ -167,7 +167,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
           # ================================================================
           - toolset: pollen-column-trees
             position:
-              cx: 250
+              cx: 260
               cy: 100
             tools:
               # ------------------------------------------------------------
@@ -217,7 +217,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
           # ================================================================
           - toolset: pollen-column-grass
             position:
-              cx: 385
+              cx: 395
               cy: 100
             tools:
               # ------------------------------------------------------------
@@ -267,7 +267,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
           # ================================================================
           - toolset: pollen-column-weed
             position:
-              cx: 520
+              cx: 530
               cy: 100
             tools:
               # ------------------------------------------------------------
