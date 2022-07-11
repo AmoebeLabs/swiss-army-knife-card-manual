@@ -158,6 +158,7 @@ nav:
         - "Switch Card #1": design/functional-card-switch1-card.md
         - "Switch Card #2": design/functional-card-switch2-card.md
         - "Switch Card #3": design/functional-card-switch3-card.md
+        - Tomorrow Pollen Card: design/functional-card-tomorrow-pollen-card.md
         # - Weather Card: design/functional-card-weather-card.md
   - Basics:
     - Tools and Toolsets: basics/tools-and-toolsets.md
