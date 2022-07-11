@@ -12,8 +12,8 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-very_low_none_none.png){width="600"}
-<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-very_low_none_none.png){width="600"}
+![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-low_very_low_none.png){width="600"}
+<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-low_very_low_none.png){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -38,7 +38,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage
-[:octicons-tag-24: 1.0.0.rc.3][github-releases]
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
 !!! info "You need the SVG files from Github and put those in the `www/images/tomorrow` folder"
     Images and colors used for this card are adapted versions from Isabella Alströms pollen images
@@ -89,7 +89,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 ```
 
 ##:sak-sak-logo: YAML Template Definition
-[:octicons-tag-24: 1.0.0.rc.3][github-releases]
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml
     sak_layout_fce_tomorrow_pollen:
