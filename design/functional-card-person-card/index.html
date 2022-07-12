@@ -310,14 +310,20 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
     S245.034,119.469,263.858,119.469z"/> <path d="M263.858,392.536c-18.825,0-34.133,15.309-34.133,34.133c0,18.824,15.309,34.133,34.133,34.133
     s34.133-15.309,34.133-34.133C297.991,407.845,282.683,392.536,263.858,392.536z"/> <path d="M280.925,230.403v-25.6h-34.133v25.6c0,4.719-3.814,8.533-8.533,8.533h-25.6v34.133h25.6
     c4.719,0,8.533,3.814,8.533,8.533v25.6h34.133v-25.6c0-4.719,3.814-8.533,8.533-8.533h25.6v-34.133h-25.6
-    C284.739,238.936,280.925,235.121,280.925,230.403z"/> </svg> </span> Usage<a class=headerlink href=#usage title="Permanent link">&para;</a></h2> <p><a href=https://github.com/amoebelabs/swiss-army-knife-card/releases/ ><span class=twemoji><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule=evenodd d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 1.0.0-rc.3</a></p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
-<span class=normal>2</span>
-<span class=normal>3</span>
-<span class=normal>4</span>
-<span class=normal>5</span>
-<span class=normal>6</span>
-<span class=normal>7</span>
-<span class=normal>8</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code><span class="p p-Indicator">-</span><span class=w> </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=s>&#39;custom:swiss-army-knife-card&#39;</span><span class=w></span>
+    C284.739,238.936,280.925,235.121,280.925,230.403z"/> </svg> </span> Usage<a class=headerlink href=#usage title="Permanent link">&para;</a></h2> <p><a href=https://github.com/amoebelabs/swiss-army-knife-card/releases/ ><span class=twemoji><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule=evenodd d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg></span> 1.0.0-rc.3</a></p> <table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code><span class="p p-Indicator">-</span><span class=w> </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=s>&#39;custom:swiss-army-knife-card&#39;</span><span class=w></span>
 <span class=w>  </span><span class=nt>entities</span><span class=p>:</span><span class=w></span>
 <span class=w>    </span><span class="p p-Indicator">-</span><span class=w> </span><span class=nt>entity</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">person.marco</span><span class=w></span>
 <span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=s>&#39;Person&#39;</span><span class=w></span>
@@ -325,6 +331,12 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class=w>  </span><span class=nt>layout</span><span class=p>:</span><span class=w></span>
 <span class=w>    </span><span class=nt>template</span><span class=p>:</span><span class=w></span>
 <span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">sak_layout_fce_person</span><span class=w></span>
+<span class=w>      </span><span class=nt>variables</span><span class=p>:</span><span class=w></span>
+<span class=w>        </span><span class="p p-Indicator">-</span><span class=w> </span><span class=nt>sak_layout_fce_person_zone_entities</span><span class=p>:</span><span class=w></span>
+<span class=w>            </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">zone.the_gym</span><span class=w></span>
+<span class=w>            </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">zone.marco_work</span><span class=w></span>
+<span class=w>            </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">zone.marco_parents</span><span class=w></span>
+<span class=w>            </span><span class="p p-Indicator">-</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">zone.zoo</span><span class=w></span>
 </code></pre></div> </td></tr></table> <h2 id=yaml-template-definition><span class=twemoji><?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --> <svg version=1.1 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink width=512 height=512 fill=white class="sak sak-logo" viewbox="0 0 512 512" xml:space=preserve> <path d="M493.311,354.483L366.258,108.851V102.4c0-56.465-45.935-102.4-102.4-102.4s-102.4,45.935-102.4,102.4v161.263
     l-18.261-1.783l5.564-23.748c1.075-4.591-1.775-9.182-6.366-10.257l-25.182-5.888l6.537-26.812
     c0.905-3.695-0.759-7.535-4.062-9.429c-27.016-15.445-57.745-23.612-88.875-23.612h-4.54c-3.072,0-5.914,1.664-7.424,4.335
@@ -504,7 +516,19 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class=normal>158</span>
 <span class=normal>159</span>
 <span class=normal>160</span>
-<span class=normal>161</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code><span class=nt>sak_layout_fce_person</span><span class=p>:</span><span class=w></span>
+<span class=normal>161</span>
+<span class=normal>162</span>
+<span class=normal>163</span>
+<span class=normal>164</span>
+<span class=normal>165</span>
+<span class=normal>166</span>
+<span class=normal>167</span>
+<span class=normal>168</span>
+<span class=normal>169</span>
+<span class=normal>170</span>
+<span class=normal>171</span>
+<span class=normal>172</span>
+<span class=normal>173</span></pre></div></td><td class=code><div class=highlight><pre><span></span><code><span class=nt>sak_layout_fce_person</span><span class=p>:</span><span class=w></span>
 <span class=w>  </span><span class=nt>template</span><span class=p>:</span><span class=w></span>
 <span class=w>    </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">layout</span><span class=w></span>
 <span class=w>    </span><span class=nt>defaults</span><span class=p>:</span><span class=w> </span>
@@ -617,6 +641,8 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class=w>              </span><span class=nt>align</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">center</span><span class=w></span>
 <span class=w>              </span><span class=nt>icon_size</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">18</span><span class=w></span>
 <span class=w>            </span><span class=nt>entity_index</span><span class=p>:</span><span class=w> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class=w></span>
+<span class=w>            </span><span class=nt>variables</span><span class=p>:</span><span class=w></span>
+<span class=w>              </span><span class=nt>zone_ids</span><span class=p>:</span><span class=w> </span><span class=s>&#39;[[sak_layout_fce_person_zone_entities]]&#39;</span><span class=w></span>
 <span class=w>            </span><span class=nt>animations</span><span class=p>:</span><span class=w></span>
 <span class=w>                </span><span class=c1># Return current state, so always a match!</span><span class=w></span>
 <span class=w>              </span><span class="p p-Indicator">-</span><span class=w> </span><span class=nt>state</span><span class=p>:</span><span class=w> </span><span class=s>&#39;[[[</span><span class=nv> </span><span class=s>return</span><span class=nv> </span><span class=s>state;</span><span class=nv> </span><span class=s>]]]&#39;</span><span class=w></span>
@@ -624,7 +650,17 @@ It is a composite tool with a built-in animation to move the thumb to 'off' or '
 <span class=w>                </span><span class=c1># Check that state, and return the &#39;not home&#39; icon in that case!</span><span class=w></span>
 <span class=w>                </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class="p p-Indicator">&gt;</span><span class=w></span>
 <span class=w>                  </span><span class=no>[[[ if (state == &#39;not_home&#39;) return &#39;mdi:home-off-outline&#39;;</span><span class=w></span>
-<span class=w>                      </span><span class=no>return (states[&#39;zone.&#39;+ state.trim().toLowerCase()]?.attributes.icon || &#39;mdi:home-off-outline&#39;);</span><span class=w></span>
+<span class=w>                      </span><span class=no>if (state == &#39;home&#39;) return states[&#39;zone.home&#39;].attributes.icon;</span><span class=w></span>
+<span class=w>                      </span><span class=no>// For not home, we get the friendly name as input.</span><span class=w></span>
+<span class=w>                      </span><span class=no>// Must find that one to retrieve the zone&#39;s id...</span><span class=w></span>
+
+<span class=w>                      </span><span class=no>for (var i=0; i&lt;config.variables.zone_ids.length; i++) {</span><span class=w></span>
+<span class=w>                        </span><span class=no>var zone = states[config.variables.zone_ids[i]];</span><span class=w></span>
+<span class=w>                        </span><span class=no>if (zone &amp;&amp; zone.attributes.friendly_name == state) {</span><span class=w></span>
+<span class=w>                          </span><span class=no>return states[zone.entity_id].attributes.icon;</span><span class=w></span>
+<span class=w>                        </span><span class=no>}</span><span class=w></span>
+<span class=w>                      </span><span class=no>}</span><span class=w></span>
+<span class=w>                      </span><span class=no>return &#39;mdi:map-marker-question&#39;;</span><span class=w></span>
 <span class=w>                  </span><span class=no>]]]</span><span class=w></span>
 <span class=w>                </span><span class=nt>styles</span><span class=p>:</span><span class=w></span>
 <span class=w>                  </span><span class=nt>icon</span><span class=p>:</span><span class=w></span>
