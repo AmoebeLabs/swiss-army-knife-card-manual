@@ -55,6 +55,12 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
   layout:
     template:
       name: sak_layout_fce_person
+      variables:
+        - sak_layout_fce_person_zone_entities:
+            - zone.the_gym
+            - zone.marco_work
+            - zone.marco_parents
+            - zone.zoo
 ```
 
 ##:sak-sak-logo: YAML Template Definition
@@ -174,6 +180,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   align: center
                   icon_size: 18
                 entity_index: 0
+                variables:
+                  zone_ids: '[[sak_layout_fce_person_zone_entities]]'
                 animations:
                     # Return current state, so always a match!
                   - state: '[[[ return state; ]]]'
@@ -181,7 +189,17 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     # Check that state, and return the 'not home' icon in that case!
                     icon: >
                       [[[ if (state == 'not_home') return 'mdi:home-off-outline';
-                          return (states['zone.'+ state.trim().toLowerCase()]?.attributes.icon || 'mdi:home-off-outline');
+                          if (state == 'home') return states['zone.home'].attributes.icon;
+                          // For not home, we get the friendly name as input.
+                          // Must find that one to retrieve the zone's id...
+                          
+                          for (var i=0; i<config.variables.zone_ids.length; i++) {
+                            var zone = states[config.variables.zone_ids[i]];
+                            if (zone && zone.attributes.friendly_name == state) {
+                              return states[zone.entity_id].attributes.icon;
+                            }
+                          }
+                          return 'mdi:map-marker-question';
                       ]]]
                     styles:
                       icon:
@@ -222,6 +240,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     font-size: 26em
                     font-weight: 500
                     opacity: 0.7
+
     ```
 
 <!-- Image references -->

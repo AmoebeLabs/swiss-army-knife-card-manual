@@ -14,6 +14,9 @@ If you are familiar with the `decluttering template card`, you already know how 
 
 SAK templates operate on a different level: they enable the re-use of `tools`, `toolsets`, `JavaScript templates/snippets`, `colorstops/lists` and more.
 
+!!! sucess "The upcoming rc.3 will have support for layout templates: you can re-us a complete card in a view!"
+    No need to use the decluttering templates anymore.
+    
 !!! Important "SAK templates therefore make re-use within a SAK card, and between SAK cards possible!"
 
 [Example 7]: ../../examples/example-7.md
