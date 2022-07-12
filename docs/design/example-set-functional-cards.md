@@ -1,7 +1,7 @@
 ---
 template: main.html
 title: Example set of functional cards
-description: Example set of functional cards for inspiration and learning how to craete and use certain functionality and tools
+description: Example set of functional cards for inspiration and learning how to create and use certain functionality and tools
 tags:
   - Design
   - Functional Cards
@@ -13,9 +13,9 @@ tags:
 I made a bunch of functional cards with two goals in mind:
 
 - To show the possibilities of the Swiss Army Knife with small visual examples.
-- As the YAML configuration is included per card, you get see how these cards are made, how animations are done, styling and tool usage.
+- As the YAML template definition and usage is included per card, you get see how to use these cards in a view, how these cards are made, how animations are done, styling and tool usage.
 
-This should help you to create your own visualizations!
+This should help you to create your own visualizations, or you can just _use_ these examples!
 
 | Card | Description |
 | ---- | ----------- |
@@ -35,18 +35,20 @@ This should help you to create your own visualizations!
 | [Sensor Card][functional-card-sensor1-card] | Four ([\#1][functional-card-sensor1-card], [\#2][functional-card-sensor2-card], [\#3][functional-card-sensor3-card] and [\#4][functional-card-sensor4-card]) variations of showing sensor data, without and with 24 hour history, icon or background animations and with or without secondary info. |
 | [Server Statistics Card][functional-card-server-statistics-card] | Card showing the main server sensors like CPU, Memory, Disk, etc. |
 | [Switch Card][functional-card-switch1-card] | Three ([\#1][functional-card-switch1-card], [\#2][functional-card-switch2-card] and [\#3][functional-card-switch3-card]) variations of a card controlling a switch |
+| [Tomorrow Pollen Card][functional-card-tomorrow-pollen-card] | A card showing a single pollen status on a card |
+| [Tomorrow Pollen All Card][functional-card-tomorrow-pollen-all-card] | A card showing all the three pollen statuses on a card |
 
 !!! info "The YAML definition for all cards is included in the examples, so you can copy/use them and learn from them!"
 
 ### Overview of Tools used
 
-Most tools are used in the example functional cards. Only 4 are not used.
+Most tools are used in the example functional cards. Only 3 are not used.
 
 | Used?            | Tool                                                  | Type        | Description |
 |----------------- | ----------------------------------------------------- | ----------- | ----------- |
 | :material-check: | badge                                                 | basic       | A badge. Not yet Documented! |
 | :material-check: | [circle][swiss-army-knife-basic-tool-circle]          | basic       | A circle |
-| :material-close: | [ellipse][swiss-army-knife-basic-tool-ellipse]        | basic       | An ellipse |
+| :material-check: | [ellipse][swiss-army-knife-basic-tool-ellipse]        | basic       | An ellipse |
 | :material-check: | [line][swiss-army-knife-basic-tool-line]              | basic       | A vertical, horizontal or oblique line |
 | :material-check: | [rectangle][swiss-army-knife-basic-tool-rectangle]    | basic       | A rectangle with and w/o rounded corners |
 | :material-check: | [rectex][swiss-army-knife-basic-tool-rectex]          | basic       | A more advanced rectangle with independent rounded corners |
@@ -73,6 +75,7 @@ Most tools are used in the example functional cards. Only 4 are not used.
 | :material-close: | CSS Classes                                           | styling | Not used in these cards. All inline styles|
 | :material-check: | CSS Styles                                            | styling | In all cards|
 | :material-check: | CSS Animations                                        | animations | Used in some of the cards that use blinking (battery)|
+| :material-check: | Colorlists                                            | animations | Used in many cards with the segmented arc|
 | :material-check: | Colorstop Animations                                  | animations | Used in many cards with the segmented arc|
 | :material-check: | State Operator Animations                             | animations | Used in for instance the Person card|
 
@@ -128,10 +131,14 @@ Most tools are used in the example functional cards. Only 4 are not used.
 [functional-card-scene-card]: functional-card-scene-card.md
 [functional-card-sensor1-card]: functional-card-sensor1-card.md
 [functional-card-sensor2-card]: functional-card-sensor2-card.md
+[functional-card-sensor3-card]: functional-card-sensor3-card.md
+[functional-card-sensor4-card]: functional-card-sensor4-card.md
 [functional-card-server-statistics-card]: functional-card-server-statistics-card.md
 [functional-card-switch1-card]: functional-card-switch1-card.md
 [functional-card-switch2-card]: functional-card-switch2-card.md
 [functional-card-switch3-card]: functional-card-switch3-card.md
+[functional-card-tomorrow-pollen-card]: functional-card-tomorrow-pollen-card.md
+[functional-card-tomorrow-pollen-all-card]: functional-card-tomorrow-pollen-all-card.md
 
 <!--- External References... --->
 

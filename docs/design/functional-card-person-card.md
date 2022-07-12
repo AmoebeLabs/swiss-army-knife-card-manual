@@ -22,9 +22,11 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 !!! info "This card shows you some possibilities to apply JavaScript to the animations section"
     The card itself is not very fancy, but the [use of JavaScript][Swiss Army Knife Javascript Snippets] to fetch the zone's Icon, and to do some color changes is a nice example of the possibilities that JavaScript adds to the tool. It are just a few lines, but very powerful!
     
+    It also takes care of fetching the icon of additional zones (ie not the home zone).
+    
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that shows where a person is, in which zone, or in no zone as away / not home.| 4/1 | Grid with 2 columns |
+| A card that shows in which zone a person is, or if in no known zone as away / not home.| 4/1 | Grid with 2 columns |
 
 | SAK Tool| Used for |
 |-|-|
@@ -41,198 +43,185 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_person
-  variables:
-    - sak_card_person_entity_id: person.marco
-```
-
-In the future, SAK will support card templates, and usage would be (I hope) something like:
-
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_person
+- type: 'custom:swiss-army-knife-card'
   entities:
     - entity: person.marco
-      name: 'Marco'
+      name: 'Person'
       icon: mdi:face-man
+  layout:
+    template:
+      name: sak_layout_fce_person
 ```
 
-##:sak-sak-logo: YAML Example Definition
-
-??? Info "Full definition of card"
-    ```yaml
-        - type: 'custom:swiss-army-knife-card'
-          entities:
-            - entity: person.marco
-              name: 'Marco'
-              icon: mdi:face-man
-          # Define aspect ratio
-          aspectratio: 4/1                          # Card is 400x100 grid
-
-          layout:
-            styles:
-              card:
-            toolsets:
-              # ================================================================
-                # Extra background icon. Just for fun and filling some space
-              - toolset: background-icon
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"
+    ```yaml linenums="1"
+    sak_layout_fce_person:
+      template:
+        type: layout
+        defaults: 
+          - dummy: 0
+      layout:
+        aspectratio: 4/1
+        toolsets:
+          # ================================================================
+            # Extra background icon. Just for fun and filling some space
+          - toolset: background-icon
+            position:
+              cx: 350
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: icon
                 position:
-                  cx: 350
+                  cx: 50
                   cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
-                    position:
-                      cx: 50
-                      cy: 50
-                      align: center
-                      icon_size: 100
-                    icon: mdi:map-marker-radius-outline
+                  align: center
+                  icon_size: 100
+                icon: mdi:map-marker-radius-outline
+                styles:
+                  icon:
+                    fill: var(--theme-sys-elevation-surface-neutral2)
+
+          # ================================================================
+          - toolset: half-circle
+            position:
+              cx: 0                             # Center on cards border 
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: circle
+                position:
+                  cx: 50
+                  cy: 50
+                  radius: 50
+                styles:
+                  circle:
+                    stroke: var(--theme-sys-color-secondary)
+                    stroke-width: 3em
+                    opacity: 0.5
+
+          # ================================================================
+          - toolset: column-icon
+            position:
+              cx: 25
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: icon
+                position:
+                  cx: 50
+                  cy: 50
+                  align: center
+                  icon_size: 45
+                entity_index: 0
+                animations:
+                    # Return current state, so always a match!
+                  - state: '[[[ return state; ]]]'
                     styles:
                       icon:
-                        fill: var(--theme-sys-elevation-surface-neutral2)
-                        
-              # ================================================================
-              - toolset: half-circle
-                position:
-                  cx: 0                             # Center on cards border 
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: circle
-                    position:
-                      cx: 50
-                      cy: 50
-                      radius: 50
-                    styles:
-                      circle:
-                        stroke: var(--theme-sys-color-secondary)
-                        stroke-width: 3em
-                        opacity: 0.5
-              # ================================================================
-              - toolset: column-icon
-                position:
-                  cx: 25
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
-                    position:
-                      cx: 50
-                      cy: 50
-                      align: center
-                      icon_size: 45
-                    entity_index: 0
-                    animations:
-                        # Return current state, so always a match!
-                      - state: '[[[ return state; ]]]'
-                        styles:
-                          icon:
-                            # Set fill depending on being at home!
-                            fill: >
-                              [[[ if (['home', 'not_home'].includes(state)) return 'var(--theme-sys-color-primary)';
-                                  return 'var(--theme-sys-color-tertiary)';
-                              ]]]
-                    styles:
-                      icon:
-                        fill: var(--theme-sys-color-secondary)
-                        opacity: 0.9
-                    
-              # ================================================================
-              - toolset: zone-icon
-                position:
-                  cx: 40
-                  cy: 18
-                tools:
-                  # ------------------------------------------------------------
-                  - type: circle
-                    position:
-                      cx: 50
-                      cy: 50
-                      radius: 13
-                    entity_index: 0
-                    animations:
-                        # Return current state, so always a match!
-                      - state: '[[[ return state; ]]]'
-                        styles:
-                          circle:
-                            # Set fill depending on being at home or some unwanted state!
-                            fill: >
-                              [[[ if (state == 'home') return 'var(--theme-sys-color-primary)';
-                                  if (state == 'not_home') return 'var(--brand-google-red)';
-                                  if (['unavailable', 'unknown'].includes(state)) return 'black';
-                                  return 'var(--theme-sys-color-tertiary)';
-                              ]]]
-                    styles:
-                      circle:
-                        fill: var(--brand-google-red)
-                        stroke: var(--primary-background-color)
-                        stroke-width: 2em
-
-                  # ------------------------------------------------------------
-                  - type: icon
-                    position:
-                      cx: 50
-                      cy: 50
-                      align: center
-                      icon_size: 20
-                    entity_index: 0
-                    animations:
-                        # Return current state, so always a match!
-                      - state: '[[[ return state; ]]]'
-                        # Fetch icon of zone. If no match on zone, the state 'not_home' is given.
-                        # Check that state, and return the 'not home' icon in that case!
-                        # One could also just return the 'home' icon:
-                        #   return states['zone.home'].attributes.icon;
-                        icon: >
-                          [[[ if (state == 'not_home') return 'mdi:home-off-outline';
-                              return states['zone.' + state].attributes?.icon;
+                        # Set fill depending on being at home!
+                        fill: >
+                          [[[ if (['home', 'not_home'].includes(state)) return 'var(--theme-sys-color-primary)';
+                              return 'var(--theme-sys-color-tertiary)';
                           ]]]
-                        styles:
-                          icon:
-                            fill: var(--primary-background-color)
+                styles:
+                  icon:
+                    fill: var(--theme-sys-color-secondary)
+                    opacity: 0.9
+                
+          # ================================================================
+          - toolset: zone-icon
+            position:
+              cx: 40
+              cy: 18
+            tools:
+              # ------------------------------------------------------------
+              - type: circle
+                position:
+                  cx: 50
+                  cy: 50
+                  radius: 14
+                entity_index: 0
+                animations:
+                    # Return current state, so always a match!
+                  - state: '[[[ return state; ]]]'
+                    styles:
+                      circle:
+                        # Set fill depending on being at home or some unwanted state!
+                        fill: >
+                          [[[ if (state == 'home') return 'var(--theme-sys-color-primary)';
+                              if (state == 'not_home') return 'var(--brand-google-red)';
+                              if (['unavailable', 'unknown'].includes(state)) return 'black';
+                              return 'var(--theme-sys-color-tertiary)';
+                          ]]]
+                styles:
+                  circle:
+                    fill: var(--brand-google-red)
+                    stroke: var(--primary-background-color)
+                    stroke-width: 2em
+
+              # ------------------------------------------------------------
+              - type: icon
+                position:
+                  cx: 50
+                  cy: 50
+                  align: center
+                  icon_size: 18
+                entity_index: 0
+                animations:
+                    # Return current state, so always a match!
+                  - state: '[[[ return state; ]]]'
+                    # Fetch icon of zone. If no match on zone, the state 'not_home' is given.
+                    # Check that state, and return the 'not home' icon in that case!
+                    icon: >
+                      [[[ if (state == 'not_home') return 'mdi:home-off-outline';
+                          return (states['zone.'+ state.trim().toLowerCase()]?.attributes.icon || 'mdi:home-off-outline');
+                      ]]]
                     styles:
                       icon:
                         fill: var(--primary-background-color)
+                styles:
+                  icon:
+                    fill: var(--primary-background-color)
 
-              # ================================================================
-              - toolset: column-name
+          # ================================================================
+          - toolset: column-name
+            position:
+              cx: 70
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: name
                 position:
-                  cx: 70
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: name
-                    position:
-                      cx: 50
-                      cy: 37
-                    entity_index: 0
-                    styles:
-                      name:
-                        text-anchor: start
-                        font-size: 30em
-                        font-weight: 700
-                        opacity: 1
-                  # ------------------------------------------------------------
-                  - type: state
-                    position:
-                      cx: 50
-                      cy: 70
-                    entity_index: 0
-                    show:
-                      uom: none
-                    styles:
-                      state:
-                        text-anchor: start
-                        font-size: 26em
-                        font-weight: 500
-                        opacity: 0.7
+                  cx: 50
+                  cy: 37
+                entity_index: 0
+                styles:
+                  name:
+                    text-anchor: start
+                    font-size: 30em
+                    font-weight: 700
+                    opacity: 1
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 50
+                  cy: 70
+                entity_index: 0
+                show:
+                  uom: none
+                styles:
+                  state:
+                    text-anchor: start
+                    font-size: 26em
+                    font-weight: 500
+                    opacity: 0.7
     ```
 
 <!-- Image references -->
@@ -243,5 +232,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
-
-
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
