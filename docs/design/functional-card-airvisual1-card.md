@@ -24,16 +24,20 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | SAK Tool| Used for |
 |-|-|
 | Circle | The half circle, as the left part of the circle is cutoff by the card. Circle is animated, state dependent|
-| Icon | Entity Icon.
+| Icon | Entity Icon.|
 | Name | Name of Entity|
 | State | Secondary Info of Entity|
 | Line | Vertical line as separator|
 | Icon | AirVisual state Icon. Animated, state dependent |
 | State | AirVisual state value |
-| SegArc | Segmented Arc showing the AirVisual state. The arc is configured as a very, very, very flag ellipse and using a tiny part of the ellipse to look like a line|
+| SegArc | Segmented Arc showing the AirVisual state. The arc is configured as a very, very, very flat ellipse and using a tiny part of the ellipse to look like a line|
 | Line | Vertical line as separator|
 | Text | The "Last 24 hours" text|
 | Bar | The 24 hour history|
+
+##:sak-sak-logo: Integrations
+You need the [AirVisual integration](https://www.home-assistant.io/integrations/airvisual/):
+[![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=airvisual)
 
 ##:sak-sak-logo: Interaction
 
@@ -44,6 +48,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 ##:sak-sak-logo: Usage
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
+!!! info "The entities should be the same for every installation, so you can re-use the example below!"
+    
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
@@ -57,6 +63,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
     template:
       name: sak_layout_fce_airvisual1
 ```
+
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | List of three entities |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]

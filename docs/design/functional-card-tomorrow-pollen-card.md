@@ -34,6 +34,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Name | Name of Entity|
 | State | State of entity|
 
+##:sak-sak-logo: Integrations
+You need the [tomorrow.io integration](https://www.home-assistant.io/integrations/tomorrowio/):
+[![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=tomorrowio)
+
 ##:sak-sak-logo: Interaction
 
 | Part | Description|
@@ -45,6 +49,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "You need the SVG files from Github and put those in the `www/images/tomorrow` folder"
     Images and colors used for this card are adapted versions from Isabella Alströms pollen images
+
+!!! warning "Replace example entities with your entities!"
     
 ```yaml linenums="1"
 - type: grid
@@ -91,6 +97,12 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
             - sak_layout_tomorrow_pollen_file_prefix: pollen_weed_
 ```
 
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The tomorrow tree, grass or weed entity |
+| sak_layout_tomorrow_pollen_image_path | tomorrow/ | :material-close: | Folder in /local/images/, including a trailing slash! |
+| sak_layout_tomorrow_pollen_file_prefix | |  :material-check: | Depending on the entity, pollen_tree, pollen_grass or pollen_weed |
+
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
@@ -99,7 +111,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
       template:
         type: layout
         defaults: 
-          - sak_layout_tomorrow_pollen_image_path: ''
+          - sak_layout_tomorrow_pollen_image_path: 'tomorrow/'
           - sak_layout_tomorrow_pollen_file_prefix: '' 
       layout:
         aspectratio: 4/1

@@ -1,13 +1,13 @@
 ---
 template: main.html
-title: "Functional Cards: Tomorrow Pollen All All Card"
-description: "Example of functional card, Tomorrow Pollen All All Card"
+title: "Functional Cards: Tomorrow Pollen All Card"
+description: "Example of functional card, Tomorrow Pollen All Card"
 hideno:
   toc
 tags:
   - Design
   - Functional Card
-  - Tomorrow Pollen All All Card
+  - Tomorrow Pollen All Card
 ---
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
@@ -40,6 +40,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | UserSvg | Svg image for weed. Animated, state dependent |
 | State | State of weed entity|
 
+##:sak-sak-logo: Integrations
+You need the [tomorrow.io integration](https://www.home-assistant.io/integrations/tomorrowio/):
+[![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=tomorrowio)
+
 ##:sak-sak-logo: Interaction
 
 | Part | Description|
@@ -51,7 +55,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "You need the SVG files from Github and put those in the `www/images/tomorrow` folder"
     Images and colors used for this card are adapted versions from Isabella Alströms pollen images
-    
+
+!!! warning "Replace example entities with your entities!"
+  
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
@@ -67,6 +73,11 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
       variables:
         - sak_layout_tomorrow_pollen_image_path: tomorrow/
 ```
+
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The three tomorrow pollen entities; tree, grass and weed, **in that order!** |
+| sak_layout_tomorrow_pollen_image_path | tomorrow/ | :material-close: | Folder in /local/images/, including a trailing slash! |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]

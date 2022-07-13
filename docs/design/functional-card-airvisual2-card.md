@@ -32,6 +32,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Name | Name of Entity|
 | Bar | Shows the 24 hour history in the background|
 
+##:sak-sak-logo: Integrations
+You need the [AirVisual integration](https://www.home-assistant.io/integrations/airvisual/):
+[![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=airvisual)
+
 ##:sak-sak-logo: Interaction
 
 | Part | Description|
@@ -40,6 +44,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 ##:sak-sak-logo: Usage
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
+
+!!! info "The entities should be the same for every installation, so you can re-use the example below!"
 
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
@@ -50,6 +56,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
     template:
       name: sak_layout_fce_airvisual2
 ```
+
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The air quality index entity |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
