@@ -52,7 +52,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Data | Default| Required | Description |
 |-|-|-|-|
 | sak_layout_scene_icon | mdi:script | :material-close: | The used icon on the card |
-| sak_layout_scene_text | | :material-check: | The text displayd on the card |
+| sak_layout_scene_text | | :material-check: | The text displayed on the card |
 | sak_layout_scene_id | | :material-check: | The entity id of the scene that should be called |
 | sak_layout_scene_transition | 2.5 | :material-close: | The scene transition time in seconds |
 
