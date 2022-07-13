@@ -160,6 +160,7 @@ nav:
         - "Switch Card #3": design/functional-card-switch3-card.md
         - Tomorrow Pollen Card: design/functional-card-tomorrow-pollen-card.md
         - Tomorrow Pollen All Card: design/functional-card-tomorrow-pollen-all-card.md
+        - Tomorrow Pollen All with AQI Card: design/functional-card-tomorrow-pollen-all-aqi-card.md
         # - Weather Card: design/functional-card-weather-card.md
   - Basics:
     - Tools and Toolsets: basics/tools-and-toolsets.md

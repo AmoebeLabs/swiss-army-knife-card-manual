@@ -63,6 +63,11 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
             - zone.zoo
 ```
 
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The person entity |
+| sak_layout_fce_person_zone_entities | | :material-check: | The list of zone entities for this person to be displayed. There is no limit, it is really a list which is used when the person is not at home! |
+
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
@@ -190,8 +195,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     icon: >
                       [[[ if (state == 'not_home') return 'mdi:home-off-outline';
                           if (state == 'home') return states['zone.home'].attributes.icon;
-                          // For not home, we get the friendly name as input.
-                          // Must find that one to retrieve the zone's id...
+                          // For not home, we get the friendly name as input. Must find that one to retrieve
+                          // the zone's id...
                           
                           for (var i=0; i<config.variables.zone_ids.length; i++) {
                             var zone = states[config.variables.zone_ids[i]];
@@ -240,7 +245,6 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     font-size: 26em
                     font-weight: 500
                     opacity: 0.7
-
     ```
 
 <!-- Image references -->

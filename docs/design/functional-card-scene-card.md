@@ -34,107 +34,110 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Card | This card activates the scene for you|
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_scene
-  variables:
-    - sak_scene_title: 'Demo Scene'
-    - sak_scene_id: 'scene.demo'
-    - sak_scene_transition: 2.5
+- type: 'custom:swiss-army-knife-card'
+  layout:
+    template:
+      name: sak_layout_fce_scene
+      variables:
+        - sak_layout_scene_icon: mdi:script
+        - sak_layout_scene_text: 'Scene'
+        - sak_layout_scene_id: 'scene.unknown'
+        - sak_layout_scene_transition: 2.5
 ```
 
-In the future, SAK will support card templates, and usage would be (I hope) something like:
+| Data | Default| Required | Description |
+|-|-|-|-|
+| sak_layout_scene_icon | mdi:script | :material-close: | The used icon on the card |
+| sak_layout_scene_text | | :material-check: | The text displayd on the card |
+| sak_layout_scene_id | | :material-check: | The entity id of the scene that should be called |
+| sak_layout_scene_transition | 2.5 | :material-close: | The scene transition time in seconds |
 
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_scene
-  variables:
-    - sak_scene_title: 'Demo Scene'
-    - sak_scene_id: 'scene.demo'
-    - sak_scene_transition: 2.5
-```
-
-##:sak-sak-logo: YAML Example Definition
-
-??? Info "Full definition of card"
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"
     ```yaml linenums="1"
-        - type: 'custom:swiss-army-knife-card'
-          # Define aspect ratio
-          aspectratio: 3/1                          # Card is 300x100 grid
-
-          layout:
-            styles:
-              card:
-                border-radius: 25em
-                background: var(--theme-sys-color-secondary-container)
-            toolsets:
-              # ================================================================
-              - toolset: column-icon
+    sak_layout_fce_scene:
+      template:
+        type: layout
+        defaults: 
+          - sak_layout_scene_icon: mdi:script
+          - sak_layout_scene_text: 'Scene'
+          - sak_layout_scene_id: 'scene.unknown'
+          - sak_layout_scene_transition: 2.5
+      layout:
+        styles:
+          card:
+            border-radius: 25em
+            background: var(--theme-sys-color-secondary-container)
+        aspectratio: 3/1
+        toolsets:
+          # ================================================================
+          - toolset: column-icon
+            position:
+              cx: 50
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: icon
                 position:
                   cx: 50
                   cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: icon
-                    position:
-                      cx: 50
-                      cy: 50
-                      align: center
-                      icon_size: 50
-                    icon: mdi:script
-                    styles:
-                      icon:
-                        fill: var(--secondary-text-color)
-                        opacity: 0.9
-                    
-              # ================================================================
-              - toolset: button-text
-                position:
-                  cx: 175
-                  cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: text
-                    position:
-                      cx: 50
-                      cy: 50
-                    text: Demo Scene
-                    styles:
-                      text:
-                        text-anchor: middle
-                        font-size: 30em
-                        font-weight: 700
-                        opacity: 1
-
-              - toolset: button-cover
+                  align: center
+                  icon_size: 50
+                icon: '[[sak_layout_scene_icon]]'
+                styles:
+                  icon:
+                    fill: var(--secondary-text-color)
+                    opacity: 0.9
+                
+          # ================================================================
+          - toolset: button-text
+            position:
+              cx: 175
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: text
                 position:
                   cx: 50
                   cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: rectex
-                    position:
-                      cx: 50
-                      cy: 50
-                      height: 100
-                      width: 300
-                    user_actions:
-                      tap_action:
-                        haptic: light
-                        actions:
-                          - action: call-service
-                            service: scene.turn_on
-                            service_data:
-                              entity_id: scene.demo
-                              transition: 2.5
-                    styles:
-                      rectex:
-                        fill: rgba(0,0,0,0)
+                text: '[[sak_layout_scene_text]]'
+                styles:
+                  text:
+                    text-anchor: middle
+                    font-size: 30em
+                    font-weight: 700
+                    opacity: 1
 
+          # ================================================================
+          - toolset: button-cover
+            position:
+              cx: 150
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: rectex
+                position:
+                  cx: 50
+                  cy: 50
+                  height: 100
+                  width: 300
+                user_actions:
+                  tap_action:
+                    haptic: light
+                    actions:
+                      - action: navigate
+                        service: scene.turn_on
+                        service_data:
+                          entity_id: '[[sak_layout_scene_id]]'
+                          transition: '[[sak_layout_scene_transition]]'
+                styles:
+                  rectex:
+                    fill: rgba(0,0,0,0)
     ```
 <!-- Image references -->
 
@@ -143,3 +146,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/

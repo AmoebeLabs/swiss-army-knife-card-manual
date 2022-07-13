@@ -66,8 +66,8 @@ In total approx 50 entities are used to build this visualization.
 :material-checkbox-multiple-marked-outline: _Required Home Assistant Integrations_<br>
 The visualization is build on the `Met.no` and `Airvisual` entities, so you need these integrations:
 
-- [Met.no Weather integration](https://www.home-assistant.io/integrations/met/)
-- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/)
+- [Met.no Weather integration](https://www.home-assistant.io/integrations/met/): [![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=met)
+- [Airvisual integration](https://www.home-assistant.io/integrations/airvisual/): [![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=airvisual)
 
 :material-checkbox-multiple-marked-outline: _Required Home Assistant Entity Changes_<br>
 The `Airvisual` entities should be the same for any installation, so no changes required on that part.

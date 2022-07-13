@@ -1,7 +1,7 @@
 ---
 template: main.html
-title: "Functional Cards: Binary Sensor with Alert Card"
-description: Example of functional card, Binary Sensor with Alert
+title: "Functional Cards: Binary Sensor with Alert Card #1"
+description: "Example of functional card, Binary Sensor with Alert #1"
 hideno:
   toc
 tags:
@@ -43,25 +43,17 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+
+!!! warning "Replace example entities with your entities!"
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_binary_sensor_alert1
-  variables:
-    - ...
-```
-
-In the future, SAK will support card templates, and usage would be (I hope) something like:
-
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_binary_sensor_alert1
+- type: 'custom:swiss-army-knife-card'
   entities:
     - entity: binary_sensor.livingroom_movement_occupancy
-      name: 'Movement'
+      name: 'Bin Alert #1'
+      # name: 'Movement'
     - entity: binary_sensor.livingroom_movement_occupancy
       secondary_info: last_changed
       format: relative
@@ -69,30 +61,26 @@ In the future, SAK will support card templates, and usage would be (I hope) some
       decimals: 0
     - entity: sensor.livingroom_movement_linkquality
       decimals: 0
+  layout:
+    template:
+      name: sak_layout_fce_binary_alert1
 ```
 
-##:sak-sak-logo: YAML Example Definition
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The four required entities |
 
-??? Info "Full definition of card"
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"  
     ```yaml linenums="1"
-    - type: 'custom:swiss-army-knife-card'
-      entities:
-        - entity: binary_sensor.livingroom_movement_occupancy
-          name: 'Movement'
-        - entity: binary_sensor.livingroom_movement_occupancy
-          secondary_info: last_changed
-          format: relative
-        - entity: sensor.livingroom_movement_battery
-          decimals: 0
-        - entity: sensor.livingroom_movement_linkquality
-          decimals: 0
-      # Define aspect ratio
-      aspectratio: 3/1                          # Card is 300x100 grid
-
+    sak_layout_fce_binary_alert1:
+      template:
+        type: layout
+        defaults: 
+          - dummy: 0
       layout:
-        styles:
-          card:
-            # border-radius: 20px
+        aspectratio: 3/1
         toolsets:
           # ================================================================
           - toolset: half-circle
@@ -383,7 +371,6 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                   background:
                     fill: var(--theme-sys-elevation-surface-neutral4)
                     opacity: 1
-
     ```
 
 <!-- Image references -->
@@ -393,3 +380,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
