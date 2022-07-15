@@ -14,13 +14,16 @@ tags:
 
 ![Swiss Army Knife Functional Card Person D06 Light Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
 ![Swiss Army Knife Functional Card Person D06 Light Not Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
+<br>![Swiss Army Knife Functional Card Person D06 Light Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
 <br>![Swiss Army Knife Functional Card Person D06 Dark Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
 ![Swiss Army Knife Functional Card Person D06 Dark Not Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "This card shows you some possibilities to apply JavaScript to the animations section"
-    The card itself is not very fancy, but the [use of JavaScript][Swiss Army Knife Javascript Snippets] to fetch the zone's Icon, and to do some color changes is a nice example of the possibilities that JavaScript adds to the tool. It are just a few lines, but very powerful!
+    The card seems like a standard, simple card, but isn't due to some Home Assistant functionalities and the possibilities of using either an icon or an entity picture for the person.
+
+    The [use of JavaScript][Swiss Army Knife Javascript Snippets] to fetch the zone's Icon, to do some state dependent color changes and taking care of the "use entity_picture yes/no" setting are nice examples of the possibilities that JavaScript adds to tools. It are just a few lines, but very powerful!
     
     It also takes care of fetching the icon of additional zones (ie not the home zone).
     
@@ -32,7 +35,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Icon | Background Icon (only in first screenshot) :smile: |
 | Circle | The half circle, as the left part of the circle is cutoff by the card |
-| Icon | Entity Icon. Animated, state dependent|
+| Icon | Entity Icon. Animated, state dependent and only visible if no entity_picture should be displayed |
+| UserSvg | Shows the Entity Picture. Only visible if entity_picture should be displayed |
 | Icon | Zone Icon, ie where is the person according to the zone configuration. Animated, state dependent|
 | Name | Name of Entity|
 | State | State of entity|
@@ -46,6 +50,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 ##:sak-sak-logo: Usage
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
+Using the default mode: an icon for the person entity:
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
@@ -62,11 +67,31 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
             - zone.marco_parents
             - zone.zoo
 ```
+Using an `entity_picture` for the person entity. Picture can be defined here, or (default) the `entity_picture` defined for the person is used:
+```yaml linenums="1"
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: person.tha_washer
+      name: 'Tha Washer'
+      icon: mdi:face-man
+      entity_picture: "/local/images/tha-washer.jpg"
+  layout:
+    template:
+      name: sak_layout_fce_person
+      variables:
+        - sak_layout_fce_person_use_entity_picture: true
+        - sak_layout_fce_person_zone_entities:
+            - zone.the_gym
+            - zone.marco_work
+            - zone.marco_parents
+            - zone.zoo
+```
 
 | Data | Default| Required | Description |
 |-|-|-|-|
 | entities |  | :material-check: | The person entity |
 | sak_layout_fce_person_zone_entities | | :material-check: | The list of zone entities for this person to be displayed. There is no limit, it is really a list which is used when the person is not at home! |
+| sak_layout_fce_person_use_entity_picture | false | :material-close: | If set to true, an entity picture is displayed instead of the persons icon. Default the picture configured for the person is used, but can be overridden by specifying an entity_picture in the entity configuration in the view |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
@@ -76,7 +101,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
       template:
         type: layout
         defaults: 
-          - dummy: 0
+          - sak_layout_fce_person_use_entity_picture: false
       layout:
         aspectratio: 4/1
         toolsets:
@@ -131,6 +156,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   align: center
                   icon_size: 45
                 entity_index: 0
+                variables:
+                  sak_layout_fce_person_use_entity_picture: '[[sak_layout_fce_person_use_entity_picture]]'
                 animations:
                     # Return current state, so always a match!
                   - state: '[[[ return state; ]]]'
@@ -141,10 +168,56 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                           [[[ if (['home', 'not_home'].includes(state)) return 'var(--theme-sys-color-primary)';
                               return 'var(--theme-sys-color-tertiary)';
                           ]]]
+                        # Hide icon if using entity_picture!
+                        display: >
+                          [[[ if (tool_config.variables.sak_layout_fce_person_use_entity_picture) return 'none';
+                              return 'initial';
+                          ]]]
                 styles:
                   icon:
                     fill: var(--theme-sys-color-secondary)
                     opacity: 0.9
+
+              # ------------------------------------------------------------
+              - type: usersvg
+                position:
+                  cx: 50
+                  cy: 50
+                  height: 45
+                  width: 45
+                entity_index: 0
+                variables:
+                  sak_layout_fce_person_use_entity_picture: '[[sak_layout_fce_person_use_entity_picture]]'
+                clip_path:
+                  position:
+                    cx: 50
+                    cy: 50
+                    height: 40            # Slightly crop image (from 45->40)
+                    width: 40
+                    radius:
+                      all: 20             # Radius 20 results in full circle
+                style: 'images'
+                images:                   # Fetch entity_picture from config or entity itself
+                  - default: >
+                      [[[
+                        if (tool_config.variables.sak_layout_fce_person_use_entity_picture) {
+                          return (entity_config?.entity_picture ||
+                                 entity.attributes?.entity_picture || 'none');
+                        } else {
+                          return 'none';
+                        }
+                      ]]]
+                animations:
+                    # Return current state, so always a match!
+                  - state: '[[[ return state; ]]]'
+                    image: default
+                    styles:
+                      icon:
+                        # Hide usersvg tool if using icon!
+                        display: >
+                          [[[ if (!tool_config.variables.sak_layout_fce_person_use_entity_picture) return 'none';
+                              return 'initial';
+                          ]]]
                 
           # ================================================================
           - toolset: zone-icon
@@ -198,8 +271,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                           // For not home, we get the friendly name as input. Must find that one to retrieve
                           // the zone's id...
                           
-                          for (var i=0; i<config.variables.zone_ids.length; i++) {
-                            var zone = states[config.variables.zone_ids[i]];
+                          for (var i=0; i<tool_config.variables.zone_ids.length; i++) {
+                            var zone = states[tool_config.variables.zone_ids[i]];
                             if (zone && zone.attributes.friendly_name == state) {
                               return states[zone.entity_id].attributes.icon;
                             }
