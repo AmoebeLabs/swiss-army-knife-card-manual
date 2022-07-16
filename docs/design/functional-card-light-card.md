@@ -40,166 +40,164 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Left part | Toggles the light once tapped|
 | Other parts | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+
+!!! warning "Replace example entities with your entities!"
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_light
-  variables:
-    - sak_card_light_entity_id: light.1st_floor_hall_light
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: light.1st_floor_hall_light
+      name: 'Light'
+      icon: mdi:dome-light
+  layout:
+    template:
+      name: sak_layout_fce_light
 ```
 
-In the future, SAK will support card templates, and usage would be (I hope) something like:
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The single entity on the card |
+| sak_layout_light_toggle_service | true | :material-close: | The actual service to call to toggle the light. If you have a switch to control the light, the `light.toggle` service won't work and you have to replace this with `switch.toggle` |
 
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_light
-  variables:
-    - sak_card_light_entity_id: light.1st_floor_hall_light
-```
-
-##:sak-sak-logo: YAML Example Definition
-
-??? Info "Full definition of card"
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"
     ```yaml linenums="1"
-        - type: 'custom:swiss-army-knife-card'
-          entities:
-            - entity: light.1st_floor_hall_light
-              name: 'Hall 1st Floor'
-              icon: mdi:dome-light
-
-          aspectratio: 3/1
-          layout:
-            styles:
-              card:
-            toolsets:
-              # ================================================================
-              - toolset: column-icon
+    sak_layout_fce_light:
+      template:
+        type: layout
+        defaults: 
+          - sak_layout_light_toggle_service: light.toggle
+      layout:
+        aspectratio: 3/1
+        toolsets:
+          # ================================================================
+          - toolset: column-icon
+            position:
+              cx: 0
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: circle
                 position:
-                  cx: 0
+                  cx: 50
                   cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: circle
-                    position:
-                      cx: 50
-                      cy: 50
-                      radius: 50
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
-                        styles:
-                          circle:
-                            fill: var(--theme-sys-color-primary)
-                      - state: 'off'
-                        styles:
-                          circle:
-                            fill: var(--theme-sys-color-secondary-container)
-                    user_actions:
-                      tap_action:
-                        haptic: light
-                        actions:
-                          - action: call-service
-                            service: light.toggle
+                  radius: 50
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    styles:
+                      circle:
+                        fill: var(--theme-sys-color-primary)
+                  - state: 'off'
                     styles:
                       circle:
                         fill: var(--theme-sys-color-secondary-container)
-                        stroke: var(--theme-sys-color-secondary)
-                        stroke-width: 0em
+                user_actions:
+                  tap_action:
+                    haptic: light
+                    actions:
+                      - action: call-service
+                        service: light.toggle
+                styles:
+                  circle:
+                    fill: var(--theme-sys-color-secondary-container)
+                    stroke: var(--theme-sys-color-secondary)
+                    stroke-width: 0em
 
-                  # ------------------------------------------------------------
-                  - type: icon
-                    position:
-                      cx: 75
-                      cy: 50
-                      align: center
-                      icon_size: 30
-                    entity_index: 0
-                    animations:
-                      - state: 'on'
-                        styles:
-                          icon:
-                            fill: var(--primary-background-color)
-                      - state: 'off'
-                        styles:
-                          icon:
-                            fill: var(--theme-sys-color-secondary)
+              # ------------------------------------------------------------
+              - type: icon
+                position:
+                  cx: 75
+                  cy: 50
+                  align: center
+                  icon_size: 30
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    styles:
+                      icon:
+                        fill: var(--primary-background-color)
+                  - state: 'off'
                     styles:
                       icon:
                         fill: var(--theme-sys-color-secondary)
-                        pointer-events: none
+                styles:
+                  icon:
+                    fill: var(--theme-sys-color-secondary)
+                    pointer-events: none
 
-              # ================================================================
-              - toolset: switch
+          # ================================================================
+          - toolset: switch
+            position:
+              cx: 25                           # On 1/3 of card width
+              cy: 75
+              scale: 1.8
+            tools:
+              # ------------------------------------------------------------
+              - type: switch
                 position:
-                  cx: 25                           # On 1/3 of card width
-                  cy: 75
-                  scale: 2
-                tools:
-                  # ------------------------------------------------------------
-                  - type: switch
-                    position:
-                      cx: 50
-                      cy: 50
-                      orientation: 'horizontal'
-                      track:
-                        width: 15
-                        height: 5
-                        radius: 2.5
-                      thumb:
-                        width: 3
-                        height: 3
-                        radius: 2.5
-                        offset: 4.5
-                    entity_index: 0
-                    user_actions:
-                      tap_action:
-                        haptic: light
-                        actions:
-                          - action: call-service
-                            service: switch.toggle
-                    styles:
-                      track:
-                        --switch-checked-track-color: var(--primary-background-color)
-                        --switch-unchecked-track-color: var(--theme-sys-color-secondary)
-                        # --switch-checked-button-color: 
-                      thumb:
-                        --thumb-stroke: 'var(--primary-background-color)'
-                        
-              # ================================================================
-              - toolset: column-name
-                position:
-                  cx: 70
+                  cx: 50
                   cy: 50
-                tools:
-                  # ------------------------------------------------------------
-                  - type: name
-                    position:
-                      cx: 50
-                      cy: 30
-                    entity_index: 0
-                    styles:
-                      name:
-                        text-anchor: start
-                        font-size: 25em
-                        font-weight: 700
-                        opacity: 1
-                  # ------------------------------------------------------------
-                  - type: state
-                    position:
-                      cx: 50
-                      cy: 70
-                    entity_index: 0
-                    show:
-                      uom: none
-                    styles:
-                      state:
-                        text-anchor: start
-                        font-size: 20em
-                        font-weight: 500
-                        opacity: 0.7
+                  orientation: 'horizontal'
+                  track:
+                    width: 15
+                    height: 5
+                    radius: 2.5
+                  thumb:
+                    width: 3
+                    height: 3
+                    radius: 2.5
+                    offset: 4.5
+                entity_index: 0
+                user_actions:
+                  tap_action:
+                    haptic: light
+                    actions:
+                      - action: call-service
+                        service: '[[sak_layout_light_toggle_service]]'
+                styles:
+                  track:
+                    --switch-checked-track-color: var(--primary-background-color)
+                    --switch-unchecked-track-color: var(--theme-sys-color-secondary)
+                    # --switch-checked-button-color: 
+                  thumb:
+                    --thumb-stroke: 'var(--primary-background-color)'
+                    
+          # ================================================================
+          - toolset: column-name
+            position:
+              cx: 70
+              cy: 50
+            tools:
+              # ------------------------------------------------------------
+              - type: name
+                position:
+                  cx: 50
+                  cy: 30
+                entity_index: 0
+                styles:
+                  name:
+                    text-anchor: start
+                    font-size: 25em
+                    font-weight: 700
+                    opacity: 1
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 50
+                  cy: 70
+                entity_index: 0
+                show:
+                  uom: none
+                styles:
+                  state:
+                    text-anchor: start
+                    font-size: 20em
+                    font-weight: 500
+                    opacity: 0.7
     ```
 <!-- Image references -->
 
@@ -208,3 +206,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/

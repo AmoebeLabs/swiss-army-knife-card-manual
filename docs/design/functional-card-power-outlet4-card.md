@@ -42,46 +42,41 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Left Circle | Toggles the on/off state of the power outlet|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+
+!!! warning "Replace example entities with your entities!"
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_power_outlet4
-  variables:
-    - entity: sensor.dsmr_reading_electricity_currently_delivered
-    - entity_name: 'Power Usage Total'
-```
-
-In the future, SAK will support card templates, and usage would be (I hope) something like:
-
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_power_outlet4
+- type: 'custom:swiss-army-knife-card'
   entities:
-    - entity: sensor.dsmr_reading_electricity_currently_delivered
-      name: 'Power Usage Total'
+    - entity: sensor.washingmachine_energy_power
+      name: 'PwrOutl #4'
+    - entity: switch.washingmachine_energy
+      name: 'Kitchen Switch #2'
+  layout:
+    template:
+      name: sak_layout_fce_power_outlet4
+      variables:
+        - sak_layout_power_outlet_segarc_scale_max_watt: 200
 ```
 
-##:sak-sak-logo: YAML Example Definition
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The single entity on the card |
+| sak_layout_power_outlet_segarc_scale_max_watt | 200 | :material-check: | The max value of the scale |
 
-??? Info "Full definition of card"
-    ```yaml
-    - type: 'custom:swiss-army-knife-card'
-      entities:
-        - entity: sensor.dsmr_reading_electricity_currently_delivered
-          name: 'Kitchen Power #2'
-        - entity: switch.washingmachine_energy
-          name: 'Kitchen Switch #2'
-        - entity: sensor.washingmachine_energy_power  # Just for the demo!!!!
-          name: 'Kitchen Switch #2'
-      # Define aspect ratio
-      aspectratio: 4/1                          # Card is 400x100 grid
-
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"
+    ```yaml linenums="1"
+    sak_layout_fce_power_outlet4:
+      template:
+        type: layout
+        defaults: 
+          - sak_layout_power_outlet_segarc_scale_max_watt: 200
       layout:
-        styles:
-          card:
+        aspectratio: 4/1
         toolsets:
           # ================================================================
           - toolset: half-circle
@@ -126,10 +121,10 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                   end_angle: 155
                   width: 4
                   radius: 58
-                entity_index: 2           # Extra sensor for testing
+                entity_index: 0
                 scale:
                   min: 0
-                  max: 200                # Controls a fan for testing
+                  max: '[[sak_layout_power_outlet_segarc_scale_max_watt]]'
                   width: 6
                   offset: 12
                 show:
@@ -266,14 +261,13 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                 position:
                   cx: 50
                   cy: 70
-                entity_index: 2
+                entity_index: 0
                 styles:
                   state:
                     text-anchor: start
                     font-size: 26em
                     font-weight: 700
                     opacity: 0.8
-
     ```
 
 <!-- Image references -->
@@ -283,4 +277,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
-
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
