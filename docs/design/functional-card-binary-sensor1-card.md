@@ -71,6 +71,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
+??? Info "Full definition of layout template"
     ```yaml linenums="1"
     sak_layout_fce_binary:
       template:
