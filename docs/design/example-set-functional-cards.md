@@ -20,7 +20,7 @@ This should help you to create your own visualizations, or you can just _use_ th
 | Card | Description |
 | ---- | ----------- |
 | [AirVisual Card][functional-card-airvisual1-card] | Two ([\#1][functional-card-airvisual1-card] and [\#2][functional-card-airvisual2-card]) variants for displaying AirVisual data |
-| [Battery Card][functional-card-battery-sensor2-card] | Card showing the battery state, including 24 hour history |
+| [Battery Card][functional-card-battery-sensor2-card] | Card showing the battery state, including 24 hour history. Several variants. Uses sensor layout template |
 | [Binary Sensor Card][functional-card-binary-sensor1-card] | Card showing the on/of state of a Binary Sensor |
 | [Binary Sensor Card with Alert][functional-card-binary-sensor-alert1-card] | Same as above, but now four ([\#1][functional-card-binary-sensor-alert1-card], [\#2][functional-card-binary-sensor-alert2-card], [\#3][functional-card-binary-sensor-alert3-card] and [\#4][functional-card-binary-sensor-alert4-card]) variations with an alert icon |
 | [Environment Card][functional-card-environment-card] | Card showing inside environment data |
@@ -32,7 +32,7 @@ This should help you to create your own visualizations, or you can just _use_ th
 | [Person Card][functional-card-person-card] | Card showing the location status of a Person. Also shows the power of some JavaScript |
 | [Power Outlet Card][functional-card-power-outlet1-card] | Four ([\#1][functional-card-power-outlet1-card], [\#2][functional-card-power-outlet2-card], [\#3][functional-card-power-outlet3-card] and [\#4][functional-card-power-outlet4-card]) variations of a card showing both status (on/off) and power usage |
 | [Scene Card][functional-card-scene-card] | Card showing how to call a scene |
-| [Sensor Card][functional-card-sensor1-card] | Four ([\#1][functional-card-sensor1-card], [\#2][functional-card-sensor2-card], [\#3][functional-card-sensor3-card] and [\#4][functional-card-sensor4-card]) variations of showing sensor data, without and with 24 hour history, icon or background animations and with or without secondary info. |
+| [Sensor Card][functional-card-sensor1-card] | Two ([\#1][functional-card-sensor1-card] and [\#2][functional-card-sensor2-card]) variations of showing sensor data, without and with 24 hour history, icon or background animations and with or without secondary info. |
 | [Server Statistics Card][functional-card-server-statistics-card] | Card showing the main server sensors like CPU, Memory, Disk, etc. |
 | [Switch Card][functional-card-switch1-card] | Three ([\#1][functional-card-switch1-card], [\#2][functional-card-switch2-card] and [\#3][functional-card-switch3-card]) variations of a card controlling a switch |
 | [Tomorrow Pollen Card][functional-card-tomorrow-pollen-card] | A card showing a single pollen status on a card |

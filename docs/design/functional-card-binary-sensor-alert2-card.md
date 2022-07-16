@@ -29,7 +29,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Icon | Alert Icon. Animated, state dependent. Only visible if state is `on`|
 | Name | Name of Entity|
 | State | Secondary Info|
-| Icon | Stretched battery Icon in the upper left corner of the card. Animated, state dependent. Becomes yellow or blinking red if battery almost dead|
+| Icon | Stretched battery Icon in the upper left corner of the card. Animated, state dependent. Becomes yellow or blinking red if battery almost dead. Entity can be disabled |
 
 ##:sak-sak-logo: Interaction
 
@@ -61,6 +61,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Data | Default| Required | Description |
 |-|-|-|-|
 | entities |  | :material-check: | The three required entities |
+| sak_layout_binary_alert_battery_entity_disabled | false | :material-close: | If no battery entity available for this sensor. Disable this tool |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
@@ -70,7 +71,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
       template:
         type: layout
         defaults: 
-          - dummy: 0
+          - sak_layout_binary_alert_battery_entity_disabled: false
       layout:
         aspectratio: 4/1
         toolsets:
@@ -206,6 +207,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
           # ================================================================
           - toolset: battery-icon
+            disabled: '[[sak_layout_binary_alert_battery_entity_disabled]]'
             position:
               cx: 370
               cy: 15

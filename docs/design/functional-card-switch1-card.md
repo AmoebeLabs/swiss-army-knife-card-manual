@@ -39,49 +39,46 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Switch | Used to toggle the binary sensor entity |
 | Other tools | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
-##:sak-sak-logo: Usage (Not Yet Implemented)
-If the below YAML example definition is encapsulated into a decluttering_template, its usage would be:
+##:sak-sak-logo: Usage
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+
+!!! warning "Replace example entities with your entities!"
 
 ```yaml linenums="1"
-- type: custom:decluttering-card
-  template: sak_card_switch1
-  variables:
-    - entity: switch.fan
-    - name: Fan
-    - spin: true                    # Assumes there is a class for spin animation
-```
-
-In the future, SAK will support card templates, and usage would be (I hope) something like:
-
-
-```yaml linenums="1"
-- type: custom:swiss-army-knife-card
-  template: sak_card_switch1
+- type: 'custom:swiss-army-knife-card'
   entities:
-    - entity: switch.fan
-      name: Fan
-    - entity: switch.fan
+    - entity: light.livingroom_light_duo_right_light
+      name: 'Switch #1'
+      icon: mdi:fan
+    - entity: light.livingroom_light_duo_right_light
       secondary_info: last_changed
       format: relative
-  variables:
-    sak_icon_animation_spin: true
+  layout:
+    template:
+      name: sak_layout_fce_switch1
+      variables:
+        - sak_layout_switch_icon_spin: true
+        - sak_layout_switch_service: light.toggle
 ```
 
-##:sak-sak-logo: YAML Example Definition
+| Data | Default| Required | Description |
+|-|-|-|-|
+| entities |  | :material-check: | The two entities on the card |
+| sak_layout_switch_icon_spin | false | :material-close: | True to have the icon spin indefinitely |
+| sak_layout_switch_service | switch.toggle | :material-close: | You can alter the service, if that is needed... |
 
+##:sak-sak-logo: YAML Template Definition
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of card"
     ```yaml linenums="1"
-    - type: 'custom:swiss-army-knife-card'
-      entities:
-        - entity: switch.fan
-          name: 'Fan'
-        - entity: switch.fant
-          secondary_info: last_changed
-          format: relative
-      # Define aspect ratio
-      aspectratio: 3/1                          # Card is 300x100 grid
-
+    sak_layout_fce_switch1:
+      template:
+        type: layout
+        defaults: 
+          - sak_layout_switch_icon_spin: false
+          - sak_layout_switch_service: switch.toggle
       layout:
+        aspectratio: 3/1
         toolsets:
           # ================================================================
           - toolset: half-circle
@@ -125,11 +122,21 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                   icon_size: 35
                 icon: mdi:fan
                 entity_index: 0
+                # Define template variable for this icon tool, so it can be
+                # processed by a piece of JavaScript ;-)
+                # The template engine will replace the variable!
+                variables:
+                  sak_layout_switch_icon_spin : '[[sak_layout_switch_icon_spin]]'
                 animations:
                   - state: 'on'
                     styles:
                       icon:
-                        animation: spin 3s linear infinite
+                        # Use template variable as the source to spin or not.
+                        # the config JavaScript parameter is this tools config...
+                        animation: >
+                          [[[ if (tool_config.variables.sak_layout_switch_icon_spin) return "spin 3s linear infinite";
+                              return "";
+                          ]]]
                         fill: var(--primary-background-color)
                   - state: 'off'
                     styles:
@@ -139,8 +146,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                   icon:
                     fill: var(--primary-background-color)
                     opacity: 0.9
-                    # transition: fill 1s ease
-                
+
           # ================================================================
           - toolset: column-name
             position:
@@ -210,8 +216,7 @@ In the future, SAK will support card templates, and usage would be (I hope) some
                     haptic: light
                     actions:
                       - action: call-service
-                        service: switch.toggle
-
+                        service: '[[sak_layout_switch_service]]'
     ```
 
 <!-- Image references -->
@@ -221,3 +226,4 @@ In the future, SAK will support card templates, and usage would be (I hope) some
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
