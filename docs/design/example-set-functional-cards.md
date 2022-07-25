@@ -17,6 +17,8 @@ I made a bunch of functional cards with two goals in mind:
 
 This should help you to create your own visualizations, or you can just _use_ these examples!
 
+!!! important "Version RC.3 has been released as of July 24th, 2022 with full support for these layout templates!"
+
 | Card | Description |
 | ---- | ----------- |
 | [AirVisual Card][functional-card-airvisual1-card] | Two ([\#1][functional-card-airvisual1-card] and [\#2][functional-card-airvisual2-card]) variants for displaying AirVisual data |
@@ -44,26 +46,27 @@ This should help you to create your own visualizations, or you can just _use_ th
 
 Most tools are used in the example functional cards. Only 3 are not used.
 
-| Used?            | Tool                                                  | Type        | Description |
-|----------------- | ----------------------------------------------------- | ----------- | ----------- |
-| :material-check: | badge                                                 | basic       | A badge. Not yet Documented! |
-| :material-check: | [circle][swiss-army-knife-basic-tool-circle]          | basic       | A circle |
-| :material-check: | [ellipse][swiss-army-knife-basic-tool-ellipse]        | basic       | An ellipse |
-| :material-check: | [line][swiss-army-knife-basic-tool-line]              | basic       | A vertical, horizontal or oblique line |
-| :material-check: | [rectangle][swiss-army-knife-basic-tool-rectangle]    | basic       | A rectangle with and w/o rounded corners |
-| :material-check: | [rectex][swiss-army-knife-basic-tool-rectex]          | basic       | A more advanced rectangle with independent rounded corners |
-| :material-close: | [regpoly][swiss-army-knife-basic-tool-regpoly]        | basic       | A regular poly using the Schläfli symbol math |
-| :material-check: | [text][swiss-army-knife-basic-tool-text]              | basic       | A text display |
-| :material-close: | [horseshoe][swiss-army-knife-advanced-tool-horseshoe] | advanced    | TBD |
-| :material-check: | [segarc][swiss-army-knife-advanced-tool-segarc]       | advanced    | A segmented arc: shows progress data in an arc |
-| :material-check: | [slider][swiss-army-knife-advanced-tool-slider]       | advanced    | Slider input tool. Used for brightness for example |
-| :material-check: | [switch][swiss-army-knife-advanced-tool-switch]       | advanced    | A basic on/off switch |
-| :material-check: | [usersvg][swiss-army-knife-advanced-tool-usersvg]     | advanced    | For fetching user defined, external SVG files |
-| :material-close: | [area][swiss-army-knife-ha-tool-area]                 | HA specific | Represents an Entity Area |
-| :material-check: | [icon][swiss-army-knife-ha-tool-icon]                 | HA specific | Represents an Entity Icon |
-| :material-check: | [name][swiss-army-knife-ha-tool-name]                 | HA specific | Represents an Entity Name |
-| :material-check: | [state][swiss-army-knife-ha-tool-state]               | HA specific | Represents an Entity State & Unit of Measurement |
-| :material-check: | [bar][swiss-army-knife-ha-tool-bar]                   | HA specific | Represents an simple state history (horizontal or vertical bars)|
+| Used?            | Tool                                                    | Type        | Description |
+|----------------- | ------------------------------------------------------- | ----------- | ----------- |
+| :material-check: | badge                                                   | basic       | A badge. Not yet Documented! |
+| :material-check: | [circle][swiss-army-knife-basic-tool-circle]            | basic       | A circle |
+| :material-check: | [ellipse][swiss-army-knife-basic-tool-ellipse]          | basic       | An ellipse |
+| :material-check: | [line][swiss-army-knife-basic-tool-line]                | basic       | A vertical, horizontal or oblique line |
+| :material-check: | [rectangle][swiss-army-knife-basic-tool-rectangle]      | basic       | A rectangle with and w/o rounded corners |
+| :material-check: | [rectex][swiss-army-knife-basic-tool-rectex]            | basic       | A more advanced rectangle with independent rounded corners |
+| :material-close: | [regpoly][swiss-army-knife-basic-tool-regpoly]          | basic       | A regular poly using the Schläfli symbol math |
+| :material-check: | [text][swiss-army-knife-basic-tool-text]                | basic       | A text display |
+| :material-close: | [circslider][swiss-army-knife-advanced-tool-circslider] | advanced    | Circular Slider input tool. Not yet documented. Alpha |
+| :material-close: | [horseshoe][swiss-army-knife-advanced-tool-horseshoe]   | advanced    | TBD |
+| :material-check: | [segarc][swiss-army-knife-advanced-tool-segarc]         | advanced    | A segmented arc: shows progress data in an arc |
+| :material-check: | [slider][swiss-army-knife-advanced-tool-slider]         | advanced    | Slider input tool. Used for brightness for example |
+| :material-check: | [switch][swiss-army-knife-advanced-tool-switch]         | advanced    | A basic on/off switch |
+| :material-check: | [usersvg][swiss-army-knife-advanced-tool-usersvg]       | advanced    | For fetching user defined, external SVG files |
+| :material-close: | [area][swiss-army-knife-ha-tool-area]                   | HA specific | Represents an Entity Area |
+| :material-check: | [icon][swiss-army-knife-ha-tool-icon]                   | HA specific | Represents an Entity Icon |
+| :material-check: | [name][swiss-army-knife-ha-tool-name]                   | HA specific | Represents an Entity Name |
+| :material-check: | [state][swiss-army-knife-ha-tool-state]                 | HA specific | Represents an Entity State & Unit of Measurement |
+| :material-check: | [bar][swiss-army-knife-ha-tool-bar]                     | HA specific | Represents an simple state history (horizontal or vertical bars)|
 
 ### Overview of Templates, Animations and Styling used
 
@@ -102,6 +105,7 @@ Most tools are used in the example functional cards. Only 3 are not used.
 [swiss-army-knife-basic-tool-rectex]: ../tools/rectangle-ex-tool.md "Swiss Army Knife - Rectangle Ex Tool"
 [swiss-army-knife-basic-tool-regpoly]: ../tools/regular-poly-tool.md "Swiss Army Knife - Regular Poly Tool"
 [swiss-army-knife-basic-tool-text]: ../tools/text-tool.md "Swiss Army Knife - Text Tool"
+[swiss-army-knife-advanced-tool-circslider]: ../tools/circular-slider-tool.md "Swiss Army Knife - Circular Slider Tool"
 [swiss-army-knife-advanced-tool-horseshoe]: ../tools/horseshoe-tool.md "Swiss Army Knife - Horse shoe Tool"
 [swiss-army-knife-advanced-tool-segarc]: ../tools/segarc-tool.md "Swiss Army Knife - Segmented Arc Tool"
 [swiss-army-knife-advanced-tool-slider]: ../tools/slider-tool.md "Swiss Army Knife - Slider Tool"

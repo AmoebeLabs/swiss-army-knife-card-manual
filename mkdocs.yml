@@ -191,6 +191,7 @@ nav:
       - Regular Poly: tools/regular-poly-tool.md
       - Text: tools/text-tool.md
     - Advanced tools:
+      - Circular Slider: tools/circular-slider-tool.md
       - Horse Shoe: tools/horseshoe-tool.md
       - Segmented Arc: tools/segarc-tool.md
       - Slider: tools/slider-tool.md

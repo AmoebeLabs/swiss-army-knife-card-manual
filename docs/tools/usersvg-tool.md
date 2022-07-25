@@ -1,11 +1,12 @@
 ---
 template: main.html
 title: Advanced User SVG tool
-description: The User SVG tool allows you to add external SVGs to your card. It is a great way to extend the card's visualization possibilities.
+description: The User SVG tool allows you to add external SVGs, JPGs and PNGs to your card. It is a great way to extend the card's visualization possibilities.
 tags:
   - Tools
   - Tool
-  - User SVG
+  - User SVG (svg)
+  - User Image (jpg/png)
 ---
 
 [usersvg-tool support]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
@@ -20,11 +21,18 @@ tags:
 :octicons-package-dependents-24: Output ·
 :octicons-tools-24: WIP
 
-The User SVG tool makes it possible to add (external) SVGs to your card.
+The User SVG tool makes it possible to add (external) SVGs, JPGs and PNGs ([:octicons-tag-24: 1.0.0-rc.3][github-releases]) to your card.
+
+[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+It has also support for clipping and masking, so your external SVG/JPG/PNG will fit the area (from rectangle/square to round) it is displayed within.
 
 | Weather | Weather | AirVisual | AirVisual|
 |-----|-----|-----|-----|
 |![usersvg-partly-cloudy-day] | ![usersvg-partly-cloudy-day-rain]| ![usersvg-ic-face-1] | ![usersvg-ic-face-6] |
+
+An example using clipping and masking: A square image of a washing machine is now fit to the round circle. Furthermore, all images and svgs have an opacity mask.
+
+![Swiss Army Knife Clip Mask example]
 
 !!! Success "Inline SVG support is foreseen in the future"
   
@@ -78,7 +86,61 @@ The User SVG tool makes it possible to add (external) SVGs to your card.
           operator: <=
           image: face6
     ```
-    
+
+##:sak-sak-logo: Advanced usage
+This example shows how to clip/mask an image or svg.
+
+=== "Connected"
+    ```yaml title="From: view-sake1" linenums="1" hl_lines="1 8-15 46-47"
+    - type: 'usersvg'
+      entity_index: 3
+      position:
+        cx: 50
+        cy: 50
+        height: 95
+        width: 95
+      clip_path:
+        position:
+          cx: 50
+          cy: 50
+          height: 90      # clip height and width to a bit
+          width: 90       # smaller than image size (95/95)
+          radius:         # Irrelevant, since mask will make
+            all: 45       # a circle out of this image!
+      style: 'images'
+      images:
+        - face1: /local/images/clip-test.jpg
+        - face2: /local/images/airvisual/ic-face-2.svg
+        - face3: /local/images/airvisual/ic-face-3.svg
+        - face4: /local/images/airvisual/ic-face-4.svg
+        - face5: /local/images/airvisual/ic-face-5.svg
+        - face6: /local/images/airvisual/ic-face-6.svg
+      animations:
+        - state: '50'
+          operator: <=
+          image: face1
+        - state: '100'
+          operator: <=
+          image: face2
+        - state: '150'
+          operator: <=
+          image: face3
+        - state: '200'
+          operator: <=
+          image: face4
+        - state: '300'
+          operator: <=
+          image: face5
+        - state: '9999'
+          operator: <=
+          image: face6
+      styles:
+        usersvg:
+          stroke-width: 5em
+        mask:
+          fill: url(#sak-mask-radial-gradient)    
+    ```
+
 ##:sak-sak-logo: Styling
 The User SVG tool has support for the following forms of styling:
 
@@ -120,4 +182,7 @@ The User SVG tool has support for the following forms of animations:
 !!! Info "The use of animations require the tool to be connected to an entity"
 
 ##:sak-sak-logo: Detailed specification
-The basic usage shows all the functionalities of the User SVG tool.
+The basic and advanced usage shows all the functionalities of the User SVG tool.
+
+[Swiss Army Knife Clip Mask example]: ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-aqi-theme-d06-light-good_high_very_low_none-clip-mask.png
+[github-releases]: https://github.com/amoebelabs/swiss-army-knife-card/releases/
