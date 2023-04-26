@@ -221,6 +221,18 @@ sak_user_templates:
 !!! Info "The supplied `sak_templates.yaml` file contains a wildcard include for the `templates` folder."
     So ANY template you add in that folder will be automatically included. You don't have to change this file!
 
+**:octicons-check-circle-16: Step 2c:** Add some files to `configuration.yaml`
+As long as this card is not a bundle, you have to manually add some references in the `cors_allowed_origins` defintion of the `configuration.yaml` file:
+```yaml title="configuration.yaml"
+http:
+  cors_allowed_origins:
+    - https://unpkg.com
+    - https://unpkg.com/lit-html@1/directives/style-map.js?module
+    - https://unpkg.com/lit-html@1/directives/if-defined?module
+    - https://unpkg.com/lit-html@%5E1.0.0?module
+    - https://unpkg.com/lit-html@1/directives/style-map.js?module
+```
+
 ###:octicons-thumbsup-24: You made it!
 If this is all you want, you're ready to use the Swiss Army Knife card. If not, continue with the next paragraph for the example dashboard install.
 

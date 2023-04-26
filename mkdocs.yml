@@ -1,4 +1,7 @@
 # History
+# 2023.04.20
+# - New server installation and configuration
+# - Using latest MkDocs Material 9.1.8 with MkDocs 1.4.2
 # 2022.04.13
 # - Docker container update to MkDocs Material 8.2.9 with MkDocs 1.3.0
 
