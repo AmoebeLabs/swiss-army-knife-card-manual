@@ -6,9 +6,6 @@ tags:
   - Install
 ---
 
-![LGTM Grade][lgtm-grade-badge]
-![LGTM Alerts][lgtm-alerts-badge]
-
 # Installation
 !!! Tip "If you think the installation steps and description can be made better or simplified, please let me know!"
     It may benefit other users.
