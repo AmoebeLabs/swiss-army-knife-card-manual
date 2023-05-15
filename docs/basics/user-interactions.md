@@ -10,31 +10,6 @@ tags:
 
 The Swiss Army Knife custom card supports user interactions. These interactions are NOT card-based but tool-based: in other words, every Swiss Army Knife Tool can function as a "Button" to perform actions.
 
-##:sak-sak-logo: Interacting with SVG objects
-
-There are some things to keep in mind when interacting with SVG objects because their interaction is different from HTML objects. HTML does create a so-called bounding box around the objects to facilitate interaction (mouse or touch) with them. SVG doesn't have that functionality yet: it's part of the unreleased SVG 2.0 specification.
-
-Interaction with an SVG object depends on things like an object's 'fill', its 'visibility', and whether it has been painted or not.
-
-!!! Tip "For an interactive, visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)"
-
-###What does this mean for Swiss Army Knife Tools?
-
-Generally speaking: there are no problems with Swiss Army Knife tools: you won't notice the difference between SVG and HTML-based objects.
-
-This applies at least to text-based tools like entity names, areas, and states.
-
-For the graphical tools like circles and rectangles for instance it depends on the `fill` color: as long as the object has a fill, user interactions will work as expected. Don't use `fill: none`, unless you don't want interactions with the inner part of the tool.
-
-!!! Tip "Use `fill: rgba(0,0,0,0)` for 'invisible' backgrounds for circles/rectangles that need interaction!"
-
-Icons are an exception: icons are actually SVG images. Since an icon's background has no fill, it would be difficult to use a three-dot menu icon, for example. You'd have to touch the dots to get every interaction noticed!
-
-Therefore, the SAK Icon Tool draws an invisible background behind the `icon` to respond to tap actions. It uses a rectangle without a line, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visually invisible, but still responds to pointer/touch events.
-
-##:sak-sak-logo: Current - per tool - support
-:octicons-tag-24: 1.0.0
-
 Each tool has its own `user_actions` section, independent of the definition of `entities`. <br>It means that the same entity, but a different tool, can respond differently to a tap action by defining a list of `actions`:
 
 - No interaction at all
@@ -52,6 +27,28 @@ Each tool has its own `user_actions` section, independent of the definition of `
     But **ONLY** if there is no `tap_action` defined!
     
     If you don't want any interaction, disable this by defining an empty user_actions.tap_action!
+
+##:sak-sak-logo: Supported user action types
+| Type | When activated |
+| ---- | --------------- |
+| `tap_action` | Single Click on tool | 
+| `drag_action` | Dragging a slider (slider and circularslider tools) | 
+
+
+##:sak-sak-logo: Supported actions
+:octicons-tag-24: 1.0.0
+
+| Action | Description |
+| ---- | --------------- |
+| `more-info` | The default action if no user action defined: the more info dialog popup |
+| `call-service` | Calls a Home Assistant service like swithing on lights |
+| `navigate` | Navigate to other Home Assistant panel/screen |
+
+:octicons-tag-24: 2.4.3
+
+| Action | Description |
+| ---- | --------------- |
+| `fire-dom-event` | Fire event for `browser_mod` to call popups, notifications, etc |
 
 ###:sak-sak-logo: Some examples
 
@@ -171,86 +168,50 @@ Each tool has its own `user_actions` section, independent of the definition of `
           icon:
             fill: var(--primary-text-color)
     ```
-
-##:sak-sak-logo: Previous - entity based - support
-:octicons-tag-24: 0.9.0-beta.x
-
-###In General
-The current method is through the `tap_action` definition in the `entities` list section of the card. Just like most Home Assistant cards.
-
-```yaml linenums="1" hl_lines="7-12"
-- type: 'custom:swiss-army-knife-card'
-  entities:
-    - entity: light.livingroom_light_cupboard_light
-      name: Boekenkast
-      area: Woonkamer
-      icon: mdi:book-open-outline
-      tap_action:
-        action: call-service
-        service: light.toggle
-        service_data:
-          entity_id: light.livingroom_light_cupboard_light
-        haptic: light
-```
-
-**Any** tool connected to this entity (`entity_index: 0` in this case) will perform this action once clicked.
-
-If you want different actions, say a `toggle` for the circle (button), and `more-info` for tapping the perentage state/attribute, you have to be a bit creative and define the **same** entity once more, but with a different `tap_action`:
-```yaml linenums="1" hl_lines="7-12 20-22"
-- type: 'custom:swiss-army-knife-card'
-  entities:
-    # Entity to be used for switching light (circle tool)
-    - entity: light.livingroom_light_cupboard_light
-      name: Boekenkast
-      area: Woonkamer
-      icon: mdi:book-open-outline
-      tap_action:
-        action: call-service
-        service: light.toggle
-        service_data:
-          entity_id: light.livingroom_light_cupboard_light
-        haptic: light
-
-    # Entity to be used for state, name, area "more-info" popup action
-    # Is same as first entity, but with different tap_action!
-    - entity: light.livingroom_light_cupboard_light
-      name: Boekenkast
-      area: Woonkamer
-      icon: mdi:book-open-outline
-      tap_action:
-        action: more-info
-        haptic: success
-
-    # Brightness attribute gives "more-info" popup action
-    - entity: light.livingroom_light_cupboard_light
-      name: Boekenkast
-      area: Woonkamer
-      icon: mdi:book-open-outline
-      attribute: brightness
-      unit_of_measurement: "%"
-      tap_action:
-        action: more-info
-        haptic: success
-```
-
-###The Slider
-The slider is the only tool having its own `slider_action` section. This was needed to support dragging and other settings.
-=== "Light example"
-    ```yaml linenums="1"
-    slider_action:
-      update_interval: 200
-      service: light.turn_on
-      parameter: brightness_pct
+=== "Popup example"
+    Example calling a browser_mod popup window
+    ```yaml linenums="1" hl_lines="9-22"
+    tools:
+      # ------------------------------------------------------------
+      - type: circle
+        position:
+          cx: 50
+          cy: 50
+          radius: 30
+        entity_index: 0
+        user_actions:
+          tap_action:
+            haptic: light
+            actions:
+              - action: fire-dom-event
+                browser_mod:
+                  service: browser_mod.popup
+                  data: 
+                    title: "My test popup"
+                    content:
+                      type: entities 
+                      entities:
+                        - entity: light.1st_floor_hall_light
+                        - entity: light.livingroom_light_duo_right_light
     ```
-=== "Thermostat example" 
-    ```yaml linenums="1"
-    slider_action:
-      # Set interval to 0 to disable updates while dragging.
-      # new temperature setpoint is sent to boiler on release
-      # of the slider
-      update_interval: 0
-      service: climate.set_temperature
-      # Override entity_id. Otherwise entity_index is used...
-      entity_id: climate.calenta
-      parameter: temperature
-    ```
+##:sak-sak-logo: Interacting with SVG objects
+
+There are some things to keep in mind when interacting with SVG objects because their interaction is different from HTML objects. HTML does create a so-called bounding box around the objects to facilitate interaction (mouse or touch) with them. SVG doesn't have that functionality yet: it's part of the unreleased SVG 2.0 specification.
+
+Interaction with an SVG object depends on things like an object's 'fill', its 'visibility', and whether it has been painted or not.
+
+!!! Tip "For an interactive, visual explanation: see [Managing SVG Interaction With The Pointer Events Property](https://www.smashingmagazine.com/2018/05/svg-interaction-pointer-events-property/)"
+
+###What does this mean for Swiss Army Knife Tools?
+
+Generally speaking: there are no problems with Swiss Army Knife tools: you won't notice the difference between SVG and HTML-based objects.
+
+This applies at least to text-based tools like entity names, areas, and states.
+
+For the graphical tools like circles and rectangles for instance it depends on the `fill` color: as long as the object has a fill, user interactions will work as expected. Don't use `fill: none`, unless you don't want interactions with the inner part of the tool.
+
+!!! Tip "Use `fill: rgba(0,0,0,0)` for 'invisible' backgrounds for circles/rectangles that need interaction!"
+
+Icons are an exception: icons are actually SVG images. Since an icon's background has no fill, it would be difficult to use a three-dot menu icon, for example. You'd have to touch the dots to get every interaction noticed!
+
+Therefore, the SAK Icon Tool draws an invisible background behind the `icon` to respond to tap actions. It uses a rectangle without a line, but with a fill color of `fill: rgba(0,0,0,0)`. This makes it visually invisible, but still responds to pointer/touch events.
