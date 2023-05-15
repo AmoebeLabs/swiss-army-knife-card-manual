@@ -19,7 +19,6 @@ tags:
 # The User SVG tool
 [:octicons-tag-24: 1.0.0][usersvg-tool support] ·
 :octicons-package-dependents-24: Output ·
-:octicons-tools-24: WIP
 
 The User SVG tool makes it possible to add (external) SVGs, JPGs and PNGs ([:octicons-tag-24: 1.0.0-rc.3][github-releases]) to your card.
 
@@ -142,12 +141,32 @@ This example shows how to clip/mask an image or svg.
     ```
 
 ##:sak-sak-logo: Styling
+As of :octicons-tag-24: 2.4.2, styling of external SVG is possible (again)
+
 The User SVG tool has support for the following forms of styling:
 
 | Method       | Support          | Description            |
 | :----------- | :--------------: | :-------------------- |
 | `classes`    | :material-check: | Using SAK or User defined class definitions  |
 | `styles`     | :material-check: | Using inline SVG and CSS styles |
+
+!!! Warning "For styling to work, the external SVG must be suitable to get styled"
+    See: [Make pollen SVGs stylable](https://github.com/AmoebeLabs/swiss-army-knife-card/issues/199)
+
+    Things that must be removed in the SVG to allow for external styling are:
+
+    - Inline style definitions
+    - Inline class definitions in the <defs> section of the SVG
+
+    Things that do work are:
+
+    - Usage of class definitions wich can be overridden externally
+    - Usage of CSS variables which can be set externally
+
+!!! Info "Safari has problems with certain styling"
+    - CSS Filters don't work. Use SVG filters instead!
+    - Also, chaining filters in Safari does NOT work. Use combined SVG filters instead.
+    - For any other Safari problem where things work in Chrome: wait for the new SVG engine :smile:
 
 The User SVG tool is composed of a single object: "usersvg" and this is the selector for styling:
 ```yaml linenums="1"hl_lines="6 9"
@@ -166,7 +185,21 @@ Populair properties:
 
 | Property       | Does what?            | Example                                                 |
 | :-------------- | :-------------------- | :------------------------------------------------------ |
-| TBD             | TBD                   | TBD |
+| opacity         | Makes image transparent | opacity: 0.5 (for 50% opacity) |
+
+###:sak-sak-logo: Styling: Injected vs external SVGs
+External SVGs can't be styled, so-called 'injected' SVGs can be styled.
+
+The default behaviour of the User SVG tool is to 'inject' the external SVGs into the tool.
+
+However, if the SVG contains local styling and class definitions, and the same SVG is used more than once in a card, you can run into styling problems (internal classes overwrite each other), and you have to force the SVGs to remain external images.
+
+This can be done as follows:
+```yaml
+  options:
+    svginjection: false     # true (default) for injection,
+                            # false for keeping the external file
+```    
 
 --8<-- "docs/tools/default-haptics.md"
 

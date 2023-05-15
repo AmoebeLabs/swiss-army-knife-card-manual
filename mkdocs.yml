@@ -166,6 +166,7 @@ nav:
         - Tomorrow Pollen All with AQI Card: design/functional-card-tomorrow-pollen-all-aqi-card.md
         # - Weather Card: design/functional-card-weather-card.md
   - Basics:
+    - Tools and Entities: basics/tools-and-entities.md
     - Tools and Toolsets: basics/tools-and-toolsets.md
     - Coordinate system: basics/coordinate-system.md
     - Card structure: basics/card-structure.md
