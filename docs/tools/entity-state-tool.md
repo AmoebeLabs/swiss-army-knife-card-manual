@@ -124,15 +124,30 @@ entities:
     unit: '°C'
 ```
 
-###Displaying secondary info
-:octicons-beaker-24: Experimental
+###State formatting options
+A state can have a format option. The only supported format option currently is "brightness".
 
-Any entity can have secondary info. There is experimental support for some of these attributes and formatting.
+```yaml linenums="1" hl_lines="4"
+entities:
+  - entity: light.tha_moon
+    attribute: brightness
+    format: brightness
+```
+
+###Displaying secondary info
+
+Any entity can have secondary info. There is support for some of these attributes and formatting.
+
+Depending on the secondary_info attribute type, the format can specify:
+
+- brightness for a brightness attribute
+- duration for a duration
+- relative, date, time, datetime for attribute types of last_updated/changed/triggered.
 
 ```yaml title="views/view-sake8.yaml" linenums="1" hl_lines="3 4"
 entities:
   - entity: weather.tha_moon
-    secondary_info: last_updated  # last_updated, last_changed
+    secondary_info: last_updated  # last_updated, last_changed, last_triggered
     format: relative              # relative, date, time, datetime
 ```
 
