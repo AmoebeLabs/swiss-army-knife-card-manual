@@ -185,6 +185,10 @@ nav:
       - CSS Animations: basics/animations/css-animations.md
       - Colorstop Animations: basics/animations/colorstops.md
       - State Operator Animations: basics/animations/state-operators.md
+    - Theming:
+      - Overview: basics/theming/overview.md
+      - Per card Theming: basics/theming/per-card-theme.md
+      - Swatches and Palettes: basics/theming/color-swatches-and-color-palettes.md
   - Tools:
     - Basic tools:
       - Circle: tools/circle-tool.md

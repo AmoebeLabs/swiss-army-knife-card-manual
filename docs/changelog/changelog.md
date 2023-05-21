@@ -9,6 +9,44 @@ tags:
 
 # Changelog
 
+##:sak-sak-logo: Release v2.4.5
+<!-- Release notes generated using configuration in .github/release.yml at master -->
+#### A release with per-card theming possibilities, swatches, and palettes!
+- You can specify a Home Assistant theme for your card
+- Swatches are small, lightweight themes that you can load additionally to any theme. Now you can use extra colors with support for light and dark modes for any color or color list, or even overwrite parts of the loaded theme!
+- Palettes are just a collection of swatches to enable the use of multiple swatches in a card.
+
+### What's Changed
+#### New Features
+* Add support for theming, palettes and swatches by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/220, closes #80, #176, #205 
+
+Some views have changed, and I added color swatch templates as an example to the `ha-config` folder!
+
+#### Fixes
+* Fix tool style map in render by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/222, closes #217 
+* Fix UserSVG clip-path and masking problems in Firefox by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/223, closes #215 
+
+
+**Full Changelog**: https://github.com/AmoebeLabs/swiss-army-knife-card/compare/v2.4.4...v2.4.5
+
+##:sak-sak-logo: Release v2.4.4
+<!-- Release notes generated using configuration in .github/release.yml at master -->
+### A small release that gives users their negative values and icons back 🚀 
+
+**Note:**
+Don't forget to **clear** the browser caches and mobile companion **frontend cache** after you have updated this card!
+
+### What's Changed
+#### Fixed
+* Wrong icon is displayed when using multiple entity indexes in animation by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/211
+* Wrong icon is displayed when using multiple entity indexes in animation by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/213 (reprise!)
+* Fix sign processing in _buildState() for negative numbers by @AmoebeLabs in https://github.com/AmoebeLabs/swiss-army-knife-card/pull/212 (Issue #209)
+
+#### Other Changes
+* Changed handling of `fire-dom-event` to check if firing this event is more reliable.
+
+**Full Changelog**: https://github.com/AmoebeLabs/swiss-army-knife-card/compare/v2.4.3...v2.4.4
+
 ##:sak-sak-logo: Release v2.4.3
 <!-- Release notes generated using configuration in .github/release.yml at master -->
 
