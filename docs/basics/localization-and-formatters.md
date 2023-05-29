@@ -13,9 +13,10 @@ Version 2.5.1 adds extended and up-to-date support for localization and formatte
 
 ##:sak-sak-logo: Localization
 With version 2.5.1, localization is re-instated and updated with the current Home Assistant localization tags and features, meaning translation support for:
+
 - Platforms (integrations, such as AirVisual)
-- Device Classes
-- Domains
+- Device Classes (motion, power, energy, humidity, etc.)
+- Domains (sensors, binary_sensors, etc.)
 
 On top of that, if the translation can't be found using these default translation tags, a specific manual `locale_tag` can be defined for a state.
 
@@ -45,7 +46,7 @@ The Swiss Army Knife adds the state to this `locale_tag` and calls the translati
 ```
 
 ##:sak-sak-logo: Formatters
-Formatters are an addition to the localization functions to translate a state to the locale formatting. These formatters convert the state to display on the screen.
+Formatters are an addition to the localization functions to translate a state to a specific - localized - format. Most formatters are about date, datetime and time formats.
 
 ### Example usage
 
