@@ -11,6 +11,9 @@ tags:
 
 Version 2.5.1 adds extended and up-to-date support for localization and formatters.
 
+!!! Success "The Swiss Army Knife card uses the Profile settings in Home Assistant"
+    These settings are for the language, numbers, and date settings.
+
 ##:sak-sak-logo: Localization
 With version 2.5.1, localization is re-instated and updated with the current Home Assistant localization tags and features, meaning translation support for:
 
@@ -21,7 +24,7 @@ With version 2.5.1, localization is re-instated and updated with the current Hom
 On top of that, if the translation can't be found using these default translation tags, a specific manual `locale_tag` can be defined for a state.
 
 ###:sak-sak-logo: Example locale_tag usage
-The `met` integration contains the numerical wind direction in degrees. This is translated using a derived entity in 16 named wind directions. The translation for these wind directions is not present in the `met` component translations, but _is_ in the Home Assistant UI in the form of 'ui.card.weather.cardinal_direction.<cardinal direction\>'
+The `met` integration contains the numerical wind direction in degrees. The derived_entity function translates the degrees to 16 named wind directions. The translation for these wind directions is not present in the `met` component translations, but _is_ in the Home Assistant UI in the form of'ui.card.weather.cardinal_direction.<cardinal direction\>'
 
 The Swiss Army Knife adds the state to this `locale_tag` and calls the translation engine of Home Assistant to translate the string for display.
 

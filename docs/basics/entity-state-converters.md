@@ -18,12 +18,14 @@ Version 2.5.1 adds some predefined converters for entities state, attribute or s
 | 'multiply()'| `Number`| Multiplies the entity state with the value defined between ().<br> This must be a single number, ie `multiply(1000) to multiply the state by 1.000 |
 | 'divide()'|  `Number` | Divides the entity state with the value defined between (). <br> This must be a single number, ie `divide(100) to divide the state by 100 |
 
+!!! Warning "The parameter must be a single number! You cannot use calculations."
+    
 ##:sak-sak-logo: Example Usage
 
 ### Light brightness slider
 When you use a slider to control the brightness of a light, you need the actual brightness percentage, not the value Home Assistant is using for the state of the brightness, which is 0..255.
 
-In this case, before :octicons-tag-24: 2.5.1, a `derived_entity` with some JavaScript was needed. As of :octicons-tag-24: 2.5.1, the predefined converter `brightness_pct` does the job for you!
+Before :octicons-tag-24: 2.5.1, a `derived_entity` with some JavaScript was needed to convert to a brightness percentage. As of :octicons-tag-24: 2.5.1, the predefined converter `brightness_pct` does the job for you!
 
 ```yaml linenums="1" hl_lines="8"
   - type: 'custom:swiss-army-knife-card'
@@ -37,17 +39,23 @@ In this case, before :octicons-tag-24: 2.5.1, a `derived_entity` with some JavaS
 ```
 
 ### Convert kW to Watt
-```yaml linenums="1" hl_lines="8"
+!!! Info "Don't forget to adjust units and decimals if you use this converter"
+
+```yaml linenums="1" hl_lines="5-7"
   - type: 'custom:swiss-army-knife-card'
     entities:
       - entity: sensor.dsmr_reading_electricity_currently_delivered
         name: 'Sensor #2-2'
         convert: multiply(1000)
         unit: W
+        decimals: 0
 ```
 
 ### Convert MiB to GiB
 When you monitor your server with the default Home Assistant monitor, you get your memory use/free reported in MiB. You can convert this to GiB by dividing it by 1024.
+
+!!! Info "Don't forget to adjust units and decimals if you use this converter"
+
 ```yaml linenums="1" hl_lines="10-12 16-18"
   - type: 'custom:swiss-army-knife-card'
     entities:
