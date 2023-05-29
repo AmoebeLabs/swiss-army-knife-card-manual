@@ -6,7 +6,7 @@ tags:
   - Styling
 ---
 <!-- GT/GL -->
-:octicons-tag-24: 2.4.5
+:octicons-tag-24: 2.4.5 · :octicons-tools-24: Experimental
 
 ##:sak-sak-logo: Card configuration
 
@@ -22,7 +22,7 @@ Using a specific Home Assistant theme for your Swiss Army Knife custom card is n
 
 !!! Warning "Loading a specific theme per card does cost resources"
     Every theme needs RAM memory. If you only need a few colors, consider using a color swatch!
-    
+
 ##:sak-sak-logo: Example views
 The examples show the Magenta Material 3 theme applied to a single card between the other cards which use the Teal Blue Material 3 theme that is loaded by Home Assistant.
 

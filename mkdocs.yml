@@ -176,6 +176,8 @@ nav:
       - SAK templates: basics/templates/sak-templates.md
       - Javascript snippets: basics/templates/javascript-snippets.md
     - User Interactions: basics/user-interactions.md
+    - Entity State Converters: basics/entity-state-converters.md
+    - Localization and Formatters: basics/localization-and-formatters.md
     - Haptic Feedback: basics/haptics.md
     - Styling:
       - Overview: basics/styling/overview.md
