@@ -6,7 +6,7 @@ tags:
   - Formatting
 ---
 <!-- GT/GL -->
-# Overview of Localization and Entity Display Formatters
+# Localization and Entity Display Formatters
 :octicons-tag-24: 2.5.1 · :octicons-tools-24: Experimental
 
 Version 2.5.1 adds extended and up-to-date support for localization and formatters.
@@ -21,7 +21,7 @@ With version 2.5.1, localization is re-instated and updated with the current Hom
 On top of that, if the translation can't be found using these default translation tags, a specific manual `locale_tag` can be defined for a state.
 
 ###:sak-sak-logo: Example locale_tag usage
-The `met` integration contains the numerical wind direction in degrees. This is translated using a derived entity in 16 named wind directions. The translation for these wind directions is not present in the `met` component translations, but _is_ in the Home Assistant UI in the form of 'ui.card.weather.cardinal_direction.<wind name direction\>'
+The `met` integration contains the numerical wind direction in degrees. This is translated using a derived entity in 16 named wind directions. The translation for these wind directions is not present in the `met` component translations, but _is_ in the Home Assistant UI in the form of 'ui.card.weather.cardinal_direction.<cardinal direction\>'
 
 The Swiss Army Knife adds the state to this `locale_tag` and calls the translation engine of Home Assistant to translate the string for display.
 
