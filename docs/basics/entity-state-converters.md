@@ -12,6 +12,12 @@ tags:
 Version 2.5.1 adds some predefined converters for entities state, attribute or secondary info.
 
 ##:sak-sak-logo: State converters
+State converters are built-in state conversions. Incoming states are converted before passed on to the tools to be used in animations, colorstops, etc.
+
+Without these predefined converters, you would have to use a `derived_entity` to do the job.
+
+The 3 supported converters are the one that I use most.
+
 | Converter | Parameter | Description |
 | - | - | - |
 | 'brightness_pct'| `none` | Converts the 0..255 brightness state to 0..100% brightness percentage. <br>Used by for instance by a (circular) slider to control brightness percentage |
@@ -39,6 +45,8 @@ Before :octicons-tag-24: 2.5.1, a `derived_entity` with some JavaScript was need
 ```
 
 ### Convert kW to Watt
+The DSMR Reader plugin reports power usage in kW. In some cases it is nicer to have this in Watts, so multiply the state's entity by 1000.
+
 !!! Info "Don't forget to adjust units and decimals if you use this converter"
 
 ```yaml linenums="1" hl_lines="5-7"
