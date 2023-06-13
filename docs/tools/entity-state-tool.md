@@ -124,15 +124,16 @@ entities:
     unit: '°C'
 ```
 
-###State formatting options
-A state can have a format option. The only supported format option currently is "brightness".
+###State converter options
+:octicons-tag-24: 2.5.1 · :octicons-tools-24: Experimental · :octicons-alert-24: BREAKING CHANGE
 
-```yaml linenums="1" hl_lines="4"
-entities:
-  - entity: light.tha_moon
-    attribute: brightness
-    format: brightness
-```
+A state can have a predefined converter option. See [The supported converter options][swiss-army-knife-basic-state-converters].
+
+###State formatting options
+:octicons-tag-24: 2.5.1 · :octicons-tools-24: Experimental · :octicons-alert-24: BREAKING CHANGE
+
+A state can have a format option. See [The supported format options][swiss-army-knife-basic-state-formatters].
+
 
 ###Displaying secondary info
 
@@ -199,3 +200,7 @@ The Entity State tool has support for the following forms of animations:
 | `animations` | :material-check: | Operator state based animations with class/style styling |
 
 
+<!--- Internal references --->
+
+[swiss-army-knife-basic-state-converters]: ../basics/entity-state-converters.md "Swiss Army Knife - Entity State Converters"
+[swiss-army-knife-basic-state-formatters]: ../basics/localization-and-formatters.md "Swiss Army Knife - Localization and Formatters"

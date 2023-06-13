@@ -18,6 +18,8 @@ The Entity Icon tool displays the Home Assistant Entity Icon.
    :material-thermometer:
 
 ##:sak-sak-logo: Basic usage
+!!! Info "If no icon is specified in the entities configuration, the icon specified by Home Assistant is used"
+
 The Entity Icon tool needs a center position, size and alignment.
 === "Standalone"
     ```yaml linenums="1" hl_lines="1"
