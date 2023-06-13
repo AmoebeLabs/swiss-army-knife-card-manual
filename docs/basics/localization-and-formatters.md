@@ -77,7 +77,7 @@ Formatters are an addition to the localization functions to translate a state to
 | datetime | timestamp | 9 August 2021 at 8:23 | August 9, 2021, 8:23 AM |
 | datetime_month-short | timestamp | 9 Aug 2021 at 8:23 | Aug 9, 2021, 8:23 AM |
 | datetime-short | timestamp | 9 AUg 8:23 | Aug 9, 8:23 AM |
-| datetime_with-seconds | timestamp | 9 August 2021 at 8:23:15 | August 9, 2021, 8:23:15 AM |
+| datetime_seconds | timestamp | 9 August 2021 at 8:23:15 | August 9, 2021, 8:23:15 AM |
 | datetime-numeric | timestamp | 8-9-2021 8:23 | 9/8/2021, 8:23 AM |
 
 ###:sak-sak-logo: Date formatters
@@ -99,7 +99,7 @@ Formatters are an addition to the localization functions to translate a state to
 | time | timestamp | 21:15 | 9:15 PM |
 | time-24h | timestamp | 21:15 | 21:15 |
 | time_weekday | timestamp | Tuesday 19:00 | Tuesday 7:00 PM |
-| time_with-seconds | timestamp | 21:15:24 | 9:15:24 PM |
+| time_seconds | timestamp | 21:15:24 | 9:15:24 PM |
 
 
 ##:sak-sak-logo: Difference between Converters and Formatters
