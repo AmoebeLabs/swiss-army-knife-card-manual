@@ -376,7 +376,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 <!-- Image references -->
 
 <!--- Internal References... --->
-[Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

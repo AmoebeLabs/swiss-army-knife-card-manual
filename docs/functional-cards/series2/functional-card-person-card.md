@@ -323,8 +323,8 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
 <!-- Image references -->
 
 <!--- Internal References... --->
-[Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
-[Swiss Army Knife Javascript Snippets]: ../basics/templates/javascript-snippets.md
+[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Javascript Snippets]: ../../basics/templates/javascript-snippets.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
