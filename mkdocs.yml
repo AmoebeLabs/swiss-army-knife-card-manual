@@ -266,6 +266,7 @@ nav:
       - Horse Shoe: tools/horseshoe-tool.md
       - Segmented Arc: tools/segarc-tool.md
       - Slider: tools/slider-tool.md
+      - Sparkline *(new)*: tools/sparkline-tool.md
       - Switch: tools/switch-tool.md
       - User SVG: tools/usersvg-tool.md
     - HA Entity tools:

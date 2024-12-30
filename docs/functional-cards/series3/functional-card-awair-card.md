@@ -21,37 +21,40 @@ tags:
 
 <div class="grid cards" markdown>
 
--   :sak-sak-logo:{ .lg .middle } __Awair Elements Card #3a__
+-   :sak-sak-logo:{ .lg .middle } __Awair Element Card #3a__
 
     ---
 
     The card that matches the Awair display without icons which column is which sensor!
     <br><br>
 
-    ![Swiss Army Knife Functional Card Awair 3a](../../assets/screenshots/sak-functional-card-s3-awair3a.png)
+    ![Swiss Army Knife Functional Card Awair 3a](../../assets/screenshots/sak-functional-card-s3-awair3a-light.png#only-light)
+    ![Swiss Army Knife Functional Card Awair 3a](../../assets/screenshots/sak-functional-card-s3-awair3a-dark.png#only-dark)
 
 
     [:octicons-arrow-right-24: Awair Card #3a][Awair Card #3a]
 
--   :sak-sak-logo:{ .lg .middle } __Awair Elements Card #3b__
+-   :sak-sak-logo:{ .lg .middle } __Awair Element Card #3b__
 
     ---
 
     The same as #3a, but now with icons for each sensor, so you don't have to memorize which column is which sensor!
     The background icon is ommitted.
 
-    ![Swiss Army Knife Functional Card Awair 3b](../../assets/screenshots/sak-functional-card-s3-awair3b.png)
+    ![Swiss Army Knife Functional Card Awair 3b](../../assets/screenshots/sak-functional-card-s3-awair3b-light.png#only-light)
+    ![Swiss Army Knife Functional Card Awair 3b](../../assets/screenshots/sak-functional-card-s3-awair3b-dark.png#only-dark)
 
     [:octicons-arrow-right-24: Awair Card #3b][Awair Card #3b]
 
--   :sak-sak-logo:{ .lg .middle } __Awair Elements Card #3c__
+-   :sak-sak-logo:{ .lg .middle } __Awair Element Card #3c__
 
     ---
 
     Same as example #3b, but now with rounded, rectangles for the sensor values instead of the Awair circles.
     <br><br>
 
-    ![Swiss Army Knife Functional Card Awair 3c](../../assets/screenshots/sak-functional-card-s3-awair3c-1.png)
+    ![Swiss Army Knife Functional Card Awair 3c](../../assets/screenshots/sak-functional-card-s3-awair3c-1-light.png#only-light)
+    ![Swiss Army Knife Functional Card Awair 3c](../../assets/screenshots/sak-functional-card-s3-awair3c-1-dark.png#only-dark)
 
     [:octicons-arrow-right-24: Awair Card #3c][Awair Card #3c]
 
