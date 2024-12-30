@@ -14,7 +14,8 @@ tags:
 
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-s3-person-theme-d06-light-home.png){width="600"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-s3-person-theme-d06-light-home.png#only-light){width="600"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-s3-person-theme-d06-dark-home.png#only-dark){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
