@@ -1,7 +1,7 @@
 ---
 template: main.html
-title: "Functional Cards: Sensor Card #1"
-description: E"xample of functional card, sensor card #1"
+title: "Functional Cards: Sensor Card #2"
+description: E"xample of functional card, sensor card #2"
 hideno:
   toc
 tags:
@@ -12,8 +12,8 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Sensor1 D06 Light]( ../assets/screenshots/sak-functional-card-12-sensor1ab-theme-d06-light-variants.png){width="600"}
-<br>![Swiss Army Knife Functional Card Sensor1 D06 Dark]( ../assets/screenshots/sak-functional-card-12-sensor1ab-theme-d06-dark-variants.png){width="600"}
+![Swiss Army Knife Functional Card Sensor2 D06 Light](../../assets/screenshots/sak-functional-card-12-sensor2-theme-d06-light-variants.png){width="600"}
+<br>![Swiss Army Knife Functional Card Sensor2 D06 Dark](../../assets/screenshots/sak-functional-card-12-sensor2-theme-d06-dark-variants.png){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -21,7 +21,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that displays a sensor value. Both using a segmented arc and as state| 4/1 | Grid with 2 columns |
+| A card that displays a sensor value. Both using a segmented arc and as state| 3/1 | Grid with 2 columns |
 
 | SAK Tool| Used for |
 |-|-|
@@ -48,12 +48,14 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 - type: 'custom:swiss-army-knife-card'
   entities:
     - entity: sensor.dsmr_reading_electricity_currently_delivered
-      name: 'Sensor #1-1'
+      name: 'Sensor #2-1'
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      secondary_info: last_changed
+      format: relative
   layout:
     template:
-      name: sak_layout_fce_sensor1
+      name: sak_layout_fce_sensor2
       variables:
-        - sak_layout_sensor_history_disabled: true
         - sak_layout_sensor_scale_max: 2
 
 ########################################################################
@@ -61,12 +63,77 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 - type: 'custom:swiss-army-knife-card'
   entities:
     - entity: sensor.dsmr_reading_electricity_currently_delivered
-      name: 'Sensor #1-2'
+      name: 'Sensor #2-2'
   layout:
     template:
-      name: sak_layout_fce_sensor1
+      name: sak_layout_fce_sensor2
       variables:
         - sak_layout_sensor_name_above_state: false
+        - sak_layout_sensor_segarc_style: colorstops
+        - sak_layout_sensor_scale_max: 2
+
+########################################################################
+
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      name: 'Sensor #2-3'
+  layout:
+    template:
+      name: sak_layout_fce_sensor2
+      variables:
+        - sak_layout_sensor_segarc_style: colorstops
+        - sak_layout_sensor_icon_style: colorstops
+        - sak_layout_sensor_scale_max: 2
+
+########################################################################
+
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      name: 'Sensor #2-4'
+  layout:
+    template:
+      name: sak_layout_fce_sensor2
+      variables:
+        - sak_layout_sensor_name_above_state: false
+        - sak_layout_sensor_segarc_style: colorstops
+        - sak_layout_sensor_icon_style: colorstops
+        - sak_layout_sensor_circle_style: colorstops
+        - sak_layout_sensor_scale_max: 2
+
+########################################################################
+
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      name: 'Sensor #2-5'
+  layout:
+    template:
+      name: sak_layout_fce_sensor2
+      variables:
+        - sak_layout_sensor_circle_style: colorstops
+        - sak_layout_sensor_segarc_style: colorstops
+        - sak_layout_sensor_scale_max: 2
+
+########################################################################
+
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      name: 'Sensor #2-6'
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      secondary_info: last_changed
+      format: relative
+  layout:
+    template:
+      name: sak_layout_fce_sensor2
+      variables:
+        - sak_layout_sensor_name_above_state: false
+        - sak_layout_sensor_history_disabled: true
+        - sak_layout_sensor_circle_style: default
+        - sak_layout_sensor_icon_style: default
+        - sak_layout_sensor_segarc_style: colorlist
         - sak_layout_sensor_scale_max: 2
 ```
 
@@ -83,9 +150,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
-??? Info "Full definition of card (variant 1a)"
+??? Info "Full definition of card (all variants)"
     ```yaml linenums="1"
-    sak_layout_fce_sensor1:
+    sak_layout_fce_sensor2:
       template:
         type: layout
         defaults: 
@@ -96,9 +163,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
           - sak_layout_sensor_segarc_style: colorlist
           - sak_layout_sensor_scale_max: 2
           - sak_layout_sensor_colorstops_template: colorstops_energy_2kw
-
+          
       layout:
-        aspectratio: 4/1
+        aspectratio: 3/1
         toolsets:
           # ================================================================
           - toolset: half-circle
@@ -121,6 +188,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                 styles:
                   circle:
                     stroke: none
+                    opacity: 0.25
                     fill: var(--theme-sys-elevation-surface-neutral4)
 
               # ------------------------------------------------------------ 
@@ -131,8 +199,8 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   cy: 50
                   start_angle: 25
                   end_angle: 155
-                  width: 4
-                  radius: 58
+                  width: 6
+                  radius: 59
                 entity_index: 0
                 scale:
                   min: 0
@@ -157,8 +225,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   foreground:
                     fill: darkgrey
                   background:
-                    fill: var(--theme-sys-color-secondary)
-                    opacity: 0.5
+                    fill: var(--theme-sys-elevation-surface-neutral4)
 
           # ================================================================
           - toolset: column-icon
@@ -186,11 +253,11 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   icon:
                     fill: var(--theme-sys-color-secondary)
                     opacity: 0.9
-                
+
           # ================================================================
           - toolset: column-bar
             position:
-              cx: 235                     # 400-70/2 + 70=235
+              cx: 185                     # 300-70/2 + 70=185
               cy: 50
             tools:
               # ------------------------------------------------------------
@@ -202,7 +269,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   orientation: vertical
                   cx: 50
                   cy: 50
-                  width: 330              # 400-70=330
+                  width: 230              # 300-70=230
                   height: 100
                   margin: 1
                 hours: 24
@@ -217,73 +284,87 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                 styles:
                   bar:
                     stroke-linecap: square
-                    opacity: 0.25
-                    
+                    opacity: 0.2
+
           # ================================================================
           - toolset: column-name
             position:
               cx: 70                # Left part = 75, so 75+(300-75)/2
               cy: 50
             tools:
-              # Variant 1a, name above state...
-              # The YAML parser can't interpret logical operators, so we
-              # have to use JavaScript to do this...
               # ------------------------------------------------------------
               - type: name
-                position:
-                  cx: 50
-                  cy: 37
                 variables:
                   name_above_state: '[[sak_layout_sensor_name_above_state]]'
                 disabled:  '[[[[ return !tool_config.variables.name_above_state; ]]]]'
+                position:
+                  cx: 50
+                  cy: 33
                 entity_index: 0
                 styles:
                   name:
                     text-anchor: start
                     font-size: 30em
                     font-weight: 700
-                    opacity: 1
               # ------------------------------------------------------------
               - type: state
-                position:
-                  cx: 50
-                  cy: 70
                 variables:
                   name_above_state: '[[sak_layout_sensor_name_above_state]]'
                 disabled:  '[[[[ return !tool_config.variables.name_above_state; ]]]]'
+                position:
+                  cx: 50
+                  cy: 61
                 entity_index: 0
                 styles:
                   state:
                     text-anchor: start
-                    font-size: 26em
+                    font-size: 22em
+                    font-weight: 500
+                    opacity: 0.7
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 50
+                  cy: 85
+                entity_index: 1
+                show:
+                  uom: none
+                styles:
+                  state:
+                    text-anchor: start
+                    font-size: 15em
                     font-weight: 500
                     opacity: 0.7
 
-              # Variant 1b, state above name...
+          # ================================================================
+          - toolset: column-name
+            position:
+              cx: 70                # Left part = 75, so 75+(300-75)/2
+              cy: 50
+            tools:
               # ------------------------------------------------------------
               - type: state
+                disabled: '[[sak_layout_sensor_name_above_state]]'
                 position:
                   cx: 50
-                  cy: 37
-                disabled: '[[sak_layout_sensor_name_above_state]]'
+                  cy: 33
                 entity_index: 0
                 styles:
                   state:
                     text-anchor: start
                     font-size: 30em
                     font-weight: 700
-                    opacity: 1
               # ------------------------------------------------------------
               - type: name
+                disabled: '[[sak_layout_sensor_name_above_state]]'
                 position:
                   cx: 50
-                  cy: 70
-                disabled: '[[sak_layout_sensor_name_above_state]]'
+                  cy: 61
                 entity_index: 0
                 styles:
                   name:
                     text-anchor: start
-                    font-size: 26em
+                    font-size: 22em
                     font-weight: 500
                     opacity: 0.7
     ```

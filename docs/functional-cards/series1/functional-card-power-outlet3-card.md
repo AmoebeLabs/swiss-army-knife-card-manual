@@ -1,33 +1,33 @@
 ---
 template: main.html
-title: "Functional Cards: Input Boolean Card"
-description: Example of functional card, Input Boolean card.
-hideno:hideno:
+title: "Functional Cards: Power Outlet Card #3"
+description: "Example of functional card, power outlet card #3"
+hideno:
   toc
 tags:
   - Design
   - Functional Card
-  - Input Boolean Card
+  - Power Outlet Card
 ---
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Input Boolean1 D06 Light Off](../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Input Boolean1 D06 Light On](../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Input Boolean1 D06 Dark Off](../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Input Boolean1 D06 Dark On](../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-on.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet3 D06 Light Off](../../assets/screenshots/sak-functional-card-12-power-outlet3-theme-d06-light-off.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet3 D06 Light On](../../assets/screenshots/sak-functional-card-12-power-outlet3-theme-d06-light-on.png){width="300"}
+<br>![Swiss Army Knife Functional Card Power Outlet3 D06 Dark Off](../../assets/screenshots/sak-functional-card-12-power-outlet3-theme-d06-dark-off.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet3 D06 Dark On](../../assets/screenshots/sak-functional-card-12-power-outlet3-theme-d06-dark-on.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that can toggle an input_boolean, just like toggling a switch or a light | 4/1 | Grid with 2 columns |
+| A card that displays the on/off state of a power outlet, but also displays the power value. <br>Both using a segmented arc and as state.| 4/1 | Grid with 2 columns |
 
 | SAK Tool| Used for |
 |-|-|
 | Circle | The half circle, as the left part of the circle is cutoff by the card. Animated, state dependent|
 | Icon | Entity Icon. Animated, state dependent|
-| Switch | Switch to indicate and control the state. Animated, state dependent|
+| SegArc | Minimalistic implementation of segmented arc showing the sensors state with a single color|
 | Name | Name of Entity|
 | State | Value of entity|
 
@@ -35,7 +35,6 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Part | Description|
 |-|-|
-| Left Circle | Toggles the on/off state of the power outlet|
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage
@@ -46,26 +45,34 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
-    - entity: input_boolean.pump_enabled
-      name: 'Input Boolean'
+    - entity: sensor.dsmr_reading_electricity_currently_delivered
+      name: 'PwrOutl #3'
+    - entity: switch.washingmachine_energy
+      name: 'Kitchen Switch'
+    - entity: sensor.washingmachine_energy_power  # Just for the demo!!!!
+      name: 'Kitchen Switch #2'
   layout:
     template:
-      name: sak_layout_fce_input_boolean
+      name: sak_layout_fce_power_outlet3
+      variables:
+        - sak_layout_power_outlet_segarc_scale_max_watt: 200
 ```
 
 | Data | Default| Required | Description |
 |-|-|-|-|
-| entities |  | :material-check: | The input boolean entity |
+| entities |  | :material-check: | The single entity on the card |
+| sak_layout_power_outlet_segarc_scale_max_watt | 200 | :material-check: | The max value of the scale |
+
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
-??? Info "Full definition of layout template"  
+??? Info "Full definition of layout template"
     ```yaml linenums="1"
-    sak_layout_fce_input_boolean:
+    sak_layout_fce_power_outlet3:
       template:
         type: layout
         defaults: 
-          - dummy: 0
+          - sak_layout_power_outlet_segarc_scale_max_watt: 200
       layout:
         aspectratio: 4/1
         toolsets:
@@ -81,7 +88,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   cx: 50
                   cy: 50
                   radius: 50
-                entity_index: 0
+                entity_index: 1
                 animations:
                   - state: 'on'
                     styles:
@@ -89,16 +96,49 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                         fill: var(--theme-sys-color-primary)
                   - state: 'off'
                     styles:
-                      circle:                     # Use as filled tonal button (m3)
-                        fill: var(--theme-sys-color-secondary-container)
+                      circle:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
                 styles:
                   circle:
                     stroke: none
+                    fill: var(--theme-sys-elevation-surface-neutral4)
+
+              # ------------------------------------------------------------ 
+              - type: 'segarc'
+                id: 0
+                position:
+                  cx: 50
+                  cy: 50
+                  start_angle: 25
+                  end_angle: 155
+                  width: 4
+                  radius: 58
+                entity_index: 2
+                scale:
+                  min: 0
+                  max: '[[sak_layout_power_outlet_segarc_scale_max_watt]]'
+                  width: 6
+                  offset: 12
+                show:
+                  scale: false
+                  style: 'colorlist'
+                segments:
+                  colorlist:
+                    gap: 1
+                    colors:
+                      - var(--theme-sys-color-secondary)
+                styles:
+                  foreground:
+                    fill: darkgrey
+                  background:
+                    fill: var(--theme-sys-color-secondary)
+                    opacity: 0.5
+
           # ================================================================
           - toolset: column-icon
             position:
               cx: 25
-              cy: 45
+              cy: 50
             tools:
               # ------------------------------------------------------------
               - type: icon
@@ -107,7 +147,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   cy: 50
                   align: center
                   icon_size: 45
-                entity_index: 0
+                entity_index: 1
                 animations:
                   - state: 'on'
                     styles:
@@ -119,65 +159,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                         fill: var(--theme-sys-color-secondary)
                 styles:
                   icon:
+                    fill: var(--theme-sys-color-secondary)
                     opacity: 0.9
-                    pointer-events: none
                 
-          # ================================================================
-          - toolset: switch
-            position:
-              cx: 25                           # On 1/3 of card width
-              cy: 75
-              scale: 1.8
-            tools:
-              # ------------------------------------------------------------
-              - type: switch
-                position:
-                  cx: 50
-                  cy: 50
-                  orientation: 'horizontal'
-                  track:
-                    width: 15
-                    height: 5
-                    radius: 2.5
-                  thumb:
-                    width: 3
-                    height: 3
-                    radius: 2.5
-                    offset: 4.5
-                entity_index: 0
-                styles:
-                  track:
-                    --switch-checked-track-color: var(--primary-background-color)
-                    --switch-unchecked-track-color: var(--theme-sys-color-secondary)
-                    # --switch-checked-button-color: 
-                    pointer-events: none
-                  thumb:
-                    --thumb-stroke: 'var(--primary-background-color)'
-                    pointer-events: none
-          # ================================================================
-          - toolset: tap-area
-            position:
-              cx: 25                              # tap area for toggle
-              cy: 50
-            tools:
-              # ------------------------------------------------------------
-              - type: rectangle
-                position:
-                  cx: 50
-                  cy: 50
-                  width: 50
-                  height: 100
-                entity_index: 0
-                user_actions:
-                  tap_action:
-                    haptic: light
-                    actions:
-                      - action: call-service
-                        service: input_boolean.toggle
-                styles:
-                  rectangle:
-                    stroke: none
-                    fill: rgba(0,0,0,0)
           # ================================================================
           - toolset: column-name
             position:
@@ -201,9 +185,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                 position:
                   cx: 50
                   cy: 70
-                entity_index: 0
-                show:
-                  uom: none
+                entity_index: 2
                 styles:
                   state:
                     text-anchor: start
@@ -211,11 +193,11 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     font-weight: 500
                     opacity: 0.7
     ```
+
 <!-- Image references -->
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
-[Swiss Army Knife Functional Card Sensor2]: functional-card-sensor2-card.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

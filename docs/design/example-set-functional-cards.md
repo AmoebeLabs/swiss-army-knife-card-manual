@@ -117,36 +117,36 @@ Most tools are used in the example functional cards. Only 3 are not used.
 [swiss-army-knife-ha-tool-state]: ../tools/entity-state-tool.md "Swiss Army Knife - Entity State Tool"
 [swiss-army-knife-ha-tool-bar]: ../tools/entity-barchart-tool.md "Swiss Army Knife - Entity History Bar Tool"
 
-[functional-card-airvisual1-card]: functional-card-airvisual1-card.md
-[functional-card-airvisual2-card]: functional-card-airvisual2-card.md
-[functional-card-battery-sensor2-card]: functional-card-battery-sensor2-card.md
-[functional-card-binary-sensor1-card]: functional-card-binary-sensor1-card.md
-[functional-card-binary-sensor-alert1-card]: functional-card-binary-sensor-alert1-card.md
-[functional-card-binary-sensor-alert2-card]: functional-card-binary-sensor-alert2-card.md
-[functional-card-binary-sensor-alert3-card]: functional-card-binary-sensor-alert3-card.md
-[functional-card-binary-sensor-alert4-card]: functional-card-binary-sensor-alert4-card.md
-[functional-card-environment-card]: functional-card-environment-card.md
-[functional-card-header-card]: functional-card-header-card.md
-[functional-card-input-boolean-card]: functional-card-input-boolean-card.md
-[functional-card-light-card]: functional-card-light-card.md
-[functional-card-light-slider-card]: functional-card-light-slider-card.md
-[functional-card-navigate-card]: functional-card-navigate-card.md
-[functional-card-person-card]: functional-card-person-card.md
-[functional-card-power-outlet1-card]: functional-card-power-outlet1-card.md
-[functional-card-power-outlet2-card]: functional-card-power-outlet2-card.md
-[functional-card-power-outlet3-card]: functional-card-power-outlet3-card.md
-[functional-card-power-outlet4-card]: functional-card-power-outlet4-card.md
-[functional-card-scene-card]: functional-card-scene-card.md
-[functional-card-sensor1-card]: functional-card-sensor1-card.md
-[functional-card-sensor2-card]: functional-card-sensor2-card.md
-[functional-card-sensor3-card]: functional-card-sensor3-card.md
-[functional-card-sensor4-card]: functional-card-sensor4-card.md
-[functional-card-server-statistics-card]: functional-card-server-statistics-card.md
-[functional-card-switch1-card]: functional-card-switch1-card.md
-[functional-card-switch2-card]: functional-card-switch2-card.md
-[functional-card-switch3-card]: functional-card-switch3-card.md
-[functional-card-tomorrow-pollen-card]: functional-card-tomorrow-pollen-card.md
-[functional-card-tomorrow-pollen-all-card]: functional-card-tomorrow-pollen-all-card.md
+[functional-card-airvisual1-card]: ../functional-cards/series1/functional-card-airvisual1-card.md
+[functional-card-airvisual2-card]: ../functional-cards/series1/functional-card-airvisual2-card.md
+[functional-card-battery-sensor2-card]: ../functional-cards/series1/functional-card-battery-sensor2-card.md
+[functional-card-binary-sensor1-card]: ../functional-cards/series1/functional-card-binary-sensor1-card.md
+[functional-card-binary-sensor-alert1-card]: ../functional-cards/series1/functional-card-binary-sensor-alert1-card.md
+[functional-card-binary-sensor-alert2-card]: ../functional-cards/series1/functional-card-binary-sensor-alert2-card.md
+[functional-card-binary-sensor-alert3-card]: ../functional-cards/series1/functional-card-binary-sensor-alert3-card.md
+[functional-card-binary-sensor-alert4-card]: ../functional-cards/series1/functional-card-binary-sensor-alert4-card.md
+[functional-card-environment-card]: ../functional-cards/series1/functional-card-environment-card.md
+[functional-card-header-card]: ../functional-cards/series1/functional-card-header-card.md
+[functional-card-input-boolean-card]: ../functional-cards/series1/functional-card-input-boolean-card.md
+[functional-card-light-card]: ../functional-cards/series1/functional-card-light-card.md
+[functional-card-light-slider-card]: ../functional-cards/series1/functional-card-light-slider-card.md
+[functional-card-navigate-card]: ../functional-cards/series1/functional-card-navigate-card.md
+[functional-card-person-card]: ../functional-cards/series1/functional-card-person-card.md
+[functional-card-power-outlet1-card]: ../functional-cards/series1/functional-card-power-outlet1-card.md
+[functional-card-power-outlet2-card]: ../functional-cards/series1/functional-card-power-outlet2-card.md
+[functional-card-power-outlet3-card]: ../functional-cards/series1/functional-card-power-outlet3-card.md
+[functional-card-power-outlet4-card]: ../functional-cards/series1/functional-card-power-outlet4-card.md
+[functional-card-scene-card]: ../functional-cards/series1/functional-card-scene-card.md
+[functional-card-sensor1-card]: ../functional-cards/series1/functional-card-sensor1-card.md
+[functional-card-sensor2-card]: ../functional-cards/series1/functional-card-sensor2-card.md
+[functional-card-sensor3-card]: ../functional-cards/series1/functional-card-sensor3-card.md
+[functional-card-sensor4-card]: ../functional-cards/series1/functional-card-sensor4-card.md
+[functional-card-server-statistics-card]: ../functional-cards/series1/functional-card-server-statistics-card.md
+[functional-card-switch1-card]: ../functional-cards/series1/functional-card-switch1-card.md
+[functional-card-switch2-card]: ../functional-cards/series1/functional-card-switch2-card.md
+[functional-card-switch3-card]: ../functional-cards/series1/functional-card-switch3-card.md
+[functional-card-tomorrow-pollen-card]: ../functional-cards/series1/functional-card-tomorrow-pollen-card.md
+[functional-card-tomorrow-pollen-all-card]: ../functional-cards/series1/functional-card-tomorrow-pollen-all-card.md
 
 <!--- External References... --->
 

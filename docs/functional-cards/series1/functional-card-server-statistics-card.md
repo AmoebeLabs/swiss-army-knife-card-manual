@@ -12,8 +12,8 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Server Statistics D06 Light](../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-light.png){width="600"}
-<br>![Swiss Army Knife Functional Card Server Statistics D06 Dark](../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-dark.png){width="600"}
+![Swiss Army Knife Functional Card Server Statistics D06 Light](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-light.png){width="600"}
+<br>![Swiss Army Knife Functional Card Server Statistics D06 Dark](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-dark.png){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -210,7 +210,7 @@ An example is the [System Monitor integration](https://www.home-assistant.io/int
 <!-- Image references -->
 
 <!--- Internal References... --->
-[Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

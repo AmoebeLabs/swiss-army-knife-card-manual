@@ -12,11 +12,11 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Person D06 Light Home]( ../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Light Not Home]( ../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
-<br>![Swiss Army Knife Functional Card Person D06 Light Home]( ../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
-<br>![Swiss Army Knife Functional Card Person D06 Dark Home]( ../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Dark Not Home]( ../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Light Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
+<br>![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
+<br>![Swiss Army Knife Functional Card Person D06 Dark Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Dark Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

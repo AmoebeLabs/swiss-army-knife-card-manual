@@ -1,38 +1,38 @@
 ---
 template: main.html
-title: "Functional Cards: Navigate Card"
-description: Example of functional card, Navigate to other view Card
+title: "Functional Cards: Call Scene/Script Card"
+description: "Example of functional card, Call Scene/Script Card"
 hideno:
   toc
 tags:
   - Design
   - Functional Card
-  - Navigate
+  - Scene/Script Card
 ---
 <!-- GT/GL -->
 
-![Swiss Army Knife Functional Card Navigate D06 Light Off](../assets/screenshots/sak-functional-card-12-navigate-theme-d06-light.png){width="200"}
-<br>![Swiss Army Knife Functional Card Navigate D06 Dark Off](../assets/screenshots/sak-functional-card-12-navigate-theme-d06-dark.png){width="200"}
+![Swiss Army Knife Functional Card Scene D06 Light](../../assets/screenshots/sak-functional-card-12-scene-theme-d06-light.png){width="200"}
+<br>![Swiss Army Knife Functional Card Scene D06 Dark](../../assets/screenshots/sak-functional-card-12-scene-theme-d06-dark.png){width="200"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
-!!! info "Its a card, but it just demonstrates how to use the `navigate` user action on a tool"
+!!! info "Its a card, but it just demonstrates how to use the `scene` user action on a tool"
 
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that shows an icon and text, and has a `navigate` user action.| 3/1 | Grid with 3 columns |
+| A card that shows an icon and text, and has a `scene` user action.| 3/1 | Grid with 3 columns |
 
 | SAK Tool| Used for |
 |-|-|
-| Icon | Configured Icon (variable) |
-| Text | Navigation text (variable) |
-| RectEx | A rectangle covering the whole card to act as a button to handle the navigation action|
+| Icon | Some fixed Icon|
+| Text | Scene text|
+| RectEx | A rectangle covering the whole card to act as a button to handle the activate scene action|
 
 ##:sak-sak-logo: Interaction
 
 | Part | Description|
 |-|-|
-| Card | This card navigates to the configured view|
+| Card | This card activates the scene for you|
 
 ##:sak-sak-logo: Usage
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
@@ -41,30 +41,33 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 - type: 'custom:swiss-army-knife-card'
   layout:
     template:
-      name: sak_layout_fce_navigate
+      name: sak_layout_fce_scene
       variables:
-        - sak_layout_navigate_icon: 'mdi:arrow-right-bold-circle'
-        - sak_layout_navigate_text: 'Some View'
-        - sak_layout_navigate_path: 'tut-03-p1'
+        - sak_layout_scene_icon: mdi:script
+        - sak_layout_scene_text: 'Scene'
+        - sak_layout_scene_id: 'scene.unknown'
+        - sak_layout_scene_transition: 2.5
 ```
 
 | Data | Default| Required | Description |
 |-|-|-|-|
-| sak_layout_navigate_icon | mdi:arrow-right-bold-circle | :material-close: | The used icon on the card |
-| sak_layout_navigate_text | | :material-check: | The text displayd on the card |
-| sak_layout_navigate_path | | :material-check: | The path name of the view you want to navigate to |
+| sak_layout_scene_icon | mdi:script | :material-close: | The used icon on the card |
+| sak_layout_scene_text | | :material-check: | The text displayed on the card |
+| sak_layout_scene_id | | :material-check: | The entity id of the scene that should be called |
+| sak_layout_scene_transition | 2.5 | :material-close: | The scene transition time in seconds |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml linenums="1"
-    sak_layout_fce_navigate:
+    sak_layout_fce_scene:
       template:
         type: layout
         defaults: 
-          - sak_layout_navigate_icon: mdi:arrow-right-bold-circle
-          - sak_layout_navigate_text: 'Navigate'
-          - sak_layout_navigate_path: 'Unknown'
+          - sak_layout_scene_icon: mdi:script
+          - sak_layout_scene_text: 'Scene'
+          - sak_layout_scene_id: 'scene.unknown'
+          - sak_layout_scene_transition: 2.5
       layout:
         styles:
           card:
@@ -85,7 +88,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                   cy: 50
                   align: center
                   icon_size: 50
-                icon: '[[sak_layout_navigate_icon]]'
+                icon: '[[sak_layout_scene_icon]]'
                 styles:
                   icon:
                     fill: var(--secondary-text-color)
@@ -102,7 +105,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                 position:
                   cx: 50
                   cy: 50
-                text: '[[sak_layout_navigate_text]]'
+                text: '[[sak_layout_scene_text]]'
                 styles:
                   text:
                     text-anchor: middle
@@ -128,7 +131,10 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     haptic: light
                     actions:
                       - action: navigate
-                        navigation_path: '[[sak_layout_navigate_path]]'
+                        service: scene.turn_on
+                        service_data:
+                          entity_id: '[[sak_layout_scene_id]]'
+                          transition: '[[sak_layout_scene_transition]]'
                 styles:
                   rectex:
                     fill: rgba(0,0,0,0)

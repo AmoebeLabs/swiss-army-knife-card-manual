@@ -12,8 +12,8 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional AirVisual2 D06 Light](../assets/screenshots/sak-functional-card-12-airvisual2-theme-d06-light.png){width="300"}
-<br>![Swiss Army Knife Functional AirVisual2 D06 Dark](../assets/screenshots/sak-functional-card-12-airvisual2-theme-d06-dark.png){width="300"}
+![Swiss Army Knife Functional AirVisual2 D06 Light](../../assets/screenshots/sak-functional-card-12-airvisual2-theme-d06-light.png){width="300"}
+<br>![Swiss Army Knife Functional AirVisual2 D06 Dark](../../assets/screenshots/sak-functional-card-12-airvisual2-theme-d06-dark.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

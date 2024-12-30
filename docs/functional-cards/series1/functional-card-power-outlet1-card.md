@@ -1,7 +1,7 @@
 ---
 template: main.html
-title: "Functional Cards: Power Outlet Card #2"
-description: "Example of functional card, power outlet card #2"
+title: "Functional Cards: Power Outlet Card #1"
+description: "Example of functional card, power outlet card #1"
 hideno:
   toc
 tags:
@@ -12,10 +12,10 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Power Outlet2 D06 Light Off]( ../assets/screenshots/sak-functional-card-12-power-outlet2-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Card Power Outlet2 D06 Light On]( ../assets/screenshots/sak-functional-card-12-power-outlet2-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Card Power Outlet2 D06 Dark Off]( ../assets/screenshots/sak-functional-card-12-power-outlet2-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Card Power Outlet2 D06 Dark On]( ../assets/screenshots/sak-functional-card-12-power-outlet2-theme-d06-dark-on.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet1 D06 Light Off](../../assets/screenshots/sak-functional-card-12-power-outlet1-theme-d06-light-off.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet1 D06 Light On](../../assets/screenshots/sak-functional-card-12-power-outlet1-theme-d06-light-on.png){width="300"}
+<br>![Swiss Army Knife Functional Card Power Outlet1 D06 Dark Off](../../assets/screenshots/sak-functional-card-12-power-outlet1-theme-d06-dark-off.png){width="300"}
+![Swiss Army Knife Functional Card Power Outlet1 D06 Dark On](../../assets/screenshots/sak-functional-card-12-power-outlet1-theme-d06-dark-on.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -27,18 +27,18 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 |-|-|
 | Circle | The half circle, as the left part of the circle is cutoff by the card. Animated, state dependent|
 | Icon | Entity Icon. Animated, state dependent|
-| Switch | Switch to indicate and control the state. Animated, state dependent|
 | Name | Name of Entity|
 | State | Secondary Info of entity|
 | Line | Vertical line separator|
-| SegArc | Segmented arc showing the sensors state with a single color|
-| Icon | Entity Icon|
+| SegArc | Half segmented arc showing the sensors state with 4 colors|
 | State | Entity State|
+| Switch | Switch to indicate and control the state. Animated, state dependent|
 
 ##:sak-sak-logo: Interaction
 
 | Part | Description|
 |-|-|
+| Switch | Toggles the power switch |
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage
@@ -49,16 +49,16 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
-    - entity: sensor.kitchen_group_energy_power
-      name: 'PwrOutl #2'
-    - entity: sensor.kitchen_group_energy_power
+    - entity: sensor.washingmachine_energy_power
+      name: 'PwrOutl #1'
+    - entity: sensor.washingmachine_energy_power
       secondary_info: last_changed
       format: relative
     - entity: switch.washingmachine_energy
-      name: 'Air #2'
+      name: 'Air'
   layout:
     template:
-      name: sak_layout_fce_power_outlet2
+      name: sak_layout_fce_power_outlet1
       variables:
         - sak_layout_power_outlet_segarc_scale_max_watt: 200
 ```
@@ -66,14 +66,14 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Data | Default| Required | Description |
 |-|-|-|-|
 | entities |  | :material-check: | The single entity on the card |
-| sak_layout_power_outlet_segarc_scale_max_watt | 200  | :material-check: | The max value of the scale |
+| sak_layout_power_outlet_segarc_scale_max_watt | 200 | :material-check: | The max value of the scale |
 
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml linenums="1"
-    sak_layout_fce_power_outlet2:
+      sak_layout_fce_power_outlet1:
       template:
         type: layout
         defaults: 
@@ -82,9 +82,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
         aspectratio: 3/1
         toolsets:
           # ================================================================
-          - toolset: column-icon
+          - toolset: half-circle
             position:
-              cx: 0
+              cx: 0                             # Center on cards border 
               cy: 50
             tools:
               # ------------------------------------------------------------
@@ -92,96 +92,32 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                 position:
                   cx: 50
                   cy: 50
-                  radius: 50
-                entity_index: 2
-                animations:
-                  - state: 'on'
-                    styles:
-                      circle:
-                        fill: var(--theme-sys-color-primary)
-                        # animation: flash 2s ease-in-out 5
-                  - state: 'off'
-                    styles:
-                      circle:
-                        fill: var(--theme-sys-color-secondary-container)
-                # Remove user actions part to just display the state
-                # or disable pointer-events via a class or style
-                # Using a class enables the use of variables that can
-                # disable pointer-events to none!
-                user_actions:
-                  tap_action:
-                    haptic: light
-                    actions:
-                      - action: call-service
-                        service: switch.toggle
+                  radius: 48
                 styles:
                   circle:
-                    fill: var(--theme-sys-color-secondary-container)
+                    fill: none
                     stroke: var(--theme-sys-color-secondary)
-                    stroke-width: 0em
+                    stroke-width: 3em
+                    opacity: 0.5
 
+          # ================================================================
+          - toolset: column-icon
+            position:
+              cx: 25
+              cy: 50
+            tools:
               # ------------------------------------------------------------
               - type: icon
                 position:
-                  cx: 75
+                  cx: 50
                   cy: 50
                   align: center
                   icon_size: 30
-                entity_index: 2
-                animations:
-                  - state: 'on'
-                    styles:
-                      icon:
-                        # animation: spin 3s linear infinite
-                        fill: var(--primary-background-color)
-                  - state: 'off'
-                    styles:
-                      icon:
-                        # fill: var(--theme-sys-color-on-secondary-container)
-                        fill: var(--theme-sys-color-secondary)
+                entity_index: 0
                 styles:
                   icon:
                     fill: var(--theme-sys-color-secondary)
-                    # opacity: 0.7
-                    pointer-events: none
-
-          # ================================================================
-          - toolset: switch
-            position:
-              cx: 25                           # On 1/3 of card width
-              cy: 75
-              scale: 2
-            tools:
-              # ------------------------------------------------------------
-              - type: switch
-                position:
-                  cx: 50
-                  cy: 50
-                  orientation: 'horizontal'
-                  track:
-                    width: 15
-                    height: 5
-                    radius: 2.5
-                  thumb:
-                    width: 3
-                    height: 3
-                    radius: 2.5
-                    offset: 4.5
-                entity_index: 2
-                user_actions:
-                  tap_action:
-                    haptic: light
-                    actions:
-                      - action: call-service
-                        service: switch.toggle
-                styles:
-                  track:
-                    --switch-checked-track-color: var(--primary-background-color)
-                    --switch-unchecked-track-color: var(--theme-sys-color-secondary)
-                    # --switch-checked-button-color: 
-                  thumb:
-                    --thumb-stroke: 'var(--primary-background-color)'
-                    
+                
           # ================================================================
           - toolset: column-name
             position:
@@ -234,13 +170,79 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
                     opacity: 0.5
 
           # ================================================================
-          - toolset: column-load
-            template:
-              name: toolset_tutorial_02_part1
-              variables:
-                - var_entity_index: 0
-                - var_toolset_position_cx: 250
-                - var_segarc_scale_max: '[[sak_layout_power_outlet_segarc_scale_max_watt]]'
+          - toolset: column-power
+            position:
+              cx: 250
+              cy: 50
+            tools:
+              # ------------------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 50
+                  cy: 50
+                entity_index: 0
+                styles:
+                  state:
+                    text-anchor: middle
+                    font-size: 20em
+                    font-weight: 700
+                    fill: var(--primary-text-color)
+                  uom:
+                    fill: var(--primary-text-color)
+                    font-weight: 700
+
+              # ------------------------------------------------------------------------
+              - type: 'segarc'
+                position:
+                  cx: 50
+                  cy: 50
+                  start_angle: -90                            # Arc clockwise from
+                  end_angle: 90                               # -90 to 90 degrees
+                  width: 6
+                  radius: 40                                # Radius on 100x100 grid
+                entity_index: 0
+                scale:
+                  min: 0
+                  max: '[[sak_layout_power_outlet_segarc_scale_max_watt]]'
+                  width: 6
+                  offset: 12
+                show:
+                  scale: false                              # Disable scale of segarc
+                  style: 'colorlist'
+                segments:
+                  colorlist:
+                    gap: 1                                  # Gap between segments
+                    colors:
+                      - var(--theme-sys-palette-primary50)  # Use 4 system palette
+                      - var(--theme-sys-palette-primary45)  # colors that adhere
+                      - var(--theme-sys-palette-primary40)  # to light and dark
+                      - var(--theme-sys-palette-primary35)  # theme modes!
+                styles:
+                  foreground:
+                    fill: darkgrey
+                  background:
+                    fill: var(--theme-sys-elevation-surface-neutral4)
+                    opacity: 1
+
+          # ================================================================
+          - toolset: switch
+            position:
+              cx: 250                           # On 1/3 of card width
+              cy: 80
+              scale: 3
+            tools:
+              # ------------------------------------------------------------
+              - type: switch
+                position:
+                  cx: 50
+                  cy: 50
+                entity_index: 2
+                user_actions:
+                  tap_action:
+                    haptic: light
+                    actions:
+                      - action: call-service
+                        service: switch.toggle
     ```
 
 <!-- Image references -->

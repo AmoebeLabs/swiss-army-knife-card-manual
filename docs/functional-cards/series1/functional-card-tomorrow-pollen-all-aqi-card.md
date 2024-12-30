@@ -1,35 +1,36 @@
 ---
 template: main.html
-title: "Functional Cards: Tomorrow Pollen All Card"
-description: "Example of functional card, Tomorrow Pollen All Card"
+title: "Functional Cards: Tomorrow Pollen All with AQI Card"
+description: "Example of functional card, Tomorrow Pollen All with AQI Card"
 hideno:
   toc
 tags:
   - Design
   - Functional Card
-  - Tomorrow Pollen All Card
+  - Tomorrow Pollen All AQI Card
 ---
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Tomorrow Pollen All D06 Light None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-theme-d06-light-low_very_low_none.png){width="600"}
-<br>![Swiss Army Knife Functional Card Tomorrow Pollen All D06 Dark None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-theme-d06-dark-low_very_low_none.png){width="600"}
-
-![Swiss Army Knife Functional Card Tomorrow Pollen All D06 Light Very High Very Low None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-theme-d06-light-very_high_very_low_none.png){width="600"}
-<br>![Swiss Army Knife Functional Card Tomorrow Pollen All D06 Dark Very High Very Low None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-theme-d06-dark-very_high_very_low_none.png){width="600"}
+![Swiss Army Knife Functional Card Tomorrow Pollen All AQI D06 Light None None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-aqi-theme-d06-light-good_very_high_very_low_none.png){width="600"}
+<br>![Swiss Army Knife Functional Card Tomorrow Pollen All AQI D06 Dark None None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-all-aqi-theme-d06-dark-good_very_high_very_low_none.png){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that shows the pollen status from Tomorrow. You need to have setup that integration of course.| 6/2 | Grid with 1 column |
+| A card that shows the pollen status from Tomorrow and the AQI value. This value from Tomorrow doesn't work, so I used the default AQI integration.| 6/2 | Grid with 1 column |
 
 | SAK Tool| Used for |
 |-|-|
 | Ellipse | The half ellipse, as the left part of the circle is cutoff by the card.|
 | Icon | Entity Icon. |
-| Text | Text "Pollen" |
-| Text | Text "Index" |
+| Name | Name of AQI Entity |
+| Circle | Circle as background for the Svg. Animated, state dependent |
+| UserSvg | Svg image for AQI. Animated, state dependent |
+| State | State of AQI |
+| State | State of Pollutant |
+| Line | Vertical line separator |
 | Name | Name of Trees Entity |
 | UserSvg | Svg image for trees. Animated, state dependent |
 | State | State of trees entity|
@@ -41,7 +42,9 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | State | State of weed entity|
 
 ##:sak-sak-logo: Integrations
-You need the [tomorrow.io integration](https://www.home-assistant.io/integrations/tomorrowio/):
+You need the [AirVisual integration](https://www.home-assistant.io/integrations/airvisual/):
+[![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=airvisual)
+<br>and the [tomorrow.io integration](https://www.home-assistant.io/integrations/tomorrowio/):
 [![](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=tomorrowio)
 
 ##:sak-sak-logo: Interaction
@@ -53,10 +56,12 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
 ##:sak-sak-logo: Usage
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 
-!!! info "You need the SVG files from Github and put those in the `www/images/tomorrow` folder"
+!!! info "You need the tomorrow.io SVG files from Github and put those in the `www/images/tomorrow` folder"
     Images and colors used for this card are adapted versions from Isabella Alströms pollen images
 
-!!! warning "Replace example entities with your entities!"
+!!! info "You need the AirVisual SVG files from Github and put those in the `www/images/airvisual` folder"
+
+!!! warning "Replace tomorrow entities with your entities!. The AQI entities are generic"
   
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
@@ -67,23 +72,26 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
       name: 'Grass'
     - entity: sensor.tomorrow_io_weed_pollen_index
       name: 'Weed'
+    - entity: sensor.u_s_air_quality_index
+      name: 'AQI'
+    - entity: sensor.u_s_air_pollution_level
   layout:
     template:
-      name: sak_layout_fce_tomorrow_pollen_all
+      name: sak_layout_fce_tomorrow_pollen_all_aqi
       variables:
         - sak_layout_tomorrow_pollen_image_path: tomorrow/
 ```
 
 | Data | Default| Required | Description |
 |-|-|-|-|
-| entities |  | :material-check: | The three tomorrow pollen entities; tree, grass and weed, **in that order!** |
+| entities |  | :material-check: | The three tomorrow pollen entities; tree, grass and weed and the two AQI entities, **in that order!** |
 | sak_layout_tomorrow_pollen_image_path | tomorrow/ | :material-close: | Folder in /local/images/, including a trailing slash! |
 
 ##:sak-sak-logo: YAML Template Definition
 [:octicons-tag-24: 1.0.0-rc.3][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml
-    sak_layout_fce_tomorrow_pollen_all:
+    sak_layout_fce_tomorrow_pollen_all_aqi:
       template:
         type: layout
         defaults: 
@@ -148,35 +156,108 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
                     fill: var(--theme-sys-color-secondary)
 
           # ================================================================
-          - toolset: column-text
+          - toolset: aqi-column
             position:
               cx: 125
               cy: 100
             tools:
               # ------------------------------------------------------------
-              - type: text
+              - type: name
                 position:
                   cx: 50
-                  cy: 37
-                text: 'Pollen'
+                  cy: -25
+                entity_index: 3
                 styles:
-                  text:
-                    text-anchor: middle
-                    font-size: 30em
-                    font-weight: 600
-                    opacity: 0.9
-              # ------------------------------------------------------------
-              - type: text
-                position:
-                  cx: 50
-                  cy: 70
-                text: 'Index'
-                styles:
-                  text:
+                  name:
                     text-anchor: middle
                     font-size: 26em
-                    font-weight: 600
-                    opacity: 0.9
+                    font-weight: 700
+                    opacity: 1
+              # ------------------------------------------------------------
+              - type: circle
+                position:
+                  cx: 50
+                  cy: 50
+                  radius: 50
+                entity_index: 3
+                show:
+                  style: 'colorstops'
+                colorstops:
+                  template:
+                    name: colorstops_airvisual
+                    variables:
+                      - thegap: 2
+                styles:
+                  circle:
+                    stroke: none
+                    fill: var(--theme-sys-elevation-surface-neutral4)
+              # ------------------------------------------------------------
+              - type: 'usersvg'
+                entity_index: 3
+                position:
+                  cx: 50
+                  cy: 50
+                  height: 95
+                  width: 95
+                style: 'images'
+                images:
+                  - face1: /local/images/airvisual/ic-face-1.svg
+                  - face2: /local/images/airvisual/ic-face-2.svg
+                  - face3: /local/images/airvisual/ic-face-3.svg
+                  - face4: /local/images/airvisual/ic-face-4.svg
+                  - face5: /local/images/airvisual/ic-face-5.svg
+                  - face6: /local/images/airvisual/ic-face-6.svg
+                animations:
+                  - state: '50'
+                    operator: <=
+                    image: face1
+                  - state: '100'
+                    operator: <=
+                    image: face2
+                  - state: '150'
+                    operator: <=
+                    image: face3
+                  - state: '200'
+                    operator: <=
+                    image: face4
+                  - state: '300'
+                    operator: <=
+                    image: face5
+                  - state: '9999'
+                    operator: <=
+                    image: face6
+                styles:
+                  usersvg:
+                    stroke-width: 5em
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 43
+                  cy: 125
+                entity_index: 3
+                show:
+                  ellipsis: 5
+                styles:
+                  state:
+                    text-anchor: end
+                    font-size: 20em
+                    font-weight: 500
+                    opacity: 0.7
+
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 48
+                  cy: 125
+                entity_index: 4
+                text:
+                  before: ' | '
+                styles:
+                  state:
+                    text-anchor: start
+                    font-size: 20em
+                    font-weight: 500
+                    opacity: 0.7
 
           # ================================================================
           - toolset: pollen-column-trees
@@ -224,10 +305,9 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
                 styles:
                   state:
                     text-anchor: middle
-                    font-size: 22em
+                    font-size: 20em
                     font-weight: 500
                     opacity: 0.7
-
           # ================================================================
           - toolset: pollen-column-grass
             position:
@@ -274,7 +354,7 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
                 styles:
                   state:
                     text-anchor: middle
-                    font-size: 22em
+                    font-size: 20em
                     font-weight: 500
                     opacity: 0.7
 
@@ -324,7 +404,7 @@ You need the [tomorrow.io integration](https://www.home-assistant.io/integration
                 styles:
                   state:
                     text-anchor: middle
-                    font-size: 22em
+                    font-size: 20em
                     font-weight: 500
                     opacity: 0.7
     ```

@@ -12,11 +12,11 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-low_very_low_none.png){width="600"}
-<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark None None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-low_very_low_none.png){width="600"}
+![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light None None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-low_very_low_none.png){width="600"}
+<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark None None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-low_very_low_none.png){width="600"}
 
-![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light Very High Very Low None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-very_high_very_low_none.png){width="600"}
-<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark Very High Very Low None]( ../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-very_high_very_low_none.png){width="600"}
+![Swiss Army Knife Functional Card Tomorrow Pollen D06 Light Very High Very Low None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-light-very_high_very_low_none.png){width="600"}
+<br>![Swiss Army Knife Functional Card Tomorrow Pollen D06 Dark Very High Very Low None](../../assets/screenshots/sak-functional-card-12-tomorrow-pollen-theme-d06-dark-very_high_very_low_none.png){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

@@ -12,11 +12,11 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Person D06 Light Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Light Not Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
-<br>![Swiss Army Knife Functional Card Person D06 Light Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
-<br>![Swiss Army Knife Functional Card Person D06 Dark Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Dark Not Home]( ../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Light Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
+<br>![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
+<br>![Swiss Army Knife Functional Card Person D06 Dark Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Dark Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -323,8 +323,8 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
 <!-- Image references -->
 
 <!--- Internal References... --->
-[Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
-[Swiss Army Knife Javascript Snippets]: ../basics/templates/javascript-snippets.md
+[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Javascript Snippets]: ../../basics/templates/javascript-snippets.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
