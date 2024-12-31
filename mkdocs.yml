@@ -368,6 +368,7 @@ nav:
       - Examples:
         - Awair Element Cards: functional-cards/series3/functional-card-awair-card.md
         - "Binary Card with Alert #1": functional-cards/series3/functional-card-binary-sensor-alert1-card.md
+        - Electricity Cards (Big!): functional-cards/series3/functional-card-electricity-big-card.md
         - Person Card: functional-cards/series3/functional-card-person-card.md
         - "Sensor Card #4": functional-cards/series3/functional-card-sensor4-card.md
 
