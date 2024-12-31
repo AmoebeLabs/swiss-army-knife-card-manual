@@ -28,11 +28,26 @@ tags:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-8](../../assets/screenshots/sak-functional-card-s3-sensor4-8-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-8](../../assets/screenshots/sak-functional-card-s3-sensor4-8-dark.png#only-dark)
+[Line Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-8-light.png#only-light
+[Line Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-8-dark.png#only-dark
 
+    ![Line Example - Light]
+    ![Line Example - Dark]
 
     [:octicons-arrow-right-24: Line Example][Line Example]
+
+-   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line/MinMax"*__
+
+    ---
+
+    A sensor card with a sparkline showing the history of today with Min/Max values.
+    <br><br>
+
+    ![Swiss Army Knife Functional Sensor Card #4-14](../../assets/screenshots/sak-functional-card-s3-sensor4-14-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-14](../../assets/screenshots/sak-functional-card-s3-sensor4-14-dark.png#only-dark)
+
+
+    [:octicons-arrow-right-24: Line/MinMax Example][Line/MinMax Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Area"*__
 
@@ -46,6 +61,18 @@ tags:
 
     [:octicons-arrow-right-24: Area Example][Area Example]
 
+-   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode"*__
+
+    ---
+
+    A sensor card with a sparkline showing the history of today.
+    <br><br>
+
+    ![Swiss Army Knife Functional Sensor Card #4-2](../../assets/screenshots/sak-functional-card-s3-sensor4-13-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-2](../../assets/screenshots/sak-functional-card-s3-sensor4-13-dark.png#only-dark)
+
+    [:octicons-arrow-right-24: Barcode Example][Barcode Example]
+
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode/Audio"*__
 
     ---
@@ -57,6 +84,18 @@ tags:
     ![Swiss Army Knife Functional Sensor Card #4-2](../../assets/screenshots/sak-functional-card-s3-sensor4-2-dark.png#only-dark)
 
     [:octicons-arrow-right-24: Barcode/Audio Example][Barcode/Audio Example]
+
+-   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode/Sta..."*__
+
+    ---
+
+    A sensor card with a sparkline showing the history of today.
+    <br><br>
+
+    ![Swiss Army Knife Functional Sensor Card #4-2](../../assets/screenshots/sak-functional-card-s3-sensor4-12-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-2](../../assets/screenshots/sak-functional-card-s3-sensor4-12-dark.png#only-dark)
+
+    [:octicons-arrow-right-24: Barcode/Stalagmites Example][Barcode/Stalagmites Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Bar"*__
 
@@ -96,6 +135,17 @@ tags:
 
     [:octicons-arrow-right-24: Graded/Rank Order Example][Graded/Rank Order Example]
 
+-   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Equalizer"*__
+
+    ---
+
+    A sensor card with a sparkline showing the history of today.
+    <br><br>
+
+    ![Swiss Army Knife Functional Sensor Card #4-9](../../assets/screenshots/sak-functional-card-s3-sensor4-11-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-9](../../assets/screenshots/sak-functional-card-s3-sensor4-11-dark.png#only-dark)
+
+    [:octicons-arrow-right-24: Equalizer Example][Equalizer Example]
 
 </div>
 
@@ -111,6 +161,9 @@ tags:
 
 ##:sak-sak-logo: Sensor Card \#4 - Line Example
 [:octicons-tag-24: 4.0.1][github-releases]
+
+![Line Example - Dark]{width=300}
+![Line Example - Light]{width=300}
 
 ###Usage
 !!! warning "Replace example entities with your entities!"
@@ -131,6 +184,37 @@ tags:
         - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_pm25_v1
         - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_pm25_v2
         - sak_layout_awair_sensor_scale_max: 100
+```
+
+##:sak-sak-logo: Sensor Card \#4 - Line/MinMax Example
+[:octicons-tag-24: 4.0.1][github-releases]
+
+Draws the actual line (average values) and the min/max values on the background.
+
+![Swiss Army Knife Functional Sensor Card #4-8](../../assets/screenshots/sak-functional-card-s3-sensor4-14-light.png#only-light){width=300}
+![Swiss Army Knife Functional Sensor Card #4-8](../../assets/screenshots/sak-functional-card-s3-sensor4-14-dark.png#only-dark){width=300}
+
+
+###Usage
+!!! warning "Replace example entities with your entities!"
+
+```yaml linenums="1"
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.awair_element_study_pm2_5
+      name: 'PM2.5'
+      area: 'Study'
+      icon: mdi:dots-hexagon
+    layout:
+    template:
+      name: sak_layout_fce3_sensor4
+      variables:
+        - sak_layout_awair_chart_type: line
+        - sak_layout_awair_background_icon_disabled: false
+        - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_pm25_v1
+        - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_pm25_v2
+        - sak_layout_awair_sensor_scale_max: 100
+        - sak_layout_sensor_line_show_minmax: true
 ```
 
 
@@ -158,6 +242,31 @@ tags:
         - sak_layout_awair_sensor_scale_max: 250
 ```
 
+
+##:sak-sak-logo: Sensor Card \#4 - Barcode Example
+[:octicons-tag-24: 4.0.1][github-releases]
+
+###Usage
+
+!!! warning "Replace example entities with your entities!"
+
+```yaml linenums="1"
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.awair_element_study_carbon_dioxide
+      name: 'CO2'
+      area: 'Study'
+  layout:
+    template:
+      name: sak_layout_fce3_sensor4
+      variables:
+        - sak_layout_awair_chart_type: barcode
+        - sak_layout_awair_background_icon_disabled: false
+        - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_co2_v1
+        - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_co2_v2
+        - sak_layout_awair_sensor_scale_max: 3000
+```
+
 ##:sak-sak-logo: Sensor Card \#4 - Barcode/Audio Example
 [:octicons-tag-24: 4.0.1][github-releases]
 
@@ -181,6 +290,31 @@ tags:
         - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_voc_v1
         - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_voc_v2
         - sak_layout_awair_sensor_scale_max: 250
+```
+
+##:sak-sak-logo: Sensor Card \#4 - Barcode/Stalagmites Example
+[:octicons-tag-24: 4.0.1][github-releases]
+
+###Usage
+
+!!! warning "Replace example entities with your entities!"
+
+```yaml linenums="1"
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.awair_element_study_carbon_dioxide
+      name: 'CO2'
+      area: 'Study'
+  layout:
+    template:
+      name: sak_layout_fce3_sensor4
+      variables:
+        - sak_layout_awair_chart_type: barcode
+        - sak_layout_awair_chart_variant: stalagmites
+        - sak_layout_awair_background_icon_disabled: false
+        - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_co2_v1
+        - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_co2_v2
+        - sak_layout_awair_sensor_scale_max: 3000
 ```
 
 ##:sak-sak-logo: Sensor Card \#4 - Bar Example
@@ -254,6 +388,34 @@ tags:
         - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_co2_v2
         - sak_layout_awair_sensor_scale_max: 3000
 ```
+
+##:sak-sak-logo: Sensor Card \#4 - Equalizer Example
+[:octicons-tag-24: 4.0.1][github-releases]
+
+###Usage
+
+!!! note "`Fill` field must be set to `false`"
+    Otherwise the equalizer does strange things with the first row.
+
+!!! warning "Replace example entities with your entities!"
+
+```yaml linenums="1"
+- type: 'custom:swiss-army-knife-card'
+  entities:
+    - entity: sensor.awair_element_study_carbon_dioxide
+      name: 'CO2'
+      area: 'Study'
+  layout:
+    template:
+      name: sak_layout_fce3_sensor4
+      variables:
+        - sak_layout_awair_chart_type: equalizer
+        - sak_layout_awair_background_icon_disabled: false
+        - sak_layout_awair_sensor_colorstop_v1: sak_colorstops_awair_co2_v1
+        - sak_layout_awair_sensor_colorstop_v2: sak_colorstops_awair_co2_v2
+        - sak_layout_awair_sensor_scale_max: 3000
+```
+
 
 ###Sensor Card \#4 YAML Template Definition
 [:octicons-tag-24: 4.0.1][github-releases]
@@ -494,11 +656,15 @@ tags:
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
 [Line Example]: #sensor-card-4-line-example
+[Line/MinMax Example]: #sensor-card-4-lineminmax-example
 [Area Example]: #sensor-card-4-area-example
+[Barcode Example]: #sensor-card-4-barcode-example
 [Barcode/Audio Example]: #sensor-card-4-barcodeaudio-example
+[Barcode/Stalagmites Example]: #sensor-card-4-barcodestalagmites-example
 [Bar Example]: #sensor-card-4-bar-example
 [Dots Example]: #sensor-card-4-dots-example
 [Graded/Rank Order Example]: #sensor-card-4-gradedrank-order-example
+[Equalizer Example]: #sensor-card-4-equalizer-example
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
