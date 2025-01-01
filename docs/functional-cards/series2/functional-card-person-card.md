@@ -6,17 +6,16 @@ hideno:
   toc
 tags:
   - Example
-  - Functional Card
+  - Functional Card - Series 2
   - Person Card
 ---
 <!-- GT/GL -->
+!!! warning "Series 2 will be released in 2025!"
+
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Light Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
-<br>![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
-<br>![Swiss Army Knife Functional Card Person D06 Dark Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Dark Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-s2-person-theme-d06-light-home.png#only-light){width="600"}
+![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-s2-person-theme-d06-dark-home.png#only-dark){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
@@ -29,17 +28,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
     
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that shows in which zone a person is, or if in no known zone as away / not home.| 4/1 | Grid with 2 columns |
-
-| SAK Tool| Used for |
-|-|-|
-| Icon | Background Icon (only in first screenshot) :smile: |
-| Circle | The half circle, as the left part of the circle is cutoff by the card |
-| Icon | Entity Icon. Animated, state dependent and only visible if no entity_picture should be displayed |
-| UserSvg | Shows the Entity Picture. Only visible if entity_picture should be displayed |
-| Icon | Zone Icon, ie where is the person according to the zone configuration. Animated, state dependent|
-| Name | Name of Entity|
-| State | State of entity|
+| A card that shows in which zone a person is, or if in no known zone as away / not home.| 1/1 | Grid with 2 columns |
 
 ##:sak-sak-logo: Interaction
 
@@ -48,7 +37,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage
-[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+[:octicons-tag-24: 4.0.1][github-releases]
 
 Using the default mode: an icon for the person entity:
 ```yaml linenums="1"
@@ -57,107 +46,134 @@ Using the default mode: an icon for the person entity:
     - entity: person.marco
       name: 'Person'
       icon: mdi:face-man
+    - entity: person.marco
+      name: 'Person'
+      secondary_info: last_changed
+      format: time-24h_date-short
   layout:
     template:
-      name: sak_layout_fce_person
+      name: sak_layout_fce2_person
       variables:
-        - sak_layout_fce_person_zone_entities:
-            - zone.the_gym
+        - sak_layout_person_zone_entities:
+            - zone.outside
             - zone.marco_work
-            - zone.marco_parents
-            - zone.zoo
 ```
 Using an `entity_picture` for the person entity. Picture can be defined here, or (default) the `entity_picture` defined for the person is used:
 ```yaml linenums="1"
 - type: 'custom:swiss-army-knife-card'
   entities:
-    - entity: person.tha_washer
+    - entity: person.marco
       name: 'Tha Washer'
       icon: mdi:face-man
-      entity_picture: "/local/images/tha-washer.jpg"
+      entity_picture: "/local/images/clip-test.jpg"
+    - entity: person.marco
+      name: 'Tha Washer'
+      secondary_info: last_changed
+      format: time-24h_date-short
+
   layout:
     template:
-      name: sak_layout_fce_person
+      name: sak_layout_fce2_person
       variables:
-        - sak_layout_fce_person_use_entity_picture: true
-        - sak_layout_fce_person_zone_entities:
-            - zone.the_gym
+        - sak_layout_person_use_entity_picture: true
+        - sak_layout_person_zone_entities:
+            - zone.outside
             - zone.marco_work
-            - zone.marco_parents
-            - zone.zoo
 ```
 
 | Data | Default| Required | Description |
 |-|-|-|-|
 | entities |  | :material-check: | The person entity |
-| sak_layout_fce_person_zone_entities | | :material-check: | The list of zone entities for this person to be displayed. There is no limit, it is really a list which is used when the person is not at home! |
-| sak_layout_fce_person_use_entity_picture | false | :material-close: | If set to true, an entity picture is displayed instead of the persons icon. Default the picture configured for the person is used, but can be overridden by specifying an entity_picture in the entity configuration in the view |
+| sak_layout_person_zone_entities | | :material-check: | The list of zone entities for this person to be displayed. There is no limit, it is really a list which is used when the person is not at home! |
+| sak_layout_person_use_entity_picture | false | :material-close: | If set to true, an entity picture is displayed instead of the persons icon. Default the picture configured for the person is used, but can be overridden by specifying an entity_picture in the entity configuration in the view |
 
 ##:sak-sak-logo: YAML Template Definition
-[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+[:octicons-tag-24: 4.0.1][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml linenums="1"
-    sak_layout_fce_person:
+    sak_layout_fce2_person:
       template:
         type: layout
         defaults: 
-          - sak_layout_fce_person_use_entity_picture: false
+          - sak_layout_person_use_entity_picture: false
+          - sak_layout_person_icon_color: var(--theme-sys-color-primary)
+          - sak_layout_person_icon_color_on: var(--theme-sys-color-error)
+          - sak_layout_person_history_disabled: false
+          - sak_layout_person_history_color_on: var(--theme-sys-color-error)
+
       layout:
-        aspectratio: 4/1
+        aspectratio: 1/1
         toolsets:
           # ================================================================
-            # Extra background icon. Just for fun and filling some space
           - toolset: background-icon
             position:
-              cx: 350
+              cx: 50
               cy: 50
             tools:
               # ------------------------------------------------------------
-              - type: icon
+              - type: 'usersvg'
                 position:
                   cx: 50
-                  cy: 50
-                  align: center
-                  icon_size: 100
-                icon: mdi:map-marker-radius-outline
+                  cy: 30
+                  height: 100
+                  width: 100
+                clip_path:
+                  position:
+                    cx: 50
+                    cy: 50
+                    height: 60
+                    width: 100
+                    radius:
+                      all: 0
+                style: 'images'
+                images:
+                  - default: "/local/images/backgrounds/map-background.jpg"
                 styles:
-                  icon:
-                    fill: var(--theme-sys-elevation-surface-neutral2)
-
-          # ================================================================
-          - toolset: half-circle
+                  usersvg:
+                    opacity: 0.8
+                  mask:
+                    fill: url(#sak-sparkline-area-mask-tb-0)
+          # ==============================================================================
+          - toolset: circle-with-icon
             position:
-              cx: 0                             # Center on cards border 
-              cy: 50
+              cx: 20
+              cy: 20
             tools:
               # ------------------------------------------------------------
               - type: circle
                 position:
                   cx: 50
                   cy: 50
-                  radius: 50
+                  radius: 12.5
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    styles:
+                      circle:
+                        stroke: var(--theme-sys-color-error)
+                  - state: 'off'
+                    styles:
+                      circle:
+                        # stroke: var(--theme-sys-elevation-surface-neutral10)
+                        stroke: '[[sak_layout_person_icon_color]]'
                 styles:
                   circle:
-                    stroke: var(--theme-sys-color-secondary)
-                    stroke-width: 3em
-                    opacity: 0.5
+                    stroke-width: 2em
+                    # stroke: var(--theme-sys-elevation-surface-neutral10)
+                    stroke: '[[sak_layout_person_icon_color]]'
+                    fill: var(--primary-background-color)
 
-          # ================================================================
-          - toolset: column-icon
-            position:
-              cx: 25
-              cy: 50
-            tools:
               # ------------------------------------------------------------
               - type: icon
                 position:
                   cx: 50
                   cy: 50
                   align: center
-                  icon_size: 45
+                  icon_size: 20
                 entity_index: 0
                 variables:
-                  sak_layout_fce_person_use_entity_picture: '[[sak_layout_fce_person_use_entity_picture]]'
+                  sak_layout_person_use_entity_picture: '[[sak_layout_person_use_entity_picture]]'
+                  sak_layout_person_icon_color:  '[[sak_layout_person_icon_color]]'
                 animations:
                     # Return current state, so always a match!
                   - state: '[[[ return state; ]]]'
@@ -165,12 +181,12 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
                       icon:
                         # Set fill depending on being at home!
                         fill: >
-                          [[[ if (['home', 'not_home'].includes(state)) return 'var(--theme-sys-color-primary)';
-                              return 'var(--theme-sys-color-tertiary)';
+                          [[[ if (['home', 'not_home'].includes(state)) return tool_config.variables.sak_layout_person_icon_color;
+                              return 'var(--theme-sys-color-secondary)';
                           ]]]
                         # Hide icon if using entity_picture!
                         display: >
-                          [[[ if (tool_config.variables.sak_layout_fce_person_use_entity_picture) return 'none';
+                          [[[ if (tool_config.variables.sak_layout_person_use_entity_picture) return 'none';
                               return 'initial';
                           ]]]
                 styles:
@@ -183,26 +199,26 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
                 position:
                   cx: 50
                   cy: 50
-                  height: 45
-                  width: 45
+                  height: 20
+                  width: 20
                 entity_index: 0
                 variables:
-                  sak_layout_fce_person_use_entity_picture: '[[sak_layout_fce_person_use_entity_picture]]'
+                  sak_layout_person_use_entity_picture: '[[sak_layout_person_use_entity_picture]]'
                 clip_path:
                   position:
                     cx: 50
                     cy: 50
-                    height: 40            # Slightly crop image (from 45->40)
-                    width: 40
+                    height: 20            # Slightly crop image (from 45->40)
+                    width: 20
                     radius:
-                      all: 20             # Radius 20 results in full circle
+                      all: 10             # Radius 20 results in full circle
                 style: 'images'
                 images:                   # Fetch entity_picture from config or entity itself
                   - default: >
                       [[[
-                        if (tool_config.variables.sak_layout_fce_person_use_entity_picture) {
+                        if (tool_config.variables.sak_layout_person_use_entity_picture) {
                           return (entity_config?.entity_picture ||
-                                 entity.attributes?.entity_picture || 'none');
+                                entity.attributes?.entity_picture || 'none');
                         } else {
                           return 'none';
                         }
@@ -215,51 +231,89 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
                       icon:
                         # Hide usersvg tool if using icon!
                         display: >
-                          [[[ if (!tool_config.variables.sak_layout_fce_person_use_entity_picture) return 'none';
+                          [[[ if (!tool_config.variables.sak_layout_person_use_entity_picture) return 'none';
                               return 'initial';
                           ]]]
                 
-          # ================================================================
-          - toolset: zone-icon
+              # - template:
+              #     name: tool_valmardav_icon
+
+          # ==============================================================================
+          - toolset: name
             position:
-              cx: 40
-              cy: 18
+              cx: 7.5
+              cy: 45
             tools:
               # ------------------------------------------------------------
-              - type: circle
+              - type: name
                 position:
                   cx: 50
                   cy: 50
-                  radius: 14
+                entity_index: 0
+                show:
+                  ellipsis: 12
+                styles: 
+                  name: 
+                    text-anchor: start
+                    font-size: 12em
+                    font-weight: 700
+                    opacity: 1
+              # ------------------------------------------------------------
+              - type: state
+                position:
+                  cx: 50
+                  cy: 62.5
+                entity_index: 0
+                show:
+                  uom: none
+                styles:
+                  state:
+                    text-anchor: start
+                    font-size: 10em
+                    font-weight: 400
+                    opacity: 0.6
+
+          # ==============================================================================
+          - toolset: alert-time-boxes
+            position:
+              cx: 50
+              cy: 75
+            tools:
+              # ------------------------------------------------------------
+              - type: rectex
+                position:
+                  cx: 20
+                  cy: 50
+                  width: 25
+                  height: 18
+                  radius:
+                    left: 5
+                    right: 0
                 entity_index: 0
                 animations:
-                    # Return current state, so always a match!
-                  - state: '[[[ return state; ]]]'
+                  - state: 'home'
+                    operator: '!='
                     styles:
-                      circle:
-                        # Set fill depending on being at home or some unwanted state!
-                        fill: >
-                          [[[ if (state == 'home') return 'var(--theme-sys-color-primary)';
-                              if (state == 'not_home') return 'var(--brand-google-red)';
-                              if (['unavailable', 'unknown'].includes(state)) return 'black';
-                              return 'var(--theme-sys-color-tertiary)';
-                          ]]]
+                      rectex:
+                        fill: var(--theme-sys-color-error)
+                  - state: 'home'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-neutral10)
                 styles:
-                  circle:
-                    fill: var(--brand-google-red)
-                    stroke: var(--primary-background-color)
-                    stroke-width: 2em
+                  rectex:
+                    fill: var(--theme-sys-elevation-surface-neutral10)
 
               # ------------------------------------------------------------
               - type: icon
                 position:
-                  cx: 50
+                  cx: 20
                   cy: 50
                   align: center
-                  icon_size: 18
+                  icon_size: 12.5
                 entity_index: 0
                 variables:
-                  zone_ids: '[[sak_layout_fce_person_zone_entities]]'
+                  zone_ids: '[[sak_layout_person_zone_entities]]'
                 animations:
                     # Return current state, so always a match!
                   - state: '[[[ return state; ]]]'
@@ -285,39 +339,122 @@ Using an `entity_picture` for the person entity. Picture can be defined here, or
                 styles:
                   icon:
                     fill: var(--primary-background-color)
-
-          # ================================================================
-          - toolset: column-name
-            position:
-              cx: 70
-              cy: 50
-            tools:
               # ------------------------------------------------------------
-              - type: name
+              - type: rectex
                 position:
-                  cx: 50
-                  cy: 37
+                  cx: 64
+                  cy: 50
+                  width: 57
+                  height: 18
+                  radius:
+                    left: 0
+                    right: 5
                 entity_index: 0
+                animations:
+                  - state: 'home'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
+                  - state: 'home'
+                    operator: '!='
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-error4)
                 styles:
-                  name:
-                    text-anchor: start
-                    font-size: 30em
-                    font-weight: 700
-                    opacity: 1
+                  rectex:
+                    fill: var(--theme-sys-color-on-error)
+
               # ------------------------------------------------------------
               - type: state
                 position:
-                  cx: 50
-                  cy: 70
-                entity_index: 0
-                show:
-                  uom: none
-                styles:
+                  cx: 64 #92
+                  cy: 50
+                entity_indexes:
+                  - entity_index: 1
+                  - entity_index: 0
+                animations:
+                  - state: 'home'
+                    entity_index: 0
+                    styles:
+                      state:
+                        fill: var(--theme-sys-elevation-surface-neutral10)
+                  - state: 'home'
+                    entity_index: 0
+                    operator: '!='
+                    styles:
+                      state:
+                        fill: var(--theme-sys-color-error)
+                styles: 
                   state:
-                    text-anchor: start
-                    font-size: 26em
-                    font-weight: 500
-                    opacity: 0.7
+                    # fill: var(--theme-sys-color-error-container)
+                    fill: var(--theme-sys-color-error)
+                    font-size: 12em
+                    text-anchor: middle #end
+                    # alignment-baseline: middle
+                    font-weight: 700
+                  uom:
+                    # fill: var(--theme-sys-color-error-container)
+                    fill: var(--theme-sys-color-error)
+                    alignment-baseline: hanging
+                    font-weight: 600
+
+          # ==============================================================================
+          - toolset: alert-history
+            position:
+              cx: 50
+              cy: 92.5
+            tools:
+              # ------------------------------------------------------------
+              - type: sparkline
+                # When disabled, SAK will not use this tool
+                disabled: '[[sak_layout_person_history_disabled]]'
+                entity_index: 0
+                position:
+                  cx: 50
+                  cy: 50
+                  width: 85
+                  height: 3
+                  margin: 0
+                period:
+                  calendar:
+                    period: day
+                    offset: 0
+                    duration:
+                      hour: 24
+                    bins:
+                      per_hour: 1
+                sparkline:
+                  show:
+                    chart_type: barcode
+                    # chart_variant: stalagmites
+                  state_map:
+                    template:
+                      name: sak_statemap_person
+                  # State value settings
+                  # - set agg to max to see the binary changes
+                  # - set lower_bound to -1 to offset 'off' state
+                  #   the barcode will start wider now, instead of at minimum width
+                  # - set upper_bound to 1 ('on') to fix upper scale
+                  state_values:
+                    aggregate_func: max
+                    lower_bound: -1
+                    upper_bound: 1
+                  barcode:
+                    column_spacing: 3
+                    line_width: 0.1
+                  colorstops_transition: hard
+                  colorstops:
+                    colors:
+                      - value: 0
+                        color: var(--theme-sys-elevation-surface-neutral10)
+                      - value: 1
+                        color: '[[sak_layout_person_history_color_on]]'
+                  styles: 
+                    tool: 
+                      opacity: 1
+                    barcode_graph:
+                      rx: 5
+                      ry: 5                
     ```
 
 <!-- Image references -->

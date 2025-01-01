@@ -1,16 +1,16 @@
 ---
 template: main.html
-title: Example set of functional cards - series 3
-description: Example set of functional cards for series 3 cards on how to use the sparkline tool.
+title: Example set of functional cards - series 2
+description: Example set of functional cards for series 2 cards on how to use the sparkline tool.
 tags:
   - Design
-  - Functional Cards - Series 3
+  - Functional Cards - Series 2
   - Example Set
 ---
 <!-- GT/GL -->
 
-##:sak-sak-logo: Example Functional Cards I made for series 3
-I created the series 3 functional cards tho show off the possibilities of the SparkLine tool
+##:sak-sak-logo: Example Functional Cards I made for series 2
+I created the series 2 functional cards tho show off the possibilities of the SparkLine tool
 
 This should help you to create your own visualizations, or you can just _use_ these examples!
 

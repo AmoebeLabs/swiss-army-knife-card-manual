@@ -5,37 +5,35 @@ description: "Example of functional card, Binary Sensor with Alert #1"
 hideno:
   toc
 tags:
-  - Example
-  - Functional Card
+  - Design
+  - Functional Card - Series 2
   - Binary Card with Alert
 ---
 <!-- GT/GL -->
+!!! warning "Series 2 will be released in 2025!"
 
-![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light Off](../../assets/screenshots/sak-functional-card-12-binary-sensor-alert1-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light On](../../assets/screenshots/sak-functional-card-12-binary-sensor-alert1-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Dark Off](../../assets/screenshots/sak-functional-card-12-binary-sensor-alert1-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Dark On](../../assets/screenshots/sak-functional-card-12-binary-sensor-alert1-theme-d06-dark-on.png){width="300"}
+##:sak-sak-logo: Visualization
+<div class="grid cards" markdown>
+
+-   :sak-sak-logo:{ .lg .middle } __Alert *"Off"*__
+
+    ---
+    ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light Off](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-light-off.png#only-light)
+    ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light Off](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-dark-off.png#only-dark)
+
+-   :sak-sak-logo:{ .lg .middle } __Alert *"On"*__
+
+    ---
+    ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light On](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-light-on.png#only-light)
+    ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light On](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-dark-on.png#only-dark)
+</div>    
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
-| A card that shows the state of a binary sensor, including an icon as an alert. <br>Nice for doors, windows and occupancy alerts.| 3/1 | Grid with 2 columns |
+| A card that shows the state of a binary sensor, including an icon as an alert. Card includes battery and link levels, the time of the last state change, and a history chart (per hour of current day) that shows when alerts where detected.<br><br>Nice for doors, windows and occupancy alerts.| 1/1 | Grid with 2 columns |
 
-| SAK Tool| Used for |
-|-|-|
-| Circle | The half circle, as the left part of the circle is cutoff by the card. Animated, state dependent|
-| Icon | Entity Icon. Animated, state dependent|
-| Icon | Alert Icon. Animated, state dependent. Only visible if state is `on`|
-| Name | Name of Entity|
-| State | Secondary Info|
-| Line | Vertical line separator |
-| Icon | Battery state as icon. Animated, state dependent|
-| SegArc | Simple circle as segmented arc to show the battery level|
-| State | Value of battery level|
-| Icon | Linkquality icon|
-| SegArc | Simple circle as segmented arc to show the linkquality value|
-| State | Value of linkquality|
 
 ##:sak-sak-logo: Interaction
 
@@ -44,7 +42,7 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | Card | All tools connected to an entity do show by default the "more-info" dialog once clicked |
 
 ##:sak-sak-logo: Usage
-[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+[:octicons-tag-24: 4.0.1][github-releases]
 
 !!! warning "Replace example entities with your entities!"
 
@@ -52,18 +50,18 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 - type: 'custom:swiss-army-knife-card'
   entities:
     - entity: binary_sensor.livingroom_movement_occupancy
-      name: 'Bin Alert #1'
-      # name: 'Movement'
+      area: Woonkamer
+      name: Beweging
     - entity: binary_sensor.livingroom_movement_occupancy
       secondary_info: last_changed
-      format: relative
+      format: time-24h_date-short
     - entity: sensor.livingroom_movement_battery
       decimals: 0
     - entity: sensor.livingroom_movement_linkquality
       decimals: 0
   layout:
     template:
-      name: sak_layout_fce_binary_alert1
+      name: sak_layout_fce2_binary1
 ```
 
 | Data | Default| Required | Description |
@@ -71,312 +69,341 @@ This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 | entities |  | :material-check: | The four required entities |
 
 ##:sak-sak-logo: YAML Template Definition
-[:octicons-tag-24: 1.0.0-rc.3][github-releases]
+[:octicons-tag-24: 4.0.1][github-releases]
 ??? Info "Full definition of layout template"  
     ```yaml linenums="1"
-    sak_layout_fce_binary_alert1:
+    sak_layout_fce2_binary1:
       template:
         type: layout
         defaults: 
-          - dummy: 0
+          - sak_layout_binary_icon_color: var(--theme-sys-color-primary)
+          - sak_layout_binary_icon_color_on: var(--theme-sys-color-error #var(--theme-ref-palette-error50) #var(--theme-sys-color-error-container)
+          - sak_layout_binary_icon_animation: flash # none, flash, spin
+          - sak_layout_binary_history_color_on: var(--theme-sys-color-error) #var(--theme-sys-color-primary)
+          - sak_layout_binary_history_disabled: false
+          - sak_layout_battery_colorstops_template: sak_colorstops_battery_level
+          - sak_layout_sensor_icon_style: colorstops
+
       layout:
-        aspectratio: 3/1
+        aspectratio: 1/1
         toolsets:
-          # ================================================================
-          - toolset: half-circle
+          # ==============================================================================
+          - toolset: circle-with-icon
             position:
-              cx: 0                             # Center on cards border 
-              cy: 50
+              cx: 20
+              cy: 20
             tools:
               # ------------------------------------------------------------
               - type: circle
                 position:
                   cx: 50
                   cy: 50
-                  radius: 50
+                  radius: 12.5
                 entity_index: 0
                 animations:
                   - state: 'on'
                     styles:
                       circle:
-                        fill: var(--theme-sys-color-primary)
-                        # animation: flash 2s ease-in-out 5
+                        stroke: var(--theme-sys-color-error)
                   - state: 'off'
                     styles:
                       circle:
-                        fill: var(--theme-sys-elevation-surface-neutral4)
+                        # stroke: var(--theme-sys-elevation-surface-neutral10)
+                        stroke: '[[sak_layout_binary_icon_color]]'
                 styles:
                   circle:
-                    stroke: none
-                    # transition: fill 1s ease
+                    stroke-width: 2em
+                    # stroke: var(--theme-sys-elevation-surface-neutral10)
+                    stroke: '[[sak_layout_binary_icon_color]]'
+                    fill: var(--primary-background-color)
 
-          # ================================================================
-          - toolset: column-icon
-            position:
-              cx: 25
-              cy: 50
-            tools:
               # ------------------------------------------------------------
               - type: icon
                 position:
                   cx: 50
                   cy: 50
                   align: center
-                  icon_size: 35
+                  icon_size: 15
                 entity_index: 0
+                # Define template variable for this icon tool, so it can be
+                # processed by a piece of JavaScript ;-)
+                # The template engine will replace the variable!
+                variables:
+                  sak_layout_binary_icon_animation : '[[sak_layout_binary_icon_animation]]'
                 animations:
                   - state: 'on'
                     styles:
                       icon:
-                        # animation: spin 3s linear infinite
-                        fill: var(--primary-background-color)
+                        # Use template variable as the source to spin, flash or nothing
+                        # the config JavaScript parameter is this tools config...
+                        animation: >
+                          [[[ if (tool_config.variables.sak_layout_binary_icon_animation === "spin") return "spin 3s linear infinite";
+                              if (tool_config.variables.sak_layout_binary_icon_animation === "flash") return "flash 2s ease-in-out 5";
+                              return "";
+                          ]]]
+                        fill: '[[sak_layout_binary_icon_color_on]]'
                   - state: 'off'
                     styles:
                       icon:
-                        fill: var(--theme-sys-color-secondary)
-                        opacity: 0.9
+                        fill: '[[sak_layout_binary_icon_color]]'
                 styles:
                   icon:
-                    fill: var(--primary-background-color)
-                    opacity: 0.9
-                    # transition: fill 1s ease
+                    fill: '[[sak_layout_binary_icon_color]]'
 
           # ================================================================
-          - toolset: alert-icon
+          - toolset: colomn-battery
             position:
-              cx: 40
-              cy: 18
+              cx: 87.5
+              cy: 12.5
             tools:
-              # ------------------------------------------------------------
-              - type: circle
-                position:
-                  cx: 50
-                  cy: 50
-                  radius: 13
-                entity_index: 0                 # Use state from 0
-                animations:
-                  - state: 'on'                 # If ON
-                    styles:
-                      circle:
-                        fill: var(--primary-background-color)
-                  - state: 'off'                # If OFF
-                    styles:
-                      circle:
-                        display: none           # Hide icon
-
               # ------------------------------------------------------------
               - type: icon
+                position: &icon_pos
+                  cx: 50
+                  cy: 50
+                  align: right
+                  icon_size: 10
+                entity_index: 2
+                styles: &icon_styles
+                  icon:
+                    fill: var(--primary-text-color)
+                    opacity: 1
+                show:
+                  style: '[[sak_layout_sensor_icon_style]]'
+                colorlist:
+                  colors:
+                    - var(--theme-sys-color-secondary)
+                colorstops:
+                  template:
+                    name: '[[sak_layout_battery_colorstops_template]]'
+
+          # ================================================================
+          - toolset: colomn-linkquality
+            position:
+              cx: 77.5
+              cy: 12.5
+            tools:
+              # ------------------------------------------------------------
+              - type: icon
+                position: *icon_pos
+                entity_index: 3
+                styles: *icon_styles
+                show:
+                  style: '[[sak_layout_sensor_icon_style]]'
+                colorlist:
+                  colors:
+                    - var(--theme-sys-color-secondary)
+                colorstops:
+                  template:
+                    name: '[[sak_layout_battery_colorstops_template]]'
+
+          # ==============================================================================
+          - toolset: area-name
+            position:
+              cx: 7.5
+              cy: 45
+            tools:
+              # ------------------------------------------------------------
+              - type: area
                 position:
                   cx: 50
                   cy: 50
-                  align: center
-                  icon_size: 25
-                entity_index: 0                 # Use state from 0
-                icon: mdi:alert-circle          # Use alert circle icon
-                animations:
-                  - state: 'on'                 # If ON
-                    styles:
-                      icon:
-                        fill: var(--brand-google-red, red) # Set icon to red color
-                  - state: 'off'                # If OFF
-                    styles:
-                      icon:
-                        display: none           # Hide icon
-                styles:
-                  icon:
-                    fill: grey                  # Default grey color
-                
-          # ================================================================
-          - toolset: column-name
-            position:
-              cx: 120
-              cy: 50
-            tools:
+                entity_index: 0
+                show:
+                  ellipsis: 12
+                styles: 
+                  area: 
+                    text-anchor: start
+                    font-size: 12em
+                    font-weight: 700
+                    opacity: 1
               # ------------------------------------------------------------
               - type: name
                 position:
                   cx: 50
-                  cy: 50
+                  cy: 62.5
                 entity_index: 0
+                show:
+                  ellipsis: 12
+                styles: 
+                  name: 
+                    text-anchor: start
+                    font-size: 10em
+                    font-weight: 400
+                    opacity: 0.6
+
+          # ==============================================================================
+          - toolset: alert-time-boxes
+            position:
+              cx: 50
+              cy: 75
+            tools:
+              # ------------------------------------------------------------
+              - type: rectex
+                position:
+                  cx: 20
+                  cy: 50
+                  width: 25
+                  height: 18
+                  radius:
+                    left: 5
+                    right: 0
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-color-error)
+                  - state: 'off'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-neutral10)
                 styles:
-                  name:
-                    text-anchor: middle
-                    font-size: 25em
-                    font-weight: 700
-                    opacity: 1
+                  rectex:
+                    fill: var(--theme-sys-elevation-surface-neutral10)
+              # ------------------------------------------------------------
+              - type: icon
+                position:
+                  cx: 20
+                  cy: 50
+                  align: center
+                  icon_size: 12.5
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    icon: mdi:clock-alert-outline
+                    styles:
+                      icon:
+                        fill: var(--theme-sys-color-on-error)
+                  - state: 'off'
+                    icon: mdi:clock-check-outline
+                    styles:
+                      icon:
+                        fill: var(--primary-background-color)
+                styles:
+                  icon:
+                    fill: '[[sak_layout_binary_icon_color]]'
+              # ------------------------------------------------------------
+              - type: rectex
+                position:
+                  cx: 64
+                  cy: 50
+                  width: 57
+                  height: 18
+                  radius:
+                    left: 0
+                    right: 5
+                entity_index: 0
+                animations:
+                  - state: 'on'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-error4)
+                  - state: 'off'
+                    styles:
+                      rectex:
+                        fill: var(--theme-sys-elevation-surface-neutral4)
+                styles:
+                  rectex:
+                    fill: var(--theme-sys-color-on-error)
+
               # ------------------------------------------------------------
               - type: state
                 position:
-                  cx: 50
-                  cy: 80
-                entity_index: 1
-                show:
-                  uom: none
-                styles:
+                  cx: 64 #92
+                  cy: 50
+                # entity_index: 1
+                entity_indexes:
+                  - entity_index: 1
+                  - entity_index: 0
+                animations:
+                  - state: 'on'
+                    entity_index: 0
+                    styles:
+                      state:
+                        fill: var(--theme-sys-color-error)
+                  - state: 'off'
+                    entity_index: 0
+                    styles:
+                      state:
+                        fill: var(--theme-sys-elevation-surface-neutral10)
+                styles: 
                   state:
-                    text-anchor: middle
-                    font-size: 14em
-                    font-weight: 500
-                    opacity: 0.7
+                    # fill: var(--theme-sys-color-error-container)
+                    fill: var(--theme-sys-color-error)
+                    font-size: 12em
+                    text-anchor: middle #end
+                    # alignment-baseline: middle
+                    font-weight: 700
+                  uom:
+                    # fill: var(--theme-sys-color-error-container)
+                    fill: var(--theme-sys-color-error)
+                    alignment-baseline: hanging
+                    font-weight: 600
 
-          # ================================================================
-          - toolset: line1
+          # ==============================================================================
+          - toolset: alert-history
             position:
-              cx: 200                           # On 1/3 of card width
-              cy: 50
+              cx: 50
+              cy: 92.5
             tools:
               # ------------------------------------------------------------
-              - type: line
+              - type: sparkline
+                # When disabled, SAK will not use this tool
+                disabled: '[[sak_layout_binary_history_disabled]]'
+                entity_index: 0
                 position:
                   cx: 50
                   cy: 50
-                  orientation: vertical
-                  length: 50
-                styles:
-                  line:
-                    fill: var(--primary-text-color)
-                    opacity: 0.5
-
-          # ================================================================
-          - toolset: column-battery
-            position:
-              cx: 250
-              cy: 50
-            tools:
-              # ------------------------------------------------------------
-              - type: icon
-                position:
-                  cx: 30
-                  cy: 30
-                  align: right
-                  icon_size: 25
-                entity_index: 2
-                styles:
-                  icon:
-                    fill: var(--theme-sys-color-tertiary)
-                    opacity: 0.8
-              # ------------------------------------------------------------
-              - type: state
-                position:
-                  cx: 70
-                  cy: 30
-                entity_index: 2
-                show:
-                  uom: none
-                styles:
-                  state:
-                    text-anchor: middle
-                    font-size: 15em
-                    font-weight: 700
-                    fill: var(--primary-text-color)
-                  uom:
-                    fill: var(--primary-text-color)
-                    font-weight: 700
-
-              # ------------------------------------------------------------ 
-              - type: 'segarc'
-                id: 0
-                position:
-                  cx: 70
-                  cy: 30
-                  start_angle: 0
-                  end_angle: 360
-                  width: 3
-                  radius: 18
-                entity_index: 2
-                scale:
-                  min: 0
-                  max: 100
-                  width: 6
-                  offset: 12
-                show:
-                  scale: false
-                  style: 'colorlist'
-                segments:
-                  colorlist:
-                    gap: 1
+                  width: 85
+                  height: 3
+                  margin: 0
+                period:
+                  calendar:
+                    period: day
+                    offset: 0
+                    duration:
+                      hour: 24
+                    bins:
+                      per_hour: 1
+                sparkline:
+                  show:
+                    chart_type: barcode
+                    # chart_variant: stalagmites
+                  state_map:
+                    template:
+                      name: sak_statemap_binary
+                  # State value settings
+                  # - set agg to max to see the binary changes
+                  # - set lower_bound to -1 to offset 'off' state
+                  #   the barcode will start wider now, instead of at minimum width
+                  # - set upper_bound to 1 ('on') to fix upper scale
+                  state_values:
+                    aggregate_func: max
+                    lower_bound: -1
+                    upper_bound: 1
+                  barcode:
+                    column_spacing: 3
+                    line_width: 0.1
+                  colorstops_transition: hard
+                  colorstops:
                     colors:
-                      - var(--theme-sys-palette-tertiary45)
-                styles:
-                  foreground:
-                    fill: darkgrey
-                  background:
-                    fill: var(--theme-sys-elevation-surface-neutral4)
-                    opacity: 1
-
-          # ================================================================
-          - toolset: column-linkquality
-            position:
-              cx: 250
-              cy: 50
-            tools:
-              # ------------------------------------------------------------
-              - type: icon
-                position:
-                  cx: 30
-                  cy: 70
-                  align: right
-                  icon_size: 25
-                entity_index: 3
-                styles:
-                  icon:
-                    fill: var(--theme-sys-color-tertiary)
-                    opacity: 0.8
-
-              # ------------------------------------------------------------
-              - type: state
-                position:
-                  cx: 70
-                  cy: 70
-                entity_index: 3
-                show:
-                  uom: none
-                styles:
-                  state:
-                    text-anchor: middle
-                    font-size: 15em
-                    font-weight: 700
-                    fill: var(--primary-text-color)
-                  uom:
-                    fill: var(--primary-text-color)
-                    font-weight: 700
-
-              # ------------------------------------------------------------ 
-              - type: 'segarc'
-                id: 0
-                position:
-                  cx: 70
-                  cy: 70
-                  start_angle: 0
-                  end_angle: 360
-                  width: 3
-                  radius: 18
-                entity_index: 3
-                scale:
-                  min: 0
-                  max: 100
-                  width: 6
-                  offset: 12
-                show:
-                  scale: false
-                  style: 'colorlist'
-                segments:
-                  colorlist:
-                    gap: 1
-                    colors:
-                      - var(--theme-sys-palette-tertiary45)
-                styles:
-                  foreground:
-                    fill: darkgrey
-                  background:
-                    fill: var(--theme-sys-elevation-surface-neutral4)
-                    opacity: 1
+                      - value: 0
+                        color: var(--theme-sys-elevation-surface-neutral10)
+                      - value: 1
+                        color: '[[sak_layout_binary_history_color_on]]'
+                  styles: 
+                    tool: 
+                      opacity: 1
+                    barcode_graph:
+                      rx: 5
+                      ry: 5
     ```
 
 <!-- Image references -->
 
 <!--- Internal References... --->
-[Swiss Army Knife Tutorial 02]: ../../tutorials/10-step-tutorial-02-intro.md
+[Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

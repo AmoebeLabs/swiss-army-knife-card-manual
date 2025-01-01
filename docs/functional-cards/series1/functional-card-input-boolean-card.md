@@ -12,11 +12,20 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Input Boolean1 D06 Light Off](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-off.png){width="300"}
-![Swiss Army Knife Functional Input Boolean1 D06 Light On](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-on.png){width="300"}
-<br>![Swiss Army Knife Functional Input Boolean1 D06 Dark Off](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-off.png){width="300"}
-![Swiss Army Knife Functional Input Boolean1 D06 Dark On](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-on.png){width="300"}
+<div class="grid cards" markdown>
 
+-   :sak-sak-logo:{ .lg .middle } __Input *"Disable"*__
+
+    ---
+    ![Swiss Army Knife Functional Input Boolean1 D06 Light Off](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-off.png#only-light){width="300"}
+    ![Swiss Army Knife Functional Input Boolean1 D06 Dark Off](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-off.png#only-dark){width="300"}
+
+-   :sak-sak-logo:{ .lg .middle } __Input *"Enable"*__
+
+    ---
+    ![Swiss Army Knife Functional Input Boolean1 D06 Light On](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-light-on.png#only-light){width="300"}
+    ![Swiss Army Knife Functional Input Boolean1 D06 Dark On](../../assets/screenshots/sak-functional-card-12-input-boolean1-theme-d06-dark-on.png#only-dark){width="300"}
+</div>
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 | Description| Aspect Ratio| Target Size |

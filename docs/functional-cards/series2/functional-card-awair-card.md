@@ -1,16 +1,16 @@
 ---
 template: main.html
-title: "Functional Cards Series 3: Awair Cards"
+title: "Functional Cards Series 2: Awair Cards"
 description: "Example of functional card, Awair Cards"
 hideno:
   toc
 tags:
   - Example
-  - Functional Card - Series 3
+  - Functional Card - Series 2
   - Awair Element Cards
 ---
 <!-- GT/GL -->
-!!! warning "Series 3 will be released in 2025!"
+!!! warning "Series 2 will be released in 2025!"
 
 ##:sak-sak-logo: Visualization
 
@@ -28,8 +28,8 @@ tags:
     The card that matches the Awair display without icons which column is which sensor!
     <br><br>
 
-[Swiss Army Knife Functional Card Awair 3a - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3a-light.png#only-light
-[Swiss Army Knife Functional Card Awair 3a - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3a-dark.png#only-dark
+[Swiss Army Knife Functional Card Awair 3a - Light]: ../../assets/screenshots/sak-functional-card-s2-awair3a-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3a - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair3a-dark.png#only-dark
 
     ![Swiss Army Knife Functional Card Awair 3a - Light]
     ![Swiss Army Knife Functional Card Awair 3a - Dark]
@@ -43,8 +43,8 @@ tags:
     The same as #3a, but now with icons for each sensor, so you don't have to memorize which column is which sensor!
     The background icon is ommitted.
 
-[Swiss Army Knife Functional Card Awair 3b - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3b-light.png#only-light
-[Swiss Army Knife Functional Card Awair 3b - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3b-dark.png#only-dark
+[Swiss Army Knife Functional Card Awair 3b - Light]: ../../assets/screenshots/sak-functional-card-s2-awair3b-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3b - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair3b-dark.png#only-dark
 
     ![Swiss Army Knife Functional Card Awair 3b - Light]
     ![Swiss Army Knife Functional Card Awair 3b - Dark]
@@ -58,8 +58,8 @@ tags:
     Same as example #3b, but now with rounded, rectangles for the sensor values instead of the Awair circles.
     <br><br>
 
-[Swiss Army Knife Functional Card Awair 3c - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3c-1-light.png#only-light
-[Swiss Army Knife Functional Card Awair 3c - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3c-1-dark.png#only-dark
+[Swiss Army Knife Functional Card Awair 3c - Light]: ../../assets/screenshots/sak-functional-card-s2-awair3c-1-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3c - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair3c-1-dark.png#only-dark
 
     ![Swiss Army Knife Functional Card Awair 3c - Light]
     ![Swiss Army Knife Functional Card Awair 3c - Dark]
@@ -95,8 +95,8 @@ The Awair cards are very similar to the sensor \#4 design: the latter was derive
 ###Tools used
 The card is built with 12 tools. You can find the numbers as *'dref: 1'* in the template itself for easy referencing.
 
-![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s3-awair3a-light.png#only-light){width=300}
-![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s3-awair3a-dark.png#only-dark){width=300}
+![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s2-awair3a-light.png#only-light){width=300}
+![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s2-awair3a-dark.png#only-dark){width=300}
 
 | Number| Tool | Description |
 |-|-|-|

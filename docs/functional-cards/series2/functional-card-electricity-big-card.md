@@ -1,16 +1,16 @@
 ---
 template: main.html
-title: "Functional Cards Series 3: Big Electricity Cards"
+title: "Functional Cards Series 2: Big Electricity Cards"
 description: "Example of functional card, Big Electricity Cards"
 hideno:
   toc
 tags:
   - Example
-  - Functional Card - Series 3
+  - Functional Card - Series 2
   - Electricity Cards
 ---
 <!-- GT/GL -->
-!!! warning "Series 3 will be released in 2025!"
+!!! warning "Series 2 will be released in 2025!"
 
 ##:sak-sak-logo: Visualization
 
@@ -30,8 +30,8 @@ tags:
 
     !!! info "I have no solar panels, so the blue part of the flower is fake!"
 
-[Electricity #3 Example - Light]: ../../assets/screenshots/sak-functional-card-s3-electricity3b-light.png#only-light
-[Electricity #3 Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-electricity3b-dark.png#only-dark
+[Electricity #3 Example - Light]: ../../assets/screenshots/sak-functional-card-s2-electricity3b-light.png#only-light
+[Electricity #3 Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-electricity3b-dark.png#only-dark
 
     ![Electricity #3 Example - Light]
     ![Electricity #3 Example - Dark]
@@ -48,8 +48,8 @@ tags:
     !!! info "The power sensor just changed when I took the screenshot (dark mode only)"
         so you see the left graph having animated bars, and in the block below you see 0,137kW while the graph is still showing the previous data (red, so > 2kW).
 
-[Electricity #4 Example - Light]: ../../assets/screenshots/sak-functional-card-s3-electricity4b-light.png#only-light
-[Electricity #4 Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-electricity4b-dark.png#only-dark
+[Electricity #4 Example - Light]: ../../assets/screenshots/sak-functional-card-s2-electricity4b-light.png#only-light
+[Electricity #4 Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-electricity4b-dark.png#only-dark
 
     ![Electricity #4 Example - Light]
     ![Electricity #4 Example - Dark]
@@ -64,8 +64,8 @@ tags:
     !!! info "I have no solar panels, so the blue part of the flower is fake!"
 
 
-[Electricity #5 Example - Light]: ../../assets/screenshots/sak-functional-card-s3-electricity5b-light.png#only-light
-[Electricity #5 Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-electricity5b-dark.png#only-dark
+[Electricity #5 Example - Light]: ../../assets/screenshots/sak-functional-card-s2-electricity5b-light.png#only-light
+[Electricity #5 Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-electricity5b-dark.png#only-dark
 
     ![Electricity #5 Example - Light]
     ![Electricity #5 Example - Dark]
@@ -150,7 +150,7 @@ The card shows the following data:
       decimals: 0
   layout:
     template:
-      name: sak_layout_fce3_electricity3
+      name: sak_layout_fce2_electricity3
 ```
 
 ##:sak-sak-logo: Electricity Card \#4 Example
@@ -219,7 +219,7 @@ Blue/green gradients are used for both the backgrounds and the bounding boxes.
       decimals: 0
   layout:
     template:
-      name: sak_layout_fce3_electricity4
+      name: sak_layout_fce2_electricity4
 ```
 
 ##:sak-sak-logo: Electricity Card \#5 Example
@@ -288,7 +288,7 @@ Blue/green gradients are used for both the backgrounds and the bounding boxes.
       decimals: 0
   layout:
     template:
-      name: sak_layout_fce3_electricity5
+      name: sak_layout_fce2_electricity5
 ```
 
 ###Sensor Card \#4 YAML Template Definition

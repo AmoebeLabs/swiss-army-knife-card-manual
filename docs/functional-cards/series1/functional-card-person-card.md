@@ -12,12 +12,22 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Light Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png){width="300"}
-<br>![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png){width="600"}
-<br>![Swiss Army Knife Functional Card Person D06 Dark Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png){width="300"}
-![Swiss Army Knife Functional Card Person D06 Dark Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png){width="300"}
+<div class="grid cards" markdown>
 
+-   :sak-sak-logo:{ .lg .middle } __Person *"\@home"*__
+
+    ---
+    ![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home.png#only-light){width="300"}
+    ![Swiss Army Knife Functional Card Person D06 Light Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-home-picture.png#only-light){width="600"}
+    ![Swiss Army Knife Functional Card Person D06 Dark Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-home.png#only-dark){width="300"}
+
+-   :sak-sak-logo:{ .lg .middle } __Person *"away"*__
+
+    ---
+
+    ![Swiss Army Knife Functional Card Person D06 Light Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-light-not_home.png#only-light){width="300"}
+    ![Swiss Army Knife Functional Card Person D06 Dark Not Home](../../assets/screenshots/sak-functional-card-12-person-theme-d06-dark-not_home.png#only-dark){width="300"}
+</div>
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
 !!! info "This card shows you some possibilities to apply JavaScript to the animations section"

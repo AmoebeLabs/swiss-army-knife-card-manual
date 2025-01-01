@@ -11,8 +11,8 @@ tags:
 ---
 <!-- GT/GL -->
 
-![Swiss Army Knife Functional Card Navigate D06 Light Off](../../assets/screenshots/sak-functional-card-12-navigate-theme-d06-light.png){width="200"}
-<br>![Swiss Army Knife Functional Card Navigate D06 Dark Off](../../assets/screenshots/sak-functional-card-12-navigate-theme-d06-dark.png){width="200"}
+![Swiss Army Knife Functional Card Navigate D06 Light Off](../../assets/screenshots/sak-functional-card-12-navigate-theme-d06-light.png#only-light){width="200"}
+<br>![Swiss Army Knife Functional Card Navigate D06 Dark Off](../../assets/screenshots/sak-functional-card-12-navigate-theme-d06-dark.png#only-dark){width="200"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

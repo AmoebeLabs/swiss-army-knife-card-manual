@@ -12,8 +12,8 @@ tags:
 <!-- GT/GL -->
 ##:sak-sak-logo: Visualization
 
-![Swiss Army Knife Functional Card Server Statistics D06 Light](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-light.png){width="600"}
-<br>![Swiss Army Knife Functional Card Server Statistics D06 Dark](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-dark.png){width="600"}
+![Swiss Army Knife Functional Card Server Statistics D06 Light](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-light.png#only-light){width="600"}
+<br>![Swiss Army Knife Functional Card Server Statistics D06 Dark](../../assets/screenshots/sak-functional-card-12-server-statistics-theme-d06-dark.png#only-dark){width="600"}
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 

@@ -1,16 +1,16 @@
 ---
 template: main.html
-title: "Functional Cards Series 3: Sensor Cards"
+title: "Functional Cards Series 2: Sensor Cards"
 description: "Example of functional card, Sensor Cards"
 hideno:
   toc
 tags:
   - Example
-  - Functional Card - Series 3
+  - Functional Card - Series 2
   - Sensor Cards
 ---
 <!-- GT/GL -->
-!!! warning "Series 3 will be released in 2025!"
+!!! warning "Series 2 will be released in 2025!"
 
 Sensor card \#4 is more or less a show case for the different types of sparkline chart types and variants that are possible with the sparkline tool.
 
@@ -31,8 +31,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Line Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-8-light.png#only-light
-[Line Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-8-dark.png#only-dark
+[Line Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-light.png#only-light
+[Line Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-dark.png#only-dark
 
     ![Line Example - Light]
     ![Line Example - Dark]
@@ -46,8 +46,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today with Min/Max values.
     <br><br>
 
-[Line/MinMax Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-14-light.png#only-light
-[Line/MinMax Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-14-dark.png#only-dark
+[Line/MinMax Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-light.png#only-light
+[Line/MinMax Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-dark.png#only-dark
 
     ![Line/MinMax Example - Light]
     ![Line/MinMax Example - Dark]
@@ -61,8 +61,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
     
-[Area Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-6-light.png#only-light
-[Area Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-6-dark.png#only-dark
+[Area Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-light.png#only-light
+[Area Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-dark.png#only-dark
 
     ![Area Example - Light]
     ![Area Example - Dark]
@@ -77,8 +77,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Barcode Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-13-light.png#only-light
-[Barcode Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-13-dark.png#only-dark
+[Barcode Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-light.png#only-light
+[Barcode Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-dark.png#only-dark
 
     ![Barcode Example - Light]
     ![Barcode Example - Dark]
@@ -92,8 +92,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Barcode/Audio Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-2-light.png#only-light
-[Barcode/Audio Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-2-dark.png#only-dark
+[Barcode/Audio Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-light.png#only-light
+[Barcode/Audio Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-dark.png#only-dark
 
     ![Barcode/Audio Example - Light]
     ![Barcode/Audio Example - Dark]
@@ -107,8 +107,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Barcode/Stalagmites Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-12-light.png#only-light
-[Barcode/Stalagmites Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-12-dark.png#only-dark
+[Barcode/Stalagmites Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-light.png#only-light
+[Barcode/Stalagmites Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-dark.png#only-dark
 
     ![Barcode/Stalagmites Example - Light]
     ![Barcode/Stalagmites Example - Dark]
@@ -122,8 +122,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Bar Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-9-light.png#only-light
-[Bar Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-9-dark.png#only-dark
+[Bar Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-light.png#only-light
+[Bar Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-dark.png#only-dark
 
     ![Bar Example - Light]
     ![Bar Example - Dark]
@@ -138,8 +138,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Dots Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-10-light.png#only-light
-[Dots Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-10-dark.png#only-dark
+[Dots Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-light.png#only-light
+[Dots Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-dark.png#only-dark
 
     ![Dots Example - Light]
     ![Dots Example - Dark]
@@ -154,8 +154,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Graded/Rank Order Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-5-light.png#only-light
-[Graded/Rank Order Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-5-dark.png#only-dark
+[Graded/Rank Order Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-light.png#only-light
+[Graded/Rank Order Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-dark.png#only-dark
 
     ![Graded/Rank Order Example - Light]
     ![Graded/Rank Order Example - Dark]
@@ -169,8 +169,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-[Equalizer Example - Light]: ../../assets/screenshots/sak-functional-card-s3-sensor4-11-light.png#only-light
-[Equalizer Example - Dark]: ../../assets/screenshots/sak-functional-card-s3-sensor4-11-dark.png#only-dark
+[Equalizer Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-light.png#only-light
+[Equalizer Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-dark.png#only-dark
 
     ![Equalizer Example - Light]
     ![Equalizer Example - Dark]
@@ -189,8 +189,8 @@ The sensor \#4 design is clean and fairly straightforward. It has a 1/1 aspectra
 ###Tools used
 The card is built with 8 tools. You can find the numbers as *'dref: 1'* in the template itself for easy referencing.
 
-![Swiss Army Knife Functional Card Design Sensor Card #4](../../assets/screenshots/sak-functional-card-design-s3-sensor4-lightb.png#only-light){width=300}
-![Swiss Army Knife Functional Card Design Sensor Card #4](../../assets/screenshots/sak-functional-card-design-s3-sensor4-darkb.png#only-dark){width=300}
+![Swiss Army Knife Functional Card Design Sensor Card #4](../../assets/screenshots/sak-functional-card-design-s2-sensor4-lightb.png#only-light){width=300}
+![Swiss Army Knife Functional Card Design Sensor Card #4](../../assets/screenshots/sak-functional-card-design-s2-sensor4-darkb.png#only-dark){width=300}
 
 | Number| Tool | Description |
 |-|-|-|
@@ -203,7 +203,7 @@ The card is built with 8 tools. You can find the numbers as *'dref: 1'* in the t
 | **7** | sparkline | Sparkline showing today's historical entity state |
 | **8** | icon | Icon as background for the card. Can be switched on/off |
 
-###Template variables for `sak_layout_fce3_sensor4`
+###Template variables for `sak_layout_fce2_sensor4`
 
 | Data | Default| Required | Description |
 |-|-|-|-|
@@ -222,7 +222,7 @@ The card is built with 8 tools. You can find the numbers as *'dref: 1'* in the t
 [:octicons-tag-24: 4.0.1][github-releases]
 ??? Info "Full definition of layout template"
     ```yaml linenums="1"
-    sak_layout_fce3_sensor4:
+    sak_layout_fce2_sensor4:
       template:
         type: layout
         defaults: 
@@ -479,7 +479,7 @@ Below some examples using this template. Each example shows a different sparklin
       icon: mdi:dots-hexagon
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: line
         - sak_layout_background_icon_disabled: false
@@ -507,7 +507,7 @@ Draws the actual line (average values) and the min/max values on the background.
       icon: mdi:dots-hexagon
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: line
         - sak_layout_background_icon_disabled: false
@@ -534,7 +534,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Kitchen'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: area
         - sak_layout_background_icon_disabled: false
@@ -560,7 +560,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Study'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: barcode
         - sak_layout_background_icon_disabled: false
@@ -585,7 +585,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Kitchen'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: barcode
         - sak_layout_sparkline_variant: audio
@@ -611,7 +611,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Study'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: barcode
         - sak_layout_sparkline_variant: stalagmites
@@ -638,7 +638,7 @@ Draws the actual line (average values) and the min/max values on the background.
       decimals: 0
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: bar
         - sak_layout_background_icon_disabled: false
@@ -663,7 +663,7 @@ Draws the actual line (average values) and the min/max values on the background.
       icon: mdi:dots-hexagon
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: dots
         - sak_layout_background_icon_disabled: false
@@ -688,7 +688,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Study'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_background_icon_disabled: false
         - sak_layout_colorstop_v1: sak_colorstops_awair_co2_v1
@@ -715,7 +715,7 @@ Draws the actual line (average values) and the min/max values on the background.
       area: 'Study'
   layout:
     template:
-      name: sak_layout_fce3_sensor4
+      name: sak_layout_fce2_sensor4
       variables:
         - sak_layout_sparkline_type: equalizer
         - sak_layout_background_icon_disabled: false
