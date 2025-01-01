@@ -21,7 +21,7 @@ tags:
     These are really advanced cards (lots of YAML...)
     
 
-<div class="grid" markdown>
+<div class="grid cards col1" markdown>
 
 -   :sak-sak-logo:{ .lg .middle } __Electricity Card *"\#3"*__
 
@@ -36,7 +36,7 @@ tags:
     ![Electricity #3 Example - Light]
     ![Electricity #3 Example - Dark]
 
-    [:octicons-arrow-right-24: Electricity \#3 Example][Electricity \#3 Example]
+    [:octicons-arrow-right-24: Electricity \#3 Example][Electricity Card #3 Example]
     <br><br>
 
 -   :sak-sak-logo:{ .lg .middle } __Electricity Card *"\#4"*__
@@ -54,7 +54,7 @@ tags:
     ![Electricity #4 Example - Light]
     ![Electricity #4 Example - Dark]
 
-    [:octicons-arrow-right-24: Electricity \#4 Example][Electricity \#4 Example]
+    [:octicons-arrow-right-24: Electricity \#4 Example][Electricity Card #4 Example]
     <br><br>
 
 -   :sak-sak-logo:{ .lg .middle } __Electricity Card *"\#5"*__
@@ -70,7 +70,7 @@ tags:
     ![Electricity #5 Example - Light]
     ![Electricity #5 Example - Dark]
 
-    [:octicons-arrow-right-24: Electricity \#5 Example][Electricity \#5 Example]
+    [:octicons-arrow-right-24: Electricity \#5 Example][Electricity Card #5 Example]
     <br><br>
 
 </div>
@@ -300,9 +300,9 @@ Blue/green gradients are used for both the backgrounds and the bounding boxes.
 
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
-[Electricity Card \#3 Example]: #electricity-card-3-example
-[Electricity Card \#4 Example]: #electricity-card-4-example
-[Electricity Card \#5 Example]: #electricity-card-5-example
+[Electricity Card #3 Example]: #electricity-card-3-example
+[Electricity Card #4 Example]: #electricity-card-4-example
+[Electricity Card #5 Example]: #electricity-card-5-example
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

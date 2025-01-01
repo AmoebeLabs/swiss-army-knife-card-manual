@@ -193,6 +193,26 @@
     transition: border .25s,box-shadow .25s
 }
 
+/* Remove borders from top, middle or bottom rows, so you can connect rows as if they are one block */
+.md-typeset .grid.cards.toprow>ol>li,.md-typeset .grid.cards.toprow>ul>li,.md-typeset .grid>.cards.toprow {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.md-typeset .grid.cards.middlerow>ol>li,.md-typeset .grid.cards.middlerow>ul>li,.md-typeset .grid>.cards.middlerow {
+  border-top: 0px;
+  border-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.md-typeset .grid.cards.bottomrow>ol>li,.md-typeset .grid.cards.bottomrow>ul>li,.md-typeset .grid>.cards.bottomrow {
+  border-top: 0px;
+  padding-top: 10px;
+  margin-top: 0px;
+}
+
 .md-typeset .grid.cards>ol>li:focus-within,.md-typeset .grid.cards>ol>li:hover,.md-typeset .grid.cards>ul>li:focus-within,.md-typeset .grid.cards>ul>li:hover,.md-typeset .grid>.card:focus-within,.md-typeset .grid>.card:hover {
     border-color: #0000;
     box-shadow: var(--md-shadow-z2)
@@ -210,6 +230,58 @@
 .md-typeset .grid.cards>ol>li>:last-child,.md-typeset .grid.cards>ul>li>:last-child,.md-typeset .grid>.card>:last-child {
     margin-bottom: 0
 }
+
+.md-typeset .col11 {
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,24rem),1fr));
+}
+.md-typeset .col1 {
+  grid-template-columns: 1fr;
+}
+.md-typeset .col2 {
+  grid-template-columns: 1fr 1fr;
+}
+.md-typeset .col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.md-typeset .toprow li {
+  border-bottom-width: 0px;
+}
+.md-typeset .litop {
+  border-bottom-width: 0px;
+  border: 0px;
+}
+
+.md-typeset .toprow.li {
+  border-bottom-width: 0px;
+}
+.md-typeset .toprow>li {
+  border-bottom-width: 0px;
+}
+.md-typeset .toprow>ol>li {
+  border-bottom-width: 0px;
+}
+
+.md-typeset .inbetweenrow li {
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+}
+.md-typeset .bottomrow>li {
+  border-top-width: 0px;
+}
+/* Only following defs work to remove those margins for the 3 or more rows in the grid */
+/* Each row is separate to get row height ok. Don't know how to do this else */
+.md-typeset .grid.cards.toprow.col3 {
+  margin-bottom: 0px !important;
+}
+.md-typeset .grid.cards.middlerow.col3 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.md-typeset .grid.cards.bottomrow.col3 {
+  margin-top: 0px !important;
+}
+
+
     @keyframes blinkingText {
       0%{   opacity: 0%;   }
       49%{  opacity: 0%;   }

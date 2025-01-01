@@ -26,7 +26,7 @@ tags:
     ---
     ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light On](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-light-on.png#only-light)
     ![Swiss Army Knife Functional Card Binary Sensor With Alert1 D06 Light On](../../assets/screenshots/sak-functional-card-s2-binary-sensor-alert1-theme-d06-dark-on.png#only-dark)
-</div>    
+</div>
 
 This card uses the [Material 3 theme D06, TealBlue][ham3-d06-url]
 
