@@ -25,8 +25,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-8](../assets/screenshots/sak-functional-card-s3-sensor4-8-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-8](../assets/screenshots/sak-functional-card-s3-sensor4-8-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-8](../assets/screenshots/sak-functional-card-s2-sensor4-8-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-8](../assets/screenshots/sak-functional-card-s2-sensor4-8-dark.png#only-dark)
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Area"*__
 
@@ -35,8 +35,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
     
-    ![Swiss Army Knife Functional Sensor Card #4-6](../assets/screenshots/sak-functional-card-s3-sensor4-6-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-6](../assets/screenshots/sak-functional-card-s3-sensor4-6-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-6](../assets/screenshots/sak-functional-card-s2-sensor4-6-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-6](../assets/screenshots/sak-functional-card-s2-sensor4-6-dark.png#only-dark)
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode/Audio"*__
 
@@ -45,8 +45,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-2](../assets/screenshots/sak-functional-card-s3-sensor4-2-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-2](../assets/screenshots/sak-functional-card-s3-sensor4-2-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-2](../assets/screenshots/sak-functional-card-s2-sensor4-2-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-2](../assets/screenshots/sak-functional-card-s2-sensor4-2-dark.png#only-dark)
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Bar"*__
 
@@ -55,8 +55,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s3-sensor4-9-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s3-sensor4-9-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s2-sensor4-9-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s2-sensor4-9-dark.png#only-dark)
 
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Dots"*__
@@ -66,8 +66,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-10](../assets/screenshots/sak-functional-card-s3-sensor4-10-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-10](../assets/screenshots/sak-functional-card-s3-sensor4-10-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-10](../assets/screenshots/sak-functional-card-s2-sensor4-10-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-10](../assets/screenshots/sak-functional-card-s2-sensor4-10-dark.png#only-dark)
 
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Graded/Rank"*__
@@ -77,8 +77,8 @@ Some examples:
     A sensor card with a sparkline showing the history of today.
     <br><br>
 
-    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s3-sensor4-5-light.png#only-light)
-    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s3-sensor4-5-dark.png#only-dark)
+    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s2-sensor4-5-light.png#only-light)
+    ![Swiss Army Knife Functional Sensor Card #4-9](../assets/screenshots/sak-functional-card-s2-sensor4-5-dark.png#only-dark)
 
 
 </div>
