@@ -28,9 +28,11 @@ tags:
     The card that matches the Awair display without icons which column is which sensor!
     <br><br>
 
-    ![Swiss Army Knife Functional Card Awair 3a](../../assets/screenshots/sak-functional-card-s3-awair3a-light.png#only-light)
-    ![Swiss Army Knife Functional Card Awair 3a](../../assets/screenshots/sak-functional-card-s3-awair3a-dark.png#only-dark)
+[Swiss Army Knife Functional Card Awair 3a - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3a-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3a - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3a-dark.png#only-dark
 
+    ![Swiss Army Knife Functional Card Awair 3a - Light]
+    ![Swiss Army Knife Functional Card Awair 3a - Dark]
 
     [:octicons-arrow-right-24: Awair Card #3a][Awair Card #3a]
 
@@ -41,8 +43,11 @@ tags:
     The same as #3a, but now with icons for each sensor, so you don't have to memorize which column is which sensor!
     The background icon is ommitted.
 
-    ![Swiss Army Knife Functional Card Awair 3b](../../assets/screenshots/sak-functional-card-s3-awair3b-light.png#only-light)
-    ![Swiss Army Knife Functional Card Awair 3b](../../assets/screenshots/sak-functional-card-s3-awair3b-dark.png#only-dark)
+[Swiss Army Knife Functional Card Awair 3b - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3b-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3b - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3b-dark.png#only-dark
+
+    ![Swiss Army Knife Functional Card Awair 3b - Light]
+    ![Swiss Army Knife Functional Card Awair 3b - Dark]
 
     [:octicons-arrow-right-24: Awair Card #3b][Awair Card #3b]
 
@@ -53,8 +58,11 @@ tags:
     Same as example #3b, but now with rounded, rectangles for the sensor values instead of the Awair circles.
     <br><br>
 
-    ![Swiss Army Knife Functional Card Awair 3c](../../assets/screenshots/sak-functional-card-s3-awair3c-1-light.png#only-light)
-    ![Swiss Army Knife Functional Card Awair 3c](../../assets/screenshots/sak-functional-card-s3-awair3c-1-dark.png#only-dark)
+[Swiss Army Knife Functional Card Awair 3c - Light]: ../../assets/screenshots/sak-functional-card-s3-awair3c-1-light.png#only-light
+[Swiss Army Knife Functional Card Awair 3c - Dark]: ../../assets/screenshots/sak-functional-card-s3-awair3c-1-dark.png#only-dark
+
+    ![Swiss Army Knife Functional Card Awair 3c - Light]
+    ![Swiss Army Knife Functional Card Awair 3c - Dark]
 
     [:octicons-arrow-right-24: Awair Card #3c][Awair Card #3c]
 
@@ -71,6 +79,39 @@ tags:
 
 ##:sak-sak-logo: Awair Element Card #3a
 [:octicons-tag-24: 4.0.1][github-releases]
+
+The "original" Awair card that mimics the way Awair shows all of its sensors and the overal "air quality" index ranging from 0 to 100.
+
+![Swiss Army Knife Functional Card Awair 3a - Light]{width=300}
+![Swiss Army Knife Functional Card Awair 3a - Dark]{width=300}
+
+##:sak-sak-logo: Design
+The Awair cards are very similar to the sensor \#4 design: the latter was derived from the original Awair sensor cards!. It has a 1/1 aspectratio and is meant to be part of a grid with 2 columns in order to be readable on mobile devices.
+
+| Description| Aspect Ratio| Target Size |
+|-|-|-|
+| A specific Card for Awair Element hardware that mimics the Awair way of showing graded sensor data using dots for each of the 5 sensors ranging from green (OK) to red (very bad).| 1/1 | Grid with 2 columns |
+
+###Tools used
+The card is built with 12 tools. You can find the numbers as *'dref: 1'* in the template itself for easy referencing.
+
+![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s3-awair3a-light.png#only-light){width=300}
+![Swiss Army Knife Functional Card Design Awair Card #3a](../../assets/screenshots/sak-functional-card-design-s3-awair3a-dark.png#only-dark){width=300}
+
+| Number| Tool | Description |
+|-|-|-|
+| **1** | circle | Circle as background for the icon. Background color is determined by the colorstop for the main entity |
+| **2** | icon | Icon of the entity |
+| **3** | segarc | SegArc around the circle. Color according to the colorstop for the entity |
+| **4** | state | State that displays the value of the entity |
+| **5** | area | Location of the entity |
+| **6** | name | Short description of the entity's sensor |
+| **7** | icon | Icon as background for the card. Can be switched on/off |
+| **8..12** | sparkline | Sparkline showing Awair alike values of the 5 sensors: temperature, humidity, CO~2~, VOC and PM2.5 |
+
+###Template variables for `sak_layout_fce3_sensor4`
+
+There are no template variables for this template card.
 
 ###Usage
 !!! warning "Replace example entities with your entities!"
@@ -112,6 +153,11 @@ tags:
 ##:sak-sak-logo: Awair Element Card #3b
 [:octicons-tag-24: 4.0.1][github-releases]
 
+A slightly changed version compared to the \#3a version: Icons are added below each column of dots, so you don't have to memorize which colomn is which sensor...
+
+![Swiss Army Knife Functional Card Awair 3b - Light]{width=300}
+![Swiss Army Knife Functional Card Awair 3b - Dark]{width=300}
+
 ###Usage
 
 !!! warning "Replace example entities with your entities!"
@@ -152,6 +198,11 @@ tags:
     
 ##:sak-sak-logo: Awair Element Card #3c
 [:octicons-tag-24: 4.0.1][github-releases]
+
+A variant of \#3b: now with bigger rounded rectangles instead of tiny circles for a larger display of the sensors colors.
+
+![Swiss Army Knife Functional Card Awair 3c - Light]{width=300}
+![Swiss Army Knife Functional Card Awair 3c - Dark]{width=300}
 
 ###Usage
 
