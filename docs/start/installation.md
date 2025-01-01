@@ -419,15 +419,15 @@ If you want to start building right away, head over to the [tools and toolsets][
 
 
 <!-- Internal links -->
-[swiss-army-knife-examples-url]: ../../examples/introduction/
-[swiss-army-knife-tools-and-toolsets-url]: ../../basics/tools-and-toolsets/
-[swiss-army-knife-interactions-url]: ../..//basics/interactions/
-[swiss-army-knife-styling-classes-url]: ../../basics/styling/classes/
-[swiss-army-knife-styling-styles-url]: ../../basics/styling/styles/
-[swiss-army-knife-animations-css-url]: ../../basics/animations/css-animations/
-[swiss-army-knife-animations-colorstops-url]: ../../basics/animations/colorstops/
-[swiss-army-knife-animations-state-operators-url]: ../../basics/animations/state-operators/
-[swiss-army-knife-how-to-design-your-card-md]: ../../design/how-to-design-your-card/
+[swiss-army-knife-examples-url]: ../examples/introduction.md
+[swiss-army-knife-tools-and-toolsets-url]: ../basics/tools-and-toolsets.md
+[swiss-army-knife-interactions-url]: ../basics/user-interactions.md
+[swiss-army-knife-styling-classes-url]: ../basics/styling/classes.md
+[swiss-army-knife-styling-styles-url]: ../basics/styling/styles.md
+[swiss-army-knife-animations-css-url]: ../basics/animations/css-animations.md
+[swiss-army-knife-animations-colorstops-url]: ../basics/animations/colorstops.md
+[swiss-army-knife-animations-state-operators-url]: ../basics/animations/state-operators.md
+[swiss-army-knife-how-to-design-your-card-md]: ../design/how-to-design-your-card.md
 
 <!-- External links -->
 [ha-m3-themes-url]: https://material3-themes-manual.amoebelabs.com/examples/introduction/

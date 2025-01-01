@@ -218,12 +218,12 @@ This view does not use any SAK Template. It should of course, but in this case, 
 
 
 <!--- Internal References... --->
-[Swiss Army Knife Custom card Segmented Arc Tool]:  ../..//tools/segarc-tool/
-[Swiss Army Knife Custom card Entity Area Tool]:    ../..//tools/entity-area-tool/
-[Swiss Army Knife Custom card Entity Name Tool]:    ../../tools/entity-name-tool/
-[Swiss Army Knife Custom card Entity State Tool]:    ../../tools/entity-state-tool/
-[Swiss Army Knife Custom card Entity Icon Tool]:    ../../tools/entity-icon-tool/
-[Swiss Army Knife Custom card Entity History Tool]: ../../tools/entity-barchart-tool/
+[Swiss Army Knife Custom card Segmented Arc Tool]:  ../tools/segarc-tool.md
+[Swiss Army Knife Custom card Entity Area Tool]:    ../tools/entity-area-tool.md
+[Swiss Army Knife Custom card Entity Name Tool]:    ../tools/entity-name-tool.md
+[Swiss Army Knife Custom card Entity State Tool]:   ../tools/entity-state-tool.md
+[Swiss Army Knife Custom card Entity Icon Tool]:    ../tools/entity-icon-tool.md
+[Swiss Army Knife Custom card Entity History Tool]: ../tools/entity-barchart-tool.md
 
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
 

@@ -35,6 +35,6 @@ As the decluttering card is a card template, it can use SAK templates.
 
 <!-- Internal References -->
 
-[Built-in YAML templates]: ../yaml-built-in/
-[Swiss Army Knife templates]: ../sak-templates/
-[JavaScript Template Snippets]: ../javascript-snippets/
+[Built-in YAML templates]: yaml-built-in.md
+[Swiss Army Knife templates]: sak-templates.md
+[JavaScript Template Snippets]: javascript-snippets.md

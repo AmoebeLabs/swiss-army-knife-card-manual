@@ -736,7 +736,7 @@ Draws the actual line (average values) and the min/max values on the background.
 [Barcode/Stalagmites Example]: #barcodestalagmites-example
 [Bar Example]: #bar-example
 [Dots Example]: #dots-example
-[Graded/Rank Order Example]: #sgradedrank-order-example
+[Graded/Rank Order Example]: #gradedrank-order-example
 [Equalizer Example]: #equalizer-example
 
 <!--- External References... --->

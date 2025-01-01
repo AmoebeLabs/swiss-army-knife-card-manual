@@ -66,6 +66,7 @@ theme:
 plugins:
   - search
   - tags
+  - blog
   - minify:
       minify_html: true
   # Redirect pages pages that I want to rename etc. without loosing Google / Bing indexing...
@@ -375,3 +376,4 @@ nav:
   - Helpers:
     - Pallette generators: helpers/palette-generators.md
     - Gradient generator / converter: helpers/gradient-generator-converter.md
+

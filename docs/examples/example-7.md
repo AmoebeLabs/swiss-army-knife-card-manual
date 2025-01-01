@@ -144,4 +144,4 @@ None.
 [AmoebeLabs Swiss Army Knife Custom Card Example 7 - Servers]: ../assets/screenshots/sak-example-7.png "Swiss Army Knife Example 7 - Servers"
 
 <!-- Internal references -->
-[Swiss Army Knife Custom card Segmented Arc Tool]: ../..//tools/segarc-tool/
+[Swiss Army Knife Custom card Segmented Arc Tool]: ../tools/segarc-tool.md

@@ -194,9 +194,9 @@ tags:
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
 [Preface]: functional-card-binary-sensor-alert1-card.md
-[Awair Card #3a]: #awair-element-card-3a-usage
-[Awair Card #3b]: #awair-element-card-3b-usage
-[Awair Card #3c]: #awair-element-card-3c-usage
+[Awair Card #3a]: #awair-element-card-3a
+[Awair Card #3b]: #awair-element-card-3b
+[Awair Card #3c]: #awair-element-card-3c
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/
