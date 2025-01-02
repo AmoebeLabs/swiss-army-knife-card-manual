@@ -11,6 +11,8 @@ tags:
 ---
 <!-- GT/GL -->
 !!! warning "Series 2 will be released in 2025!"
+[Swiss Army Knife Awair Element Product]: ../../assets/screenshots/awair-element-product.png
+![Swiss Army Knife Awair Element Product]
 
 ##:sak-sak-logo: Visualization
 
