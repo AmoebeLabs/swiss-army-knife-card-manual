@@ -110,7 +110,7 @@ The card is built with 12 tools. You can find the numbers as *'dref: 1'* in the 
 | **7** | icon | Icon as background for the card. Can be switched on/off |
 | **8..12** | sparkline | Sparkline showing Awair alike values of the 5 sensors: temperature, humidity, CO~2~, VOC and PM2.5 |
 
-###Template variables for `sak_layout_fce3_sensor4`
+###Template variables for `sak_layout_fce2_sensor4`
 
 There are no template variables for this template card.
 

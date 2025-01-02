@@ -177,6 +177,7 @@
     grid-gap: .4rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min(100%,16rem),1fr));
+    grid-template-rows: 1fr;
     margin: 1em 0;
 }
 
@@ -193,6 +194,29 @@
     transition: border .25s,box-shadow .25s
 }
 
+/* Testing stuff with chatgpt... */
+.md-typeset .grid-marco {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 16px;
+}
+
+.md-typeset .grid-marco > ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border: 1px solid #ccc;
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.md-typeset .grid-marco > ul > li{
+  display: contents;
+  margin: 4px 0;
+}
 /* Remove borders from top, middle or bottom rows, so you can connect rows as if they are one block */
 .md-typeset .grid.cards.toprow>ol>li,.md-typeset .grid.cards.toprow>ul>li,.md-typeset .grid>.cards.toprow {
   border-bottom: 0px;

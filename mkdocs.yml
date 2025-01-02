@@ -21,7 +21,7 @@ repo_name: Swiss Army Knife Card
 repo_url: https://github.com/amoebelabs/swiss-army-knife-card
 edit_uri: ""
 
-copyright: Copyright &copy; 2020 - 2024 Marco @AmoebeLabs
+copyright: Copyright &copy; 2020 - 2025 Marco @AmoebeLabs
 
 theme:
   name: material
@@ -111,6 +111,9 @@ plugins:
         'design/functional-card-tomorrow-pollen-all-aqi-card.md': 'functional-cards/series1/functional-card-tomorrow-pollen-all-aqi-card.md'
 extra_css:
   - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
 
 extra:
   social:

@@ -24,12 +24,13 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
 <div class="grid cards" markdown>
 
--   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line"*__
+-   
+    :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line"*__
 
     ---
 
-    A sensor card with a sparkline showing the history of today.
-    <br><br>
+    A sensor card with a sparkline line showing the history of today.
+    {: .blog-title}
 
 [Line Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-light.png#only-light
 [Line Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-dark.png#only-dark
@@ -43,8 +44,8 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     ---
 
-    A sensor card with a sparkline showing the history of today with Min/Max values.
-    <br><br>
+    A sensor card with a sparkline line showing the history of today with Min/Max values on the background to show variations.
+    {: .blog-title}
 
 [Line/MinMax Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-light.png#only-light
 [Line/MinMax Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-dark.png#only-dark
@@ -58,9 +59,9 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     ---
 
-    A sensor card with a sparkline showing the history of today.
-    <br><br>
-    
+    A sensor card with a sparkline showing the history of today... 
+    {: .blog-title}
+
 [Area Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-light.png#only-light
 [Area Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-dark.png#only-dark
 
@@ -75,7 +76,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
     ---
 
     A sensor card with a sparkline showing the history of today.
-    <br><br>
+    {: .blog-title}
 
 [Barcode Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-light.png#only-light
 [Barcode Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-dark.png#only-dark
@@ -91,6 +92,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
+    {: .blog-title}
 
 [Barcode/Audio Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-light.png#only-light
 [Barcode/Audio Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-dark.png#only-dark
@@ -106,6 +108,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
+    {: .blog-title}
 
 [Barcode/Stalagmites Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-light.png#only-light
 [Barcode/Stalagmites Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-dark.png#only-dark
@@ -121,6 +124,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
+    {: .blog-title}
 
 [Bar Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-light.png#only-light
 [Bar Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-dark.png#only-dark
@@ -137,6 +141,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
+    {: .blog-title}
 
 [Dots Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-light.png#only-light
 [Dots Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-dark.png#only-dark
@@ -153,6 +158,7 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
+    {: .blog-title}
 
 [Graded/Rank Order Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-light.png#only-light
 [Graded/Rank Order Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-dark.png#only-dark
@@ -166,8 +172,9 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
     ---
 
-    A sensor card with a sparkline showing the history of today.
+    A sensor card with a sparkline showing the history of today. Make it a line longer. And I mean longer!
     <br><br>
+    {: .blog-title}
 
 [Equalizer Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-light.png#only-light
 [Equalizer Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-dark.png#only-dark
