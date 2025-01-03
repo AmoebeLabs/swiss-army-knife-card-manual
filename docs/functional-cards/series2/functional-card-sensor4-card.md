@@ -16,171 +16,188 @@ Sensor card \#4 is more or less a show case for the different types of sparkline
 
 
 ##:sak-sak-logo: Visualization
+Below the different variations of this card. The card template takes care of displaying the choosen sparkline chart.  
 
+<div class="grid cards hide-container" markdown>
 
-!!! info "These cards show different sorts of sparkline graphs."
-    They use the same SAK template and use variables to specify the type of sparkline, colorstops and more!
-    
-
-<div class="grid cards" markdown>
-
--   
-    :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line"*__
+-   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line"*__
+    {:.card-title}
 
     ---
+    
 
     A sensor card with a sparkline line showing the history of today.
-    {: .blog-title}
+    {: .card-summary}
 
 [Line Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-light.png#only-light
 [Line Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-8-dark.png#only-dark
 
     ![Line Example - Light]
     ![Line Example - Dark]
+    {:.card-image}
 
     [:octicons-arrow-right-24: Line Example][Line Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Line/MinMax"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline line showing the history of today with Min/Max values on the background to show variations.
-    {: .blog-title}
+    {: .card-summary}
 
 [Line/MinMax Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-light.png#only-light
 [Line/MinMax Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-14-dark.png#only-dark
 
     ![Line/MinMax Example - Light]
     ![Line/MinMax Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Line/MinMax Example][Line/MinMax Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Area"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today... 
-    {: .blog-title}
+    {: .card-summary}
 
 [Area Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-light.png#only-light
 [Area Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-6-dark.png#only-dark
 
     ![Area Example - Light]
     ![Area Example - Dark]
+    {: .card-image}
 
 
     [:octicons-arrow-right-24: Area Example][Area Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today.
-    {: .blog-title}
+    {: .card-summary}
 
 [Barcode Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-light.png#only-light
 [Barcode Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-13-dark.png#only-dark
 
     ![Barcode Example - Light]
     ![Barcode Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Barcode Example][Barcode Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode/Audio"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Barcode/Audio Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-light.png#only-light
 [Barcode/Audio Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-2-dark.png#only-dark
 
     ![Barcode/Audio Example - Light]
     ![Barcode/Audio Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Barcode/Audio Example][Barcode/Audio Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Barcode/Sta..."*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Barcode/Stalagmites Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-light.png#only-light
 [Barcode/Stalagmites Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-12-dark.png#only-dark
 
     ![Barcode/Stalagmites Example - Light]
     ![Barcode/Stalagmites Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Barcode/Stalagmites Example][Barcode/Stalagmites Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Bar"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Bar Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-light.png#only-light
 [Bar Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-9-dark.png#only-dark
 
     ![Bar Example - Light]
     ![Bar Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Bar Example][Bar Example]
 
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Dots"*__
+    {:.card-title}
 
     ---
 
     A sensor card with a sparkline showing the history of today.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Dots Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-light.png#only-light
 [Dots Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-10-dark.png#only-dark
 
     ![Dots Example - Light]
     ![Dots Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Dots Example][Dots Example]
 
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Graded/Rank"*__
+    {:.card-title}
 
     ---
 
-    A sensor card with a sparkline showing the history of today.
+    A sensor card with a sparkline graded/rank order showing the history of today.
+    <br>This visualization was developed for Awair Elements, but can be used for other sensors too, if you want grading.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Graded/Rank Order Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-light.png#only-light
 [Graded/Rank Order Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-5-dark.png#only-dark
 
     ![Graded/Rank Order Example - Light]
     ![Graded/Rank Order Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Graded/Rank Order Example][Graded/Rank Order Example]
 
 -   :sak-sak-logo:{ .lg .middle } __Sensor with Sparkline *"Equalizer"*__
+    {:.card-title}
 
     ---
 
-    A sensor card with a sparkline showing the history of today. Make it a line longer. And I mean longer!
+    A sensor card with a sparkline equalizer showing the history of today.
     <br><br>
-    {: .blog-title}
+    {: .card-summary}
 
 [Equalizer Example - Light]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-light.png#only-light
 [Equalizer Example - Dark]: ../../assets/screenshots/sak-functional-card-s2-sensor4-11-dark.png#only-dark
 
     ![Equalizer Example - Light]
     ![Equalizer Example - Dark]
+    {: .card-image}
 
     [:octicons-arrow-right-24: Equalizer Example][Equalizer Example]
 

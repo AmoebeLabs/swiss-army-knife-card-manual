@@ -18,7 +18,8 @@ This should help you to create your own visualizations, or you can just _use_ th
 
 | Card | Description |
 | ---- | ----------- |
-| [Awair Card][functional-card-awair-card] | Several variants to display Awair Element data using the Sparkline tool|
+| [Awair Card #1][functional-card-awair1-card] | Several variants to display Awair Element data using the Sparkline tool|
+| [Awair Card #3][functional-card-awair3-card] | Several variants to display Awair Element data using the Sparkline tool|
 | [Binary Sensor Card with Alert][functional-card-binary-sensor-alert1-card] | An Alert casrd for occupancy and door contacts showing history for today using the Sparkline Tool |
 | [Electricity Cards (Big)][functional-card-electricity-big-card] | Cards showing electricity information |
 | [Person Card][functional-card-person-card] | Card showing the location status of a Person. Also shows the power of some JavaScript |
@@ -57,7 +58,8 @@ This should help you to create your own visualizations, or you can just _use_ th
 [swiss-army-knife-ha-tool-state]: ../tools/entity-state-tool.md "Swiss Army Knife - Entity State Tool"
 [swiss-army-knife-ha-tool-bar]: ../tools/entity-barchart-tool.md "Swiss Army Knife - Entity History Bar Tool"
 
-[functional-card-awair-card]: functional-card-awair-card.md
+[functional-card-awair1-card]: functional-card-awair1-card.md
+[functional-card-awair3-card]: functional-card-awair3-card.md
 [functional-card-binary-sensor-alert1-card]: functional-card-binary-sensor-alert1-card.md
 [functional-card-electricity-big-card]: functional-card-electricity-big-card.md
 [functional-card-person-card]: functional-card-person-card.md

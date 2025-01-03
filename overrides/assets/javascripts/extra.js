@@ -71,11 +71,77 @@ function equalHeight2(container) {
 
 window.addEventListener("load", function(){
   console.log('setHeight load eventlistener activated')
-  equalHeight2('.blog-title');
+  equalHeight2('.blog-titlee');
 });
 window.addEventListener("resize", function(){
   console.log('setHeight resize eventlistener activated')
   setTimeout(function(){
-    equalHeight2('.blog-title');
+    equalHeight2('.blog-titlee');
   })
 });
+
+function setHeight3(el, height) {
+  el.style.height = `${height}px`;
+}
+
+function equalHeightSequential(container, classList) {
+  const gridContainer = document.querySelector(container);
+  if (!gridContainer) return;
+
+  // Hide container during alignment
+  gridContainer.classList.remove("aligned");
+
+  // Iterate through each class in the provided list
+  classList.forEach((targetClass) => {
+    const elements = Array.from(document.querySelectorAll(`${container} ${targetClass}`));
+    if (!elements.length) return;
+
+    let currentRowStart = elements[0].offsetTop;
+    let rowDivs = [];
+    let maxRowHeight = 0;
+
+    elements.forEach((el) => {
+      el.style.height = "auto"; // Reset height for recalculation
+      const elHeight = el.offsetHeight;
+      const elTop = el.offsetTop;
+
+      // New row detected
+      if (elTop !== currentRowStart) {
+        rowDivs.forEach((div) => (div.style.height = `${maxRowHeight}px`)); // Apply max height to previous row
+        rowDivs = []; // Reset for next row
+        currentRowStart = elTop; // Update row start position
+        maxRowHeight = 0; // Reset max height for new row
+      }
+
+      // Update current row
+      rowDivs.push(el);
+      maxRowHeight = Math.max(maxRowHeight, elHeight);
+    });
+
+    // Apply height to the last row
+    rowDivs.forEach((div) => (div.style.height = `${maxRowHeight}px`));
+  });
+
+  // Show container after alignment
+  gridContainer.classList.add("aligned");
+}
+
+// Event listeners
+const debounce = (func, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => func(...args), delay);
+  };
+};
+
+window.addEventListener("load", () => {
+  equalHeightSequential(".grid", [".card-title", ".card-summary", ".card-image"]);
+});
+
+window.addEventListener(
+  "resize",
+  debounce(() => {
+    equalHeightSequential(".grid", [".card-title", ".card-summary", ".card-image"]);
+  }, 100)
+);

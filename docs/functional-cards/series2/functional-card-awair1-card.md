@@ -19,55 +19,61 @@ These cards are specifically made for the Awair Element hardware and the way Awa
 
 There are 3 variations of this card.
 
-<div class="poep" markdown>
-<div class="grid cards toprow col3" markdown>
+<div class="grid cards col3 hide-container" markdown>
 -   :sak-sak-logo:{ .lg .middle } __Awair Card #1a__
+    {:.card-title}
 
     ---
 
--   :sak-sak-logo:{ .lg .middle } __Awair Card #1b__
+    The card that almost matches the Awair App display. It adds the history of the overall air quality score showing a 24 hour history.
+    {:.card-summary}
 
-    ---
-
--   :sak-sak-logo:{ .lg .middle } __Awair Card #1c__
-
-    ---
-</div>
-<div class="grid cards middlerow col3" markdown>
--    The card that alomst matches the Awair App display. It adds the history of the overall air quality score showing a 24 hour history.
-
--    The same as #1a, but now the overall air quality score shows the history of today. For each sensor, a radial_barcode/sun_burst type of sparkline displays today's history.
-
--    The same as #1b, but using barcode/audio sparkline chart to display the sensor history.
-</div>
 [Swiss Army Knife Functional Card Awair 1a - Light]: ../../assets/screenshots/sak-functional-card-s2-awair1a-living-light.png#only-light
 [Swiss Army Knife Functional Card Awair 1a - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair1a-living-dark.png#only-dark
+
+    ![Swiss Army Knife Functional Card Awair 1a - Light]
+    ![Swiss Army Knife Functional Card Awair 1a - Dark]
+    {:.card-image}
+
+    [:octicons-arrow-right-24: Awair Card \#1a][Awair Card #1a]
+
+-   :sak-sak-logo:{ .lg .middle } __Awair Card #1b__
+    {:.card-title}
+
+    ---
+
+    The same as #1a, but now the overall air quality score shows the history of today. For each sensor, a radial_barcode/sun_burst type of sparkline displays today's history.
+    {:.card-summary}
 
 [Swiss Army Knife Functional Card Awair 1b - Light]: ../../assets/screenshots/sak-functional-card-s2-awair1b-study-light.png#only-light
 [Swiss Army Knife Functional Card Awair 1b - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair1b-study-dark.png#only-dark
 
-[Swiss Army Knife Functional Card Awair 1c - Light]: ../../assets/screenshots/sak-functional-card-s2-awair1c-study-light.png#only-light
-[Swiss Army Knife Functional Card Awair 1c - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair1c-study-dark.png#only-dark
-
-<div class="grid cards bottomrow col3" markdown>
--   ![Swiss Army Knife Functional Card Awair 1a - Light]
-    ![Swiss Army Knife Functional Card Awair 1a - Dark]
-
-    [:octicons-arrow-right-24: Awair Card \#1a][Awair Card #1a]
-    
-
--   ![Swiss Army Knife Functional Card Awair 1b - Light]
+    ![Swiss Army Knife Functional Card Awair 1b - Light]
     ![Swiss Army Knife Functional Card Awair 1b - Dark]
+    {:.card-image}
 
     [:octicons-arrow-right-24: Awair Card \#1b][Awair Card #1b]
 
--   ![Swiss Army Knife Functional Card Awair 1c - Light]
+-   :sak-sak-logo:{ .lg .middle } __Awair Card #1c__
+    {:.card-title}
+
+    ---
+
+    The same as #1b, but using barcode/audio sparkline chart to display the sensor history.
+    {:.card-summary}
+
+[Swiss Army Knife Functional Card Awair 1c - Light]: ../../assets/screenshots/sak-functional-card-s2-awair1c-study-light.png#only-light
+[Swiss Army Knife Functional Card Awair 1c - Dark]: ../../assets/screenshots/sak-functional-card-s2-awair1c-study-dark.png#only-dark
+
+    ![Swiss Army Knife Functional Card Awair 1c - Light]
     ![Swiss Army Knife Functional Card Awair 1c - Dark]
+    {:.card-image}
 
     [:octicons-arrow-right-24: Awair Card \#1c][Awair Card #1c]
 
 </div>
-</div>
+
+
 | Description| Aspect Ratio| Target Size |
 |-|-|-|
 | Cards that show Awair sensor data in different ways.| varying | Grid with 1 column |
@@ -234,9 +240,9 @@ This card shows the following data:
 <!--- Internal References... --->
 [Swiss Army Knife Tutorial 02]: ../tutorials/10-step-tutorial-02-intro.md
 [Preface]: functional-card-binary-sensor-alert1-card.md
-[Awair Card #1a]: #awair-element-card-3a
-[Awair Card #1b]: #awair-element-card-3b
-[Awair Card #1c]: #awair-element-card-3c
+[Awair Card #1a]: #awair-element-card-1a
+[Awair Card #1b]: #awair-element-card-1b
+[Awair Card #1c]: #awair-element-card-1c
 
 <!--- External References... --->
 [ham3-d06-url]: https://material3-themes-manual.amoebelabs.com/examples/material3-example-theme-d06-tealblue/

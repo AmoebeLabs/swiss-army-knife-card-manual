@@ -56,7 +56,6 @@ tags:
     ![Swiss Army Knife Functional Card Awair 3a - Dark]
 
     [:octicons-arrow-right-24: Awair Card \#3a][Awair Card #3a]
-    
 
 -   ![Swiss Army Knife Functional Card Awair 3b - Light]
     ![Swiss Army Knife Functional Card Awair 3b - Dark]
