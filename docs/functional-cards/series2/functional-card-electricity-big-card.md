@@ -88,16 +88,26 @@ tags:
 ##:sak-sak-logo: Electricity Card \#3 Example
 [:octicons-tag-24: 4.0.1][github-releases]
 
-The card shows the following data:
+The card shows a comprehensive overview of the electricity usage and return:
 
-- The header shows the electricity used (average/min/max) of the last 24 hours
-- The next part shows the electricity used (from the grid, left graph), and the electricity returned to the grid (right graph). In the middle is a 'flower' that shows the current to/from grid, and the (relative) usage per 30 minutes. The inner circle (Blue) shows today's history of delivered to the grid and the outer circle (Green/orange/yellow/red) shows today's history of used from the grid.
-- The next part shows per phase (3 phases, 25A) used/returned from the grid
-- Then the totals used from the grid: current usage, today, this month, this year
-- Last but not least the totals returned to the grid: current usage, today, this month, this year...
+1. **Today's Electricity Header:** Displays the average, minimum, and maximum electricity used over the last 24 hours.
 
-![Electricity #3 Example - Dark]{width=300}
-![Electricity #3 Example - Light]{width=300}
+1. **Mid Section:**
+    - **Left Graph:** Electricity used from the grid.
+    - **Right Graph:** Electricity returned to the grid.
+    - **Flower Diagram:**
+        - **In Center Circle:** Actual usage and delivered power.
+        - **Inner Circle (Blue):** Today's history of electricity delivered to the grid.
+        - **Outer Circle (Green/Orange/Yellow/Red):** Today's history of electricity used from the grid.
+
+1. **Per Phase Usage:** Shows the current power used/returned from the grid for each of the three phases (230V/25A each).
+
+1. **Totals:**
+    - **From the Grid:** Current and Total electricity used (day/month/year) from the grid.
+    - **To the Grid:** Current and Total electricity delivered (day/month/year) to the grid.
+
+![Electricity #3 Example - Dark]{width=500}
+![Electricity #3 Example - Light]{width=500}
 
 ###Usage
 !!! warning "Replace example entities with your entities!"
@@ -156,17 +166,29 @@ The card shows the following data:
 ##:sak-sak-logo: Electricity Card \#4 Example
 [:octicons-tag-24: 4.0.1][github-releases]
 
-The card shows the following data:
+The card shows a comprehensive overview of the electricity usage and return:
 
-- The header shows the electricity used (average/min/max) of the last 24 hours
-- The next part shows the electricity used (from the grid, left graph), and the electricity returned to the grid (right graph). In the middle is a 'flower' that shows the current to/from grid, and the (relative) usage per 30 minutes. The inner circle (Blue) shows today's history of delivered to the grid and the outer circle (Green/orange/yellow/red) shows today's history of used from the grid.
-- The next part shows per phase (3 phases, 230V/25A each) the current power used/returned from the grid
-- Then the totals for today (vandaag), this month (Deze Maand) and this year (Dit Jaar) for used from the grid (left/green) and delivered to the grid (on the right/blue)
+1. **Flower Power Header:** Displays the average, minimum, and maximum electricity used over the last 24 hours.
+
+1. **Mid Section:**
+    - **Left Graph:** Electricity used from the grid.
+    - **Right Graph:** Electricity returned to the grid.
+    - **Flower Diagram:**
+        - **In Center Circle:** Actual usage and delivered power.
+        - **Outer Circle (Blue):** Today's history of electricity delivered to the grid.
+        - **Inner Circle (Green/Orange/Yellow/Red):** Today's history of electricity used from the grid.
+
+1. **Per Phase Usage:** Shows the current power used/returned from the grid for each of the three phases (230V/25A each).
+
+1. **Totals:**
+    - **Today (Vandaag):** Total electricity used from the grid (left/green) and delivered to the grid (right/blue).
+    - **This Month (Deze Maand):** Total electricity used from the grid (left/green) and delivered to the grid (right/blue).
+    - **This Year (Dit Jaar):** Total electricity used from the grid (left/green) and delivered to the grid (right/blue).
 
 Blue/green gradients are used for both the backgrounds and the bounding boxes.
 
-![Electricity #4 Example - Dark]{width=300}
-![Electricity #4 Example - Light]{width=300}
+![Electricity #4 Example - Dark]{width=500}
+![Electricity #4 Example - Light]{width=500}
 
 ###Usage
 !!! warning "Replace example entities with your entities!"
@@ -225,17 +247,24 @@ Blue/green gradients are used for both the backgrounds and the bounding boxes.
 ##:sak-sak-logo: Electricity Card \#5 Example
 [:octicons-tag-24: 4.0.1][github-releases]
 
+The card shows a comprehensive overview of the electricity usage and return:
 
-The card shows the following data:
+1. **Flower Power Header:** Displays the average, minimum, and maximum electricity used over the last 24 hours.
 
-- The header shows the electricity used (average/min/max) of the last 24 hours
-- The next part shows the central flower (you know what that is showing), on the left (green) the electricity used this month (Deze Maand) and this year (Dit Jaar), and on the right the electricity produced this month (Deze Maand) and this year (Dit Jaar).
-- The next part shows the actual total usage and the actual usage per phase (3 phases, 25A) for power used by the house (green) and produced by the house (blue)
+1. **Mid Section:**
+    - **Flower Diagram:**
+        - **In Center Circle:** Total usage and delivered power for today.
+        - **Outer Circle (Blue):** Today's history of electricity delivered to the grid.
+        - **Inner Circle (Green/Orange/Yellow/Red):** Today's history of electricity used from the grid.
+    - **This Month (Deze Maand):** Total electricity used from the grid (left/green) and delivered to the grid (right/blue).
+    - **This Year (Dit Jaar):** Total electricity used from the grid (left/green) and delivered to the grid (right/blue).
+
+1. **Current Power Usage (Huidig Vermogensgebruik):** Shows the current power used/returned from the grid for each of the three phases (230V/25A each).
 
 Blue/green gradients are used for both the backgrounds and the bounding boxes.
 
-![Electricity #5 Example - Dark]{width=300}
-![Electricity #5 Example - Light]{width=300}
+![Electricity #5 Example - Dark]{width=500}
+![Electricity #5 Example - Light]{width=500}
 
 ###Usage
 !!! warning "Replace example entities with your entities!"

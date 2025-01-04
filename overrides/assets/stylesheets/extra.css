@@ -195,11 +195,26 @@
 }
 
 /* Testing stuff with chatgpt... */
-.md-typeset .grid-marco {
+.md-typeset .grid-c3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
   gap: 16px;
+}
+
+.md-typeset .grid-c3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+}
+
+@media (max-width: 1024px) {
+  .md-typeset .grid-c3 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .md-typeset .grid-c3 {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
 }
 
 .md-typeset .grid-marco > ul {

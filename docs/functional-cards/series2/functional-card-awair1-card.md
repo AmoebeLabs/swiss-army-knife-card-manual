@@ -19,7 +19,7 @@ These cards are specifically made for the Awair Element hardware and the way Awa
 
 There are 3 variations of this card.
 
-<div class="grid cards col3 hide-container" markdown>
+<div class="grid cards grid-c3 hide-container" markdown>
 -   :sak-sak-logo:{ .lg .middle } __Awair Card #1a__
     {:.card-title}
 

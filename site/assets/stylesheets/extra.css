@@ -305,6 +305,18 @@
   margin-top: 0px !important;
 }
 
+/* Extra classes for hiding/aligned grid items */
+.hide-container {
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Optional: for a fade-in effect */
+  transition: opacity 0.1s ease; /* Smooth transition */
+}
+
+.grid.aligned {
+  visibility: visible; /* Show after alignment */
+  opacity: 1; /* Optional: for fade-in effect */
+}
+
 
     @keyframes blinkingText {
       0%{   opacity: 0%;   }
